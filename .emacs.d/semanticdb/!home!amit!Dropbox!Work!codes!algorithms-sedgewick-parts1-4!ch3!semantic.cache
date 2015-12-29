@@ -1,0 +1,71 @@
+;; Object ch3/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ch3/"
+  :tables
+  (list
+    (semanticdb-table "moments.cxx"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("stdlib.h" include (:system-flag t) nil [21 40])
+            ("number.h" include nil nil [41 60])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [62 82])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [93 102])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [103 116]))                  
+                :type "int")
+                nil [84 377]))          
+      :file "moments.cxx"
+      :pointmax 378
+      :fsize 396
+      :lastmodtime '(21987 35954 774517 401000)
+      :unmatched-syntax nil)
+    (semanticdb-table "number.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("math.h" include (:system-flag t) nil [1 18])
+            ("NUMBER_H" variable (:constant-flag t) nil [45 53])
+            ("Number" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [55 74])
+            ("randNum" function
+               (:prototype-flag t
+                :type ("Number" type (:type "class") nil nil))
+                nil [76 93]))          
+      :file "number.h"
+      :pointmax 102
+      :fsize 101
+      :lastmodtime '(21987 36863 666490 547000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("NUMBER_H")
+          )
+)
+    (semanticdb-table "int.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("math.h" include (:system-flag t) nil [1 18])
+            ("stdlib.h" include (:system-flag t) nil [19 38])
+            ("number.h" include nil nil [39 58])
+            ("Number" type
+               (:typedef ("float")
+                :type "typedef")
+                nil [60 81])
+            ("randNum" function (:type ("Number" type (:type "class") nil nil)) nil [83 141]))          
+      :file "int.c"
+      :pointmax 143
+      :fsize 119
+      :lastmodtime '(21987 36638 438497 201000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Dropbox!Work!codes!algorithms-sedgewick-parts1-4!ch3!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

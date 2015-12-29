@@ -1,0 +1,146 @@
+;; Object gnus/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "gnus/"
+  :tables
+  (list
+    (semanticdb-table "auth-source.el.gz"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("password-cache" include nil nil [1450 1475])
+            ("mm-util" include nil nil [1476 1494])
+            ("gnus-util" include nil nil [1495 1515])
+            ("assoc" include nil nil [1516 1532])
+            ("cl" include nil nil [1553 1566])
+            ("eieio" include nil nil [1568 1584])
+            ("secrets-create-item" function (:prototype-flag t) nil [1586 1627])
+            ("secrets-delete-item" function (:prototype-flag t) nil [1628 1669])
+            ("secrets-get-alias" function (:prototype-flag t) nil [1670 1709])
+            ("secrets-get-attributes" function (:prototype-flag t) nil [1710 1754])
+            ("secrets-get-secret" function (:prototype-flag t) nil [1755 1795])
+            ("secrets-list-collections" function (:prototype-flag t) nil [1796 1842])
+            ("secrets-search-items" function (:prototype-flag t) nil [1843 1885])
+            ("rfc2104-hash" function (:prototype-flag t) nil [1887 1921])
+            ("plstore-open" function (:prototype-flag t) nil [1923 1957])
+            ("plstore-find" function (:prototype-flag t) nil [1958 1992])
+            ("plstore-put" function (:prototype-flag t) nil [1993 2026])
+            ("plstore-delete" function (:prototype-flag t) nil [2027 2063])
+            ("plstore-save" function (:prototype-flag t) nil [2064 2098])
+            ("plstore-get-file" function (:prototype-flag t) nil [2099 2137])
+            ("epg-make-context" function (:prototype-flag t) nil [2139 2173])
+            ("epg-context-set-passphrase-callback" function (:prototype-flag t) nil [2174 2227])
+            ("epg-decrypt-string" function (:prototype-flag t) nil [2228 2264])
+            ("epg-context-set-armor" function (:prototype-flag t) nil [2265 2304])
+            ("epg-encrypt-string" function (:prototype-flag t) nil [2305 2341])
+            ("help-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [2343 2382])
+            ("secrets-enabled" variable nil nil [2384 2408])
+            ("auth-source" customgroup (:user-visible-flag t) nil [2410 2508])
+            ("auth-source-cache-expiry" variable (:default-value 7200) nil [2525 2959])
+            ("auth-source-backend" type
+               (:members 
+                  ( ("type" variable
+                       (:documentation "The backend type."
+                        :default-value "(quote netrc)"
+                        :type ":initform")
+                        nil nil)
+                    ("source" variable
+                       (:documentation "The backend source."
+                        :type "string")
+                        nil nil)
+                    ("host" variable
+                       (:documentation "The backend host."
+                        :default-value "t"
+                        :type "t")
+                        nil nil)
+                    ("user" variable
+                       (:documentation "The backend user."
+                        :default-value "t"
+                        :type "t")
+                        nil nil)
+                    ("port" variable
+                       (:documentation "The backend protocol."
+                        :default-value "t"
+                        :type "t")
+                        nil nil)
+                    ("data" variable
+                       (:documentation "Internal backend data."
+                        :default-value "nil")
+                        nil nil)
+                    ("create-function" variable
+                       (:documentation "The create function."
+                        :default-value "ignore"
+                        :type "function")
+                        nil nil)
+                    ("search-function" variable
+                       (:documentation "The search function."
+                        :default-value "ignore"
+                        :type "function")
+                        nil nil))                  
+                :type "class")
+                nil [3144 4368])
+            ("auth-source-protocols" variable (:default-value (quote ((imap "imap" "imaps" "143" "993") (pop3 "pop3" "pop" "pop3s" "110" "995") (ssh "ssh" "22") (sftp "sftp" "115") (smtp "smtp" "25")))) nil [4370 5023])
+            ("auth-source-protocols-customize" variable
+               (:constant-flag t
+                :default-value (mapcar (lambda (a) (let ((p (car-safe a))) (list (quote const) :tag (upcase (symbol-name p)) p))) auth-source-protocols))
+                nil [5143 5378])
+            ("auth-source-creation-defaults" variable nil nil [5380 5482])
+            ("auth-source-creation-prompts" variable nil nil [5484 5583])
+            ("make-obsolete" code nil nil [5585 5645])
+            ("auth-source-save-behavior" variable (:default-value (quote ask)) nil [5647 5982])
+            ("auth-source-netrc-use-gpg-tokens" variable (:default-value (quote never)) nil [6256 7455])
+            ("auth-source-magic" variable (:default-value "auth-source-magic ") nil [7457 7504])
+            ("auth-source-do-cache" variable (:default-value t) nil [7506 7680])
+            ("auth-source-debug" variable nil nil [7682 8496])
+            ("auth-sources" variable (:default-value (quote ("~/.authinfo" "~/.authinfo.gpg" "~/.netrc"))) nil [8498 11789])
+            ("auth-source-gpg-encrypt-to" variable (:default-value t) nil [11791 12179])
+            ("auth-source-do-debug" function (:arguments ("msg")) nil [13042 13146])
+            ("auth-source-do-trivia" function (:arguments ("msg")) nil [13148 13313])
+            ("auth-source-do-warn" function (:arguments ("msg")) nil [13315 13585])
+            ("auth-source-read-char-choice" function (:arguments ("prompt" "choices")) nil [13652 14515])
+            ("auth-source-backend-parse" function (:arguments ("entry")) nil [15389 18527])
+            ("auth-source-backend-parse-parameters" function (:arguments ("entry" "backend")) nil [18529 19062])
+            ("auth-source-search" function (:arguments ("spec" "type" "max" "host" "user" "port" "secret" "require" "create" "delete")) nil [19117 28072])
+            ("auth-source-search-backends" function (:arguments ("backends" "spec" "max" "create" "delete" "require")) nil [28074 29050])
+            ("auth-source-delete" function (:arguments ("spec" "delete")) nil [29272 29681])
+            ("auth-source-search-collection" function (:arguments ("collection" "value")) nil [29683 30059])
+            ("auth-source-netrc-cache" variable nil nil [30061 30097])
+            ("auth-source-forget-all-cached" function (:user-visible-flag t) nil [30099 30530])
+            ("auth-source-format-cache-entry" function (:arguments ("spec")) nil [30532 30680])
+            ("auth-source-remember" function (:arguments ("spec" "found")) nil [30682 30900])
+            ("auth-source-recall" function (:arguments ("spec")) nil [30902 31044])
+            ("auth-source-remembered-p" function (:arguments ("spec")) nil [31046 31183])
+            ("auth-source-forget" function (:arguments ("spec")) nil [31185 31436])
+            ("auth-source-forget+" function (:arguments ("spec")) nil [31945 32921])
+            ("auth-source-specmatchp" function (:arguments ("spec" "stored")) nil [32923 33297])
+            ("auth-source-pick-first-password" function (:arguments ("spec")) nil [33411 33731])
+            ("auth-source-format-prompt" function (:arguments ("prompt" "alist")) nil [33807 34221])
+            ("auth-source-ensure-strings" function (:arguments ("values")) nil [34223 34458])
+            ("auth-source-netrc-parse" function (:arguments ("spec" "file" "max" "host" "user" "port" "delete" "require")) nil [34562 40865])
+            ("auth-source-passphrase-alist" variable nil nil [40867 40908])
+            ("auth-source-token-passphrase-callback-function" function (:arguments ("context" "key-id" "file")) nil [40910 41543])
+            ("auth-source-epa-extract-gpg-token" function (:arguments ("secret" "file")) nil [41818 42337])
+            ("auth-source-epa-make-gpg-token" function (:arguments ("secret" "file")) nil [42406 43005])
+            ("auth-source-netrc-normalize" function (:arguments ("alist" "filename")) nil [43007 44820])
+            ("auth-source-netrc-search" function (:arguments ("spec" "backend" "require" "create" "delete" "type" "max" "host" "user" "port")) nil [44944 46616])
+            ("auth-source-netrc-element-or-first" function (:arguments ("v")) nil [46618 46703])
+            ("auth-source-netrc-create" function (:arguments ("spec" "backend" "secret" "host" "user" "port" "create")) nil [46892 56035])
+            ("auth-source-netrc-saver" function (:arguments ("file" "add")) nil [56168 59495])
+            ("auth-source-secrets-search" function (:arguments ("spec" "backend" "create" "delete" "label" "type" "max" "host" "user" "port")) nil [60015 64425])
+            ("auth-source-secrets-create" function (:arguments ("spec" "backend" "type" "max" "host" "user" "port")) nil [64427 64738])
+            ("auth-source-plstore-search" function (:arguments ("spec" "backend" "create" "delete" "label" "type" "max" "host" "user" "port")) nil [64787 68506])
+            ("auth-source-plstore-create" function (:arguments ("spec" "backend" "secret" "host" "user" "port" "create")) nil [68508 74674])
+            ("make-obsolete" code nil nil [74806 74899])
+            ("make-obsolete" code nil nil [74900 75000])
+            ("auth-source-user-or-password" function (:arguments ("mode" "host" "port" "username" "create-missing" "delete-existing")) nil [75002 77909])
+            ("auth-source-user-and-password" function (:arguments ("host" "user")) nil [77911 78681])
+            ("auth-source" package nil nil [78683 78705]))          
+      :file "auth-source.el.gz"
+      :pointmax 78736
+      :fsize 17565
+      :lastmodtime '(20400 62402)
+      :unmatched-syntax '((close-paren 1566 . 1567) (symbol 1535 . 1552) (open-paren 1534 . 1535))))
+  :file "!usr!local!share!emacs!24.1!lisp!gnus!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

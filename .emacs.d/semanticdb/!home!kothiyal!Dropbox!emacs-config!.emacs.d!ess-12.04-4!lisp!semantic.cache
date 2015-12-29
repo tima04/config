@@ -1,0 +1,252 @@
+;; Object lisp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "lisp/"
+  :tables
+  (list
+    (semanticdb-table "ess-r-d.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("ess-message" code nil nil [1351 1396])
+            ("ess-s-l" include nil nil [1397 1415])
+            ("eldoc" include nil nil [1416 1432])
+            ("ess-r-args" include nil nil [1433 1454])
+            ("ess-developer" include nil nil [1518 1542])
+            ("when" code nil nil [1543 1593])
+            ("setq" code nil nil [1622 1658])
+            ("modify-syntax-entry" code nil nil [1923 1967])
+            ("modify-syntax-entry" code nil nil [1968 2013])
+            ("ess-message" code nil nil [2046 2099])
+            ("inferior-ess" function (:prototype-flag t) nil [2101 2157])
+            ("ess-mode" function (:prototype-flag t) nil [2158 2216])
+            ("R-customize-alist" variable (:default-value (append (quote ((ess-local-customize-alist quote R-customize-alist) (ess-dialect . "R") (ess-suffix . "R") (ess-dump-filename-template ess-replace-regexp-in-string "S$" ess-suffix ess-dump-filename-template-proto) (ess-mode-syntax-table . R-syntax-table) (ess-mode-editing-alist . R-editing-alist) (ess-change-sp-regexp . ess-R-change-sp-regexp) (ess-help-sec-regex . ess-help-R-sec-regex) (ess-help-sec-keys-alist . ess-help-R-sec-keys-alist) (ess-loop-timeout . ess-S-loop-timeout) (ess-cmd-delay . ess-R-cmd-delay) (ess-function-pattern . ess-R-function-pattern) (ess-object-name-db-file . "ess-r-namedb.el") (ess-imenu-mode-function quote ess-imenu-R) (ess-smart-operators . ess-R-smart-operators) (inferior-ess-program . inferior-R-program-name) (inferior-ess-objects-command . inferior-R-objects-command) (inferior-ess-font-lock-keywords . inferior-ess-R-font-lock-keywords) (inferior-ess-search-list-command . "search()
+") (inferior-ess-help-command . inferior-ess-r-help-command) (inferior-ess-help-filetype) (inferior-ess-exit-command . "q()") (inferior-ess-exit-prompt . "Save workspace image? [y/n/c]: ") (inferior-ess-start-file) (inferior-ess-start-args . "") (ess-STERM . "iESS") (ess-editor . R-editor) (ess-pager . R-pager))) S-common-cust-alist)) nil [2218 4339])
+            ("ess-r-versions" variable (:default-value (if (eq system-type (quote darwin)) (quote ("R-1" "R-2" "R-devel" "R-patched" "R32" "R64")) (quote ("R-1" "R-2" "R-devel" "R-patched")))) nil [4341 5315])
+            ("R" function
+               (:user-visible-flag t
+                :arguments ("start-args"))
+                nil [5333 8541])
+            ("R-mode" function
+               (:user-visible-flag t
+                :arguments ("proc-name"))
+                nil [8560 9895])
+            ("fset" code nil nil [9897 9919])
+            ("ess-R-arch-2-bit" function (:arguments ("arch")) nil [9921 10112])
+            ("ess-rterm-arch-version" function (:arguments ("long-path" "give-cons")) nil [10114 11379])
+            ("ess-r-versions-create" function nil nil [11382 14723])
+            ("ess-newest-R" variable nil nil [14725 14936])
+            ("ess-find-newest-R" function nil nil [14938 15534])
+            ("ess-check-R-program-name" function nil nil [15536 16051])
+            ("R-newest" function
+               (:user-visible-flag t
+                :arguments ("start-args"))
+                nil [16053 16842])
+            ("ess-r-version-date" function (:arguments ("rver")) nil [17265 17946])
+            ("ess-current-R-version" function nil nil [17948 18149])
+            ("ess-current-R-at-least" function (:arguments ("version")) nil [18151 18518])
+            ("ess-newest-r" function (:arguments ("rvers")) nil [18521 18941])
+            ("ess-find-newest-date" function (:arguments ("rvers")) nil [19185 19829])
+            ("ess-find-rterm" function (:arguments ("ess-R-root-dir" "bin-Rterm-exe")) nil [19832 21548])
+            ("ess-eldoc-function" function (:user-visible-flag t) nil [21562 22261])
+            ("ess-eldoc-docstring-format" function (:arguments ("funname" "doc")) nil [22263 25461])
+            ("ess--funargs-cache" variable (:default-value (make-hash-table :test (quote equal))) nil [25497 25593])
+            ("ess--funargs-command" variable (:default-value "local({
+    if(version$minor > '14.1'){
+        comp <- compiler::enableJIT(0L)
+        on.exit(compiler::enableJIT(comp))
+    }
+    olderr <- options(error = NULL)
+    on.exit(options(olderr))
+    fun <- tryCatch(%s, error = function(e) NULL) ## works for special objects also
+    .ess_funname<- '%s'
+    if(is.null(fun) || !is.function(fun)){
+        NULL
+    }else{
+        special <- grepl('[:$@[]', .ess_funname)
+        args<-if(!special){
+                fundef<-paste(.ess_funname, '.default',sep='')
+                if(exists(fundef, mode = 'function')) args(fundef) else args(fun)
+        }else args(fun)
+        args <- gsub('^function \\\\(|\\\\) +NULL$','', paste(format(args), collapse = ''))
+        args <- gsub(' = ', '=', gsub('[ \\t]{2,}', ' ',args), fixed = TRUE)
+        allargs <-
+                if(special) paste(names(formals(fun)), '=', sep='')
+                else tryCatch(utils:::functionArgs(.ess_funname, ''), error = function(e) NULL)
+        envname <- environmentName(environment(fun))
+        c(envname,args,allargs)
+     }
+})
+") nil [25595 26690])
+            ("ess-objects-never-recache" variable (:default-value (quote ("print" "plot"))) nil [26736 26865])
+            ("ess-function-arguments" function (:arguments ("funname")) nil [26867 28623])
+            ("ess-get-object-at-point" function nil nil [28625 29199])
+            ("ess--funname.start" variable nil nil [29202 29233])
+            ("ess--funname.start" function (:arguments ("look-back")) nil [29234 30684])
+            ("ess-R-get-rcompletions" function (:arguments ("start" "end")) nil [30686 31787])
+            ("ess-R-complete-object-name" function (:user-visible-flag t) nil [31791 32486])
+            ("ac-source-R" variable (:default-value (quote ((prefix . ess-ac-start) (requires . 0) (candidates . ess-ac-candidates) (document . ess-ac-help)))) nil [32568 32905])
+            ("ess-ac-start" function nil nil [32907 32986])
+            ("ess-ac-candidates" function nil nil [32988 33197])
+            ("ess-ac-help" function (:arguments ("sym")) nil [33199 33316])
+            ("ac-source-R-objects" variable (:default-value (quote ((prefix . ess-ac-start-objects) (requires . 2) (candidates . ess-ac-objects) (document . ess-ac-help-object)))) nil [33329 33536])
+            ("ess-ac-objects" function (:arguments ("no-kill")) nil [33538 35010])
+            ("ess-ac-start-objects" function nil nil [35012 35489])
+            ("ess-ac-help-object" function (:arguments ("sym")) nil [35491 35867])
+            ("ac-source-R-args" variable (:default-value (quote ((prefix . ess-ac-start-args) (requires . 0) (candidates . ess-ac-args) (document . ess-ac-help-arg) (action . ess-ac-action-args)))) nil [35877 36121])
+            ("ess-ac-start-args" function nil nil [36123 36438])
+            ("ess-ac-args" function nil nil [36440 36851])
+            ("ess-ac-action-args" function nil nil [36853 36950])
+            ("ess-ac-help-arg" function (:arguments ("sym")) nil [36953 37385])
+            ("ess--ac-help-arg-command" variable (:default-value "
+getArgHelp <- function(arg, func = NULL){
+    olderr <- options(error = NULL)
+    on.exit(options(olderr))
+    fguess <-
+        if(is.null(func)) get('fguess', envir = utils:::.CompletionEnv)
+        else func
+    findArgHelp <- function(fun, arg){
+        file <- help(fun, try.all.packages=FALSE)[[1]]
+        hlp <- utils:::.getHelpFile(file)
+        id <- grep('arguments', tools:::RdTags(hlp), fixed=TRUE)
+        if(length(id)){
+            arg_section <- hlp[[id[[1L]]]]
+            items <- grep('item', tools:::RdTags(arg_section), fixed=TRUE)
+            ## cat('items:', items,fill = T)
+            if(length(items)){
+                arg_section <- arg_section[items]
+                args <- unlist(lapply(arg_section,
+                                      function(el) paste(unlist(el[[1]][[1]], T,F),collapse='')))
+                fits <- grep(arg, args, fixed= T)
+                ## cat('args', args, 'fits',fill=T)
+                if(length(fits))
+                    paste(unlist(arg_section[[fits[1L]]][[2]],T,F),collapse='')
+             }
+        }
+    }
+    funcs <- c(fguess, tryCatch(methods(fguess),
+                                warning = function(w) {NULL},
+                                error = function(e) {NULL}))
+    if(length(funcs) > 1 && length(pos <- grep('default', funcs))){
+        funcs <- c(funcs[[pos[[1L]]]], funcs[-pos[[1L]]])
+    }
+    i <- 1L; found <- FALSE
+    out <- 'No help found'
+    while(i <= length(funcs) && is.null(out <-
+            tryCatch(findArgHelp(funcs[[i]], arg),
+                     warning = function(w) {NULL},
+                     error = function(e) {NULL})
+            ))
+        i <- i + 1L
+    cat(' 
+
+', as.character(out), '
+
+')
+}; getArgHelp('%s','%s')
+") nil [37388 39163])
+            ("Rnw-mode" function (:user-visible-flag t) nil [39182 39484])
+            ("fset" code nil nil [39486 39512])
+            ("ess-transcript-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [39549 39640])
+            ("R-transcript-mode" function (:user-visible-flag t) nil [39642 39754])
+            ("fset" code nil nil [39756 39800])
+            ("R-fix-T-F" function
+               (:user-visible-flag t
+                :arguments ("from" "quietly"))
+                nil [39802 40302])
+            ("R-site-search" function
+               (:user-visible-flag t
+                :arguments ("string"))
+                nil [41220 43532])
+            ("ess--packages-cache" variable nil nil [43534 43638])
+            ("ess-install.packages" function
+               (:user-visible-flag t
+                :arguments ("update"))
+                nil [43640 44694])
+            ("ess-setRepositories" function (:user-visible-flag t) nil [44697 44929])
+            ("ess-setCRANMiror" function (:user-visible-flag t) nil [44931 45689])
+            ("ess-sos" function
+               (:user-visible-flag t
+                :arguments ("cmd"))
+                nil [45691 46297])
+            ("ess-library" function (:user-visible-flag t) nil [46299 46941])
+            ("ess-dirs" function (:user-visible-flag t) nil [46943 47458])
+            ("ess-r-d" package nil nil [47475 47493]))          
+      :file "ess-r-d.el"
+      :pointmax 48009
+      :fsize 48008
+      :lastmodtime '(20432 53321)
+      :unmatched-syntax nil)
+    (semanticdb-table "ess-s-l.el"
+      :file "ess-s-l.el"
+      :fsize 33493
+      :lastmodtime '(20432 53320))
+    (semanticdb-table "ess-r-args.el"
+      :file "ess-r-args.el"
+      :fsize 14371
+      :lastmodtime '(20432 53321))
+    (semanticdb-table "ess-developer.el"
+      :file "ess-developer.el"
+      :fsize 13478
+      :lastmodtime '(20432 53321))
+    (semanticdb-table "ess-site.el"
+      :file "ess-site.el"
+      :fsize 31737
+      :lastmodtime '(20432 53320))
+    (semanticdb-table "ess-sta-l.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("make-regexp" include nil nil [2131 2153])
+            ("unless" code nil nil [2329 2385])
+            ("setq" code nil nil [2499 2555])
+            ("ess-help-STA-sec-keys-alist" variable
+               (:constant-flag t
+                :default-value (quote ((100 . "Description") (101 . "Examples") (111 . "Options") (115 . "Also see") (83 . "Syntax") (114 . "Remarks") (116 . "Title"))))
+                nil [2558 2953])
+            ("ess-help-STA-sec-regex" variable
+               (:constant-flag t
+                :default-value "^[A-Z a-z]+:?
+-+\\|http:")
+                nil [2955 3076])
+            ("STA-syntax-table" variable nil nil [3078 3138])
+            ("if" code nil nil [3139 4595])
+            ("ado-set-font-lock-keywords" function (:user-visible-flag t) nil [4598 33276])
+            ("ess-STA-mode-font-lock-keywords" variable (:default-value (ado-set-font-lock-keywords)) nil [33279 33426])
+            ("STA-editing-alist" variable (:default-value (quote ((paragraph-start concat "^$\\|" page-delimiter) (paragraph-separate concat "^$\\|" page-delimiter) (paragraph-ignore-fill-prefix . t) (require-final-newline . t) (comment-start . "/* ") (comment-end . " */") (comment-start-skip . "/\\*+ *") (comment-column . 40) (indent-line-function quote ess-indent-line) (parse-sexp-ignore-comments . t) (ess-style . ess-default-style) (ess-local-process-name) (ess-mode-syntax-table . STA-syntax-table) (font-lock-defaults quote (ess-STA-mode-font-lock-keywords nil nil ((46 . "w"))))))) nil [33428 34553])
+            ("stata-switches" variable
+               (:user-visible-flag t
+                :default-value "-q")
+                nil [35311 35383])
+            ("stata-profile" variable (:default-value "~/.stataprofile") nil [35385 35472])
+            ("stata-help" function
+               (:user-visible-flag t
+                :arguments ("the-subject"))
+                nil [35512 36812])
+            ("stata-lookup" function
+               (:user-visible-flag t
+                :arguments ("the-subject"))
+                nil [36814 38115])
+            ("stata-variables" function (:user-visible-flag t) nil [38117 39485])
+            ("stata-review-window" function nil nil [39487 39569])
+            ("stata-rehelp" function nil nil [39571 39640])
+            ("stata-watch-for-menu-filter" function (:arguments ("proc" "string")) nil [39773 39949])
+            ("stata-handle-menu-code" function (:arguments ("proc" "string")) nil [39951 40517])
+            ("stata-add-to-review-buffer" function (:arguments ("string")) nil [40535 40732])
+            ("stata-prompt-wait" function (:arguments ("proc" "start-of-output")) nil [40734 41306])
+            ("stata-help-mode" function (:user-visible-flag t) nil [46782 47112])
+            ("ess-STA-delimit-do-file" variable (:default-value "delimit-do.do") nil [50025 50073])
+            ("ess-STA-delimit-do" function nil nil [50075 50609])
+            ("ess-sta-l" package nil nil [50680 50700]))          
+      :file "ess-sta-l.el"
+      :pointmax 51218
+      :fsize 51217
+      :lastmodtime '(20432 53321)
+      :unmatched-syntax '((close-paren 2555 . 2556) (symbol 2479 . 2496) (open-paren 2478 . 2479)))
+    (semanticdb-table "make-regexp.el"
+      :file "make-regexp.el"
+      :fsize 11083
+      :lastmodtime '(20432 53321)))
+  :file "!home!kothiyal!Dropbox!emacs-config!.emacs.d!ess-12.04-4!lisp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

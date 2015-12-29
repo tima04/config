@@ -1,0 +1,5 @@
+imap jj <esc>
+vmap jj <esc> 
+set smartcase
+set incsearch
+'set hlsearch

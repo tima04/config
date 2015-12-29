@@ -1,0 +1,33 @@
+;; Object kothiyal/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "kothiyal/"
+  :tables
+  (list
+    (semanticdb-table ".gnus.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("setq" code nil nil [1 55])
+            ("setq" code nil nil [56 93])
+            ("setq" code nil nil [202 342])
+            ("setq" code nil nil [343 675])
+            ("setq" code nil nil [836 914]))          
+      :file ".gnus.el"
+      :pointmax 915
+      :fsize 914
+      :lastmodtime '(20571 19808)
+      :unmatched-syntax nil)
+    (semanticdb-table ".gnus"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("setq" code nil nil [1 141])
+            ("setq" code nil nil [142 474])
+            ("starttls-available-p" code nil nil [476 498])
+            ("setq" code nil nil [542 620]))          
+      :file ".gnus"
+      :pointmax 621
+      :fsize 620
+      :lastmodtime '(20572 41632)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

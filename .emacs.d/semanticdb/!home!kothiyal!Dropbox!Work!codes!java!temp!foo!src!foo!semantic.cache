@@ -1,0 +1,31 @@
+;; Object foo/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "foo/"
+  :tables
+  (list
+    (semanticdb-table "Foo.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("foo" package nil nil [1 13])
+            ("Foo" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [60 73]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [36 189]))                  
+                :type "class")
+                nil [15 192]))          
+      :file "Foo.java"
+      :pointmax 195
+      :fsize 204
+      :lastmodtime '(22071 57673 168580 355000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!codes!java!temp!foo!src!foo!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

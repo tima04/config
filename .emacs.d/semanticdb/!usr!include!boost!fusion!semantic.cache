@@ -1,0 +1,25 @@
+;; Object fusion/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "fusion/"
+  :tables
+  (list
+    (semanticdb-table "tuple.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("FUSION_TUPLE_10032005_0806" variable (:constant-flag t) nil [411 437])
+            ("boost/fusion/tuple/tuple.hpp" include (:system-flag t) nil [439 478])
+            ("boost/fusion/tuple/make_tuple.hpp" include (:system-flag t) nil [479 523])
+            ("boost/fusion/tuple/tuple_tie.hpp" include (:system-flag t) nil [524 567])
+            ("boost/fusion/container/generation/ignore.hpp" include (:system-flag t) nil [568 623]))          
+      :file "tuple.hpp"
+      :pointmax 632
+      :fsize 631
+      :lastmodtime '(21413 1116 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("FUSION_TUPLE_10032005_0806")
+          )
+))
+  :file "!usr!include!boost!fusion!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

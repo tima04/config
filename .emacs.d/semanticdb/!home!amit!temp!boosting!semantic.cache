@@ -1,0 +1,90 @@
+;; Object boosting/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "boosting/"
+  :tables
+  (list
+    (semanticdb-table "boost.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pandas" include nil nil [1 20])
+            ("numpy" include nil nil [21 39])
+            ("sklearn.ensemble" include nil nil [40 101])
+            ("sklearn.ensemble" include nil nil [102 164])
+            ("data" variable nil nil [166 198])
+            ("nrow" variable nil nil [199 219])
+            ("train" variable nil nil [220 244])
+            ("Y" variable nil nil [264 298])
+            ("X" variable nil nil [299 354])
+            ("fit" variable nil nil [355 441])
+            ("X_test" variable nil nil [443 515])
+            ("Y_test" variable nil nil [516 565])
+            ("y_hat" variable nil nil [566 599])
+            ("print" code nil nil [600 630])
+            ("xgboost" include nil nil [887 908])
+            ("param" variable nil nil [910 994])
+            ("plst" variable nil nil [1017 1037])
+            ("num_round" variable nil nil [1087 1099])
+            ("dtrain" variable nil nil [1100 1150])
+            ("bst" variable nil nil [1205 1246])
+            ("x" variable nil nil [1248 1253])
+            ("for" code nil nil [1254 1349])
+            ("X" variable nil nil [1350 1423])
+            ("Y" variable nil nil [1424 1456])
+            ("fit" variable nil nil [1458 1538])
+            ("y_hat" variable nil nil [1539 1561])
+            ("print" code nil nil [1562 1587])
+            ("np" code nil nil [1608 1630])
+            ("X" variable nil nil [1631 1685])
+            ("Y" code nil nil [1686 1698])
+            ("bar" variable nil nil [1775 1811]))          
+      :file "boost.py"
+      :pointmax 1814
+      :fsize 1813
+      :lastmodtime '(21970 7992 968799 55000)
+      :unmatched-syntax nil)
+    (semanticdb-table "gbc.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pandas" include nil nil [1 20])
+            ("numpy" include nil nil [21 39])
+            ("sklearn.ensemble" include nil nil [40 101])
+            ("sklearn.ensemble" include nil nil [102 164])
+            ("time" include nil nil [165 186])
+            ("data" variable nil nil [188 218])
+            ("data" variable nil nil [219 277])
+            ("for" code nil nil [279 395])
+            ("t0" variable nil nil [402 413])
+            ("n" variable nil nil [414 431])
+            ("train" variable nil nil [432 453])
+            ("test" variable nil nil [454 475])
+            ("X" variable nil nil [476 505])
+            ("y" variable nil nil [506 520])
+            ("fit" variable nil nil [521 602])
+            ("y_hat" variable nil nil [603 638])
+            ("print" code nil nil [639 656])
+            ("sq" variable nil nil [658 681])
+            ("print" code nil nil [682 726])
+            ("transform" function
+               (:documentation "[\"b\", \"a\", \"b\", \"c\"] => [0, 1, 0, 2]
+    "
+                :arguments 
+                  ( ("xs" variable nil (reparse-symbol function_parameters) [742 744]))                  )
+                nil [728 896])
+            ("t0" variable nil nil [913 924])
+            ("datanp" variable nil nil [925 962])
+            ("n" variable nil nil [963 982])
+            ("train" variable nil nil [983 1006])
+            ("test" variable nil nil [1007 1030])
+            ("X" variable nil nil [1031 1060])
+            ("y" variable nil nil [1061 1075])
+            ("fit" variable nil nil [1076 1200])
+            ("y_hat" variable nil nil [1201 1269])
+            ("print" code nil nil [1270 1287]))          
+      :file "gbc.py"
+      :pointmax 1293
+      :fsize 1292
+      :lastmodtime '(21975 20663 850266 524000)
+      :unmatched-syntax nil))
+  :file "!home!amit!temp!boosting!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

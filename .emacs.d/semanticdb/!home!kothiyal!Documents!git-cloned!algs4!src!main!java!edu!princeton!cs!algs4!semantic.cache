@@ -1,0 +1,125 @@
+;; Object algs4/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "algs4/"
+  :tables
+  (list
+    (semanticdb-table "Complex.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("Complex" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("re" variable
+                       (:typemodifiers ("private" "final")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [1645 1669])
+                    ("im" variable
+                       (:typemodifiers ("private" "final")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [1693 1717])
+                    ("Complex" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("real" variable (:type "double") (reparse-symbol formal_parameters) [1937 1948])
+                            ("imag" variable (:type "double") (reparse-symbol formal_parameters) [1950 1961]))                          )
+                        (reparse-symbol class_member_declaration) [1922 2008])
+                    ("toString" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [2200 2399])
+                    ("abs" function
+                       (:typemodifiers ("public")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [2686 2748])
+                    ("phase" function
+                       (:typemodifiers ("public")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [2986 3050])
+                    ("plus" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("that" variable (:type "Complex") (reparse-symbol formal_parameters) [3296 3308]))                          
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [3276 3439])
+                    ("minus" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("that" variable (:type "Complex") (reparse-symbol formal_parameters) [3709 3721]))                          
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [3688 3852])
+                    ("times" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("that" variable (:type "Complex") (reparse-symbol formal_parameters) [4103 4115]))                          
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [4082 4286])
+                    ("scale" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("alpha" variable (:type "double") (reparse-symbol formal_parameters) [4517 4529]))                          
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [4496 4590])
+                    ("times" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("alpha" variable (:type "double") (reparse-symbol formal_parameters) [4876 4888]))                          
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [4855 4949])
+                    ("conjugate" function
+                       (:typemodifiers ("public")
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [5099 5170])
+                    ("reciprocal" function
+                       (:typemodifiers ("public")
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [5322 5448])
+                    ("re" function
+                       (:typemodifiers ("public")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [5582 5627])
+                    ("im" function
+                       (:typemodifiers ("public")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [5771 5816])
+                    ("divides" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("that" variable (:type "Complex") (reparse-symbol formal_parameters) [6085 6097]))                          
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [6062 6152])
+                    ("exp" function
+                       (:typemodifiers ("public")
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [6306 6420])
+                    ("sin" function
+                       (:typemodifiers ("public")
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [6560 6676])
+                    ("cos" function
+                       (:typemodifiers ("public")
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [6820 6937])
+                    ("tan" function
+                       (:typemodifiers ("public")
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [7083 7148])
+                    ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [7249 7262]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7225 8070]))                  
+                :type "class")
+                nil [1618 8073]))          
+      :file "Complex.java"
+      :pointmax 9188
+      :fsize 9185
+      :lastmodtime '(22016 20074 930334 190000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Documents!git-cloned!algs4!src!main!java!edu!princeton!cs!algs4!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

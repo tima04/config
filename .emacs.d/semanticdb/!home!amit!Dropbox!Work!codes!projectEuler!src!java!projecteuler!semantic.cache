@@ -1,0 +1,52 @@
+;; Object projecteuler/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "projecteuler/"
+  :tables
+  (list
+    (semanticdb-table "Prob235.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("projecteuler" package nil nil [1 22])
+            ("java.math.*" include nil nil [24 43])
+            ("Prob235" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [445 458]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [421 612])
+                    ("s" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("n" variable (:type "int") (reparse-symbol formal_parameters) [645 650])
+                            ("r" variable (:type "double") (reparse-symbol formal_parameters) [652 660]))                          
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [622 850])
+                    ("s" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("r" variable (:type "double") (reparse-symbol formal_parameters) [883 891]))                          
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [860 920])
+                    ("s2" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("n" variable (:type "int") (reparse-symbol formal_parameters) [947 952])
+                            ("r" variable (:type "double") (reparse-symbol formal_parameters) [954 962]))                          
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [923 1137]))                  
+                :type "class")
+                nil [389 1139]))          
+      :file "Prob235.java"
+      :pointmax 1140
+      :fsize 1140
+      :lastmodtime '(22115 27050 671278 963000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Dropbox!Work!codes!projectEuler!src!java!projecteuler!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

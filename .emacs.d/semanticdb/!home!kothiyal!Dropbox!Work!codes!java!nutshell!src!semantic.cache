@@ -1,0 +1,37 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+
+    (semanticdb-table "Add.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("Add" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [45 58]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [21 229])
+                    ("sum" function
+                       (:arguments 
+                          ( ("x" variable (:type "T") (reparse-symbol formal_parameters) [255 258])
+                            ("y" variable (:type "T") (reparse-symbol formal_parameters) [260 263]))                          
+                        :type "T")
+                        (reparse-symbol class_member_declaration) [249 299]))                  
+                :type "class")
+                nil [1 303]))          
+      :file "Add.java"
+      :pointmax 306
+      :fsize 305
+      :lastmodtime '(22074 10752 836350 3000)
+      :unmatched-syntax '((GT 247 . 248) (PUBLIC 232 . 238) (LT 245 . 246) (IDENTIFIER 342 . 343) (IDENTIFIER 337 . 341) (IDENTIFIER 328 . 336) (IDENTIFIER 305 . 327) (GT 247 . 248) (PUBLIC 232 . 238) (LT 245 . 246) (IDENTIFIER 337 . 341) (IDENTIFIER 328 . 336) (IDENTIFIER 305 . 327) (GT 247 . 248) (PUBLIC 232 . 238) (LT 245 . 246) (IDENTIFIER 337 . 341) (IDENTIFIER 328 . 336) (IDENTIFIER 305 . 327) (GT 247 . 248) (PUBLIC 232 . 238) (LT 245 . 246) (IDENTIFIER 337 . 341) (IDENTIFIER 328 . 336) (IDENTIFIER 305 . 327) (GT 247 . 248) (PUBLIC 232 . 238) (LT 245 . 246) (IDENTIFIER 338 . 342) (IDENTIFIER 329 . 337) (IDENTIFIER 305 . 327) (GT 247 . 248) (PUBLIC 232 . 238) (LT 245 . 246) (IDENTIFIER 305 . 327) (GT 247 . 248) (PUBLIC 232 . 238) (LT 245 . 246) (IDENTIFIER 305 . 327) (GT 247 . 248) (PUBLIC 232 . 238) (LT 245 . 246))))
+  :file "!home!kothiyal!Dropbox!Work!codes!java!nutshell!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

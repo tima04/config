@@ -1,0 +1,123 @@
+;; Object python/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "python/"
+  :tables
+  (list
+    (semanticdb-table "temp.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("Foo" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__getitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [68 72])
+                            ("key" variable nil (reparse-symbol function_parameters) [74 78]))                          
+                        :decorators 
+                          ( ("dec" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [43 100])
+                    ("bar" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [121 125])
+                            ("key" variable nil (reparse-symbol function_parameters) [127 131]))                          
+                        :decorators 
+                          ( ("dec" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [104 153])
+                    ("__len__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [169 173]))                          )
+                        (reparse-symbol indented_block_body) [157 194])
+                    ("baz" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [220 224]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [198 267]))                  
+                :type "class")
+                nil [20 267])
+            ("foo" variable nil nil [268 279])
+            ("foo" code nil nil [280 293])
+            ("foo" code nil nil [294 302])
+            ("foo" code nil nil [303 311])
+            ("foo" code nil nil [312 329])
+            ("foo" code nil nil [330 340])
+            ("foo" code nil nil [341 351])
+            ("dec" function (:arguments 
+              ( ("fn" variable nil (reparse-symbol function_parameters) [387 389]))              ) nil [379 1010]))          
+      :file "temp.py"
+      :pointmax 1022
+      :fsize 1020
+      :lastmodtime '(21960 30298 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "pycomplete.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Python dot expression completion using Pymacs.
+
+This almost certainly needs work, but if you add
+
+    (require 'pycomplete)
+
+to your .xemacs/init.el file (.emacs for GNU Emacs) and have Pymacs
+installed, when you hit TAB it will try to complete the dot expression
+before point.  For example, given this import at the top of the file:
+
+    import time
+
+typing \"time.cl\" then hitting TAB should complete \"time.clock\".
+
+See pycomplete.el for the Emacs Lisp side of things.
+\"\"\"" code nil nil [24 501])
+            ("sys" include nil nil [502 512])
+            ("os.path" include nil nil [513 527])
+            ("string" include nil nil [528 541])
+            ("Pymacs" include nil nil [543 566])
+            ("sys" code nil nil [568 588])
+            ("try" code nil nil [590 673])
+            ("get_all_completions" function
+               (:documentation "Return contextual completion of s (string of >= zero chars).
+
+    If given, imports is a list of import statements to be executed first.
+    "
+                :arguments 
+                  ( ("s" variable nil (reparse-symbol function_parameters) [698 699])
+                    ("imports" variable nil (reparse-symbol function_parameters) [701 708]))                  )
+                nil [674 1919])
+            ("pycomplete" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [1935 1936])
+                ("imports" variable nil (reparse-symbol function_parameters) [1938 1945]))              ) nil [1920 2843])
+            ("if" code nil nil [2844 3372]))          
+      :file "pycomplete.py"
+      :pointmax 3427
+      :fsize 3426
+      :lastmodtime '(21989 42103 446775 575000)
+      :unmatched-syntax '((NAME 3427 . 3431) ($EOI 3431 . 3431)))
+    (semanticdb-table "calculation-practice.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("random" include nil nil [1 14])
+            ("time" include nil nil [15 26])
+            ("rand" variable nil nil [27 48])
+            ("nsum" variable nil nil [50 58])
+            ("nsum_correct" variable nil nil [59 75])
+            ("sum" function (:arguments 
+              ( ("d1" variable nil (reparse-symbol function_parameters) [84 86])
+                ("d2" variable nil (reparse-symbol function_parameters) [90 92]))              ) nil [76 439])
+            ("nmul" variable nil nil [441 449])
+            ("nmul_correct" variable nil nil [450 466])
+            ("mul" function (:arguments 
+              ( ("d1" variable nil (reparse-symbol function_parameters) [475 477])
+                ("d2" variable nil (reparse-symbol function_parameters) [481 483]))              ) nil [467 830]))          
+      :file "calculation-practice.py"
+      :pointmax 831
+      :fsize 830
+      :lastmodtime '(21721 53000 680304 221000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!codes!python!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

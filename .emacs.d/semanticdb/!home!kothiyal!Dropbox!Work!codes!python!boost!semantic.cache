@@ -1,0 +1,41 @@
+;; Object boost/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "boost/"
+  :tables
+  (list
+    (semanticdb-table "hello.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("greet" function
+               (:pointer 1
+                :type "char")
+                nil [1 49])
+            ("boost/python.hpp" include (:system-flag t) nil [51 78])
+            ("BOOST_PYTHON_MODULE" function
+               (:arguments 
+                  ( ("" variable (:type ("hello_ext" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [101 111]))                  
+                :type "int")
+                nil [81 175]))          
+      :file "hello.cpp"
+      :pointmax 176
+      :fsize 175
+      :lastmodtime '(21935 45839 990575 727000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("PYTHON_VERSION" variable (:default-value ("2.7")) nil [41 62])
+            ("BOOST_INC" variable (:default-value ("/usr/include")) nil [177 202])
+            ("BOOST_LIB" variable (:default-value ("/usr/lib")) nil [202 223])
+            ("EXTENSION" variable (:default-value ("cpp")) nil [240 256])
+            ("TARGET" variable (:default-value ("hello")) nil [281 296])
+            ("$(TARGET)" function (:arguments ("$(TARGET).o")) nil [298 483])
+            ("$(TARGET)" function (:arguments ("$(TARGET).$(EXTENSION)")) nil [665 773]))          
+      :file "Makefile"
+      :pointmax 773
+      :fsize 772
+      :lastmodtime '(21935 46662 606596 444000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!codes!python!boost!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

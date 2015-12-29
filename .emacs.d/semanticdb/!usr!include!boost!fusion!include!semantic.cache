@@ -1,0 +1,36 @@
+;; Object include/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "include/"
+  :tables
+  (list
+    (semanticdb-table "tuple.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("FUSION_INCLUDE_TUPLE" variable (:constant-flag t) nil [404 424])
+            ("boost/fusion/tuple.hpp" include (:system-flag t) nil [426 459]))          
+      :file "tuple.hpp"
+      :pointmax 468
+      :fsize 467
+      :lastmodtime '(21413 1118 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("FUSION_INCLUDE_TUPLE")
+          )
+)
+    (semanticdb-table "std_pair.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("FUSION_INCLUDE_STD_PAIR" variable (:constant-flag t) nil [407 430])
+            ("boost/fusion/adapted/std_pair.hpp" include (:system-flag t) nil [432 476]))          
+      :file "std_pair.hpp"
+      :pointmax 485
+      :fsize 484
+      :lastmodtime '(21413 1118 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("FUSION_INCLUDE_STD_PAIR")
+          )
+))
+  :file "!usr!include!boost!fusion!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

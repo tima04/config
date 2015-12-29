@@ -1,0 +1,36 @@
+;; Object scripts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "scripts/"
+  :tables
+  (list
+    (semanticdb-table "pyant.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+simple class builder for java. Run from the top (eclipse) project directory, and supply the name
+of the java file to be compiled and run. The class file will be stored in bin/package_name/.
+The .classpath and .project file must be present in the root directory and
+the src file must be at src/package_name/ and bin/package_name directory must exist.
+
+From the package root.
+#compile
+javac -classpath bin:/opt/lib/jars/apache-csv.jar:/opt/lib/jars/courserajava.jar -sourcepath src -d bin src/coursera_course/Test.java
+
+#run
+java -Dfile.encoding=UTF-8 -classpath bin:/opt/lib/jars/apache-csv.jar:/opt/lib/jars/courserajava.jar coursera_course.CaeserCipher
+\"\"\"" code nil nil [19 680])
+            ("sys" include nil nil [682 692])
+            ("os" include nil nil [693 702])
+            ("xmltodict" include nil nil [703 719])
+            ("get_classpath" function nil nil [721 936])
+            ("main" function (:arguments 
+              ( ("javafile" variable nil (reparse-symbol function_parameters) [946 954]))              ) nil [937 1833])
+            ("if" code nil nil [1839 1967]))          
+      :file "pyant.py"
+      :pointmax 1970
+      :fsize 1969
+      :lastmodtime '(22101 56199 795295 484000)
+      :unmatched-syntax '(($EOI 1970 . 1970) ($EOI 1970 . 1970) ($EOI 1955 . 1955) ($EOI 1970 . 1970) ($EOI 1941 . 1941) ($EOI 1940 . 1940) ($EOI 1937 . 1937) ($EOI 1961 . 1961) ($EOI 1949 . 1949) ($EOI 1946 . 1946) ($EOI 1933 . 1933) ($EOI 1902 . 1902) ($EOI 1900 . 1900) ($EOI 1862 . 1862) ($EOI 1860 . 1860) ($EOI 1823 . 1823) ($EOI 1818 . 1818) ($EOI 1803 . 1803) ($EOI 1802 . 1802) ($EOI 1799 . 1799) ($EOI 1790 . 1790) ($EOI 1756 . 1756) ($EOI 1751 . 1751) ($EOI 1719 . 1719) ($EOI 1696 . 1696) ($EOI 1696 . 1696) ($EOI 1665 . 1665) ($EOI 1652 . 1652) ($EOI 1650 . 1650) ($EOI 1628 . 1628) ($EOI 1627 . 1627))))
+  :file "!home!kothiyal!Dropbox!scripts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

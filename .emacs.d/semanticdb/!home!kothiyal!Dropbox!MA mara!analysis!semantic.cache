@@ -1,0 +1,94 @@
+;; Object analysis/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "analysis/"
+  :tables
+  (list
+    (semanticdb-table "extract_data_mz.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("json" include nil nil [1 12])
+            ("sys" include nil nil [13 23])
+            ("\"\"\"
+all files need to be stored in one directory
+change colums and rown in R
+change number in range depending on how many test trials
+commands for powershell: go to directory , type python .\\ex...
+if in main auskommentieren 
+\"\"\"" code nil nil [24 252])
+            ("learning_trial" variable nil nil [519 537])
+            ("exp_trials" variable nil nil [604 654])
+            ("\"\"\"
+responsePublic contains all data from all subjects
+keys:  single subjects
+for every subject two file are generated, one for all experimental trils, one for all training trials
+armClickdValue: estimation
+rewardObtained: real value
+\"\"\"" code nil nil [844 1081])
+            ("main" function (:arguments 
+              ( ("json_fl" variable nil (reparse-symbol function_parameters) [1091 1098]))              ) nil [1082 2348])
+            ("\"\"\"
+Generating CSV for test trials and csv containing errors.
+\"\"\"" code nil nil [2386 2451])
+            ("gen_csvs" function (:arguments 
+              ( ("data_sub" variable nil (reparse-symbol function_parameters) [2465 2473])
+                ("out_fl" variable nil (reparse-symbol function_parameters) [2475 2481]))              ) nil [2452 2978])
+            ("\"\"\"
+Generate tables for test trials
+function: y = alpha* x1 + beta *x2 + e
+Rows: x1, x2, order, value of seen option, chosen option with value
+unseen, not choosen: -1
+
+\"\"\"" code nil nil [2983 3154])
+            ("gen_table" function (:arguments 
+              ( ("trials" variable nil (reparse-symbol function_parameters) [3169 3175]))              ) nil [3155 4388])
+            ("extract_trial" function
+               (:documentation "
+    Arg: trial is a list, last element correspond to what subject has chosen.
+    Returns: {features: [(f1, f2)], searched:[(arm, reward)], chosen: (arm, reward)}
+    chosenArm: arm that was looked at/ choosen,
+    rewardObtained: value of that arm,
+    last trial if chosenArms: actual chosen arm
+    "
+                :arguments 
+                  ( ("trial" variable nil (reparse-symbol function_parameters) [4407 4412]))                  )
+                nil [4389 5522])
+            ("lsts2col" function
+               (:documentation "
+    returns list item, defined by col
+    >>> lsts2col([ [1,2], [2,3] ], 0)
+    [1,2]
+    "
+                :arguments 
+                  ( ("lsts" variable nil (reparse-symbol function_parameters) [5536 5540])
+                    ("col" variable nil (reparse-symbol function_parameters) [5542 5545]))                  )
+                nil [5523 5702])
+            ("test_extract_trial" function nil nil [5703 5810])
+            ("extract" function (:arguments 
+              ( ("dict_" variable nil (reparse-symbol function_parameters) [5823 5828])
+                ("keys" variable nil (reparse-symbol function_parameters) [5830 5834]))              ) nil [5811 5873])
+            ("split" function
+               (:documentation "
+    split([1,2,3,4), 2)
+    >>> [[1,2], [3,4]]
+    "
+                :arguments 
+                  ( ("lst" variable nil (reparse-symbol function_parameters) [5884 5887])
+                    ("k" variable nil (reparse-symbol function_parameters) [5889 5890]))                  )
+                nil [5874 6069])
+            ("rm_dup" function
+               (:documentation "
+    rm_dup([1, 2, 3, 2, 4])
+    >>> [1, 2, 3, 4]
+    "
+                :arguments 
+                  ( ("lst" variable nil (reparse-symbol function_parameters) [6081 6084]))                  )
+                nil [6070 6250])
+            ("if" code nil nil [6251 6333]))          
+      :file "extract_data_mz.py"
+      :pointmax 6333
+      :fsize 6332
+      :lastmodtime '(21861 64009 386815 536000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!MA mara!analysis!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

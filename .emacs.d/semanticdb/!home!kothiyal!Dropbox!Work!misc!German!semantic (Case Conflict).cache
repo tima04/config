@@ -1,0 +1,47 @@
+;; Object german/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "german/"
+  :tables
+  (list
+    (semanticdb-table "parse_dict.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+This program parse the dictionary I downloaded from http://dict.tu-chemnitz.de/.
+
+Some lines from the file (#line: line)
+===================================================================================================
+500: Abfahrtshocke {f} [sport] :: downhill position 
+9000: Ausbruch {m} :: sally
+9: Aale {pl}; Aalartige {pl} (Anguilliformes) (zoologische Ordnung) :: eels (zoological order)
+===================================================================================================
+
+The structure seems to be: word {gender or plural} | related_words :: english | related_meaning
+
+line = text::text
+text = 
+words = word | word | ... | word
+word = word [{}] [(text)] [[text]]
+
+\"\"\"" code nil nil [25 722])
+            ("lines" variable nil nil [723 769])
+            ("lines" variable nil nil [771 790])
+            ("re" include nil nil [792 801])
+            ("gws" variable nil nil [802 810])
+            ("ews" variable nil nil [811 819])
+            ("for" code nil nil [820 991]))          
+      :file "parse_dict.py"
+      :pointmax 1013
+      :fsize 1012
+      :lastmodtime '(22012 27417 827917 426000)
+      :unmatched-syntax nil)
+    (semanticdb-table "parse-beginner-dict.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("lines" variable nil nil [1 32]))          
+      :file "parse-beginner-dict.py"
+      :pointmax 34
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!misc!german!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

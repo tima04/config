@@ -1,0 +1,196 @@
+;; Object utils/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "utils/"
+  :tables
+  (list
+    (semanticdb-table "utils.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("vector" include (:system-flag t) nil [21 38])
+            ("map" include (:system-flag t) nil [39 53])
+            ("algorithm" include (:system-flag t) nil [54 74])
+            ("string" include (:system-flag t) nil [75 92])
+            ("set" include (:system-flag t) nil [93 107])
+            ("boost/foreach.hpp" include (:system-flag t) nil [108 136])
+            ("foreach" variable (:constant-flag t) nil [146 153])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [169 189])
+            ("indx" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "int"
+                :arguments 
+                  ( ("x" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [275 279])
+                    ("vs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [280 300]))                  
+                :typemodifiers ("inline"))
+                nil [237 398])
+            ("transform_old" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :arguments 
+                  ( ("xs" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [448 461]))                  )
+                nil [400 788])
+            ("transform" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :arguments 
+                  ( ("xs" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [897 910]))                  )
+                nil [853 1304])
+            ("foo" function (:type ("map" type
+                 (:template-specifier 
+                    ( ("int" type nil nil nil)
+                      ("vector" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [1330 1503])
+            ("groupby_elts" function
+               (:arguments 
+                  ( ("xs" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1677 1690]))                  
+                :type ("map" type
+                     (:template-specifier 
+                        ( ("T" type nil nil nil)
+                          ("vector" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [1644 1796])
+            ("print" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("xs" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1831 1844]))                  )
+                nil [1798 1929]))          
+      :file "utils.hpp"
+      :pointmax 1934
+      :fsize 1933
+      :lastmodtime '(21980 61433 617449 353000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("foreach" . ((symbol "BOOST_FOREACH" 139 . 152)))
+          )
+)
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("utils.hpp" include nil nil [1 21])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [33 42])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [43 56]))                  
+                :type "int")
+                nil [24 259]))          
+      :file "main.cpp"
+      :pointmax 288
+      :fsize 287
+      :lastmodtime '(21980 61481 673447 933000)
+      :unmatched-syntax nil)
+    (semanticdb-table "utils.i"
+      :major-mode 'c-mode
+      :tags 
+        '( ("std::vector" variable (:type "int") nil [196 216])
+            ("std::vector" variable (:type "int") nil [238 255])
+            ("std::vector" variable (:type "int") nil [277 297])
+            ("std::map" variable (:type "int") nil [319 352])
+            ("transform" variable (:type "int") nil [775 793])
+            ("groupby_elts" variable (:type "int") nil [822 840]))          
+      :file "utils.i"
+      :pointmax 863
+      :fsize 862
+      :lastmodtime '(21980 61616 689443 944000)
+      :unmatched-syntax '((semantic-list 803 . 821) (TEMPLATE 795 . 803) (punctuation 794 . 795) (semantic-list 763 . 774) (TEMPLATE 755 . 763) (punctuation 754 . 755) (string 554 . 565) (symbol 546 . 553) (punctuation 545 . 546) (semantic-list 307 . 318) (TEMPLATE 299 . 307) (punctuation 298 . 299) (semantic-list 265 . 276) (TEMPLATE 257 . 265) (punctuation 256 . 257) (semantic-list 226 . 237) (TEMPLATE 218 . 226) (punctuation 217 . 218) (semantic-list 181 . 195) (TEMPLATE 173 . 181) (punctuation 172 . 173) (string 140 . 147) (symbol 132 . 139) (punctuation 131 . 132) (semantic-list 17 . 71) (punctuation 16 . 17) (symbol 9 . 14) (symbol 2 . 8) (punctuation 1 . 2) (punctuation 838 . 839) (INT 835 . 838) (punctuation 834 . 835) (symbol 822 . 834) (semantic-list 803 . 821) (TEMPLATE 795 . 803) (punctuation 794 . 795) (semantic-list 763 . 774) (TEMPLATE 755 . 763) (punctuation 754 . 755) (string 554 . 565) (symbol 546 . 553) (punctuation 545 . 546) (semantic-list 307 . 318) (TEMPLATE 299 . 307) (punctuation 298 . 299) (semantic-list 265 . 276) (TEMPLATE 257 . 265) (punctuation 256 . 257) (semantic-list 226 . 237) (TEMPLATE 218 . 226) (punctuation 217 . 218) (semantic-list 181 . 195) (TEMPLATE 173 . 181) (punctuation 172 . 173) (string 140 . 147) (symbol 132 . 139) (punctuation 131 . 132) (semantic-list 17 . 71) (punctuation 16 . 17) (symbol 9 . 14) (symbol 2 . 8) (punctuation 1 . 2) (punctuation 834 . 835) (symbol 822 . 834) (semantic-list 803 . 821) (TEMPLATE 795 . 803) (punctuation 794 . 795) (semantic-list 763 . 774) (TEMPLATE 755 . 763) (punctuation 754 . 755) (string 554 . 565) (symbol 546 . 553) (punctuation 545 . 546) (semantic-list 307 . 318) (TEMPLATE 299 . 307) (punctuation 298 . 299) (semantic-list 265 . 276) (TEMPLATE 257 . 265) (punctuation 256 . 257) (semantic-list 226 . 237) (TEMPLATE 218 . 226) (punctuation 217 . 218) (semantic-list 181 . 195) (TEMPLATE 173 . 181) (punctuation 172 . 173) (string 140 . 147) (symbol 132 . 139) (punctuation 131 . 132) (semantic-list 17 . 71) (punctuation 16 . 17) (symbol 9 . 14) (symbol 2 . 8) (punctuation 1 . 2) (punctuation 16 . 17) (symbol 9 . 14) (symbol 2 . 8) (punctuation 1 . 2) (symbol 822 . 826) (semantic-list 803 . 821) (TEMPLATE 795 . 803) (punctuation 794 . 795) (semantic-list 763 . 774) (TEMPLATE 755 . 763) (punctuation 754 . 755) (string 554 . 565) (symbol 546 . 553) (punctuation 545 . 546) (semantic-list 307 . 318) (TEMPLATE 299 . 307) (punctuation 298 . 299) (semantic-list 265 . 276) (TEMPLATE 257 . 265) (punctuation 256 . 257) (semantic-list 226 . 237) (TEMPLATE 218 . 226) (punctuation 217 . 218) (semantic-list 181 . 195) (TEMPLATE 173 . 181) (punctuation 172 . 173) (string 140 . 147) (symbol 132 . 139) (punctuation 131 . 132) (semantic-list 17 . 71) (punctuation 16 . 17) (symbol 9 . 14) (symbol 2 . 8) (punctuation 1 . 2) (symbol 822 . 823) (semantic-list 803 . 821) (TEMPLATE 795 . 803) (punctuation 794 . 795) (semantic-list 763 . 774) (TEMPLATE 755 . 763) (punctuation 754 . 755) (string 554 . 565) (symbol 546 . 553) (punctuation 545 . 546) (semantic-list 307 . 318) (TEMPLATE 299 . 307) (punctuation 298 . 299) (semantic-list 265 . 276) (TEMPLATE 257 . 265) (punctuation 256 . 257) (semantic-list 226 . 237) (TEMPLATE 218 . 226) (punctuation 217 . 218) (semantic-list 181 . 195) (TEMPLATE 173 . 181) (punctuation 172 . 173) (string 140 . 147) (symbol 132 . 139) (punctuation 131 . 132) (semantic-list 17 . 71) (punctuation 16 . 17) (symbol 9 . 14) (symbol 2 . 8) (punctuation 1 . 2) (semantic-list 803 . 821) (TEMPLATE 795 . 803) (punctuation 794 . 795) (semantic-list 763 . 774) (TEMPLATE 755 . 763) (punctuation 754 . 755) (string 554 . 565) (symbol 546 . 553) (punctuation 545 . 546) (semantic-list 307 . 318) (TEMPLATE 299 . 307) (punctuation 298 . 299) (semantic-list 265 . 276) (TEMPLATE 257 . 265) (punctuation 256 . 257) (semantic-list 226 . 237) (TEMPLATE 218 . 226) (punctuation 217 . 218) (semantic-list 181 . 195) (TEMPLATE 173 . 181) (punctuation 172 . 173) (string 140 . 147) (symbol 132 . 139) (punctuation 131 . 132) (semantic-list 17 . 71) (punctuation 16 . 17) (symbol 9 . 14) (symbol 2 . 8) (punctuation 1 . 2) (semantic-list 803 . 817) (TEMPLATE 795 . 803) (punctuation 794 . 795) (semantic-list 763 . 774) (TEMPLATE 755 . 763) (punctuation 754 . 755) (string 554 . 565) (symbol 546 . 553) (punctuation 545 . 546) (semantic-list 307 . 318) (TEMPLATE 299 . 307) (punctuation 298 . 299) (semantic-list 265 . 276) (TEMPLATE 257 . 265) (punctuation 256 . 257) (semantic-list 226 . 237) (TEMPLATE 218 . 226) (punctuation 217 . 218) (semantic-list 181 . 195) (TEMPLATE 173 . 181) (punctuation 172 . 173) (string 140 . 147) (symbol 132 . 139) (punctuation 131 . 132) (semantic-list 17 . 71) (punctuation 16 . 17) (symbol 9 . 14) (symbol 2 . 8) (punctuation 1 . 2) (semantic-list 803 . 812) (TEMPLATE 795 . 803) (punctuation 794 . 795) (semantic-list 763 . 774) (TEMPLATE 755 . 763) (punctuation 754 . 755) (string 554 . 565) (symbol 546 . 553) (punctuation 545 . 546) (semantic-list 307 . 318) (TEMPLATE 299 . 307) (punctuation 298 . 299) (semantic-list 265 . 276) (TEMPLATE 257 . 265) (punctuation 256 . 257) (semantic-list 226 . 237) (TEMPLATE 218 . 226) (punctuation 217 . 218) (semantic-list 181 . 195) (TEMPLATE 173 . 181) (punctuation 172 . 173) (string 140 . 147) (symbol 132 . 139) (punctuation 131 . 132) (semantic-list 17 . 71) (punctuation 16 . 17) (symbol 9 . 14) (symbol 2 . 8) (punctuation 1 . 2) (semantic-list 803 . 810) (TEMPLATE 795 . 803) (punctuation 794 . 795) (semantic-list 763 . 774) (TEMPLATE 755 . 763) (punctuation 754 . 755) (string 554 . 565) (symbol 546 . 553) (punctuation 545 . 546) (semantic-list 307 . 318) (TEMPLATE 299 . 307) (punctuation 298 . 299) (semantic-list 265 . 276) (TEMPLATE 257 . 265) (punctuation 256 . 257) (semantic-list 226 . 237) (TEMPLATE 218 . 226) (punctuation 217 . 218) (semantic-list 181 . 195) (TEMPLATE 173 . 181) (punctuation 172 . 173) (string 140 . 147) (symbol 132 . 139) (punctuation 131 . 132) (semantic-list 17 . 71) (punctuation 16 . 17) (symbol 9 . 14) (symbol 2 . 8) (punctuation 1 . 2) (semantic-list 803 . 808) (TEMPLATE 795 . 803) (punctuation 794 . 795) (semantic-list 763 . 774) (TEMPLATE 755 . 763) (punctuation 754 . 755) (string 554 . 565) (symbol 546 . 553) (punctuation 545 . 546) (semantic-list 307 . 318) (TEMPLATE 299 . 307) (punctuation 298 . 299) (semantic-list 265 . 276) (TEMPLATE 257 . 265) (punctuation 256 . 257) (semantic-list 226 . 237) (TEMPLATE 218 . 226) (punctuation 217 . 218) (semantic-list 181 . 195) (TEMPLATE 173 . 181) (punctuation 172 . 173) (string 140 . 147) (symbol 132 . 139) (punctuation 131 . 132) (semantic-list 17 . 71) (punctuation 16 . 17) (symbol 9 . 14) (symbol 2 . 8) (punctuation 1 . 2) (semantic-list 803 . 806) (TEMPLATE 795 . 803) (punctuation 794 . 795) (semantic-list 763 . 774) (TEMPLATE 755 . 763) (punctuation 754 . 755) (string 554 . 565) (symbol 546 . 553) (punctuation 545 . 546) (semantic-list 307 . 318) (TEMPLATE 299 . 307) (punctuation 298 . 299) (semantic-list 265 . 276) (TEMPLATE 257 . 265) (punctuation 256 . 257) (semantic-list 226 . 237) (TEMPLATE 218 . 226) (punctuation 217 . 218) (semantic-list 181 . 195) (TEMPLATE 173 . 181) (punctuation 172 . 173) (string 140 . 147) (symbol 132 . 139) (punctuation 131 . 132) (semantic-list 17 . 71) (punctuation 16 . 17) (symbol 9 . 14) (symbol 2 . 8) (punctuation 1 . 2) (semantic-list 803 . 805) (TEMPLATE 795 . 803) (punctuation 794 . 795) (semantic-list 763 . 774) (TEMPLATE 755 . 763) (punctuation 754 . 755) (string 554 . 565) (symbol 546 . 553) (punctuation 545 . 546) (semantic-list 307 . 318) (TEMPLATE 299 . 307) (punctuation 298 . 299) (semantic-list 265 . 276) (TEMPLATE 257 . 265) (punctuation 256 . 257) (semantic-list 226 . 237) (TEMPLATE 218 . 226) (punctuation 217 . 218) (semantic-list 181 . 195) (TEMPLATE 173 . 181) (punctuation 172 . 173) (string 140 . 147) (symbol 132 . 139) (punctuation 131 . 132) (semantic-list 17 . 71) (punctuation 16 . 17) (symbol 9 . 14) (symbol 2 . 8) (punctuation 1 . 2) (semantic-list 763 . 774) (TEMPLATE 755 . 763) (punctuation 754 . 755) (string 554 . 565) (symbol 546 . 553) (punctuation 545 . 546) (semantic-list 307 . 318) (TEMPLATE 299 . 307) (punctuation 298 . 299) (semantic-list 265 . 276) (TEMPLATE 257 . 265) (punctuation 256 . 257) (semantic-list 226 . 237) (TEMPLATE 218 . 226) (punctuation 217 . 218) (semantic-list 181 . 195) (TEMPLATE 173 . 181) (punctuation 172 . 173) (string 140 . 147) (symbol 132 . 139) (punctuation 131 . 132) (semantic-list 17 . 71) (punctuation 16 . 17) (symbol 9 . 14) (symbol 2 . 8) (punctuation 1 . 2))
+      :lexical-table 
+        '(("SWIG_FILE_WITH_INIT")
+          )
+)
+    (semanticdb-table "utils.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "utils.py"
+      :pointmax 13729
+      :fsize 16864
+      :lastmodtime '(21980 61618 969443 876000)
+      :unmatched-syntax nil)
+    (semanticdb-table "temp.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("_utils" include nil nil [1 21])
+            ("numpy" include nil nil [22 40])
+            ("timeit" include nil nil [41 54])
+            ("str2int" function
+               (:documentation "
+    >>> str2int(['a', 'b', 'a', 'c', 'b'])
+    [0, 1, 0, 2, 1]
+    "
+                :arguments 
+                  ( ("xs" variable nil (reparse-symbol function_parameters) [68 70]))                  )
+                nil [56 249])
+            ("get_indx" function
+               (:documentation " (3, 2, 3, 0, 2) => {0: [3], 2: [1, 4], 3: [0,2]}
+    >>> get_indx((3, 2, 3, 0, 2))
+    {0: [3], 2: [1, 4], 3: [0, 2]}
+    # XXX: lot's of scope to optimize, will do it later, even might port it to C.
+    "
+                :arguments 
+                  ( ("xs" variable nil (reparse-symbol function_parameters) [263 265]))                  )
+                nil [250 581])
+            ("n" variable nil nil [582 588])
+            ("foo" variable nil nil [589 634])
+            ("str2int" code nil nil [645 657])
+            ("transform" code nil nil [666 680])
+            ("transform2" code nil nil [689 704]))          
+      :file "temp.py"
+      :pointmax 705
+      :fsize 752
+      :lastmodtime '(21980 61681 25442 43000)
+      :unmatched-syntax '((MOD 681 . 682) (MOD 658 . 659) (MOD 637 . 638) (MOD 681 . 682) (MOD 658 . 659) (MOD 637 . 638) ($EOI 705 . 705) (MOD 684 . 685) (MOD 661 . 662) (MOD 640 . 641) ($EOI 708 . 708) ($EOI 707 . 707) (MOD 684 . 685) (MOD 661 . 662) (MOD 640 . 641) ($EOI 708 . 708) ($EOI 707 . 707) (MOD 684 . 685) (MOD 661 . 662) (MOD 640 . 641) ($EOI 708 . 708) ($EOI 707 . 707) (MOD 684 . 685) (MOD 661 . 662) (MOD 640 . 641) ($EOI 708 . 708) ($EOI 707 . 707) (MOD 684 . 685) (MOD 661 . 662) (MOD 640 . 641) ($EOI 708 . 708) ($EOI 707 . 707) ($EOI 705 . 705)))
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(21980 48209 93840 94000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Documents!churn!churn-new!analysis-amit!utils!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

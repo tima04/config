@@ -1,0 +1,58 @@
+;; Object pinar/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pinar/"
+  :tables
+  (list
+    (semanticdb-table "pinar.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("shutil" include nil nil [12 25])
+            ("os" include nil nil [26 35])
+            ("random" include nil nil [36 49])
+            ("re" include nil nil [50 59])
+            ("NSTORIES" variable nil nil [61 74])
+            ("NJUDGES" variable nil nil [75 86])
+            ("EXT" variable nil nil [155 166])
+            ("DIR" variable nil nil [167 179])
+            ("NEWLINE" variable nil nil [220 236])
+            ("main" function nil nil [262 919])
+            ("copy_files" function (:arguments 
+              ( ("src" variable nil (reparse-symbol function_parameters) [948 951])
+                ("dst" variable nil (reparse-symbol function_parameters) [953 956]))              ) nil [933 1108])
+            ("rename_files" function
+               (:documentation "The i'th file in dir_ are named as Group i.docx
+    then rename it as storyi.docx, where j is the i'th entry in lst
+    "
+                :arguments 
+                  ( ("dir_" variable nil (reparse-symbol function_parameters) [1126 1130])
+                    ("lst" variable nil (reparse-symbol function_parameters) [1132 1135]))                  )
+                nil [1109 1838])
+            ("copy_dict2file" function
+               (:documentation "
+    dict_ is a mapping of judges to the random list they get.
+    "
+                :arguments 
+                  ( ("dict_" variable nil (reparse-symbol function_parameters) [1859 1864])
+                    ("file_" variable nil (reparse-symbol function_parameters) [1866 1871]))                  )
+                nil [1840 2120])
+            ("get_rndlst4judges" function (:arguments 
+              ( ("seeds" variable nil (reparse-symbol function_parameters) [2143 2148]))              ) nil [2121 2377])
+            ("appendFiles" function
+               (:documentation "
+    append all files  in the dir_ folder, sorted according to the file name
+    ith file is storyi.txt
+    "
+                :arguments 
+                  ( ("dir_" variable nil (reparse-symbol function_parameters) [2394 2398]))                  )
+                nil [2378 2918])
+            ("txt2words" function (:arguments 
+              ( ("dir_" variable nil (reparse-symbol function_parameters) [2933 2937]))              ) nil [2919 3109])
+            ("if" code nil nil [3111 3149]))          
+      :file "pinar.py"
+      :pointmax 3157
+      :fsize 3156
+      :lastmodtime '(22108 42440 478952 430000)
+      :unmatched-syntax '((NAME 3093 . 3095) (NEWLINE 3096 . 3097))))
+  :file "!home!kothiyal!Dropbox!Work!codes!python!pinar!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

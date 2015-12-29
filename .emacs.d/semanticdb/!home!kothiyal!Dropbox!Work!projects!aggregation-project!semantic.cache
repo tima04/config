@@ -1,0 +1,283 @@
+;; Object aggregation-project/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "aggregation-project/"
+  :tables
+  (list
+    (semanticdb-table "code2.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [21 39])
+            ("scipy" include nil nil [40 58])
+            ("scipy.optimize" include nil nil [59 117])
+            ("matplotlib.pyplot" include nil nil [118 149])
+            ("scipy.stats" include nil nil [150 178])
+            ("time" include nil nil [179 190])
+            ("pdb" include nil nil [191 201])
+            ("Options" type
+               (:members 
+                  ( ("\"function generate is the public api\"" code nil (reparse-symbol indented_block_body) [222 259])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [307 317])
+                            ("self" variable nil (reparse-symbol indented_block_body) [325 339]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [277 281])
+                            ("N" variable nil (reparse-symbol function_parameters) [283 284])
+                            ("eps" variable nil (reparse-symbol function_parameters) [290 293]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [264 340])
+                    ("generate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [358 362]))                          
+                        :documentation "
+        returns a list, each elemt of the list is a tuple 
+        (left-lottery, right-lottery), difference between the
+        relative EV of left and right lottery is less then eps.
+        ")
+                        (reparse-symbol indented_block_body) [345 941])
+                    ("_get_lottery" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1206 1210]))                          )
+                        (reparse-symbol indented_block_body) [1189 1618])
+                    ("_get_probs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1638 1642])
+                            ("n" variable nil (reparse-symbol function_parameters) [1644 1645])
+                            ("high" variable nil (reparse-symbol function_parameters) [1647 1651]))                          )
+                        (reparse-symbol indented_block_body) [1623 1880]))                  
+                :type "class")
+                nil [203 1880])
+            ("Options2" type
+               (:documentation "
+    same as Options, but object can called as a function
+    exaple: opt = Options2(); opt() instead of 
+    opt = Options(); opt.generate()
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2117 2127])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2135 2149])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2157 2181]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2073 2077])
+                            ("N" variable nil (reparse-symbol function_parameters) [2079 2080])
+                            ("nOutcome" variable nil (reparse-symbol function_parameters) [2086 2094])
+                            ("eps" variable nil (reparse-symbol function_parameters) [2100 2103]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2060 2182])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2200 2204]))                          
+                        :documentation "
+        returns a list, each elemt of the list is a tuple 
+        (left-lottery, right-lottery), difference between the
+        relative EV of left and right lottery is less then eps.
+        number of outcomes for both lotteries are equal to nOutcome.
+        ")
+                        (reparse-symbol indented_block_body) [2187 2851])
+                    ("_get_lottery" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2873 2877])
+                            ("nOutcome" variable nil (reparse-symbol function_parameters) [2879 2887]))                          )
+                        (reparse-symbol indented_block_body) [2856 3081])
+                    ("_get_probs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3101 3105])
+                            ("n" variable nil (reparse-symbol function_parameters) [3107 3108])
+                            ("high" variable nil (reparse-symbol function_parameters) [3110 3114]))                          )
+                        (reparse-symbol indented_block_body) [3086 3343]))                  
+                :type "class")
+                nil [1883 3343])
+            ("Subject" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3426 3445])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3454 3471])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3480 3498]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3377 3381])
+                            ("theta" variable nil (reparse-symbol function_parameters) [3383 3388])
+                            ("sig" variable nil (reparse-symbol function_parameters) [3394 3397])
+                            ("model" variable nil (reparse-symbol function_parameters) [3401 3406]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3364 3499])
+                    ("_utility" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3517 3521])
+                            ("x" variable nil (reparse-symbol function_parameters) [3523 3524]))                          )
+                        (reparse-symbol indented_block_body) [3504 3563])
+                    ("generate_choices" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3589 3593])
+                            ("options" variable nil (reparse-symbol function_parameters) [3595 3602]))                          
+                        :documentation "
+        returns a list [a_1,..a_n], a_i is 1(0) if left(right) lottery is
+        choosen from ith option in options.
+        ")
+                        (reparse-symbol indented_block_body) [3568 4258]))                  
+                :type "class")
+                nil [3345 4258])
+            ("EU" function
+               (:documentation "
+    lottery is a tuple ([x1,..,xn], [p1,..,pn])
+    u is a utility function.
+    "
+                :arguments 
+                  ( ("lottery" variable nil (reparse-symbol function_parameters) [4266 4273])
+                    ("u" variable nil (reparse-symbol function_parameters) [4275 4276]))                  )
+                nil [4259 4472])
+            ("pow_fun" function (:arguments 
+              ( ("theta" variable nil (reparse-symbol function_parameters) [4485 4490]))              ) nil [4473 4694])
+            ("Estimate" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [4777 4798])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4807 4923])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4957 5075])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5110 5220])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5270 5391])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5441 5468])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5477 5495]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4728 4732])
+                            ("options" variable nil (reparse-symbol function_parameters) [4734 4741])
+                            ("choices" variable nil (reparse-symbol function_parameters) [4743 4750])
+                            ("model" variable nil (reparse-symbol function_parameters) [4752 4757]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4715 5496])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5518 5522])
+                            ("args" variable nil (reparse-symbol function_parameters) [5524 5530]))                          )
+                        (reparse-symbol indented_block_body) [5505 5582])
+                    ("mat" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5599 5603])
+                            ("array" variable nil (reparse-symbol function_parameters) [5605 5610]))                          )
+                        (reparse-symbol indented_block_body) [5591 5895])
+                    ("minus_loglike" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5926 5930])
+                            ("par" variable nil (reparse-symbol function_parameters) [5932 5935]))                          )
+                        (reparse-symbol indented_block_body) [5908 6577])
+                    ("colSum" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6597 6601])
+                            ("mat" variable nil (reparse-symbol function_parameters) [6603 6606]))                          )
+                        (reparse-symbol indented_block_body) [6586 6642])
+                    ("est_par" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6659 6663])
+                            ("init" variable nil (reparse-symbol function_parameters) [6665 6669])
+                            ("method" variable nil (reparse-symbol function_parameters) [6677 6683]))                          )
+                        (reparse-symbol indented_block_body) [6647 6874])
+                    ("countour" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6892 6896]))                          )
+                        (reparse-symbol indented_block_body) [6879 7632]))                  
+                :type "class")
+                nil [4695 7632])
+            ("ests1" variable nil nil [7757 7767])
+            ("ests2" variable nil nil [7768 7778])
+            ("ests3" variable nil nil [7779 7789])
+            ("t0" variable nil nil [7790 7806])
+            ("N" variable nil nil [7807 7814])
+            ("M" variable nil nil [7815 7822])
+            ("for" code nil nil [7823 8357])
+            ("t1" code nil nil [8357 8379])
+            ("os1" variable nil nil [8382 8413])
+            ("ys1" variable nil nil [8414 8464])
+            ("est" variable nil nil [8465 8516])
+            ("print" code nil nil [8517 8526])
+            ("f" variable nil nil [8529 8567])
+            ("fig" variable nil nil [8568 8586])
+            ("x" variable nil nil [8587 8614])
+            ("ax" variable nil nil [8616 8641])
+            ("ax" code nil nil [8643 8676])
+            ("plt" code nil nil [8677 8687])
+            ("ax" code nil nil [8689 8704])
+            ("ax" code nil nil [8706 8723])
+            ("plt" code nil nil [8724 8734])
+            ("ax" code nil nil [8736 8782])
+            ("plt" code nil nil [8783 8793]))          
+      :file "code2.py"
+      :pointmax 8794
+      :fsize 8793
+      :lastmodtime '(21187 9404)
+      :unmatched-syntax nil)
+    (semanticdb-table "code.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("scipy" include nil nil [20 38])
+            ("scipy.optimize" include nil nil [39 70])
+            ("matplotlib.pyplot" include nil nil [71 102])
+            ("generate_option_list" function (:arguments 
+              ( ("N" variable nil (reparse-symbol function_parameters) [129 130])
+                ("eps" variable nil (reparse-symbol function_parameters) [136 139]))              ) nil [104 536])
+            ("generate_choices" function (:arguments 
+              ( ("option_list" variable nil (reparse-symbol function_parameters) [558 569])
+                ("U_fun" variable nil (reparse-symbol function_parameters) [571 576])
+                ("sigma" variable nil (reparse-symbol function_parameters) [578 583]))              ) nil [537 1022])
+            ("logistic" variable nil nil [1023 1064])
+            ("EU" function (:arguments 
+              ( ("lottery" variable nil (reparse-symbol function_parameters) [1073 1080])
+                ("u" variable nil (reparse-symbol function_parameters) [1082 1083]))              ) nil [1066 1186])
+            ("pow_fun" function (:arguments 
+              ( ("theta" variable nil (reparse-symbol function_parameters) [1199 1204]))              ) nil [1187 1241])
+            ("get_lottery" function nil nil [1242 1544])
+            ("get_probs" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [1559 1560])
+                ("high" variable nil (reparse-symbol function_parameters) [1562 1566]))              ) nil [1545 1769])
+            ("est_par" function (:arguments 
+              ( ("opt_lst" variable nil (reparse-symbol function_parameters) [1786 1793])
+                ("ys" variable nil (reparse-symbol function_parameters) [1795 1797]))              ) nil [1774 2241])
+            ("foo" function (:arguments 
+              ( ("N" variable nil (reparse-symbol function_parameters) [2251 2252])
+                ("eps" variable nil (reparse-symbol function_parameters) [2260 2263]))              ) nil [2243 2546])
+            ("a1" variable nil nil [2547 2583])
+            ("a2" variable nil nil [2584 2628])
+            ("a3" variable nil nil [2629 2673])
+            ("a4" variable nil nil [2674 2726])
+            ("b1" variable nil nil [2728 2772])
+            ("b2" variable nil nil [2773 2817])
+            ("b3" variable nil nil [2818 2862])
+            ("b4" variable nil nil [2863 2907])
+            ("foo" variable nil nil [2909 2957])
+            ("y2s" variable nil nil [2958 3033])
+            ("bar" variable nil nil [3034 3082])
+            ("N" variable nil nil [3084 3091])
+            ("eps" variable nil nil [3092 3101])
+            ("es1" variable nil nil [3102 3110])
+            ("es2" variable nil nil [3111 3119])
+            ("es" variable nil nil [3120 3127])
+            ("for" code nil nil [3128 3540]))          
+      :file "code.py"
+      :pointmax 3541
+      :fsize 3414
+      :lastmodtime '(21182 51049)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!projects!aggregation-project!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0")

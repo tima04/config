@@ -1,0 +1,1502 @@
+;; Object progmodes/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "progmodes/"
+  :tables
+  (list
+    (semanticdb-table "grep.el.gz"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("compile" include nil nil [1018 1036])
+            ("grep" customgroup (:user-visible-flag t) nil [1039 1134])
+            ("grep-host-defaults-alist" variable nil nil [1136 1442])
+            ("grep-apply-setting" function (:arguments ("symbol" "value")) nil [1444 2092])
+            ("grep-window-height" variable (:user-visible-flag t) nil [2109 2313])
+            ("grep-highlight-matches" variable (:default-value (quote auto-detect)) nil [2315 3871])
+            ("grep-scroll-output" variable (:user-visible-flag t) nil [3873 4183])
+            ("grep-command" variable nil nil [4200 4738])
+            ("grep-template" variable nil nil [4740 5388])
+            ("grep-use-null-device" variable (:default-value (quote auto-detect)) nil [5390 6066])
+            ("grep-find-command" variable nil nil [6083 6441])
+            ("grep-find-template" variable nil nil [6443 7110])
+            ("grep-files-aliases" variable
+               (:user-visible-flag t
+                :default-value (quote (("all" . "* .*") ("el" . "*.el") ("ch" . "*.[ch]") ("c" . "*.c") ("cc" . "*.cc *.cxx *.cpp *.C *.CC *.c++") ("cchh" . "*.cc *.[ch]xx *.[ch]pp *.[CHh] *.CC *.HH *.[ch]++") ("hh" . "*.hxx *.hpp *.[Hh] *.HH *.h++") ("h" . "*.h") ("l" . "[Cc]hange[Ll]og*") ("m" . "[Mm]akefile*") ("tex" . "*.tex") ("texi" . "*.texi") ("asm" . "*.[sS]"))))
+                nil [7112 7663])
+            ("grep-find-ignored-directories" variable
+               (:user-visible-flag t
+                :default-value vc-directory-exclusion-list)
+                nil [7665 8059])
+            ("grep-find-ignored-files" variable
+               (:user-visible-flag t
+                :default-value (cons ".#*" (delq nil (mapcar (lambda (s) (unless (string-match-p "/\\'" s) (concat "*" s))) completion-ignored-extensions))))
+                nil [8061 8536])
+            ("grep-error-screen-columns" variable (:user-visible-flag t) nil [8538 8772])
+            ("grep-setup-hook" variable nil nil [8789 8923])
+            ("grep-mode-map" variable (:default-value (let ((map (make-sparse-keymap))) (set-keymap-parent map compilation-minor-mode-map) (define-key map " " (quote scroll-up-command)) (define-key map "" (quote scroll-down-command)) (define-key map "" (quote next-error-follow-minor-mode)) (define-key map "" (quote compile-goto-error)) (define-key map "n" (quote next-error-no-select)) (define-key map "p" (quote previous-error-no-select)) (define-key map "{" (quote compilation-previous-file)) (define-key map "}" (quote compilation-next-file)) (define-key map "	" (quote compilation-next-error)) (define-key map [backtab] (quote compilation-previous-error)) (define-key map [menu-bar grep] (cons "Grep" (make-sparse-keymap "Grep"))) (define-key map [menu-bar grep compilation-kill-compilation] (quote (menu-item "Kill Grep" kill-compilation :help "Kill the currently running grep process"))) (define-key map [menu-bar grep compilation-separator2] (quote ("----"))) (define-key map [menu-bar grep compilation-compile] (quote (menu-item "Compile..." compile :help "Compile the program including the current buffer.  Default: run `make'"))) (define-key map [menu-bar grep compilation-rgrep] (quote (menu-item "Recursive grep..." rgrep :help "User-friendly recursive grep in directory tree"))) (define-key map [menu-bar grep compilation-lgrep] (quote (menu-item "Local grep..." lgrep :help "User-friendly grep in a directory"))) (define-key map [menu-bar grep compilation-grep-find] (quote (menu-item "Grep via Find..." grep-find :help "Run grep via find, with user-specified args"))) (define-key map [menu-bar grep compilation-grep] (quote (menu-item "Another grep..." grep :help "Run grep, with user-specified args, and collect output in a buffer."))) (define-key map [menu-bar grep compilation-recompile] (quote (menu-item "Repeat grep" recompile :help "Run grep again"))) (define-key map [menu-bar grep compilation-separator2] (quote ("----"))) (define-key map [menu-bar grep compilation-first-error] (quote (menu-item "First Match" first-error :help "Restart at the first match, visit corresponding location"))) (define-key map [menu-bar grep compilation-previous-error] (quote (menu-item "Previous Match" previous-error :help "Visit the previous match and corresponding location"))) (define-key map [menu-bar grep compilation-next-error] (quote (menu-item "Next Match" next-error :help "Visit the next match and corresponding location"))) map)) nil [8925 11523])
+            ("grep-mode-tool-bar-map" variable (:default-value (when (keymapp (butlast tool-bar-map)) (let ((map (butlast (copy-keymap tool-bar-map))) (help (last tool-bar-map))) (tool-bar-local-item "left-arrow" (quote previous-error-no-select) (quote previous-error-no-select) map :rtl "right-arrow" :help "Goto previous match") (tool-bar-local-item "right-arrow" (quote next-error-no-select) (quote next-error-no-select) map :rtl "left-arrow" :help "Goto next match") (tool-bar-local-item "cancel" (quote kill-compilation) (quote kill-compilation) map :enable (quote (let ((buffer (compilation-find-buffer))) (get-buffer-process buffer))) :help "Stop grep") (tool-bar-local-item "refresh" (quote recompile) (quote recompile) map :help "Restart grep") (append map help)))) nil [11525 12452])
+            ("defalias" code nil nil [12454 12493])
+            ("grep-last-buffer" variable nil nil [12993 13248])
+            ("grep-regexp-alist" variable
+               (:constant-flag t
+                :default-value (quote (("^\\(.+?\\)\\(:[ 	]*\\)\\([1-9][0-9]*\\)\\2" 1 3 ((lambda nil (when grep-highlight-matches (let* ((beg (match-end 0)) (end (save-excursion (goto-char beg) (line-end-position))) (mbeg (text-property-any beg end (quote font-lock-face) (quote match)))) (when mbeg (- mbeg beg))))) lambda nil (when grep-highlight-matches (let* ((beg (match-end 0)) (end (save-excursion (goto-char beg) (line-end-position))) (mbeg (text-property-any beg end (quote font-lock-face) (quote match))) (mend (and mbeg (next-single-property-change mbeg (quote font-lock-face) nil end)))) (when mend (- mend beg)))))) ("^Binary file \\(.+\\) matches$" 1 nil nil 0 1))))
+                nil [13265 14606])
+            ("grep-first-column" variable nil nil [14608 14714])
+            ("grep-error" variable (:default-value "grep hit") nil [14716 14794])
+            ("grep-hit-face" variable (:default-value compilation-info-face) nil [14935 15015])
+            ("grep-error-face" variable (:default-value (quote compilation-error)) nil [15017 15106])
+            ("grep-match-face" variable (:default-value (quote match)) nil [15108 15178])
+            ("grep-context-face" variable (:default-value (quote shadow)) nil [15180 15259])
+            ("grep-mode-font-lock-keywords" variable (:default-value (quote ((": \\(.+\\): \\(?:Permission denied\\|No such \\(?:file or directory\\|device or address\\)\\)$" 1 grep-error-face) ("^Grep[/a-zA-z]* started.*" (0 (quote (face nil compilation-message nil help-echo nil mouse-face nil)) t)) ("^Grep[/a-zA-z]* finished \\(?:(\\(matches found\\))\\|with \\(no matches found\\)\\).*" (0 (quote (face nil compilation-message nil help-echo nil mouse-face nil)) t) (1 compilation-info-face nil t) (2 compilation-warning-face nil t)) ("^Grep[/a-zA-z]* \\(exited abnormally\\|interrupt\\|killed\\|terminated\\)\\(?:.*with code \\([0-9]+\\)\\)?.*" (0 (quote (face nil compilation-message nil help-echo nil mouse-face nil)) t) (1 grep-error-face) (2 grep-error-face nil t)) ("^.+?-[0-9]+-.*
+" (0 grep-context-face))))) nil [15261 16294])
+            ("grep-program" variable (:default-value (purecopy "grep")) nil [16311 16498])
+            ("find-program" variable (:default-value (purecopy "find")) nil [16515 16683])
+            ("xargs-program" variable (:default-value (purecopy "xargs")) nil [16700 16898])
+            ("grep-find-use-xargs" variable nil nil [16915 17229])
+            ("grep-history" variable nil nil [17275 17325])
+            ("grep-find-history" variable nil nil [17341 17401])
+            ("grep-regexp-history" variable nil nil [17456 17488])
+            ("grep-files-history" variable nil nil [17489 17520])
+            ("grep-process-setup" function nil nil [17537 19168])
+            ("grep-filter" function nil nil [19170 20170])
+            ("grep-probe" function (:arguments ("command" "args" "func" "result")) nil [20172 20385])
+            ("grep-compute-defaults" function nil nil [20402 25529])
+            ("grep-tag-default" function nil nil [25531 25807])
+            ("grep-default-command" function nil nil [25809 27304])
+            ("define-compilation-mode" code nil nil [27322 28178])
+            ("grep" function
+               (:user-visible-flag t
+                :arguments ("command-args"))
+                nil [28196 29617])
+            ("grep-find" function
+               (:user-visible-flag t
+                :arguments ("command-args"))
+                nil [29635 30416])
+            ("defalias" code nil nil [30433 30465])
+            ("grep-expand-keywords" variable
+               (:constant-flag t
+                :default-value (quote (("<C>" and cf (isearch-no-upper-case-p regexp t) "-i") ("<D>" . dir) ("<F>" . files) ("<N>" . null-device) ("<X>" . excl) ("<R>" shell-quote-argument (or regexp "")))))
+                nil [30503 30916])
+            ("grep-expand-template" function (:arguments ("template" "regexp" "files" "dir" "excl")) nil [30918 31388])
+            ("grep-read-regexp" function nil nil [31390 31676])
+            ("grep-read-files" function (:arguments ("regexp")) nil [31678 32988])
+            ("lgrep" function
+               (:user-visible-flag t
+                :arguments ("regexp" "files" "dir" "confirm"))
+                nil [33005 35696])
+            ("find-name-arg" variable nil nil [35699 35721])
+            ("rgrep" function
+               (:user-visible-flag t
+                :arguments ("regexp" "files" "dir" "confirm"))
+                nil [35785 39653])
+            ("zrgrep" function
+               (:user-visible-flag t
+                :arguments ("regexp" "files" "dir" "confirm" "grep-find-template"))
+                nil [39670 41466])
+            ("defalias" code nil nil [41483 41509])
+            ("grep" package nil nil [41511 41526]))          
+      :file "grep.el.gz"
+      :pointmax 41550
+      :fsize 11171
+      :lastmodtime '(20400 62402)
+      :unmatched-syntax nil)
+    (semanticdb-table "hideshow.el.gz"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("hideshow" customgroup (:user-visible-flag t) nil [10028 10153])
+            ("hs-hide-comments-when-hiding-all" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [10155 10294])
+            ("hs-minor-mode-hook" variable (:user-visible-flag t) nil [10296 10452])
+            ("hs-isearch-open" variable
+               (:user-visible-flag t
+                :default-value (quote code))
+                nil [10454 11083])
+            ("hs-special-modes-alist" variable
+               (:user-visible-flag t
+                :default-value (mapcar (quote purecopy) (quote ((c-mode "{" "}" "/[*/]" nil nil) (c++-mode "{" "}" "/[*/]" nil nil) (bibtex-mode ("@\\S(*\\(\\s(\\)" 1)) (java-mode "{" "}" "/[*/]" nil nil) (js-mode "{" "}" "/[*/]" nil)))))
+                nil [11100 12562])
+            ("hs-hide-all-non-comment-function" variable (:user-visible-flag t) nil [12564 12684])
+            ("hs-allow-nesting" variable (:user-visible-flag t) nil [12686 12872])
+            ("hs-hide-hook" variable (:user-visible-flag t) nil [12874 13107])
+            ("hs-show-hook" variable (:user-visible-flag t) nil [13109 13325])
+            ("hs-set-up-overlay" variable (:user-visible-flag t) nil [13327 14051])
+            ("hs-minor-mode" variable nil nil [14154 14315])
+            ("hs-minor-mode-map" variable (:default-value (let ((map (make-sparse-keymap))) (define-key map "@" (quote hs-hide-block)) (define-key map "@" (quote hs-show-block)) (define-key map "@\210" (quote hs-hide-all)) (define-key map "@\223" (quote hs-show-all)) (define-key map "@" (quote hs-hide-level)) (define-key map "@" (quote hs-toggle-hiding)) (define-key map [(shift mouse-2)] (quote hs-mouse-toggle-hiding)) map)) nil [14317 14876])
+            ("easy-menu-define" code nil nil [14878 16616])
+            ("hs-c-start-regexp" variable nil nil [16618 16773])
+            ("make-variable-buffer-local" code nil nil [16774 16821])
+            ("hs-block-start-regexp" variable nil nil [16823 16892])
+            ("make-variable-buffer-local" code nil nil [16893 16944])
+            ("hs-block-start-mdata-select" variable nil nil [16946 17214])
+            ("make-variable-buffer-local" code nil nil [17215 17272])
+            ("hs-block-end-regexp" variable nil nil [17274 17335])
+            ("hs-forward-sexp-func" variable (:default-value (quote forward-sexp)) nil [17337 17697])
+            ("make-variable-buffer-local" code nil nil [17698 17748])
+            ("hs-adjust-block-beginning" variable nil nil [17750 18483])
+            ("make-variable-buffer-local" code nil nil [18484 18539])
+            ("hs-headline" variable nil nil [18541 18939])
+            ("hs-discard-overlays" function (:arguments ("from" "to")) nil [19041 19591])
+            ("hs-make-overlay" function (:arguments ("b" "e" "kind" "b-offset" "e-offset")) nil [19593 21009])
+            ("hs-isearch-show" function (:arguments ("ov")) nil [21011 21230])
+            ("hs-isearch-show-temporary" function (:arguments ("ov" "hide-p")) nil [21232 22462])
+            ("hs-looking-at-block-start-p" function nil nil [22464 22653])
+            ("hs-forward-sexp" function (:arguments ("match-data" "arg")) nil [22655 22970])
+            ("hs-hide-comment-region" function (:arguments ("beg" "end" "repos-end")) nil [22972 23400])
+            ("hs-hide-block-at-point" function (:arguments ("end" "comment-reg")) nil [23402 24808])
+            ("hs-inside-comment-p" function nil nil [24810 27350])
+            ("hs-grok-mode-type" function nil nil [27352 29015])
+            ("hs-find-block-beginning" function nil nil [29017 29711])
+            ("hs-hide-level-recursive" function (:arguments ("arg" "minp" "maxp")) nil [29713 30477])
+            ("hs-life-goes-on" function (:arguments ("body")) nil [30479 30798])
+            ("put" code nil nil [30800 30854])
+            ("hs-overlay-at" function (:arguments ("position")) nil [30856 31168])
+            ("hs-already-hidden-p" function nil nil [31170 31730])
+            ("hs-c-like-adjust-block-beginning" function (:arguments ("initial")) nil [31780 32201])
+            ("hs-hide-all" function (:user-visible-flag t) nil [32294 34134])
+            ("hs-show-all" function (:user-visible-flag t) nil [34136 34452])
+            ("hs-hide-block" function
+               (:user-visible-flag t
+                :arguments ("end"))
+                nil [34454 35105])
+            ("hs-show-block" function
+               (:user-visible-flag t
+                :arguments ("end"))
+                nil [35107 36391])
+            ("hs-hide-level" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [36393 36741])
+            ("hs-toggle-hiding" function (:user-visible-flag t) nil [36743 36959])
+            ("hs-mouse-toggle-hiding" function
+               (:user-visible-flag t
+                :arguments ("e"))
+                nil [36961 37260])
+            ("hs-hide-initial-comment-block" function (:user-visible-flag t) nil [37262 37831])
+            ("define-minor-mode" code nil nil [37848 39340])
+            ("turn-off-hideshow" function nil nil [39357 39452])
+            ("hideshow" package nil nil [39546 39565]))          
+      :file "hideshow.el.gz"
+      :pointmax 39593
+      :fsize 11797
+      :lastmodtime '(20400 62402)
+      :unmatched-syntax nil)
+    (semanticdb-table "cc-mode.el.gz"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("unless" code nil nil [3172 3246])
+            ("let" code nil nil [3270 3485])
+            ("cc-require" code nil nil [3488 3509])
+            ("cc-require-when-compile" code nil nil [3510 3545])
+            ("cc-require" code nil nil [3546 3567])
+            ("cc-require" code nil nil [3568 3591])
+            ("cc-require" code nil nil [3592 3615])
+            ("cc-require" code nil nil [3616 3637])
+            ("cc-require" code nil nil [3638 3660])
+            ("cc-require" code nil nil [3661 3683])
+            ("cc-require" code nil nil [3684 3706])
+            ("cc-bytecomp-defvar" code nil nil [3733 3785])
+            ("cc-bytecomp-defun" code nil nil [3794 3832])
+            ("cc-bytecomp-defun" code nil nil [3842 3876])
+            ("cc-bytecomp-defvar" code nil nil [3970 4009])
+            ("cc-bytecomp-defvar" code nil nil [4010 4059])
+            ("cc-external-require" code nil nil [4185 4216])
+            ("subword-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [4311 4400])
+            ("cc-fonts" include nil nil [4592 4611])
+            ("c-leave-cc-mode-mode" function nil nil [5625 5689])
+            ("c-init-language-vars-for" function (:arguments ("mode")) nil [5691 6480])
+            ("c-initialize-cc-mode" function (:arguments ("new-style-init")) nil [6497 7665])
+            ("c-mode-base-map" variable nil nil [7691 7766])
+            ("c-make-inherited-keymap" function nil nil [7768 8363])
+            ("c-define-abbrev-table" function (:arguments ("name" "defs")) nil [8365 8889])
+            ("put" code nil nil [8890 8942])
+            ("c-bind-special-erase-keys" function nil nil [8944 9508])
+            ("if" code nil nil [9510 16075])
+            ("cc-bytecomp-defvar" code nil nil [16152 16186])
+            ("c-mode-menu" function (:arguments ("modestr")) nil [16188 16552])
+            ("defalias" code nil nil [16811 16985])
+            ("c-unfind-enclosing-token" function (:arguments ("pos")) nil [17495 17981])
+            ("c-unfind-coalesced-tokens" function (:arguments ("beg" "end")) nil [17983 18788])
+            ("c-maybe-stale-found-type" variable nil nil [19562 19599])
+            ("make-variable-buffer-local" code nil nil [19600 19654])
+            ("c-basic-common-init" function (:arguments ("mode" "default-style")) nil [19656 25249])
+            ("c-setup-doc-comment-style" function nil nil [25342 25630])
+            ("c-new-BEG" variable nil nil [25881 25901])
+            ("make-variable-buffer-local" code nil nil [25902 25941])
+            ("c-new-END" variable nil nil [25942 25962])
+            ("make-variable-buffer-local" code nil nil [25963 26002])
+            ("c-common-init" function (:arguments ("mode")) nil [26004 27569])
+            ("c-count-cfss" function (:arguments ("lv-alist")) nil [27571 27936])
+            ("c-before-hack-hook" function nil nil [27938 29338])
+            ("c-remove-any-local-eval-or-mode-variables" function nil nil [29340 31032])
+            ("c-postprocess-file-styles" function nil nil [31034 32926])
+            ("if" code nil nil [32928 33111])
+            ("c-run-mode-hooks" function (:arguments ("hooks")) nil [33113 33425])
+            ("c-old-BOM" variable nil nil [33690 33710])
+            ("make-variable-buffer-local" code nil nil [33711 33750])
+            ("c-old-EOM" variable nil nil [33751 33771])
+            ("make-variable-buffer-local" code nil nil [33772 33811])
+            ("c-extend-region-for-CPP" function (:arguments ("beg" "end")) nil [33813 34625])
+            ("c-extend-font-lock-region-for-macros" function (:arguments ("begg" "endd" "old-len")) nil [34627 35753])
+            ("c-neutralize-CPP-line" function (:arguments ("beg" "end")) nil [35755 36637])
+            ("c-neutralize-syntax-in-and-mark-CPP" function (:arguments ("begg" "endd" "old-len")) nil [36639 39725])
+            ("c-before-change" function (:arguments ("beg" "end")) nil [39727 42993])
+            ("c-in-after-change-fontification" variable nil nil [42995 43039])
+            ("make-variable-buffer-local" code nil nil [43040 43101])
+            ("c-after-change" function (:arguments ("beg" "end" "old-len")) nil [43199 45359])
+            ("c-set-fl-decl-start" function (:arguments ("pos")) nil [45361 46956])
+            ("c-change-set-fl-decl-start" function (:arguments ("beg" "end" "old-len")) nil [46982 47374])
+            ("c-context-set-fl-decl-start" function (:arguments ("beg" "end")) nil [47376 47652])
+            ("c-standard-font-lock-fontify-region-function" variable nil nil [47654 47769])
+            ("c-font-lock-fontify-region" function (:arguments ("beg" "end" "verbose")) nil [47771 48852])
+            ("c-after-font-lock-init" function nil nil [48854 49271])
+            ("c-font-lock-init" function nil nil [49273 50284])
+            ("c-extend-after-change-region" function (:arguments ("beg" "end" "old-len")) nil [50286 50858])
+            ("c-mode-syntax-table" variable nil nil [50895 50968])
+            ("or" code nil nil [50969 51079])
+            ("c-mode-abbrev-table" variable nil nil [51081 51160])
+            ("c-define-abbrev-table" code nil nil [51161 51314])
+            ("c-mode-map" variable nil nil [51316 51373])
+            ("if" code nil nil [51374 51546])
+            ("easy-menu-define" code nil nil [51548 51648])
+            ("define-derived-mode" code nil nil [53236 54251])
+            ("c++-mode-syntax-table" variable nil nil [54290 54367])
+            ("or" code nil nil [54368 54484])
+            ("c++-mode-abbrev-table" variable nil nil [54486 54569])
+            ("c-define-abbrev-table" code nil nil [54570 54780])
+            ("c++-mode-map" variable nil nil [54782 54843])
+            ("if" code nil nil [54844 55191])
+            ("easy-menu-define" code nil nil [55193 55303])
+            ("define-derived-mode" code nil nil [55320 56350])
+            ("objc-mode-syntax-table" variable nil nil [56397 56476])
+            ("or" code nil nil [56477 56596])
+            ("objc-mode-abbrev-table" variable nil nil [56598 56683])
+            ("c-define-abbrev-table" code nil nil [56684 56840])
+            ("objc-mode-map" variable nil nil [56842 56905])
+            ("if" code nil nil [56906 57093])
+            ("easy-menu-define" code nil nil [57095 57210])
+            ("define-derived-mode" code nil nil [57299 58346])
+            ("java-mode-syntax-table" variable nil nil [58386 58465])
+            ("or" code nil nil [58466 58585])
+            ("java-mode-abbrev-table" variable nil nil [58587 58672])
+            ("c-define-abbrev-table" code nil nil [58673 58943])
+            ("java-mode-map" variable nil nil [58945 59008])
+            ("if" code nil nil [59009 59136])
+            ("c-Java-defun-prompt-regexp" variable
+               (:constant-flag t
+                :default-value "^[ 	]*\\(\\(\\(public\\|protected\\|private\\|const\\|abstract\\|synchronized\\|final\\|static\\|threadsafe\\|transient\\|native\\|volatile\\)\\s-+\\)*\\(\\(\\([[a-zA-Z][][_$.a-zA-Z0-9]*[][_$.a-zA-Z0-9]+\\|[[a-zA-Z]\\)\\s-*\\)\\s-+\\)\\)?\\(\\([[a-zA-Z][][_$.a-zA-Z0-9]*\\s-+\\)\\s-*\\)?\\([_a-zA-Z][^][ 	:;.,{}()=]*\\|\\([_$a-zA-Z][_$.a-zA-Z0-9]*\\)\\)\\s-*\\(([^);{}]*)\\)?\\([] 	]*\\)\\(\\s-*\\<throws\\>\\s-*\\(\\([_$a-zA-Z][_$.a-zA-Z0-9]*\\)[, 	
+]*\\)+\\)?\\s-*")
+                nil [59393 59913])
+            ("easy-menu-define" code nil nil [59915 60030])
+            ("define-derived-mode" code nil nil [60122 61086])
+            ("idl-mode-syntax-table" variable nil nil [61142 61219])
+            ("or" code nil nil [61220 61336])
+            ("idl-mode-abbrev-table" variable nil nil [61338 61421])
+            ("c-define-abbrev-table" code nil nil [61422 61472])
+            ("idl-mode-map" variable nil nil [61474 61535])
+            ("if" code nil nil [61536 61660])
+            ("easy-menu-define" code nil nil [61662 61772])
+            ("define-derived-mode" code nil nil [61862 62829])
+            ("pike-mode-syntax-table" variable nil nil [62869 62948])
+            ("or" code nil nil [62949 63068])
+            ("pike-mode-abbrev-table" variable nil nil [63070 63155])
+            ("c-define-abbrev-table" code nil nil [63156 63312])
+            ("pike-mode-map" variable nil nil [63314 63377])
+            ("if" code nil nil [63378 63534])
+            ("easy-menu-define" code nil nil [63536 63651])
+            ("define-derived-mode" code nil nil [63849 64821])
+            ("awk-mode-abbrev-table" variable nil nil [65393 65476])
+            ("c-define-abbrev-table" code nil nil [65477 65632])
+            ("awk-mode-map" variable nil nil [65634 65695])
+            ("if" code nil nil [65696 66417])
+            ("easy-menu-define" code nil nil [66419 66529])
+            ("awk-mode-syntax-table" variable nil nil [66569 66599])
+            ("declare-function" code nil nil [66600 66652])
+            ("define-derived-mode" code nil nil [66669 67809])
+            ("c-mode-help-address" variable
+               (:constant-flag t
+                :default-value "bug-cc-mode@gnu.org")
+                nil [67831 67926])
+            ("c-version" function (:user-visible-flag t) nil [67928 68097])
+            ("c-prepare-bug-report-hooks" variable nil nil [68099 68138])
+            ("reporter-prompt-for-summary-p" variable nil nil [68179 68217])
+            ("reporter-dont-compact-list" variable nil nil [68218 68253])
+            ("c-submit-bug-report" function (:user-visible-flag t) nil [68255 70236])
+            ("cc-provide" code nil nil [70240 70261]))          
+      :file "cc-mode.el.gz"
+      :pointmax 70288
+      :fsize 19999
+      :lastmodtime '(20365 1028)
+      :unmatched-syntax '((close-paren 3485 . 3486) (symbol 3250 . 3267) (open-paren 3249 . 3250) (close-paren 3246 . 3247) (symbol 3153 . 3169) (open-paren 3152 . 3153)))
+    (semanticdb-table "cwarn.el.gz"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("cl" include nil nil [3780 3793])
+            ("custom" include nil nil [3796 3813])
+            ("font-lock" include nil nil [3814 3834])
+            ("cc-mode" include nil nil [3835 3853])
+            ("cwarn" customgroup (:user-visible-flag t) nil [3878 3982])
+            ("cwarn-mode" variable (:user-visible-flag t) nil [3984 4120])
+            ("cwarn-configuration" variable (:default-value (quote ((c-mode (not reference)) (c++-mode t)))) nil [4122 4662])
+            ("cwarn-font-lock-feature-keywords-alist" variable (:default-value (quote ((assign . cwarn-font-lock-assignment-keywords) (semicolon . cwarn-font-lock-semicolon-keywords) (reference . cwarn-font-lock-reference-keywords)))) nil [4664 5234])
+            ("cwarn-verbose" variable (:default-value t) nil [5236 5432])
+            ("cwarn-mode-text" variable (:default-value " CWarn") nil [5434 5716])
+            ("cwarn-load-hook" variable nil nil [5718 5852])
+            ("define-minor-mode" code nil nil [5892 6506])
+            ("turn-on-cwarn-mode" function nil nil [6523 6701])
+            ("make-obsolete" code nil nil [6702 6756])
+            ("cwarn-is-enabled" function (:arguments ("mode" "feature")) nil [6786 7426])
+            ("cwarn-inside-macro" function nil nil [7428 7673])
+            ("cwarn-font-lock-keywords" function (:arguments ("addp")) nil [7675 8137])
+            ("cwarn-font-lock-match" function (:arguments ("re" "body")) nil [9043 9439])
+            ("cwarn-font-lock-assignment-keywords" variable
+               (:constant-flag t
+                :default-value (quote ((cwarn-font-lock-match-assignment-in-expression (1 font-lock-warning-face)))))
+                nil [9474 9606])
+            ("cwarn-font-lock-match-assignment-in-expression" function (:arguments ("limit")) nil [9608 10042])
+            ("cwarn-font-lock-semicolon-keywords" variable
+               (:constant-flag t
+                :default-value (quote ((cwarn-font-lock-match-dangerous-semicolon (0 font-lock-warning-face)))))
+                nil [10067 10188])
+            ("cwarn-font-lock-match-dangerous-semicolon" function (:arguments ("limit")) nil [10190 10667])
+            ("cwarn-font-lock-reference-keywords" variable
+               (:constant-flag t
+                :default-value (quote ((cwarn-font-lock-match-reference (1 font-lock-warning-face)))))
+                nil [10692 10803])
+            ("cwarn-font-lock-match-reference" function (:arguments ("limit")) nil [10805 11058])
+            ("turn-on-cwarn-mode-if-enabled" function nil nil [11088 11343])
+            ("define-globalized-minor-mode" code nil nil [11360 11451])
+            ("cwarn" package nil nil [11453 11469])
+            ("run-hooks" code nil nil [11471 11499]))          
+      :file "cwarn.el.gz"
+      :pointmax 11531
+      :fsize 4433
+      :lastmodtime '(20400 62402)
+      :unmatched-syntax '((close-paren 3793 . 3794) (symbol 3762 . 3779) (open-paren 3761 . 3762)))
+    (semanticdb-table "subword.el.gz"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("subword-mode-map" variable (:default-value (let ((map (make-sparse-keymap))) (dolist (cmd (quote (forward-word backward-word mark-word kill-word backward-kill-word transpose-words capitalize-word upcase-word downcase-word))) (let ((othercmd (let ((name (symbol-name cmd))) (string-match "\\([[:alpha:]-]+\\)-word[s]?" name) (intern (concat "subword-" (match-string 1 name)))))) (define-key map (vector (quote remap) cmd) othercmd))) map)) nil [3282 3842])
+            ("define-minor-mode" code nil nil [3859 4997])
+            ("define-obsolete-function-alias" code nil nil [4999 5068])
+            ("define-global-minor-mode" code nil nil [5085 5175])
+            ("subword-forward" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [5177 5623])
+            ("put" code nil nil [5625 5658])
+            ("subword-backward" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [5660 5927])
+            ("subword-mark" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [5929 6444])
+            ("put" code nil nil [6446 6480])
+            ("subword-kill" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [6482 6738])
+            ("subword-backward-kill" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [6740 7002])
+            ("subword-transpose" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [7004 7272])
+            ("subword-downcase" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [7274 7619])
+            ("subword-upcase" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [7621 7958])
+            ("subword-capitalize" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [7960 8628])
+            ("subword-forward-internal" function nil nil [8661 9046])
+            ("subword-backward-internal" function nil nil [9049 9495])
+            ("subword" package nil nil [9499 9517]))          
+      :file "subword.el.gz"
+      :pointmax 9544
+      :fsize 2916
+      :lastmodtime '(20352 65510)
+      :unmatched-syntax nil)
+    (semanticdb-table "ada-stmt.el.gz"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("skeleton" include nil nil [2855 2880])
+            ("easymenu" include nil nil [2881 2900])
+            ("ada-mode" include nil nil [2901 2920])
+            ("ada-func-or-proc-name" function nil nil [2922 3158])
+            ("define-skeleton" code nil nil [3233 3407])
+            ("define-skeleton" code nil nil [3410 3677])
+            ("define-skeleton" code nil nil [3680 3830])
+            ("define-skeleton" code nil nil [3833 4051])
+            ("define-skeleton" code nil nil [4054 4280])
+            ("define-skeleton" code nil nil [4283 4394])
+            ("define-skeleton" code nil nil [4397 4546])
+            ("define-skeleton" code nil nil [4549 4714])
+            ("ada-header" function (:user-visible-flag t) nil [4731 4973])
+            ("define-skeleton" code nil nil [4976 5661])
+            ("define-skeleton" code nil nil [5664 5807])
+            ("define-skeleton" code nil nil [5810 5968])
+            ("define-skeleton" code nil nil [5971 6130])
+            ("define-skeleton" code nil nil [6133 6238])
+            ("define-skeleton" code nil nil [6241 6431])
+            ("define-skeleton" code nil nil [6434 6542])
+            ("define-skeleton" code nil nil [6545 6644])
+            ("define-skeleton" code nil nil [6647 6923])
+            ("define-skeleton" code nil nil [6926 7052])
+            ("define-skeleton" code nil nil [7055 7273])
+            ("define-skeleton" code nil nil [7276 7431])
+            ("define-skeleton" code nil nil [7434 7630])
+            ("define-skeleton" code nil nil [7633 7757])
+            ("define-skeleton" code nil nil [7760 7873])
+            ("define-skeleton" code nil nil [7876 8136])
+            ("define-skeleton" code nil nil [8139 8359])
+            ("define-skeleton" code nil nil [8362 8958])
+            ("define-skeleton" code nil nil [8961 9059])
+            ("define-skeleton" code nil nil [9368 9489])
+            ("define-skeleton" code nil nil [9492 9697])
+            ("define-skeleton" code nil nil [9700 9959])
+            ("define-skeleton" code nil nil [9962 10132])
+            ("define-skeleton" code nil nil [10135 10343])
+            ("define-skeleton" code nil nil [10346 10500])
+            ("define-skeleton" code nil nil [10503 10632])
+            ("define-skeleton" code nil nil [10635 10778])
+            ("define-skeleton" code nil nil [10781 10931])
+            ("define-skeleton" code nil nil [10934 11143])
+            ("define-skeleton" code nil nil [11146 11246])
+            ("define-skeleton" code nil nil [11249 11385])
+            ("define-skeleton" code nil nil [11388 11584])
+            ("define-skeleton" code nil nil [11587 11741])
+            ("define-skeleton" code nil nil [11744 11874])
+            ("define-skeleton" code nil nil [11877 12022])
+            ("define-skeleton" code nil nil [12025 12128])
+            ("ada-stmt" package nil nil [12131 12150]))          
+      :file "ada-stmt.el.gz"
+      :pointmax 12178
+      :fsize 3887
+      :lastmodtime '(20352 65510)
+      :unmatched-syntax nil)
+    (semanticdb-table "ada-xref.el.gz"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("compile" include nil nil [1598 1616])
+            ("comint" include nil nil [1617 1634])
+            ("find-file" include nil nil [1635 1655])
+            ("ada-mode" include nil nil [1656 1675])
+            ("ada-xref-other-buffer" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [1702 1888])
+            ("ada-xref-create-ali" variable (:user-visible-flag t) nil [1890 2078])
+            ("ada-xref-confirm-compile" variable (:user-visible-flag t) nil [2080 2232])
+            ("ada-krunch-args" variable
+               (:user-visible-flag t
+                :default-value "0")
+                nil [2234 2435])
+            ("ada-gnat-cmd" variable (:default-value "gnat") nil [2437 2687])
+            ("ada-gnatls-args" variable
+               (:user-visible-flag t
+                :default-value (quote ("-v")))
+                nil [2689 3173])
+            ("ada-prj-default-comp-opt" variable (:default-value "-gnatq -gnatQ") nil [3175 3288])
+            ("ada-prj-default-bind-opt" variable nil nil [3290 3385])
+            ("ada-prj-default-link-opt" variable nil nil [3387 3482])
+            ("ada-prj-default-gnatmake-opt" variable (:default-value "-g") nil [3484 3593])
+            ("ada-prj-default-gpr-file" variable nil nil [3595 3794])
+            ("ada-prj-ada-project-path-sep" variable (:default-value (cond ((boundp (quote path-separator)) path-separator) ((memq system-type (quote (windows-nt ms-dos))) ";") (t ":"))) nil [3796 4040])
+            ("ada-prj-gnatfind-switches" variable (:default-value "-rf") nil [4042 4382])
+            ("ada-prj-default-check-cmd" variable
+               (:user-visible-flag t
+                :default-value (concat "${cross_prefix}gnatmake -u -c -gnatc ${gnatmake_opt} ${full_current}" " -cargs ${comp_opt}"))
+                nil [4384 4759])
+            ("ada-prj-default-comp-cmd" variable
+               (:user-visible-flag t
+                :default-value (concat "${cross_prefix}gnatmake -u -c ${gnatmake_opt} ${full_current} -cargs" " ${comp_opt}"))
+                nil [4761 5128])
+            ("ada-prj-default-debugger" variable
+               (:user-visible-flag t
+                :default-value "${cross_prefix}gdb")
+                nil [5130 5250])
+            ("ada-prj-default-make-cmd" variable
+               (:user-visible-flag t
+                :default-value (concat "${cross_prefix}gnatmake -o ${main} ${main} ${gnatmake_opt} " "-cargs ${comp_opt} -bargs ${bind_opt} -largs ${link_opt}"))
+                nil [5252 5559])
+            ("ada-prj-default-project-file" variable (:user-visible-flag t) nil [5561 5831])
+            ("ada-gnatstub-opts" variable
+               (:user-visible-flag t
+                :default-value "-q -I${src_dir}")
+                nil [5833 6055])
+            ("ada-always-ask-project" variable (:user-visible-flag t) nil [6057 6253])
+            ("ada-on-ms-windows" variable
+               (:constant-flag t
+                :default-value (memq system-type (quote (windows-nt))))
+                nil [6255 6355])
+            ("ada-tight-gvd-integration" variable (:user-visible-flag t) nil [6357 6553])
+            ("ada-xref-search-with-egrep" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [6555 6922])
+            ("ada-load-project-hook" variable nil nil [6924 7499])
+            ("ada-last-prj-file" variable nil nil [7559 7643])
+            ("ada-prj-file-extension" variable
+               (:constant-flag t
+                :default-value ".adp")
+                nil [7645 7727])
+            ("ada-xref-runtime-library-specs-path" variable (:default-value (quote nil)) nil [7729 7879])
+            ("ada-xref-runtime-library-ali-path" variable (:default-value (quote nil)) nil [7881 8027])
+            ("ada-xref-pos-ring" variable (:default-value (quote nil)) nil [8029 8161])
+            ("ada-cd-command" variable (:default-value (if (string-match "cmdproxy.exe" shell-file-name) "cd /d" "cd")) nil [8163 8421])
+            ("ada-command-separator" variable (:default-value (if ada-on-ms-windows " && " "
+")) nil [8423 8659])
+            ("ada-xref-pos-ring-max" variable
+               (:constant-flag t
+                :default-value 16)
+                nil [8661 8758])
+            ("ada-operator-re" variable (:default-value "\\+\\|-\\|/\\|\\*\\*\\|\\*\\|=\\|&\\|abs\\|mod\\|rem\\|and\\|not\\|or\\|xor\\|<=\\|<\\|>=\\|>") nil [8760 8917])
+            ("ada-xref-project-files" variable (:default-value (quote nil)) nil [8919 9501])
+            ("ada-make-identlist" function nil nil [9718 9770])
+            ("ada-name-of" function (:arguments ("identlist")) nil [9771 9835])
+            ("ada-line-of" function (:arguments ("identlist")) nil [9836 9900])
+            ("ada-column-of" function (:arguments ("identlist")) nil [9901 9965])
+            ("ada-file-of" function (:arguments ("identlist")) nil [9966 10030])
+            ("ada-ali-index-of" function (:arguments ("identlist")) nil [10031 10098])
+            ("ada-declare-file-of" function (:arguments ("identlist")) nil [10099 10166])
+            ("ada-references-of" function (:arguments ("identlist")) nil [10167 10234])
+            ("ada-on-declaration" function (:arguments ("identlist")) nil [10235 10302])
+            ("ada-set-name" function (:arguments ("identlist" "name")) nil [10304 10382])
+            ("ada-set-line" function (:arguments ("identlist" "line")) nil [10383 10461])
+            ("ada-set-column" function (:arguments ("identlist" "col")) nil [10462 10539])
+            ("ada-set-file" function (:arguments ("identlist" "file")) nil [10540 10618])
+            ("ada-set-ali-index" function (:arguments ("identlist" "index")) nil [10619 10698])
+            ("ada-set-declare-file" function (:arguments ("identlist" "file")) nil [10699 10777])
+            ("ada-set-references" function (:arguments ("identlist" "ref")) nil [10778 10855])
+            ("ada-set-on-declaration" function (:arguments ("ident" "value")) nil [10856 10930])
+            ("ada-get-ali-buffer" function (:arguments ("file")) nil [10932 11096])
+            ("ada-quote-cmd" function (:arguments ("cmd")) nil [11175 11339])
+            ("ada-find-executable" function (:arguments ("exec-name")) nil [11341 11742])
+            ("ada-initialize-runtime-library" function (:arguments ("cross-prefix")) nil [11744 13676])
+            ("ada-gnat-parse-gpr" function (:arguments ("plist" "gpr-file")) nil [13678 15836])
+            ("ada-treat-cmd-string" function (:arguments ("cmd-string")) nil [15838 17238])
+            ("ada-xref-get-project-field" function (:arguments ("field")) nil [17241 18257])
+            ("ada-xref-get-src-dir-field" function nil nil [18259 18744])
+            ("ada-xref-get-obj-dir-field" function nil nil [18746 19229])
+            ("ada-xref-set-project-field" function (:arguments ("field" "value")) nil [19231 19669])
+            ("ada-xref-update-project-menu" function nil nil [19671 20467])
+            ("ada-do-file-completion" function (:arguments ("string" "predicate" "flag")) nil [20912 21726])
+            ("ada-find-file" function
+               (:user-visible-flag t
+                :arguments ("filename"))
+                nil [21743 22064])
+            ("ada-require-project-file" function nil nil [22137 22398])
+            ("ada-xref-current-project-file" function nil nil [22400 22676])
+            ("ada-xref-current-project" function nil nil [22678 22910])
+            ("ada-show-current-project" function (:user-visible-flag t) nil [22912 23064])
+            ("ada-show-current-main" function (:user-visible-flag t) nil [23066 23235])
+            ("ada-xref-push-pos" function (:arguments ("filename" "position")) nil [23237 23565])
+            ("ada-xref-goto-previous-reference" function (:user-visible-flag t) nil [23567 23848])
+            ("ada-convert-file-name" function (:arguments ("name")) nil [23850 24046])
+            ("ada-set-default-project-file" function
+               (:user-visible-flag t
+                :arguments ("file"))
+                nil [24096 24271])
+            ("ada-prj-find-prj-file" function (:arguments ("no-user-question")) nil [24340 27072])
+            ("ada-default-prj-properties" function nil nil [27074 28704])
+            ("ada-parse-prj-file" function (:arguments ("prj-file")) nil [28706 29344])
+            ("ada-parse-prj-file-1" function (:arguments ("prj-file" "project")) nil [29346 34285])
+            ("ada-select-prj-file" function
+               (:user-visible-flag t
+                :arguments ("file"))
+                nil [34287 35172])
+            ("ada-find-references" function
+               (:user-visible-flag t
+                :arguments ("pos" "arg" "local-only"))
+                nil [35174 36196])
+            ("ada-find-local-references" function
+               (:user-visible-flag t
+                :arguments ("pos" "arg"))
+                nil [36198 36473])
+            ("ada-gnatfind-buffer-name" variable
+               (:constant-flag t
+                :default-value "*gnatfind*")
+                nil [36475 36523])
+            ("ada-find-any-references" function
+               (:user-visible-flag t
+                :arguments ("entity" "file" "line" "column" "local-only" "append"))
+                nil [36525 38799])
+            ("defalias" code nil nil [38801 38875])
+            ("ada-complete-identifier" function
+               (:user-visible-flag t
+                :arguments ("pos"))
+                nil [38953 40053])
+            ("ada-point-and-xref" function (:user-visible-flag t) nil [40124 40299])
+            ("ada-point-and-xref-body" function (:user-visible-flag t) nil [40301 40467])
+            ("ada-goto-body" function
+               (:user-visible-flag t
+                :arguments ("pos" "other-frame"))
+                nil [40469 40977])
+            ("ada-goto-declaration" function
+               (:user-visible-flag t
+                :arguments ("pos" "other-frame"))
+                nil [40979 42469])
+            ("ada-goto-declaration-other-frame" function
+               (:user-visible-flag t
+                :arguments ("pos"))
+                nil [42471 42707])
+            ("ada-remote" function (:arguments ("command")) nil [42709 43027])
+            ("ada-get-absolute-dir-list" function (:arguments ("dir-list" "root-dir")) nil [43029 43345])
+            ("ada-set-environment" function nil nil [43347 44274])
+            ("ada-compile-application" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [44276 45418])
+            ("ada-set-main-compile-application" function (:user-visible-flag t) nil [45420 45872])
+            ("ada-compile-current" function
+               (:user-visible-flag t
+                :arguments ("arg" "prj-field"))
+                nil [45874 46825])
+            ("ada-check-current" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [46827 47034])
+            ("ada-run-application" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [47036 48585])
+            ("ada-gdb-application" function
+               (:user-visible-flag t
+                :arguments ("arg" "executable-name"))
+                nil [48587 52683])
+            ("ada-reread-prj-file" function
+               (:user-visible-flag t
+                :arguments ("filename"))
+                nil [52685 53003])
+            ("ada-xref-current" function (:arguments ("file" "ali-file-name")) nil [53033 54453])
+            ("ada-find-file-in-dir" function (:arguments ("file" "dir-list")) nil [54455 54795])
+            ("ada-find-ali-file-in-dir" function (:arguments ("file")) nil [54797 55090])
+            ("ada-find-src-file-in-dir" function (:arguments ("file")) nil [55092 55364])
+            ("ada-get-ali-file-name" function (:arguments ("file")) nil [55366 59296])
+            ("ada-get-ada-file-name" function (:arguments ("file" "original-file")) nil [59298 60054])
+            ("ada-find-file-number-in-ali" function (:arguments ("file")) nil [60056 60398])
+            ("ada-read-identifier" function (:arguments ("pos")) nil [60400 62507])
+            ("ada-get-all-references" function (:arguments ("identlist")) nil [62509 66746])
+            ("ada-xref-find-in-modified-ali" function (:arguments ("identlist")) nil [66748 69594])
+            ("ada-find-in-ali" function (:arguments ("identlist" "other-frame")) nil [69597 72567])
+            ("ada-find-in-src-path" function (:arguments ("identlist" "other-frame")) nil [72569 76439])
+            ("ada-xref-change-buffer" function (:arguments ("file" "line" "column" "identlist" "other-frame")) nil [76441 77536])
+            ("ada-xref-search-nearest" function (:arguments ("name")) nil [77539 78923])
+            ("ada-goto-parent" function (:user-visible-flag t) nil [78978 80300])
+            ("ada-make-filename-from-adaname" function (:arguments ("adaname")) nil [80302 81350])
+            ("ada-make-body-gnatstub" function
+               (:user-visible-flag t
+                :arguments ("interactive"))
+                nil [81352 83305])
+            ("ada-xref-initialize" function nil nil [83307 83875])
+            ("add-hook" code nil nil [84010 84056])
+            ("put" code nil nil [84086 84187])
+            ("put" code nil nil [84188 84291])
+            ("ada-xref" package nil nil [84293 84312]))          
+      :file "ada-xref.el.gz"
+      :pointmax 84340
+      :fsize 23100
+      :lastmodtime '(20400 62402)
+      :unmatched-syntax nil)
+    (semanticdb-table "ada-mode.el.gz"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("find-file" include nil nil [5674 5700])
+            ("align" include nil nil [5701 5723])
+            ("which-func" include nil nil [5724 5751])
+            ("compile" include nil nil [5752 5776])
+            ("ispell-check-comments" variable nil nil [5778 5808])
+            ("skeleton-further-elements" variable nil nil [5809 5843])
+            ("ada-mode-version" function (:user-visible-flag t) nil [5845 6045])
+            ("ada-mode-hook" variable (:user-visible-flag t) nil [6047 6267])
+            ("ada" customgroup (:user-visible-flag t) nil [6269 6443])
+            ("ada-auto-case" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [6445 6674])
+            ("ada-broken-decl-indent" variable (:user-visible-flag t) nil [6676 6854])
+            ("ada-broken-indent" variable
+               (:user-visible-flag t
+                :default-value 2)
+                nil [6856 7055])
+            ("ada-continuation-indent" variable
+               (:user-visible-flag t
+                :default-value ada-broken-indent)
+                nil [7057 7271])
+            ("ada-case-attribute" variable
+               (:user-visible-flag t
+                :default-value (quote ada-capitalize-word))
+                nil [7273 7661])
+            ("ada-case-exception-file" variable
+               (:user-visible-flag t
+                :default-value (list (convert-standard-filename (quote "~/.emacs_case_exceptions"))))
+                nil [7663 8352])
+            ("ada-case-keyword" variable
+               (:user-visible-flag t
+                :default-value (quote downcase-word))
+                nil [8354 8715])
+            ("ada-case-identifier" variable
+               (:user-visible-flag t
+                :default-value (quote ada-loose-case-word))
+                nil [8717 9089])
+            ("ada-clean-buffer-before-saving" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [9091 9245])
+            ("make-obsolete-variable" code nil nil [9246 9354])
+            ("ada-indent" variable
+               (:user-visible-flag t
+                :default-value 3)
+                nil [9357 9497])
+            ("ada-indent-after-return" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [9499 9623])
+            ("ada-indent-align-comments" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [9625 9994])
+            ("ada-indent-comment-as-code" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [9996 10161])
+            ("ada-indent-handle-comment-special" variable (:user-visible-flag t) nil [10163 10854])
+            ("ada-indent-is-separate" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [10856 10999])
+            ("ada-indent-record-rel-type" variable
+               (:user-visible-flag t
+                :default-value 3)
+                nil [11001 11179])
+            ("ada-indent-renames" variable
+               (:user-visible-flag t
+                :default-value ada-broken-indent)
+                nil [11181 11572])
+            ("ada-indent-return" variable (:user-visible-flag t) nil [11574 11933])
+            ("ada-indent-to-open-paren" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [11935 12073])
+            ("ada-fill-comment-prefix" variable
+               (:user-visible-flag t
+                :default-value "--  ")
+                nil [12075 12329])
+            ("ada-fill-comment-postfix" variable
+               (:user-visible-flag t
+                :default-value " --")
+                nil [12331 12524])
+            ("ada-label-indent" variable
+               (:user-visible-flag t
+                :default-value -4)
+                nil [12526 12715])
+            ("ada-language-version" variable
+               (:user-visible-flag t
+                :default-value (quote ada95))
+                nil [12717 12893])
+            ("ada-move-to-declaration" variable (:user-visible-flag t) nil [12895 13055])
+            ("ada-popup-key" variable
+               (:user-visible-flag t
+                :default-value (quote [down-mouse-3]))
+                nil [13057 13265])
+            ("ada-search-directories" variable
+               (:user-visible-flag t
+                :default-value (append (quote (".")) (split-string (or (getenv "ADA_INCLUDE_PATH") "") ":") (quote ("/usr/adainclude" "/usr/local/adainclude" "/opt/gnu/adainclude"))))
+                nil [13267 13764])
+            ("ada-search-directories-internal" variable (:default-value ada-search-directories) nil [13766 14052])
+            ("ada-stmt-end-indent" variable (:user-visible-flag t) nil [14054 14232])
+            ("ada-tab-policy" variable
+               (:user-visible-flag t
+                :default-value (quote indent-auto))
+                nil [14234 14613])
+            ("ada-use-indent" variable
+               (:user-visible-flag t
+                :default-value ada-broken-indent)
+                nil [14615 14798])
+            ("ada-when-indent" variable
+               (:user-visible-flag t
+                :default-value 3)
+                nil [14800 14967])
+            ("ada-with-indent" variable
+               (:user-visible-flag t
+                :default-value ada-broken-indent)
+                nil [14969 15155])
+            ("ada-which-compiler" variable
+               (:user-visible-flag t
+                :default-value (quote gnat))
+                nil [15157 15519])
+            ("ada-body-suffixes" variable (:default-value (quote (".adb"))) nil [15569 15702])
+            ("ada-spec-suffixes" variable (:default-value (quote (".ads"))) nil [15704 15837])
+            ("ada-mode-menu" variable (:default-value (make-sparse-keymap "Ada")) nil [15839 15911])
+            ("ada-mode-map" variable (:default-value (make-sparse-keymap)) nil [15913 15991])
+            ("ada-mode-extra-map" variable (:default-value (make-sparse-keymap)) nil [15993 16087])
+            ("ada-mode-extra-prefix" variable (:default-value "") nil [16145 16243])
+            ("ada-mode-abbrev-table" variable nil nil [16245 16316])
+            ("define-abbrev-table" code nil nil [16317 16364])
+            ("ada-mode-syntax-table" variable nil nil [16366 16457])
+            ("ada-mode-symbol-syntax-table" variable nil nil [16459 16559])
+            ("ada-2005-string-keywords" variable
+               (:constant-flag t
+                :default-value (quote ("interface" "overriding" "synchronized")))
+                nil [17460 17615])
+            ("ada-95-string-keywords" variable
+               (:constant-flag t
+                :default-value (quote ("abstract" "aliased" "protected" "requeue" "tagged" "until")))
+                nil [17285 17456])
+            ("ada-83-string-keywords" variable
+               (:constant-flag t
+                :default-value (quote ("abort" "abs" "accept" "access" "all" "and" "array" "at" "begin" "body" "case" "constant" "declare" "delay" "delta" "digits" "do" "else" "elsif" "end" "entry" "exception" "exit" "for" "function" "generic" "goto" "if" "in" "is" "limited" "loop" "mod" "new" "not" "null" "of" "or" "others" "out" "package" "pragma" "private" "procedure" "raise" "range" "record" "rem" "renames" "return" "reverse" "select" "separate" "subtype" "task" "terminate" "then" "type" "use" "when" "while" "with" "xor")))
+                nil [16643 17281])
+            ("ada-ret-binding" variable nil nil [17618 17712])
+            ("ada-case-exception" variable (:default-value (quote nil)) nil [17714 17801])
+            ("ada-case-exception-substring" variable (:default-value (quote nil)) nil [17803 18104])
+            ("ada-lfd-binding" variable nil nil [18106 18200])
+            ("ada-other-file-alist" variable nil nil [18202 18334])
+            ("ada-align-list" variable (:default-value (quote (("[^:]\\(\\s-*\\):[^:]" 1 t) ("[^=]\\(\\s-+\\)=[^=]" 1 t) ("\\(\\s-*\\)use\\s-" 1) ("\\(\\s-*\\)--" 1)))) nil [18336 18649])
+            ("ada-align-modes" variable (:default-value (quote ((ada-declaration (regexp . "[^:]\\(\\s-*\\):[^:]") (valid lambda nil (not (ada-in-comment-p))) (modes quote (ada-mode))) (ada-assignment (regexp . "[^=]\\(\\s-+\\)=[^=]") (valid lambda nil (not (ada-in-comment-p))) (modes quote (ada-mode))) (ada-comment (regexp . "\\(\\s-*\\)--") (modes quote (ada-mode))) (ada-use (regexp . "\\(\\s-*\\)use\\s-") (valid lambda nil (not (ada-in-comment-p))) (modes quote (ada-mode)))))) nil [18651 19288])
+            ("ada-align-region-separate" variable
+               (:constant-flag t
+                :default-value (eval-when-compile (concat "^\\s-*\\($\\|\\(" "begin\\|" "declare\\|" "else\\|" "end\\|" "exception\\|" "for\\|" "function\\|" "generic\\|" "if\\|" "is\\|" "procedure\\|" "record\\|" "return\\|" "type\\|" "when" "\\)\\>\\)")))
+                nil [19290 19710])
+            ("ada-83-keywords" variable
+               (:constant-flag t
+                :default-value (eval-when-compile (concat "\\<" (regexp-opt ada-83-string-keywords t) "\\>")))
+                nil [19776 19935])
+            ("ada-95-keywords" variable
+               (:constant-flag t
+                :default-value (eval-when-compile (concat "\\<" (regexp-opt (append ada-95-string-keywords ada-83-string-keywords) t) "\\>")))
+                nil [19937 20145])
+            ("ada-2005-keywords" variable
+               (:constant-flag t
+                :default-value (eval-when-compile (concat "\\<" (regexp-opt (append ada-2005-string-keywords ada-83-string-keywords ada-95-string-keywords) t) "\\>")))
+                nil [20147 20390])
+            ("ada-keywords" variable (:default-value ada-2005-keywords) nil [20392 20477])
+            ("ada-ident-re" variable
+               (:constant-flag t
+                :default-value "[[:alpha:]]\\(?:[_[:alnum:]]\\)*")
+                nil [20512 20884])
+            ("ada-goto-label-re" variable
+               (:constant-flag t
+                :default-value (concat "<<" ada-ident-re ">>"))
+                nil [20886 20982])
+            ("ada-block-label-re" variable
+               (:constant-flag t
+                :default-value (concat ada-ident-re "[ 	
+]*:[^=]"))
+                nil [20984 21140])
+            ("ada-label-re" variable
+               (:constant-flag t
+                :default-value (concat "\\(?:" ada-block-label-re "\\)\\|\\(?:" ada-goto-label-re "\\)"))
+                nil [21142 21284])
+            ("ada-procedure-start-regexp" variable (:default-value (concat "^[ 	]*\\(with[ 	]+\\)?\\(\\(not[ 	]+\\)?overriding[ 	]+\\)?\\(procedure\\|function\\|task\\)[ 	
+]+" "\\(" "\\(\"[^\"]+\"\\)" "\\|" "\\(\\(\\sw\\|[_.]\\)+\\)" "\\)")) nil [21452 21882])
+            ("ada-name-regexp" variable
+               (:constant-flag t
+                :default-value "\\([a-zA-Z][a-zA-Z0-9_.']*[a-zA-Z0-9]\\)")
+                nil [21884 22021])
+            ("ada-package-start-regexp" variable
+               (:constant-flag t
+                :default-value (concat "^[ 	]*\\(private[ 	]+\\)?\\(package\\)[ 	
+]+\\(body[ 	]*\\)?" ada-name-regexp))
+                nil [22023 22232])
+            ("ada-compile-goto-error-file-linenr-re" variable
+               (:constant-flag t
+                :default-value "\\([-_.a-zA-Z0-9]+\\):\\([0-9]+\\)\\(:\\([0-9]+\\)\\)?")
+                nil [22234 22387])
+            ("ada-block-start-re" variable (:default-value (eval-when-compile (concat "\\<\\(" (regexp-opt (quote ("begin" "declare" "else" "exception" "generic" "loop" "or" "private" "select"))) "\\|\\(\\(limited\\|abstract\\|tagged\\)[ 	
+]+\\)*record\\)\\>"))) nil [22434 22730])
+            ("ada-end-stmt-re" variable (:default-value (eval-when-compile (concat "\\(" ";" "\\|" "=>[ 	]*$" "\\|" "=>[ 	]*--.*$" "\\|" "^[ 	]*separate[ 	]*(\\(\\sw\\|[_.]\\)+)" "\\|" "\\<" (regexp-opt (quote ("begin" "declare" "is" "do" "else" "generic" "loop" "private" "record" "select" "then abort" "then")) t) "\\>" "\\|" "^[ 	]*" (regexp-opt (quote ("function" "package" "procedure")) t) "\\>\\(\\sw\\|[ 	_.]\\)+\\<is\\>" "\\|" "^[ 	]*exception\\>" "\\)"))) nil [22732 23437])
+            ("ada-matching-start-re" variable (:default-value (eval-when-compile (concat "\\<" (regexp-opt (quote ("end" "loop" "select" "begin" "case" "do" "declare" "if" "task" "package" "procedure" "function" "record" "protected")) t) "\\>"))) nil [23439 23722])
+            ("ada-loop-start-re" variable (:default-value "\\<\\(for\\|while\\|loop\\)\\>") nil [23724 23821])
+            ("ada-subprog-start-re" variable (:default-value (eval-when-compile (concat "\\<" (regexp-opt (quote ("accept" "entry" "function" "overriding" "package" "procedure" "protected" "task")) t) "\\>"))) nil [23823 24045])
+            ("ada-contextual-menu-on-identifier" variable nil nil [24047 24167])
+            ("ada-contextual-menu-last-point" variable nil nil [24169 24679])
+            ("easy-menu-define" code nil nil [24681 25491])
+            ("ada-imenu-comment-re" variable
+               (:constant-flag t
+                :default-value "\\([ 	]*--.*\\)?")
+                nil [25671 25722])
+            ("ada-imenu-subprogram-menu-re" variable
+               (:constant-flag t
+                :default-value (concat "^[ 	]*\\(overriding[ 	]*\\)?\\(procedure\\|function\\)[ 	
+]+" "\\(\\(\\sw\\|_\\)+\\)[ 	
+]*\\([ 	
+]\\|([^)]+)" ada-imenu-comment-re "\\)[ 	
+]*" "\\(return[ 	
+]+\\(\\sw\\|[_.]\\)+[ 	
+]*\\)?is[ 	
+]"))
+                nil [25724 25999])
+            ("ada-imenu-generic-expression" variable (:default-value (list (list nil ada-imenu-subprogram-menu-re 3) (list "*Specs*" (concat "^[ 	]*\\(procedure\\|function\\)[ 	
+]+\\(\\(\\sw\\|_\\)+\\)" "\\(" "\\(" ada-imenu-comment-re "[ 	
+]+\\|[ 	
+]*([^)]+)" ada-imenu-comment-re "\\)" "\\([ 	
+]*return[ 	
+]+\\(\\sw\\|[_.]\\)+[ 	
+]*\\)?" "\\)?;") 2) (quote ("*Tasks*" "^[ 	]*task[ 	]+\\(type[ 	]+\\)?\\(\\(body[ 	]+\\)?\\(\\sw\\|_\\)+\\)" 2)) (quote ("*Type Defs*" "^[ 	]*\\(sub\\)?type[ 	]+\\(\\(\\sw\\|_\\)+\\)" 2)) (quote ("*Protected*" "^[ 	]*protected[ 	]+\\(type[ 	]+\\)?\\(\\(body[ 	]+\\)?\\(\\sw\\|_\\)+\\)" 2)) (quote ("*Packages*" "^[ 	]*package[ 	]+\\(\\(body[ 	]+\\)?\\(\\sw\\|[_.]\\)+\\)" 1)))) nil [26001 26931])
+            ("ada-compile-mouse-goto-error" function (:user-visible-flag t) nil [27089 27269])
+            ("ada-compile-goto-error" function
+               (:user-visible-flag t
+                :arguments ("pos"))
+                nil [27271 28930])
+            ("ada-create-syntax-table" function (:user-visible-flag t) nil [30414 32811])
+            ("if" code nil nil [32943 33882])
+            ("unless" code nil nil [33884 36347])
+            ("ada-in-comment-p" function (:arguments ("parse-result")) nil [36561 36819])
+            ("ada-in-string-p" function (:arguments ("parse-result")) nil [36821 37086])
+            ("ada-in-string-or-comment-p" function (:arguments ("parse-result")) nil [37088 37444])
+            ("ada-in-numeric-literal-p" function nil nil [37446 37592])
+            ("ada-call-from-contextual-menu" function
+               (:user-visible-flag t
+                :arguments ("function"))
+                nil [38048 38312])
+            ("ada-popup-menu" function
+               (:user-visible-flag t
+                :arguments ("position"))
+                nil [38314 39617])
+            ("ada-add-extensions" function (:arguments ("spec" "body")) nil [39792 41040])
+            ("ada-font-lock-syntactic-keywords" variable nil nil [41042 41083])
+            ("define-derived-mode" code nil nil [41116 49304])
+            ("ada-adjust-case-skeleton" function nil nil [49306 49575])
+            ("ada-region-selected" function nil nil [49577 49724])
+            ("ada-save-exceptions-to-file" function (:arguments ("file-name")) nil [50535 51106])
+            ("ada-create-case-exception" function
+               (:user-visible-flag t
+                :arguments ("word"))
+                nil [51108 52555])
+            ("ada-create-case-exception-substring" function
+               (:user-visible-flag t
+                :arguments ("word"))
+                nil [52557 54576])
+            ("ada-case-read-exceptions-from-file" function (:arguments ("file-name")) nil [54578 55667])
+            ("ada-case-read-exceptions" function (:user-visible-flag t) nil [55669 56123])
+            ("ada-adjust-case-substring" function (:user-visible-flag t) nil [56125 56872])
+            ("ada-adjust-case-identifier" function (:user-visible-flag t) nil [56874 57715])
+            ("ada-after-keyword-p" function nil nil [57717 58023])
+            ("ada-adjust-case" function (:arguments ("force-identifier")) nil [58025 59004])
+            ("ada-adjust-case-interactive" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [59006 60434])
+            ("ada-activate-keys-for-case" function (:user-visible-flag t) nil [60436 61265])
+            ("ada-loose-case-word" function
+               (:user-visible-flag t
+                :arguments ("_arg"))
+                nil [61267 61816])
+            ("ada-no-auto-case" function (:arguments ("_arg")) nil [61818 62246])
+            ("ada-capitalize-word" function
+               (:user-visible-flag t
+                :arguments ("_arg"))
+                nil [62248 62692])
+            ("ada-adjust-case-region" function
+               (:user-visible-flag t
+                :arguments ("from" "to"))
+                nil [62694 64167])
+            ("ada-adjust-case-buffer" function (:user-visible-flag t) nil [64169 64390])
+            ("ada-format-paramlist" function (:user-visible-flag t) nil [65166 66255])
+            ("ada-scan-paramlist" function (:arguments ("begin" "end")) nil [66257 68843])
+            ("ada-insert-paramlist" function (:arguments ("paramlist")) nil [68845 71731])
+            ("ada-indent-region" function
+               (:user-visible-flag t
+                :arguments ("beg" "end"))
+                nil [73225 73904])
+            ("ada-indent-newline-indent" function (:user-visible-flag t) nil [73906 74096])
+            ("ada-indent-newline-indent-conditional" function (:user-visible-flag t) nil [74098 74681])
+            ("ada-justified-indent-current" function (:user-visible-flag t) nil [74683 75402])
+            ("ada-batch-reformat" function nil nil [75404 75992])
+            ("ada-goto-previous-word" function nil nil [75994 76175])
+            ("ada-indent-current" function (:user-visible-flag t) nil [76177 78103])
+            ("ada-get-current-indent" function nil nil [78105 91394])
+            ("ada-indent-on-previous-lines" function (:arguments ("nomove" "orgpoint" "initial-pos")) nil [91396 93801])
+            ("ada-get-indent-open-paren" function nil nil [93803 93948])
+            ("ada-get-indent-nochange" function nil nil [93950 94129])
+            ("ada-get-indent-paramlist" function nil nil [94131 95054])
+            ("ada-get-indent-end" function (:arguments ("orgpoint")) nil [95056 97116])
+            ("ada-get-indent-case" function (:arguments ("orgpoint")) nil [97118 98523])
+            ("ada-get-indent-when" function (:arguments ("orgpoint")) nil [98525 98907])
+            ("ada-get-indent-if" function (:arguments ("orgpoint")) nil [98909 99882])
+            ("ada-get-indent-block-start" function (:arguments ("orgpoint")) nil [99884 101177])
+            ("ada-get-indent-subprog" function (:arguments ("orgpoint")) nil [101179 102981])
+            ("ada-get-indent-noindent" function (:arguments ("orgpoint")) nil [102983 105034])
+            ("ada-get-indent-block-label" function (:arguments ("orgpoint")) nil [105036 106098])
+            ("ada-get-indent-goto-label" function (:arguments ("orgpoint")) nil [106100 106474])
+            ("ada-get-indent-loop" function (:arguments ("orgpoint")) nil [106476 109428])
+            ("ada-get-indent-type" function (:arguments ("orgpoint")) nil [109430 110965])
+            ("ada-goto-stmt-start" function (:arguments ("ignore-goto-label")) nil [111125 112434])
+            ("ada-search-prev-end-stmt" function nil nil [112437 113752])
+            ("ada-goto-next-non-ws" function (:arguments ("limit" "skip-goto-label")) nil [113754 114652])
+            ("ada-goto-stmt-end" function (:arguments ("limit")) nil [114655 114939])
+            ("ada-goto-next-word" function (:arguments ("backward")) nil [114942 115738])
+            ("ada-check-matching-start" function (:arguments ("keyword")) nil [115741 116016])
+            ("ada-check-defun-name" function (:arguments ("defun-name")) nil [116019 117421])
+            ("ada-goto-decl-start" function (:arguments ("noerror")) nil [117423 122971])
+            ("ada-goto-matching-start" function (:arguments ("nest-level" "noerror" "gotothen")) nil [122973 129288])
+            ("ada-goto-matching-end" function (:arguments ("nest-level" "noerror")) nil [129291 132598])
+            ("ada-search-ignore-string-comment" function (:arguments ("search-re" "backward" "limit" "paramlists" "search-func")) nil [132601 135631])
+            ("ada-in-decl-p" function nil nil [135794 135993])
+            ("ada-looking-at-semi-or" function nil nil [135996 136225])
+            ("ada-looking-at-semi-private" function nil nil [136228 137105])
+            ("ada-in-paramlist-p" function nil nil [137108 138397])
+            ("ada-search-ignore-complex-boolean" function (:arguments ("regexp" "backwardp")) nil [138399 138794])
+            ("ada-in-open-paren-p" function nil nil [138796 139582])
+            ("ada-tab" function (:user-visible-flag t) nil [139740 140238])
+            ("ada-untab" function
+               (:user-visible-flag t
+                :arguments ("_arg"))
+                nil [140240 140560])
+            ("ada-indent-current-function" function (:user-visible-flag t) nil [140562 140857])
+            ("ada-tab-hard" function (:user-visible-flag t) nil [140859 141055])
+            ("ada-untab-hard" function (:user-visible-flag t) nil [141057 141210])
+            ("ada-remove-trailing-spaces" function (:user-visible-flag t) nil [141452 141736])
+            ("ada-gnat-style" function (:user-visible-flag t) nil [141738 143934])
+            ("ada-move-to-start" function (:user-visible-flag t) nil [144118 145288])
+            ("ada-move-to-end" function (:user-visible-flag t) nil [145290 147726])
+            ("ada-next-procedure" function (:user-visible-flag t) nil [147728 147970])
+            ("ada-previous-procedure" function (:user-visible-flag t) nil [147972 148229])
+            ("ada-next-package" function (:user-visible-flag t) nil [148231 148449])
+            ("ada-previous-package" function (:user-visible-flag t) nil [148451 148684])
+            ("ada-create-keymap" function nil nil [148857 153574])
+            ("ada-create-menu" function nil nil [153577 161824])
+            ("comment-region" function (:arguments ("before" "ada-uncomment-anywhere" "disable")) nil [162375 162790])
+            ("ada-uncomment-region" function
+               (:user-visible-flag t
+                :arguments ("beg" "end" "arg"))
+                nil [162792 163342])
+            ("ada-fill-comment-paragraph-justify" function (:user-visible-flag t) nil [163344 163508])
+            ("ada-fill-comment-paragraph-postfix" function (:user-visible-flag t) nil [163510 163733])
+            ("ada-fill-comment-paragraph" function
+               (:user-visible-flag t
+                :arguments ("justify" "postfix"))
+                nil [163735 166526])
+            ("ada-make-filename-from-adaname" function (:arguments ("adaname")) nil [167242 167537])
+            ("ada-other-file-name" function nil nil [167539 169238])
+            ("ada-which-function-are-we-in" function nil nil [169240 169713])
+            ("ada-last-which-function-line" variable (:default-value -1) nil [169716 169812])
+            ("ada-last-which-function-subprog" variable nil nil [169813 169914])
+            ("make-variable-buffer-local" code nil nil [169915 169976])
+            ("make-variable-buffer-local" code nil nil [169977 170035])
+            ("ada-which-function" function nil nil [170038 172190])
+            ("ada-ff-other-window" function (:user-visible-flag t) nil [172192 172370])
+            ("ada-set-point-accordingly" function nil nil [172372 172666])
+            ("ada-get-body-name" function
+               (:user-visible-flag t
+                :arguments ("spec-name"))
+                nil [172668 173851])
+            ("ada-font-lock-syntactic-keywords" variable
+               (:constant-flag t
+                :default-value (quote (("[^a-zA-Z0-9)]\\('\\)[^
+]\\('\\)" (1 (7 . 39)) (2 (7 . 39))) ("^[ 	]*\\(#\\(if\\|else\\|elsif\\|end\\)\\)" (1 (11 . 10))))))
+                nil [174499 175006])
+            ("ada-font-lock-keywords" variable (:default-value (eval-when-compile (list (list "\\<\\(function[ 	]+return\\)\\>" (quote (1 font-lock-keyword-face))) (list "^[ 	]*\\(#.*
+\\)" (quote (1 font-lock-type-face t))) (list (concat "\\<\\(" "accept\\|" "entry\\|" "function\\|" "package[ 	]+body\\|" "package\\|" "pragma\\|" "procedure\\|" "protected[ 	]+body\\|" "protected[ 	]+type\\|" "protected\\|" "task[ 	]+body\\|" "task[ 	]+type\\|" "task" "\\)\\>[ 	]*" "\\(\\sw+\\(\\.\\sw*\\)*\\)?") (quote (1 font-lock-keyword-face)) (quote (2 font-lock-function-name-face nil t))) (list (concat "\\<\\(access[ 	]+all\\|access[ 	]+constant\\|access\\|constant\\|in[ 	]+reverse\\|\\|in[ 	]+out\\|in\\|out\\)\\>" "[ 	]*" "\\(\\sw+\\(\\.\\sw*\\)*\\)?") (quote (1 font-lock-keyword-face nil t)) (quote (2 font-lock-type-face nil t))) (concat "\\<" (regexp-opt (quote ("abort" "abs" "abstract" "accept" "access" "aliased" "all" "and" "array" "at" "begin" "case" "declare" "delay" "delta" "digits" "do" "else" "elsif" "entry" "exception" "exit" "for" "generic" "if" "in" "interface" "is" "limited" "loop" "mod" "not" "null" "or" "others" "overriding" "private" "protected" "raise" "range" "record" "rem" "renames" "requeue" "return" "reverse" "select" "separate" "synchronized" "tagged" "task" "terminate" "then" "until" "when" "while" "with" "xor")) t) "\\>") (quote ("\\<\\(end\\)\\>\\([ 	]+\\)?\\(\\(\\sw\\|[_.]\\)+\\)?" (1 font-lock-keyword-face) (3 font-lock-function-name-face nil t))) (list (concat "\\<\\(" "new\\|of\\|subtype\\|type" "\\)\\>[ 	]*\\(\\sw+\\(\\.\\sw*\\)*\\)?[ 	]*\\((\\)?") (quote (1 font-lock-keyword-face)) (quote (2 (if (match-beginning 4) font-lock-function-name-face font-lock-type-face) nil t))) (list (concat "\\<\\(goto\\|raise\\|use\\|with\\)" "[ 	]+\\([a-zA-Z0-9_., 	]+\\)\\W") (quote (1 font-lock-keyword-face)) (quote (2 font-lock-reference-face nil t))) (quote ("<<\\(\\sw+\\)>>" 1 font-lock-reference-face)) (list "\\([0-9]+#[0-9a-fA-F_]+#\\)" (quote (1 font-lock-constant-face t))) (list "\\W\\([-+]?[0-9._]+\\)\\>" (quote (1 font-lock-constant-face)))))) nil [175008 178158])
+            ("ada-outline-level" function nil nil [178311 178553])
+            ("ada-narrow-to-defun" function
+               (:user-visible-flag t
+                :arguments ("_arg"))
+                nil [178711 179278])
+            ("ada-gen-treat-proc" function (:arguments ("match")) nil [179736 181622])
+            ("ada-make-body" function nil nil [181624 182600])
+            ("ada-make-subprogram-body" function (:user-visible-flag t) nil [182603 183802])
+            ("ada-create-keymap" code nil nil [184095 184114])
+            ("ada-create-menu" code nil nil [184115 184132])
+            ("ada-create-syntax-table" code nil nil [184189 184214])
+            ("ada-add-extensions" code nil nil [184269 184303])
+            ("if" code nil nil [184369 184451])
+            ("ada-case-read-exceptions" code nil nil [184495 184521])
+            ("ada-change-prj" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [184575 184636])
+            ("ada-check-current" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [184637 184698])
+            ("ada-compile-application" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [184699 184760])
+            ("ada-compile-current" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [184761 184822])
+            ("ada-complete-identifier" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [184823 184884])
+            ("ada-find-file" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [184885 184946])
+            ("ada-find-any-references" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [184947 185008])
+            ("ada-find-src-file-in-dir" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [185009 185070])
+            ("ada-find-local-references" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [185071 185132])
+            ("ada-find-references" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [185133 185194])
+            ("ada-gdb-application" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [185195 185256])
+            ("ada-goto-declaration" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [185257 185318])
+            ("ada-goto-declaration-other-frame" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [185319 185380])
+            ("ada-goto-parent" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [185381 185442])
+            ("ada-make-body-gnatstub" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [185443 185504])
+            ("ada-point-and-xref" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [185505 185566])
+            ("ada-reread-prj-file" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [185567 185628])
+            ("ada-run-application" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [185629 185690])
+            ("ada-set-default-project-file" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [185691 185752])
+            ("ada-xref-goto-previous-reference" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [185753 185814])
+            ("ada-set-main-compile-application" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [185815 185876])
+            ("ada-show-current-main" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [185877 185938])
+            ("ada-customize" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [185940 186001])
+            ("ada-prj-edit" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186002 186063])
+            ("ada-prj-new" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186064 186125])
+            ("ada-prj-save" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186126 186187])
+            ("ada-array" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186189 186237])
+            ("ada-case" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186238 186286])
+            ("ada-declare-block" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186287 186335])
+            ("ada-else" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186336 186384])
+            ("ada-elsif" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186385 186433])
+            ("ada-exception" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186434 186482])
+            ("ada-exception-block" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186483 186531])
+            ("ada-exit" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186532 186580])
+            ("ada-for-loop" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186581 186629])
+            ("ada-function-spec" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186630 186678])
+            ("ada-header" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186679 186727])
+            ("ada-if" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186728 186776])
+            ("ada-loop" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186777 186825])
+            ("ada-package-body" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186826 186874])
+            ("ada-package-spec" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186875 186923])
+            ("ada-private" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186924 186972])
+            ("ada-procedure-spec" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [186973 187021])
+            ("ada-record" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [187022 187070])
+            ("ada-subprogram-body" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [187071 187119])
+            ("ada-subtype" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [187120 187168])
+            ("ada-tabsize" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [187169 187217])
+            ("ada-task-body" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [187218 187266])
+            ("ada-task-spec" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [187267 187315])
+            ("ada-type" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [187316 187364])
+            ("ada-use" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [187365 187413])
+            ("ada-when" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [187414 187462])
+            ("ada-while-loop" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [187463 187511])
+            ("ada-with" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [187512 187560])
+            ("ada-mode" package nil nil [187584 187603]))          
+      :file "ada-mode.el.gz"
+      :pointmax 187631
+      :fsize 45677
+      :lastmodtime '(20400 62402)
+      :unmatched-syntax '((close-paren 17615 . 17616) (symbol 16562 . 16579) (open-paren 16561 . 16562)))
+    (semanticdb-table "cc-vars.el.gz"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("let" code nil nil [1214 1429])
+            ("cc-require" code nil nil [1432 1453])
+            ("cc-bytecomp-defun" code nil nil [1480 1514])
+            ("cc-eval-when-compile" code nil nil [1525 1587])
+            ("cc-eval-when-compile" code nil nil [1589 1995])
+            ("or" code nil nil [2074 2308])
+            ("c-constant-symbol" function (:arguments ("sym" "len")) nil [2379 2952])
+            ("define-widget" code nil nil [2955 3573])
+            ("define-widget" code nil nil [3575 3754])
+            ("define-widget" code nil nil [3756 4658])
+            ("c-style-variables" variable (:default-value (quote (c-basic-offset c-comment-only-line-offset c-indent-comment-alist c-indent-comments-syntactically-p c-block-comment-prefix c-comment-prefix-regexp c-doc-comment-style c-cleanup-list c-hanging-braces-alist c-hanging-colons-alist c-hanging-semi&comma-criteria c-backslash-column c-backslash-max-column c-special-indent-hook c-label-minimum-indentation c-offsets-alist))) nil [4660 5109])
+            ("c-fallback-style" variable nil nil [5111 5140])
+            ("c-set-stylevar-fallback" function (:arguments ("name" "val")) nil [5142 5291])
+            ("defcustom-c-stylevar" function (:arguments ("name" "val" "doc" "args")) nil [5293 7113])
+            ("c-valid-offset" function (:arguments ("offset")) nil [7115 7861])
+            ("c-strict-syntax-p" variable (:user-visible-flag t) nil [7886 8475])
+            ("c-echo-syntactic-information-p" variable (:user-visible-flag t) nil [8477 8621])
+            ("c-report-syntactic-errors" variable (:user-visible-flag t) nil [8623 9118])
+            ("defcustom-c-stylevar" code nil nil [9120 9335])
+            ("c-tab-always-indent" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [9404 10214])
+            ("c-insert-tab-function" variable
+               (:user-visible-flag t
+                :default-value (quote insert-tab))
+                nil [10216 10623])
+            ("c-syntactic-indentation" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [10625 11207])
+            ("make-variable-buffer-local" code nil nil [11208 11261])
+            ("put" code nil nil [11262 11323])
+            ("c-syntactic-indentation-in-macros" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [11325 12225])
+            ("put" code nil nil [12226 12297])
+            ("c-defun-tactic" variable
+               (:user-visible-flag t
+                :default-value (quote go-outward))
+                nil [12299 12923])
+            ("defcustom-c-stylevar" code nil nil [12925 13774])
+            ("defcustom-c-stylevar" code nil nil [13776 16677])
+            ("defcustom-c-stylevar" code nil nil [16679 17129])
+            ("make-obsolete-variable" code nil nil [17131 17219])
+            ("defcustom-c-stylevar" code nil nil [17553 18369])
+            ("defcustom-c-stylevar" code nil nil [18371 20884])
+            ("defcustom-c-stylevar" code nil nil [20886 23776])
+            ("c-ignore-auto-fill" variable
+               (:user-visible-flag t
+                :default-value (quote (string cpp code)))
+                nil [23778 24574])
+            ("defcustom-c-stylevar" code nil nil [24576 29367])
+            ("defcustom-c-stylevar" code nil nil [29369 32219])
+            ("c-max-one-liner-length" variable (:default-value 80) nil [32221 32393])
+            ("defcustom-c-stylevar" code nil nil [32395 33199])
+            ("defcustom-c-stylevar" code nil nil [33201 34007])
+            ("defcustom-c-stylevar" code nil nil [34009 34424])
+            ("defcustom-c-stylevar" code nil nil [34497 34878])
+            ("c-auto-align-backslashes" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [34880 35296])
+            ("c-backspace-function" variable
+               (:user-visible-flag t
+                :default-value (quote backward-delete-char-untabify))
+                nil [35298 35463])
+            ("c-delete-function" variable
+               (:user-visible-flag t
+                :default-value (quote delete-char))
+                nil [35465 35613])
+            ("c-require-final-newline" variable
+               (:user-visible-flag t
+                :default-value (quote ((c-mode . t) (c++-mode . t) (objc-mode . t))))
+                nil [35615 37255])
+            ("c-electric-pound-behavior" variable (:user-visible-flag t) nil [37257 37446])
+            ("c-special-indent-hook" variable (:user-visible-flag t) nil [37448 37694])
+            ("defcustom-c-stylevar" code nil nil [37696 38084])
+            ("c-progress-interval" variable
+               (:user-visible-flag t
+                :default-value 5)
+                nil [38086 38380])
+            ("c-objc-method-arg-min-delta-to-bracket" variable
+               (:user-visible-flag t
+                :default-value 2)
+                nil [38382 38969])
+            ("c-objc-method-arg-unfinished-offset" variable
+               (:user-visible-flag t
+                :default-value 4)
+                nil [38971 39188])
+            ("c-objc-method-parameter-offset" variable
+               (:user-visible-flag t
+                :default-value 4)
+                nil [39190 39450])
+            ("c-default-style" variable
+               (:user-visible-flag t
+                :default-value (quote ((java-mode . "java") (awk-mode . "awk") (other . "gnu"))))
+                nil [39452 41159])
+            ("c-set-stylevar-fallback" code nil nil [41590 49911])
+            ("c-offsets-alist" variable nil nil [49912 59966])
+            ("c-inside-block-syms" variable
+               (:constant-flag t
+                :default-value (quote (defun-block-intro block-open block-close statement statement-cont statement-block-intro statement-case-intro statement-case-open substatement substatement-open substatement-label case-label label do-while-closure else-clause catch-clause inlambda annotation-var-cont)))
+                nil [60063 60377])
+            ("c-style-variables-are-local-p" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [60379 61349])
+            ("c-mode-hook" variable (:user-visible-flag t) nil [61351 61434])
+            ("c++-mode-hook" variable (:user-visible-flag t) nil [61436 61523])
+            ("objc-mode-hook" variable (:user-visible-flag t) nil [61525 61614])
+            ("java-mode-hook" variable (:user-visible-flag t) nil [61616 61705])
+            ("idl-mode-hook" variable (:user-visible-flag t) nil [61707 61794])
+            ("pike-mode-hook" variable (:user-visible-flag t) nil [61796 61885])
+            ("awk-mode-hook" variable (:user-visible-flag t) nil [61887 61974])
+            ("c-mode-common-hook" variable (:user-visible-flag t) nil [61976 62102])
+            ("c-initialization-hook" variable (:user-visible-flag t) nil [62104 62345])
+            ("c-enable-xemacs-performance-kludge-p" variable (:user-visible-flag t) nil [62347 62881])
+            ("c-old-style-variable-behavior" variable (:user-visible-flag t) nil [62883 63671])
+            ("define-widget" code nil nil [63673 63857])
+            ("c-make-font-lock-extra-types-blurb" function (:arguments ("mode1" "mode2" "example")) nil [63859 64925])
+            ("c-font-lock-extra-types" variable (:default-value (quote ("\\sw+_t" "bool" "complex" "imaginary" "FILE" "lconv" "tm" "va_list" "jmp_buf" "Lisp_Object"))) nil [65244 65966])
+            ("c++-font-lock-extra-types" variable (:default-value (quote ("\\sw+_t" "FILE" "lconv" "tm" "va_list" "jmp_buf" "istream" "istreambuf" "ostream" "ostreambuf" "ifstream" "ofstream" "fstream" "strstream" "strstreambuf" "istrstream" "ostrstream" "ios" "string" "rope" "list" "slist" "deque" "vector" "bit_vector" "set" "multiset" "map" "multimap" "hash" "hash_set" "hash_multiset" "hash_map" "hash_multimap" "stack" "queue" "priority_queue" "type_info" "iterator" "const_iterator" "reverse_iterator" "const_reverse_iterator" "reference" "const_reference"))) nil [65968 67081])
+            ("objc-font-lock-extra-types" variable (:default-value (list (concat "[" c-upper "]\\sw*[" c-lower "]\\sw*"))) nil [67083 67509])
+            ("java-font-lock-extra-types" variable (:default-value (list (concat "[" c-upper "]\\sw*[" c-lower "]\\sw"))) nil [67511 67926])
+            ("idl-font-lock-extra-types" variable nil nil [67928 68070])
+            ("pike-font-lock-extra-types" variable (:default-value (list (concat "[" c-upper "]\\sw*[" c-lower "]\\sw*"))) nil [68072 68498])
+            ("c-macro-with-semi-re" variable nil nil [68572 68806])
+            ("make-variable-buffer-local" code nil nil [68807 68857])
+            ("c-make-macro-with-semi-re" function nil nil [68859 69564])
+            ("c-macro-names-with-semicolon" variable (:default-value (quote ("Q_OBJECT" "Q_PROPERTY" "Q_DECLARE" "Q_ENUMS"))) nil [69566 70239])
+            ("make-variable-buffer-local" code nil nil [70240 70298])
+            ("c-file-style" variable nil nil [70300 70708])
+            ("make-variable-buffer-local" code nil nil [70709 70751])
+            ("c-file-offsets" variable nil nil [70826 71261])
+            ("make-variable-buffer-local" code nil nil [71262 71306])
+            ("cc-bytecomp-defvar" code nil nil [71684 71724])
+            ("c-syntactic-context" variable nil nil [71725 71753])
+            ("put" code nil nil [71754 72362])
+            ("cc-bytecomp-defvar" code nil nil [72365 72405])
+            ("c-syntactic-element" variable nil nil [72406 72434])
+            ("put" code nil nil [72435 73283])
+            ("c-indentation-style" variable nil nil [73285 73486])
+            ("c-current-comment-prefix" variable nil nil [73488 73623])
+            ("make-variable-buffer-local" code nil nil [73624 73678])
+            ("c-string-par-start" variable (:default-value "\\|[ 	]*\\\\?$") nil [73867 74084])
+            ("c-string-par-separate" variable (:default-value "[ 	]*\\\\?$") nil [74086 74309])
+            ("c-sentence-end-with-esc-eol" variable (:default-value (concat "\\(\\(" (c-default-value-sentence-end) "\\)" "\\|" "[.?!][]\"')}]* ?\\\\\\($\\)[ 	
+]*" "\\)")) nil [74311 74624])
+            ("cc-provide" code nil nil [74628 74649]))          
+      :file "cc-vars.el.gz"
+      :pointmax 74676
+      :fsize 20851
+      :lastmodtime '(20352 65510)
+      :unmatched-syntax '((close-paren 2952 . 2953) (symbol 2360 . 2376) (open-paren 2359 . 2360) (close-paren 1429 . 1430) (symbol 1194 . 1211) (open-paren 1193 . 1194))))
+  :file "!usr!local!share!emacs!24.1!lisp!progmodes!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

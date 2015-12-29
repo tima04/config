@@ -1,0 +1,30 @@
+;; Object temp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "temp/"
+  :tables
+  (list
+    (semanticdb-table "temp.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("edu.princeton.cs.algs4" include nil nil [1 31])
+            ("foo" type
+               (:members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [72 85]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [48 124]))                  
+                :type "class")
+                nil [32 126]))          
+      :file "temp.java"
+      :pointmax 127
+      :fsize 126
+      :lastmodtime '(22016 19705 726324 893000)
+      :unmatched-syntax '((IDENTIFIER 1 . 6))))
+  :file "!home!kothiyal!Documents!git-cloned!algs4!src!main!java!edu!princeton!cs!temp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,590 @@
+;; Object coursera_course/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "coursera_course/"
+  :tables
+  (list
+    (semanticdb-table "GladLibMap.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("coursera_course" package nil nil [1 25])
+            ("edu.duke.*" include nil nil [27 45])
+            ("java.util.*" include nil nil [47 66])
+            ("java.util.stream.Stream" include nil nil [67 98])
+            ("java.nio.file.*" include nil nil [99 122])
+            ("java.io.*" include nil nil [123 140])
+            ("java.util.regex.Pattern" include nil nil [141 172])
+            ("java.util.regex.Matcher" include nil nil [173 204])
+            ("GladLibMap" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("myRandom" variable
+                       (:typemodifiers ("private")
+                        :type "Random")
+                        (reparse-symbol class_member_declaration) [339 363])
+                    ("dataSourceURL" variable
+                       (:typemodifiers ("private" "static")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [365 448])
+                    ("dataSourceDirectory" variable
+                       (:typemodifiers ("private" "static")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [450 514])
+                    ("file" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [516 585])
+                    ("GladLibMap" function
+                       (:constructor-flag t
+                        :typemodifiers ("public"))
+                        (reparse-symbol class_member_declaration) [588 684])
+                    ("GladLibMap" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("source" variable (:type "String") (reparse-symbol formal_parameters) [705 718]))                          )
+                        (reparse-symbol class_member_declaration) [687 783])
+                    ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [810 823]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [786 866])
+                    ("initializeFromSource" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("source" variable (:type "String") (reparse-symbol formal_parameters) [903 916]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [869 1107])
+                    ("randomFrom" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("" variable (:type "source") (reparse-symbol formal_parameters) [1154 1160]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1110 1241])
+                    ("getSubstitute" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("label" variable (:type "String") (reparse-symbol formal_parameters) [1273 1285]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1244 1501])
+                    ("processWord" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("w" variable (:type "String") (reparse-symbol formal_parameters) [1532 1540]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1505 1838])
+                    ("printOut" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("s" variable (:type "String") (reparse-symbol formal_parameters) [1863 1871])
+                            ("lineWidth" variable (:type "int") (reparse-symbol formal_parameters) [1873 1886]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1841 2123])
+                    ("fromTemplate" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("source" variable (:type "String") (reparse-symbol formal_parameters) [2154 2167]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [2126 2548])
+                    ("readIt" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("source" variable (:type "String") (reparse-symbol formal_parameters) [2584 2597]))                          )
+                        (reparse-symbol class_member_declaration) [2577 2958])
+                    ("makeStory" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2962 3111])
+                    ("totalWordsInMap" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [3114 3248])
+                    ("totalWordsConsidered" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [3251 3707]))                  
+                :type "class")
+                nil [247 3709]))          
+      :file "GladLibMap.java"
+      :pointmax 3710
+      :fsize 3709
+      :lastmodtime '(22104 23802 456644 966000)
+      :unmatched-syntax nil)
+    (semanticdb-table "GladLib.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("coursera_course" package nil nil [1 25])
+            ("edu.duke.*" include nil nil [27 45])
+            ("java.util.ArrayList" include nil nil [48 75])
+            ("java.util.Random" include nil nil [76 100])
+            ("GladLib" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("myRandom" variable
+                       (:typemodifiers ("private")
+                        :type "Random")
+                        (reparse-symbol class_member_declaration) [398 422])
+                    ("dataSourceURL" variable
+                       (:typemodifiers ("private" "static")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [426 509])
+                    ("dataSourceDirectory" variable
+                       (:typemodifiers ("private" "static")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [511 575])
+                    ("GladLib" function
+                       (:constructor-flag t
+                        :typemodifiers ("public"))
+                        (reparse-symbol class_member_declaration) [579 671])
+                    ("GladLib" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("source" variable (:type "String") (reparse-symbol formal_parameters) [690 703]))                          )
+                        (reparse-symbol class_member_declaration) [675 767])
+                    ("initializeFromSource" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("source" variable (:type "String") (reparse-symbol formal_parameters) [805 818]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [771 1142])
+                    ("randomFrom" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("" variable (:type "source") (reparse-symbol formal_parameters) [1190 1196]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1146 1276])
+                    ("getSubstitute" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("label" variable (:type "String") (reparse-symbol formal_parameters) [1309 1321]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1280 1906])
+                    ("processWord" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("w" variable (:type "String") (reparse-symbol formal_parameters) [1937 1945]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1910 2230])
+                    ("printOut" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("s" variable (:type "String") (reparse-symbol formal_parameters) [2256 2264])
+                            ("lineWidth" variable (:type "int") (reparse-symbol formal_parameters) [2266 2279]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2234 2510])
+                    ("fromTemplate" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("source" variable (:type "String") (reparse-symbol formal_parameters) [2542 2555]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [2514 2934])
+                    ("readIt" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("source" variable (:type "String") (reparse-symbol formal_parameters) [2971 2984]))                          )
+                        (reparse-symbol class_member_declaration) [2964 3342])
+                    ("makeStory" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3346 3495]))                  
+                :type "class")
+                nil [102 3498]))          
+      :file "GladLib.java"
+      :pointmax 3499
+      :fsize 3498
+      :lastmodtime '(22103 28063 260141 407000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Test.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("coursera_course" package nil nil [1 25])
+            ("java.io.IOException" include nil nil [27 54])
+            ("Test" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("main" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [144 157]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [120 352]))                  
+                :type "class")
+                nil [96 354]))          
+      :file "Test.java"
+      :pointmax 355
+      :fsize 354
+      :lastmodtime '(22102 59161 19858 394000)
+      :unmatched-syntax nil)
+    (semanticdb-table "CodonCount.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("coursera_course" package nil nil [1 25])
+            ("java.io.IOException" include nil nil [67 94])
+            ("java.nio.file.Files" include nil nil [95 122])
+            ("java.nio.file.Paths" include nil nil [123 150])
+            ("java.util.*" include nil nil [151 170])
+            ("CodonCount" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("main" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [1159 1172]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1135 2166])
+                    ("countCodon" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("strand" variable (:type "String") (reparse-symbol formal_parameters) [2222 2235])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [2256 2262])
+                            ("" variable (:type "codonMap") (reparse-symbol formal_parameters) [2273 2281]))                          )
+                        (reparse-symbol class_member_declaration) [2211 2594])
+                    ("getCodons" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("strand" variable (:type "String") (reparse-symbol formal_parameters) [2641 2654]))                          )
+                        (reparse-symbol class_member_declaration) [2631 2815]))                  
+                :type "class")
+                nil [1100 2817]))          
+      :file "CodonCount.java"
+      :pointmax 2818
+      :fsize 3708
+      :lastmodtime '(22103 34201 404191 850000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Utils.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("coursera_course" package nil nil [1 25])
+            ("java.util.*" include nil nil [27 46])
+            ("Utils" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("log" function
+                       (:arguments 
+                          ( ("args" variable (:type "T") (reparse-symbol formal_parameters) [101 107]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [92 143])
+                    ("mode" function
+                       (:arguments 
+                          ( ("" variable (:type "args") (reparse-symbol formal_parameters) [186 190]))                          
+                        :type "T")
+                        (reparse-symbol class_member_declaration) [171 230])
+                    ("count" function
+                       (:arguments 
+                          ( ("" variable (:type "xs") (reparse-symbol formal_parameters) [269 271])
+                            ("x" variable (:type "T") (reparse-symbol formal_parameters) [273 276]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [251 360]))                  
+                :type "class")
+                nil [48 362]))          
+      :file "Utils.java"
+      :pointmax 363
+      :fsize 362
+      :lastmodtime '(22103 3912 391942 935000)
+      :unmatched-syntax nil)
+    (semanticdb-table "WordsInFile.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("coursera_course" package nil nil [1 25])
+            ("java.io.IOException" include nil nil [27 54])
+            ("java.nio.file.Files" include nil nil [55 82])
+            ("java.nio.file.Paths" include nil nil [83 110])
+            ("java.util.*" include nil nil [111 130])
+            ("WordsInFile" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("main" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [1184 1197]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1160 2740])
+                    ("wordMap" function
+                       (:constructor-flag t
+                        :throws ("IOException")
+                        :arguments 
+                          ( ("filepath" variable (:type "String") (reparse-symbol formal_parameters) [2833 2848])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [2860 2866])
+                            ("" variable (:type "map") (reparse-symbol formal_parameters) [2881 2884]))                          )
+                        (reparse-symbol class_member_declaration) [2819 3364]))                  
+                :type "class")
+                nil [1131 3366]))          
+      :file "WordsInFile.java"
+      :pointmax 3367
+      :fsize 3282
+      :lastmodtime '(22104 18390 992600 495000)
+      :unmatched-syntax nil)
+    (semanticdb-table "WordFrequencies.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("coursera_course" package nil nil [1 25])
+            ("java.io.IOException" include nil nil [26 53])
+            ("java.nio.file.Files" include nil nil [54 81])
+            ("java.nio.file.Paths" include nil nil [82 109])
+            ("java.util.*" include nil nil [110 129])
+            ("WordFrequencies" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("main" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [3139 3152]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3115 3373])
+                    ("findUnique" function
+                       (:throws ("IOException")
+                        :typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("filepath" variable (:type "String") (reparse-symbol formal_parameters) [3407 3422]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3376 3932])
+                    ("tester" function
+                       (:throws ("IOException")
+                        :typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("filepath" variable (:type "String") (reparse-symbol formal_parameters) [3962 3977]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3935 4355])
+                    ("findIndexOfMax" function
+                       (:typemodifiers ("private" "static")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [4358 4450]))                  
+                :type "class")
+                nil [2831 4452]))          
+      :file "WordFrequencies.java"
+      :pointmax 4453
+      :fsize 4485
+      :lastmodtime '(22103 32880 168180 992000)
+      :unmatched-syntax '((SEMICOLON 2990 . 2991) (PAREN_BLOCK 2988 . 2990) (GT 2987 . 2988) (LT 2979 . 2980) (NEW 2966 . 2969) (EQ 2964 . 2965) (GT 2954 . 2955) (LT 2946 . 2947) (SEMICOLON 2924 . 2925) (PAREN_BLOCK 2922 . 2924) (GT 2921 . 2922) (LT 2914 . 2915) (NEW 2901 . 2904) (EQ 2899 . 2900) (GT 2889 . 2890) (PRIVATE 2863 . 2870) (LT 2882 . 2883) (MULT 187 . 188) (DOT 186 . 187) (IDENTIFIER 181 . 186) (DOT 180 . 181) (IMPORT 151 . 157) (STATIC 158 . 164) (IDENTIFIER 165 . 180)))
+    (semanticdb-table "CaeserCipher.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("coursera_course" package nil nil [2 26])
+            ("java.io.IOException" include nil nil [28 55])
+            ("java.nio.file.Files" include nil nil [56 83])
+            ("java.nio.file.Paths" include nil nil [84 111])
+            ("java.util.*" include nil nil [112 131])
+            ("CaeserCipher" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [227 240]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [203 530])
+                    ("encrypt" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("input" variable (:type "String") (reparse-symbol formal_parameters) [987 999])
+                            ("key" variable (:type "int") (reparse-symbol formal_parameters) [1001 1008]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [958 1125])
+                    ("encryptChar" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("ch" variable (:type "char") (reparse-symbol formal_parameters) [1160 1167])
+                            ("key" variable (:type "int") (reparse-symbol formal_parameters) [1169 1176]))                          
+                        :type "char")
+                        (reparse-symbol class_member_declaration) [1129 1560])
+                    ("encryptTwoKeys" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("input" variable (:type "String") (reparse-symbol formal_parameters) [2264 2276])
+                            ("key1" variable (:type "int") (reparse-symbol formal_parameters) [2278 2286])
+                            ("key2" variable (:type "int") (reparse-symbol formal_parameters) [2288 2296]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [2228 2495])
+                    ("testCaesar" function
+                       (:typemodifiers ("public" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2906 3424]))                  
+                :type "class")
+                nil [172 3428]))          
+      :file "CaeserCipher.java"
+      :pointmax 3429
+      :fsize 3459
+      :lastmodtime '(22104 23806 156644 996000)
+      :unmatched-syntax nil)
+    (semanticdb-table "LogAnalyzer.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("coursera_course" package nil nil [1 25])
+            ("java.io.IOException" include nil nil [154 181])
+            ("java.nio.file.Files" include nil nil [182 209])
+            ("java.nio.file.Paths" include nil nil [210 237])
+            ("java.util.stream.Collectors" include nil nil [238 273])
+            ("java.util.*" include nil nil [274 293])
+            ("java.util.*" include nil nil [907 926])
+            ("edu.duke.*" include nil nil [927 945])
+            ("LogAnalyzer" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("dir" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1022 1058])
+                    ("LogAnalyzer" function
+                       (:constructor-flag t
+                        :typemodifiers ("public"))
+                        (reparse-symbol class_member_declaration) [1071 1135])
+                    ("readFile" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("filename" variable (:type "String") (reparse-symbol formal_parameters) [1180 1195]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1159 1407])
+                    ("countUniqueIPs" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1410 1548])
+                    ("printAllHigherThanNum" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("arg" variable (:type "int") (reparse-symbol formal_parameters) [1585 1592]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1551 1688])
+                    ("uniqueIPVisitsOnDay" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("day" variable (:type "String") (reparse-symbol formal_parameters) [1734 1744]))                          )
+                        (reparse-symbol class_member_declaration) [1714 2000])
+                    ("printAll" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2004 2094]))                  
+                :type "class")
+                nil [947 2096]))          
+      :file "LogAnalyzer.java"
+      :pointmax 2097
+      :fsize 2186
+      :lastmodtime '(22104 48082 304844 498000)
+      :unmatched-syntax nil)
+    (semanticdb-table "LogEntry.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("coursera_course" package nil nil [1 25])
+            ("java.util.*" include nil nil [153 173])
+            ("LogEntry" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("ipAddress" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [203 228])
+                    ("accessTime" variable
+                       (:typemodifiers ("private")
+                        :type "Date")
+                        (reparse-symbol class_member_declaration) [234 258])
+                    ("request" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [264 287])
+                    ("statusCode" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [293 316])
+                    ("bytesReturned" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [322 348])
+                    ("LogEntry" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("ip" variable (:type "String") (reparse-symbol formal_parameters) [374 383])
+                            ("time" variable (:type "Date") (reparse-symbol formal_parameters) [385 394])
+                            ("req" variable (:type "String") (reparse-symbol formal_parameters) [396 406])
+                            ("status" variable (:type "int") (reparse-symbol formal_parameters) [408 418])
+                            ("bytes" variable (:type "int") (reparse-symbol formal_parameters) [420 429]))                          )
+                        (reparse-symbol class_member_declaration) [358 566])
+                    ("getIpAddress" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [574 637])
+                    ("getAccessTime" function
+                       (:typemodifiers ("public")
+                        :type "Date")
+                        (reparse-symbol class_member_declaration) [642 704])
+                    ("getRequest" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [711 769])
+                    ("getStatusCode" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [773 834])
+                    ("getBytesReturned" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [838 905])
+                    ("toString" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [913 1058]))                  
+                :type "class")
+                nil [174 1060]))          
+      :file "LogEntry.java"
+      :pointmax 1061
+      :fsize 1116
+      :lastmodtime '(22104 3098 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "Tester.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("coursera_course" package nil nil [1 25])
+            ("java.util.*" include nil nil [250 269])
+            ("Tester" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [365 378]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [341 426])
+                    ("testLogEntry" function
+                       (:typemodifiers ("public" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [436 695])
+                    ("testLogAnalyzer" function
+                       (:typemodifiers ("public" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [701 1000]))                  
+                :type "class")
+                nil [310 1002]))          
+      :file "Tester.java"
+      :pointmax 1005
+      :fsize 1040
+      :lastmodtime '(22104 47140 648836 759000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!online-courses!coursera!javaProgramming3!src!coursera_course!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

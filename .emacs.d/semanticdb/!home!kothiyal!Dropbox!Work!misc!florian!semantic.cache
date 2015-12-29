@@ -1,0 +1,16 @@
+;; Object florian/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "florian/"
+  :tables
+  (list
+    (semanticdb-table "pt.py.~1~"
+      :major-mode 'python-mode
+      :tags nil
+      :file "pt.py.~1~"
+      :pointmax 599
+      :fsize 630
+      :lastmodtime '(20111 17206 0 0)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!misc!florian!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

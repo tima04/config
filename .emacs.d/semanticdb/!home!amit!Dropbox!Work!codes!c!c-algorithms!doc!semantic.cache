@@ -1,0 +1,16 @@
+;; Object doc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "doc/"
+  :tables
+  (list
+    (semanticdb-table "intro.h"
+      :major-mode 'c-mode
+      :tags nil
+      :file "intro.h"
+      :pointmax 3161
+      :fsize 3160
+      :lastmodtime '(21839 8358 508238 858000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Dropbox!Work!codes!c!c-algorithms!doc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

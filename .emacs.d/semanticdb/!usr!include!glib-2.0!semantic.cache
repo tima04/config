@@ -1,0 +1,390 @@
+;; Object glib-2.0/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "glib-2.0/"
+  :tables
+  (list
+    (semanticdb-table "glib.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__G_LIB_H__" variable (:constant-flag t) nil [1082 1093])
+            ("__GLIB_H_INSIDE__" variable (:constant-flag t) nil [1103 1120])
+            ("glib/galloca.h" include (:system-flag t) nil [1122 1147])
+            ("glib/garray.h" include (:system-flag t) nil [1148 1172])
+            ("glib/gasyncqueue.h" include (:system-flag t) nil [1173 1202])
+            ("glib/gatomic.h" include (:system-flag t) nil [1203 1228])
+            ("glib/gbacktrace.h" include (:system-flag t) nil [1229 1257])
+            ("glib/gbase64.h" include (:system-flag t) nil [1258 1283])
+            ("glib/gbitlock.h" include (:system-flag t) nil [1284 1310])
+            ("glib/gbookmarkfile.h" include (:system-flag t) nil [1311 1342])
+            ("glib/gbytes.h" include (:system-flag t) nil [1343 1367])
+            ("glib/gcharset.h" include (:system-flag t) nil [1368 1394])
+            ("glib/gchecksum.h" include (:system-flag t) nil [1395 1422])
+            ("glib/gconvert.h" include (:system-flag t) nil [1423 1449])
+            ("glib/gdataset.h" include (:system-flag t) nil [1450 1476])
+            ("glib/gdate.h" include (:system-flag t) nil [1477 1500])
+            ("glib/gdatetime.h" include (:system-flag t) nil [1501 1528])
+            ("glib/gdir.h" include (:system-flag t) nil [1529 1551])
+            ("glib/genviron.h" include (:system-flag t) nil [1552 1578])
+            ("glib/gerror.h" include (:system-flag t) nil [1579 1603])
+            ("glib/gfileutils.h" include (:system-flag t) nil [1604 1632])
+            ("glib/ggettext.h" include (:system-flag t) nil [1633 1659])
+            ("glib/ghash.h" include (:system-flag t) nil [1660 1683])
+            ("glib/ghmac.h" include (:system-flag t) nil [1684 1707])
+            ("glib/ghook.h" include (:system-flag t) nil [1708 1731])
+            ("glib/ghostutils.h" include (:system-flag t) nil [1732 1760])
+            ("glib/giochannel.h" include (:system-flag t) nil [1761 1789])
+            ("glib/gkeyfile.h" include (:system-flag t) nil [1790 1816])
+            ("glib/glist.h" include (:system-flag t) nil [1817 1840])
+            ("glib/gmacros.h" include (:system-flag t) nil [1841 1866])
+            ("glib/gmain.h" include (:system-flag t) nil [1867 1890])
+            ("glib/gmappedfile.h" include (:system-flag t) nil [1891 1920])
+            ("glib/gmarkup.h" include (:system-flag t) nil [1921 1946])
+            ("glib/gmem.h" include (:system-flag t) nil [1947 1969])
+            ("glib/gmessages.h" include (:system-flag t) nil [1970 1997])
+            ("glib/gnode.h" include (:system-flag t) nil [1998 2021])
+            ("glib/goption.h" include (:system-flag t) nil [2022 2047])
+            ("glib/gpattern.h" include (:system-flag t) nil [2048 2074])
+            ("glib/gpoll.h" include (:system-flag t) nil [2075 2098])
+            ("glib/gprimes.h" include (:system-flag t) nil [2099 2124])
+            ("glib/gqsort.h" include (:system-flag t) nil [2125 2149])
+            ("glib/gquark.h" include (:system-flag t) nil [2150 2174])
+            ("glib/gqueue.h" include (:system-flag t) nil [2175 2199])
+            ("glib/grand.h" include (:system-flag t) nil [2200 2223])
+            ("glib/gregex.h" include (:system-flag t) nil [2224 2248])
+            ("glib/gscanner.h" include (:system-flag t) nil [2249 2275])
+            ("glib/gsequence.h" include (:system-flag t) nil [2276 2303])
+            ("glib/gshell.h" include (:system-flag t) nil [2304 2328])
+            ("glib/gslice.h" include (:system-flag t) nil [2329 2353])
+            ("glib/gslist.h" include (:system-flag t) nil [2354 2378])
+            ("glib/gspawn.h" include (:system-flag t) nil [2379 2403])
+            ("glib/gstrfuncs.h" include (:system-flag t) nil [2404 2431])
+            ("glib/gstring.h" include (:system-flag t) nil [2432 2457])
+            ("glib/gstringchunk.h" include (:system-flag t) nil [2458 2488])
+            ("glib/gtestutils.h" include (:system-flag t) nil [2489 2517])
+            ("glib/gthread.h" include (:system-flag t) nil [2518 2543])
+            ("glib/gthreadpool.h" include (:system-flag t) nil [2544 2573])
+            ("glib/gtimer.h" include (:system-flag t) nil [2574 2598])
+            ("glib/gtimezone.h" include (:system-flag t) nil [2599 2626])
+            ("glib/gtrashstack.h" include (:system-flag t) nil [2627 2656])
+            ("glib/gtree.h" include (:system-flag t) nil [2657 2680])
+            ("glib/gtypes.h" include (:system-flag t) nil [2681 2705])
+            ("glib/gunicode.h" include (:system-flag t) nil [2706 2732])
+            ("glib/gurifuncs.h" include (:system-flag t) nil [2733 2760])
+            ("glib/gutils.h" include (:system-flag t) nil [2761 2785])
+            ("glib/gvarianttype.h" include (:system-flag t) nil [2786 2816])
+            ("glib/gvariant.h" include (:system-flag t) nil [2817 2843])
+            ("glib/gversion.h" include (:system-flag t) nil [2844 2870])
+            ("glib/gversionmacros.h" include (:system-flag t) nil [2871 2903])
+            ("glib/deprecated/gallocator.h" include (:system-flag t) nil [2990 3029])
+            ("glib/deprecated/gcache.h" include (:system-flag t) nil [3030 3065])
+            ("glib/deprecated/gcompletion.h" include (:system-flag t) nil [3066 3106])
+            ("glib/deprecated/gmain.h" include (:system-flag t) nil [3107 3141])
+            ("glib/deprecated/grel.h" include (:system-flag t) nil [3142 3175])
+            ("glib/deprecated/gthread.h" include (:system-flag t) nil [3176 3212]))          
+      :file "glib.h"
+      :pointmax 3299
+      :fsize 3298
+      :lastmodtime '(21540 22332 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__G_LIB_H__")
+          )
+)
+    (semanticdb-table "glib-object.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__GLIB_GOBJECT_H__" variable (:constant-flag t) nil [832 850])
+            ("__GLIB_GOBJECT_H_INSIDE__" variable (:constant-flag t) nil [860 885])
+            ("gobject/gbinding.h" include (:system-flag t) nil [939 968])
+            ("gobject/gboxed.h" include (:system-flag t) nil [969 996])
+            ("gobject/genums.h" include (:system-flag t) nil [997 1024])
+            ("gobject/gobject.h" include (:system-flag t) nil [1025 1053])
+            ("gobject/gparam.h" include (:system-flag t) nil [1054 1081])
+            ("gobject/gparamspecs.h" include (:system-flag t) nil [1082 1114])
+            ("gobject/gsignal.h" include (:system-flag t) nil [1115 1143])
+            ("gobject/gsourceclosure.h" include (:system-flag t) nil [1144 1179])
+            ("gobject/gtype.h" include (:system-flag t) nil [1180 1206])
+            ("gobject/gtypemodule.h" include (:system-flag t) nil [1207 1239])
+            ("gobject/gtypeplugin.h" include (:system-flag t) nil [1240 1272])
+            ("gobject/gvalue.h" include (:system-flag t) nil [1273 1300])
+            ("gobject/gvaluearray.h" include (:system-flag t) nil [1301 1333])
+            ("gobject/gvaluetypes.h" include (:system-flag t) nil [1334 1366]))          
+      :file "glib-object.h"
+      :pointmax 1434
+      :fsize 1433
+      :lastmodtime '(21540 22332 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__GLIB_GOBJECT_H__")
+          )
+)
+    (semanticdb-table "glib-unix.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__G_UNIX_H__" variable (:constant-flag t) nil [786 798])
+            ("unistd.h" include (:system-flag t) nil [1109 1128])
+            ("errno.h" include (:system-flag t) nil [1129 1147])
+            ("sys/wait.h" include (:system-flag t) nil [1148 1169])
+            ("stdlib.h" include (:system-flag t) nil [1170 1189])
+            ("fcntl.h" include (:system-flag t) nil [1190 1208])
+            ("glib.h" include (:system-flag t) nil [1210 1227])
+            ("G_UNIX_ERROR" variable (:constant-flag t) nil [1932 1944])
+            ("g_unix_error_quark" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2019 2024]))                  
+                :type ("GQuark" type (:type "class") nil nil))
+                nil [1992 2025])
+            ("g_unix_open_pipe" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("fds" variable
+                       (:pointer 1
+                        :type ("gint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2077 2090])
+                    ("flags" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2118 2133])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("GError" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2161 2176]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [2050 2177])
+            ("g_unix_set_fd_nonblocking" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("fd" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2238 2252])
+                    ("nonblock" variable (:type ("gboolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2289 2309])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("GError" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2346 2363]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [2202 2364])
+            ("g_unix_signal_source_new" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("signum" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2425 2437]))                  
+                :type ("GSource" type (:type "class") nil nil))
+                nil [2389 2438])
+            ("g_unix_signal_add_full" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("priority" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2499 2523])
+                    ("signum" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2560 2582])
+                    ("handler" variable (:type ("GSourceFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2619 2642])
+                    ("user_data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2679 2704])
+                    ("notify" variable (:type ("GDestroyNotify" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2741 2763]))                  
+                :type ("guint" type (:type "class") nil nil))
+                nil [2463 2764])
+            ("g_unix_signal_add" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("signum" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2825 2844])
+                    ("handler" variable (:type ("GSourceFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2881 2901])
+                    ("user_data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2938 2960]))                  
+                :type ("guint" type (:type "class") nil nil))
+                nil [2789 2961])
+            ("GUnixFDSourceFunc" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("fd" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3309 3325])
+                    ("condition" variable (:type ("GIOCondition" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3365 3388])
+                    ("user_data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3428 3451]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [3278 3452])
+            ("g_unix_fd_source_new" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("fd" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3513 3529])
+                    ("condition" variable (:type ("GIOCondition" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3566 3589]))                  
+                :type ("GSource" type (:type "class") nil nil))
+                nil [3477 3590])
+            ("g_unix_fd_add_full" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("priority" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3651 3678])
+                    ("fd" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3715 3736])
+                    ("condition" variable (:type ("GIOCondition" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3773 3801])
+                    ("function" variable (:type ("GUnixFDSourceFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3838 3865])
+                    ("user_data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3902 3930])
+                    ("notify" variable (:type ("GDestroyNotify" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3967 3992]))                  
+                :type ("guint" type (:type "class") nil nil))
+                nil [3615 3993])
+            ("g_unix_fd_add" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("fd" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4054 4075])
+                    ("condition" variable (:type ("GIOCondition" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4112 4140])
+                    ("function" variable (:type ("GUnixFDSourceFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4177 4204])
+                    ("user_data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4241 4269]))                  
+                :type ("guint" type (:type "class") nil nil))
+                nil [4018 4270]))          
+      :file "glib-unix.h"
+      :pointmax 4312
+      :fsize 4311
+      :lastmodtime '(21540 22332 0 0)
+      :unmatched-syntax '((symbol 4272 . 4283) (symbol 3995 . 4017) (symbol 3592 . 3614) (symbol 3454 . 3476) (TYPEDEF 3270 . 3277) (symbol 2766 . 2788) (symbol 2440 . 2462) (symbol 2366 . 2388) (symbol 2179 . 2201) (symbol 2027 . 2049) (symbol 1969 . 1991) (symbol 1301 . 1314) (string 1254 . 1292) (symbol 1248 . 1253) (punctuation 1247 . 1248))
+      :lexical-table 
+        '(("G_UNIX_ERROR" . ((semantic-list "(g_unix_error_quark())" 1945 . 1967)))
+          ("__G_UNIX_H__")
+          )
+)
+    (semanticdb-table "gmodule.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__GMODULE_H__" variable (:constant-flag t) nil [1043 1056])
+            ("glib.h" include (:system-flag t) nil [1058 1075])
+            ("G_MODULE_IMPORT" variable (:constant-flag t) nil [1197 1212])
+            ("G_MODULE_EXPORT" variable (:constant-flag t) nil [1334 1349])
+            ("GModuleFlags" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("G_MODULE_BIND_LAZY" variable
+                             (:constant-flag t
+                              :default-value (1420 1421)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1399 1421])
+                          ("G_MODULE_BIND_LOCAL" variable
+                             (:constant-flag t
+                              :default-value (1452 1453)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1430 1453])
+                          ("G_MODULE_BIND_MASK" variable
+                             (:constant-flag t
+                              :default-value (1483 1487)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1462 1487]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [1382 1503])
+            ("GModule" type
+               (:typedef ("_GModule" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1505 1540])
+            ("GModuleCheckInit" function
+               (:prototype-flag t
+                :pointer 1
+                :function-pointer t
+                :constant-flag t
+                :arguments 
+                  ( ("module" variable
+                       (:pointer 1
+                        :type ("GModule" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1583 1599]))                  
+                :type ("gchar" type (:type "class") nil nil))
+                nil [1549 1600])
+            ("GModuleUnload" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("module" variable
+                       (:pointer 1
+                        :type ("GModule" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1638 1654]))                  
+                :type "void")
+                nil [1609 1655])
+            ("G_GNUC_CONST" variable (:type "int") nil [1774 1787])
+            ("g_module_open" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("file_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1931 1955])
+                    ("flags" variable (:type ("GModuleFlags" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1967 1987]))                  
+                :type ("GModule" type (:type "class") nil nil))
+                nil [1885 1988])
+            ("g_module_close" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("module" variable
+                       (:pointer 1
+                        :type ("GModule" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2122 2143]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [2076 2144])
+            ("g_module_make_resident" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("module" variable
+                       (:pointer 1
+                        :type ("GModule" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2283 2304]))                  
+                :type "void")
+                nil [2237 2305])
+            ("g_module_error" function
+               (:prototype-flag t
+                :pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2421 2426]))                  
+                :type ("gchar" type (:type "class") nil nil))
+                nil [2375 2427])
+            ("g_module_symbol" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("module" variable
+                       (:pointer 1
+                        :type ("GModule" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2568 2589])
+                    ("symbol_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2601 2627])
+                    ("symbol" variable
+                       (:pointer 1
+                        :type ("gpointer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2639 2660]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [2522 2661])
+            ("g_module_name" function
+               (:prototype-flag t
+                :pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("module" variable
+                       (:pointer 1
+                        :type ("GModule" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2784 2805]))                  
+                :type ("gchar" type (:type "class") nil nil))
+                nil [2738 2806])
+            ("g_module_build_path" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("directory" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3505 3529])
+                    ("module_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3541 3567]))                  
+                :type ("gchar" type (:type "class") nil nil))
+                nil [3459 3568]))          
+      :file "gmodule.h"
+      :pointmax 3967
+      :fsize 3966
+      :lastmodtime '(21540 22334 0 0)
+      :unmatched-syntax '((symbol 3927 . 3938) (symbol 3437 . 3458) (symbol 2716 . 2737) (symbol 2500 . 2521) (symbol 2353 . 2374) (symbol 2215 . 2236) (symbol 2054 . 2075) (symbol 1863 . 1884) (semantic-list 1767 . 1773) (symbol 1745 . 1763) (symbol 1736 . 1744) (symbol 1714 . 1735) (TYPEDEF 1601 . 1608) (TYPEDEF 1541 . 1548) (number 1457 . 1458) (punctuation 1455 . 1456) (punctuation 1454 . 1455) (number 1425 . 1426) (punctuation 1423 . 1424) (punctuation 1422 . 1423) (symbol 1077 . 1090))
+      :lexical-table 
+        '(("G_MODULE_EXPORT")
+          ("__GMODULE_H__")
+          ("G_MODULE_IMPORT" . ((EXTERN "extern" 1214 . 1220)))
+          )
+))
+  :file "!usr!include!glib-2.0!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

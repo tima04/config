@@ -1,0 +1,210 @@
+;; Object cpp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "cpp/"
+  :tables
+  (list
+    (semanticdb-table "delta.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("vector" include (:system-flag t) nil [21 38])
+            ("stdlib.h" include (:system-flag t) nil [39 58])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [60 80])
+            ("delta" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [107 126]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("float" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [82 127])
+            ("print" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("xs" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [139 156]))                  
+                :type "void")
+                nil [128 157])
+            ("delta" function
+               (:arguments 
+                  ( ("xs" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [384 406]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("float" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [359 531])
+            ("print" function
+               (:arguments 
+                  ( ("xs" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [544 561]))                  
+                :type "void")
+                nil [533 651]))          
+      :file "delta.cpp"
+      :pointmax 652
+      :fsize 651
+      :lastmodtime '(21911 48367 596041 415000)
+      :unmatched-syntax nil)
+    (semanticdb-table "delta.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("delta" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("float" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [26 45]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("float" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [1 46]))          
+      :file "delta.h"
+      :pointmax 47
+      :fsize 46
+      :lastmodtime '(21911 63128 971605 266000)
+      :unmatched-syntax nil)
+    (semanticdb-table "wdelta.cpp"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "wdelta.cpp"
+      :pointmax 79
+      :fsize 78
+      :lastmodtime '(21911 63141 255604 0)
+      :unmatched-syntax '((punctuation 77 . 78) (symbol 66 . 77) (symbol 59 . 65) (symbol 52 . 58) (symbol 50 . 51) (symbol 47 . 49) (symbol 40 . 46) (symbol 36 . 39) (symbol 33 . 35) (symbol 30 . 32) (punctuation 28 . 29) (symbol 24 . 28) (symbol 19 . 23) (symbol 15 . 18) (symbol 11 . 14) (symbol 8 . 10) (symbol 2 . 7) (punctuation 1 . 2)))
+    (semanticdb-table "delta.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 20])
+            ("stdio.h" include (:system-flag t) nil [21 39])
+            ("delta.h" include nil nil [40 58])
+            ("delta" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("xs" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [71 81])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [82 90]))                  
+                :type "void")
+                nil [60 91])
+            ("print" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("xs" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [103 113])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [114 122]))                  
+                :type "void")
+                nil [92 123])
+            ("delta" function
+               (:arguments 
+                  ( ("xs" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [331 341])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [342 350]))                  
+                :type "void")
+                nil [320 443])
+            ("print" function
+               (:arguments 
+                  ( ("xs" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [456 466])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [467 475]))                  
+                :type "void")
+                nil [445 555]))          
+      :file "delta.c"
+      :pointmax 556
+      :fsize 555
+      :lastmodtime '(21911 50952 387965 43000)
+      :unmatched-syntax '((punctuation 122 . 123) (semantic-list 102 . 122) (punctuation 116 . 117) (semantic-list 96 . 116) (punctuation 104 . 105) (semantic-list 84 . 104) (punctuation 103 . 104) (semantic-list 83 . 103) (semantic-list 328 . 420) (semantic-list 307 . 327) (semantic-list 140 . 294) (semantic-list 115 . 139) (punctuation 103 . 104) (semantic-list 83 . 103) (semantic-list 140 . 294) (semantic-list 115 . 139) (punctuation 103 . 104) (semantic-list 83 . 103) (punctuation 71 . 72) (semantic-list 51 . 71)))
+    (semanticdb-table "setup.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("distutils.core" include nil nil [1 44])
+            ("Cython.Build" include nil nil [45 79])
+            ("ext" variable nil nil [81 149]))          
+      :file "setup.py"
+      :pointmax 198
+      :fsize 209
+      :lastmodtime '(21911 63142 255604 873000)
+      :unmatched-syntax '((NAME 150 . 155) ($EOI 198 . 198)))
+    (semanticdb-table "fib.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 20])
+            ("stdio.h" include (:system-flag t) nil [21 39])
+            ("fib.h" include nil nil [41 57])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [68 77])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [78 91]))                  
+                :type "int")
+                nil [59 163])
+            ("fib" function
+               (:arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [174 180]))                  
+                :type "int")
+                nil [166 266])
+            ("fact" function
+               (:arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [277 283]))                  
+                :type "int")
+                nil [268 322]))          
+      :file "fib.c"
+      :pointmax 323
+      :fsize 322
+      :lastmodtime '(21911 59820 119703 31000)
+      :unmatched-syntax nil)
+    (semanticdb-table "fib.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("fib" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [9 15]))                  
+                :type "int")
+                nil [1 16])
+            ("fact" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [26 30]))                  
+                :type "int")
+                nil [17 31]))          
+      :file "fib.h"
+      :pointmax 32
+      :fsize 34
+      :lastmodtime '(21911 60147 879693 347000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Dropbox!Work!projects!churn!py!cpp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

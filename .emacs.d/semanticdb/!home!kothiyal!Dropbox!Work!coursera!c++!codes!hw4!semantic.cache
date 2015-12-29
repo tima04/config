@@ -1,0 +1,229 @@
+;; Object hw4/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "hw4/"
+  :tables
+  (list
+    (semanticdb-table "hw4.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("iomanip" include (:system-flag t) nil [21 39])
+            ("vector" include (:system-flag t) nil [48 65])
+            ("stack" include (:system-flag t) nil [66 82])
+            ("string" include (:system-flag t) nil [83 100])
+            ("set" include (:system-flag t) nil [101 115])
+            ("time.h" include (:system-flag t) nil [116 133])
+            ("assert.h" include (:system-flag t) nil [142 161])
+            ("chrono" include (:system-flag t) nil [176 193])
+            ("thread" include (:system-flag t) nil [194 211])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [213 233])
+            ("matrix" type
+               (:typedef ("vector" type
+                     (:template-specifier 
+                        ( ("vector" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [235 272])
+            ("ALPHABET" variable
+               (:default-value "\"ABCDEFGHIJKLMNOPQRSTUVZXYZ\""
+                :type ("string" type (:type "class") nil nil))
+                nil [273 320])
+            ("CHAR_WIDTH" variable
+               (:default-value "4"
+                :type "int")
+                nil [321 340])
+            ("print" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("vec" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [453 467]))                  )
+                nil [424 528])
+            ("Board" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [621 628])
+                    ("Board" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("size" variable (:type "int") (reparse-symbol arg-sub-list) [637 647]))                          
+                        :type ("Board" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [631 648])
+                    ("show" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [652 664])
+                    ("is_legal" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cell" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [721 734]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [707 735])
+                    ("move" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cell" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [776 788])
+                            ("player" variable (:type "int") (reparse-symbol arg-sub-list) [789 800]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [766 801])
+                    ("rand_move" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("player" variable (:type "int") (reparse-symbol arg-sub-list) [821 832]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [804 833])
+                    ("isHorizontalPathComplete" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "char") (reparse-symbol arg-sub-list) [903 908]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [873 909])
+                    ("isVerticalPathComplete" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "char") (reparse-symbol arg-sub-list) [940 945]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [912 946])
+                    ("private" label nil (reparse-symbol classsubparts) [948 956])
+                    ("size" variable (:type "int") (reparse-symbol classsubparts) [959 968])
+                    ("board" variable (:type ("matrix" type (:type "class") nil nil)) (reparse-symbol classsubparts) [971 984])
+                    ("Coordinate" type
+                       (:members 
+                          ( ("i" variable (:type "int") (reparse-symbol classsubparts) [1082 1091])
+                            ("j" variable (:type "int") (reparse-symbol classsubparts) [1082 1091]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [1058 1096])
+                    ("cell2coordinate" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cell" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1256 1268]))                          
+                        :type ("Coordinate" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1229 1269])
+                    ("coordinate2cell" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1339 1343])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [1344 1348]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1316 1349])
+                    ("occupiedNbrs" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cell" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1430 1442])
+                            ("symbol" variable (:type "char") (reparse-symbol arg-sub-list) [1443 1455]))                          
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1402 1456])
+                    ("transpose" function
+                       (:prototype-flag t
+                        :type ("Board" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1563 1581])
+                    ("letters" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1760 1775])
+                    ("numbers" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1779 1799]))                  
+                :type "class")
+                nil [607 1803])
+            ("Board" function
+               (:constructor-flag t
+                :parent "Board"
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [1818 1824]))                  
+                :type ("Board" type (:type "class") nil nil))
+                nil [1805 2095])
+            ("show" function
+               (:parent "Board"
+                :type "void")
+                nil [2097 2551])
+            ("move" function
+               (:parent "Board"
+                :arguments 
+                  ( ("cell" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2570 2582])
+                    ("player" variable (:type "int") (reparse-symbol arg-sub-list) [2583 2594]))                  
+                :type "void")
+                nil [2553 2709])
+            ("is_legal" function
+               (:parent "Board"
+                :arguments 
+                  ( ("cell" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2732 2744]))                  
+                :type "bool")
+                nil [2711 2991])
+            ("cell2coordinate" function
+               (:parent "Board"
+                :arguments 
+                  ( ("cell" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3034 3046]))                  
+                :type ("Board::Coordinate" type (:type "class") nil nil))
+                nil [2993 3156])
+            ("coordinate2cell" function
+               (:parent "Board"
+                :arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [3188 3194])
+                    ("j" variable (:type "int") (reparse-symbol arg-sub-list) [3195 3201]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [3158 3243])
+            ("rand_move" function
+               (:parent "Board"
+                :arguments 
+                  ( ("player" variable (:type "int") (reparse-symbol arg-sub-list) [3269 3280]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [3245 3521])
+            ("isHorizontalPathComplete" function
+               (:parent "Board"
+                :arguments 
+                  ( ("symbol" variable
+                       (:default-value "'X'"
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3560 3577]))                  
+                :type "bool")
+                nil [3523 4766])
+            ("occupiedNbrs" function
+               (:parent "Board"
+                :arguments 
+                  ( ("cell" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4941 4953])
+                    ("symbol" variable (:type "char") (reparse-symbol arg-sub-list) [4954 4966]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [4906 5922])
+            ("isVerticalPathComplete" function
+               (:parent "Board"
+                :arguments 
+                  ( ("symbol" variable
+                       (:default-value "'0'"
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5959 5976]))                  
+                :type "bool")
+                nil [5924 6064])
+            ("transpose" function
+               (:parent "Board"
+                :type ("Board" type (:type "class") nil nil))
+                nil [6066 6244])
+            ("play" function
+               (:arguments 
+                  ( ("board" variable (:type ("Board" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6256 6268]))                  
+                :type "void")
+                nil [6246 7694])
+            ("main" function (:type "int") nil [7696 7857]))          
+      :file "hw4.cpp"
+      :pointmax 7858
+      :fsize 7857
+      :lastmodtime '(21140 63862)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!coursera!c++!codes!hw4!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

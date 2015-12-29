@@ -1,0 +1,241 @@
+;; Object ch4/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ch4/"
+  :tables
+  (list
+
+    (semanticdb-table "stack.hxx"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("Stack_a" type
+               (:template 
+                  ( ("Item" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [60 67])
+                    ("Stack_a" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("n" variable
+                               (:default-value "10"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [115 123]))                          
+                        :type ("Stack_a" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [107 186])
+                    ("empty" function (:type "int") (reparse-symbol classsubparts) [190 233])
+                    ("push" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [248 253]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [238 254])
+                    ("pop" function
+                       (:prototype-flag t
+                        :type ("Item" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [257 268])
+                    ("private" label nil (reparse-symbol classsubparts) [270 278])
+                    ("size" variable (:type "int") (reparse-symbol classsubparts) [281 295])
+                    ("top" variable (:type "int") (reparse-symbol classsubparts) [281 295])
+                    ("stack" variable
+                       (:pointer 1
+                        :type ("Item" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [298 310]))                  )
+                nil [22 313])
+            ("push" function
+               (:template 
+                  ( ("Item" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("item" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [362 372]))                  
+                :parent "Stack_a")
+                nil [315 420])
+            ("pop" function
+               (:template 
+                  ( ("Item" type (:type "class") nil nil))                  
+                :type ("Item" type (:type "class") nil nil)
+                :parent "Stack_a")
+                nil [422 496])
+            ("Node" type
+               (:template 
+                  ( ("Item" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [579 586])
+                    ("i" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol classsubparts) [589 596])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("Node" type
+                             (:template-specifier 
+                                ( ("Item" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [650 667])
+                    ("Node" function
+                       (:constructor-flag t
+                        :type ("Node" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [670 689])
+                    ("Node" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("i" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [698 705])
+                            ("next" variable
+                               (:pointer 1
+                                :type ("Node" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [706 717]))                          
+                        :type ("Node" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [693 739]))                  )
+                nil [544 749])
+            ("Node" type
+               (:members 
+                  ( ("i" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol classsubparts) [792 799])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("Node" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [800 811])
+                    ("Node" function
+                       (:arguments 
+                          ( ("i" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [819 826])
+                            ("t" variable
+                               (:pointer 1
+                                :type ("Node" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [827 835]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [814 858]))                  
+                :type "struct")
+                nil [776 861])
+            ("Stack_l" type
+               (:template 
+                  ( ("Item" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [902 909])
+                    ("Stack_l" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [920 926]))                          
+                        :type ("Stack_l" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [912 960])
+                    ("empty" function (:type "int") (reparse-symbol classsubparts) [1012 1042])
+                    ("push" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1055 1060]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1045 1061])
+                    ("pop" function
+                       (:prototype-flag t
+                        :type ("Item" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1064 1075])
+                    ("private" label nil (reparse-symbol classsubparts) [1076 1084])
+                    ("top" variable
+                       (:pointer 1
+                        :type ("Node" type
+                             (:template-specifier 
+                                ( ("Item" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1087 1103])
+                    ("size" variable (:type "int") (reparse-symbol classsubparts) [1106 1125])
+                    ("cur_size" variable (:type "int") (reparse-symbol classsubparts) [1106 1125]))                  )
+                nil [864 1128])
+            ("pop" function
+               (:template 
+                  ( ("Item" type (:type "class") nil nil))                  
+                :type ("Item" type (:type "class") nil nil)
+                :parent "Stack_l")
+                nil [1130 1299])
+            ("push" function
+               (:template 
+                  ( ("Item" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("item" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1348 1358]))                  
+                :parent "Stack_l")
+                nil [1301 1513]))          
+      :file "stack.hxx"
+      :pointmax 1519
+      :fsize 1518
+      :lastmodtime '(22002 5439 262564 917000)
+      :unmatched-syntax nil)
+    (semanticdb-table "prob4.1.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [304 323])
+            ("math.h" include (:system-flag t) nil [324 341])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [366 386])
+            ("Item" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [667 674])
+                    ("x" variable (:type "double") (reparse-symbol classsubparts) [677 686])
+                    ("Item" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [694 703])
+                            ("eps" variable
+                               (:default-value "10E-6"
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [704 720]))                          
+                        :type ("Item" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [689 741])
+                    ("==" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("t" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [760 767]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [745 806])
+                    ("private" label nil (reparse-symbol classsubparts) [808 816])
+                    ("eps" variable (:type "double") (reparse-symbol classsubparts) [819 830])
+                    ("abs" function
+                       (:arguments 
+                          ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [844 853]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [833 886]))                  
+                :type "class")
+                nil [654 889])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [900 909])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [910 923]))                  
+                :type "int")
+                nil [891 1027]))          
+      :file "prob4.1.cpp"
+      :pointmax 1029
+      :fsize 1030
+      :lastmodtime '(22001 43914 977883 446000)
+      :unmatched-syntax '((punctuation 741 . 742)))
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("stdlib.h" include (:system-flag t) nil [21 40])
+            ("stack.hxx" include nil nil [41 61])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [63 83])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [94 103])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [104 117]))                  
+                :type "int")
+                nil [85 489]))          
+      :file "main.cpp"
+      :pointmax 490
+      :fsize 489
+      :lastmodtime '(22002 4265 98535 347000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!codes!algorithms-sedgewick-parts1-4!ch4!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,28 @@
+;; Object preprocessed/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "preprocessed/"
+  :tables
+  (list
+    (semanticdb-table "tuple.hpp"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "tuple.hpp"
+      :pointmax 977
+      :fsize 976
+      :lastmodtime '(21413 1120 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "make_tuple.hpp"
+      :file "make_tuple.hpp"
+      :fsize 1002
+      :lastmodtime '(21413 1120 0 0))
+    (semanticdb-table "tuple_tie.hpp"
+      :file "tuple_tie.hpp"
+      :fsize 997
+      :lastmodtime '(21413 1120 0 0))
+    (semanticdb-table "tuple_fwd.hpp"
+      :file "tuple_fwd.hpp"
+      :fsize 997
+      :lastmodtime '(21413 1120 0 0)))
+  :file "!usr!include!boost!fusion!tuple!detail!preprocessed!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

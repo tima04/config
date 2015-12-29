@@ -1,0 +1,65 @@
+;; Object java/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "java/"
+  :tables
+  (list
+    (semanticdb-table "helloWorld.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("HelloWorldApp" type
+               (:members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [169 182]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [145 276]))                  
+                :type "class")
+                nil [119 278]))          
+      :file "helloWorld.java"
+      :pointmax 287
+      :fsize 281
+      :lastmodtime '(22071 53574 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "test.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("Test" type
+               (:members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [44 58]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [19 131])
+                    ("factorial" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("n" variable (:type "int") (reparse-symbol formal_parameters) [162 167]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [141 246]))                  
+                :type "class")
+                nil [2 248])
+            ("Foo" type
+               (:members 
+                  ( ("bar" function
+                       (:arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol formal_parameters) [276 281]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [266 316]))                  
+                :type "class")
+                nil [250 318]))          
+      :file "test.java"
+      :pointmax 321
+      :fsize 325
+      :lastmodtime '(22071 57539 913804 381000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Dropbox!Work!codes!java!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

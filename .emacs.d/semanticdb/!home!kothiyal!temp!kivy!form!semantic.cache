@@ -1,0 +1,127 @@
+;; Object form/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "form/"
+  :tables
+  (list
+    (semanticdb-table "form.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("kivy" include nil nil [1 12])
+            ("kivy.app" include nil nil [129 153])
+            ("kivy.uix.widget" include nil nil [154 188])
+            ("kivy.uix.floatlayout" include nil nil [189 233])
+            ("kivy.uix.button" include nil nil [234 268])
+            ("kivy.uix.label" include nil nil [269 301])
+            ("Form" type
+               (:superclasses ("Widget")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [327 331]))                  
+                :type "class")
+                nil [303 332])
+            ("MyApp" type
+               (:superclasses ("App")
+                :members 
+                  ( ("buid" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [364 368]))                          )
+                        (reparse-symbol indented_block_body) [355 544]))                  
+                :type "class")
+                nil [333 544])
+            ("launcher" variable nil nil [627 666])
+            ("launcher" code nil nil [667 681])
+            ("if" code nil nil [682 727])
+            ("\"\"\"
+<LblTxt@BoxLayout>:
+    orientation: 'horizontal'      
+    lblTxtIn: 'default'
+    theTxt: iAmTxt
+    Label:
+        text: root.lblTxtIn
+    TextInput:
+        id: iAmTxt  
+        text: 'txt'        
+
+<MyLayout@BoxLayout>:  
+    orientation: 'vertical'
+
+    LblTxt:   
+        id: lt0
+        lblTxtIn: 'LblTxtInput0'
+
+    LblTxt:   
+        id: lt1
+        lblTxtIn: 'LblTxtInput1'
+
+    LblTxt:   
+        id: lt2
+        lblTxtIn: 'LblTxtInput2'
+
+
+    Button:
+        text: 'print LblTxtInput [0, 1, 2]'
+        on_release: print lt0.theTxt.text, lt1.theTxt.text, lt2.theTxt.text
+
+MyLayout
+\"\"\"" code nil nil [753 1354]))          
+      :file "form.py"
+      :pointmax 1355
+      :fsize 1251
+      :lastmodtime '(22008 12705 732650 436000)
+      :unmatched-syntax nil)
+    (semanticdb-table "temp.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("kivy.app" include nil nil [1 25])
+            ("kivy.graphics" include nil nil [26 68])
+            ("kivy.uix.boxlayout" include nil nil [69 109])
+            ("kivy.uix.floatlayout" include nil nil [110 154])
+            ("kivy.uix.image" include nil nil [155 192])
+            ("RootWidget" type
+               (:superclasses ("BoxLayout")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [228 232]))                  
+                :type "class")
+                nil [195 233])
+            ("CustomLayout" type
+               (:superclasses ("FloatLayout")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [380 424])
+                            ("with" code nil (reparse-symbol indented_block_body) [434 602])
+                            ("self" code nil (reparse-symbol indented_block_body) [611 667]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [286 290])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [292 300]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [273 668])
+                    ("_update_rect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [690 694])
+                            ("instance" variable nil (reparse-symbol function_parameters) [696 704])
+                            ("value" variable nil (reparse-symbol function_parameters) [706 711]))                          )
+                        (reparse-symbol indented_block_body) [673 790]))                  
+                :type "class")
+                nil [235 790])
+            ("MainApp" type
+               (:superclasses ("App")
+                :members 
+                  ( ("build" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [827 831]))                          )
+                        (reparse-symbol indented_block_body) [817 1676]))                  
+                :type "class")
+                nil [792 1676])
+            ("if" code nil nil [1677 1724]))          
+      :file "temp.py"
+      :pointmax 1724
+      :fsize 1723
+      :lastmodtime '(22008 12969 528657 80000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!temp!kivy!form!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

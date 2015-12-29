@@ -1,0 +1,258 @@
+;; Object Downloads/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Downloads/"
+  :tables
+  (list
+    (semanticdb-table "clustering.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [19 37])
+            ("scipy" include nil nil [38 56])
+            ("pandas" include nil nil [57 76])
+            ("scipy.cluster.vq" include nil nil [77 116])
+            ("scipy" include nil nil [117 140])
+            ("pdb" include nil nil [141 164])
+            ("getopt" include nil nil [141 164])
+            ("sys" include nil nil [141 164])
+            ("main" function (:arguments 
+              ( ("argv" variable nil (reparse-symbol function_parameters) [192 196]))              ) nil [183 2071])
+            ("write_output" function (:arguments 
+              ( ("df" variable nil (reparse-symbol function_parameters) [2089 2091])
+                ("fraud_dict" variable nil (reparse-symbol function_parameters) [2093 2103])
+                ("fl" variable nil (reparse-symbol function_parameters) [2105 2107])
+                ("theta" variable nil (reparse-symbol function_parameters) [2109 2114]))              ) nil [2072 3089])
+            ("get_rows" function
+               (:documentation "
+    returns [r1,..,rn], each ri corresponds to rows in df
+    such that they belong to the same called number in an interval
+    for which AD consistency is found.
+    "
+                :arguments 
+                  ( ("df" variable nil (reparse-symbol function_parameters) [3103 3105]))                  )
+                nil [3090 3535])
+            ("clusters" function
+               (:documentation "
+    First partition the data by calling opt_clustering, then call merge_clusters to merge
+    the clusters whose centroids are near, the output is a list of clusters, each 
+    cluster is represented by a tuple: (density, centroid, npoints, min-value, max-value)
+    "
+                :arguments 
+                  ( ("data" variable nil (reparse-symbol function_parameters) [3549 3553])
+                    ("theta" variable nil (reparse-symbol function_parameters) [3555 3560]))                  )
+                nil [3536 4401])
+            ("opt_clustering" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [4421 4425])
+                ("length" variable nil (reparse-symbol function_parameters) [4427 4433])
+                ("theta" variable nil (reparse-symbol function_parameters) [4435 4440])
+                ("recursion_depth" variable nil (reparse-symbol function_parameters) [4442 4457]))              ) nil [4402 5440])
+            ("mergep" function (:arguments 
+              ( ("c0" variable nil (reparse-symbol function_parameters) [5452 5454])
+                ("c1" variable nil (reparse-symbol function_parameters) [5456 5458])
+                ("prcnt_diff" variable nil (reparse-symbol function_parameters) [5460 5470]))              ) nil [5441 5628])
+            ("merge_clusters" function
+               (:documentation "
+    Input:
+         cltsts: [(density1, centroid1, n1), (density2, centroid2, n2),..]
+         n: total points 
+    algorithm: suppose there are k clusters to be merged (d1,c1,n1),..,(dk,ck,nk)
+    by defination, di = sqrt(ni/n) / width_i => width_i = sqrt(ni/n) / di
+    for the merged cluster, numerator is sqrt(n1+..+nk)/n and
+    width is weighted sum of widhts, where weight of width_i is 
+    ni/n.
+    "
+                :arguments 
+                  ( ("clsts" variable nil (reparse-symbol function_parameters) [5648 5653])
+                    ("n" variable nil (reparse-symbol function_parameters) [5655 5656]))                  )
+                nil [5629 6921])
+            ("extract" function
+               (:documentation "
+    >> lsts = [(1,2), (3,4)]
+    >> extract(1, lsts]
+    [2,4]
+    >> extract(0, lsts)
+    [1,3]
+    "
+                :arguments 
+                  ( ("i" variable nil (reparse-symbol function_parameters) [6934 6935])
+                    ("lsts" variable nil (reparse-symbol function_parameters) [6937 6941]))                  )
+                nil [6922 7120])
+            ("gaussian_mixture" function (:arguments 
+              ( ("X" variable nil (reparse-symbol function_parameters) [7143 7144]))              ) nil [7122 7701])
+            ("dist" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [7711 7712]))              ) nil [7702 7782])
+            ("density" function
+               (:documentation "
+    data correspond to one particula cluster, 
+    length is a number of points in all the clusters.
+    density = (proportion)**alpha / width, with alpha = 0.5
+
+    sqrt of proportion is taken to decrease its influence
+    on density (lower the value of alpha, lower its influence).
+    To see why it is required consider the example 
+    data = [500]*50 + [1500]*50, there are
+    two dense clusters around 500 and 1500 but the density
+    of any of these clustes is bounded by (1/2)**alpha, so
+    if alpha = 1 then we won't be able to detect any of these.
+    (note: taking alpha = 0 or very low gives many false-positive)
+
+    Outliers are removed to calculate the width of the cluster,
+    but if there is only one cluster (determided by len(data) == length)
+    then outliers are not removed, this is a sort of a patch work
+    but it removes false positives when there are apparently no
+    dense clustering but normality test is not rejected.
+    "
+                :arguments 
+                  ( ("data" variable nil (reparse-symbol function_parameters) [7795 7799])
+                    ("length" variable nil (reparse-symbol function_parameters) [7801 7807])
+                    ("theta" variable nil (reparse-symbol function_parameters) [7809 7814]))                  )
+                nil [7783 9176])
+            ("is_normal" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [9191 9195])
+                ("alpha" variable nil (reparse-symbol function_parameters) [9197 9202]))              ) nil [9177 9676])
+            ("is_cv_small" function
+               (:documentation "
+    cv is coffecient of variance if it is small then 
+    even if there are more then one clusters, according
+    to our interpretations their is only one and clustering
+    algo should be terminated. For example if data = [500]*50 + [501]*50
+    then their are two clusters at 500 and 501 but in our interpretation
+    only one at 500.5
+    "
+                :arguments 
+                  ( ("data" variable nil (reparse-symbol function_parameters) [9693 9697])
+                    ("min_cv" variable nil (reparse-symbol function_parameters) [9699 9705]))                  )
+                nil [9677 10147])
+            ("if" code nil nil [10148 10205]))          
+      :file "clustering.py"
+      :pointmax 10207
+      :fsize 10206
+      :lastmodtime '(21194 5284)
+      :unmatched-syntax nil)
+    (semanticdb-table "clustering (1).py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [19 37])
+            ("scipy" include nil nil [38 56])
+            ("pandas" include nil nil [57 76])
+            ("scipy.cluster.vq" include nil nil [77 116])
+            ("scipy" include nil nil [117 140])
+            ("pdb" include nil nil [141 164])
+            ("getopt" include nil nil [141 164])
+            ("sys" include nil nil [141 164])
+            ("main" function (:arguments 
+              ( ("argv" variable nil (reparse-symbol function_parameters) [192 196]))              ) nil [183 2071])
+            ("write_output" function (:arguments 
+              ( ("df" variable nil (reparse-symbol function_parameters) [2089 2091])
+                ("fraud_dict" variable nil (reparse-symbol function_parameters) [2093 2103])
+                ("fl" variable nil (reparse-symbol function_parameters) [2105 2107])
+                ("theta" variable nil (reparse-symbol function_parameters) [2109 2114]))              ) nil [2072 3089])
+            ("get_rows" function
+               (:documentation "
+    returns [r1,..,rn], each ri corresponds to rows in df
+    such that they belong to the same called number in an interval
+    for which AD consistency is found.
+    "
+                :arguments 
+                  ( ("df" variable nil (reparse-symbol function_parameters) [3103 3105]))                  )
+                nil [3090 3535])
+            ("clusters" function
+               (:documentation "
+    First partition the data by calling opt_clustering, then call merge_clusters to merge
+    the clusters whose centroids are near, the output is a list of clusters, each 
+    cluster is represented by a tuple: (density, centroid, npoints, min-value, max-value)
+    "
+                :arguments 
+                  ( ("data" variable nil (reparse-symbol function_parameters) [3549 3553])
+                    ("theta" variable nil (reparse-symbol function_parameters) [3555 3560]))                  )
+                nil [3536 4401])
+            ("opt_clustering" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [4421 4425])
+                ("length" variable nil (reparse-symbol function_parameters) [4427 4433])
+                ("theta" variable nil (reparse-symbol function_parameters) [4435 4440])
+                ("recursion_depth" variable nil (reparse-symbol function_parameters) [4442 4457]))              ) nil [4402 5440])
+            ("mergep" function (:arguments 
+              ( ("c0" variable nil (reparse-symbol function_parameters) [5452 5454])
+                ("c1" variable nil (reparse-symbol function_parameters) [5456 5458])
+                ("prcnt_diff" variable nil (reparse-symbol function_parameters) [5460 5470]))              ) nil [5441 5628])
+            ("merge_clusters" function
+               (:documentation "
+    Input:
+         cltsts: [(density1, centroid1, n1), (density2, centroid2, n2),..]
+         n: total points 
+    algorithm: suppose there are k clusters to be merged (d1,c1,n1),..,(dk,ck,nk)
+    by defination, di = sqrt(ni/n) / width_i => width_i = sqrt(ni/n) / di
+    for the merged cluster, numerator is sqrt(n1+..+nk)/n and
+    width is weighted sum of widhts, where weight of width_i is 
+    ni/n.
+    "
+                :arguments 
+                  ( ("clsts" variable nil (reparse-symbol function_parameters) [5648 5653])
+                    ("n" variable nil (reparse-symbol function_parameters) [5655 5656]))                  )
+                nil [5629 6921])
+            ("extract" function
+               (:documentation "
+    >> lsts = [(1,2), (3,4)]
+    >> extract(1, lsts]
+    [2,4]
+    >> extract(0, lsts)
+    [1,3]
+    "
+                :arguments 
+                  ( ("i" variable nil (reparse-symbol function_parameters) [6934 6935])
+                    ("lsts" variable nil (reparse-symbol function_parameters) [6937 6941]))                  )
+                nil [6922 7120])
+            ("gaussian_mixture" function (:arguments 
+              ( ("X" variable nil (reparse-symbol function_parameters) [7143 7144]))              ) nil [7122 7701])
+            ("dist" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [7711 7712]))              ) nil [7702 7782])
+            ("density" function
+               (:documentation "
+    data correspond to one particula cluster, 
+    length is a number of points in all the clusters.
+    density = (proportion)**alpha / width, with alpha = 0.5
+
+    sqrt of proportion is taken to decrease its influence
+    on density (lower the value of alpha, lower its influence).
+    To see why it is required consider the example 
+    data = [500]*50 + [1500]*50, there are
+    two dense clusters around 500 and 1500 but the density
+    of any of these clustes is bounded by (1/2)**alpha, so
+    if alpha = 1 then we won't be able to detect any of these.
+    (note: taking alpha = 0 or very low gives many false-positive)
+
+    Outliers are removed to calculate the width of the cluster,
+    but if there is only one cluster (determided by len(data) == length)
+    then outliers are not removed, this is a sort of a patch work
+    but it removes false positives when there are apparently no
+    dense clustering but normality test is not rejected.
+    "
+                :arguments 
+                  ( ("data" variable nil (reparse-symbol function_parameters) [7795 7799])
+                    ("length" variable nil (reparse-symbol function_parameters) [7801 7807])
+                    ("theta" variable nil (reparse-symbol function_parameters) [7809 7814]))                  )
+                nil [7783 9176])
+            ("is_normal" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [9191 9195])
+                ("alpha" variable nil (reparse-symbol function_parameters) [9197 9202]))              ) nil [9177 9676])
+            ("is_cv_small" function
+               (:documentation "
+    cv is coffecient of variance if it is small then 
+    even if there are more then one clusters, according
+    to our interpretations their is only one and clustering
+    algo should be terminated. For example if data = [500]*50 + [501]*50
+    then their are two clusters at 500 and 501 but in our interpretation
+    only one at 500.5
+    "
+                :arguments 
+                  ( ("data" variable nil (reparse-symbol function_parameters) [9693 9697])
+                    ("min_cv" variable nil (reparse-symbol function_parameters) [9699 9705]))                  )
+                nil [9677 10147])
+            ("if" code nil nil [10148 10205]))          
+      :file "clustering (1).py"
+      :pointmax 10207
+      :fsize 10206
+      :lastmodtime '(21194 5975)
+      :unmatched-syntax '((PAREN_BLOCK 7714 . 7723))))
+  :file "!home!kothiyal!Downloads!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

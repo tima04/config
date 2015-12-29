@@ -1,0 +1,109 @@
+;; Object flash-card/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "flash-card/"
+  :tables
+  (list
+    (semanticdb-table "flash_card.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "flash_card.py"
+      :pointmax 3781
+      :fsize 3780
+      :lastmodtime '(22017 11894 735778 606000)
+      :unmatched-syntax nil)
+    (semanticdb-table "gui.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("re" include nil nil [1 10])
+            ("time" include nil nil [11 22])
+            ("flash_card" include nil nil [23 46])
+            ("kivy.app" include nil nil [47 71])
+            ("kivy.lang" include nil nil [72 101])
+            ("kivy.uix.screenmanager" include nil nil [102 158])
+            ("kivy.uix.behaviors" include nil nil [159 203])
+            ("kivy.uix.button" include nil nil [204 238])
+            ("kivy.uix.popup" include nil nil [239 271])
+            ("kivy.uix.label" include nil nil [272 304])
+            ("kivy.uix.textinput" include nil nil [307 347])
+            ("FocusButton" type
+               (:superclasses ("FocusBehavior" "Button")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [395 399]))                  
+                :type "class")
+                nil [349 400])
+            ("AddScreen" type
+               (:superclasses ("Screen")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [437 478])
+                            ("self" variable nil (reparse-symbol indented_block_body) [487 501]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [445 449])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [451 459]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [432 535])
+                    ("add_word" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [561 565]))                          )
+                        (reparse-symbol indented_block_body) [548 918])
+                    ("save_word" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [937 941]))                          )
+                        (reparse-symbol indented_block_body) [923 1073]))                  
+                :type "class")
+                nil [402 1073])
+            ("TestScreen" type
+               (:superclasses ("Screen")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [1119 1161]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1127 1131])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1133 1141]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1114 1195])
+                    ("test" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1217 1221])
+                            ("init" variable nil (reparse-symbol function_parameters) [1223 1227]))                          )
+                        (reparse-symbol indented_block_body) [1208 1980]))                  
+                :type "class")
+                nil [1083 1980])
+            ("MenuScreen" type
+               (:superclasses ("Screen")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [2013 2017]))                  
+                :type "class")
+                nil [1983 2018])
+            ("Manager" type
+               (:superclasses ("ScreenManager")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [2053 2057]))                  
+                :type "class")
+                nil [2019 2058])
+            ("MyApp" type
+               (:superclasses ("App")
+                :members 
+                  ( ("build" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2092 2096]))                          )
+                        (reparse-symbol indented_block_body) [2082 2207]))                  
+                :type "class")
+                nil [2059 2207])
+            ("if" code nil nil [2216 2261]))          
+      :file "gui.py"
+      :pointmax 3654
+      :fsize 3653
+      :lastmodtime '(22016 4194 561934 268000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!misc!german!code!flash-card!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

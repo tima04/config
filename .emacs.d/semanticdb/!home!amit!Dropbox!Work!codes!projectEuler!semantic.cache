@@ -1,0 +1,177 @@
+;; Object projectEuler/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "projectEuler/"
+  :tables
+  (list
+    (semanticdb-table "prob35.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Circular primes
+Problem 35
+
+The number, 197, is called a circular prime because all rotations of the digits: 197, 971, and 719, are themselves prime.
+
+There are thirteen such primes below 100: 2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, and 97.
+
+How many circular primes are there below one million?
+\"\"\"" code nil nil [1 308])
+            ("time" include nil nil [309 320])
+            ("cProfile" include nil nil [321 336])
+            ("main" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [347 348]))              ) nil [338 455])
+            ("primes_less_then" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [481 482]))              ) nil [460 661])
+            ("is_prime" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [675 676]))              ) nil [662 780])
+            ("primes_less_then2" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [803 804]))              ) nil [781 914])
+            ("is_circular" function (:arguments 
+              ( ("p" variable nil (reparse-symbol function_parameters) [935 936])
+                ("primes" variable nil (reparse-symbol function_parameters) [938 944]))              ) nil [919 1177])
+            ("rotation" function
+               (:documentation "
+    >>> rotation('abc')
+    ['abc', 'bca', 'cab']
+    "
+                :arguments 
+                  ( ("xs" variable nil (reparse-symbol function_parameters) [1191 1193]))                  )
+                nil [1178 1356])
+            ("perms" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [1371 1373]))              ) nil [1361 1553])
+            ("t0" variable nil nil [1574 1590])
+            ("primes" variable nil nil [1591 1625])
+            ("print" code nil nil [1626 1648])
+            ("for" code nil nil [1650 1716]))          
+      :file "prob35.py"
+      :pointmax 1716
+      :fsize 1715
+      :lastmodtime '(21919 56581 276475 22000)
+      :unmatched-syntax nil)
+    (semanticdb-table "prob46.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Goldbach's other conjecture
+Problem 46
+It was proposed by Christian Goldbach that every odd composite number can be written as the sum of a 
+prime and twice a square.
+
+9 = 7 + 212
+15 = 7 + 222
+21 = 3 + 232
+25 = 7 + 232
+27 = 19 + 222
+33 = 31 + 212
+
+It turns out that the conjecture was false.
+
+What is the smallest odd composite that cannot be written as the sum of a prime and twice a square?
+
+\"\"\"" code nil nil [1 402])
+            ("main" function nil nil [404 637])
+            ("is_prime" function (:arguments 
+              ( ("num" variable nil (reparse-symbol function_parameters) [651 654])
+                ("primes" variable nil (reparse-symbol function_parameters) [656 662]))              ) nil [638 755])
+            ("is_conjecture" function (:arguments 
+              ( ("num" variable nil (reparse-symbol function_parameters) [774 777])
+                ("primes" variable nil (reparse-symbol function_parameters) [779 785]))              ) nil [756 969])
+            ("if" code nil nil [970 1014]))          
+      :file "prob46.py"
+      :pointmax 1015
+      :fsize 1014
+      :lastmodtime '(20952 16295 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "prob35.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [308 325])
+            ("string" include (:system-flag t) nil [326 343])
+            ("iostream" include (:system-flag t) nil [344 363])
+            ("perms" function
+               (:arguments 
+                  ( ("xs" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [386 396]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [365 504]))          
+      :file "prob35.cpp"
+      :pointmax 505
+      :fsize 504
+      :lastmodtime '(21920 56792 923137 102000)
+      :unmatched-syntax nil)
+    (semanticdb-table "prob336.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Maximix Arrangements
+Problem 336
+A train is used to transport four carriages in the order: ABCD. However, sometimes when the train arrives to collect the carriages they are not in the correct order. 
+To rearrange the carriages they are all shunted on to a large rotating turntable. After the carriages are uncoupled at a specific point the train moves off the turntable pulling the carriages still attached with it. The remaining carriages are rotated 180 degrees. All of the carriages are then rejoined and this process is repeated as often as necessary in order to obtain the least number of uses of the turntable.
+Some arrangements, such as ADCB, can be solved easily: the carriages are separated between A and D, and after DCB are rotated the correct order has been achieved.
+
+However, Simple Simon, the train driver, is not known for his efficiency, so he always solves the problem by initially getting carriage A in the correct place, then carriage B, and so on.
+
+Using four carriages, the worst possible arrangements for Simon, which we shall call maximix arrangements, are DACB and DBAC; each requiring him five rotations (although, using the most efficient approach, they could be solved using just three rotations). The process he uses for DACB is shown below.
+
+D | A-C-B
+| D-B-C-A
+A-C | B-D
+A | C-D-B
+A-B | D-C
+A-B-C-D
+
+It can be verified that there are 24 maximix arrangements for six carriages, of which the tenth lexicographic maximix arrangement is DFAECB.
+
+Find the 2011th lexicographic maximix arrangement for eleven carriages.
+\"\"\"" code nil nil [1 1553])
+            ("utils" include nil nil [1555 1577])
+            ("solve" function
+               (:documentation "
+    >>> solve(\"DACB\")
+    ['DBCA', 'ACBD', 'ACDB', 'ABDC', 'ABCD']
+    "
+                :arguments 
+                  ( ("xs" variable nil (reparse-symbol function_parameters) [1589 1591])
+                    ("pre" variable nil (reparse-symbol function_parameters) [1593 1596]))                  )
+                nil [1579 2236])
+            ("foo" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [2245 2247])
+                ("n" variable nil (reparse-symbol function_parameters) [2258 2259]))              ) nil [2237 2378])
+            ("xs" variable nil nil [2387 2405]))          
+      :file "prob336.py"
+      :pointmax 2412
+      :fsize 2411
+      :lastmodtime '(21931 30417 297009 539000)
+      :unmatched-syntax nil)
+    (semanticdb-table "garb.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("divisor" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [13 14]))              ) nil [1 430]))          
+      :file "garb.py"
+      :pointmax 432
+      :fsize 450
+      :lastmodtime '(18991 51106 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 319 . 380) (FOR 299 . 302) (NEWLINE 318 . 319)))
+    (semanticdb-table "utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("perm" function
+               (:documentation "
+    >>> perm(\"abc\")
+    ['cba', 'bca', 'cab', 'acb', 'bac', 'abc']
+    "
+                :arguments 
+                  ( ("xs" variable nil (reparse-symbol function_parameters) [10 12]))                  )
+                nil [1 275]))          
+      :file "utils.py"
+      :pointmax 276
+      :fsize 275
+      :lastmodtime '(21931 30418 269009 510000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Dropbox!Work!codes!projectEuler!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

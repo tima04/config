@@ -1,0 +1,1356 @@
+;; Object codes/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "codes/"
+  :tables
+  (list
+    (semanticdb-table "dijkstra.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [212 231])
+            ("vector" include (:system-flag t) nil [232 249])
+            ("map" include (:system-flag t) nil [250 264])
+            ("cstdlib" include (:system-flag t) nil [265 283])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [285 305])
+            ("matrix" type
+               (:typedef ("vector" type
+                     (:template-specifier 
+                        ( ("vector" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [307 346])
+            ("seed" variable
+               (:default-value "1"
+                :type "int")
+                nil [549 562])
+            ("runif" function
+               (:arguments 
+                  ( ("a" variable
+                       (:default-value "0"
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [577 587])
+                    ("b" variable
+                       (:default-value "1"
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [589 599]))                  
+                :type "double")
+                nil [564 698])
+            ("average" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("T" type (:type "class") nil nil)
+                :arguments 
+                  ( ("v" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [781 793]))                  )
+                nil [752 944])
+            ("set_diff" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("T" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :arguments 
+                  ( ("v1" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1059 1072])
+                    ("v2" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1073 1086]))                  )
+                nil [1021 1209])
+            ("contains" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("elt" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1331 1337])
+                    ("vec" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1338 1352]))                  )
+                nil [1298 1451])
+            ("Graph" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1543 1550])
+                    ("Graph" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("m" variable
+                               (:default-value "matrix(0)"
+                                :type ("matrix" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1559 1579]))                          
+                        :type ("Graph" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1553 1593])
+                    ("nvertex" function (:type "int") (reparse-symbol classsubparts) [1596 1632])
+                    ("nedges" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1635 1648])
+                    ("add" function
+                       (:arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [1660 1666])
+                            ("j" variable (:type "int") (reparse-symbol arg-sub-list) [1667 1673])
+                            ("v" variable
+                               (:default-value "1"
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [1674 1684]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1651 1716])
+                    ("del" function
+                       (:arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [1728 1734])
+                            ("j" variable (:type "int") (reparse-symbol arg-sub-list) [1735 1741]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1719 1772])
+                    ("adjacent" function
+                       (:arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [1789 1795])
+                            ("j" variable (:type "int") (reparse-symbol arg-sub-list) [1796 1802]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1775 1828])
+                    ("get_edge_value" function
+                       (:arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [1853 1859])
+                            ("j" variable (:type "int") (reparse-symbol arg-sub-list) [1860 1866]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [1831 1888])
+                    ("set_edge_value" function
+                       (:arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [1911 1917])
+                            ("j" variable (:type "int") (reparse-symbol arg-sub-list) [1918 1924])
+                            ("v" variable (:type "double") (reparse-symbol arg-sub-list) [1925 1934]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1891 1964])
+                    ("neighbours" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [1990 1996]))                          
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1967 1997])
+                    ("private" label nil (reparse-symbol classsubparts) [1998 2006])
+                    ("mat" variable (:type ("matrix" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2009 2020]))                  
+                :type "class")
+                nil [1529 2023])
+            ("nedges" function
+               (:parent "Graph"
+                :type "int")
+                nil [2025 2193])
+            ("neighbours" function
+               (:parent "Graph"
+                :arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [2225 2231]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [2195 2354])
+            ("Priority_queue" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2582 2589])
+                    ("Priority_queue" function
+                       (:constructor-flag t
+                        :type ("Priority_queue" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2592 2611])
+                    ("Priority_queue" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pm" variable (:type ("map" type
+                                 (:template-specifier 
+                                    ( ("int" type nil nil nil)
+                                      ("double" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [2630 2650]))                          
+                        :type ("Priority_queue" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2615 2673])
+                    ("minPriority" function (:type "void") (reparse-symbol classsubparts) [2676 2744])
+                    ("getPriority" function
+                       (:arguments 
+                          ( ("elt" variable (:type "int") (reparse-symbol arg-sub-list) [2766 2774]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [2747 2804])
+                    ("chgPriority" function
+                       (:arguments 
+                          ( ("elt" variable (:type "int") (reparse-symbol arg-sub-list) [2824 2832])
+                            ("priority" variable (:type "double") (reparse-symbol arg-sub-list) [2833 2849]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2807 2883])
+                    ("contains" function
+                       (:arguments 
+                          ( ("elt" variable (:type "int") (reparse-symbol arg-sub-list) [2971 2979]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2957 3036])
+                    ("insert" function
+                       (:arguments 
+                          ( ("elt" variable (:type "int") (reparse-symbol arg-sub-list) [3051 3059])
+                            ("priority" variable (:type "double") (reparse-symbol arg-sub-list) [3060 3076]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3039 3110])
+                    ("size" function (:type "int") (reparse-symbol classsubparts) [3113 3155])
+                    ("top" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [3158 3168])
+                    ("private" label nil (reparse-symbol classsubparts) [3169 3177])
+                    ("priority_map" variable (:type ("map" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil)
+                              ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3180 3210]))                  
+                :type "class")
+                nil [2559 3213])
+            ("top" function
+               (:parent "Priority_queue"
+                :type "int")
+                nil [3215 3454])
+            ("Shortest_path" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3562 3569])
+                    ("Shortest_path" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("g" variable
+                               (:reference 1
+                                :type ("Graph" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3586 3595]))                          
+                        :type ("Shortest_path" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3572 3610])
+                    ("vertices" function
+                       (:prototype-flag t
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3613 3636])
+                    ("path" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("src" variable (:type "int") (reparse-symbol arg-sub-list) [3656 3664])
+                            ("dest" variable (:type "int") (reparse-symbol arg-sub-list) [3665 3674]))                          
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3639 3675])
+                    ("path_size" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("src" variable (:type "int") (reparse-symbol arg-sub-list) [3695 3703])
+                            ("dest" variable (:type "int") (reparse-symbol arg-sub-list) [3704 3713]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [3678 3714])
+                    ("private" label nil (reparse-symbol classsubparts) [3715 3723])
+                    ("graph" variable (:type ("Graph" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3726 3738]))                  
+                :type "class")
+                nil [3540 3741])
+            ("vertices" function
+               (:parent "Shortest_path"
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [3743 3898])
+            ("path" function
+               (:parent "Shortest_path"
+                :arguments 
+                  ( ("src" variable (:type "int") (reparse-symbol arg-sub-list) [4602 4610])
+                    ("dest" variable (:type "int") (reparse-symbol arg-sub-list) [4611 4620]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [4570 5824])
+            ("path_size" function
+               (:parent "Shortest_path"
+                :arguments 
+                  ( ("src" variable (:type "int") (reparse-symbol arg-sub-list) [5926 5934])
+                    ("dest" variable (:type "int") (reparse-symbol arg-sub-list) [5935 5944]))                  
+                :type "double")
+                nil [5894 6128])
+            ("rand_graph" function
+               (:arguments 
+                  ( ("edge_density" variable
+                       (:default-value "0.1"
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [6173 6196])
+                    ("nvertex" variable
+                       (:default-value "50"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6198 6212])
+                    ("lower_range" variable
+                       (:default-value "1"
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [6217 6237])
+                    ("upper_range" variable
+                       (:default-value "10"
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [6239 6260]))                  
+                :type ("Graph" type (:type "class") nil nil))
+                nil [6156 6535])
+            ("main" function (:type "int") nil [6767 7241]))          
+      :file "dijkstra.cpp"
+      :pointmax 7245
+      :fsize 7244
+      :lastmodtime '(21110 61195)
+      :unmatched-syntax '((punctuation 2611 . 2612)))
+    (semanticdb-table "point.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [2 21])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [22 42])
+            ("sum" function
+               (:arguments 
+                  ( ("a" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [52 59])
+                    ("b" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [60 67]))                  
+                :type "int")
+                nil [44 167])
+            ("point" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [183 190])
+                    ("point" function
+                       (:constructor-flag t
+                        :type ("point" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [194 204])
+                    ("point" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [214 223])
+                            ("y" variable (:type "double") (reparse-symbol arg-sub-list) [224 233]))                          
+                        :type ("point" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [208 249])
+                    ("print" function (:type "void") (reparse-symbol classsubparts) [252 326])
+                    ("print" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [340 359]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [329 366])
+                    ("set" function
+                       (:arguments 
+                          ( ("u" variable (:type "double") (reparse-symbol arg-sub-list) [378 387])
+                            ("v" variable (:type "double") (reparse-symbol arg-sub-list) [388 397]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [369 415])
+                    ("plus" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("c" variable (:type ("point" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [428 436]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [418 437])
+                    ("inverse" function (:type ("point" type (:type "class") nil nil)) (reparse-symbol classsubparts) [440 489])
+                    ("where_am_I" function
+                       (:pointer 1
+                        :type ("point" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [492 528])
+                    ("private" label nil (reparse-symbol classsubparts) [529 537])
+                    ("x" variable (:type "double") (reparse-symbol classsubparts) [540 552])
+                    ("y" variable (:type "double") (reparse-symbol classsubparts) [540 552]))                  
+                :type "class")
+                nil [169 555])
+            ("main" function (:type "int") nil [557 693]))          
+      :file "point.cpp"
+      :pointmax 695
+      :fsize 694
+      :lastmodtime '(21110 50484)
+      :unmatched-syntax '((punctuation 204 . 205)))
+    (semanticdb-table "hw1.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [509 528])
+            ("vector" include (:system-flag t) nil [529 546])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [547 567])
+            ("N" variable
+               (:constant-flag t
+                :default-value "40"
+                :type "int")
+                nil [569 586])
+            ("sum" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("T" type (:type "class") nil nil)
+                :arguments 
+                  ( ("d" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [612 624]))                  )
+                nil [587 715])
+            ("main" function (:type "int") nil [717 910]))          
+      :file "hw1.cpp"
+      :pointmax 911
+      :fsize 910
+      :lastmodtime '(21091 53392)
+      :unmatched-syntax nil)
+    (semanticdb-table "utility.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__UTILITY_H__" variable (:constant-flag t) nil [31 44])
+            ("vector" include (:system-flag t) nil [46 63])
+            ("map" include (:system-flag t) nil [64 78])
+            ("set" include (:system-flag t) nil [79 93])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [95 115])
+            ("runif" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "double") (reparse-symbol arg-sub-list) [130 137])
+                    ("" variable (:type "double") (reparse-symbol arg-sub-list) [138 145]))                  
+                :type "double")
+                nil [117 146])
+            ("average" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [159 171]))                  
+                :type "int")
+                nil [147 172])
+            ("set_diff" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [194 206])
+                    ("" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [207 219]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [173 220])
+            ("contains" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("elt" variable (:type "int") (reparse-symbol arg-sub-list) [235 243])
+                    ("vec" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [244 260]))                  
+                :type "bool")
+                nil [221 261])
+            ("print" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [273 287]))                  
+                :type "void")
+                nil [262 288])
+            ("print" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("s" variable (:type ("set" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [300 311]))                  
+                :type "void")
+                nil [289 312])
+            ("str2dbls" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("str" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [337 355]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("double" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [313 356]))          
+      :file "utility.h"
+      :pointmax 365
+      :fsize 364
+      :lastmodtime '(21120 11851)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__UTILITY_H__")
+          )
+)
+    (semanticdb-table "temp.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("string" include (:system-flag t) nil [21 38])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [40 60])
+            ("dbl" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("T" type (:type "class") nil nil)
+                :arguments 
+                  ( ("x" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [87 91]))                  )
+                nil [62 113])
+            ("main" function (:type "int") nil [115 378]))          
+      :file "temp.cpp"
+      :pointmax 413
+      :fsize 392
+      :lastmodtime '(21193 55822)
+      :unmatched-syntax '((symbol 410 . 413) (symbol 402 . 409) (symbol 397 . 401) (symbol 393 . 396) (symbol 385 . 392) (symbol 380 . 384) (symbol 393 . 396) (symbol 385 . 392) (symbol 380 . 384) (symbol 392 . 395) (symbol 384 . 391) (symbol 379 . 383) (symbol 393 . 396) (symbol 385 . 392) (symbol 380 . 384)))
+    (semanticdb-table "utility.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("vector" include (:system-flag t) nil [21 38])
+            ("map" include (:system-flag t) nil [39 53])
+            ("set" include (:system-flag t) nil [54 68])
+            ("cstdlib" include (:system-flag t) nil [69 87])
+            ("string" include (:system-flag t) nil [88 105])
+            ("utility.h" include nil nil [106 126])
+            ("seed" variable
+               (:default-value "1"
+                :type "int")
+                nil [270 283])
+            ("runif" function
+               (:arguments 
+                  ( ("a" variable
+                       (:default-value "0"
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [298 308])
+                    ("b" variable
+                       (:default-value "1"
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [310 320]))                  
+                :type "double")
+                nil [285 419])
+            ("average" function
+               (:arguments 
+                  ( ("v" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [506 520]))                  
+                :type "int")
+                nil [494 673])
+            ("set_diff" function
+               (:arguments 
+                  ( ("v1" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [792 807])
+                    ("v2" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [808 823]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [771 950])
+            ("contains" function
+               (:arguments 
+                  ( ("elt" variable (:type "int") (reparse-symbol arg-sub-list) [1075 1083])
+                    ("vec" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1084 1100]))                  
+                :type "bool")
+                nil [1061 1201])
+            ("print" function
+               (:arguments 
+                  ( ("v" variable (:type ("set" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1214 1225]))                  
+                :type "void")
+                nil [1203 1338])
+            ("print" function
+               (:arguments 
+                  ( ("v" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1372 1386]))                  
+                :type "void")
+                nil [1361 1495])
+            ("str2dbls" function
+               (:arguments 
+                  ( ("str" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1571 1589]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("double" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [1547 1812]))          
+      :file "utility.cpp"
+      :pointmax 1813
+      :fsize 1812
+      :lastmodtime '(21120 11834)
+      :unmatched-syntax nil)
+    (semanticdb-table "list.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [23 42])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [44 64])
+            ("list_elt" type
+               (:members 
+                  ( ("data" variable (:type "int") (reparse-symbol classsubparts) [86 95])
+                    ("ptr" variable
+                       (:pointer 1
+                        :type ("list_elt" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [98 112]))                  
+                :type "struct")
+                nil [66 115])
+            ("list" type
+               (:typedef ("list_elt" type (:type "class") nil nil)
+                :pointer 1
+                :type "typedef")
+                nil [118 141])
+            ("append" function
+               (:pointer 1
+                :arguments 
+                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [160 166])
+                    ("elt" variable (:type ("list_elt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [167 180]))                  
+                :type ("list_elt" type (:type "class") nil nil))
+                nil [143 246])
+            ("car" function
+               (:arguments 
+                  ( ("lst" variable (:type ("list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [256 265]))                  
+                :type "int")
+                nil [248 289])
+            ("is_null" function
+               (:arguments 
+                  ( ("lst" variable (:type ("list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [304 313]))                  
+                :type "bool")
+                nil [291 341])
+            ("cdr" function
+               (:arguments 
+                  ( ("lst" variable (:type ("list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [352 361]))                  
+                :type ("list" type (:type "class") nil nil))
+                nil [343 417])
+            ("len_list" function
+               (:arguments 
+                  ( ("lst" variable (:type ("list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [432 441])
+                    ("accum" variable
+                       (:default-value "0"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [442 453]))                  
+                :type "int")
+                nil [419 536])
+            ("print" function
+               (:arguments 
+                  ( ("lst" variable (:type ("list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [550 559]))                  
+                :type "void")
+                nil [539 659])
+            ("print2" function
+               (:arguments 
+                  ( ("lst" variable (:type ("list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [674 683]))                  
+                :type "void")
+                nil [662 791])
+            ("make_list" function
+               (:arguments 
+                  ( ("array" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [809 821])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [822 831]))                  
+                :type ("list" type (:type "class") nil nil))
+                nil [794 1130])
+            ("main" function (:type "int") nil [1132 1321]))          
+      :file "list.cpp"
+      :pointmax 1322
+      :fsize 1321
+      :lastmodtime '(21113 30858)
+      :unmatched-syntax nil)
+    (semanticdb-table "dijkstra2.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [38 57])
+            ("map" include (:system-flag t) nil [58 72])
+            ("vector" include (:system-flag t) nil [73 90])
+            ("set" include (:system-flag t) nil [91 105])
+            ("algorithm" include (:system-flag t) nil [106 126])
+            ("assert.h" include (:system-flag t) nil [127 146])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [148 168])
+            ("mat" type
+               (:typedef ("vector" type
+                     (:template-specifier 
+                        ( ("vector" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [170 206])
+            ("infty" variable
+               (:default-value "10e7"
+                :type "double")
+                nil [228 248])
+            ("graph" variable (:type ("mat" type (:type "class") nil nil)) nil [249 259])
+            ("print" function
+               (:arguments 
+                  ( ("v" variable (:type ("set" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [361 372]))                  
+                :type "void")
+                nil [350 485])
+            ("print" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("v" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [517 529]))                  )
+                nil [487 636])
+            ("argmin" function
+               (:arguments 
+                  ( ("dict" variable (:type ("map" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil)
+                              ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [649 671])
+                    ("explored" variable (:type ("set" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [672 690]))                  
+                :type "int")
+                nil [638 976])
+            ("distance" function
+               (:arguments 
+                  ( ("u" variable (:type "int") (reparse-symbol arg-sub-list) [994 1000])
+                    ("v" variable (:type "int") (reparse-symbol arg-sub-list) [1001 1007])
+                    ("g" variable
+                       (:default-value "graph"
+                        :type ("mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1008 1021]))                  
+                :type "double")
+                nil [978 1044])
+            ("set_dif" function
+               (:arguments 
+                  ( ("s" variable (:type ("set" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1063 1073])
+                    ("t" variable (:type ("set" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1074 1085]))                  
+                :type ("set" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [1046 1247])
+            ("get_nbrs" function
+               (:arguments 
+                  ( ("v" variable (:type "int") (reparse-symbol arg-sub-list) [1267 1273])
+                    ("g" variable
+                       (:default-value "graph"
+                        :type ("mat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1274 1287]))                  
+                :type ("set" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [1249 1425])
+            ("min" function
+               (:arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [1438 1447])
+                    ("y" variable (:type "double") (reparse-symbol arg-sub-list) [1448 1457]))                  
+                :type "double")
+                nil [1427 1488])
+            ("shortest_path" function
+               (:arguments 
+                  ( ("src" variable (:type "int") (reparse-symbol arg-sub-list) [1511 1519])
+                    ("dest" variable (:type "int") (reparse-symbol arg-sub-list) [1520 1529])
+                    ("grph" variable (:type ("mat" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1530 1539]))                  
+                :type "double")
+                nil [1490 2201])
+            ("main" function (:type "int") nil [2515 3351]))          
+      :file "dijkstra2.cpp"
+      :pointmax 3353
+      :fsize 3352
+      :lastmodtime '(21109 5155)
+      :unmatched-syntax nil)
+    (semanticdb-table "hw3.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [373 392])
+            ("vector" include (:system-flag t) nil [393 410])
+            ("map" include (:system-flag t) nil [411 425])
+            ("cstdlib" include (:system-flag t) nil [426 444])
+            ("string" include (:system-flag t) nil [445 462])
+            ("fstream" include (:system-flag t) nil [463 481])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [483 503])
+            ("matrix" type
+               (:typedef ("vector" type
+                     (:template-specifier 
+                        ( ("vector" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [505 544])
+            ("edge" type
+               (:members 
+                  ( ("edge" function
+                       (:constructor-flag t
+                        :type ("edge" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [561 589])
+                    ("edge" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("u" variable (:type "int") (reparse-symbol arg-sub-list) [597 603])
+                            ("v" variable (:type "int") (reparse-symbol arg-sub-list) [604 610])
+                            ("wt" variable (:type "double") (reparse-symbol arg-sub-list) [611 621]))                          
+                        :type ("edge" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [592 644])
+                    ("edge" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("u" variable (:type "int") (reparse-symbol arg-sub-list) [652 658])
+                            ("v" variable (:type "int") (reparse-symbol arg-sub-list) [659 665]))                          
+                        :type ("edge" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [647 687])
+                    ("u" variable (:type "int") (reparse-symbol classsubparts) [690 699])
+                    ("v" variable (:type "int") (reparse-symbol classsubparts) [690 699])
+                    ("wt" variable (:type "double") (reparse-symbol classsubparts) [702 712]))                  
+                :type "struct")
+                nil [545 715])
+            ("str2dbls" function
+               (:arguments 
+                  ( ("str" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [941 959]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("double" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [917 1249])
+            ("Graph" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1344 1351])
+                    ("Graph" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("m" variable
+                               (:default-value "matrix(0)"
+                                :type ("matrix" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1360 1380]))                          
+                        :type ("Graph" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1354 1394])
+                    ("Graph" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("file_name" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1403 1420]))                          
+                        :type ("Graph" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1397 1421])
+                    ("nvertex" function (:type "int") (reparse-symbol classsubparts) [1424 1460])
+                    ("nedges" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1463 1476])
+                    ("get_nodes" function
+                       (:prototype-flag t
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1479 1503])
+                    ("add" function
+                       (:arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [1539 1545])
+                            ("j" variable (:type "int") (reparse-symbol arg-sub-list) [1546 1552])
+                            ("v" variable
+                               (:default-value "1"
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [1553 1563]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1530 1595])
+                    ("del" function
+                       (:arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [1607 1613])
+                            ("j" variable (:type "int") (reparse-symbol arg-sub-list) [1614 1620]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1598 1651])
+                    ("adjacent" function
+                       (:arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [1668 1674])
+                            ("j" variable (:type "int") (reparse-symbol arg-sub-list) [1675 1681]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1654 1707])
+                    ("get_edge_value" function
+                       (:arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [1732 1738])
+                            ("j" variable (:type "int") (reparse-symbol arg-sub-list) [1739 1745]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [1710 1767])
+                    ("set_edge_value" function
+                       (:arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [1790 1796])
+                            ("j" variable (:type "int") (reparse-symbol arg-sub-list) [1797 1803])
+                            ("v" variable (:type "double") (reparse-symbol arg-sub-list) [1804 1813]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1770 1843])
+                    ("neighbours" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [1869 1875]))                          
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1846 1876])
+                    ("private" label nil (reparse-symbol classsubparts) [1877 1885])
+                    ("mat" variable (:type ("matrix" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1888 1899]))                  
+                :type "class")
+                nil [1330 1902])
+            ("Graph" function
+               (:constructor-flag t
+                :parent "Graph"
+                :arguments 
+                  ( ("file_name" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2119 2136]))                  
+                :type ("Graph" type (:type "class") nil nil))
+                nil [2106 2541])
+            ("nedges" function
+               (:parent "Graph"
+                :type "int")
+                nil [2543 2714])
+            ("neighbours" function
+               (:parent "Graph"
+                :arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [2746 2752]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [2716 2877])
+            ("get_nodes" function
+               (:parent "Graph"
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [2879 3019])
+            ("Priority_queue" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3247 3254])
+                    ("Priority_queue" function
+                       (:constructor-flag t
+                        :type ("Priority_queue" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3257 3276])
+                    ("Priority_queue" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pm" variable (:type ("map" type
+                                 (:template-specifier 
+                                    ( ("int" type nil nil nil)
+                                      ("double" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [3295 3315]))                          
+                        :type ("Priority_queue" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3280 3338])
+                    ("minPriority" function (:type "void") (reparse-symbol classsubparts) [3341 3409])
+                    ("getPriority" function
+                       (:arguments 
+                          ( ("elt" variable (:type "int") (reparse-symbol arg-sub-list) [3431 3439]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [3412 3469])
+                    ("chgPriority" function
+                       (:arguments 
+                          ( ("elt" variable (:type "int") (reparse-symbol arg-sub-list) [3489 3497])
+                            ("priority" variable (:type "double") (reparse-symbol arg-sub-list) [3498 3514]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3472 3548])
+                    ("contains" function
+                       (:arguments 
+                          ( ("elt" variable (:type "int") (reparse-symbol arg-sub-list) [3636 3644]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3622 3701])
+                    ("insert" function
+                       (:arguments 
+                          ( ("elt" variable (:type "int") (reparse-symbol arg-sub-list) [3716 3724])
+                            ("priority" variable
+                               (:default-value "0"
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [3725 3742]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3704 3777])
+                    ("size" function (:type "int") (reparse-symbol classsubparts) [3780 3822])
+                    ("top" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [3825 3835])
+                    ("private" label nil (reparse-symbol classsubparts) [3836 3844])
+                    ("priority_map" variable (:type ("map" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil)
+                              ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3847 3877]))                  
+                :type "class")
+                nil [3224 3880])
+            ("top" function
+               (:parent "Priority_queue"
+                :type "int")
+                nil [3882 4123])
+            ("explore" function
+               (:arguments 
+                  ( ("node" variable (:type "int") (reparse-symbol arg-sub-list) [4325 4334])
+                    ("g" variable
+                       (:reference 1
+                        :type ("Graph" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4335 4344])
+                    ("open" variable
+                       (:reference 1
+                        :type ("Priority_queue" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4352 4373])
+                    ("nearestNeighborInClose" variable
+                       (:reference 1
+                        :type ("map" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil)
+                                  ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4374 4412]))                  
+                :type "void")
+                nil [4312 4673])
+            ("prim" function
+               (:arguments 
+                  ( ("g" variable
+                       (:reference 1
+                        :type ("Graph" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5226 5235])
+                    ("mst" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("edge" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5236 5254]))                  
+                :type "double")
+                nil [5214 6188])
+            ("main" function (:type "int") nil [6190 6687]))          
+      :file "hw3.cpp"
+      :pointmax 6688
+      :fsize 6687
+      :lastmodtime '(21121 1556)
+      :unmatched-syntax '((punctuation 3276 . 3277)))
+    (semanticdb-table "temp.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("'''
+This module contains the DoodleWindow class which is a window that you
+can do simple drawings upon.
+'''" code nil nil [14 121])
+            ("wx" include nil nil [123 132])
+            ("DoodleWindow" type
+               (:superclasses ("wx.Window")
+                :members 
+                  ( ("colours" variable nil (reparse-symbol indented_block_body) [170 368])
+                    ("thicknesses" variable nil (reparse-symbol indented_block_body) [374 439])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [481 571])
+                            ("self" code nil (reparse-symbol indented_block_body) [580 598])
+                            ("self" code nil (reparse-symbol indented_block_body) [607 622])
+                            ("self" code nil (reparse-symbol indented_block_body) [631 648])
+                            ("self" code nil (reparse-symbol indented_block_body) [657 674]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [458 462])
+                            ("parent" variable nil (reparse-symbol function_parameters) [464 470]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [445 675])
+                    ("initDrawing" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [696 700]))                          )
+                        (reparse-symbol indented_block_body) [680 905])
+                    ("bindEvents" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [925 929]))                          )
+                        (reparse-symbol indented_block_body) [910 1523])
+                    ("initBuffer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1543 1547]))                          )
+                        (reparse-symbol indented_block_body) [1528 1920])
+                    ("makeMenu" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1938 1942]))                          )
+                        (reparse-symbol indented_block_body) [1925 2624])
+                    ("addCheckableMenuItems" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("menu" variable nil (reparse-symbol function_parameters) [2673 2677])
+                            ("items" variable nil (reparse-symbol function_parameters) [2679 2684]))                          
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2629 3080])
+                    ("bindMenuEvents" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3104 3108])
+                            ("menuHandler" variable nil (reparse-symbol function_parameters) [3110 3121])
+                            ("updateUIHandler" variable nil (reparse-symbol function_parameters) [3123 3138])
+                            ("ids" variable nil (reparse-symbol function_parameters) [3140 3143]))                          )
+                        (reparse-symbol indented_block_body) [3085 3537])
+                    ("onLeftDown" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3580 3584])
+                            ("event" variable nil (reparse-symbol function_parameters) [3586 3591]))                          )
+                        (reparse-symbol indented_block_body) [3565 3771])
+                    ("onLeftUp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3789 3793])
+                            ("event" variable nil (reparse-symbol function_parameters) [3795 3800]))                          )
+                        (reparse-symbol indented_block_body) [3776 4071])
+                    ("onRightUp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4090 4094])
+                            ("event" variable nil (reparse-symbol function_parameters) [4096 4101]))                          )
+                        (reparse-symbol indented_block_body) [4076 4235])
+                    ("onMotion" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4253 4257])
+                            ("event" variable nil (reparse-symbol function_parameters) [4259 4264]))                          )
+                        (reparse-symbol indented_block_body) [4240 4918])
+                    ("onSize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4934 4938])
+                            ("event" variable nil (reparse-symbol function_parameters) [4940 4945]))                          )
+                        (reparse-symbol indented_block_body) [4923 5102])
+                    ("onIdle" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5118 5122])
+                            ("event" variable nil (reparse-symbol function_parameters) [5124 5129]))                          )
+                        (reparse-symbol indented_block_body) [5107 5483])
+                    ("onPaint" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5500 5504])
+                            ("event" variable nil (reparse-symbol function_parameters) [5506 5511]))                          )
+                        (reparse-symbol indented_block_body) [5488 5846])
+                    ("cleanup" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5863 5867])
+                            ("event" variable nil (reparse-symbol function_parameters) [5869 5874]))                          )
+                        (reparse-symbol indented_block_body) [5851 5969])
+                    ("onCheckMenuColours" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6118 6122])
+                            ("event" variable nil (reparse-symbol function_parameters) [6124 6129]))                          )
+                        (reparse-symbol indented_block_body) [6095 6233])
+                    ("onCheckMenuThickness" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6263 6267])
+                            ("event" variable nil (reparse-symbol function_parameters) [6269 6274]))                          )
+                        (reparse-symbol indented_block_body) [6238 6390])
+                    ("onMenuSetColour" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6529 6533])
+                            ("event" variable nil (reparse-symbol function_parameters) [6535 6540]))                          )
+                        (reparse-symbol indented_block_body) [6509 6606])
+                    ("onMenuSetThickness" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6634 6638])
+                            ("event" variable nil (reparse-symbol function_parameters) [6640 6645]))                          )
+                        (reparse-symbol indented_block_body) [6611 6717])
+                    ("drawLines" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("dc" variable nil (reparse-symbol function_parameters) [6774 6776])
+                            ("lines" variable nil (reparse-symbol function_parameters) [6778 6784]))                          
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [6742 7307]))                  
+                :type "class")
+                nil [135 7307])
+            ("DoodleFrame" type
+               (:superclasses ("wx.Frame")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [7383 7545])
+                            ("doodle" variable nil (reparse-symbol indented_block_body) [7554 7581]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7355 7359])
+                            ("parent" variable nil (reparse-symbol function_parameters) [7361 7367]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [7342 7582]))                  
+                :type "class")
+                nil [7309 7582])
+            ("if" code nil nil [7584 7692]))          
+      :file "temp.py"
+      :pointmax 7692
+      :fsize 7691
+      :lastmodtime '(21157 1434)
+      :unmatched-syntax '(($EOI 612 . 612)))
+    (semanticdb-table "hw4.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Your Hex Program
+
+Your program should use a graph representation and treat the game as a path finding problem. Each internal node (hexagon) has six neighbors – so each would have 6 edges. The corners and the edges are special. A corner has either two or three neighbors and a non-corner edge has 4 neighbors.
+
+The player should be able to interact with the program and choose its “color” with blue going first. The program should have a convenient interface for entering a move, displaying the board, and then making its own move. The program should determine when the game is over and announce the winner.
+
+A simple strategy could be to extend your current longest path or to block your opponent’s longest path. A very dumb strategy would be to play on an empty hexagon at random.
+
+A simple board display would be to have an 11 x 11 printout with B, R, or a blank in each position. A simple way to input a move would be to have the player enter an (i,j) coordinate corresponding to a currently empty hexagon and have the program check that this is legal and if not ask for another choice.
+
+HW 4 expectations:
+
+Be able to draw the board using ASCII symbols and a given size, such as 7 by 7 or 11 by 11.
+Input a move and determine if a move is legal.
+Determine who won.
+\"\"\"" code nil nil [1 1277])
+            ("Board" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1331 1344])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1353 1369])
+                            ("for" code nil (reparse-symbol indented_block_body) [1391 1450])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1458 1506]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1309 1313])
+                            ("n" variable nil (reparse-symbol function_parameters) [1315 1316]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1296 1507])
+                    ("draw" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1520 1524]))                          )
+                        (reparse-symbol indented_block_body) [1511 1988])
+                    ("move" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2001 2005])
+                            ("pos" variable nil (reparse-symbol function_parameters) [2007 2010])
+                            ("player" variable nil (reparse-symbol function_parameters) [2012 2018]))                          )
+                        (reparse-symbol indented_block_body) [1992 2153])
+                    ("is_legal" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2170 2174])
+                            ("pos" variable nil (reparse-symbol function_parameters) [2176 2179]))                          )
+                        (reparse-symbol indented_block_body) [2157 2398])
+                    ("_coordinate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2418 2422])
+                            ("pos" variable nil (reparse-symbol function_parameters) [2424 2427]))                          )
+                        (reparse-symbol indented_block_body) [2402 2490]))                  
+                :type "class")
+                nil [1279 2490])
+            ("random" include nil nil [2491 2504])
+            ("random_legal_move" function (:arguments 
+              ( ("board" variable nil (reparse-symbol function_parameters) [2527 2532]))              ) nil [2505 2758])
+            ("main" function nil nil [2759 3222])
+            ("b" variable nil nil [3241 3253])
+            ("print" code nil nil [3254 3259]))          
+      :file "hw4.py"
+      :pointmax 3261
+      :fsize 3268
+      :lastmodtime '(21129 11543)
+      :unmatched-syntax '((NAME 2105 . 2109) (IF 2129 . 2131) (ELSE 2144 . 2148))))
+  :file "!home!kothiyal!Dropbox!Work!coursera!c++!codes!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0")

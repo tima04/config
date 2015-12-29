@@ -1,0 +1,72 @@
+;; Object temp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "temp/"
+  :tables
+  (list
+    (semanticdb-table "edit_qntxt.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"Edit the question in the given collection and database, editing includes removing nusiance text,
+separating questions and the options (a separate list of options is created), marking whether question
+is of multiple-choice type or data-sufficiency type. The edited collection is saved in the same database
+with the 2 apppend to the name of the collection, i.e if collection is called x then edited collection
+is called x2.
+\"\"\"" code nil nil [1 429])
+            ("re" include nil nil [431 440])
+            ("sys" include nil nil [441 451])
+            ("pymongo" include nil nil [452 483])
+            ("client" variable nil nil [484 506])
+            ("data_sufficiency_opts" variable nil nil [508 1034])
+            ("main" function (:arguments 
+              ( ("db" variable nil (reparse-symbol function_parameters) [1057 1059])
+                ("collection" variable nil (reparse-symbol function_parameters) [1061 1071])
+                ("newcollection" variable nil (reparse-symbol function_parameters) [1073 1086]))              ) nil [1048 2346])
+            ("remove_nuisance" function
+               (:documentation "
+    Remove html tags and othe spoilers from the qstion txt.
+    "
+                :arguments 
+                  ( ("txt" variable nil (reparse-symbol function_parameters) [2368 2371]))                  )
+                nil [2348 3569])
+            ("get_qn_options" function
+               (:documentation "
+    Return: 
+      question_text and options(a list).
+    txt = u'What is 3 + 3? <br /><br />a) 6<br />b) 5<br />c) 4<br />d) 3<br />e) 0'
+    >>> get_qn_options(txt)
+    (u'What is 3 + 3? ', [u'a) 6', u'b) 5', u'c) 4', u'd) 3', u'e) 0'])
+    Assumptions:
+      1) line break is <br /> would not work for <br> or <br/>
+      2) there is no line break before the start of the option.
+    "
+                :arguments 
+                  ( ("txt" variable nil (reparse-symbol function_parameters) [3589 3592]))                  )
+                nil [3570 5017])
+            ("clean_comment" function
+               (:documentation "Remove all div elements conataint class like: <div class=\"quotetitle\"> and
+    names of person writing the comment, assuming the name  is followed with \"wrote:\" 
+    eg: 'Jasontuyj2012 wrote:'.
+
+    txt = 'u'<div class=\"quotetitle\">Jasontuyj2012 wrote:</div><div class=\"quotecontent\">A toy store regularly sells all stock at a discount of 20% to 40%. If an additional 25% were deducted from the discount price during a special sale, what would be the lowest possible price of a toy costing $16 before any discount?<br /><br />a) $5.60<br />b) $7.20<br />c) $8.80<br />d) $9.60<br />e) $15.20</div><br /><br />We will get Lowest price with maximum discount<br /><br />so the discount on 16 will be 40% - giving 9.6<br /><br />then another discount of 25% on 9.6 to give 7.2<br /><br />so b - $7.2</div>''
+
+    >>> clean_comment(txt)
+    'A toy store regularly sells all stock at a discount of 20% to 40%. If an additional 25% were deducted from the discount price during a special sale, what would be the lowest possible price of a toy costing $16 before any discount?<br /><br />a) $5.60<br />b) $7.20<br />c) $8.80<br />d) $9.60<br />e) $15.20</div><br /><br />We will get Lowest price with maximum discount<br /><br />so the discount on 16 will be 40% - giving 9.6<br /><br />then another discount of 25% on 9.6 to give 7.2<br /><br />so b - $7.2</div>'
+    "
+                :arguments 
+                  ( ("txt" variable nil (reparse-symbol function_parameters) [5036 5039]))                  )
+                nil [5018 6521])
+            ("if" code nil nil [6523 6945])
+            ("\"\"\"
+mongoexport --db qedit --collection programatically_edited_qstns --out programatically_edited_qstns.json
+
+mongoimport --db qedit --collection programatically_edited_qstns --drop --file programatically_edited_qstns.json
+
+\"\"\"" code nil nil [6966 7193]))          
+      :file "edit_qntxt.py"
+      :pointmax 7746
+      :fsize 7745
+      :lastmodtime '(22013 33610 653723 804000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!projects!adaptive-tut!adaptive!parsers!temp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

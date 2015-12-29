@@ -1,0 +1,19 @@
+;; Object public/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "public/"
+  :tables
+  (list
+    (semanticdb-table "slideshow.html"
+      :major-mode 'html-mode
+      :tags 
+        '( ("Test Slideshow!" section nil nil [82 129])
+            ("" section nil nil [129 160])
+            ("" section nil nil [160 322]))          
+      :file "slideshow.html"
+      :pointmax 322
+      :fsize 321
+      :lastmodtime '(22007 14274 555039 524000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!temp!pyjs!public!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

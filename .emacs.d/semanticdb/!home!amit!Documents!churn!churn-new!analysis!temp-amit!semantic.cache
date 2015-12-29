@@ -1,0 +1,40 @@
+;; Object temp-amit/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "temp-amit/"
+  :tables
+  (list
+    (semanticdb-table "boost.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pandas" include nil nil [1 20])
+            ("numpy" include nil nil [21 39])
+            ("sklearn.ensemble" include nil nil [40 101])
+            ("sklearn.ensemble" include nil nil [102 164])
+            ("sklearn.preprocessing" include nil nil [165 211])
+            ("data" variable nil nil [213 248])
+            ("cols" variable nil nil [250 787])
+            ("Y" variable nil nil [789 803])
+            ("X" variable nil nil [804 818])
+            ("non_numeric_cols" variable nil nil [850 907])
+            ("le" variable nil nil [908 927])
+            ("for" code nil nil [928 995])
+            ("bar" code nil nil [1105 1119])
+            ("np" code nil nil [1120 1142])
+            ("X" variable nil nil [1143 1197])
+            ("Y" code nil nil [1198 1210])
+            ("bar" variable nil nil [1212 1248])
+            ("cols" variable nil nil [1370 1927])
+            ("foo" variable nil nil [1930 2020])
+            ("bar" variable nil nil [2022 2100])
+            ("print" code nil nil [2103 2142])
+            ("print" code nil nil [2143 2197])
+            ("transform" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [2214 2216]))              ) nil [2200 2287]))          
+      :file "boost.py"
+      :pointmax 2334
+      :fsize 2116
+      :lastmodtime '(21969 55001 945284 701000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Documents!churn!churn-new!analysis!temp-amit!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

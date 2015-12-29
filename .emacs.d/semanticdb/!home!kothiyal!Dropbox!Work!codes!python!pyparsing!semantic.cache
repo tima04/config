@@ -1,0 +1,28 @@
+;; Object pyparsing/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pyparsing/"
+  :tables
+  (list
+    (semanticdb-table "arg_parse.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pyparsing" include nil nil [1 24])
+            ("op" variable nil nil [26 47])
+            ("reals" code nil nil [48 101])
+            ("reals" code nil nil [102 152])
+            ("var" variable nil nil [153 191])
+            ("comma" variable nil nil [192 223])
+            ("lparen" variable nil nil [224 256])
+            ("rparen" variable nil nil [257 289])
+            ("expr" variable nil nil [290 306])
+            ("fun" code nil nil [307 353])
+            ("foo" variable nil nil [479 521])
+            ("print" code nil nil [522 531]))          
+      :file "arg_parse.py"
+      :pointmax 535
+      :fsize 534
+      :lastmodtime '(21944 61860 373120 32000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!codes!python!pyparsing!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

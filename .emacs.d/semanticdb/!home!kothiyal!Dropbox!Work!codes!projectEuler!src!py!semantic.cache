@@ -1,0 +1,28 @@
+;; Object py/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "py/"
+  :tables
+  (list
+    (semanticdb-table "prob35.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [308 325])
+            ("string" include (:system-flag t) nil [326 343])
+            ("iostream" include (:system-flag t) nil [344 363])
+            ("perms" function
+               (:arguments 
+                  ( ("xs" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [386 396]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [365 481]))          
+      :file "prob35.cpp"
+      :pointmax 482
+      :fsize 504
+      :lastmodtime '(21920 56792 0 0)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!codes!projectEuler!src!py!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

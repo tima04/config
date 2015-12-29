@@ -1,0 +1,103 @@
+;; Object scripts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "scripts/"
+  :tables
+  (list
+    (semanticdb-table "cython-build-extension.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Build the setup.py and pyx(wrapup) file.
+Usage:
+cython-build-extension fl (fl is c or c++ file).
+\"\"\"" code nil nil [20 124])
+            ("os" include nil nil [126 135])
+            ("sys" include nil nil [136 146])
+            ("re" include nil nil [147 156])
+            ("main" function (:arguments 
+              ( ("lib" variable nil (reparse-symbol function_parameters) [167 170]))              ) nil [158 2568])
+            ("parse_fun" function
+               (:documentation "
+    Return: a list [fun_name, nargs]
+    Examples:
+    >>> sum(int x, int y)
+    ('sum', 2)
+    "
+                :arguments 
+                  ( ("fundef" variable nil (reparse-symbol function_parameters) [2592 2598]))                  )
+                nil [2578 2996])
+            ("if" code nil nil [2997 3197]))          
+      :file "cython-build-extension.py"
+      :pointmax 3256
+      :fsize 3255
+      :lastmodtime '(21911 64193 699573 806000)
+      :unmatched-syntax nil)
+    (semanticdb-table "pyp"
+      :major-mode 'python-mode
+      :tags nil
+      :file "pyp"
+      :pointmax 92335
+      :fsize 92334
+      :lastmodtime '(20952 40772 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "swig-template.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+create the template .i file and makefie for swig
+Usage:
+swig-template.py [fl] (fl is c or c++ file or just a header)
+\"\"\"" code nil nil [20 144])
+            ("os" include nil nil [146 155])
+            ("sys" include nil nil [156 166])
+            ("re" include nil nil [167 176])
+            ("main" function (:arguments 
+              ( ("lib" variable nil (reparse-symbol function_parameters) [187 190]))              ) nil [178 1658])
+            ("if" code nil nil [1663 1780]))          
+      :file "swig-template.py"
+      :pointmax 1780
+      :fsize 1779
+      :lastmodtime '(21938 56411 254951 947000)
+      :unmatched-syntax nil)
+    (semanticdb-table "pyant.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+simple class builder for java. Run from the top (eclipse) project directory, and supply the name
+of the java file to be compiled and run. The class file will be stored in bin/package_name/.
+The .classpath and .project file must be present in the root directory and
+the src file must be at src/package_name/ and bin/package_name directory must exist.
+
+From the package root.
+#compile
+javac -classpath bin:/opt/lib/jars/apache-csv.jar:/opt/lib/jars/courserajava.jar -sourcepath src -d bin src/coursera_course/Test.java
+
+#run
+java -Dfile.encoding=UTF-8 -classpath bin:/opt/lib/jars/apache-csv.jar:/opt/lib/jars/courserajava.jar coursera_course.CaeserCipher
+\"\"\"" code nil nil [19 680])
+            ("sys" include nil nil [682 692])
+            ("os" include nil nil [693 702])
+            ("xmltodict" include nil nil [703 719])
+            ("subprocess" include nil nil [720 737])
+            ("re" include nil nil [738 747])
+            ("get_classpath" function nil nil [749 960])
+            ("get_sourcepath" function nil nil [961 1168])
+            ("get_pkg" function
+               (:documentation "return the package containing the file
+    for example if the file is in: src/java/pkg/foo.java, then return \"pkg\"
+    "
+                :arguments 
+                  ( ("srcpath" variable nil (reparse-symbol function_parameters) [1181 1188])
+                    ("javafile" variable nil (reparse-symbol function_parameters) [1190 1198]))                  )
+                nil [1169 1499])
+            ("main" function (:arguments 
+              ( ("javafile" variable nil (reparse-symbol function_parameters) [1509 1517]))              ) nil [1500 2485])
+            ("if" code nil nil [2491 2619]))          
+      :file "pyant.py"
+      :pointmax 2620
+      :fsize 2619
+      :lastmodtime '(22115 26570 632204 832000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Dropbox!scripts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

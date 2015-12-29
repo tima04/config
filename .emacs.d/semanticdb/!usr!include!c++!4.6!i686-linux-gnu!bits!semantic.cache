@@ -1,0 +1,1379 @@
+;; Object bits/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "bits/"
+  :tables
+  (list
+    (semanticdb-table "c++config.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_GLIBCXX_CXX_CONFIG_H" variable (:constant-flag t) nil [1370 1391])
+            ("__GLIBCXX__" variable (:constant-flag t) nil [1476 1487])
+            ("_GLIBCXX_PURE" variable (:constant-flag t) nil [1672 1685])
+            ("_GLIBCXX_CONST" variable (:constant-flag t) nil [1753 1767])
+            ("_GLIBCXX_NORETURN" variable (:constant-flag t) nil [1839 1856])
+            ("_GLIBCXX_NOTHROW" variable (:constant-flag t) nil [1993 2009])
+            ("_GLIBCXX_HAVE_ATTRIBUTE_VISIBILITY" variable (:constant-flag t) nil [2166 2200])
+            ("_GLIBCXX_VISIBILITY" variable (:constant-flag t) nil [2252 2271])
+            ("_GLIBCXX_USE_DEPRECATED" variable (:constant-flag t) nil [2650 2673])
+            ("_GLIBCXX_DEPRECATED" variable (:constant-flag t) nil [2758 2777])
+            ("_GLIBCXX_CONSTEXPR" variable (:constant-flag t) nil [3088 3106])
+            ("_GLIBCXX_USE_CONSTEXPR" variable (:constant-flag t) nil [3117 3139])
+            ("_GLIBCXX_EXTERN_TEMPLATE" variable (:constant-flag t) nil [3750 3774])
+            ("std" type
+               (:members 
+                  ( ("size_t" type
+                       (:typedef ("__SIZE_TYPE__" type (:type "class") nil nil)
+                        :superclasses "__SIZE_TYPE__"
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [4482 4512])
+                    ("ptrdiff_t" type
+                       (:typedef ("__PTRDIFF_TYPE__" type (:type "class") nil nil)
+                        :superclasses "__PTRDIFF_TYPE__"
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [4515 4550]))                  
+                :type "namespace")
+                nil [4464 4633])
+            ("_GLIBCXX_INLINE_VERSION" variable (:constant-flag t) nil [4702 4725])
+            ("std" type
+               (:members 
+                  ( ("__7" type (:type "namespace") (reparse-symbol namespacesubparts) [4827 4844])
+                    ("rel_ops" type
+                       (:members 
+                          ( ("__7" type (:type "namespace") (reparse-symbol namespacesubparts) [4875 4892]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [4848 4894])
+                    ("tr1" type
+                       (:members 
+                          ( ("__7" type (:type "namespace") (reparse-symbol namespacesubparts) [4927 4944])
+                            ("placeholders" type
+                               (:members 
+                                  ( ("__7" type (:type "namespace") (reparse-symbol namespacesubparts) [4981 4998]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [4949 5000])
+                            ("regex_constants" type
+                               (:members 
+                                  ( ("__7" type (:type "namespace") (reparse-symbol namespacesubparts) [5040 5057]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [5005 5059])
+                            ("__detail" type
+                               (:members 
+                                  ( ("__7" type (:type "namespace") (reparse-symbol namespacesubparts) [5092 5109]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [5064 5111]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [4898 5115])
+                    ("decimal" type
+                       (:members 
+                          ( ("__7" type (:type "namespace") (reparse-symbol namespacesubparts) [5146 5163]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [5119 5165])
+                    ("chrono" type
+                       (:members 
+                          ( ("__7" type (:type "namespace") (reparse-symbol namespacesubparts) [5195 5212]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [5169 5214])
+                    ("placeholders" type
+                       (:members 
+                          ( ("__7" type (:type "namespace") (reparse-symbol namespacesubparts) [5249 5266]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [5217 5268])
+                    ("regex_constants" type
+                       (:members 
+                          ( ("__7" type (:type "namespace") (reparse-symbol namespacesubparts) [5306 5323]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [5271 5325])
+                    ("this_thread" type
+                       (:members 
+                          ( ("__7" type (:type "namespace") (reparse-symbol namespacesubparts) [5359 5376]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [5328 5378])
+                    ("__detail" type
+                       (:members 
+                          ( ("__7" type (:type "namespace") (reparse-symbol namespacesubparts) [5410 5427]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [5382 5429])
+                    ("__regex" type
+                       (:members 
+                          ( ("__7" type (:type "namespace") (reparse-symbol namespacesubparts) [5459 5476]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [5432 5478]))                  
+                :type "namespace")
+                nil [4802 5480])
+            ("__gnu_cxx" type
+               (:members 
+                  ( ("__7" type (:type "namespace") (reparse-symbol namespacesubparts) [5513 5530])
+                    ("__detail" type
+                       (:members 
+                          ( ("__7" type (:type "namespace") (reparse-symbol namespacesubparts) [5561 5578]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [5533 5580]))                  
+                :type "namespace")
+                nil [5482 5582])
+            ("_GLIBCXX_BEGIN_NAMESPACE_VERSION" variable (:constant-flag t) nil [5592 5624])
+            ("_GLIBCXX_END_NAMESPACE_VERSION" variable (:constant-flag t) nil [5650 5680])
+            ("std" type
+               (:members 
+                  ( ("__cxx1998" type
+                       (:members 
+                          ( ("__7" type (:type "namespace") (reparse-symbol namespacesubparts) [6097 6114]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [6037 6125]))                  
+                :type "namespace")
+                nil [5939 6446])
+            ("_GLIBCXX_STD_C" variable (:constant-flag t) nil [7523 7537])
+            ("_GLIBCXX_BEGIN_NAMESPACE_CONTAINER" variable (:constant-flag t) nil [7557 7591])
+            ("_GLIBCXX_END_NAMESPACE_CONTAINER" variable (:constant-flag t) nil [7665 7697])
+            ("_GLIBCXX_EXTERN_TEMPLATE" variable (:constant-flag t) nil [7778 7802])
+            ("_GLIBCXX_STD_A" variable (:constant-flag t) nil [8092 8106])
+            ("_GLIBCXX_BEGIN_NAMESPACE_ALGO" variable (:constant-flag t) nil [8225 8254])
+            ("_GLIBCXX_END_NAMESPACE_ALGO" variable (:constant-flag t) nil [8308 8335])
+            ("std" type
+               (:members 
+                  ( ("__gnu_cxx_ldbl128" type (:type "namespace") (reparse-symbol namespacesubparts) [8802 8833]))                  
+                :type "namespace")
+                nil [8777 8835])
+            ("_GLIBCXX_NAMESPACE_LDBL" variable (:constant-flag t) nil [8845 8868])
+            ("_GLIBCXX_BEGIN_NAMESPACE_LDBL" variable (:constant-flag t) nil [8898 8927])
+            ("_GLIBCXX_END_NAMESPACE_LDBL" variable (:constant-flag t) nil [8967 8994])
+            ("__glibcxx_assert" variable (:constant-flag t) nil [9200 9216])
+            ("_GLIBCXX_SYNCHRONIZATION_HAPPENS_BEFORE" variable (:constant-flag t) nil [10974 11013])
+            ("_GLIBCXX_SYNCHRONIZATION_HAPPENS_AFTER" variable (:constant-flag t) nil [11081 11119])
+            ("_GLIBCXX_BEGIN_EXTERN_C" variable (:constant-flag t) nil [11212 11235])
+            ("_GLIBCXX_END_EXTERN_C" variable (:constant-flag t) nil [11258 11279])
+            ("bits/os_defines.h" include (:system-flag t) nil [11438 11466])
+            ("bits/cpu_defines.h" include (:system-flag t) nil [11509 11538])
+            ("_GLIBCXX_PSEUDO_VISIBILITY" variable (:constant-flag t) nil [11704 11730])
+            ("_GLIBCXX_WEAK_DEFINITION" variable (:constant-flag t) nil [11968 11992])
+            ("_GLIBCXX_FAST_MATH" variable (:constant-flag t) nil [12237 12255])
+            ("__N" variable (:constant-flag t) nil [12558 12561])
+            ("_GLIBCXX_HAVE_ACOSF" variable (:constant-flag t) nil [12941 12960])
+            ("_GLIBCXX_HAVE_ACOSL" variable (:constant-flag t) nil [13024 13043])
+            ("_GLIBCXX_HAVE_ASINF" variable (:constant-flag t) nil [13107 13126])
+            ("_GLIBCXX_HAVE_ASINL" variable (:constant-flag t) nil [13190 13209])
+            ("_GLIBCXX_HAVE_AS_SYMVER_DIRECTIVE" variable (:constant-flag t) nil [13291 13324])
+            ("_GLIBCXX_HAVE_ATAN2F" variable (:constant-flag t) nil [13389 13409])
+            ("_GLIBCXX_HAVE_ATAN2L" variable (:constant-flag t) nil [13474 13494])
+            ("_GLIBCXX_HAVE_ATANF" variable (:constant-flag t) nil [13558 13577])
+            ("_GLIBCXX_HAVE_ATANL" variable (:constant-flag t) nil [13641 13660])
+            ("_GLIBCXX_HAVE_CEILF" variable (:constant-flag t) nil [13832 13851])
+            ("_GLIBCXX_HAVE_CEILL" variable (:constant-flag t) nil [13915 13934])
+            ("_GLIBCXX_HAVE_COMPLEX_H" variable (:constant-flag t) nil [14005 14028])
+            ("_GLIBCXX_HAVE_COSF" variable (:constant-flag t) nil [14091 14109])
+            ("_GLIBCXX_HAVE_COSHF" variable (:constant-flag t) nil [14173 14192])
+            ("_GLIBCXX_HAVE_COSHL" variable (:constant-flag t) nil [14256 14275])
+            ("_GLIBCXX_HAVE_COSL" variable (:constant-flag t) nil [14338 14356])
+            ("_GLIBCXX_HAVE_DLFCN_H" variable (:constant-flag t) nil [14425 14446])
+            ("_GLIBCXX_HAVE_EBADMSG" variable (:constant-flag t) nil [14490 14511])
+            ("_GLIBCXX_HAVE_ECANCELED" variable (:constant-flag t) nil [14557 14580])
+            ("_GLIBCXX_HAVE_EIDRM" variable (:constant-flag t) nil [14622 14641])
+            ("_GLIBCXX_HAVE_ENDIAN_H" variable (:constant-flag t) nil [14711 14733])
+            ("_GLIBCXX_HAVE_ENODATA" variable (:constant-flag t) nil [14777 14798])
+            ("_GLIBCXX_HAVE_ENOLINK" variable (:constant-flag t) nil [14842 14863])
+            ("_GLIBCXX_HAVE_ENOSR" variable (:constant-flag t) nil [14905 14924])
+            ("_GLIBCXX_HAVE_ENOSTR" variable (:constant-flag t) nil [14967 14987])
+            ("_GLIBCXX_HAVE_ENOTRECOVERABLE" variable (:constant-flag t) nil [15039 15068])
+            ("_GLIBCXX_HAVE_ENOTSUP" variable (:constant-flag t) nil [15112 15133])
+            ("_GLIBCXX_HAVE_EOVERFLOW" variable (:constant-flag t) nil [15179 15202])
+            ("_GLIBCXX_HAVE_EOWNERDEAD" variable (:constant-flag t) nil [15249 15273])
+            ("_GLIBCXX_HAVE_EPROTO" variable (:constant-flag t) nil [15316 15336])
+            ("_GLIBCXX_HAVE_ETIME" variable (:constant-flag t) nil [15378 15397])
+            ("_GLIBCXX_HAVE_ETXTBSY" variable (:constant-flag t) nil [15441 15462])
+            ("_GLIBCXX_HAVE_EXECINFO_H" variable (:constant-flag t) nil [15534 15558])
+            ("_GLIBCXX_HAVE_EXPF" variable (:constant-flag t) nil [15621 15639])
+            ("_GLIBCXX_HAVE_EXPL" variable (:constant-flag t) nil [15702 15720])
+            ("_GLIBCXX_HAVE_FABSF" variable (:constant-flag t) nil [15784 15803])
+            ("_GLIBCXX_HAVE_FABSL" variable (:constant-flag t) nil [15867 15886])
+            ("_GLIBCXX_HAVE_FENV_H" variable (:constant-flag t) nil [15954 15974])
+            ("_GLIBCXX_HAVE_FINITE" variable (:constant-flag t) nil [16039 16059])
+            ("_GLIBCXX_HAVE_FINITEF" variable (:constant-flag t) nil [16125 16146])
+            ("_GLIBCXX_HAVE_FINITEL" variable (:constant-flag t) nil [16212 16233])
+            ("_GLIBCXX_HAVE_FLOAT_H" variable (:constant-flag t) nil [16302 16323])
+            ("_GLIBCXX_HAVE_FLOORF" variable (:constant-flag t) nil [16388 16408])
+            ("_GLIBCXX_HAVE_FLOORL" variable (:constant-flag t) nil [16473 16493])
+            ("_GLIBCXX_HAVE_FMODF" variable (:constant-flag t) nil [16557 16576])
+            ("_GLIBCXX_HAVE_FMODL" variable (:constant-flag t) nil [16640 16659])
+            ("_GLIBCXX_HAVE_FREXPF" variable (:constant-flag t) nil [16901 16921])
+            ("_GLIBCXX_HAVE_FREXPL" variable (:constant-flag t) nil [16986 17006])
+            ("_GLIBCXX_HAVE_GETIPINFO" variable (:constant-flag t) nil [17066 17089])
+            ("_GLIBCXX_HAVE_GTHR_DEFAULT" variable (:constant-flag t) nil [17187 17213])
+            ("_GLIBCXX_HAVE_HYPOT" variable (:constant-flag t) nil [17277 17296])
+            ("_GLIBCXX_HAVE_HYPOTF" variable (:constant-flag t) nil [17361 17381])
+            ("_GLIBCXX_HAVE_HYPOTL" variable (:constant-flag t) nil [17446 17466])
+            ("_GLIBCXX_HAVE_ICONV" variable (:constant-flag t) nil [17525 17544])
+            ("_GLIBCXX_HAVE_INT64_T" variable (:constant-flag t) nil [17703 17724])
+            ("_GLIBCXX_HAVE_INT64_T_LONG_LONG" variable (:constant-flag t) nil [17852 17883])
+            ("_GLIBCXX_HAVE_INTTYPES_H" variable (:constant-flag t) nil [17955 17979])
+            ("_GLIBCXX_HAVE_ISINF" variable (:constant-flag t) nil [18043 18062])
+            ("_GLIBCXX_HAVE_ISINFF" variable (:constant-flag t) nil [18127 18147])
+            ("_GLIBCXX_HAVE_ISINFL" variable (:constant-flag t) nil [18212 18232])
+            ("_GLIBCXX_HAVE_ISNAN" variable (:constant-flag t) nil [18296 18315])
+            ("_GLIBCXX_HAVE_ISNANF" variable (:constant-flag t) nil [18380 18400])
+            ("_GLIBCXX_HAVE_ISNANL" variable (:constant-flag t) nil [18465 18485])
+            ("_GLIBCXX_HAVE_ISWBLANK" variable (:constant-flag t) nil [18531 18553])
+            ("_GLIBCXX_HAVE_LC_MESSAGES" variable (:constant-flag t) nil [18621 18646])
+            ("_GLIBCXX_HAVE_LDEXPF" variable (:constant-flag t) nil [18711 18731])
+            ("_GLIBCXX_HAVE_LDEXPL" variable (:constant-flag t) nil [18796 18816])
+            ("_GLIBCXX_HAVE_LIBINTL_H" variable (:constant-flag t) nil [18887 18910])
+            ("_GLIBCXX_HAVE_LIMIT_AS" variable (:constant-flag t) nil [18976 18998])
+            ("_GLIBCXX_HAVE_LIMIT_DATA" variable (:constant-flag t) nil [19064 19088])
+            ("_GLIBCXX_HAVE_LIMIT_FSIZE" variable (:constant-flag t) nil [19154 19179])
+            ("_GLIBCXX_HAVE_LIMIT_RSS" variable (:constant-flag t) nil [19245 19268])
+            ("_GLIBCXX_HAVE_LIMIT_VMEM" variable (:constant-flag t) nil [19334 19358])
+            ("_GLIBCXX_HAVE_LINUX_FUTEX" variable (:constant-flag t) nil [19414 19439])
+            ("_GLIBCXX_HAVE_LOCALE_H" variable (:constant-flag t) nil [19509 19531])
+            ("_GLIBCXX_HAVE_LOG10F" variable (:constant-flag t) nil [19596 19616])
+            ("_GLIBCXX_HAVE_LOG10L" variable (:constant-flag t) nil [19681 19701])
+            ("_GLIBCXX_HAVE_LOGF" variable (:constant-flag t) nil [19764 19782])
+            ("_GLIBCXX_HAVE_LOGL" variable (:constant-flag t) nil [19845 19863])
+            ("_GLIBCXX_HAVE_MBSTATE_T" variable (:constant-flag t) nil [20140 20163])
+            ("_GLIBCXX_HAVE_MEMORY_H" variable (:constant-flag t) nil [20233 20255])
+            ("_GLIBCXX_HAVE_MODF" variable (:constant-flag t) nil [20318 20336])
+            ("_GLIBCXX_HAVE_MODFF" variable (:constant-flag t) nil [20400 20419])
+            ("_GLIBCXX_HAVE_MODFL" variable (:constant-flag t) nil [20483 20502])
+            ("_GLIBCXX_HAVE_POLL" variable (:constant-flag t) nil [20650 20668])
+            ("_GLIBCXX_HAVE_POWF" variable (:constant-flag t) nil [20731 20749])
+            ("_GLIBCXX_HAVE_POWL" variable (:constant-flag t) nil [20812 20830])
+            ("_GLIBCXX_HAVE_SETENV" variable (:constant-flag t) nil [20987 21007])
+            ("_GLIBCXX_HAVE_SINCOS" variable (:constant-flag t) nil [21072 21092])
+            ("_GLIBCXX_HAVE_SINCOSF" variable (:constant-flag t) nil [21158 21179])
+            ("_GLIBCXX_HAVE_SINCOSL" variable (:constant-flag t) nil [21245 21266])
+            ("_GLIBCXX_HAVE_SINF" variable (:constant-flag t) nil [21329 21347])
+            ("_GLIBCXX_HAVE_SINHF" variable (:constant-flag t) nil [21411 21430])
+            ("_GLIBCXX_HAVE_SINHL" variable (:constant-flag t) nil [21494 21513])
+            ("_GLIBCXX_HAVE_SINL" variable (:constant-flag t) nil [21576 21594])
+            ("_GLIBCXX_HAVE_SQRTF" variable (:constant-flag t) nil [21658 21677])
+            ("_GLIBCXX_HAVE_SQRTL" variable (:constant-flag t) nil [21741 21760])
+            ("_GLIBCXX_HAVE_STDBOOL_H" variable (:constant-flag t) nil [21831 21854])
+            ("_GLIBCXX_HAVE_STDINT_H" variable (:constant-flag t) nil [21924 21946])
+            ("_GLIBCXX_HAVE_STDLIB_H" variable (:constant-flag t) nil [22016 22038])
+            ("_GLIBCXX_HAVE_STRERROR_L" variable (:constant-flag t) nil [22105 22129])
+            ("_GLIBCXX_HAVE_STRERROR_R" variable (:constant-flag t) nil [22196 22220])
+            ("_GLIBCXX_HAVE_STRINGS_H" variable (:constant-flag t) nil [22291 22314])
+            ("_GLIBCXX_HAVE_STRING_H" variable (:constant-flag t) nil [22384 22406])
+            ("_GLIBCXX_HAVE_STRTOF" variable (:constant-flag t) nil [22471 22491])
+            ("_GLIBCXX_HAVE_STRTOLD" variable (:constant-flag t) nil [22557 22578])
+            ("_GLIBCXX_HAVE_STRXFRM_L" variable (:constant-flag t) nil [22644 22667])
+            ("_GLIBCXX_HAVE_SYMVER_SYMBOL_RENAMING_RUNTIME_SUPPORT" variable (:constant-flag t) nil [22785 22837])
+            ("_GLIBCXX_HAVE_SYS_IOCTL_H" variable (:constant-flag t) nil [23011 23036])
+            ("_GLIBCXX_HAVE_SYS_IPC_H" variable (:constant-flag t) nil [23107 23130])
+            ("_GLIBCXX_HAVE_SYS_PARAM_H" variable (:constant-flag t) nil [23415 23440])
+            ("_GLIBCXX_HAVE_SYS_RESOURCE_H" variable (:constant-flag t) nil [23516 23544])
+            ("_GLIBCXX_HAVE_SYS_SEM_H" variable (:constant-flag t) nil [23615 23638])
+            ("_GLIBCXX_HAVE_SYS_STAT_H" variable (:constant-flag t) nil [23710 23734])
+            ("_GLIBCXX_HAVE_SYS_TIME_H" variable (:constant-flag t) nil [23806 23830])
+            ("_GLIBCXX_HAVE_SYS_TYPES_H" variable (:constant-flag t) nil [23903 23928])
+            ("_GLIBCXX_HAVE_SYS_UIO_H" variable (:constant-flag t) nil [23999 24022])
+            ("_GLIBCXX_HAVE_S_ISREG" variable (:constant-flag t) nil [24178 24199])
+            ("_GLIBCXX_HAVE_TANF" variable (:constant-flag t) nil [24262 24280])
+            ("_GLIBCXX_HAVE_TANHF" variable (:constant-flag t) nil [24344 24363])
+            ("_GLIBCXX_HAVE_TANHL" variable (:constant-flag t) nil [24427 24446])
+            ("_GLIBCXX_HAVE_TANL" variable (:constant-flag t) nil [24509 24527])
+            ("_GLIBCXX_HAVE_TGMATH_H" variable (:constant-flag t) nil [24597 24619])
+            ("_GLIBCXX_HAVE_TLS" variable (:constant-flag t) nil [24694 24711])
+            ("_GLIBCXX_HAVE_UNISTD_H" variable (:constant-flag t) nil [24781 24803])
+            ("_GLIBCXX_HAVE_VFWSCANF" variable (:constant-flag t) nil [24849 24871])
+            ("_GLIBCXX_HAVE_VSWSCANF" variable (:constant-flag t) nil [24917 24939])
+            ("_GLIBCXX_HAVE_VWSCANF" variable (:constant-flag t) nil [24984 25005])
+            ("_GLIBCXX_HAVE_WCHAR_H" variable (:constant-flag t) nil [25074 25095])
+            ("_GLIBCXX_HAVE_WCSTOF" variable (:constant-flag t) nil [25139 25159])
+            ("_GLIBCXX_HAVE_WCTYPE_H" variable (:constant-flag t) nil [25229 25251])
+            ("_GLIBCXX_HAVE_WRITEV" variable (:constant-flag t) nil [25315 25335])
+            ("_GLIBCXX_ICONV_CONST" variable (:constant-flag t) nil [30904 30924])
+            ("LT_OBJDIR" variable (:constant-flag t) nil [31019 31028])
+            ("_GLIBCXX_PACKAGE_BUGREPORT" variable (:constant-flag t) nil [31179 31205])
+            ("_GLIBCXX_PACKAGE_NAME" variable (:constant-flag t) nil [31265 31286])
+            ("_GLIBCXX_PACKAGE_STRING" variable (:constant-flag t) nil [31372 31395])
+            ("_GLIBCXX_PACKAGE_TARNAME" variable (:constant-flag t) nil [31496 31520])
+            ("_GLIBCXX_PACKAGE_URL" variable (:constant-flag t) nil [31590 31610])
+            ("_GLIBCXX_PACKAGE__GLIBCXX_VERSION" variable (:constant-flag t) nil [31668 31701])
+            ("STDC_HEADERS" variable (:constant-flag t) nil [32162 32174])
+            ("_GLIBCXX_ATOMIC_BUILTINS_1" variable (:constant-flag t) nil [32328 32354])
+            ("_GLIBCXX_ATOMIC_BUILTINS_2" variable (:constant-flag t) nil [32449 32475])
+            ("_GLIBCXX_ATOMIC_BUILTINS_4" variable (:constant-flag t) nil [32565 32591])
+            ("_GLIBCXX_ATOMIC_BUILTINS_8" variable (:constant-flag t) nil [32690 32716])
+            ("_GLIBCXX_HAS_GTHREADS" variable (:constant-flag t) nil [32981 33002])
+            ("_GLIBCXX_HOSTED" variable (:constant-flag t) nil [33089 33104])
+            ("_GLIBCXX_PTRDIFF_T_IS_INT" variable (:constant-flag t) nil [33222 33247])
+            ("_GLIBCXX_RES_LIMITS" variable (:constant-flag t) nil [33334 33353])
+            ("_GLIBCXX_SIZE_T_IS_UINT" variable (:constant-flag t) nil [33405 33428])
+            ("_GLIBCXX_STDIO_EOF" variable (:constant-flag t) nil [33608 33626])
+            ("_GLIBCXX_STDIO_SEEK_CUR" variable (:constant-flag t) nil [33699 33722])
+            ("_GLIBCXX_STDIO_SEEK_END" variable (:constant-flag t) nil [33794 33817])
+            ("_GLIBCXX_SYMVER" variable (:constant-flag t) nil [33890 33905])
+            ("_GLIBCXX_SYMVER_GNU" variable (:constant-flag t) nil [34073 34092])
+            ("_GLIBCXX_USE_C99" variable (:constant-flag t) nil [34440 34456])
+            ("_GLIBCXX_USE_C99_COMPLEX" variable (:constant-flag t) nil [34652 34676])
+            ("_GLIBCXX_USE_C99_COMPLEX_TR1" variable (:constant-flag t) nil [34876 34904])
+            ("_GLIBCXX_USE_C99_CTYPE_TR1" variable (:constant-flag t) nil [35020 35046])
+            ("_GLIBCXX_USE_C99_FENV_TR1" variable (:constant-flag t) nil [35160 35185])
+            ("_GLIBCXX_USE_C99_INTTYPES_TR1" variable (:constant-flag t) nil [35307 35336])
+            ("_GLIBCXX_USE_C99_INTTYPES_WCHAR_T_TR1" variable (:constant-flag t) nil [35466 35503])
+            ("_GLIBCXX_USE_C99_MATH" variable (:constant-flag t) nil [35618 35639])
+            ("_GLIBCXX_USE_C99_MATH_TR1" variable (:constant-flag t) nil [35763 35788])
+            ("_GLIBCXX_USE_C99_STDINT_TR1" variable (:constant-flag t) nil [35902 35929])
+            ("_GLIBCXX_USE_DECIMAL_FLOAT" variable (:constant-flag t) nil [36238 36264])
+            ("_GLIBCXX_USE_GETTIMEOFDAY" variable (:constant-flag t) nil [36320 36345])
+            ("_GLIBCXX_USE_LFS" variable (:constant-flag t) nil [36399 36415])
+            ("_GLIBCXX_USE_LONG_LONG" variable (:constant-flag t) nil [36490 36512])
+            ("_GLIBCXX_USE_NANOSLEEP" variable (:constant-flag t) nil [36565 36587])
+            ("_GLIBCXX_USE_NLS" variable (:constant-flag t) nil [36648 36664])
+            ("_GLIBCXX_USE_RANDOM_TR1" variable (:constant-flag t) nil [36782 36805])
+            ("_GLIBCXX_USE_SCHED_YIELD" variable (:constant-flag t) nil [36860 36884])
+            ("_GLIBCXX_USE_WCHAR_T" variable (:constant-flag t) nil [36957 36977])
+            ("_GLIBCXX_HAVE_ACOSF" variable (:constant-flag t) nil [37060 37079])
+            ("acosf" variable (:constant-flag t) nil [37091 37096])
+            ("_GLIBCXX_HAVE_ACOSL" variable (:constant-flag t) nil [37191 37210])
+            ("acosl" variable (:constant-flag t) nil [37222 37227])
+            ("_GLIBCXX_HAVE_ASINF" variable (:constant-flag t) nil [37322 37341])
+            ("asinf" variable (:constant-flag t) nil [37353 37358])
+            ("_GLIBCXX_HAVE_ASINL" variable (:constant-flag t) nil [37453 37472])
+            ("asinl" variable (:constant-flag t) nil [37484 37489])
+            ("_GLIBCXX_HAVE_ATAN2F" variable (:constant-flag t) nil [37586 37606])
+            ("atan2f" variable (:constant-flag t) nil [37618 37624])
+            ("_GLIBCXX_HAVE_ATAN2L" variable (:constant-flag t) nil [37722 37742])
+            ("atan2l" variable (:constant-flag t) nil [37754 37760])
+            ("_GLIBCXX_HAVE_ATANF" variable (:constant-flag t) nil [37856 37875])
+            ("atanf" variable (:constant-flag t) nil [37887 37892])
+            ("_GLIBCXX_HAVE_ATANL" variable (:constant-flag t) nil [37987 38006])
+            ("atanl" variable (:constant-flag t) nil [38018 38023])
+            ("_GLIBCXX_HAVE_CEILF" variable (:constant-flag t) nil [38118 38137])
+            ("ceilf" variable (:constant-flag t) nil [38149 38154])
+            ("_GLIBCXX_HAVE_CEILL" variable (:constant-flag t) nil [38249 38268])
+            ("ceill" variable (:constant-flag t) nil [38280 38285])
+            ("_GLIBCXX_HAVE_COSF" variable (:constant-flag t) nil [38378 38396])
+            ("cosf" variable (:constant-flag t) nil [38408 38412])
+            ("_GLIBCXX_HAVE_COSHF" variable (:constant-flag t) nil [38506 38525])
+            ("coshf" variable (:constant-flag t) nil [38537 38542])
+            ("_GLIBCXX_HAVE_COSHL" variable (:constant-flag t) nil [38637 38656])
+            ("coshl" variable (:constant-flag t) nil [38668 38673])
+            ("_GLIBCXX_HAVE_COSL" variable (:constant-flag t) nil [38766 38784])
+            ("cosl" variable (:constant-flag t) nil [38796 38800])
+            ("_GLIBCXX_HAVE_EXPF" variable (:constant-flag t) nil [38892 38910])
+            ("expf" variable (:constant-flag t) nil [38922 38926])
+            ("_GLIBCXX_HAVE_EXPL" variable (:constant-flag t) nil [39018 39036])
+            ("expl" variable (:constant-flag t) nil [39048 39052])
+            ("_GLIBCXX_HAVE_FABSF" variable (:constant-flag t) nil [39146 39165])
+            ("fabsf" variable (:constant-flag t) nil [39177 39182])
+            ("_GLIBCXX_HAVE_FABSL" variable (:constant-flag t) nil [39277 39296])
+            ("fabsl" variable (:constant-flag t) nil [39308 39313])
+            ("_GLIBCXX_HAVE_FINITE" variable (:constant-flag t) nil [39410 39430])
+            ("finite" variable (:constant-flag t) nil [39442 39448])
+            ("_GLIBCXX_HAVE_FINITEF" variable (:constant-flag t) nil [39548 39569])
+            ("finitef" variable (:constant-flag t) nil [39581 39588])
+            ("_GLIBCXX_HAVE_FINITEL" variable (:constant-flag t) nil [39689 39710])
+            ("finitel" variable (:constant-flag t) nil [39722 39729])
+            ("_GLIBCXX_HAVE_FLOORF" variable (:constant-flag t) nil [39828 39848])
+            ("floorf" variable (:constant-flag t) nil [39860 39866])
+            ("_GLIBCXX_HAVE_FLOORL" variable (:constant-flag t) nil [39964 39984])
+            ("floorl" variable (:constant-flag t) nil [39996 40002])
+            ("_GLIBCXX_HAVE_FMODF" variable (:constant-flag t) nil [40098 40117])
+            ("fmodf" variable (:constant-flag t) nil [40129 40134])
+            ("_GLIBCXX_HAVE_FMODL" variable (:constant-flag t) nil [40229 40248])
+            ("fmodl" variable (:constant-flag t) nil [40260 40265])
+            ("_GLIBCXX_HAVE_FPCLASS" variable (:constant-flag t) nil [40364 40385])
+            ("fpclass" variable (:constant-flag t) nil [40397 40404])
+            ("_GLIBCXX_HAVE_FREXPF" variable (:constant-flag t) nil [40503 40523])
+            ("frexpf" variable (:constant-flag t) nil [40535 40541])
+            ("_GLIBCXX_HAVE_FREXPL" variable (:constant-flag t) nil [40639 40659])
+            ("frexpl" variable (:constant-flag t) nil [40671 40677])
+            ("_GLIBCXX_HAVE_HYPOT" variable (:constant-flag t) nil [40773 40792])
+            ("hypot" variable (:constant-flag t) nil [40804 40809])
+            ("_GLIBCXX_HAVE_HYPOTF" variable (:constant-flag t) nil [40906 40926])
+            ("hypotf" variable (:constant-flag t) nil [40938 40944])
+            ("_GLIBCXX_HAVE_HYPOTL" variable (:constant-flag t) nil [41042 41062])
+            ("hypotl" variable (:constant-flag t) nil [41074 41080])
+            ("_GLIBCXX_HAVE_ISINF" variable (:constant-flag t) nil [41176 41195])
+            ("isinf" variable (:constant-flag t) nil [41207 41212])
+            ("_GLIBCXX_HAVE_ISINFF" variable (:constant-flag t) nil [41309 41329])
+            ("isinff" variable (:constant-flag t) nil [41341 41347])
+            ("_GLIBCXX_HAVE_ISINFL" variable (:constant-flag t) nil [41445 41465])
+            ("isinfl" variable (:constant-flag t) nil [41477 41483])
+            ("_GLIBCXX_HAVE_ISNAN" variable (:constant-flag t) nil [41579 41598])
+            ("isnan" variable (:constant-flag t) nil [41610 41615])
+            ("_GLIBCXX_HAVE_ISNANF" variable (:constant-flag t) nil [41712 41732])
+            ("isnanf" variable (:constant-flag t) nil [41744 41750])
+            ("_GLIBCXX_HAVE_ISNANL" variable (:constant-flag t) nil [41848 41868])
+            ("isnanl" variable (:constant-flag t) nil [41880 41886])
+            ("_GLIBCXX_HAVE_LDEXPF" variable (:constant-flag t) nil [41984 42004])
+            ("ldexpf" variable (:constant-flag t) nil [42016 42022])
+            ("_GLIBCXX_HAVE_LDEXPL" variable (:constant-flag t) nil [42120 42140])
+            ("ldexpl" variable (:constant-flag t) nil [42152 42158])
+            ("_GLIBCXX_HAVE_LOG10F" variable (:constant-flag t) nil [42256 42276])
+            ("log10f" variable (:constant-flag t) nil [42288 42294])
+            ("_GLIBCXX_HAVE_LOG10L" variable (:constant-flag t) nil [42392 42412])
+            ("log10l" variable (:constant-flag t) nil [42424 42430])
+            ("_GLIBCXX_HAVE_LOGF" variable (:constant-flag t) nil [42524 42542])
+            ("logf" variable (:constant-flag t) nil [42554 42558])
+            ("_GLIBCXX_HAVE_LOGL" variable (:constant-flag t) nil [42650 42668])
+            ("logl" variable (:constant-flag t) nil [42680 42684])
+            ("_GLIBCXX_HAVE_MODF" variable (:constant-flag t) nil [42776 42794])
+            ("modf" variable (:constant-flag t) nil [42806 42810])
+            ("_GLIBCXX_HAVE_MODFF" variable (:constant-flag t) nil [42904 42923])
+            ("modff" variable (:constant-flag t) nil [42935 42940])
+            ("_GLIBCXX_HAVE_MODFL" variable (:constant-flag t) nil [43035 43054])
+            ("modfl" variable (:constant-flag t) nil [43066 43071])
+            ("_GLIBCXX_HAVE_POWF" variable (:constant-flag t) nil [43164 43182])
+            ("powf" variable (:constant-flag t) nil [43194 43198])
+            ("_GLIBCXX_HAVE_POWL" variable (:constant-flag t) nil [43290 43308])
+            ("powl" variable (:constant-flag t) nil [43320 43324])
+            ("_GLIBCXX_HAVE_QFPCLASS" variable (:constant-flag t) nil [43424 43446])
+            ("qfpclass" variable (:constant-flag t) nil [43458 43466])
+            ("_GLIBCXX_HAVE_SINCOS" variable (:constant-flag t) nil [43566 43586])
+            ("sincos" variable (:constant-flag t) nil [43598 43604])
+            ("_GLIBCXX_HAVE_SINCOSF" variable (:constant-flag t) nil [43704 43725])
+            ("sincosf" variable (:constant-flag t) nil [43737 43744])
+            ("_GLIBCXX_HAVE_SINCOSL" variable (:constant-flag t) nil [43845 43866])
+            ("sincosl" variable (:constant-flag t) nil [43878 43885])
+            ("_GLIBCXX_HAVE_SINF" variable (:constant-flag t) nil [43980 43998])
+            ("sinf" variable (:constant-flag t) nil [44010 44014])
+            ("_GLIBCXX_HAVE_SINHF" variable (:constant-flag t) nil [44108 44127])
+            ("sinhf" variable (:constant-flag t) nil [44139 44144])
+            ("_GLIBCXX_HAVE_SINHL" variable (:constant-flag t) nil [44239 44258])
+            ("sinhl" variable (:constant-flag t) nil [44270 44275])
+            ("_GLIBCXX_HAVE_SINL" variable (:constant-flag t) nil [44368 44386])
+            ("sinl" variable (:constant-flag t) nil [44398 44402])
+            ("_GLIBCXX_HAVE_SQRTF" variable (:constant-flag t) nil [44496 44515])
+            ("sqrtf" variable (:constant-flag t) nil [44527 44532])
+            ("_GLIBCXX_HAVE_SQRTL" variable (:constant-flag t) nil [44627 44646])
+            ("sqrtl" variable (:constant-flag t) nil [44658 44663])
+            ("_GLIBCXX_HAVE_STRTOF" variable (:constant-flag t) nil [44760 44780])
+            ("strtof" variable (:constant-flag t) nil [44792 44798])
+            ("_GLIBCXX_HAVE_STRTOLD" variable (:constant-flag t) nil [44898 44919])
+            ("strtold" variable (:constant-flag t) nil [44931 44938])
+            ("_GLIBCXX_HAVE_TANF" variable (:constant-flag t) nil [45033 45051])
+            ("tanf" variable (:constant-flag t) nil [45063 45067])
+            ("_GLIBCXX_HAVE_TANHF" variable (:constant-flag t) nil [45161 45180])
+            ("tanhf" variable (:constant-flag t) nil [45192 45197])
+            ("_GLIBCXX_HAVE_TANHL" variable (:constant-flag t) nil [45292 45311])
+            ("tanhl" variable (:constant-flag t) nil [45323 45328])
+            ("_GLIBCXX_HAVE_TANL" variable (:constant-flag t) nil [45421 45439])
+            ("tanl" variable (:constant-flag t) nil [45451 45455]))          
+      :file "c++config.h"
+      :pointmax 45502
+      :fsize 45501
+      :lastmodtime '(20363 23501)
+      :unmatched-syntax '((INLINE 8795 . 8801) (symbol 7064 . 7071) (symbol 7059 . 7063) (symbol 7056 . 7058) (symbol 7051 . 7055) (symbol 7048 . 7050) (symbol 7044 . 7047) (symbol 7035 . 7043) (symbol 7027 . 7034) (symbol 7017 . 7021) (symbol 7013 . 7016) (symbol 7007 . 7012) (symbol 7002 . 7006) (USING 6978 . 6983) (symbol 6968 . 6977) (symbol 6960 . 6967) (punctuation 6957 . 6958) (symbol 6846 . 6856) (symbol 6838 . 6845) (symbol 6829 . 6837) (symbol 6826 . 6828) (symbol 6822 . 6825) (symbol 6814 . 6821) (symbol 6808 . 6813) (punctuation 6805 . 6806) (symbol 6725 . 6735) (symbol 6717 . 6724) (symbol 6708 . 6716) (symbol 6705 . 6707) (symbol 6701 . 6704) (symbol 6693 . 6700) (symbol 6687 . 6692) (punctuation 6684 . 6685) (symbol 6607 . 6617) (symbol 6599 . 6606) (symbol 6590 . 6598) (symbol 6587 . 6589) (symbol 6583 . 6586) (symbol 6575 . 6582) (symbol 6569 . 6574) (punctuation 6566 . 6567) (INLINE 6090 . 6096) (INLINE 5554 . 5560) (INLINE 5506 . 5512) (INLINE 5452 . 5458) (INLINE 5403 . 5409) (INLINE 5352 . 5358) (INLINE 5299 . 5305) (INLINE 5242 . 5248) (INLINE 5188 . 5194) (INLINE 5139 . 5145) (INLINE 5085 . 5091) (INLINE 5033 . 5039) (INLINE 4974 . 4980) (INLINE 4920 . 4926) (INLINE 4868 . 4874) (INLINE 4820 . 4826))
+      :lexical-table 
+        '(("_GLIBCXX_END_NAMESPACE_VERSION" . ((close-paren "}" 5681 . 5682)))
+          ("_GLIBCXX_END_NAMESPACE_ALGO")
+          ("_GLIBCXX_HAVE_ATAN2F" . ((number "1" 37607 . 37608)))
+          ("_GLIBCXX_HAVE_COSF" . ((number "1" 38397 . 38398)))
+          ("_GLIBCXX_HAVE_COSHL" . ((number "1" 38657 . 38658)))
+          ("_GLIBCXX_HAVE_EIDRM" . ((number "1" 14642 . 14643)))
+          ("_GLIBCXX_HAVE_INT64_T" . ((number "1" 17725 . 17726)))
+          ("_GLIBCXX_HAVE_ISINFL" . ((number "1" 41466 . 41467)))
+          ("_GLIBCXX_HAVE_MEMORY_H" . ((number "1" 20256 . 20257)))
+          ("_GLIBCXX_HAVE_MODFF" . ((number "1" 42924 . 42925)))
+          ("_GLIBCXX_HAVE_SINCOS" . ((number "1" 43587 . 43588)))
+          ("_GLIBCXX_HAVE_S_ISREG" . ((number "1" 24200 . 24201)))
+          ("_GLIBCXX_HAVE_VWSCANF" . ((number "1" 25006 . 25007)))
+          ("_GLIBCXX_USE_C99_FENV_TR1" . ((number "1" 35186 . 35187)))
+          ("_GLIBCXX_USE_C99_INTTYPES_WCHAR_T_TR1" . ((number "1" 35504 . 35505)))
+          ("expl" . ((symbol "_expl" 39053 . 39058)))
+          ("hypotf" . ((symbol "_hypotf" 40945 . 40952)))
+          ("isinf" . ((symbol "_isinf" 41213 . 41219)))
+          ("_GLIBCXX_CXX_CONFIG_H" . ((number "1" 1392 . 1393)))
+          ("_GLIBCXX_BEGIN_NAMESPACE_VERSION" . 
+              ((NAMESPACE "namespace" 5625 . 5634) (symbol "__7" 5635 . 5638) (semantic-list "{" 5639 . 5640)))
+          ("_GLIBCXX_BEGIN_EXTERN_C" . 
+              ((EXTERN "extern" 11236 . 11242) (string "\"C\"" 11243 . 11246) (semantic-list "{" 11247 . 11248)))
+          ("_GLIBCXX_HAVE_AS_SYMVER_DIRECTIVE" . ((number "1" 13325 . 13326)))
+          ("_GLIBCXX_HAVE_DLFCN_H" . ((number "1" 14447 . 14448)))
+          ("_GLIBCXX_HAVE_FENV_H" . ((number "1" 15975 . 15976)))
+          ("_GLIBCXX_HAVE_HYPOT" . ((number "1" 40793 . 40794)))
+          ("_GLIBCXX_HAVE_LDEXPF" . ((number "1" 42005 . 42006)))
+          ("_GLIBCXX_HAVE_LOCALE_H" . ((number "1" 19532 . 19533)))
+          ("_GLIBCXX_HAVE_STRXFRM_L" . ((number "1" 22668 . 22669)))
+          ("_GLIBCXX_HAVE_SYMVER_SYMBOL_RENAMING_RUNTIME_SUPPORT" . ((number "1" 22838 . 22839)))
+          ("_GLIBCXX_SYMVER_GNU" . ((number "1" 34093 . 34094)))
+          ("_GLIBCXX_USE_C99" . ((number "1" 34457 . 34458)))
+          ("_GLIBCXX_USE_C99_INTTYPES_TR1" . ((number "1" 35337 . 35338)))
+          ("_GLIBCXX_USE_NLS" . ((number "1" 36665 . 36666)))
+          ("ceilf" . ((symbol "_ceilf" 38155 . 38161)))
+          ("floorf" . ((symbol "_floorf" 39867 . 39874)))
+          ("_GLIBCXX_HAVE_FPCLASS" . ((number "1" 40386 . 40387)))
+          ("fpclass" . ((symbol "_fpclass" 40405 . 40413)))
+          ("isnan" . ((symbol "_isnan" 41616 . 41622)))
+          ("isnanf" . ((symbol "_isnanf" 41751 . 41758)))
+          ("sinhl" . ((symbol "_sinhl" 44276 . 44282)))
+          ("_GLIBCXX_HAVE_ENOLINK" . ((number "1" 14864 . 14865)))
+          ("_GLIBCXX_HAVE_EXECINFO_H" . ((number "1" 15559 . 15560)))
+          ("_GLIBCXX_HAVE_EXPL" . ((number "1" 39037 . 39038)))
+          ("_GLIBCXX_HAVE_FREXPF" . ((number "1" 40524 . 40525)))
+          ("_GLIBCXX_HAVE_HYPOTL" . ((number "1" 41063 . 41064)))
+          ("_GLIBCXX_HAVE_WRITEV" . ((number "1" 25336 . 25337)))
+          ("_GLIBCXX_SYMVER" . ((number "1" 33906 . 33907)))
+          ("_GLIBCXX_USE_SCHED_YIELD" . ((number "1" 36885 . 36886)))
+          ("asinf" . ((symbol "_asinf" 37359 . 37365)))
+          ("atanl" . ((symbol "_atanl" 38024 . 38030)))
+          ("fmodl" . ((symbol "_fmodl" 40266 . 40272)))
+          ("log10f" . ((symbol "_log10f" 42295 . 42302)))
+          ("modf" . ((symbol "_modf" 42811 . 42816)))
+          ("_GLIBCXX_NOTHROW" . ((symbol "__attribute__" 2010 . 2023) (semantic-list "((__nothrow__))" 2023 . 2038)))
+          ("_GLIBCXX_EXTERN_TEMPLATE" . 
+              ((number "1" 7803 . 7804) (punctuation "-" 7805 . 7806) (number "1" 7806 . 7807)))
+          ("_GLIBCXX_HAVE_CEILL" . ((number "1" 38269 . 38270)))
+          ("_GLIBCXX_HAVE_FINITE" . ((number "1" 39431 . 39432)))
+          ("_GLIBCXX_HAVE_FLOORL" . ((number "1" 39985 . 39986)))
+          ("_GLIBCXX_HAVE_ISNANL" . ((number "1" 41869 . 41870)))
+          ("_GLIBCXX_HAVE_SINCOSL" . ((number "1" 43867 . 43868)))
+          ("_GLIBCXX_HAVE_STRING_H" . ((number "1" 22407 . 22408)))
+          ("_GLIBCXX_HAVE_SYS_SEM_H" . ((number "1" 23639 . 23640)))
+          ("_GLIBCXX_HAVE_SYS_TYPES_H" . ((number "1" 23929 . 23930)))
+          ("STDC_HEADERS" . ((number "1" 32175 . 32176)))
+          ("_GLIBCXX_ATOMIC_BUILTINS_1" . ((number "1" 32355 . 32356)))
+          ("_GLIBCXX_HOSTED" . ((number "1" 33105 . 33106)))
+          ("_GLIBCXX_USE_C99_MATH_TR1" . ((number "1" 35789 . 35790)))
+          ("_GLIBCXX_USE_RANDOM_TR1" . ((number "1" 36806 . 36807)))
+          ("acosf" . ((symbol "_acosf" 37097 . 37103)))
+          ("fabsf" . ((symbol "_fabsf" 39183 . 39189)))
+          ("logl" . ((symbol "_logl" 42685 . 42690)))
+          ("powl" . ((symbol "_powl" 43325 . 43330)))
+          ("sincosl" . ((symbol "_sincosl" 43886 . 43894)))
+          ("sinl" . ((symbol "_sinl" 44403 . 44408)))
+          ("sqrtl" . ((symbol "_sqrtl" 44664 . 44670)))
+          ("tanhf" . ((symbol "_tanhf" 45198 . 45204)))
+          ("__GLIBCXX__" . ((number "20120301" 1488 . 1496)))
+          ("_GLIBCXX_DEPRECATED" . ((symbol "__attribute__" 2778 . 2791) (semantic-list "((__deprecated__))" 2792 . 2810)))
+          ("_GLIBCXX_STD_A" . ((symbol "std" 8107 . 8110)))
+          ("_GLIBCXX_SYNCHRONIZATION_HAPPENS_AFTER" (spp-arg-list ("A") 11119 . 11122))
+          ("_GLIBCXX_HAVE_ASINL" . ((number "1" 37473 . 37474)))
+          ("_GLIBCXX_HAVE_ENDIAN_H" . ((number "1" 14734 . 14735)))
+          ("_GLIBCXX_HAVE_EOVERFLOW" . ((number "1" 15203 . 15204)))
+          ("_GLIBCXX_HAVE_FLOAT_H" . ((number "1" 16324 . 16325)))
+          ("_GLIBCXX_HAVE_ISWBLANK" . ((number "1" 18554 . 18555)))
+          ("_GLIBCXX_HAVE_LC_MESSAGES" . ((number "1" 18647 . 18648)))
+          ("_GLIBCXX_HAVE_LINUX_FUTEX" . ((number "1" 19440 . 19441)))
+          ("_GLIBCXX_HAVE_MODF" . ((number "1" 42795 . 42796)))
+          ("_GLIBCXX_HAVE_SINHF" . ((number "1" 44128 . 44129)))
+          ("_GLIBCXX_HAVE_SYS_PARAM_H" . ((number "1" 23441 . 23442)))
+          ("_GLIBCXX_HAVE_SYS_TIME_H" . ((number "1" 23831 . 23832)))
+          ("_GLIBCXX_HAVE_TGMATH_H" . ((number "1" 24620 . 24621)))
+          ("LT_OBJDIR" . ((string "\".libs/\"" 31029 . 31037)))
+          ("_GLIBCXX_PACKAGE_STRING" . ((string "\"package-unused version-unused\"" 31396 . 31427)))
+          ("_GLIBCXX_ATOMIC_BUILTINS_2" . ((number "1" 32476 . 32477)))
+          ("_GLIBCXX_USE_C99_CTYPE_TR1" . ((number "1" 35047 . 35048)))
+          ("_GLIBCXX_USE_LFS" . ((number "1" 36416 . 36417)))
+          ("coshl" . ((symbol "_coshl" 38674 . 38680)))
+          ("cosl" . ((symbol "_cosl" 38801 . 38806)))
+          ("isinfl" . ((symbol "_isinfl" 41484 . 41491)))
+          ("modff" . ((symbol "_modff" 42941 . 42947)))
+          ("sincos" . ((symbol "_sincos" 43605 . 43612)))
+          ("tanf" . ((symbol "_tanf" 45068 . 45073)))
+          ("_GLIBCXX_VISIBILITY" (spp-arg-list ("V") 2271 . 2274) . ((symbol "__attribute__" 2275 . 2288) (semantic-list "((__visibility__ (#V)))" 2289 . 2312)))
+          ("_GLIBCXX_CONSTEXPR")
+          ("_GLIBCXX_INLINE_VERSION" . ((number "0" 4726 . 4727)))
+          ("_GLIBCXX_BEGIN_NAMESPACE_LDBL" . 
+              ((NAMESPACE "namespace" 8928 . 8937) (symbol "__gnu_cxx_ldbl128" 8938 . 8955) (semantic-list "{" 8956 . 8957)))
+          ("_GLIBCXX_HAVE_ACOSL" . ((number "1" 37211 . 37212)))
+          ("_GLIBCXX_HAVE_ATANF" . ((number "1" 37876 . 37877)))
+          ("_GLIBCXX_HAVE_EPROTO" . ((number "1" 15337 . 15338)))
+          ("_GLIBCXX_HAVE_ETXTBSY" . ((number "1" 15463 . 15464)))
+          ("_GLIBCXX_HAVE_FABSL" . ((number "1" 39297 . 39298)))
+          ("_GLIBCXX_HAVE_FMODF" . ((number "1" 40118 . 40119)))
+          ("_GLIBCXX_HAVE_GTHR_DEFAULT" . ((number "1" 17214 . 17215)))
+          ("_GLIBCXX_HAVE_LIBINTL_H" . ((number "1" 18911 . 18912)))
+          ("_GLIBCXX_HAVE_LIMIT_FSIZE" . ((number "1" 19180 . 19181)))
+          ("_GLIBCXX_HAVE_LOG10F" . ((number "1" 42277 . 42278)))
+          ("_GLIBCXX_HAVE_LOGL" . ((number "1" 42669 . 42670)))
+          ("_GLIBCXX_HAVE_POWL" . ((number "1" 43309 . 43310)))
+          ("_GLIBCXX_HAVE_SINL" . ((number "1" 44387 . 44388)))
+          ("_GLIBCXX_HAVE_STDLIB_H" . ((number "1" 22039 . 22040)))
+          ("_GLIBCXX_HAVE_SYS_RESOURCE_H" . ((number "1" 23545 . 23546)))
+          ("_GLIBCXX_HAVE_SYS_UIO_H" . ((number "1" 24023 . 24024)))
+          ("_GLIBCXX_HAVE_TANHL" . ((number "1" 45312 . 45313)))
+          ("_GLIBCXX_HAVE_WCHAR_H" . ((number "1" 25096 . 25097)))
+          ("_GLIBCXX_PTRDIFF_T_IS_INT" . ((number "1" 33248 . 33249)))
+          ("_GLIBCXX_RES_LIMITS" . ((number "1" 33354 . 33355)))
+          ("_GLIBCXX_STDIO_SEEK_END" . ((number "2" 33818 . 33819)))
+          ("_GLIBCXX_USE_C99_COMPLEX" . ((number "1" 34677 . 34678)))
+          ("_GLIBCXX_USE_C99_MATH" . ((number "1" 35640 . 35641)))
+          ("_GLIBCXX_USE_DECIMAL_FLOAT" . ((number "1" 36265 . 36266)))
+          ("atan2l" . ((symbol "_atan2l" 37761 . 37768)))
+          ("hypot" . ((symbol "_hypot" 40810 . 40816)))
+          ("ldexpf" . ((symbol "_ldexpf" 42023 . 42030)))
+          ("_GLIBCXX_NORETURN" . ((symbol "__attribute__" 1857 . 1870) (semantic-list "((__noreturn__))" 1871 . 1887)))
+          ("_GLIBCXX_STD_C" . ((symbol "__cxx1998" 7538 . 7547)))
+          ("_GLIBCXX_BEGIN_NAMESPACE_ALGO")
+          ("_GLIBCXX_FAST_MATH" . ((number "0" 12256 . 12257)))
+          ("_GLIBCXX_HAVE_ATAN2L" . ((number "1" 37743 . 37744)))
+          ("_GLIBCXX_HAVE_COMPLEX_H" . ((number "1" 14029 . 14030)))
+          ("_GLIBCXX_HAVE_COSL" . ((number "1" 38785 . 38786)))
+          ("_GLIBCXX_HAVE_ECANCELED" . ((number "1" 14581 . 14582)))
+          ("_GLIBCXX_HAVE_FINITEF" . ((number "1" 39570 . 39571)))
+          ("_GLIBCXX_HAVE_INT64_T_LONG_LONG" . ((number "1" 17884 . 17885)))
+          ("_GLIBCXX_HAVE_MBSTATE_T" . ((number "1" 20164 . 20165)))
+          ("_GLIBCXX_HAVE_MODFL" . ((number "1" 43055 . 43056)))
+          ("_GLIBCXX_HAVE_SQRTF" . ((number "1" 44516 . 44517)))
+          ("_GLIBCXX_HAVE_STRERROR_L" . ((number "1" 22130 . 22131)))
+          ("_GLIBCXX_HAVE_TANF" . ((number "1" 45052 . 45053)))
+          ("_GLIBCXX_ATOMIC_BUILTINS_4" . ((number "1" 32592 . 32593)))
+          ("_GLIBCXX_HAS_GTHREADS" . ((number "1" 33003 . 33004)))
+          ("_GLIBCXX_USE_WCHAR_T" . ((number "1" 36978 . 36979)))
+          ("finitef" . ((symbol "_finitef" 39589 . 39597)))
+          ("frexpf" . ((symbol "_frexpf" 40542 . 40549)))
+          ("hypotl" . ((symbol "_hypotl" 41081 . 41088)))
+          ("__glibcxx_assert" (spp-arg-list ("_Condition") 9216 . 9228))
+          ("_GLIBCXX_SYNCHRONIZATION_HAPPENS_BEFORE" (spp-arg-list ("A") 11013 . 11016))
+          ("_GLIBCXX_HAVE_COSHF" . ((number "1" 38526 . 38527)))
+          ("_GLIBCXX_HAVE_ETIME" . ((number "1" 15398 . 15399)))
+          ("_GLIBCXX_HAVE_ISINFF" . ((number "1" 41330 . 41331)))
+          ("_GLIBCXX_HAVE_LDEXPL" . ((number "1" 42141 . 42142)))
+          ("_GLIBCXX_HAVE_LIMIT_DATA" . ((number "1" 19089 . 19090)))
+          ("_GLIBCXX_HAVE_STDINT_H" . ((number "1" 21947 . 21948)))
+          ("_GLIBCXX_HAVE_STRINGS_H" . ((number "1" 22315 . 22316)))
+          ("_GLIBCXX_HAVE_VFWSCANF" . ((number "1" 24872 . 24873)))
+          ("_GLIBCXX_HAVE_VSWSCANF" . ((number "1" 24940 . 24941)))
+          ("_GLIBCXX_HAVE_WCSTOF" . ((number "1" 25160 . 25161)))
+          ("_GLIBCXX_PACKAGE_BUGREPORT" . ((string "\"\"" 31206 . 31208)))
+          ("ceill" . ((symbol "_ceill" 38286 . 38292)))
+          ("expf" . ((symbol "_expf" 38927 . 38932)))
+          ("finite" . ((symbol "_finite" 39449 . 39456)))
+          ("floorl" . ((symbol "_floorl" 40003 . 40010)))
+          ("isnanl" . ((symbol "_isnanl" 41887 . 41894)))
+          ("_GLIBCXX_HAVE_EBADMSG" . ((number "1" 14512 . 14513)))
+          ("_GLIBCXX_HAVE_ENODATA" . ((number "1" 14799 . 14800)))
+          ("_GLIBCXX_HAVE_ENOSR" . ((number "1" 14925 . 14926)))
+          ("_GLIBCXX_HAVE_FREXPL" . ((number "1" 40660 . 40661)))
+          ("_GLIBCXX_HAVE_STDBOOL_H" . ((number "1" 21855 . 21856)))
+          ("_GLIBCXX_HAVE_STRTOF" . ((number "1" 44781 . 44782)))
+          ("_GLIBCXX_HAVE_SYS_STAT_H" . ((number "1" 23735 . 23736)))
+          ("_GLIBCXX_ICONV_CONST")
+          ("_GLIBCXX_SIZE_T_IS_UINT" . ((number "1" 33429 . 33430)))
+          ("_GLIBCXX_STDIO_EOF" . ((punctuation "-" 33627 . 33628) (number "1" 33628 . 33629)))
+          ("_GLIBCXX_USE_GETTIMEOFDAY" . ((number "1" 36346 . 36347)))
+          ("asinl" . ((symbol "_asinl" 37490 . 37496)))
+          ("log10l" . ((symbol "_log10l" 42431 . 42438)))
+          ("sinhf" . ((symbol "_sinhf" 44145 . 44151)))
+          ("_GLIBCXX_WEAK_DEFINITION")
+          ("__N" (spp-arg-list ("msgid") 12561 . 12568) . ((semantic-list "(msgid)" 12573 . 12580)))
+          ("_GLIBCXX_HAVE_ENOSTR" . ((number "1" 14988 . 14989)))
+          ("_GLIBCXX_HAVE_ENOTRECOVERABLE" . ((number "1" 15069 . 15070)))
+          ("_GLIBCXX_HAVE_ENOTSUP" . ((number "1" 15134 . 15135)))
+          ("_GLIBCXX_HAVE_EOWNERDEAD" . ((number "1" 15274 . 15275)))
+          ("_GLIBCXX_HAVE_EXPF" . ((number "1" 38911 . 38912)))
+          ("_GLIBCXX_HAVE_HYPOTF" . ((number "1" 40927 . 40928)))
+          ("_GLIBCXX_HAVE_INTTYPES_H" . ((number "1" 17980 . 17981)))
+          ("_GLIBCXX_HAVE_ISINF" . ((number "1" 41196 . 41197)))
+          ("_GLIBCXX_HAVE_LIMIT_RSS" . ((number "1" 19269 . 19270)))
+          ("_GLIBCXX_HAVE_LIMIT_VMEM" . ((number "0" 19359 . 19360)))
+          ("_GLIBCXX_HAVE_UNISTD_H" . ((number "1" 24804 . 24805)))
+          ("_GLIBCXX_HAVE_WCTYPE_H" . ((number "1" 25252 . 25253)))
+          ("_GLIBCXX_PACKAGE_NAME" . ((string "\"package-unused\"" 31287 . 31303)))
+          ("_GLIBCXX_PACKAGE_TARNAME" . ((string "\"libstdc++\"" 31521 . 31532)))
+          ("_GLIBCXX_STDIO_SEEK_CUR" . ((number "1" 33723 . 33724)))
+          ("_GLIBCXX_USE_C99_COMPLEX_TR1" . ((number "1" 34905 . 34906)))
+          ("acosl" . ((symbol "_acosl" 37228 . 37234)))
+          ("atanf" . ((symbol "_atanf" 37893 . 37899)))
+          ("fabsl" . ((symbol "_fabsl" 39314 . 39320)))
+          ("fmodf" . ((symbol "_fmodf" 40135 . 40141)))
+          ("_GLIBCXX_HAVE_QFPCLASS" . ((number "1" 43447 . 43448)))
+          ("tanhl" . ((symbol "_tanhl" 45329 . 45335)))
+          ("_GLIBCXX_PURE" . ((symbol "__attribute__" 1686 . 1699) (semantic-list "((__pure__))" 1700 . 1712)))
+          ("_GLIBCXX_USE_DEPRECATED" . ((number "1" 2674 . 2675)))
+          ("_GLIBCXX_BEGIN_NAMESPACE_CONTAINER" . 
+              ((NAMESPACE "namespace" 7596 . 7605) (symbol "_GLIBCXX_STD_C" 7606 . 7620) (semantic-list "{ _GLIBCXX_BEGIN_NAMESPACE_VERSION" 7621 . 7655)))
+          ("_GLIBCXX_HAVE_CEILF" . ((number "1" 38138 . 38139)))
+          ("_GLIBCXX_HAVE_FLOORF" . ((number "1" 39849 . 39850)))
+          ("_GLIBCXX_HAVE_ISNAN" . ((number "1" 41599 . 41600)))
+          ("_GLIBCXX_HAVE_ISNANF" . ((number "1" 41733 . 41734)))
+          ("_GLIBCXX_HAVE_SINCOSF" . ((number "1" 43726 . 43727)))
+          ("_GLIBCXX_HAVE_SINHL" . ((number "1" 44259 . 44260)))
+          ("_GLIBCXX_HAVE_SYS_IOCTL_H" . ((number "1" 23037 . 23038)))
+          ("_GLIBCXX_PACKAGE__GLIBCXX_VERSION" . ((string "\"version-unused\"" 31702 . 31718)))
+          ("_GLIBCXX_ATOMIC_BUILTINS_8" . ((number "1" 32717 . 32718)))
+          ("logf" . ((symbol "_logf" 42559 . 42564)))
+          ("modfl" . ((symbol "_modfl" 43072 . 43078)))
+          ("powf" . ((symbol "_powf" 43199 . 43204)))
+          ("sincosf" . ((symbol "_sincosf" 43745 . 43753)))
+          ("sinf" . ((symbol "_sinf" 44015 . 44020)))
+          ("sqrtf" . ((symbol "_sqrtf" 44533 . 44539)))
+          ("tanl" . ((symbol "_tanl" 45456 . 45461)))
+          ("_GLIBCXX_CONST" . ((symbol "__attribute__" 1768 . 1781) (semantic-list "((__const__))" 1782 . 1795)))
+          ("_GLIBCXX_NAMESPACE_LDBL" . 
+              ((symbol "__gnu_cxx_ldbl128" 8869 . 8886) (punctuation ":" 8886 . 8887) (punctuation ":" 8887 . 8888)))
+          ("_GLIBCXX_PSEUDO_VISIBILITY" (spp-arg-list ("V") 11730 . 11733))
+          ("_GLIBCXX_HAVE_ASINF" . ((number "1" 37342 . 37343)))
+          ("_GLIBCXX_HAVE_ATANL" . ((number "1" 38007 . 38008)))
+          ("_GLIBCXX_HAVE_FMODL" . ((number "1" 40249 . 40250)))
+          ("_GLIBCXX_HAVE_GETIPINFO" . ((number "1" 17090 . 17091)))
+          ("_GLIBCXX_HAVE_ICONV" . ((number "1" 17545 . 17546)))
+          ("_GLIBCXX_HAVE_LOG10L" . ((number "1" 42413 . 42414)))
+          ("_GLIBCXX_HAVE_POLL" . ((number "1" 20669 . 20670)))
+          ("_GLIBCXX_HAVE_STRTOLD" . ((number "1" 44920 . 44921)))
+          ("_GLIBCXX_HAVE_SYS_IPC_H" . ((number "1" 23131 . 23132)))
+          ("_GLIBCXX_PACKAGE_URL" . ((string "\"\"" 31611 . 31613)))
+          ("_GLIBCXX_USE_LONG_LONG" . ((number "1" 36513 . 36514)))
+          ("_GLIBCXX_USE_NANOSLEEP" . ((number "1" 36588 . 36589)))
+          ("cosf" . ((symbol "_cosf" 38413 . 38418)))
+          ("coshf" . ((symbol "_coshf" 38543 . 38549)))
+          ("isinff" . ((symbol "_isinff" 41348 . 41355)))
+          ("ldexpl" . ((symbol "_ldexpl" 42159 . 42166)))
+          ("qfpclass" . ((symbol "_qfpclass" 43467 . 43476)))
+          ("strtold" . ((symbol "_strtold" 44939 . 44947)))
+          ("_GLIBCXX_HAVE_ATTRIBUTE_VISIBILITY" . ((number "1" 2201 . 2202)))
+          ("_GLIBCXX_USE_CONSTEXPR" . ((CONST "const" 3140 . 3145)))
+          ("_GLIBCXX_END_NAMESPACE_CONTAINER" . ((close-paren "}" 7702 . 7703) (symbol "_GLIBCXX_END_NAMESPACE_VERSION" 7704 . 7734)))
+          ("_GLIBCXX_END_NAMESPACE_LDBL" . ((close-paren "}" 8995 . 8996)))
+          ("_GLIBCXX_END_EXTERN_C" . ((close-paren "}" 11280 . 11281)))
+          ("_GLIBCXX_HAVE_ACOSF" . ((number "1" 37080 . 37081)))
+          ("_GLIBCXX_HAVE_FABSF" . ((number "1" 39166 . 39167)))
+          ("_GLIBCXX_HAVE_FINITEL" . ((number "1" 39711 . 39712)))
+          ("_GLIBCXX_HAVE_LIMIT_AS" . ((number "1" 18999 . 19000)))
+          ("_GLIBCXX_HAVE_LOGF" . ((number "1" 42543 . 42544)))
+          ("_GLIBCXX_HAVE_POWF" . ((number "1" 43183 . 43184)))
+          ("_GLIBCXX_HAVE_SETENV" . ((number "1" 21008 . 21009)))
+          ("_GLIBCXX_HAVE_SINF" . ((number "1" 43999 . 44000)))
+          ("_GLIBCXX_HAVE_SQRTL" . ((number "1" 44647 . 44648)))
+          ("_GLIBCXX_HAVE_STRERROR_R" . ((number "1" 22221 . 22222)))
+          ("_GLIBCXX_HAVE_TANHF" . ((number "1" 45181 . 45182)))
+          ("_GLIBCXX_HAVE_TANL" . ((number "1" 45440 . 45441)))
+          ("_GLIBCXX_HAVE_TLS" . ((number "1" 24712 . 24713)))
+          ("_GLIBCXX_USE_C99_STDINT_TR1" . ((number "1" 35930 . 35931)))
+          ("atan2f" . ((symbol "_atan2f" 37625 . 37632)))
+          ("finitel" . ((symbol "_finitel" 39730 . 39738)))
+          ("frexpl" . ((symbol "_frexpl" 40678 . 40685)))
+          ("strtof" . ((symbol "_strtof" 44799 . 44806)))
+          )
+)
+    (semanticdb-table "os_defines.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_GLIBCXX_OS_DEFINES" variable (:constant-flag t) nil [1321 1340])
+            ("__NO_CTYPE" variable (:constant-flag t) nil [1522 1532])
+            ("features.h" include (:system-flag t) nil [1536 1557]))          
+      :file "os_defines.h"
+      :pointmax 1566
+      :fsize 1565
+      :lastmodtime '(20363 23501)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_GLIBCXX_OS_DEFINES" . ((number "1" 1341 . 1342)))
+          ("__NO_CTYPE" . ((number "1" 1533 . 1534)))
+          )
+)
+    (semanticdb-table "cpu_defines.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_GLIBCXX_CPU_DEFINES" variable (:constant-flag t) nil [1310 1330]))          
+      :file "cpu_defines.h"
+      :pointmax 1341
+      :fsize 1340
+      :lastmodtime '(20363 23501)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_GLIBCXX_CPU_DEFINES" . ((number "1" 1331 . 1332)))
+          )
+)
+    (semanticdb-table "c++allocator.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_GLIBCXX_CXX_ALLOCATOR_H" variable (:constant-flag t) nil [1300 1324])
+            ("ext/new_allocator.h" include (:system-flag t) nil [1389 1419])
+            ("__glibcxx_base_allocator" variable (:constant-flag t) nil [1428 1452]))          
+      :file "c++allocator.h"
+      :pointmax 1487
+      :fsize 1486
+      :lastmodtime '(20363 23501)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_GLIBCXX_CXX_ALLOCATOR_H" . ((number "1" 1325 . 1326)))
+          ("__glibcxx_base_allocator" . 
+              ((symbol "__gnu_cxx" 1454 . 1463) (punctuation ":" 1463 . 1464) (punctuation ":" 1464 . 1465) (symbol "new_allocator" 1465 . 1478)))
+          )
+)
+    (semanticdb-table "c++locale.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_GLIBCXX_CXX_LOCALE_H" variable (:constant-flag t) nil [1459 1480])
+            ("clocale" include (:system-flag t) nil [1511 1529])
+            ("_GLIBCXX_C_LOCALE_GNU" variable (:constant-flag t) nil [1539 1560])
+            ("_GLIBCXX_NUM_CATEGORIES" variable (:constant-flag t) nil [1572 1595])
+            ("std" type
+               (:members 
+                  ( ("__7" type (:type "namespace") (reparse-symbol namespacesubparts) [1891 1923])
+                    ("__c_locale" type
+                       (:typedef ("__locale_t" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [1927 1958])
+                    ("__convert_from_v" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("__cloc" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("__c_locale" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2241 2295])
+                            ("__out" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2301 2313])
+                            ("__size" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2319 2365])
+                            ("__fmt" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2371 2389])
+                            ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [2390 2394]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2211 3295]))                  
+                :type "namespace")
+                nil [1846 3329]))          
+      :file "c++locale.h"
+      :pointmax 3351
+      :fsize 3350
+      :lastmodtime '(20363 23501)
+      :unmatched-syntax '((symbol 3319 . 3327) (symbol 1496 . 1509) (symbol 1492 . 1495) (symbol 1485 . 1491) (punctuation 1484 . 1485))
+      :lexical-table 
+        '(("_GLIBCXX_C_LOCALE_GNU" . ((number "1" 1561 . 1562)))
+          ("_GLIBCXX_CXX_LOCALE_H" . ((number "1" 1481 . 1482)))
+          ("_GLIBCXX_NUM_CATEGORIES" . ((number "6" 1596 . 1597)))
+          )
+)
+    (semanticdb-table "gthr.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_GLIBCXX_GCC_GTHR_H" variable (:constant-flag t) nil [1097 1116])
+            ("_GLIBCXX_GTHREAD_USE_WEAK" variable (:constant-flag t) nil [6252 6277])
+            ("bits/gthr-default.h" include (:system-flag t) nil [6294 6324]))          
+      :file "gthr.h"
+      :pointmax 6516
+      :fsize 6515
+      :lastmodtime '(20363 23501)
+      :unmatched-syntax '((symbol 6469 . 6472) (symbol 6458 . 6468) (symbol 6454 . 6457) (symbol 6447 . 6453) (punctuation 6446 . 6447) (semantic-list 1175 . 1184) (symbol 1171 . 1175) (DEFAULT 1176 . 1183) (symbol 1160 . 1170) (DEFAULT 1176 . 1183) (symbol 1156 . 1159) (symbol 1149 . 1155) (punctuation 1148 . 1149))
+      :lexical-table 
+        '(("_GLIBCXX_GCC_GTHR_H")
+          ("_GLIBCXX_GTHREAD_USE_WEAK" . ((number "1" 6278 . 6279)))
+          )
+)
+    (semanticdb-table "atomic_word.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_GLIBCXX_ATOMIC_WORD_H" variable (:constant-flag t) nil [1225 1247])
+            ("_Atomic_word" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [1251 1276]))          
+      :file "atomic_word.h"
+      :pointmax 1926
+      :fsize 1925
+      :lastmodtime '(20363 23501)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_GLIBCXX_ATOMIC_WORD_H" . ((number "1" 1248 . 1249)))
+          )
+)
+    (semanticdb-table "ctype_base.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("std" type
+               (:members 
+                  ( ("__7" type (:type "namespace") (reparse-symbol namespacesubparts) [1419 1451])
+                    ("ctype_base" type
+                       (:members 
+                          ( ("__to_type" type
+                               (:typedef ("int")
+                                :pointer 1
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1547 1578])
+                            ("mask" type
+                               (:typedef ("unsigned short")
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1718 1747])
+                            ("upper" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_ISupper"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1752 1791])
+                            ("lower" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_ISlower"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1796 1832])
+                            ("alpha" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_ISalpha"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1837 1873])
+                            ("digit" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_ISdigit"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1878 1914])
+                            ("xdigit" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_ISxdigit"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1919 1957])
+                            ("space" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_ISspace"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1962 1998])
+                            ("print" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_ISprint"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2003 2039])
+                            ("_ISpunct" variable (:type "int") (reparse-symbol classsubparts) [2093 2102])
+                            ("cntrl" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_IScntrl"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2107 2143])
+                            ("punct" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_ISpunct"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2148 2184])
+                            ("alnum" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_ISalpha | _ISdigit"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2189 2236]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1491 2241]))                  
+                :type "namespace")
+                nil [1374 2275]))          
+      :file "ctype_base.h"
+      :pointmax 2289
+      :fsize 2288
+      :lastmodtime '(20363 23501)
+      :unmatched-syntax '((symbol 2265 . 2273) (punctuation 2091 . 2092) (symbol 2082 . 2090) (punctuation 2080 . 2081) (symbol 2071 . 2079) (punctuation 2069 . 2070) (symbol 2062 . 2067) (symbol 2057 . 2061) (CONST 2051 . 2056) (STATIC 2044 . 2050)))
+    (semanticdb-table "ctype_inline.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("std" type
+               (:members 
+                  ( ("__7" type (:type "namespace") (reparse-symbol namespacesubparts) [1433 1465])
+                    ("is" function
+                       (:parent "ctype"
+                        :arguments 
+                          ( ("__m" variable (:type ("mask" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1495 1504])
+                            ("__c" variable (:type "char") (reparse-symbol arg-sub-list) [1505 1514]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1469 1582])
+                    ("is" function
+                       (:pointer 1
+                        :parent "ctype"
+                        :constant-flag t
+                        :arguments 
+                          ( ("__low" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1619 1637])
+                            ("__high" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1638 1657])
+                            ("__vec" variable
+                               (:pointer 1
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1658 1670]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [1586 1795])
+                    ("scan_is" function
+                       (:pointer 1
+                        :parent "ctype"
+                        :constant-flag t
+                        :arguments 
+                          ( ("__m" variable (:type ("mask" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1837 1846])
+                            ("__low" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1847 1865])
+                            ("__high" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1866 1885]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [1799 2020])
+                    ("scan_not" function
+                       (:pointer 1
+                        :parent "ctype"
+                        :constant-flag t
+                        :arguments 
+                          ( ("__m" variable (:type ("mask" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2063 2072])
+                            ("__low" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2073 2091])
+                            ("__high" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2092 2111]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [2024 2250]))                  
+                :type "namespace")
+                nil [1388 2284]))          
+      :file "ctype_inline.h"
+      :pointmax 2298
+      :fsize 2297
+      :lastmodtime '(20363 23501)
+      :unmatched-syntax '((symbol 2274 . 2282)))
+    (semanticdb-table "gthr-default.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_GLIBCXX_GCC_GTHR_POSIX_H" variable (:constant-flag t) nil [1166 1191])
+            ("__GTHREADS" variable (:constant-flag t) nil [1302 1312])
+            ("__GTHREADS_CXX0X" variable (:constant-flag t) nil [1323 1339])
+            ("pthread.h" include (:system-flag t) nil [1488 1508])
+            ("unistd.h" include (:system-flag t) nil [1509 1528])
+            ("__gthread_t" type
+               (:typedef ("pthread_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [1530 1560])
+            ("__gthread_key_t" type
+               (:typedef ("pthread_key_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [1561 1599])
+            ("__gthread_once_t" type
+               (:typedef ("pthread_once_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [1600 1640])
+            ("__gthread_mutex_t" type
+               (:typedef ("pthread_mutex_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [1641 1683])
+            ("__gthread_recursive_mutex_t" type
+               (:typedef ("pthread_mutex_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [1684 1736])
+            ("__gthread_cond_t" type
+               (:typedef ("pthread_cond_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [1737 1777])
+            ("__gthread_time_t" type
+               (:typedef ("timespec" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1778 1819])
+            ("__GTHREAD_HAS_COND" variable (:constant-flag t) nil [1934 1952])
+            ("__GTHREAD_MUTEX_INIT" variable (:constant-flag t) nil [1964 1984])
+            ("__GTHREAD_ONCE_INIT" variable (:constant-flag t) nil [2019 2038])
+            ("__GTHREAD_RECURSIVE_MUTEX_INIT_FUNCTION" variable (:constant-flag t) nil [2327 2366])
+            ("__GTHREAD_COND_INIT" variable (:constant-flag t) nil [2422 2441])
+            ("__GTHREAD_TIME_INIT" variable (:constant-flag t) nil [2475 2494])
+            ("__gthrw2" variable (:constant-flag t) nil [2804 2812])
+            ("__gthrw_" variable (:constant-flag t) nil [2839 2847])
+            ("__gthrw" variable (:constant-flag t) nil [2940 2947])
+            ("__gthread_active_p" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9985 9990]))                  
+                :type "int")
+                nil [9947 10006])
+            ("__gthread_create" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__threadid" variable
+                       (:pointer 1
+                        :type ("__gthread_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18347 18371])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [18372 18387])
+                    ("__args" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [18401 18414]))                  
+                :type "int")
+                nil [18311 18488])
+            ("__gthread_join" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__threadid" variable (:type ("__gthread_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18524 18547])
+                    ("__value_ptr" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [18548 18567]))                  
+                :type "int")
+                nil [18490 18630])
+            ("__gthread_detach" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__threadid" variable (:type ("__gthread_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18668 18691]))                  
+                :type "int")
+                nil [18632 18743])
+            ("__gthread_equal" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__t1" variable (:type ("__gthread_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18780 18797])
+                    ("__t2" variable (:type ("__gthread_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18798 18815]))                  
+                :type "int")
+                nil [18745 18866])
+            ("__gthread_self" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [18910 18915]))                  
+                :type ("__gthread_t" type (:type "class") nil nil))
+                nil [18868 18955])
+            ("__gthread_yield" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [18992 18997]))                  
+                :type "int")
+                nil [18957 19036])
+            ("__gthread_once" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__once" variable
+                       (:pointer 1
+                        :type ("__gthread_once_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19072 19097])
+                    ("__func" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [19114 19119]))                          
+                        :type "void")
+                        nil nil))                  
+                :type "int")
+                nil [19038 19227])
+            ("__gthread_key_create" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__key" variable
+                       (:pointer 1
+                        :type ("__gthread_key_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19269 19292])
+                    ("__dtor" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [19309 19316]))                          
+                        :type "void")
+                        nil nil))                  
+                :type "int")
+                nil [19229 19376])
+            ("__gthread_key_delete" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__key" variable (:type ("__gthread_key_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19418 19440]))                  
+                :type "int")
+                nil [19378 19491])
+            ("__gthread_getspecific" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__key" variable (:type ("__gthread_key_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19537 19559]))                  
+                :type "void")
+                nil [19493 19611])
+            ("__gthread_setspecific" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__key" variable (:type ("__gthread_key_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19654 19676])
+                    ("__ptr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19677 19695]))                  
+                :type "int")
+                nil [19613 19754])
+            ("__gthread_mutex_destroy" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__mutex" variable
+                       (:pointer 1
+                        :type ("__gthread_mutex_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19799 19826]))                  
+                :type "int")
+                nil [19756 19934])
+            ("__gthread_mutex_lock" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__mutex" variable
+                       (:pointer 1
+                        :type ("__gthread_mutex_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19976 20003]))                  
+                :type "int")
+                nil [19936 20108])
+            ("__gthread_mutex_trylock" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__mutex" variable
+                       (:pointer 1
+                        :type ("__gthread_mutex_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20153 20180]))                  
+                :type "int")
+                nil [20110 20288])
+            ("__gthread_mutex_unlock" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__mutex" variable
+                       (:pointer 1
+                        :type ("__gthread_mutex_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20638 20665]))                  
+                :type "int")
+                nil [20596 20772])
+            ("__gthread_recursive_mutex_init_function" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__mutex" variable
+                       (:pointer 1
+                        :type ("__gthread_recursive_mutex_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20880 20917]))                  
+                :type "int")
+                nil [20821 21344])
+            ("__gthread_recursive_mutex_lock" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__mutex" variable
+                       (:pointer 1
+                        :type ("__gthread_recursive_mutex_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21403 21440]))                  
+                :type "int")
+                nil [21353 21485])
+            ("__gthread_recursive_mutex_trylock" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__mutex" variable
+                       (:pointer 1
+                        :type ("__gthread_recursive_mutex_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21540 21577]))                  
+                :type "int")
+                nil [21487 21625])
+            ("__gthread_recursive_mutex_unlock" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__mutex" variable
+                       (:pointer 1
+                        :type ("__gthread_recursive_mutex_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21948 21985]))                  
+                :type "int")
+                nil [21896 22032])
+            ("__gthread_cond_broadcast" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__cond" variable
+                       (:pointer 1
+                        :type ("__gthread_cond_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22078 22103]))                  
+                :type "int")
+                nil [22034 22159])
+            ("__gthread_cond_signal" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__cond" variable
+                       (:pointer 1
+                        :type ("__gthread_cond_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22202 22227]))                  
+                :type "int")
+                nil [22161 22280])
+            ("__gthread_cond_wait" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__cond" variable
+                       (:pointer 1
+                        :type ("__gthread_cond_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22321 22346])
+                    ("__mutex" variable
+                       (:pointer 1
+                        :type ("__gthread_mutex_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22347 22374]))                  
+                :type "int")
+                nil [22282 22434])
+            ("__gthread_cond_timedwait" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__cond" variable
+                       (:pointer 1
+                        :type ("__gthread_cond_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22480 22505])
+                    ("__mutex" variable
+                       (:pointer 1
+                        :type ("__gthread_mutex_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22506 22533])
+                    ("__abs_timeout" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("__gthread_time_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22539 22577]))                  
+                :type "int")
+                nil [22436 22657])
+            ("__gthread_cond_wait_recursive" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__cond" variable
+                       (:pointer 1
+                        :type ("__gthread_cond_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22708 22733])
+                    ("__mutex" variable
+                       (:pointer 1
+                        :type ("__gthread_recursive_mutex_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22744 22781]))                  
+                :type "int")
+                nil [22659 22833])
+            ("__gthread_cond_timedwait_recursive" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__cond" variable
+                       (:pointer 1
+                        :type ("__gthread_cond_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22889 22914])
+                    ("__mutex" variable
+                       (:pointer 1
+                        :type ("__gthread_recursive_mutex_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22923 22960])
+                    ("__abs_timeout" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("__gthread_time_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22969 23007]))                  
+                :type "int")
+                nil [22835 23079])
+            ("__gthread_cond_destroy" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__cond" variable
+                       (:pointer 1
+                        :type ("__gthread_cond_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23123 23148]))                  
+                :type "int")
+                nil [23081 23202]))          
+      :file "gthr-default.h"
+      :pointmax 23268
+      :fsize 23267
+      :lastmodtime '(20363 23501)
+      :unmatched-syntax '((semantic-list 18388 . 18395) (semantic-list 18378 . 18387))
+      :lexical-table 
+        '(("_GLIBCXX_GCC_GTHR_POSIX_H")
+          ("__GTHREAD_MUTEX_INIT" . ((symbol "PTHREAD_MUTEX_INITIALIZER" 1985 . 2010)))
+          ("__gthrw" (spp-arg-list ("name") 2947 . 2953) . ((symbol "__gthrw2" 2954 . 2962) (semantic-list "(__gthrw_ ## name,name,name)" 2962 . 2990)))
+          ("__gthrw_" (spp-arg-list ("name") 2847 . 2853) . ((symbol "name" 2854 . 2858)))
+          ("__GTHREAD_ONCE_INIT" . ((symbol "PTHREAD_ONCE_INIT" 2039 . 2056)))
+          ("__GTHREAD_TIME_INIT" . ((semantic-list "{0,0}" 2495 . 2500)))
+          ("__GTHREADS_CXX0X" . ((number "1" 1340 . 1341)))
+          ("__GTHREAD_HAS_COND" . ((number "1" 1953 . 1954)))
+          ("__GTHREAD_RECURSIVE_MUTEX_INIT_FUNCTION" . ((symbol "__gthread_recursive_mutex_init_function" 2367 . 2406)))
+          ("__GTHREADS" . ((number "1" 1313 . 1314)))
+          ("__gthrw2" (spp-arg-list ("name" "name2" "type") 2812 . 2829))
+          ("__GTHREAD_COND_INIT" . ((symbol "PTHREAD_COND_INITIALIZER" 2442 . 2466)))
+          )
+))
+  :file "!usr!include!c++!4.6!i686-linux-gnu!bits!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0")

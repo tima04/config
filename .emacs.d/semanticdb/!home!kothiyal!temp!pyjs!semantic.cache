@@ -1,0 +1,38 @@
+;; Object pyjs/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pyjs/"
+  :tables
+  (list
+    (semanticdb-table "slideshow.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pyjamas.ui.HTML" include nil nil [1 33])
+            ("pyjamas.ui.RootPanel" include nil nil [34 76])
+            ("pyjamas.HTTPRequest" include nil nil [77 120])
+            ("SlideLoader" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [180 198])
+                            ("onCompletion" function
+                               (:parent "dummy"
+                                :arguments 
+                                  ( ("self" variable nil (reparse-symbol function_parameters) [224 228])
+                                    ("text" variable nil (reparse-symbol function_parameters) [230 234]))                                  )
+                                (reparse-symbol indented_block_body) [207 2163]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [158 162])
+                            ("panel" variable nil (reparse-symbol function_parameters) [164 169]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [145 2163]))                  
+                :type "class")
+                nil [122 2163]))          
+      :file "slideshow.py"
+      :pointmax 2163
+      :fsize 850
+      :lastmodtime '(22007 14137 139036 63000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!temp!pyjs!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

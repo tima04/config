@@ -1,0 +1,23 @@
+;; Object minimal/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "minimal/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("PYTHON_VERSION" variable (:default-value ("2.7")) nil [41 62])
+            ("PYTHON_INCLUDE" variable (:default-value ("/usr/include/python$(PYTHON_VERSION)")) nil [62 116])
+            ("BOOST_INC" variable (:default-value ("/usr/include")) nil [177 202])
+            ("BOOST_LIB" variable (:default-value ("/usr/lib")) nil [202 223])
+            ("TARGET" variable (:default-value ("hello_ext")) nil [248 267])
+            ("$(TARGET)" function (:arguments ("$(TARGET).o")) nil [269 295])
+            ("$(TARGET)" function (:arguments ("$(TARGET).C")) nil [636 722]))          
+      :file "Makefile"
+      :pointmax 722
+      :fsize 721
+      :lastmodtime '(21935 46260 394586 315000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!codes!python!boost!Shocksolution_Examples!Boost.python!minimal!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

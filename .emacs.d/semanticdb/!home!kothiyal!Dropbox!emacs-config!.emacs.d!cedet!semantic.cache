@@ -1,0 +1,86 @@
+;; Object cedet/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "cedet/"
+  :tables
+  (list
+    (semanticdb-table "cedet-devel-load.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("when" code nil nil [1091 1185])
+            ("let" code nil nil [1333 2893])
+            ("unless" code nil nil [2970 4880])
+            ("cedet-devel-load" package nil nil [4882 4909]))          
+      :file "cedet-devel-load.el"
+      :pointmax 4918
+      :fsize 4917
+      :lastmodtime '(21135 21396)
+      :unmatched-syntax nil)
+    (semanticdb-table "semantic-tag-folding.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("semantic-decorate-mode" include nil nil [3100 3133])
+            ("global-semantic-tag-folding-mode" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [3145 3494])
+            ("global-semantic-tag-folding-mode" variable (:user-visible-flag t) nil [3511 3971])
+            ("semantic-tag-folding-mode-hook" variable (:user-visible-flag t) nil [3973 4118])
+            ("semantic-tag-folding-mode-map" variable (:default-value (let ((km (make-sparse-keymap))) (define-key km [left-fringe mouse-1] (quote semantic-tag-folding-click)) (define-key km [C-return] (quote semantic-tag-folding-show-block)) km)) nil [4122 4372])
+            ("semantic-tag-folding-mode" variable nil nil [4374 4527])
+            ("make-variable-buffer-local" code nil nil [4529 4584])
+            ("semantic-tag-folding-mode-setup" function nil nil [4586 6688])
+            ("semantic-tag-folding-decoration-style" variable (:default-value (quote (("semantic-tag-folding" . t)))) nil [6690 6872])
+            ("add-hook" code nil nil [6874 6958])
+            ("semantic-tag-folding-decoration-mode-hook" function nil nil [6960 8672])
+            ("semantic-tag-folding-saved-decoration-styles" variable nil nil [8674 8782])
+            ("make-variable-buffer-local" code nil nil [8783 8857])
+            ("semantic-tag-folding-decoration-mode-hook-enabled" variable (:default-value t) nil [8859 9063])
+            ("semantic-tag-folding-mode" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [9080 9993])
+            ("semantic-add-minor-mode" code nil nil [9995 10080])
+            ("define-semantic-decoration-style" code nil nil [10083 10165])
+            ("make-variable-buffer-local" code nil nil [10374 10430])
+            ("semantic-tag-folding-allow-folding-of" variable (:default-value (quote ((type . inner) (function . t) (variable . t) (include . t) (comment . t) (code . t)))) nil [10433 11949])
+            ("make-variable-buffer-local" code nil nil [11950 12017])
+            ("semantic-tag-folding-tag-higlight-time" variable (:default-value 1) nil [12019 12276])
+            ("semantic-tag-folding-highlight-tags-shown-by-reveal-mode" variable nil nil [12278 12461])
+            ("semantic-tag-folding-show-tooltips" variable nil nil [12463 12923])
+            ("semantic-tag-folding-function" variable (:default-value (quote semantic-tag-folding-function-default)) nil [12925 13143])
+            ("semantic-tag-folding-set-fringe-image-style" function (:arguments ("symbol" "value")) nil [13146 15741])
+            ("semantic-tag-folding-fringe-image-style" variable (:default-value (quote triangles)) nil [15743 16078])
+            ("semantic-tag-folding-allow-folding-of" function (:arguments ("class")) nil [16080 16240])
+            ("semantic-tag-folding-hidden-by-default" function (:arguments ("class")) nil [16242 16410])
+            ("semantic-tag-folding-function-default" function (:arguments ("tag" "comment")) nil [16412 17158])
+            ("semantic-tag-folding-p-default" function (:arguments ("tag")) nil [17160 17899])
+            ("semantic-tag-folding-highlight-default" function (:arguments ("tag")) nil [17901 20143])
+            ("semantic-tag-folding-create-folding-overlays" function (:arguments ("tag" "start" "end" "point" "comment")) nil [20146 23043])
+            ("semantic-tag-folding-fold-block" function (:user-visible-flag t) nil [23045 23233])
+            ("semantic-tag-folding-show-block" function
+               (:user-visible-flag t
+                :arguments ("ov"))
+                nil [23235 23463])
+            ("semantic-tag-folding-show-all" function (:user-visible-flag t) nil [23466 23643])
+            ("semantic-tag-folding-fold-all" function (:user-visible-flag t) nil [23645 23818])
+            ("semantic-tag-folding-show-children" function (:user-visible-flag t) nil [23820 24047])
+            ("semantic-tag-folding-fold-children" function (:user-visible-flag t) nil [24049 24274])
+            ("semantic-tag-folding-fold-or-show-tags" function (:arguments ("tags" "fold")) nil [24277 24581])
+            ("semantic-tag-folding-get-overlay" function nil nil [24583 24998])
+            ("semantic-tag-folding-set-overlay-visibility" function (:arguments ("ov" "fold" "called-by-reveal-mode")) nil [25000 26311])
+            ("put" code nil nil [26399 26510])
+            ("semantic-tag-folding-set-overlay-visibility-for-reveal-mode" function (:arguments ("ov" "fold")) nil [26512 26966])
+            ("semantic-tag-folding-highlight-overlay" function (:arguments ("ov")) nil [26968 28045])
+            ("semantic-tag-folding-click" function
+               (:user-visible-flag t
+                :arguments ("event"))
+                nil [28047 28757])
+            ("semantic-tag-folding" package nil nil [28759 28790]))          
+      :file "semantic-tag-folding.el"
+      :pointmax 28829
+      :fsize 28828
+      :lastmodtime '(21135 43711)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!emacs-config!.emacs.d!cedet!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

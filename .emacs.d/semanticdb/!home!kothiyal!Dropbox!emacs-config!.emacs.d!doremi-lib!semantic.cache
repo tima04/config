@@ -1,0 +1,266 @@
+;; Object doremi-lib/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "doremi-lib/"
+  :tables
+  (list
+    (semanticdb-table "frame-fns.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("when" code nil nil [2926 2973])
+            ("avoid" include nil nil [2992 3014])
+            ("window-coords" function (:arguments ("position")) nil [3075 3332])
+            ("distance" function (:arguments ("pt1" "pt2")) nil [3334 3602])
+            ("frame-geom-value-numeric" function (:arguments ("type" "value" "frame")) nil [3604 5551])
+            ("frame-geom-spec-numeric" function (:arguments ("spec" "frame")) nil [5553 6796])
+            ("frame-geom-value-cons" function (:arguments ("type" "value" "frame")) nil [6798 8668])
+            ("frame-geom-spec-cons" function (:arguments ("spec" "frame")) nil [8670 9923])
+            ("get-frame-name" function (:arguments ("frame")) nil [9925 10236])
+            ("get-a-frame" function (:arguments ("frame")) nil [10238 10757])
+            ("read-frame" function (:arguments ("prompt" "default" "existing")) nil [10759 11655])
+            ("frames-on" function (:arguments ("buffer" "frame")) nil [11657 11913])
+            ("1-window-frames-on" function (:arguments ("buffer")) nil [11915 12492])
+            ("multi-window-frames-on" function (:arguments ("buffer")) nil [12494 13085])
+            ("flash-ding" function (:arguments ("do-not-terminate" "frame")) nil [13087 13497])
+            ("frame-fns" package nil nil [13542 13562]))          
+      :file "frame-fns.el"
+      :pointmax 13662
+      :fsize 13661
+      :lastmodtime '(20604 34377)
+      :unmatched-syntax '((close-paren 2973 . 2974) (symbol 2908 . 2925) (open-paren 2907 . 2908)))
+    (semanticdb-table "doremi-cmd.el"
+      :file "doremi-cmd.el"
+      :fsize 17793
+      :lastmodtime '(20604 30367))
+    (semanticdb-table "zoom-frm.el"
+      :file "zoom-frm.el"
+      :fsize 12424
+      :lastmodtime '(20604 30178))
+    (semanticdb-table "frame-cmds.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("cl" include nil nil [22304 22317])
+            ("frame-fns" include nil nil [22362 22382])
+            ("strings" include nil nil [22463 22487])
+            ("misc-fns" include nil nil [22527 22552])
+            ("mac-tool-bar-display-mode" variable nil nil [23066 23100])
+            ("Frame-Commands" customgroup (:user-visible-flag t) nil [23194 24553])
+            ("rename-frame-when-iconify-flag" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [24555 24741])
+            ("frame-config-register" variable
+               (:user-visible-flag t
+                :default-value 12)
+                nil [24743 24939])
+            ("show-hide-show-function" variable
+               (:user-visible-flag t
+                :default-value (quote jump-to-frame-config-register))
+                nil [24941 25322])
+            ("window-mgr-title-bar-pixel-height" variable
+               (:user-visible-flag t
+                :default-value (if (eq window-system (quote mac)) 22 27))
+                nil [25324 25669])
+            ("enlarge-font-tries" variable
+               (:user-visible-flag t
+                :default-value 100)
+                nil [25671 25950])
+            ("frame-parameters-to-exclude" variable
+               (:user-visible-flag t
+                :default-value (quote ((window-id) (buffer-list) (name) (title) (icon-name))))
+                nil [25952 26349])
+            ("move-frame-wrap-within-display-flag" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [26351 26721])
+            ("available-screen-pixel-bounds" variable (:user-visible-flag t) nil [26723 27476])
+            ("save-frame-config" function (:user-visible-flag t) nil [27560 28225])
+            ("jump-to-frame-config-register" function (:user-visible-flag t) nil [28242 28407])
+            ("iconify-everything" function (:user-visible-flag t) nil [28424 28931])
+            ("hide-everything" function (:user-visible-flag t) nil [28948 29713])
+            ("show-hide" function (:user-visible-flag t) nil [29745 30056])
+            ("show-buffer-menu" function (:user-visible-flag t) nil [30073 30735])
+            ("mouse-show-hide-mark-unmark" function
+               (:user-visible-flag t
+                :arguments ("event"))
+                nil [30752 31199])
+            ("iconify/map-frame" function
+               (:user-visible-flag t
+                :arguments ("iconify-all"))
+                nil [31216 31569])
+            ("mouse-iconify/map-frame" function
+               (:user-visible-flag t
+                :arguments ("event"))
+                nil [31586 31869])
+            ("or" code nil nil [31872 31968])
+            ("delete-window" function
+               (:user-visible-flag t
+                :arguments ("window"))
+                nil [32078 32444])
+            ("delete-windows-for" function
+               (:user-visible-flag t
+                :arguments ("buffer"))
+                nil [32461 32859])
+            ("delete-windows-on" function
+               (:user-visible-flag t
+                :arguments ("buffer" "frame"))
+                nil [33183 34621])
+            ("read-buffer-for-delete-windows" function nil nil [34688 35255])
+            ("frame-iconified-p" function (:arguments ("frame")) nil [35257 35426])
+            ("defalias" code nil nil [36615 36655])
+            ("remove-windows-on" function
+               (:user-visible-flag t
+                :arguments ("buffer"))
+                nil [36672 37130])
+            ("mouse-remove-window" function
+               (:user-visible-flag t
+                :arguments ("event"))
+                nil [37147 37399])
+            ("delete/iconify-window" function
+               (:user-visible-flag t
+                :arguments ("window" "frame-p"))
+                nil [37416 39270])
+            ("delete/iconify-windows-on" function
+               (:user-visible-flag t
+                :arguments ("buffer" "frame" "frame-p"))
+                nil [39287 41401])
+            ("rename-frame" function
+               (:user-visible-flag t
+                :arguments ("old-name" "new-name" "all-named"))
+                nil [41418 42644])
+            ("rename-non-minibuffer-frame" function
+               (:user-visible-flag t
+                :arguments ("old-name" "new-name" "all-named"))
+                nil [42661 43957])
+            ("show-frame" function
+               (:user-visible-flag t
+                :arguments ("frame"))
+                nil [43974 44241])
+            ("hide-frame" function
+               (:user-visible-flag t
+                :arguments ("frame" "prefix"))
+                nil [44258 44569])
+            ("show-a-frame-on" function
+               (:user-visible-flag t
+                :arguments ("buffer"))
+                nil [44586 45208])
+            ("show-*Help*-buffer" function (:user-visible-flag t) nil [45225 45360])
+            ("delete-1-window-frames-on" function
+               (:user-visible-flag t
+                :arguments ("buffer"))
+                nil [45377 45980])
+            ("delete-other-frames" function
+               (:user-visible-flag t
+                :arguments ("frame"))
+                nil [45997 46482])
+            ("maximize-frame-horizontally" function
+               (:user-visible-flag t
+                :arguments ("frame"))
+                nil [46499 46671])
+            ("maximize-frame-vertically" function
+               (:user-visible-flag t
+                :arguments ("frame"))
+                nil [46688 46854])
+            ("maximize-frame" function
+               (:user-visible-flag t
+                :arguments ("direction" "frame"))
+                nil [46871 50297])
+            ("defalias" code nil nil [50314 50383])
+            ("toggle-max-frame-horizontally" function
+               (:user-visible-flag t
+                :arguments ("frame"))
+                nil [50399 50737])
+            ("defalias" code nil nil [50754 50823])
+            ("toggle-max-frame-vertically" function
+               (:user-visible-flag t
+                :arguments ("frame"))
+                nil [50839 51171])
+            ("defalias" code nil nil [51188 51231])
+            ("toggle-max-frame" function
+               (:user-visible-flag t
+                :arguments ("direction" "frame"))
+                nil [51247 53634])
+            ("tile-frames-horizontally" function
+               (:user-visible-flag t
+                :arguments ("frames"))
+                nil [53651 54087])
+            ("tile-frames-vertically" function
+               (:user-visible-flag t
+                :arguments ("frames"))
+                nil [54104 54534])
+            ("tile-frames" function (:arguments ("direction" "frames")) nil [54536 57423])
+            ("frame-extra-pixels-width" function (:arguments ("frame")) nil [57425 57618])
+            ("frame-extra-pixels-height" function (:arguments ("frame")) nil [57620 57819])
+            ("smart-tool-bar-pixel-height" function (:arguments ("frame")) nil [57821 58070])
+            ("read-args-for-tile-frames" function nil nil [58072 59558])
+            ("available-screen-pixel-bounds" function nil nil [59560 59996])
+            ("unless" code nil nil [60100 60554])
+            ("effective-screen-pixel-bounds" function nil nil [60556 61115])
+            ("available-screen-pixel-width" function (:arguments ("include-mini-p")) nil [61117 61512])
+            ("available-screen-pixel-height" function (:arguments ("include-mini-p")) nil [61524 61923])
+            ("enlarge-frame" function
+               (:user-visible-flag t
+                :arguments ("increment" "frame"))
+                nil [62027 62318])
+            ("enlarge-frame-horizontally" function
+               (:user-visible-flag t
+                :arguments ("increment" "frame"))
+                nil [62335 62638])
+            ("shrink-frame" function
+               (:user-visible-flag t
+                :arguments ("increment" "frame"))
+                nil [62655 62945])
+            ("shrink-frame-horizontally" function
+               (:user-visible-flag t
+                :arguments ("increment" "frame"))
+                nil [62962 63264])
+            ("move-frame-down" function
+               (:user-visible-flag t
+                :arguments ("increment" "frame"))
+                nil [63281 63712])
+            ("move-frame-up" function
+               (:user-visible-flag t
+                :arguments ("increment" "frame"))
+                nil [63729 64065])
+            ("move-frame-right" function
+               (:user-visible-flag t
+                :arguments ("increment" "frame"))
+                nil [64082 64528])
+            ("move-frame-left" function
+               (:user-visible-flag t
+                :arguments ("increment" "frame"))
+                nil [64545 64897])
+            ("new-frame-position" function (:arguments ("frame" "type" "incr")) nil [64919 65721])
+            ("enlarge-font" function
+               (:user-visible-flag t
+                :arguments ("increment" "frame"))
+                nil [67059 67924])
+            ("enlarged-font-name" function (:arguments ("fontname" "frame" "increment")) nil [67926 68868])
+            ("set-frame-alist-parameter-from-frame" function
+               (:user-visible-flag t
+                :arguments ("alist" "parameter" "frame"))
+                nil [68885 70004])
+            ("unless" code nil nil [70066 70599])
+            ("frame-cmds-set-difference" function (:arguments ("list1" "list2" "key")) nil [70689 71472])
+            ("set-all-frame-alist-parameters-from-frame" function
+               (:user-visible-flag t
+                :arguments ("alist" "frame" "really-all-p"))
+                nil [71489 72743])
+            ("frame-alist-var-names" function nil nil [72745 73181])
+            ("frame-parameter-names" function nil nil [73183 74612])
+            ("tell-customize-var-has-changed" function
+               (:user-visible-flag t
+                :arguments ("variable"))
+                nil [74629 74898])
+            ("other-window-or-frame" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [74915 75094])
+            ("frame-cmds" package nil nil [75121 75142]))          
+      :file "frame-cmds.el"
+      :pointmax 75243
+      :fsize 75242
+      :lastmodtime '(20604 31684)
+      :unmatched-syntax '((close-paren 22317 . 22318) (symbol 22286 . 22303) (open-paren 22285 . 22286))))
+  :file "!home!kothiyal!Dropbox!emacs-config!.emacs.d!doremi-lib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

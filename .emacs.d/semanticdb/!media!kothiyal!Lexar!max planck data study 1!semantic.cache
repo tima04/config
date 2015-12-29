@@ -1,0 +1,47 @@
+;; Object max planck data study 1/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "max planck data study 1/"
+  :tables
+  (list
+    (semanticdb-table "pinar.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("shutil" include nil nil [12 25])
+            ("os" include nil nil [26 35])
+            ("random" include nil nil [36 49])
+            ("re" include nil nil [50 59])
+            ("NSTORIES" variable nil nil [61 74])
+            ("NJUDGES" variable nil nil [75 86])
+            ("EXT" variable nil nil [155 166])
+            ("DIR" variable nil nil [167 179])
+            ("main" function nil nil [221 645])
+            ("copy_files" function (:arguments 
+              ( ("src" variable nil (reparse-symbol function_parameters) [665 668])
+                ("dst" variable nil (reparse-symbol function_parameters) [670 673]))              ) nil [650 825])
+            ("rename_files" function
+               (:documentation "The i'th file in dir_ are named as Group i.docx
+    then rename it as storyi.docx, where j is the i'th entry in lst
+    "
+                :arguments 
+                  ( ("dir_" variable nil (reparse-symbol function_parameters) [843 847])
+                    ("lst" variable nil (reparse-symbol function_parameters) [849 852]))                  )
+                nil [826 1555])
+            ("copy_dict2file" function
+               (:documentation "
+    dict_ is a mapping of judges to the random list they get.
+    "
+                :arguments 
+                  ( ("dict_" variable nil (reparse-symbol function_parameters) [1576 1581])
+                    ("file_" variable nil (reparse-symbol function_parameters) [1583 1588]))                  )
+                nil [1557 1837])
+            ("get_rndlst4judges" function (:arguments 
+              ( ("seeds" variable nil (reparse-symbol function_parameters) [1860 1865]))              ) nil [1838 2094])
+            ("if" code nil nil [2095 2133]))          
+      :file "pinar.py"
+      :pointmax 2135
+      :fsize 2134
+      :lastmodtime '(22108 27497 0 0)
+      :unmatched-syntax nil))
+  :file "!media!kothiyal!Lexar!max planck data study 1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,33 @@
+;; Object coursera_course/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "coursera_course/"
+  :tables
+  (list
+    (semanticdb-table "CollectionPrac.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("coursera_course" package nil nil [1 25])
+            ("java.util.*" include nil nil [69 88])
+            ("java.util.stream.Collectors" include nil nil [89 124])
+            ("CollectionPrac" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [184 197]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [160 385]))                  
+                :type "class")
+                nil [126 387]))          
+      :file "CollectionPrac.java"
+      :pointmax 389
+      :fsize 388
+      :lastmodtime '(22098 48911 494303 258000)
+      :unmatched-syntax '((IDENTIFIER 63 . 66) (DOT 62 . 63) (IDENTIFIER 57 . 62) (DOT 56 . 57) (IMPORT 27 . 33) (STATIC 34 . 40) (IDENTIFIER 41 . 56))))
+  :file "!home!amit!Dropbox!Work!online-courses!coursera!JavaProgrammingArraysListsAndStructuredData!oracle_tutorial!coursera_course!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,36 @@
+;; Object javaProgramming4/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "javaProgramming4/"
+  :tables
+  (list
+    (semanticdb-table "LargestQuakesTest.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("javaProgramming4" package nil nil [1 26])
+            ("java.util.ArrayList" include nil nil [28 55])
+            ("java.util.Arrays" include nil nil [56 80])
+            ("java.util.Collections" include nil nil [81 110])
+            ("java.util.function.Function" include nil nil [111 146])
+            ("week1.LargestQuakes" include nil nil [148 175])
+            ("LargestQuakesTest" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [235 248]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [211 322]))                  
+                :type "class")
+                nil [177 324]))          
+      :file "LargestQuakesTest.java"
+      :pointmax 325
+      :fsize 324
+      :lastmodtime '(22136 8072 0 0)
+      :unmatched-syntax nil))
+  :file "!home!amit!Dropbox!Work!online-courses!coursera!javaProgramming!javaProgramming4!src!test!java!javaProgramming4!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,62 @@
+;; Object python-2.7.6-docs-html/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "python-2.7.6-docs-html/"
+  :tables
+  (list
+    (semanticdb-table "about.html"
+      :major-mode 'html-mode
+      :tags 
+        '( ("About these documents &mdash; Python v2.7.6 documentation" section nil nil [264 488])
+            ("var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2.7.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };" section nil nil [488 725])
+            ("Navigation" section nil nil [725 794])
+            ("Navigation" section nil nil [794 867])
+            ("Navigation" section nil nil [867 938])
+            ("Navigation" section nil nil [938 1587])
+            ("Navigation" section nil nil [1587 1660])
+            ("Navigation" section nil nil [1660 1753])
+            ("Navigation" section (:members 
+              ( ("Navigation" section (:members 
+                  ( ("index" anchor nil nil [1889 1892])
+                    ("modules" anchor nil nil [2015 2018])
+                    ("next" anchor nil nil [2141 2144])
+                    ("previous" anchor nil nil [2265 2268])
+                    ("Python" anchor nil nil [2483 2486])
+                    ("Documentation" anchor nil nil [2629 2632]))                  ) nil [1794 2910])
+                ("About these documents<a class=\"headerlink\" href=\"#about-these-documents\" title=\"Permalink to this headline\">¶" section (:members 
+                  ( ("Contributors to the Python Documentation<a class=\"headerlink\" href=\"#contributors-to-the-python-documentation\" title=\"Permalink to this headline\">¶" section (:members 
+                      ( ("Table Of Contents" section (:members 
+                          ( ("Table Of Contents" anchor nil nil [4962 4965])
+                            ("Previous topic" section (:members 
+                              ( ("Glossary" anchor nil nil [5292 5295]))                              ) nil [5247 5384])
+                            ("Next topic" section (:members 
+                              ( ("Reporting Bugs" anchor nil nil [5425 5428]))                              ) nil [5384 5513]))                          ) nil [4958 5513])
+                        ("This Page" section (:members 
+                          ( ("Report a Bug" anchor nil nil [5566 5569])
+                            ("Show Source" anchor nil nil [5614 5617]))                          ) nil [5513 5740])
+                        ("Quick search" section nil nil [5740 6169]))                      ) nil [4225 6169]))                  ) nil [2910 6169]))              ) nil [1753 6169])
+            ("$('#searchbox').show(0);" section (:members 
+              ( ("Navigation" section (:members 
+                  ( ("index" anchor nil nil [6436 6439])
+                    ("modules" anchor nil nil [6549 6552])
+                    ("next" anchor nil nil [6675 6678])
+                    ("previous" anchor nil nil [6786 6789])
+                    ("Python" anchor nil nil [6991 6994])
+                    ("Documentation" anchor nil nil [7137 7140])
+                    ("Copyright" anchor nil nil [7261 7264])
+                    ("Please donate." anchor nil nil [7418 7421])
+                    ("Found a bug" anchor nil nil [7533 7536])
+                    ("Sphinx" anchor nil nil [7599 7602]))                  ) nil [6341 7681]))              ) nil [6169 7681]))          
+      :file "about.html"
+      :pointmax 7681
+      :fsize 7682
+      :lastmodtime '(21367 57386 0 0)
+      :unmatched-syntax nil))
+  :file "!home!amit!Dropbox!symlink-to-homedir!.emacs.d!pylookup!python-2.7.6-docs-html!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

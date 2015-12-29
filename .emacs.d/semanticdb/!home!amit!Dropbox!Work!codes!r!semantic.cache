@@ -1,0 +1,46 @@
+;; Object r/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "r/"
+  :tables
+  (list
+    (semanticdb-table "tmp.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("rbernoulli" function
+               (:arguments 
+                  ( ("x" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [57 64])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [65 71]))                  
+                :type "void")
+                nil [41 160])
+            ("mean" function
+               (:arguments 
+                  ( ("x" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [174 182])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [183 189]))                  
+                :type "double")
+                nil [162 279])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [290 299])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [300 313]))                  
+                :type "int")
+                nil [281 1182]))          
+      :file "tmp.c"
+      :pointmax 1189
+      :fsize 1188
+      :lastmodtime '(21984 9624 265104 494000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Dropbox!Work!codes!r!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

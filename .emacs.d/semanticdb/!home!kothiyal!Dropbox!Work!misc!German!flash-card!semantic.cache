@@ -1,0 +1,274 @@
+;; Object flash-card/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "flash-card/"
+  :tables
+  (list
+    (semanticdb-table "flash_card.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+A word is a dictionary with keys: german, english, lexical_class(one of noun, pronoutn, verb,
+adjective, adverb), gender, plural, related_words, sentences, nasked, ncorrect.
+\"\"\"" code nil nil [1 182])
+            ("json" include nil nil [183 194])
+            ("words" variable nil nil [196 238])
+            ("add_word" function (:arguments 
+              ( ("word" variable nil (reparse-symbol function_parameters) [319 323]))              ) nil [306 540])
+            ("show_words" function nil nil [541 583])
+            ("save_words" function nil nil [584 678]))          
+      :file "flash_card.py"
+      :pointmax 687
+      :fsize 686
+      :lastmodtime '(22012 16036 907630 816000)
+      :unmatched-syntax nil)
+    (semanticdb-table "gui.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("flash_card" include nil nil [1 18])
+            ("re" include nil nil [19 28])
+            ("kivy.app" include nil nil [29 53])
+            ("kivy.lang" include nil nil [54 83])
+            ("kivy.uix.screenmanager" include nil nil [84 140])
+            ("Builder" code nil nil [142 169])
+            ("AddScreen" type
+               (:superclasses ("Screen")
+                :members 
+                  ( ("add_word" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [214 218]))                          )
+                        (reparse-symbol indented_block_body) [201 328])
+                    ("_parse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [557 561])
+                            ("txt" variable nil (reparse-symbol function_parameters) [563 566]))                          
+                        :documentation "
+        txt =  \"German: \\nEnglish: \\nLexical class(n, p, v, adj or adv): \\nGender (m, f or n): \\nPlural: \\nRelated words: \\nExample sentence: \"
+        ")
+                        (reparse-symbol indented_block_body) [546 1431])
+                    ("show_words" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1459 1463]))                          )
+                        (reparse-symbol indented_block_body) [1444 1504]))                  
+                :type "class")
+                nil [171 1504])
+            ("TestScreen" type
+               (:superclasses ("Screen")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [1536 1540]))                  
+                :type "class")
+                nil [1506 1541])
+            ("MenuScreen" type
+               (:superclasses ("Screen")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [1572 1576]))                  
+                :type "class")
+                nil [1542 1577])
+            ("Manager" type
+               (:superclasses ("ScreenManager")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [1612 1616]))                  
+                :type "class")
+                nil [1578 1617])
+            ("MyApp" type
+               (:superclasses ("App")
+                :members 
+                  ( ("build" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1651 1655]))                          )
+                        (reparse-symbol indented_block_body) [1641 1683]))                  
+                :type "class")
+                nil [1618 1683])
+            ("if" code nil nil [1692 1737]))          
+      :file "gui.py"
+      :pointmax 1740
+      :fsize 1739
+      :lastmodtime '(22012 16104 83632 508000)
+      :unmatched-syntax nil)
+    (semanticdb-table "temp.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("kivy.lang" include nil nil [1 30])
+            ("kv" variable nil nil [32 4676])
+            ("Builder" code nil nil [4678 4701])
+            ("'''
+Kivy Catalog
+============
+
+The Kivy Catalog viewer showcases widgets available in Kivy
+and allows interactive editing of kivy language code to get immediate
+feedback. You should see a two panel screen with a menu spinner button
+(starting with 'Welcome') and other controls across the top.The left pane
+contains kivy (.kv) code, and the right side is that code rendered. You can
+edit the left pane, though changes will be lost when you use the menu
+spinner button. The catalog will show you dozens of .kv examples controlling
+different widgets and layouts.
+
+The catalog's interface is set in the file kivycatalog.kv, while the
+interfaces for each menu option are set in containers_kvs directory. To
+add a new .kv file to the Kivy Catalog, add a .kv file into the container_kvs
+directory and reference that file in the ScreenManager section of
+kivycatalog.kv.
+
+Known bugs include some issue with the drop
+'''" code nil nil [4703 5613])
+            ("kivy" include nil nil [5614 5625])
+            ("kivy" code nil nil [5626 5647])
+            ("os" include nil nil [5648 5657])
+            ("sys" include nil nil [5658 5668])
+            ("kivy.app" include nil nil [5669 5693])
+            ("kivy.factory" include nil nil [5694 5726])
+            ("kivy.lang" include nil nil [5727 5781])
+            ("kivy.properties" include nil nil [5782 5824])
+            ("kivy.config" include nil nil [5825 5855])
+            ("kivy.compat" include nil nil [5856 5883])
+            ("kivy.uix.boxlayout" include nil nil [5885 5925])
+            ("kivy.uix.codeinput" include nil nil [5926 5966])
+            ("kivy.animation" include nil nil [5967 6003])
+            ("kivy.clock" include nil nil [6004 6032])
+            ("CATALOG_ROOT" variable nil nil [6034 6074])
+            ("'''List of classes that need to be instantiated in the factory from .kv files.
+'''" code nil nil [6159 6241])
+            ("CONTAINER_KVS" variable nil nil [6242 6301])
+            ("CONTAINER_CLASSES" variable nil nil [6302 6390])
+            ("Container" type
+               (:superclasses ("BoxLayout")
+                :members 
+                  ( ("'''A container is essentially a class that loads its root from a known
+    .kv file.
+
+    The name of the .kv file is taken from the Container's class.
+    We can't just use kv rules because the class may be edited
+    in the interface and reloaded by the user.
+    See :meth: change_kv where this happens.
+    '''" code nil (reparse-symbol indented_block_body) [6425 6739])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [6783 6824])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6833 6879])
+                            ("parser" variable nil (reparse-symbol indented_block_body) [6888 6931])
+                            ("widget" variable nil (reparse-symbol indented_block_body) [6940 6980])
+                            ("Builder" code nil (reparse-symbol indented_block_body) [6989 7042])
+                            ("self" code nil (reparse-symbol indented_block_body) [7051 7074]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6758 6762])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [6764 6772]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [6745 7075])
+                    ("kv_file" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7106 7110]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [7080 7288]))                  
+                :type "class")
+                nil [6393 7288])
+            ("for" code nil nil [7290 7390])
+            ("KivyRenderTextInput" type
+               (:superclasses ("CodeInput")
+                :members 
+                  ( ("keyboard_on_key_down" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7459 7463])
+                            ("window" variable nil (reparse-symbol function_parameters) [7465 7471])
+                            ("keycode" variable nil (reparse-symbol function_parameters) [7473 7480])
+                            ("text" variable nil (reparse-symbol function_parameters) [7482 7486])
+                            ("modifiers" variable nil (reparse-symbol function_parameters) [7488 7497]))                          )
+                        (reparse-symbol indented_block_body) [7434 8075]))                  
+                :type "class")
+                nil [7392 8075])
+            ("Catalog" type
+               (:superclasses ("BoxLayout")
+                :members 
+                  ( ("'''Catalog of widgets. This is the root widget of the app. It contains
+    a tabbed pain of widgets that can be displayed and a textbox where .kv
+    language files for widgets being demoed can be edited.
+
+    The entire interface for the Catalog is defined in kivycatalog.kv,
+    although individual containers are defined in the container_kvs
+    directory.
+
+    To add a container to the catalog,
+    first create the .kv file in container_kvs
+    The name of the file (sans .kv) will be the name of the widget available
+    inside the kivycatalog.kv
+    Finally modify kivycatalog.kv to add an AccordionItem
+    to hold the new widget.
+    Follow the examples in kivycatalog.kv to ensure the item
+    has an appropriate id and the class has been referenced.
+
+    You do not need to edit any python code, just .kv language files!
+    '''" code nil (reparse-symbol indented_block_body) [8107 8947])
+                    ("language_box" variable nil (reparse-symbol indented_block_body) [8952 8983])
+                    ("screen_manager" variable nil (reparse-symbol indented_block_body) [8988 9021])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [9065 9098])
+                            ("super" code nil (reparse-symbol indented_block_body) [9107 9146])
+                            ("self" code nil (reparse-symbol indented_block_body) [9155 9184])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9193 9213]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9040 9044])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [9046 9054]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [9027 9214])
+                    ("show_kv" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9231 9235])
+                            ("instance" variable nil (reparse-symbol function_parameters) [9237 9245])
+                            ("value" variable nil (reparse-symbol function_parameters) [9247 9252]))                          )
+                        (reparse-symbol indented_block_body) [9219 9756])
+                    ("schedule_reload" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9781 9785]))                          )
+                        (reparse-symbol indented_block_body) [9761 10125])
+                    ("change_kv" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10144 10148])
+                            ("largs" variable nil (reparse-symbol function_parameters) [10150 10156]))                          )
+                        (reparse-symbol indented_block_body) [10130 10931])
+                    ("show_error" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10951 10955])
+                            ("e" variable nil (reparse-symbol function_parameters) [10957 10958]))                          )
+                        (reparse-symbol indented_block_body) [10936 11199]))                  
+                :type "class")
+                nil [8077 11199])
+            ("KivyCatalogApp" type
+               (:superclasses ("App")
+                :members 
+                  ( ("'''The kivy App that runs the main root. All we do is build a catalog
+    widget into the root.'''" code nil (reparse-symbol indented_block_body) [11232 11330])
+                    ("build" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11346 11350]))                          )
+                        (reparse-symbol indented_block_body) [11336 11378])
+                    ("on_pause" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11396 11400]))                          )
+                        (reparse-symbol indented_block_body) [11383 11423]))                  
+                :type "class")
+                nil [11201 11423])
+            ("if" code nil nil [11425 11479]))          
+      :file "temp.py"
+      :pointmax 11481
+      :fsize 11480
+      :lastmodtime '(22011 8356 377786 973000)
+      :unmatched-syntax '((INDENT_BLOCK 10900 . 10931) (NEWLINE 10899 . 10900) (COLON 10898 . 10899) (AS 10894 . 10896) (EXCEPT 10877 . 10883) (INDENT_BLOCK 10838 . 10869) (NEWLINE 10837 . 10838) (COLON 10836 . 10837) (TRY 10536 . 10539) (AS 10832 . 10834) (INDENT_BLOCK 10900 . 10931) (NEWLINE 10899 . 10900) (COLON 10898 . 10899) (AS 10894 . 10896) (EXCEPT 10877 . 10883) (INDENT_BLOCK 10838 . 10869) (NEWLINE 10837 . 10838) (COLON 10836 . 10837) (TRY 10536 . 10539) (AS 10832 . 10834) (INDENT_BLOCK 10875 . 10906) (NEWLINE 10874 . 10875) (COLON 10873 . 10874) (AS 10869 . 10871) (EXCEPT 10852 . 10858) (INDENT_BLOCK 10813 . 10844) (NEWLINE 10812 . 10813) (COLON 10811 . 10812) (TRY 10511 . 10514) (AS 10807 . 10809) (NAME 31 . 33) ($EOI 4675 . 4675) (NEWLINE 23 . 24) (NAME 24 . 26) ($EOI 4668 . 4668) (NEWLINE 8 . 9) (NAME 9 . 11) ($EOI 4653 . 4653) ($EOI 4646 . 4646) ($EOI 15 . 15) ($EOI 4 . 4)))
+)
+  :file "!home!kothiyal!Dropbox!Work!misc!German!flash-card!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

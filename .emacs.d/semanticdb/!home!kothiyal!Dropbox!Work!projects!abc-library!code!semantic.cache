@@ -1,0 +1,204 @@
+;; Object code/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "code/"
+  :tables
+  (list
+    (semanticdb-table "format_bib_entries.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("re" include nil nil [1 10])
+            ("\"\"\"
+require format:
+
+@article{mrx05, 
+auTHor = \"Mr. X\", 
+Title = {Something Great}, 
+publisher = \"nob\" # \"ody\", 
+YEAR = 2005, 
+}
+
+example entry: 
+Authors: Artinger, S., & Powell, T. C. 
+Year: in press
+Title: Entrepreneurial failure: Statistical and psychological explanations. 
+Journal: Strategic Management Journal, [vol?], [pages?]
+Monograph: 
+Editors: 
+Edition: 
+Publisher: 
+DOI: 10.1002/smj.2378
+URL: 
+\"\"\"" code nil nil [11 420])
+            ("bibs" variable nil nil [422 477])
+            ("fmt_bibs" variable nil nil [478 491])
+            ("for" code nil nil [492 1027])
+            ("flp" variable nil nil [1032 1076])
+            ("for" code nil nil [1077 1282])
+            ("flp" code nil nil [1282 1293]))          
+      :file "format_bib_entries.py"
+      :pointmax 1327
+      :fsize 1326
+      :lastmodtime '(22131 4670 481699 212000)
+      :unmatched-syntax nil)
+    (semanticdb-table "xml2json.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "xml2json.py"
+      :pointmax 2463
+      :fsize 2462
+      :lastmodtime '(22130 55540 250133 402000)
+      :unmatched-syntax nil)
+    (semanticdb-table "categorize.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("re" include nil nil [1 10])
+            ("os" include nil nil [11 20])
+            ("json" include nil nil [21 32])
+            ("difflib" include nil nil [33 74])
+            ("main" function (:documentation "categorize the entries in the database based on the abstract, keywords and title.
+    ") nil [76 574])
+            ("Categorize" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [706 728])
+                            ("self" variable nil (reparse-symbol indented_block_body) [898 916])
+                            ("self" variable nil (reparse-symbol indented_block_body) [925 949])
+                            ("self" variable nil (reparse-symbol indented_block_body) [958 982])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1011 1137])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1179 1354])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1363 1389]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [623 627])
+                            ("title" variable nil (reparse-symbol function_parameters) [629 634])
+                            ("article" variable nil (reparse-symbol function_parameters) [641 648])
+                            ("keywords" variable nil (reparse-symbol function_parameters) [653 661])
+                            ("abstract" variable nil (reparse-symbol function_parameters) [666 674])
+                            ("threshold" variable nil (reparse-symbol function_parameters) [679 688]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [610 1421])
+                    ("info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1435 1439]))                          
+                        :documentation "
+        For some articles keywords and abstract are known for other not, in later case
+        provide the whole article and the info method will try to find them.
+        return the abstract and the keywords of the article.
+        ")
+                        (reparse-symbol indented_block_body) [1426 3574])
+                    ("fuzzy_match" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3599 3603])
+                            ("words" variable nil (reparse-symbol function_parameters) [3605 3610])
+                            ("txt" variable nil (reparse-symbol function_parameters) [3612 3615])
+                            ("threshold" variable nil (reparse-symbol function_parameters) [3617 3626]))                          
+                        :documentation "
+        words is a space or '-' separated list of words, if there are n words in words
+        then take first n words from the txt and fuzzy match them if match successfull
+        (bigger then threshold) then return else look at next n words.
+        ")
+                        (reparse-symbol indented_block_body) [3583 4745])
+                    ("getcats" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4762 4766]))                          )
+                        (reparse-symbol indented_block_body) [4750 6139]))                  
+                :type "class")
+                nil [575 6139])
+            ("if" code nil nil [6140 6178])
+            ("searchlist" function (:arguments 
+              ( ("lst" variable nil (reparse-symbol function_parameters) [6252 6255])
+                ("x" variable nil (reparse-symbol function_parameters) [6257 6258]))              ) nil [6237 6313])
+            ("foog" variable nil nil [6313 6377])
+            ("foogc" variable nil nil [6391 6443])
+            ("cats" variable nil nil [6444 6487])
+            ("baz" variable nil nil [6489 6523])
+            ("bazs" variable nil nil [6524 6539]))          
+      :file "categorize.py"
+      :pointmax 6540
+      :fsize 6539
+      :lastmodtime '(22130 61235 225964 804000)
+      :unmatched-syntax nil)
+    (semanticdb-table "temp.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("json" include nil nil [1 12])
+            ("data" variable nil nil [13 60]))          
+      :file "temp.py"
+      :pointmax 99
+      :fsize 98
+      :lastmodtime '(22120 14527 976507 717000)
+      :unmatched-syntax '((NAME 100 . 103) ($EOI 2241 . 2241) (NAME 100 . 103) ($EOI 2241 . 2241) (NAME 100 . 103) (NEWLINE 106 . 107) (STRING_LITERAL 107 . 2242) ($EOI 2242 . 2242)))
+    (semanticdb-table "categorize-old.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("re" include nil nil [1 10])
+            ("os" include nil nil [11 20])
+            ("difflib" include nil nil [21 62])
+            ("info" function
+               (:documentation "
+    return the abstract and the keywords.
+    "
+                :arguments 
+                  ( ("fl" variable nil (reparse-symbol function_parameters) [73 75]))                  )
+                nil [64 1717])
+            ("cats" variable nil nil [1718 1820])
+            ("hcats" variable nil nil [1821 1937])
+            ("fuzzy_match" function
+               (:documentation "
+    words is a space or '-' separated list of words, if there are n words in words
+    then take first n words from the txt and fuzzy match them if match successfull
+    (bigger then threshold) then return else look at next n words.
+    "
+                :arguments 
+                  ( ("words" variable nil (reparse-symbol function_parameters) [1956 1961])
+                    ("txt" variable nil (reparse-symbol function_parameters) [1963 1966])
+                    ("threshold" variable nil (reparse-symbol function_parameters) [1968 1977]))                  )
+                nil [1940 2873])
+            ("getcats" function (:arguments 
+              ( ("fl" variable nil (reparse-symbol function_parameters) [2890 2892])
+                ("threshold" variable nil (reparse-symbol function_parameters) [2894 2903]))              ) nil [2878 3624])
+            ("count" variable nil nil [3625 3634])
+            ("fls" variable nil nil [3635 3702])
+            ("for" code nil nil [3703 3865]))          
+      :file "categorize-old.py"
+      :pointmax 3866
+      :fsize 3865
+      :lastmodtime '(22079 26819 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "integrate.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+integrate Uwe db with the categorized db
+\"\"\"" code nil nil [1 49])
+            ("re" include nil nil [50 59])
+            ("json" include nil nil [60 71])
+            ("main" function nil nil [73 1137])
+            ("uwedb2json" function (:arguments 
+              ( ("dbpath" variable nil (reparse-symbol function_parameters) [1157 1163]))              ) nil [1142 2090])
+            ("search4title" function
+               (:documentation "
+    search for the entry in db whose title matches title
+    and returns it, if nothing matches then return empty dictionary
+    "
+                :arguments 
+                  ( ("db" variable nil (reparse-symbol function_parameters) [2113 2115])
+                    ("title" variable nil (reparse-symbol function_parameters) [2117 2122]))                  )
+                nil [2096 2590])
+            ("if" code nil nil [2596 2634])
+            ("searchInList" function (:arguments 
+              ( ("lst" variable nil (reparse-symbol function_parameters) [2652 2655])
+                ("txt" variable nil (reparse-symbol function_parameters) [2657 2660]))              ) nil [2635 2714]))          
+      :file "integrate.py"
+      :pointmax 2777
+      :fsize 2776
+      :lastmodtime '(22132 1840 599842 812000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!projects!abc-library!code!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

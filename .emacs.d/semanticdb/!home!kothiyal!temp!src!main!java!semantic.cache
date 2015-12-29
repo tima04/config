@@ -1,0 +1,26 @@
+;; Object java/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "java/"
+  :tables
+  (list
+    (semanticdb-table "Library.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("gnu.trove.*" include nil nil [248 267])
+            ("Library" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("someLibraryMethod" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [297 360]))                  
+                :type "class")
+                nil [270 362]))          
+      :file "Library.java"
+      :pointmax 365
+      :fsize 364
+      :lastmodtime '(22127 3039 965508 194000)
+      :unmatched-syntax '(($EOI 350 . 350))))
+  :file "!home!kothiyal!temp!src!main!java!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

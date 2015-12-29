@@ -1,0 +1,32 @@
+;; Object data/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "data/"
+  :tables
+  (list
+    (semanticdb-table "database_categorized.json"
+      :major-mode 'js-mode
+      :tags nil
+      :file "database_categorized.json"
+      :pointmax 923416
+      :fsize 1009630
+      :lastmodtime '(22130 57037 794089 68000)
+      :unmatched-syntax '((BRACK_BLOCK 1 . 923416)))
+    (semanticdb-table "database.json"
+      :major-mode 'js-mode
+      :tags nil
+      :file "database.json"
+      :pointmax 63680
+      :fsize 975377
+      :lastmodtime '(22130 54708 234158 34000)
+      :unmatched-syntax '((BRACK_BLOCK 1 . 63680)))
+    (semanticdb-table "integrated_database.json"
+      :major-mode 'js-mode
+      :tags nil
+      :file "integrated_database.json"
+      :pointmax 811490
+      :fsize 811489
+      :lastmodtime '(22131 149 257833 62000)
+      :unmatched-syntax '((BRACK_BLOCK 1 . 811490))))
+  :file "!home!kothiyal!Dropbox!Work!projects!abc-library!data!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

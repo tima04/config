@@ -1,0 +1,16 @@
+;; Object temp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "temp/"
+  :tables
+  (list
+    (semanticdb-table "MyFirstJavaProgram.java"
+      :major-mode 'java-mode
+      :tags nil
+      :file "MyFirstJavaProgram.java"
+      :pointmax 1
+      :fsize 238
+      :lastmodtime '(22016 17061 682258 307000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!temp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

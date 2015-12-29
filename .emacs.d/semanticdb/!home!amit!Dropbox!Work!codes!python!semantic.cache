@@ -1,0 +1,181 @@
+;; Object python/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "python/"
+  :tables
+  (list
+    (semanticdb-table "pycomplete.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Python dot expression completion using Pymacs.
+
+This almost certainly needs work, but if you add
+
+    (require 'pycomplete)
+
+to your .xemacs/init.el file (.emacs for GNU Emacs) and have Pymacs
+installed, when you hit TAB it will try to complete the dot expression
+before point.  For example, given this import at the top of the file:
+
+    import time
+
+typing \"time.cl\" then hitting TAB should complete \"time.clock\".
+
+See pycomplete.el for the Emacs Lisp side of things.
+\"\"\"" code nil nil [24 501])
+            ("sys" include nil nil [502 512])
+            ("os.path" include nil nil [513 527])
+            ("string" include nil nil [528 541])
+            ("Pymacs" include nil nil [543 566])
+            ("sys" code nil nil [568 588])
+            ("try" code nil nil [590 673])
+            ("get_all_completions" function
+               (:documentation "Return contextual completion of s (string of >= zero chars).
+
+    If given, imports is a list of import statements to be executed first.
+    "
+                :arguments 
+                  ( ("s" variable nil (reparse-symbol function_parameters) [698 699])
+                    ("imports" variable nil (reparse-symbol function_parameters) [701 708]))                  )
+                nil [674 1919])
+            ("pycomplete" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [1935 1936])
+                ("imports" variable nil (reparse-symbol function_parameters) [1938 1945]))              ) nil [1920 2843])
+            ("if" code nil nil [2844 3371]))          
+      :file "pycomplete.py"
+      :pointmax 3425
+      :fsize 3426
+      :lastmodtime '(21989 42103 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "temp.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("Foo" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__getitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [68 72])
+                            ("key" variable nil (reparse-symbol function_parameters) [74 78]))                          
+                        :decorators 
+                          ( ("dec" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [43 100])
+                    ("bar" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [121 125])
+                            ("key" variable nil (reparse-symbol function_parameters) [127 131]))                          
+                        :decorators 
+                          ( ("dec" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [104 153])
+                    ("__len__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [169 173]))                          )
+                        (reparse-symbol indented_block_body) [157 194])
+                    ("baz" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [220 224]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [198 267]))                  
+                :type "class")
+                nil [20 267])
+            ("foo" variable nil nil [268 279])
+            ("foo" code nil nil [280 293])
+            ("foo" code nil nil [294 302])
+            ("foo" code nil nil [303 311])
+            ("foo" code nil nil [312 329])
+            ("foo" code nil nil [330 340])
+            ("foo" code nil nil [341 351])
+            ("dec" function (:arguments 
+              ( ("fn" variable nil (reparse-symbol function_parameters) [361 363]))              ) nil [353 984]))          
+      :file "temp.py"
+      :pointmax 995
+      :fsize 1020
+      :lastmodtime '(21960 30298 898933 725000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Pytable_vs_numpy_vs_pandas.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pandas" include nil nil [1 20])
+            ("tables" include nil nil [21 40])
+            ("numpy" include nil nil [41 59])
+            ("dfp" variable nil nil [61 89])
+            ("dfn" variable nil nil [90 120])
+            ("h5fl" variable nil nil [121 171])
+            ("h5fl" code nil nil [172 202])
+            ("h5fl" code nil nil [203 244])
+            ("h5fl" code nil nil [245 257])
+            ("tbl" variable nil nil [258 290])
+            ("dfp" code nil nil [311 321])
+            ("dfn" code nil nil [322 330])
+            ("tbl" code nil nil [331 342])
+            ("for" code nil nil [343 427])
+            ("dfp" code nil nil [453 468])
+            ("dfp" code nil nil [469 494])
+            ("dfn" code nil nil [495 510])
+            ("dfn" code nil nil [511 536])
+            ("tbl" code nil nil [537 565])
+            ("dfp" code nil nil [685 719])
+            ("dfp" code nil nil [737 789])
+            ("dfn" code nil nil [814 861])
+            ("dfn" code nil nil [880 940])
+            ("tbl" code nil nil [964 1033])
+            ("" code nil nil [1051 1137])
+            ("" code nil nil [1156 1233])
+            ("tbl" code nil nil [1252 1302])
+            ("agg" function (:arguments 
+              ( ("fun" variable nil (reparse-symbol function_parameters) [1470 1473])
+                ("arr" variable nil (reparse-symbol function_parameters) [1475 1478])
+                ("axis" variable nil (reparse-symbol function_parameters) [1480 1484]))              ) nil [1462 1757])
+            ("dfp" code nil nil [1758 1785])
+            ("agg" code nil nil [1803 1837])
+            ("agg" code nil nil [1856 1893])
+            ("dfp" code nil nil [2029 2055])
+            ("pd" code nil nil [2056 2096])
+            ("pd" code nil nil [2097 2140])
+            ("dfp" code nil nil [2324 2359])
+            ("foo" variable nil nil [2480 2583])
+            ("bar" variable nil nil [2584 2635])
+            ("baz" variable nil nil [2636 2703])
+            ("baz" variable nil nil [2704 2738])
+            ("baz" variable nil nil [2739 2758])
+            ("baz" code nil nil [2759 2797]))          
+      :file "Pytable_vs_numpy_vs_pandas.py"
+      :pointmax 2799
+      :fsize 2809
+      :lastmodtime '(21969 2933 426649 566000)
+      :unmatched-syntax '((NEWLINE 2797 . 2798)))
+    (semanticdb-table "markov.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+read file
+build hash-table
+ hash table, prefix => suffix
+  prefix: (w1, w2)
+  suffix: w3
+\"\"\"" code nil nil [1 97])
+            ("random" include nil nil [98 123])
+            ("NOUT" variable nil nil [124 134])
+            ("main" function (:arguments 
+              ( ("fl" variable nil (reparse-symbol function_parameters) [145 147]))              ) nil [136 377])
+            ("make_table" function (:arguments 
+              ( ("fl" variable nil (reparse-symbol function_parameters) [393 395]))              ) nil [378 692])
+            ("perfect_numbers" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [722 723]))              ) nil [702 927])
+            ("is_perfect" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [943 944]))              ) nil [928 1031])
+            ("divs" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [1041 1042]))              ) nil [1032 1090]))          
+      :file "markov.py"
+      :pointmax 1099
+      :fsize 1107
+      :lastmodtime '(21465 6006 0 0)
+      :unmatched-syntax '((IF 1078 . 1080) (NEWLINE 1089 . 1090))))
+  :file "!home!amit!Dropbox!Work!codes!python!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

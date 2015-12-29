@@ -1,0 +1,2052 @@
+;; Object core/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "core/"
+  :tables
+  (list
+    (semanticdb-table "displayhook.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"Displayhook for IPython.
+
+This defines a callable class that IPython uses for `sys.displayhook`.
+
+Authors:
+
+* Fernando Perez
+* Brian Granger
+* Robert Kern
+\"\"\"" code nil nil [25 186])
+            ("__future__" include nil nil [781 818])
+            ("sys" include nil nil [820 830])
+            ("IPython.core.formatters" include nil nil [832 894])
+            ("IPython.config.configurable" include nil nil [895 947])
+            ("IPython.utils" include nil nil [948 976])
+            ("IPython.utils.py3compat" include nil nil [977 1024])
+            ("IPython.utils.traitlets" include nil nil [1025 1069])
+            ("IPython.utils.warn" include nil nil [1070 1105])
+            ("DisplayHook" type
+               (:documentation "The custom IPython displayhook to replace sys.displayhook.
+
+    This class does many things, but the basic idea is that it is a callable
+    that gets called anytime user code returns a value.
+    "
+                :superclasses ("Configurable")
+                :members 
+                  ( ("shell" variable nil (reparse-symbol indented_block_body) [1768 1837])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [1910 1966])
+                            ("cache_size_min" variable nil (reparse-symbol indented_block_body) [1976 1994])
+                            ("if" code nil (reparse-symbol indented_block_body) [2003 2355])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2364 2392])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2460 2478])
+                            ("self, self, self" code nil (reparse-symbol indented_block_body) [2496 2530])
+                            ("to_user_ns" variable nil (reparse-symbol indented_block_body) [2581 2634])
+                            ("self" code nil (reparse-symbol indented_block_body) [2643 2680]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1856 1860])
+                            ("shell" variable nil (reparse-symbol function_parameters) [1862 1867])
+                            ("cache_size" variable nil (reparse-symbol function_parameters) [1874 1884])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1891 1899]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1843 2681])
+                    ("prompt_count" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2717 2721]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2686 2766])
+                    ("check_for_underscore" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3059 3063]))                          
+                        :documentation "Check if the user has set the '_' variable by hand.")
+                        (reparse-symbol indented_block_body) [3034 3489])
+                    ("quiet" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3504 3508]))                          
+                        :documentation "Should we silence the display hook because of ';'?")
+                        (reparse-symbol indented_block_body) [3494 3876])
+                    ("start_displayhook" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3903 3907]))                          
+                        :documentation "Start the displayhook, initializing resources.")
+                        (reparse-symbol indented_block_body) [3881 3984])
+                    ("write_output_prompt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4013 4017]))                          
+                        :documentation "Write the output prompt.
+
+        The default implementation simply writes the prompt to
+        ``io.stdout``.
+        ")
+                        (reparse-symbol indented_block_body) [3989 4392])
+                    ("compute_format_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4421 4425])
+                            ("result" variable nil (reparse-symbol function_parameters) [4427 4433]))                          
+                        :documentation "Compute format data of the object to be displayed.
+
+        The format data is a generalization of the :func:`repr` of an object.
+        In the default implementation the format data is a :class:`dict` of
+        key value pair where the keys are valid MIME types and the values
+        are JSON'able data structure containing the raw data for that MIME
+        type. It is up to frontends to determine pick a MIME to to use and
+        display that data in an appropriate manner.
+
+        This method only computes the format data for the object and should
+        NOT actually print or write that to a stream.
+
+        Parameters
+        ----------
+        result : object
+            The Python object passed to the display hook, whose format will be
+            computed.
+
+        Returns
+        -------
+        (format_dict, md_dict) : dict
+            format_dict is a :class:`dict` whose keys are valid MIME types and values are
+            JSON'able raw data for that MIME type. It is recommended that
+            all return values of this should always include the \"text/plain\"
+            MIME type representation of the object.
+            md_dict is a :class:`dict` with the same MIME type keys
+            of metadata associated with each output.
+            
+        ")
+                        (reparse-symbol indented_block_body) [4397 5793])
+                    ("write_format_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5820 5824])
+                            ("format_dict" variable nil (reparse-symbol function_parameters) [5826 5837])
+                            ("md_dict" variable nil (reparse-symbol function_parameters) [5839 5846]))                          
+                        :documentation "Write the format data dict to the frontend.
+
+        This default version of this method simply writes the plain text
+        representation of the object to ``io.stdout``. Subclasses should
+        override this method to send the entire `format_dict` to the
+        frontends.
+
+        Parameters
+        ----------
+        format_dict : dict
+            The format dict for the object passed to `sys.displayhook`.
+        md_dict : dict (optional)
+            The metadata dict to be associated with the display data.
+        ")
+                        (reparse-symbol indented_block_body) [5798 7368])
+                    ("update_user_ns" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7392 7396])
+                            ("result" variable nil (reparse-symbol function_parameters) [7398 7404]))                          
+                        :documentation "Update user_ns with various things like _, __, _1, etc.")
+                        (reparse-symbol indented_block_body) [7373 8867])
+                    ("log_output" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8887 8891])
+                            ("format_dict" variable nil (reparse-symbol function_parameters) [8893 8904]))                          
+                        :documentation "Log the output.")
+                        (reparse-symbol indented_block_body) [8872 9209])
+                    ("finish_displayhook" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9237 9241]))                          
+                        :documentation "Finish up all displayhook activities.")
+                        (reparse-symbol indented_block_body) [9214 9372])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9390 9394])
+                            ("result" variable nil (reparse-symbol function_parameters) [9396 9402]))                          
+                        :documentation "Printing with history cache management.
+
+        This is invoked everytime the interpreter needs to print, and is
+        activated by setting the variable sys.displayhook to it.
+        ")
+                        (reparse-symbol indented_block_body) [9377 10375])
+                    ("flush" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10390 10394]))                          )
+                        (reparse-symbol indented_block_body) [10380 11365]))                  
+                :type "class")
+                nil [1522 11365]))          
+      :file "displayhook.py"
+      :pointmax 11366
+      :fsize 11365
+      :lastmodtime '(21722 16979 41448 803000)
+      :unmatched-syntax nil)
+    (semanticdb-table "interactiveshell.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"Main IPython class.\"\"\"" code nil nil [25 50])
+            ("__future__" include nil nil [693 731])
+            ("__future__" include nil nil [732 769])
+            ("__future__" include nil nil [771 788])
+            ("abc" include nil nil [789 799])
+            ("ast" include nil nil [800 810])
+            ("atexit" include nil nil [811 824])
+            ("functools" include nil nil [825 841])
+            ("os" include nil nil [842 851])
+            ("re" include nil nil [852 861])
+            ("runpy" include nil nil [862 874])
+            ("sys" include nil nil [875 885])
+            ("tempfile" include nil nil [886 901])
+            ("types" include nil nil [902 914])
+            ("subprocess" include nil nil [915 932])
+            ("io" include nil nil [933 963])
+            ("IPython.config.configurable" include nil nil [965 1026])
+            ("IPython.core" include nil nil [1027 1070])
+            ("IPython.core" include nil nil [1071 1101])
+            ("IPython.core" include nil nil [1102 1131])
+            ("IPython.core" include nil nil [1132 1166])
+            ("IPython.core" include nil nil [1167 1200])
+            ("IPython.core" include nil nil [1201 1233])
+            ("IPython.core.alias" include nil nil [1234 1289])
+            ("IPython.core.autocall" include nil nil [1290 1336])
+            ("IPython.core.builtin_trap" include nil nil [1337 1386])
+            ("IPython.core.events" include nil nil [1387 1449])
+            ("IPython.core.compilerop" include nil nil [1450 1526])
+            ("IPython.core.display_trap" include nil nil [1527 1576])
+            ("IPython.core.displayhook" include nil nil [1577 1625])
+            ("IPython.core.displaypub" include nil nil [1626 1678])
+            ("IPython.core.error" include nil nil [1679 1720])
+            ("IPython.core.extensions" include nil nil [1721 1773])
+            ("IPython.core.formatters" include nil nil [1774 1826])
+            ("IPython.core.history" include nil nil [1827 1874])
+            ("IPython.core.inputsplitter" include nil nil [1875 1957])
+            ("IPython.core.logger" include nil nil [1958 1996])
+            ("IPython.core.macro" include nil nil [1997 2033])
+            ("IPython.core.payload" include nil nil [2034 2081])
+            ("IPython.core.prefilter" include nil nil [2082 2133])
+            ("IPython.core.profiledir" include nil nil [2134 2180])
+            ("IPython.core.prompts" include nil nil [2181 2227])
+            ("IPython.lib.latextools" include nil nil [2228 2272])
+            ("IPython.testing.skipdoctest" include nil nil [2273 2325])
+            ("IPython.utils" include nil nil [2326 2362])
+            ("IPython.utils" include nil nil [2363 2391])
+            ("IPython.utils" include nil nil [2392 2427])
+            ("IPython.utils" include nil nil [2428 2460])
+            ("IPython.utils.decorators" include nil nil [2461 2503])
+            ("IPython.utils.io" include nil nil [2504 2543])
+            ("IPython.utils.ipstruct" include nil nil [2544 2585])
+            ("IPython.utils.path" include nil nil [2586 2681])
+            ("IPython.utils.pickleshare" include nil nil [2682 2733])
+            ("IPython.utils.process" include nil nil [2734 2785])
+            ("" code nil nil [2822 2927])
+            ("IPython.utils.strdispatch" include nil nil [2928 2977])
+            ("IPython.utils.syspathcontext" include nil nil [2978 3039])
+            ("" code nil nil [3071 3152])
+            ("" code nil nil [3189 3296])
+            ("IPython.utils.warn" include nil nil [3297 3339])
+            ("IPython.core.hooks" include nil nil [3340 3365])
+            ("dedent_re" variable nil nil [3581 3637])
+            ("softspace" function
+               (:documentation "Copied from code.py, to remove the dependency"
+                :arguments 
+                  ( ("file" variable nil (reparse-symbol function_parameters) [3831 3835])
+                    ("newvalue" variable nil (reparse-symbol function_parameters) [3837 3845]))                  
+                :decorators 
+                  ( ("undoc" function (:type "decorator") nil nil))                  )
+                nil [3810 4181])
+            ("no_op" function
+               (:decorators 
+                  ( ("undoc" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("a" variable nil (reparse-symbol function_parameters) [4199 4201])
+                    ("kw" variable nil (reparse-symbol function_parameters) [4203 4207]))                  )
+                nil [4182 4215])
+            ("NoOpContext" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__enter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4268 4272]))                          )
+                        (reparse-symbol indented_block_body) [4254 4280])
+                    ("__exit__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4297 4301])
+                            ("type" variable nil (reparse-symbol function_parameters) [4303 4307])
+                            ("value" variable nil (reparse-symbol function_parameters) [4309 4314])
+                            ("traceback" variable nil (reparse-symbol function_parameters) [4316 4325]))                          )
+                        (reparse-symbol indented_block_body) [4284 4333]))                  
+                :type "class")
+                nil [4223 4333])
+            ("no_op_context" variable nil nil [4333 4362])
+            ("SpaceInInput" type
+               (:superclasses ("Exception")
+                :members 
+                  ( ("pass" code nil nil nil))                  
+                :type "class")
+                nil [4364 4400])
+            ("Bunch" type
+               (:members 
+                  ( ("pass" code nil nil nil))                  
+                :type "class")
+                nil [4408 4426])
+            ("get_default_colors" function nil nil [4428 4590])
+            ("SeparateUnicode" type
+               (:superclasses ("Unicode")
+                :members 
+                  ( ("r\"\"\"A Unicode subclass to validate separate_in, separate_out, etc.
+
+    This is a Unicode based trait that converts '0'->'' and ``'\\\\n'->'\\n'``.
+    \"\"\"" code nil (reparse-symbol indented_block_body) [4628 4780])
+                    ("validate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4799 4803])
+                            ("obj" variable nil (reparse-symbol function_parameters) [4805 4808])
+                            ("value" variable nil (reparse-symbol function_parameters) [4810 4815]))                          )
+                        (reparse-symbol indented_block_body) [4786 4961]))                  
+                :type "class")
+                nil [4592 4961])
+            ("ReadlineNoRecord" type
+               (:documentation "Context manager to execute some code, then reload readline history
+    so that interactive input to the code doesn't appear when pressing up."
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [5186 5204])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5213 5235]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5164 5168])
+                            ("shell" variable nil (reparse-symbol function_parameters) [5170 5175]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [5151 5236])
+                    ("__enter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5255 5259]))                          )
+                        (reparse-symbol indented_block_body) [5241 5610])
+                    ("__exit__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5628 5632])
+                            ("type" variable nil (reparse-symbol function_parameters) [5634 5638])
+                            ("value" variable nil (reparse-symbol function_parameters) [5640 5645])
+                            ("traceback" variable nil (reparse-symbol function_parameters) [5647 5656]))                          )
+                        (reparse-symbol indented_block_body) [5615 6422])
+                    ("current_length" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6446 6450]))                          )
+                        (reparse-symbol indented_block_body) [6427 6517])
+                    ("get_readline_tail" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6544 6548])
+                            ("n" variable nil (reparse-symbol function_parameters) [6550 6551]))                          
+                        :documentation "Get the last n items in readline history.")
+                        (reparse-symbol indented_block_body) [6522 6812]))                  
+                :type "class")
+                nil [4963 6812])
+            ("DummyMod" type
+               (:documentation "A dummy module used for IPython's interactive module when
+    a namespace must be assigned to the module's __dict__."
+                :superclasses ("object")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [6976 6980]))                  
+                :type "class")
+                nil [6821 6981])
+            ("InteractiveShell" type
+               (:documentation "An enhanced, interactive shell for Python."
+                :superclasses ("SingletonConfigurable")
+                :members 
+                  ( ("_instance" variable nil (reparse-symbol indented_block_body) [7267 7283])
+                    ("ast_transformers" variable nil (reparse-symbol indented_block_body) [7293 7491])
+                    ("autocall" variable nil (reparse-symbol indented_block_body) [7497 8044])
+                    ("autoindent" variable nil (reparse-symbol indented_block_body) [8183 8311])
+                    ("automagic" variable nil (reparse-symbol indented_block_body) [8316 8454])
+                    ("cache_size" variable nil (reparse-symbol indented_block_body) [8459 8971])
+                    ("color_info" variable nil (reparse-symbol indented_block_body) [8976 9274])
+                    ("colors" variable nil (reparse-symbol indented_block_body) [9279 9484])
+                    ("colors_force" variable nil (reparse-symbol indented_block_body) [9489 9837])
+                    ("debug" variable nil (reparse-symbol indented_block_body) [9842 9875])
+                    ("deep_reload" variable nil (reparse-symbol indented_block_body) [9880 10465])
+                    ("disable_failing_post_execute" variable nil (reparse-symbol indented_block_body) [10470 10611])
+                    ("display_formatter" variable nil (reparse-symbol indented_block_body) [10616 10662])
+                    ("displayhook_class" variable nil (reparse-symbol indented_block_body) [10667 10704])
+                    ("display_pub_class" variable nil (reparse-symbol indented_block_body) [10709 10751])
+                    ("data_pub_class" variable nil (reparse-symbol indented_block_body) [10756 10777])
+                    ("exit_now" variable nil (reparse-symbol indented_block_body) [10783 10806])
+                    ("exiter" variable nil (reparse-symbol indented_block_body) [10811 10842])
+                    ("_exiter_default" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10867 10871]))                          )
+                        (reparse-symbol indented_block_body) [10847 10908])
+                    ("execution_count" variable nil (reparse-symbol indented_block_body) [10961 10989])
+                    ("filename" variable nil (reparse-symbol indented_block_body) [10994 11033])
+                    ("ipython_dir" variable nil (reparse-symbol indented_block_body) [11038 11075])
+                    ("input_splitter" variable nil (reparse-symbol indented_block_body) [11229 11369])
+                    ("input_transformer_manager" variable nil (reparse-symbol indented_block_body) [11523 11686])
+                    ("logstart" variable nil (reparse-symbol indented_block_body) [11696 11815])
+                    ("logfile" variable nil (reparse-symbol indented_block_body) [11820 11930])
+                    ("logappend" variable nil (reparse-symbol indented_block_body) [11935 12063])
+                    ("object_info_string_level" variable nil (reparse-symbol indented_block_body) [12068 12174])
+                    ("pdb" variable nil (reparse-symbol indented_block_body) [12179 12313])
+                    ("multiline_history" variable nil (reparse-symbol indented_block_body) [12318 12459])
+                    ("prompt_in1" variable nil (reparse-symbol indented_block_body) [12502 12607])
+                    ("prompt_in2" variable nil (reparse-symbol indented_block_body) [12612 12718])
+                    ("prompt_out" variable nil (reparse-symbol indented_block_body) [12723 12829])
+                    ("prompts_pad_left" variable nil (reparse-symbol indented_block_body) [12834 12931])
+                    ("_prompt_trait_changed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12967 12971])
+                            ("name" variable nil (reparse-symbol function_parameters) [12973 12977])
+                            ("old" variable nil (reparse-symbol function_parameters) [12979 12982])
+                            ("new" variable nil (reparse-symbol function_parameters) [12984 12987]))                          )
+                        (reparse-symbol indented_block_body) [12941 13571])
+                    ("_prompt_in1_changed" variable nil (reparse-symbol indented_block_body) [13580 13623])
+                    ("_prompt_in2_changed" variable nil (reparse-symbol indented_block_body) [13628 13671])
+                    ("_prompt_out_changed" variable nil (reparse-symbol indented_block_body) [13676 13719])
+                    ("_prompt_pad_left_changed" variable nil (reparse-symbol indented_block_body) [13724 13772])
+                    ("show_rewritten_input" variable nil (reparse-symbol indented_block_body) [13782 13891])
+                    ("quiet" variable nil (reparse-symbol indented_block_body) [13901 13934])
+                    ("history_length" variable nil (reparse-symbol indented_block_body) [13940 13984])
+                    ("readline_use" variable nil (reparse-symbol indented_block_body) [14138 14177])
+                    ("readline_remove_delims" variable nil (reparse-symbol indented_block_body) [14182 14234])
+                    ("readline_delims" variable nil (reparse-symbol indented_block_body) [14239 14266])
+                    ("readline_parse_and_bind" variable nil (reparse-symbol indented_block_body) [14403 14972])
+                    ("ast_node_interactivity" variable nil (reparse-symbol indented_block_body) [14978 15310])
+                    ("separate_in" variable nil (reparse-symbol indented_block_body) [15458 15506])
+                    ("separate_out" variable nil (reparse-symbol indented_block_body) [15511 15558])
+                    ("separate_out2" variable nil (reparse-symbol indented_block_body) [15563 15611])
+                    ("wildcards_case_sensitive" variable nil (reparse-symbol indented_block_body) [15616 15667])
+                    ("xmode" variable nil (reparse-symbol indented_block_body) [15672 15793])
+                    ("alias_manager" variable nil (reparse-symbol indented_block_body) [15839 15898])
+                    ("prefilter_manager" variable nil (reparse-symbol indented_block_body) [15903 15974])
+                    ("builtin_trap" variable nil (reparse-symbol indented_block_body) [15979 16043])
+                    ("display_trap" variable nil (reparse-symbol indented_block_body) [16048 16112])
+                    ("extension_manager" variable nil (reparse-symbol indented_block_body) [16117 16189])
+                    ("payload_manager" variable nil (reparse-symbol indented_block_body) [16194 16259])
+                    ("history_manager" variable nil (reparse-symbol indented_block_body) [16264 16329])
+                    ("magics_manager" variable nil (reparse-symbol indented_block_body) [16334 16395])
+                    ("profile_dir" variable nil (reparse-symbol indented_block_body) [16401 16462])
+                    ("profile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16493 16497]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [16467 16651])
+                    ("_post_execute" variable nil (reparse-symbol indented_block_body) [16681 16711])
+                    ("pylab_gui_select" variable nil (reparse-symbol indented_block_body) [16760 16783])
+                    ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [17067 17115])
+                            ("self" variable nil (reparse-symbol indented_block_body) [17124 17151])
+                            ("self" code nil (reparse-symbol indented_block_body) [17218 17252])
+                            ("self" code nil (reparse-symbol indented_block_body) [17261 17295])
+                            ("self" code nil (reparse-symbol indented_block_body) [17304 17330])
+                            ("self" code nil (reparse-symbol indented_block_body) [17339 17362])
+                            ("self" code nil (reparse-symbol indented_block_body) [17443 17465])
+                            ("self" code nil (reparse-symbol indented_block_body) [17535 17584])
+                            ("self" code nil (reparse-symbol indented_block_body) [17973 18001])
+                            ("self" code nil (reparse-symbol indented_block_body) [18010 18033])
+                            ("self" variable nil (reparse-symbol indented_block_body) [18259 18329])
+                            ("self" code nil (reparse-symbol indented_block_body) [18339 18358])
+                            ("self" code nil (reparse-symbol indented_block_body) [18367 18387])
+                            ("self" code nil (reparse-symbol indented_block_body) [18396 18417])
+                            ("self" code nil (reparse-symbol indented_block_body) [18427 18458])
+                            ("self" code nil (reparse-symbol indented_block_body) [18467 18484])
+                            ("self" code nil (reparse-symbol indented_block_body) [18493 18511])
+                            ("self" code nil (reparse-symbol indented_block_body) [18520 18548])
+                            ("self" code nil (reparse-symbol indented_block_body) [18701 18720])
+                            ("self" code nil (reparse-symbol indented_block_body) [18729 18747])
+                            ("self" code nil (reparse-symbol indented_block_body) [18756 18776])
+                            ("self" code nil (reparse-symbol indented_block_body) [18844 18865])
+                            ("self" code nil (reparse-symbol indented_block_body) [18984 19004])
+                            ("if" code nil (reparse-symbol indented_block_body) [19195 19319])
+                            ("self" code nil (reparse-symbol indented_block_body) [19611 19632])
+                            ("self" code nil (reparse-symbol indented_block_body) [19865 19879])
+                            ("self" code nil (reparse-symbol indented_block_body) [19888 19935])
+                            ("self" code nil (reparse-symbol indented_block_body) [19944 19963])
+                            ("self" code nil (reparse-symbol indented_block_body) [19972 20001])
+                            ("self" code nil (reparse-symbol indented_block_body) [20010 20033])
+                            ("self" code nil (reparse-symbol indented_block_body) [20042 20062])
+                            ("self" code nil (reparse-symbol indented_block_body) [20071 20094])
+                            ("self" code nil (reparse-symbol indented_block_body) [20103 20124])
+                            ("self" code nil (reparse-symbol indented_block_body) [20133 20151])
+                            ("self" code nil (reparse-symbol indented_block_body) [20160 20177])
+                            ("self" code nil (reparse-symbol indented_block_body) [20186 20206])
+                            ("self" code nil (reparse-symbol indented_block_body) [20215 20230])
+                            ("self" code nil (reparse-symbol indented_block_body) [20239 20268])
+                            ("self" code nil (reparse-symbol indented_block_body) [20277 20296])
+                            ("self" code nil (reparse-symbol indented_block_body) [20305 20322])
+                            ("self" code nil (reparse-symbol indented_block_body) [20331 20361])
+                            ("self" code nil (reparse-symbol indented_block_body) [20370 20416])
+                            ("atexit" code nil (reparse-symbol indented_block_body) [20425 20464]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16802 16806])
+                            ("ipython_dir" variable nil (reparse-symbol function_parameters) [16808 16819])
+                            ("profile_dir" variable nil (reparse-symbol function_parameters) [16826 16837])
+                            ("user_module" variable nil (reparse-symbol function_parameters) [16861 16872])
+                            ("user_ns" variable nil (reparse-symbol function_parameters) [16879 16886])
+                            ("custom_exceptions" variable nil (reparse-symbol function_parameters) [16910 16927])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [16940 16948]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [16789 20465])
+                    ("get_ipython" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20486 20490]))                          
+                        :documentation "Return the currently running IPython instance.")
+                        (reparse-symbol indented_block_body) [20470 20574])
+                    ("_ipython_dir_changed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20792 20796])
+                            ("name" variable nil (reparse-symbol function_parameters) [20798 20802])
+                            ("new" variable nil (reparse-symbol function_parameters) [20804 20807]))                          )
+                        (reparse-symbol indented_block_body) [20767 20888])
+                    ("set_autoindent" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20912 20916])
+                            ("value" variable nil (reparse-symbol function_parameters) [20917 20922]))                          
+                        :documentation "Set the autoindent flag, checking for readline support.
+
+        If called with no arguments, it acts as a toggle.")
+                        (reparse-symbol indented_block_body) [20893 21399])
+                    ("init_ipython_dir" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21624 21628])
+                            ("ipython_dir" variable nil (reparse-symbol function_parameters) [21630 21641]))                          )
+                        (reparse-symbol indented_block_body) [21603 21788])
+                    ("init_profile_dir" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21814 21818])
+                            ("profile_dir" variable nil (reparse-symbol function_parameters) [21820 21831]))                          )
+                        (reparse-symbol indented_block_body) [21793 22039])
+                    ("init_instance_attrs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22068 22072]))                          )
+                        (reparse-symbol indented_block_body) [22044 23144])
+                    ("init_environment" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23170 23174]))                          
+                        :documentation "Any changes we need to make to the user's environment.")
+                        (reparse-symbol indented_block_body) [23149 23259])
+                    ("init_encoding" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23282 23286]))                          )
+                        (reparse-symbol indented_block_body) [23264 23646])
+                    ("init_syntax_highlighting" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23680 23684]))                          )
+                        (reparse-symbol indented_block_body) [23651 23868])
+                    ("init_pushd_popd_magic" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23899 23903]))                          )
+                        (reparse-symbol indented_block_body) [23873 24010])
+                    ("init_logger" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24031 24035]))                          )
+                        (reparse-symbol indented_block_body) [24015 24156])
+                    ("init_logstart" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24179 24183]))                          
+                        :documentation "Initialize logging in case it was requested at the command line.
+        ")
+                        (reparse-symbol indented_block_body) [24161 24506])
+                    ("init_builtins" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24529 24533]))                          )
+                        (reparse-symbol indented_block_body) [24511 25390])
+                    ("init_inspector" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25414 25418]))                          )
+                        (reparse-symbol indented_block_body) [25395 25717])
+                    ("init_io" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25734 25738]))                          )
+                        (reparse-symbol indented_block_body) [25722 26274])
+                    ("init_prompts" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26296 26300]))                          )
+                        (reparse-symbol indented_block_body) [26279 26607])
+                    ("init_display_formatter" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26639 26643]))                          )
+                        (reparse-symbol indented_block_body) [26612 26767])
+                    ("init_display_pub" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26793 26797]))                          )
+                        (reparse-symbol indented_block_body) [26772 26915])
+                    ("init_data_pub" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26938 26942]))                          )
+                        (reparse-symbol indented_block_body) [26920 27139])
+                    ("init_displayhook" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27165 27169]))                          )
+                        (reparse-symbol indented_block_body) [27144 27619])
+                    ("init_latextool" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27643 27647]))                          
+                        :documentation "Configure LaTeXTool.")
+                        (reparse-symbol indented_block_body) [27624 27816])
+                    ("init_virtualenv" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27841 27845]))                          
+                        :documentation "Add a virtualenv to sys.path so the user can import modules from it.
+        This isn't perfect: it doesn't use the Python interpreter with which the
+        virtualenv was built, and it ignores the --no-site-packages option. A
+        warning will appear suggesting the user installs IPython in the
+        virtualenv, but for many cases, it probably works well enough.
+        
+        Adapted from code snippets online.
+        
+        http://blog.ufsoft.org/2009/1/29/ipython-and-virtualenv
+        ")
+                        (reparse-symbol indented_block_body) [27821 29630])
+                    ("save_sys_module_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [29875 29879]))                          
+                        :documentation "Save the state of hooks in the sys module.
+
+        This has to be called after self.user_module is created.
+        ")
+                        (reparse-symbol indented_block_body) [29849 30451])
+                    ("restore_sys_module_state" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [30485 30489]))                          
+                        :documentation "Restore the state of the sys module.")
+                        (reparse-symbol indented_block_body) [30456 30907])
+                    ("init_hooks" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [31116 31120]))                          )
+                        (reparse-symbol indented_block_body) [31101 31598])
+                    ("set_hook" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [31616 31620])
+                            ("name" variable nil (reparse-symbol function_parameters) [31621 31625])
+                            ("hook" variable nil (reparse-symbol function_parameters) [31626 31630])
+                            ("priority" variable nil (reparse-symbol function_parameters) [31632 31640])
+                            ("str_key" variable nil (reparse-symbol function_parameters) [31645 31652])
+                            ("re_key" variable nil (reparse-symbol function_parameters) [31659 31665])
+                            ("_warn_deprecated" variable nil (reparse-symbol function_parameters) [31689 31705]))                          
+                        :documentation "set_hook(name,hook) -> sets an internal IPython hook.
+
+        IPython exposes some of its internal API as user-modifiable hooks.  By
+        adding your function to one of these hooks, you can modify IPython's
+        behavior to call at runtime your own routines.")
+                        (reparse-symbol indented_block_body) [31603 33412])
+                    ("init_events" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33623 33627]))                          )
+                        (reparse-symbol indented_block_body) [33607 33689])
+                    ("register_post_execute" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33720 33724])
+                            ("func" variable nil (reparse-symbol function_parameters) [33726 33730]))                          
+                        :documentation "DEPRECATED: Use ip.events.register('post_run_cell', func)
+        
+        Register a function for calling after code execution.
+        ")
+                        (reparse-symbol indented_block_body) [33694 34064])
+                    ("new_main_mod" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [34291 34295])
+                            ("filename" variable nil (reparse-symbol function_parameters) [34297 34305])
+                            ("modname" variable nil (reparse-symbol function_parameters) [34307 34314]))                          
+                        :documentation "Return a new 'main' module object for user code execution.
+        
+        ``filename`` should be the path of the script which will be run in the
+        module. Requests with the same filename will get the same module, with
+        its namespace cleared.
+        
+        ``modname`` should be the module name - normally either '__main__' or
+        the basename of the file without the extension.
+        
+        When scripts are executed via %run, we must keep a reference to their
+        __main__ module around so that Python doesn't
+        clear it, rendering references to module globals useless.
+
+        This method keeps said reference in a private dict, keyed by the
+        absolute path of the script. This way, for multiple executions of the
+        same script we only keep one copy of the namespace (the last one),
+        thus preventing memory leaks from old references while allowing the
+        objects from the last execution to be accessible.
+        ")
+                        (reparse-symbol indented_block_body) [34274 35931])
+                    ("clear_main_mod_cache" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [35961 35965]))                          
+                        :documentation "Clear the cache of main modules.
+
+        Mainly for use by utilities like %reset.
+
+        Examples
+        --------
+
+        In [15]: import IPython
+
+        In [16]: m = _ip.new_main_mod(IPython.__file__, 'IPython')
+
+        In [17]: len(_ip._main_mod_cache) > 0
+        Out[17]: True
+
+        In [18]: _ip.clear_main_mod_cache()
+
+        In [19]: len(_ip._main_mod_cache) == 0
+        Out[19]: True
+        ")
+                        (reparse-symbol indented_block_body) [35936 36431])
+                    ("init_pdb" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [36642 36646]))                          )
+                        (reparse-symbol indented_block_body) [36629 36763])
+                    ("_get_call_pdb" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [36786 36790]))                          )
+                        (reparse-symbol indented_block_body) [36768 36823])
+                    ("_set_call_pdb" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [36846 36850])
+                            ("val" variable nil (reparse-symbol function_parameters) [36851 36854]))                          )
+                        (reparse-symbol indented_block_body) [36828 37119])
+                    ("call_pdb" variable nil (reparse-symbol indented_block_body) [37124 37249])
+                    ("debugger" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [37268 37272])
+                            ("force" variable nil (reparse-symbol function_parameters) [37273 37278]))                          
+                        :documentation "Call the pydb/pdb debugger.
+
+        Keywords:
+
+          - force(False): by default, this routine checks the instance call_pdb
+            flag and does not actually invoke the debugger if the flag is false.
+            The 'force' option forces the debugger to activate even if the flag
+            is false.
+        ")
+                        (reparse-symbol indented_block_body) [37255 38098])
+                    ("default_user_namespaces" variable nil (reparse-symbol indented_block_body) [38314 38344])
+                    ("init_create_namespaces" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [38377 38381])
+                            ("user_module" variable nil (reparse-symbol function_parameters) [38383 38394])
+                            ("user_ns" variable nil (reparse-symbol function_parameters) [38401 38408]))                          )
+                        (reparse-symbol indented_block_body) [38350 42761])
+                    ("user_global_ns" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [42803 42807]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [42770 42851])
+                    ("prepare_user_module" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [42880 42884])
+                            ("user_module" variable nil (reparse-symbol function_parameters) [42886 42897])
+                            ("user_ns" variable nil (reparse-symbol function_parameters) [42904 42911]))                          
+                        :documentation "Prepare the module and namespace in which user code will be run.
+        
+        When IPython is started normally, both parameters are None: a new module
+        is created automatically, and its __dict__ used as the namespace.
+        
+        If only user_module is provided, its __dict__ is used as the namespace.
+        If only user_ns is provided, a dummy module is created, and user_ns
+        becomes the global namespace. If both are provided (as they may be
+        when embedding), user_ns is the local namespace, and user_module
+        provides the global namespace.
+
+        Parameters
+        ----------
+        user_module : module, optional
+            The current user module in which IPython is being run. If None,
+            a clean module will be created.
+        user_ns : dict, optional
+            A namespace in which to run interactive commands.
+
+        Returns
+        -------
+        A tuple of user_module and user_ns, each properly initialised.
+        ")
+                        (reparse-symbol indented_block_body) [42856 44796])
+                    ("init_sys_modules" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [44822 44826]))                          )
+                        (reparse-symbol indented_block_body) [44801 45880])
+                    ("init_user_ns" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [45902 45906]))                          
+                        :documentation "Initialize all user-visible namespaces to their minimum defaults.
+
+        Certain history lists are also initialized here, as they effectively
+        act as user namespaces.
+
+        Notes
+        -----
+        All data structures here are only filled in, they are NOT reset by this
+        method.  If they were not empty before, data will simply be added to
+        therm.
+        ")
+                        (reparse-symbol indented_block_body) [45885 48505])
+                    ("all_ns_refs" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [48544 48548]))                          
+                        :documentation "Get a list of references to all the namespace dictionaries in which
+        IPython might store a user-created object.
+        
+        Note that this does not include the displayhook, which also caches
+        objects from the output.")
+                        (reparse-symbol indented_block_body) [48514 48944])
+                    ("reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [48959 48963])
+                            ("new_session" variable nil (reparse-symbol function_parameters) [48965 48976]))                          
+                        :documentation "Clear all internal namespaces, and attempt to release references to
+        user objects.
+
+        If new_session is True, a new history session will be opened.
+        ")
+                        (reparse-symbol indented_block_body) [48949 50422])
+                    ("del_var" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [50439 50443])
+                            ("varname" variable nil (reparse-symbol function_parameters) [50445 50452])
+                            ("by_name" variable nil (reparse-symbol function_parameters) [50454 50461]))                          
+                        :documentation "Delete a variable from the various namespaces, so that, as
+        far as possible, we're not keeping any hidden references to it.
+
+        Parameters
+        ----------
+        varname : str
+            The name of the variable to delete.
+        by_name : bool
+            If True, delete variables with the given name in each
+            namespace. If False (default), find the variable in the user
+            namespace, and delete references to it.
+        ")
+                        (reparse-symbol indented_block_body) [50427 52043])
+                    ("reset_selective" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [52068 52072])
+                            ("regex" variable nil (reparse-symbol function_parameters) [52074 52079]))                          
+                        :documentation "Clear selective variables from internal namespaces based on a
+        specified regular expression.
+
+        Parameters
+        ----------
+        regex : string or compiled pattern, optional
+            A regular expression pattern that will be used in searching
+            variable names in the users namespaces.
+        ")
+                        (reparse-symbol indented_block_body) [52048 52901])
+                    ("push" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [52915 52919])
+                            ("variables" variable nil (reparse-symbol function_parameters) [52921 52930])
+                            ("interactive" variable nil (reparse-symbol function_parameters) [52932 52943]))                          
+                        :documentation "Inject a group of variables into the IPython user namespace.
+
+        Parameters
+        ----------
+        variables : dict, str or list/tuple of str
+            The variables to inject into the user's namespace.  If a dict, a
+            simple update is done.  If a str, the string is assumed to have
+            variable names separated by spaces.  A list/tuple of str can also
+            be used to give the variable names.  If just the variable names are
+            give (list/tuple/str) then the variable values looked up in the
+            callers frame.
+        interactive : bool
+            If True (default), the variables will be listed with the ``who``
+            magic.
+        ")
+                        (reparse-symbol indented_block_body) [52906 54776])
+                    ("drop_by_id" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [54800 54804])
+                            ("variables" variable nil (reparse-symbol function_parameters) [54806 54815]))                          
+                        :documentation "Remove a dict of variables from the user namespace, if they are the
+        same as the values in the dictionary.
+        
+        This is intended for use by extensions: variables that they've added can
+        be taken back out if they are unloaded, without removing any that the
+        user has overwritten.
+        
+        Parameters
+        ----------
+        variables : dict
+          A dictionary mapping object names (as strings) to the objects.
+        ")
+                        (reparse-symbol indented_block_body) [54785 55503])
+                    ("_ofind" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [55723 55727])
+                            ("oname" variable nil (reparse-symbol function_parameters) [55729 55734])
+                            ("namespaces" variable nil (reparse-symbol function_parameters) [55736 55746]))                          
+                        :documentation "Find an object in the available namespaces.
+
+        self._ofind(oname) -> dict with keys: found,obj,ospace,ismagic
+
+        Has special code to detect magic functions.
+        ")
+                        (reparse-symbol indented_block_body) [55712 59607])
+                    ("_ofind_property" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [59632 59636])
+                            ("oname" variable nil (reparse-symbol function_parameters) [59638 59643])
+                            ("info" variable nil (reparse-symbol function_parameters) [59645 59649]))                          
+                        :documentation "Second part of object finding, to look for property details.")
+                        (reparse-symbol indented_block_body) [59612 60625])
+                    ("_object_find" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [60647 60651])
+                            ("oname" variable nil (reparse-symbol function_parameters) [60653 60658])
+                            ("namespaces" variable nil (reparse-symbol function_parameters) [60660 60670]))                          
+                        :documentation "Find an object and return a struct with info about it.")
+                        (reparse-symbol indented_block_body) [60630 60856])
+                    ("_inspect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [60874 60878])
+                            ("meth" variable nil (reparse-symbol function_parameters) [60880 60884])
+                            ("oname" variable nil (reparse-symbol function_parameters) [60886 60891])
+                            ("namespaces" variable nil (reparse-symbol function_parameters) [60893 60903])
+                            ("kw" variable nil (reparse-symbol function_parameters) [60910 60914]))                          
+                        :documentation "Generic interface to the inspector system.
+
+        This function is meant to be called by pdef, pdoc & friends.")
+                        (reparse-symbol indented_block_body) [60861 61608])
+                    ("object_inspect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [61632 61636])
+                            ("oname" variable nil (reparse-symbol function_parameters) [61638 61643])
+                            ("detail_level" variable nil (reparse-symbol function_parameters) [61645 61657]))                          )
+                        (reparse-symbol indented_block_body) [61613 61995])
+                    ("init_history" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [62219 62223]))                          
+                        :documentation "Sets up the command history, and starts regular autosaves.")
+                        (reparse-symbol indented_block_body) [62202 62426])
+                    ("init_traceback_handlers" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [62692 62696])
+                            ("custom_exceptions" variable nil (reparse-symbol function_parameters) [62698 62715]))                          )
+                        (reparse-symbol indented_block_body) [62664 63816])
+                    ("set_custom_exc" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [63840 63844])
+                            ("exc_tuple" variable nil (reparse-symbol function_parameters) [63846 63855])
+                            ("handler" variable nil (reparse-symbol function_parameters) [63857 63864]))                          
+                        :documentation "set_custom_exc(exc_tuple,handler)
+
+        Set a custom exception handler, which will be called if any of the
+        exceptions in exc_tuple occur in the mainloop (specifically, in the
+        run_code() method).
+
+        Parameters
+        ----------
+
+        exc_tuple : tuple of exception classes
+            A *tuple* of exception classes, for which to call the defined
+            handler.  It is very important that you use a tuple, and NOT A
+            LIST here, because of the way Python's except statement works.  If
+            you only want to trap a single exception, use a singleton tuple::
+
+                exc_tuple == (MyCustomException,)
+
+        handler : callable
+            handler must have the following signature::
+
+                def my_handler(self, etype, value, tb, tb_offset=None):
+                    ...
+                    return structured_traceback
+
+            Your handler must return a structured traceback (a list of strings),
+            or None.
+
+            This will be made into an instance method (via types.MethodType)
+            of IPython itself, and it will be called if any of the exceptions
+            listed in the exc_tuple are caught. If the handler is None, an
+            internal basic one is used, which just prints basic info.
+
+            To protect IPython from crashes, if your handler ever raises an
+            exception or returns an invalid result, it will be immediately
+            disabled.
+
+        WARNING: by putting in your own exception handler into IPython's main
+        execution loop, you run a very good chance of nasty crashes.  This
+        facility should only be used if you really know what you are doing.")
+                        (reparse-symbol indented_block_body) [63821 68212])
+                    ("excepthook" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [68232 68236])
+                            ("etype" variable nil (reparse-symbol function_parameters) [68238 68243])
+                            ("value" variable nil (reparse-symbol function_parameters) [68245 68250])
+                            ("tb" variable nil (reparse-symbol function_parameters) [68252 68254]))                          
+                        :documentation "One more defense for GUI apps that call sys.excepthook.
+
+      GUI frameworks like wxPython trap exceptions and call
+      sys.excepthook themselves.  I guess this is a feature that
+      enables them to keep running after exceptions that would
+      otherwise kill their mainloop. This is a bother for IPython
+      which excepts to catch all of the program exceptions with a try:
+      except: statement.
+
+      Normally, IPython sets sys.excepthook to a CrashHandler instance, so if
+      any app directly invokes sys.excepthook, it will look to the user like
+      IPython crashed.  In order to work around this, we can disable the
+      CrashHandler and replace it with this excepthook instead, which prints a
+      regular traceback using our InteractiveTB.  In this fashion, apps which
+      call sys.excepthook will generate a regular-looking exception from
+      IPython, and the CrashHandler will only be triggered by real IPython
+      crashes.
+
+      This hook should be used sparingly, only in places which are not likely
+      to be true IPython errors.
+      ")
+                        (reparse-symbol indented_block_body) [68217 69399])
+                    ("_get_exc_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [69422 69426])
+                            ("exc_tuple" variable nil (reparse-symbol function_parameters) [69428 69437]))                          
+                        :documentation "get exc_info from a given tuple, sys.exc_info() or sys.last_type etc.
+        
+        Ensures sys.last_type,value,traceback hold the exc_info we found,
+        from whichever source.
+        
+        raises ValueError if none of these contain any information
+        ")
+                        (reparse-symbol indented_block_body) [69404 70623])
+                    ("show_usage_error" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [70653 70657])
+                            ("exc" variable nil (reparse-symbol function_parameters) [70659 70662]))                          
+                        :documentation "Show a short message for UsageErrors
+        
+        These are special exceptions that shouldn't show a traceback.
+        ")
+                        (reparse-symbol indented_block_body) [70632 70851])
+                    ("showtraceback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [70878 70882])
+                            ("exc_tuple" variable nil (reparse-symbol function_parameters) [70883 70892])
+                            ("filename" variable nil (reparse-symbol function_parameters) [70900 70908])
+                            ("tb_offset" variable nil (reparse-symbol function_parameters) [70914 70923])
+                            ("exception_only" variable nil (reparse-symbol function_parameters) [70952 70966]))                          
+                        :documentation "Display the exception that just occurred.
+
+        If nothing is known about the exception, this is the method which
+        should be used throughout the code for presenting user tracebacks,
+        rather than directly invoking the InteractiveTB object.
+
+        A specific showsyntaxerror() also exists, but this method can take
+        care of calling it if needed, so unless you are explicitly catching a
+        SyntaxError exception, don't try to analyze the stack manually and
+        simply call this method.")
+                        (reparse-symbol indented_block_body) [70860 73339])
+                    ("_showtraceback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [73363 73367])
+                            ("etype" variable nil (reparse-symbol function_parameters) [73369 73374])
+                            ("evalue" variable nil (reparse-symbol function_parameters) [73376 73382])
+                            ("stb" variable nil (reparse-symbol function_parameters) [73384 73387]))                          
+                        :documentation "Actually show a traceback.
+
+        Subclasses may override this method to put the traceback on a different
+        place, like a side channel.
+        ")
+                        (reparse-symbol indented_block_body) [73344 73621])
+                    ("showsyntaxerror" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [73646 73650])
+                            ("filename" variable nil (reparse-symbol function_parameters) [73652 73660]))                          
+                        :documentation "Display the syntax error that just occurred.
+
+        This doesn't display a stack trace because there isn't one.
+
+        If a filename is given, it is stuffed in the exception instead
+        of what was there before (because Python's parser always uses
+        \"<string>\" when reading from a string).
+        ")
+                        (reparse-symbol indented_block_body) [73626 74394])
+                    ("showindentationerror" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [74525 74529]))                          
+                        :documentation "Called by run_cell when there's an IndentationError in code entered
+        at the prompt.
+
+        This is overridden in TerminalInteractiveShell to show a message about
+        the %paste magic.")
+                        (reparse-symbol indented_block_body) [74500 74774])
+                    ("init_readline" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [74989 74993]))                          
+                        :documentation "Command history completion/saving/reloading.")
+                        (reparse-symbol indented_block_body) [74971 78315])
+                    ("refill_readline_hist" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [78345 78349]))                          )
+                        (reparse-symbol indented_block_body) [78320 79548])
+                    ("set_next_input" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("skip_doctest" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [79590 79594])
+                            ("s" variable nil (reparse-symbol function_parameters) [79596 79597]))                          
+                        :documentation " Sets the 'default' input string for the next command line.
+
+        Requires readline.
+
+        Example::
+
+            In [1]: _ip.set_next_input(\"Hello Word\")
+            In [2]: Hello Word_  # cursor is here
+        ")
+                        (reparse-symbol indented_block_body) [79553 79891])
+                    ("pre_readline" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [79961 79965]))                          
+                        :documentation "readline hook to be used at the start of each line.
+
+        Currently it handles auto-indent only.")
+                        (reparse-symbol indented_block_body) [79944 80318])
+                    ("_indent_current_str" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [80347 80351]))                          
+                        :documentation "return the current level of indentation as a string")
+                        (reparse-symbol indented_block_body) [80323 80475])
+                    ("init_completer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [80698 80702]))                          
+                        :documentation "Initialize the completion machinery.
+
+        This creates completion machinery that can be used by client code,
+        either interactively in-process (typically triggered by the readline
+        library), programatically (such as in test suites) or out-of-prcess
+        (typically over the network by remote frontends).
+        ")
+                        (reparse-symbol indented_block_body) [80679 82538])
+                    ("complete" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [82556 82560])
+                            ("text" variable nil (reparse-symbol function_parameters) [82562 82566])
+                            ("line" variable nil (reparse-symbol function_parameters) [82568 82572])
+                            ("cursor_pos" variable nil (reparse-symbol function_parameters) [82579 82589]))                          
+                        :documentation "Return the completed text and a list of completions.
+
+        Parameters
+        ----------
+
+           text : string
+             A string of text to be completed on.  It can be given as empty and
+             instead a line/position pair are given.  In this case, the
+             completer itself will split the line like readline does.
+
+           line : string, optional
+             The complete line that text is part of.
+
+           cursor_pos : int, optional
+             The position of the cursor on the input line.
+
+        Returns
+        -------
+          text : string
+            The actual text that was completed.
+
+          matches : list
+            A sorted list with all possible completions.
+
+        The optional arguments allow the completion to take more context into
+        account, and are part of the low-level completion API.
+
+        This is a wrapper around the completion mechanism, similar to what
+        readline does at the command line when the TAB key is hit.  By
+        exposing it as a method, it can be used by other non-readline
+        environments (such as GUIs) for text completion.
+
+        Simple usage example:
+
+        In [1]: x = 'hello'
+
+        In [2]: _ip.complete('x.l')
+        Out[2]: ('x.l', ['x.ljust', 'x.lower', 'x.lstrip'])
+        ")
+                        (reparse-symbol indented_block_body) [82543 84087])
+                    ("set_custom_completer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [84117 84121])
+                            ("completer" variable nil (reparse-symbol function_parameters) [84123 84132])
+                            ("pos" variable nil (reparse-symbol function_parameters) [84134 84137]))                          
+                        :documentation "Adds a new custom completer function.
+
+        The position argument (defaults to 0) is the index in the completers
+        list where you want the completer to be inserted.")
+                        (reparse-symbol indented_block_body) [84092 84444])
+                    ("set_readline_completer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [84476 84480]))                          
+                        :documentation "Reset readline's completer to be our own.")
+                        (reparse-symbol indented_block_body) [84449 84602])
+                    ("set_completer_frame" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [84631 84635])
+                            ("frame" variable nil (reparse-symbol function_parameters) [84637 84642]))                          
+                        :documentation "Set the frame of the completer.")
+                        (reparse-symbol indented_block_body) [84607 84962])
+                    ("init_magics" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [85173 85177]))                          )
+                        (reparse-symbol indented_block_body) [85157 86669])
+                    ("" code nil (reparse-symbol indented_block_body) [86756 86795])
+                    ("register_magic_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [86828 86832])
+                            ("func" variable nil (reparse-symbol function_parameters) [86834 86838])
+                            ("magic_kind" variable nil (reparse-symbol function_parameters) [86840 86850])
+                            ("magic_name" variable nil (reparse-symbol function_parameters) [86859 86869]))                          )
+                        (reparse-symbol indented_block_body) [86800 87010])
+                    ("run_line_magic" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [87034 87038])
+                            ("magic_name" variable nil (reparse-symbol function_parameters) [87040 87050])
+                            ("line" variable nil (reparse-symbol function_parameters) [87052 87056]))                          
+                        :documentation "Execute the given line magic.
+
+        Parameters
+        ----------
+        magic_name : str
+          Name of the desired magic function, without '%' prefix.
+
+        line : str
+          The rest of the input line as a single string.
+        ")
+                        (reparse-symbol indented_block_body) [87015 88450])
+                    ("run_cell_magic" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [88474 88478])
+                            ("magic_name" variable nil (reparse-symbol function_parameters) [88480 88490])
+                            ("line" variable nil (reparse-symbol function_parameters) [88492 88496])
+                            ("cell" variable nil (reparse-symbol function_parameters) [88498 88502]))                          
+                        :documentation "Execute the given cell magic.
+        
+        Parameters
+        ----------
+        magic_name : str
+          Name of the desired magic function, without '%' prefix.
+
+        line : str
+          The rest of the first input line as a single string.
+
+        cell : str
+          The body of the cell as a (possibly multiline) string.
+        ")
+                        (reparse-symbol indented_block_body) [88455 89994])
+                    ("find_line_magic" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [90019 90023])
+                            ("magic_name" variable nil (reparse-symbol function_parameters) [90025 90035]))                          
+                        :documentation "Find and return a line magic by name.
+
+        Returns None if the magic isn't found.")
+                        (reparse-symbol indented_block_body) [89999 90204])
+                    ("find_cell_magic" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [90229 90233])
+                            ("magic_name" variable nil (reparse-symbol function_parameters) [90235 90245]))                          
+                        :documentation "Find and return a cell magic by name.
+
+        Returns None if the magic isn't found.")
+                        (reparse-symbol indented_block_body) [90209 90414])
+                    ("find_magic" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [90434 90438])
+                            ("magic_name" variable nil (reparse-symbol function_parameters) [90440 90450])
+                            ("magic_kind" variable nil (reparse-symbol function_parameters) [90452 90462]))                          
+                        :documentation "Find and return a magic of the given type by name.
+
+        Returns None if the magic isn't found.")
+                        (reparse-symbol indented_block_body) [90419 90655])
+                    ("magic" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [90670 90674])
+                            ("arg_s" variable nil (reparse-symbol function_parameters) [90676 90681]))                          
+                        :documentation "DEPRECATED. Use run_line_magic() instead.
+
+        Call a magic function by name.
+
+        Input: a string containing the name of the magic function to call and
+        any additional arguments to be passed to the magic.
+
+        magic('name -opt foo bar') is equivalent to typing at the ipython
+        prompt:
+
+        In[1]: %name -opt foo bar
+
+        To call a magic without arguments, simply use magic('name').
+
+        This provides a proper Python function to call IPython's magics in any
+        valid Python code you can type at the interpreter, including loops and
+        compound statements.
+        ")
+                        (reparse-symbol indented_block_body) [90660 91555])
+                    ("define_macro" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [91767 91771])
+                            ("name" variable nil (reparse-symbol function_parameters) [91773 91777])
+                            ("themacro" variable nil (reparse-symbol function_parameters) [91779 91787]))                          
+                        :documentation "Define a new macro
+
+        Parameters
+        ----------
+        name : str
+            The name of the macro.
+        themacro : str or Macro
+            The action to do upon invoking the macro.  If a string, a new
+            Macro object is created by passing the string to it.
+        ")
+                        (reparse-symbol indented_block_body) [91750 92395])
+                    ("system_piped" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [92631 92635])
+                            ("cmd" variable nil (reparse-symbol function_parameters) [92637 92640]))                          
+                        :documentation "Call the given cmd in a subprocess, piping stdout/err
+
+        Parameters
+        ----------
+        cmd : str
+          Command to execute (can not end in '&', as background processes are
+          not supported.  Should not be a command that expects input
+          other than simple text.
+        ")
+                        (reparse-symbol indented_block_body) [92614 93651])
+                    ("system_raw" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [93671 93675])
+                            ("cmd" variable nil (reparse-symbol function_parameters) [93677 93680]))                          
+                        :documentation "Call the given cmd in a subprocess using os.system on Windows or
+        subprocess.call using the system shell on other platforms.
+
+        Parameters
+        ----------
+        cmd : str
+          Command to execute.
+        ")
+                        (reparse-symbol indented_block_body) [93656 94977])
+                    ("system" variable nil (reparse-symbol indented_block_body) [95046 95067])
+                    ("getoutput" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [95087 95091])
+                            ("cmd" variable nil (reparse-symbol function_parameters) [95093 95096])
+                            ("split" variable nil (reparse-symbol function_parameters) [95098 95103])
+                            ("depth" variable nil (reparse-symbol function_parameters) [95110 95115]))                          
+                        :documentation "Get output (possibly including stderr) from a subprocess.
+
+        Parameters
+        ----------
+        cmd : str
+          Command to execute (can not end in '&', as background processes are
+          not supported.
+        split : bool, optional
+          If True, split the output into an IPython SList.  Otherwise, an
+          IPython LSString is returned.  These are objects similar to normal
+          lists and strings, with a few convenience attributes for easier
+          manipulation of line-based output.  You can use '?' on them for
+          details.
+        depth : int, optional
+          How many frames above the caller are the local variables which should
+          be expanded in the command string? The default (0) assumes that the
+          expansion variables are in the stack frame calling this function.
+        ")
+                        (reparse-symbol indented_block_body) [95073 96313])
+                    ("init_alias" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [96524 96528]))                          )
+                        (reparse-symbol indented_block_body) [96509 96652])
+                    ("init_extension_manager" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [96878 96882]))                          )
+                        (reparse-symbol indented_block_body) [96851 97018])
+                    ("init_payload" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [97232 97236]))                          )
+                        (reparse-symbol indented_block_body) [97215 97354])
+                    ("init_comms" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [97573 97577]))                          )
+                        (reparse-symbol indented_block_body) [97558 97637])
+                    ("init_prefilter" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [97862 97866]))                          )
+                        (reparse-symbol indented_block_body) [97843 98271])
+                    ("auto_rewrite_input" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [98299 98303])
+                            ("cmd" variable nil (reparse-symbol function_parameters) [98305 98308]))                          
+                        :documentation "Print to the screen the rewritten form of the user's command.
+
+        This shows visual feedback by rewriting input lines that cause
+        automatic calling to kick in, like::
+
+          /f x
+
+        into::
+
+          ------> f(x)
+
+        after the user's input prompt.  This helps the user understand that the
+        input line was transformed automatically by IPython.
+        ")
+                        (reparse-symbol indented_block_body) [98276 99137])
+                    ("_user_obj_error" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [99399 99403]))                          
+                        :documentation "return simple exception dict
+        
+        for use in user_variables / expressions
+        ")
+                        (reparse-symbol indented_block_body) [99379 99879])
+                    ("_format_user_obj" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [99909 99913])
+                            ("obj" variable nil (reparse-symbol function_parameters) [99915 99918]))                          
+                        :documentation "format a user object to display dict
+        
+        for use in user_expressions / variables
+        ")
+                        (reparse-symbol indented_block_body) [99888 100235])
+                    ("user_variables" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [100263 100267])
+                            ("names" variable nil (reparse-symbol function_parameters) [100269 100274]))                          
+                        :documentation "Get a list of variable names from the user's namespace.
+
+        Parameters
+        ----------
+        names : list of strings
+          A list of names of variables to be read from the user namespace.
+
+        Returns
+        -------
+        A dict, keyed by the input names and with the rich mime-type repr(s) of each value.
+        Each element will be a sub-dict of the same form as a display_data message.
+        ")
+                        (reparse-symbol indented_block_body) [100244 100998])
+                    ("user_expressions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [101024 101028])
+                            ("expressions" variable nil (reparse-symbol function_parameters) [101030 101041]))                          
+                        :documentation "Evaluate a dict of expressions in the user's namespace.
+
+        Parameters
+        ----------
+        expressions : dict
+          A dict with string keys and string values.  The expression values
+          should be valid Python expressions, each of which will be evaluated
+          in the user namespace.
+
+        Returns
+        -------
+        A dict, keyed like the input expressions dict, with the rich mime-typed
+        display_data of each value.
+        ")
+                        (reparse-symbol indented_block_body) [101003 101881])
+                    ("ex" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [102096 102100])
+                            ("cmd" variable nil (reparse-symbol function_parameters) [102102 102105]))                          
+                        :documentation "Execute a normal python statement in user namespace.")
+                        (reparse-symbol indented_block_body) [102089 102264])
+                    ("ev" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [102276 102280])
+                            ("expr" variable nil (reparse-symbol function_parameters) [102282 102286]))                          
+                        :documentation "Evaluate python expression expr in user namespace.
+
+        Returns the result of evaluation
+        ")
+                        (reparse-symbol indented_block_body) [102269 102502])
+                    ("safe_execfile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [102525 102529])
+                            ("fname" variable nil (reparse-symbol function_parameters) [102531 102536])
+                            ("where" variable nil (reparse-symbol function_parameters) [102538 102544])
+                            ("kw" variable nil (reparse-symbol function_parameters) [102546 102550]))                          
+                        :documentation "A safe version of the builtin execfile().
+
+        This version will never throw an exception, but instead print
+        helpful error messages to the screen.  This only works on pure
+        Python files with the .py extension.
+
+        Parameters
+        ----------
+        fname : string
+            The name of the file to be executed.
+        where : tuple
+            One or two namespaces, passed to execfile() as (globals,locals).
+            If only one is given, it is passed as both.
+        exit_ignore : bool (False)
+            If True, then silence SystemExit for non-zero status (it is always
+            silenced for zero status, as it is so common).
+        raise_exceptions : bool (False)
+            If True raise exceptions everywhere. Meant for testing.
+
+        ")
+                        (reparse-symbol indented_block_body) [102507 105032])
+                    ("safe_execfile_ipy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [105059 105063])
+                            ("fname" variable nil (reparse-symbol function_parameters) [105065 105070]))                          
+                        :documentation "Like safe_execfile, but for .ipy or .ipynb files with IPython syntax.
+
+        Parameters
+        ----------
+        fname : str
+            The name of the file to execute.  The filename must have a
+            .ipy or .ipynb extension.
+        ")
+                        (reparse-symbol indented_block_body) [105037 107028])
+                    ("safe_run_module" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [107053 107057])
+                            ("mod_name" variable nil (reparse-symbol function_parameters) [107059 107067])
+                            ("where" variable nil (reparse-symbol function_parameters) [107069 107074]))                          
+                        :documentation "A safe version of runpy.run_module().
+
+        This version will never throw an exception, but instead print
+        helpful error messages to the screen.
+
+        `SystemExit` exceptions with status code 0 or None are ignored.
+
+        Parameters
+        ----------
+        mod_name : string
+            The name of the module to be executed.
+        where : dict
+            The globals namespace.
+        ")
+                        (reparse-symbol indented_block_body) [107033 107926])
+                    ("_run_cached_cell_magic" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [107958 107962])
+                            ("magic_name" variable nil (reparse-symbol function_parameters) [107964 107974])
+                            ("line" variable nil (reparse-symbol function_parameters) [107976 107980]))                          
+                        :documentation "Special method to call a cell magic with the data stored in self.
+        ")
+                        (reparse-symbol indented_block_body) [107931 108221])
+                    ("run_cell" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [108239 108243])
+                            ("raw_cell" variable nil (reparse-symbol function_parameters) [108245 108253])
+                            ("store_history" variable nil (reparse-symbol function_parameters) [108255 108268])
+                            ("silent" variable nil (reparse-symbol function_parameters) [108276 108282])
+                            ("shell_futures" variable nil (reparse-symbol function_parameters) [108290 108303]))                          
+                        :documentation "Run a complete IPython cell.
+
+        Parameters
+        ----------
+        raw_cell : str
+          The code (including IPython code such as %magic functions) to run.
+        store_history : bool
+          If True, the raw and translated cell will be stored in IPython's
+          history. For user code calling back into IPython's machinery, this
+          should be set to False.
+        silent : bool
+          If True, avoid side-effects, such as implicit displayhooks and
+          and logging.  silent=True forces store_history=False.
+        shell_futures : bool
+          If True, the code will share future statements with the interactive
+          shell. It will both be affected by previous __future__ imports, and
+          any __future__ imports in the code will affect the shell. If False,
+          __future__ imports are not shared in either direction.
+        ")
+                        (reparse-symbol indented_block_body) [108226 113022])
+                    ("transform_ast" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [113049 113053])
+                            ("node" variable nil (reparse-symbol function_parameters) [113055 113059]))                          
+                        :documentation "Apply the AST transformations from self.ast_transformers
+        
+        Parameters
+        ----------
+        node : ast.Node
+          The root node to be transformed. Typically called with the ast.Module
+          produced by parsing user input.
+        
+        Returns
+        -------
+        An ast.Node corresponding to the node it was called with. Note that it
+        may also modify the passed object, so don't rely on references to the
+        original AST.
+        ")
+                        (reparse-symbol indented_block_body) [113031 113962])
+                    ("run_ast_nodes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [114002 114006])
+                            ("nodelist" variable nil (reparse-symbol function_parameters) [114008 114016])
+                            ("cell_name" variable nil (reparse-symbol function_parameters) [114018 114027])
+                            ("interactivity" variable nil (reparse-symbol function_parameters) [114029 114042])
+                            ("compiler" variable nil (reparse-symbol function_parameters) [114080 114088]))                          
+                        :documentation "Run a sequence of AST nodes. The execution mode depends on the
+        interactivity parameter.
+
+        Parameters
+        ----------
+        nodelist : list
+          A sequence of AST nodes to run.
+        cell_name : str
+          Will be passed to the compiler as the filename of the cell. Typically
+          the value returned by ip.compile.cache(cell).
+        interactivity : str
+          'all', 'last', 'last_expr' or 'none', specifying which nodes should be
+          run interactively (displaying output from expressions). 'last_expr'
+          will run the last node interactively only if it is an expression (i.e.
+          expressions in loops or other blocks are not displayed. Other values
+          for this parameter will raise a ValueError.
+        compiler : callable
+          A function with the same interface as the built-in compile(), to turn
+          the AST nodes into code objects. Default is the built-in compile().
+        ")
+                        (reparse-symbol indented_block_body) [113984 116929])
+                    ("run_code" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [116947 116951])
+                            ("code_obj" variable nil (reparse-symbol function_parameters) [116953 116961]))                          
+                        :documentation "Execute a code object.
+
+        When an exception occurs, self.showtraceback() is called to display a
+        traceback.
+
+        Parameters
+        ----------
+        code_obj : code object
+          A compiled code object, to be executed
+
+        Returns
+        -------
+        False : successful execution.
+        True : an error occurred.
+        ")
+                        (reparse-symbol indented_block_body) [116934 118510])
+                    ("runcode" variable nil (reparse-symbol indented_block_body) [118549 118567])
+                    ("enable_gui" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [118793 118797])
+                            ("gui" variable nil (reparse-symbol function_parameters) [118799 118802]))                          )
+                        (reparse-symbol indented_block_body) [118778 118882])
+                    ("enable_matplotlib" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [118913 118917])
+                            ("gui" variable nil (reparse-symbol function_parameters) [118919 118922]))                          
+                        :documentation "Enable interactive matplotlib and inline figure support.
+        
+        This takes the following steps:
+        
+        1. select the appropriate eventloop and matplotlib backend
+        2. set up matplotlib for interactive use with that backend
+        3. configure formatters for inline figure display
+        4. enable the selected gui eventloop
+        
+        Parameters
+        ----------
+        gui : optional, string
+          If given, dictates the choice of matplotlib GUI backend to use
+          (should be one of IPython's supported backends, 'qt', 'osx', 'tk',
+          'gtk', 'wx' or 'inline'), otherwise we use the default chosen by
+          matplotlib (as dictated by the matplotlib build-time options plus the
+          user's matplotlibrc configuration file).  Note that not all backends
+          make sense in all contexts, for example a terminal ipython can't
+          display figures inline.
+        ")
+                        (reparse-symbol indented_block_body) [118891 120923])
+                    ("enable_pylab" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [120945 120949])
+                            ("gui" variable nil (reparse-symbol function_parameters) [120951 120954])
+                            ("import_all" variable nil (reparse-symbol function_parameters) [120961 120971])
+                            ("welcome_message" variable nil (reparse-symbol function_parameters) [120978 120993]))                          
+                        :documentation "Activate pylab support at runtime.
+
+        This turns on support for matplotlib, preloads into the interactive
+        namespace all of numpy and pylab, and configures IPython to correctly
+        interact with the GUI event loop.  The GUI backend to be used can be
+        optionally selected with the optional ``gui`` argument.
+        
+        This method only adds preloading the namespace to InteractiveShell.enable_matplotlib.
+
+        Parameters
+        ----------
+        gui : optional, string
+          If given, dictates the choice of matplotlib GUI backend to use
+          (should be one of IPython's supported backends, 'qt', 'osx', 'tk',
+          'gtk', 'wx' or 'inline'), otherwise we use the default chosen by
+          matplotlib (as dictated by the matplotlib build-time options plus the
+          user's matplotlibrc configuration file).  Note that not all backends
+          make sense in all contexts, for example a terminal ipython can't
+          display figures inline.
+        import_all : optional, bool, default: True
+          Whether to do `from numpy import *` and `from pylab import *`
+          in addition to module imports.
+        welcome_message : deprecated
+          This argument is ignored, no welcome message will be displayed.
+        ")
+                        (reparse-symbol indented_block_body) [120928 123087])
+                    ("var_expand" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [123282 123286])
+                            ("cmd" variable nil (reparse-symbol function_parameters) [123288 123291])
+                            ("depth" variable nil (reparse-symbol function_parameters) [123293 123298])
+                            ("formatter" variable nil (reparse-symbol function_parameters) [123302 123311]))                          
+                        :documentation "Expand python variables in a string.
+
+        The depth argument indicates how many frames above the caller should
+        be walked to look for the local namespace where to expand variables.
+
+        The global namespace for expansion is always the user's interactive
+        namespace.
+        ")
+                        (reparse-symbol indented_block_body) [123267 124148])
+                    ("mktempfile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [124168 124172])
+                            ("data" variable nil (reparse-symbol function_parameters) [124174 124178])
+                            ("prefix" variable nil (reparse-symbol function_parameters) [124185 124191]))                          
+                        :documentation "Make a new tempfile and return its filename.
+
+        This makes a call to tempfile.mkstemp (created in a tempfile.mkdtemp),
+        but it registers the created filename internally so ipython cleans it up
+        at exit time.
+
+        Optional inputs:
+
+          - data(None): if data is given, it gets written out to the temp file
+            immediately, and the file is closed again.")
+                        (reparse-symbol indented_block_body) [124153 125045])
+                    ("write" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [125121 125125])
+                            ("data" variable nil (reparse-symbol function_parameters) [125126 125130]))                          
+                        :documentation "Write a string to the default output")
+                        (reparse-symbol indented_block_body) [125111 125214])
+                    ("write_err" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [125294 125298])
+                            ("data" variable nil (reparse-symbol function_parameters) [125299 125303]))                          
+                        :documentation "Write a string to the default error output")
+                        (reparse-symbol indented_block_body) [125280 125393])
+                    ("ask_yes_no" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [125413 125417])
+                            ("prompt" variable nil (reparse-symbol function_parameters) [125419 125425])
+                            ("default" variable nil (reparse-symbol function_parameters) [125427 125434]))                          )
+                        (reparse-symbol indented_block_body) [125398 125531])
+                    ("show_usage" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [125551 125555]))                          
+                        :documentation "Show a usage message")
+                        (reparse-symbol indented_block_body) [125536 125649])
+                    ("extract_input_lines" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [125678 125682])
+                            ("range_str" variable nil (reparse-symbol function_parameters) [125684 125693])
+                            ("raw" variable nil (reparse-symbol function_parameters) [125695 125698]))                          
+                        :documentation "Return as a string a set of input history slices.
+
+        Parameters
+        ----------
+        range_str : string
+            The set of slices is given as a string, like \"~5/6-~4/2 4:8 9\",
+            since this function is for use by magic functions which get their
+            arguments as strings. The number before the / is the session
+            number: ~n goes n back from the current session.
+
+        raw : bool, optional
+            By default, the processed input is used.  If this is true, the raw
+            input history is used instead.
+
+        Notes
+        -----
+
+        Slices can be described with two notations:
+
+        * ``N:M`` -> standard python form, means including items N...(M-1).
+        * ``N-M`` -> include items N..M (closed endpoint).
+        ")
+                        (reparse-symbol indented_block_body) [125654 126627])
+                    ("find_user_code" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [126651 126655])
+                            ("target" variable nil (reparse-symbol function_parameters) [126657 126663])
+                            ("raw" variable nil (reparse-symbol function_parameters) [126665 126668])
+                            ("py_only" variable nil (reparse-symbol function_parameters) [126675 126682])
+                            ("skip_encoding_cookie" variable nil (reparse-symbol function_parameters) [126690 126710]))                          
+                        :documentation "Get a code string from history, file, url, or a string or macro.
+
+        This is mainly used by magic functions.
+
+        Parameters
+        ----------
+
+        target : str
+
+          A string specifying code to retrieve. This will be tried respectively
+          as: ranges of input history (see %history for syntax), url,
+          correspnding .py file, filename, or an expression evaluating to a
+          string or Macro in the user namespace.
+
+        raw : bool
+          If true (default), retrieve raw history. Has no effect on the other
+          retrieval mechanisms.
+
+        py_only : bool (default False)
+          Only try to fetch python code, do not try alternative methods to decode file
+          if unicode fails.
+
+        Returns
+        -------
+        A string of code.
+
+        ValueError is raised if nothing is found, and TypeError if it evaluates
+        to an object of another type. In each case, .args[0] is a printable
+        message.
+        ")
+                        (reparse-symbol indented_block_body) [126632 129826])
+                    ("atexit_operations" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [130051 130055]))                          
+                        :documentation "This will be executed at the time of exit.
+
+        Cleanup operations and saving of persistent data that is done
+        unconditionally by IPython should be performed here.
+
+        For things that may depend on startup flags or platform specifics (such
+        as having readline or not), register a separate atexit function in the
+        code that has the appropriate information, rather than trying to
+        clutter
+        ")
+                        (reparse-symbol indented_block_body) [130029 131219])
+                    ("cleanup" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [131236 131240]))                          )
+                        (reparse-symbol indented_block_body) [131224 131283]))                  
+                :type "class")
+                nil [7162 131283])
+            ("InteractiveShellABC" type
+               (:documentation "An abstract base class for InteractiveShell."
+                :type "class")
+                nil [131285 131404])
+            ("InteractiveShellABC" code nil nil [131405 131451]))          
+      :file "interactiveshell.py"
+      :pointmax 131452
+      :fsize 131451
+      :lastmodtime '(21722 16979 41448 803000)
+      :unmatched-syntax '((NAME 131311 . 131325) (PAREN_BLOCK 131325 . 131346) (NAME 112328 . 112341) (IF 112351 . 112353) (ELSE 112361 . 112365) (NAME 111345 . 111353) (IF 111369 . 111371) (ELSE 111386 . 111390) (INDENT_BLOCK 107749 . 107807) (NEWLINE 107748 . 107749) (COLON 107747 . 107748) (TRY 107525 . 107528) (AS 107738 . 107740) (INDENT_BLOCK 104857 . 105032) (NEWLINE 104856 . 104857) (COLON 104855 . 104856) (EXCEPT 104849 . 104855) (INDENT_BLOCK 104650 . 104837) (NEWLINE 104135 . 104136) (COLON 104134 . 104135) (TRY 104041 . 104044) (AS 104125 . 104127) (NAME 89049 . 89054) (IF 89060 . 89062) (ELSE 89074 . 89078) (NAME 87511 . 87516) (IF 87522 . 87524) (ELSE 87536 . 87540) (NAME 61183 . 61192) (IF 61209 . 61211) (ELSE 61225 . 61229)))
+    (semanticdb-table "formatters.py"
+      :file "formatters.py"
+      :fsize 29583
+      :lastmodtime '(21722 16979 41448 803000))
+    (semanticdb-table "alias.py"
+      :file "alias.py"
+      :fsize 8950
+      :lastmodtime '(21722 16979 41448 803000))
+    (semanticdb-table "autocall.py"
+      :file "autocall.py"
+      :fsize 2008
+      :lastmodtime '(21722 16979 41448 803000))
+    (semanticdb-table "builtin_trap.py"
+      :file "builtin_trap.py"
+      :fsize 3990
+      :lastmodtime '(21722 16979 41448 803000))
+    (semanticdb-table "events.py"
+      :file "events.py"
+      :fsize 4588
+      :lastmodtime '(21722 16979 41448 803000))
+    (semanticdb-table "compilerop.py"
+      :file "compilerop.py"
+      :fsize 5904
+      :lastmodtime '(21722 16979 41448 803000))
+    (semanticdb-table "display_trap.py"
+      :file "display_trap.py"
+      :fsize 2108
+      :lastmodtime '(21722 16979 41448 803000))
+    (semanticdb-table "displaypub.py"
+      :file "displaypub.py"
+      :fsize 6342
+      :lastmodtime '(21722 16979 41448 803000))
+    (semanticdb-table "error.py"
+      :file "error.py"
+      :fsize 1534
+      :lastmodtime '(21722 16979 41448 803000))
+    (semanticdb-table "extensions.py"
+      :file "extensions.py"
+      :fsize 7229
+      :lastmodtime '(21722 16979 41448 803000))
+    (semanticdb-table "history.py"
+      :file "history.py"
+      :fsize 30621
+      :lastmodtime '(21722 16979 41448 803000))
+    (semanticdb-table "inputsplitter.py"
+      :file "inputsplitter.py"
+      :fsize 23152
+      :lastmodtime '(21722 16979 41448 803000))
+    (semanticdb-table "logger.py"
+      :file "logger.py"
+      :fsize 8075
+      :lastmodtime '(21722 16979 41448 803000))
+    (semanticdb-table "macro.py"
+      :file "macro.py"
+      :fsize 1873
+      :lastmodtime '(21722 16979 41448 803000))
+    (semanticdb-table "payload.py"
+      :file "payload.py"
+      :fsize 1770
+      :lastmodtime '(21722 16979 41448 803000))
+    (semanticdb-table "prefilter.py"
+      :file "prefilter.py"
+      :fsize 25935
+      :lastmodtime '(21722 16979 45448 803000))
+    (semanticdb-table "profiledir.py"
+      :file "profiledir.py"
+      :fsize 9847
+      :lastmodtime '(21722 16979 45448 803000))
+    (semanticdb-table "prompts.py"
+      :file "prompts.py"
+      :fsize 17055
+      :lastmodtime '(21722 16979 45448 803000))
+    (semanticdb-table "hooks.py"
+      :file "hooks.py"
+      :fsize 7033
+      :lastmodtime '(21722 16979 41448 803000))
+    (semanticdb-table "usage.py"
+      :file "usage.py"
+      :fsize 23187
+      :lastmodtime '(21722 16979 45448 803000))
+    (semanticdb-table "magic.py"
+      :file "magic.py"
+      :fsize 26487
+      :lastmodtime '(21722 16979 41448 803000)))
+  :file "!usr!local!lib!python2.7!dist-packages!IPython!core!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

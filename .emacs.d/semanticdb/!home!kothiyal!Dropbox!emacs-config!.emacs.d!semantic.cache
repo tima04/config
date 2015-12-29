@@ -1,0 +1,71 @@
+;; Object .emacs.d/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file ".emacs.d/"
+  :tables
+  (list
+    (semanticdb-table "ede-projects.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("anonymous" code nil nil [82 85]))          
+      :file "ede-projects.el"
+      :pointmax 86
+      :fsize 85
+      :lastmodtime '(21195 8633)
+      :unmatched-syntax nil)
+    (semanticdb-table "ac-python.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("ac-get-python-symbol-at-point" function nil nil [1385 1628])
+            ("ac-python-completion-at-point" function nil nil [1630 1806])
+            ("ac-python-start-of-expression" function nil nil [1808 2170])
+            ("ac-source-python" variable (:default-value (quote ((candidates . ac-python-completion-at-point) (prefix . ac-python-start-of-expression) (symbol . "f") (requires . 2)))) nil [2172 2364])
+            ("add-hook" code nil nil [2366 2450])
+            ("ac-python" package nil nil [2452 2472]))          
+      :file "ac-python.el"
+      :pointmax 2473
+      :fsize 2472
+      :lastmodtime '(20593 65273)
+      :unmatched-syntax nil)
+    (semanticdb-table "auto-complete-auctex.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("tex" include nil nil [1 15])
+            ("latex" include nil nil [16 32])
+            ("yasnippet" include nil nil [82 102])
+            ("auto-complete" include nil nil [55 79])
+            ("ac-auctex-arg-lookup-table" variable (:default-value (quote ((TeX-arg-define-macro "\\MacroName") (TeX-arg-counter "Counter") (TeX-arg-define-counter "\\CounterName") (TeX-arg-file "Filename") (TeX-arg-bibliography "Filename") (TeX-arg-bibstyle "Style") (TeX-arg-environment "Environment") (TeX-arg-define-environment "EnvironmentName") (TeX-arg-size "(w, h)") (TeX-arg-ref "Name") (TeX-arg-index "Index") (TeX-arg-define-label "Label") (LaTeX-arg-usepackage ["opt1,..."] "Package") (LaTeX-env-label) (LaTeX-amsmath-env-aligned ["htbp!"]) (LaTeX-amsmath-env-alignat ["# Columns"]) (LaTeX-env-array ["bct"] "lcrpmb|") (LaTeX-env-item) (LaTeX-env-document) (LaTeX-env-figure ["htbp!"]) (LaTeX-env-contents "Filename") (LaTeX-env-minipage ["htbp!"] "Width") (LaTeX-env-list "Label" "\\itemsep,\\labelsep,...") (LaTeX-env-picture "(w, h)" "(x, y)") (LaTeX-env-tabular* "Width" ["htbp!"] "lcrpmb|><") (LaTeX-env-bib "WidestLabel") (TeX-arg-conditional [""]) (2 "" "") (3 "" "" "") (4 "" "" "" "") (5 "" "" "" "" "") (6 "" "" "" "" "" "") (7 "" "" "" "" "" "" "") (8 "" "" "" "" "" "" "" "") (9 "" "" "" "" "" "" "" "" "")))) nil [105 1534])
+            ("ac-auctex-expand-arg-info" function (:arguments ("arg-info")) nil [1536 1976])
+            ("ac-auctex-snippet-arg" function (:arguments ("n" "arg")) nil [1978 2240])
+            ("ac-auctex-expand-args" function (:arguments ("str" "env")) nil [2256 2368])
+            ("ac-auctex-macro-snippet" function (:arguments ("arg-info")) nil [2370 2626])
+            ("ac-auctex-macro-candidates" function nil nil [2628 2852])
+            ("ac-auctex-macro-action" function nil nil [2854 2978])
+            ("ac-define-source" code nil nil [2981 3205])
+            ("ac-auctex-symbol-candidates" function nil nil [3222 3324])
+            ("ac-auctex-symbol-action" function nil nil [3326 3743])
+            ("ac-auctex-symbol-document" function (:arguments ("c")) nil [3745 4055])
+            ("ac-define-source" code nil nil [4057 4327])
+            ("ac-auctex-environment-prefix" variable (:default-value "beg") nil [4351 4394])
+            ("ac-auctex-environment-candidates" function nil nil [4396 4600])
+            ("ac-auctex-environment-action" function nil nil [4602 4985])
+            ("ac-define-source" code nil nil [4988 5238])
+            ("ac-auctex-label-candidates" function nil nil [5254 5352])
+            ("ac-define-source" code nil nil [5354 5541])
+            ("ac-auctex-bib-candidates" function nil nil [5558 5656])
+            ("ac-define-source" code nil nil [5658 5937])
+            ("ac-auctex-setup" function nil nil [5953 6224])
+            ("add-to-list" code nil nil [6226 6261])
+            ("add-hook" code nil nil [6262 6306])
+            ("auto-complete-auctex" package nil nil [6308 6339]))          
+      :file "auto-complete-auctex.el"
+      :pointmax 6384
+      :fsize 6383
+      :lastmodtime '(20593 28155)
+      :unmatched-syntax '((close-paren 102 . 103) (symbol 35 . 52) (open-paren 34 . 35)))
+    (semanticdb-table "python.el"
+      :file "python.el"
+      :fsize 135235
+      :lastmodtime '(20764 6485)))
+  :file "!home!kothiyal!Dropbox!emacs-config!.emacs.d!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,167 @@
+;; Object etc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "etc/"
+  :tables
+  (list
+    (semanticdb-table "c_utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("exp" variable nil nil [20 32])
+            ("c_cumema" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [48 50])
+                ("days" variable nil (reparse-symbol function_parameters) [52 56])
+                ("theta" variable nil (reparse-symbol function_parameters) [58 63]))              ) nil [35 336])
+            ("c_ema" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [347 349])
+                ("days" variable nil (reparse-symbol function_parameters) [351 355])
+                ("theta" variable nil (reparse-symbol function_parameters) [357 362]))              ) nil [337 617])
+            ("c_ema_lin" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [632 634])
+                ("days" variable nil (reparse-symbol function_parameters) [636 640])
+                ("theta" variable nil (reparse-symbol function_parameters) [642 647]))              ) nil [618 861])
+            ("c_ediversity" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [879 881])
+                ("n" variable nil (reparse-symbol function_parameters) [883 884])
+                ("theta" variable nil (reparse-symbol function_parameters) [886 891]))              ) nil [862 1106])
+            ("c_cum_unique_count" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [1130 1132]))              ) nil [1107 1321]))          
+      :file "c_utils.py"
+      :pointmax 1321
+      :fsize 1320
+      :lastmodtime '(21915 43885 95701 944000)
+      :unmatched-syntax nil)
+    (semanticdb-table "utils.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Rcpp.h" include (:system-flag t) nil [1 18])
+            ("vector" include (:system-flag t) nil [19 36])
+            ("Rcpp" using (:type ("Rcpp" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [37 58])
+            ("std::vector" using (:type ("std::vector" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [59 77])
+            ("c_cumema" function
+               (:arguments 
+                  ( ("X" variable
+                       (:reference 1
+                        :type ("NumericVector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [122 139])
+                    ("days" variable
+                       (:reference 1
+                        :type ("NumericVector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [140 160])
+                    ("theta" variable (:type "double") (reparse-symbol arg-sub-list) [161 174]))                  
+                :type ("NumericVector" type (:type "class") nil nil))
+                nil [99 521])
+            ("c_ema" function
+               (:arguments 
+                  ( ("X" variable
+                       (:reference 1
+                        :type ("NumericVector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [564 581])
+                    ("days" variable
+                       (:reference 1
+                        :type ("NumericVector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [582 602])
+                    ("theta" variable (:type "double") (reparse-symbol arg-sub-list) [603 616]))                  
+                :type ("NumericVector" type (:type "class") nil nil))
+                nil [544 978])
+            ("c_ema_lin" function
+               (:arguments 
+                  ( ("X" variable
+                       (:reference 1
+                        :type ("NumericVector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1025 1042])
+                    ("days" variable
+                       (:reference 1
+                        :type ("NumericVector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1043 1063])
+                    ("theta" variable (:type "double") (reparse-symbol arg-sub-list) [1064 1077]))                  
+                :type ("NumericVector" type (:type "class") nil nil))
+                nil [1001 1534])
+            ("c_ediversity" function
+               (:arguments 
+                  ( ("X" variable
+                       (:reference 1
+                        :type ("IntegerVector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1583 1600])
+                    ("N" variable (:type "int") (reparse-symbol arg-sub-list) [1601 1607])
+                    ("theta" variable (:type "double") (reparse-symbol arg-sub-list) [1608 1621]))                  
+                :type ("NumericVector" type (:type "class") nil nil))
+                nil [1556 2713])
+            ("c_cum_unique_count" function
+               (:arguments 
+                  ( ("X" variable
+                       (:reference 1
+                        :type ("IntegerVector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2768 2785])
+                    ("N" variable (:type "int") (reparse-symbol arg-sub-list) [2786 2792]))                  
+                :type ("IntegerVector" type (:type "class") nil nil))
+                nil [2735 3395]))          
+      :file "utils.cpp"
+      :pointmax 3396
+      :fsize 3395
+      :lastmodtime '(21913 14337 665174 144000)
+      :unmatched-syntax nil)
+    (semanticdb-table "utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+xs.iloc[i] instead of xs[i] is a pain, will give an error if
+its a numpy array instead of pandas series. Should solve this may by subclassing
+pandas dataframe and series.
+\"\"\"" code nil nil [1 179])
+            ("c_utils" include nil nil [181 202])
+            ("numpy" include nil nil [203 221])
+            ("pandas" include nil nil [222 241])
+            ("cumemaR" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [256 258])
+                ("days" variable nil (reparse-symbol function_parameters) [260 264])
+                ("theta" variable nil (reparse-symbol function_parameters) [266 271]))              ) nil [244 491])
+            ("cumema" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [507 509])
+                ("days" variable nil (reparse-symbol function_parameters) [511 515])
+                ("theta" variable nil (reparse-symbol function_parameters) [517 522]))              ) nil [496 626])
+            ("emaR" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [636 638])
+                ("days" variable nil (reparse-symbol function_parameters) [640 644])
+                ("theta" variable nil (reparse-symbol function_parameters) [646 651]))              ) nil [627 865])
+            ("ema" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [874 876])
+                ("days" variable nil (reparse-symbol function_parameters) [878 882])
+                ("theta" variable nil (reparse-symbol function_parameters) [884 889])
+                ("linear" variable nil (reparse-symbol function_parameters) [896 902])
+                ("cum" variable nil (reparse-symbol function_parameters) [908 911]))              ) nil [866 1102])
+            ("macd" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [1112 1114])
+                ("days" variable nil (reparse-symbol function_parameters) [1116 1120])
+                ("tslow" variable nil (reparse-symbol function_parameters) [1122 1127])
+                ("tfast" variable nil (reparse-symbol function_parameters) [1134 1139])
+                ("linear" variable nil (reparse-symbol function_parameters) [1146 1152])
+                ("cum" variable nil (reparse-symbol function_parameters) [1158 1161]))              ) nil [1103 1331])
+            ("emsd" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [1396 1398])
+                ("days" variable nil (reparse-symbol function_parameters) [1400 1404])
+                ("theta" variable nil (reparse-symbol function_parameters) [1406 1411])
+                ("normalize" variable nil (reparse-symbol function_parameters) [1418 1427])
+                ("linear" variable nil (reparse-symbol function_parameters) [1433 1439]))              ) nil [1387 1625]))          
+      :file "utils.py"
+      :pointmax 1625
+      :fsize 1624
+      :lastmodtime '(21913 19021 281035 759000)
+      :unmatched-syntax '((RBRACE 1626 . 1627) (INDENT_BLOCK 1387 . 1623)))
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(21915 43820 951703 840000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Dropbox!Work!projects!churn!py!etc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

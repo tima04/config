@@ -1,0 +1,32 @@
+;; Object week2/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "week2/"
+  :tables
+  (list
+    (semanticdb-table "ClosestsQuakesTest.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("week2" package nil nil [1 15])
+            ("week2.QuakeSortWithTwoArrayLists" include nil nil [47 87])
+            ("QuakeSortWithTwoArrayListsTest" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [162 175]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [138 266]))                  
+                :type "class")
+                nil [89 268]))          
+      :file "ClosestsQuakesTest.java"
+      :pointmax 271
+      :fsize 276
+      :lastmodtime '(22140 38032 801460 790000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Dropbox!Work!online-courses!coursera!javaProgramming!javaProgramming4!src!test!java!week2!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

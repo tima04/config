@@ -1,0 +1,453 @@
+;; Object py/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "py/"
+  :tables
+  (list
+    (semanticdb-table "import.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+1: should cdur be cend - cans, apparently they are not,
+mostly lesser then rhs but sometime higher, check it out.
+is there something datatable::set_key equivalent in pd.Dataframe.
+
+2: df[id1 == 108, .(cbeg, cend, cdisr, crtry, ans)] apparently
+giving wrong ans in vitalie's code, ok with mine.
+
+3: in the users tables, 3 countries which are called least are used from 
+cntr_tbl, is it a bug, may be 3 most countries should be used, 
+may in the sorting code below, descending option should be set to True ?
+cntr_tbl <- sort(c(table(c(country2)), c(\"NA\" = NA, \"NA\" = NA)), na.last = T)
+
+4: comments marked with # XXX: are to be seen later.
+
+5: apparantely bug in vitalie's c_cum_unique_count fun, 
+(c(1,2,3,1,2), 5) => 1 2 3 4 4, expected 1 2 3 3 3
+
+6. some cdur's are negative, and problem with batch 2, so df is not matching
+with V's df, for the time being keep them as it is, willsolve later in a
+genric way later, with appropriate warnings to user
+\"\"\"" code nil nil [1 958])
+            ("pandas" include nil nil [960 979])
+            ("pdb" include nil nil [1001 1011])
+            ("numpy" include nil nil [1012 1030])
+            ("sys" include nil nil [1031 1041])
+            ("time" include nil nil [1042 1053])
+            ("pickle" include nil nil [1054 1067])
+            ("c_utils" include nil nil [1068 1089])
+            ("panda_assign" include nil nil [1090 1121])
+            ("t0" variable nil nil [1123 1139])
+            ("churn_threshold" variable nil nil [1140 1186])
+            ("reload_csv" variable nil nil [1187 1204])
+            ("save_df" variable nil nil [1205 1219])
+            ("split_vac_breakers" variable nil nil [1220 1246])
+            ("file_name" variable nil nil [1353 1376])
+            ("wnames" variable nil nil [1451 1735])
+            ("nms" variable nil nil [1737 3117])
+            ("names" variable nil nil [3119 3178])
+            ("del" code nil nil [3180 3198])
+            ("names" variable nil nil [3199 3239])
+            ("names" variable nil nil [3240 3294])
+            ("names" code nil nil [3295 3360])
+            ("rawfile" code nil nil [3376 3419])
+            ("if" code nil nil [3420 3785])
+            ("del" code nil nil [3785 3791])
+            ("for" code nil nil [3793 3927])
+            ("df" code nil nil [3927 3973])
+            ("df" variable nil nil [3974 4006])
+            ("df" code nil nil [4207 4239])
+            ("tans" variable nil nil [4240 4270])
+            ("df" variable nil nil [4271 4308])
+            ("df_grpd" variable nil nil [4325 4352])
+            ("df" variable nil nil [4353 4401])
+            ("df" variable nil nil [4402 4449])
+            ("sinday" code nil nil [4466 4485])
+            ("df" code nil nil [4507 4637])
+            ("df" variable nil nil [4638 4674])
+            ("nunq" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [4685 4686]))              ) nil [4676 4718])
+            ("df" variable nil nil [4718 4763])
+            ("df" variable nil nil [4764 4811])
+            ("df" variable nil nil [4812 4864])
+            ("with" code nil nil [4881 4947])
+            ("with" code nil nil [4947 5020])
+            ("df" variable nil nil [5193 5272])
+            ("df" variable nil nil [5274 5373])
+            ("rates" variable nil nil [5375 5494])
+            ("for" code nil nil [5634 5941])
+            ("df" variable nil nil [5957 5997])
+            ("df" variable nil nil [6270 6315])
+            ("df" variable nil nil [6317 6366])
+            ("df" variable nil nil [6367 6417])
+            ("ddays_lim" variable nil nil [6419 6454])
+            ("shift" function
+               (:documentation "
+    shift([0,1,2,3])
+    >>> pd.Series([np.nan, 0, 1, 2])
+
+    shift([\"a\"])
+    >>> np.nap
+    "
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [6777 6778]))                  )
+                nil [6767 7131])
+            ("delta" variable nil nil [7132 7209])
+            ("delta" variable nil nil [7210 7252])
+            ("df" variable nil nil [7253 7297])
+            ("df" variable nil nil [7298 7343])
+            ("df" code nil nil [7344 7383])
+            ("df" code nil nil [7384 7423])
+            ("df" variable nil nil [7424 7481])
+            ("df" code nil nil [8062 8096])
+            ("df" code nil nil [8097 8131])
+            ("df" code nil nil [8132 8178])
+            ("df" code nil nil [8179 8219])
+            ("df" variable nil nil [8258 8323])
+            ("df" variable nil nil [8325 8383])
+            ("df" variable nil nil [8469 8502])
+            ("df_grpd" variable nil nil [8503 8530])
+            ("df" variable nil nil [8652 8695])
+            ("cnt_abbr" variable nil nil [8730 10012])
+            ("freq_table" function
+               (:documentation "
+    >>> freq_table([\"a\", \"a\", \"b\"])
+    [(\"b\",1), (\"a\",2)]
+    "
+                :arguments 
+                  ( ("xs" variable nil (reparse-symbol function_parameters) [10046 10048]))                  )
+                nil [10031 10292])
+            ("users" variable nil nil [10293 10342])
+            ("users" variable nil nil [10343 10364])
+            ("users" variable nil nil [10365 10407])
+            ("users" code nil nil [10408 10444])
+            ("to_secs" variable nil nil [10445 10482])
+            ("users" code nil nil [10552 10775])
+            ("users" variable nil nil [10776 10819])
+            ("users" variable nil nil [10820 10861])
+            ("users" variable nil nil [10862 10909])
+            ("users" variable nil nil [10992 11126])
+            ("users" variable nil nil [11127 11194])
+            ("users" variable nil nil [11195 11262])
+            ("users" variable nil nil [11263 11304])
+            ("sort_freq" function
+               (:documentation "
+    similar to cntrl_tbl in V's code, line 322
+    >>> sort_freq(['a','b','a','a','c','c'])
+    (['b','a','c', np.nan, np.nan], [1, 3, 2, 0, 0])
+    >>> sort_freq(['a','a'])
+    (['a',np.nan, np.nan], [2,0,0])
+    "
+                :arguments 
+                  ( ("xs" variable nil (reparse-symbol function_parameters) [11460 11462]))                  )
+                nil [11446 12071])
+            ("for" code nil nil [12129 12332])
+            ("users" variable nil nil [12332 12377])
+            ("for" code nil nil [12379 12520])
+            ("users" variable nil nil [12521 12705])
+            ("users" code nil nil [12925 13088])
+            ("users" code nil nil [13146 13192])
+            ("users" code nil nil [13194 13253])
+            ("build_smoothers" function (:arguments 
+              ( ("df" variable nil (reparse-symbol function_parameters) [13344 13346])
+                ("eshort" variable nil (reparse-symbol function_parameters) [13368 13374])
+                ("elong" variable nil (reparse-symbol function_parameters) [13381 13386])
+                ("mshort" variable nil (reparse-symbol function_parameters) [13414 13420])
+                ("mlong" variable nil (reparse-symbol function_parameters) [13427 13432])
+                ("ecum" variable nil (reparse-symbol function_parameters) [13459 13463])
+                ("mcum" variable nil (reparse-symbol function_parameters) [13472 13476])
+                ("ecum_ddays" variable nil (reparse-symbol function_parameters) [13506 13516])
+                ("mcum_ddays" variable nil (reparse-symbol function_parameters) [13526 13536]))              ) nil [13324 13704])
+            ("ema" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [13773 13774])
+                ("days" variable nil (reparse-symbol function_parameters) [13776 13780])
+                ("theta" variable nil (reparse-symbol function_parameters) [13782 13787])
+                ("linear" variable nil (reparse-symbol function_parameters) [13792 13798])
+                ("cum" variable nil (reparse-symbol function_parameters) [13808 13811]))              ) nil [13765 13972])
+            ("c_cumema" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [13986 13988])
+                ("days" variable nil (reparse-symbol function_parameters) [13990 13994])
+                ("theta" variable nil (reparse-symbol function_parameters) [13996 14001]))              ) nil [13973 14360])
+            ("c_cumema" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [14374 14376])
+                ("days" variable nil (reparse-symbol function_parameters) [14378 14382])
+                ("theta" variable nil (reparse-symbol function_parameters) [14384 14389]))              ) nil [14361 14723]))          
+      :file "import.py"
+      :pointmax 14723
+      :fsize 14722
+      :lastmodtime '(21913 13570 381196 815000)
+      :unmatched-syntax nil)
+    (semanticdb-table "utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("c_utils.py" include nil nil [1 18])
+            ("ema" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [28 29])
+                ("days" variable nil (reparse-symbol function_parameters) [31 35])
+                ("theta" variable nil (reparse-symbol function_parameters) [37 42])
+                ("linear" variable nil (reparse-symbol function_parameters) [49 55])
+                ("cum" variable nil (reparse-symbol function_parameters) [65 68]))              ) nil [20 208]))          
+      :file "utils.py"
+      :pointmax 208
+      :fsize 206
+      :lastmodtime '(21868 7405 601445 249000)
+      :unmatched-syntax nil)
+    (semanticdb-table "panda_assign.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+At some stage would like this to work:
+assign(df, by='b',
+       'foo = v1 + v2/v3 + v3**2',
+       'bar = fun(v1, v6)',
+       'baz = foo * 10')
+
+\"\"\"" code nil nil [1 155])
+            ("pandas" include nil nil [157 176])
+            ("numpy" include nil nil [177 195])
+            ("pdb" include nil nil [196 206])
+            ("unittest" include nil nil [207 222])
+            ("assign" function
+               (:documentation "
+    Args
+    -----
+    df: dataframe
+    by: col in the df, which will be used as grouping varialbe
+    new_args: (ex: [('e', (np.mean, 'a')), ('f', (np.round, 'a', decimals=2))])
+      List of tuples, first entry of tuple is new_var name and second entry is
+      again a tuple, whose first entry is a function and rest are the variables
+      in the df or just defined on which this function will be applied or the
+      keyword argument of the function if of the form x=2.
+      .
+    Example:
+    >>> foo = pd.DataFrame({\"a\": [1, 2, 3], \"b\":[\"a\"]*2 + [\"b\"], \"c\": range(4, 7)})
+    >>> bar = assign(df=foo, by='b', new_vars = [
+    ... ('e', (np.mean, 'a')),
+    ... ('f', (np.exp, 'c')),
+    ... ('h', (lambda x, y: x+y, 'a', 'c')),
+    ... ('i', (np.log, 'f')),
+    ... ('j', (np.round, 'i', 'decimals=3'))])
+    >>> bar.shape[0] == foo.shape[0]
+    True
+    >>> bar.shape[1]
+    8
+    >>> set(bar.columns) == set(['a','b','c','e','f','h','i','j'])
+    True
+    "
+                :arguments 
+                  ( ("df" variable nil (reparse-symbol function_parameters) [235 237])
+                    ("by" variable nil (reparse-symbol function_parameters) [239 241])
+                    ("new_vars" variable nil (reparse-symbol function_parameters) [243 251])
+                    ("namespace" variable nil (reparse-symbol function_parameters) [253 262]))                  )
+                nil [224 2690])
+            ("assign_old" function
+               (:documentation "
+    Args
+    -----
+    df: dataframe
+    by: col in the df, which will be used as grouping varialbe
+    new_args: (ex: [('e', (np.mean, 'a')), ('f', (np.round, 'a', decimals=2))])
+      List of tuples, first entry of tuple is new_var name and second entry is
+      again a tuple, whose first entry is a function and rest are the variables
+      in the df or just defined on which this function will be applied or the
+      keyword argument of the function if of the form x=2.
+      .
+    Example:
+    >>> foo = pd.DataFrame({\"a\": [1, 2, 3], \"b\":[\"a\"]*2 + [\"b\"], \"c\": range(4, 7)})
+    >>> bar = assign(df=foo, by='b', new_vars = [
+    ... ('e', (np.mean, 'a')),
+    ... ('f', (np.exp, 'c')),
+    ... ('h', (lambda x, y: x+y, 'a', 'c')),
+    ... ('i', (np.log, 'f')),
+    ... ('j', (np.round, 'i', 'decimals=3'))])
+    >>> bar.shape[0] == foo.shape[0]
+    True
+    >>> bar.shape[1]
+    8
+    >>> set(bar.columns) == set(['a','b','c','e','f','h','i','j'])
+    True
+    "
+                :arguments 
+                  ( ("df" variable nil (reparse-symbol function_parameters) [2707 2709])
+                    ("by" variable nil (reparse-symbol function_parameters) [2711 2713])
+                    ("new_vars" variable nil (reparse-symbol function_parameters) [2715 2723])
+                    ("namespace" variable nil (reparse-symbol function_parameters) [2725 2734]))                  )
+                nil [2692 5281])
+            ("is_scalar" function
+               (:documentation "test if the function fn return type is a scalar."
+                :arguments 
+                  ( ("fn" variable nil (reparse-symbol function_parameters) [5297 5299])
+                    ("args" variable nil (reparse-symbol function_parameters) [5301 5306])
+                    ("kwargs" variable nil (reparse-symbol function_parameters) [5308 5316]))                  )
+                nil [5283 5507])
+            ("eqns2scope" function
+               (:documentation "
+    >>> eqns2scope([\"a = 2.1\", \" b= 3\"]) == {'a': 2.1, 'b': 3}
+    True
+    >>> eqns2scope(['a=b**2'], {'b': 4}) == {'a': 16}
+    True
+    "
+                :arguments 
+                  ( ("eqns" variable nil (reparse-symbol function_parameters) [5528 5532])
+                    ("namespace" variable nil (reparse-symbol function_parameters) [5534 5543]))                  )
+                nil [5513 6093])
+            ("TestAssign" type
+               (:superclasses ("unittest.TestCase")
+                :members 
+                  ( ("linear" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6152 6156])
+                            ("x" variable nil (reparse-symbol function_parameters) [6158 6159])
+                            ("y" variable nil (reparse-symbol function_parameters) [6161 6162])
+                            ("t1" variable nil (reparse-symbol function_parameters) [6164 6166])
+                            ("t2" variable nil (reparse-symbol function_parameters) [6170 6172]))                          )
+                        (reparse-symbol indented_block_body) [6141 6204])
+                    ("setUp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6219 6223]))                          )
+                        (reparse-symbol indented_block_body) [6209 7132])
+                    ("approx_equal" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7154 7158])
+                            ("xs" variable nil (reparse-symbol function_parameters) [7160 7162])
+                            ("ys" variable nil (reparse-symbol function_parameters) [7164 7166])
+                            ("eps" variable nil (reparse-symbol function_parameters) [7168 7171]))                          )
+                        (reparse-symbol indented_block_body) [7137 7412])
+                    ("test_df_nrow_equals_df2_nrow" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7450 7454]))                          
+                        :documentation "df and df2 must have same number of rows")
+                        (reparse-symbol indented_block_body) [7417 7574])
+                    ("test_nelts_df2_e_equals_nelts_df_b" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7618 7622]))                          
+                        :documentation "n elts in df2.e must equals df.b")
+                        (reparse-symbol indented_block_body) [7579 7740])
+                    ("test_linear" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7761 7765]))                          
+                        :documentation "testing variable j defined above is correct")
+                        (reparse-symbol indented_block_body) [7745 7968])
+                    ("test_df4" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7985 7989]))                          )
+                        (reparse-symbol indented_block_body) [7972 8112]))                  
+                :type "class")
+                nil [6099 8112]))          
+      :file "panda_assign.py"
+      :pointmax 8112
+      :fsize 8111
+      :lastmodtime '(21912 532 287518 419000)
+      :unmatched-syntax nil)
+    (semanticdb-table "speed-test.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\" 
+copy paste in python and R interpreter to compare speeds.
+\"\"\"" code nil nil [1 67])
+            ("n" variable nil nil [69 75])
+            ("pandas" include nil nil [86 105])
+            ("numpy" include nil nil [106 124])
+            ("time" include nil nil [125 136])
+            ("panda_assign" include nil nil [137 168])
+            ("cy_panda_assign" include nil nil [169 214])
+            ("foo" variable nil nil [216 357])
+            ("fun" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [403 404])
+                ("y" variable nil (reparse-symbol function_parameters) [406 407]))              ) nil [395 466])
+            ("linear" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [478 479])
+                ("y" variable nil (reparse-symbol function_parameters) [481 482])
+                ("t1" variable nil (reparse-symbol function_parameters) [484 486])
+                ("t2" variable nil (reparse-symbol function_parameters) [490 492]))              ) nil [467 520])
+            ("n" variable nil nil [521 525])
+            ("np" code nil nil [526 543])
+            ("df3" variable nil nil [544 713])
+            ("t0" variable nil nil [714 730])
+            ("df" variable nil nil [731 880])
+            ("print" code nil nil [881 912])
+            ("t0" variable nil nil [914 930])
+            ("df2" variable nil nil [931 1082])
+            ("print" code nil nil [1083 1114])
+            ("df4" code nil nil [1116 1150])
+            ("library" code nil nil [1213 1232])
+            ("" code nil nil [1363 1391])
+            ("foo" variable nil nil [1392 1420])
+            ("system" code nil nil [1437 1500])
+            ("system" code nil nil [1501 1542])
+            ("system" code nil nil [1543 1619])
+            ("setkey" code nil nil [1622 1639]))          
+      :file "speed-test.py"
+      :pointmax 1774
+      :fsize 1773
+      :lastmodtime '(21888 15205 555066 608000)
+      :unmatched-syntax '(($EOI 1774 . 1774) ($EOI 1767 . 1767) ($EOI 1765 . 1765)))
+    (semanticdb-table "setup.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("distutils.core" include nil nil [1 33])
+            ("Cython.Build" include nil nil [34 68])
+            ("setup" code nil nil [70 121]))          
+      :file "setup.py"
+      :pointmax 161
+      :fsize 160
+      :lastmodtime '(21888 14241 751095 85000)
+      :unmatched-syntax nil)
+    (semanticdb-table "parse.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+y = log(x) => (y, log, x)
+a = 2*exp(x) + f(x,y)
+lhs, rhs
+(var, (fun, args, keyargs))
+(+ (* (b,  exp(x))), (f (x, y)))
+\"\"\"" code nil nil [1 126]))          
+      :file "parse.py"
+      :pointmax 127
+      :fsize 126
+      :lastmodtime '(21897 50613 730602 569000)
+      :unmatched-syntax '(($EOI 127 . 127)))
+    (semanticdb-table "import_builder.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("panda_assign" include nil nil [1 32])
+            ("etc.c_utils" include nil nil [33 58])
+            ("build_smoothers" function (:arguments 
+              ( ("df" variable nil (reparse-symbol function_parameters) [80 82])
+                ("eshort" variable nil (reparse-symbol function_parameters) [104 110])
+                ("elong" variable nil (reparse-symbol function_parameters) [117 122])
+                ("mshort" variable nil (reparse-symbol function_parameters) [150 156])
+                ("mlong" variable nil (reparse-symbol function_parameters) [163 168])
+                ("ecum" variable nil (reparse-symbol function_parameters) [195 199])
+                ("mcum" variable nil (reparse-symbol function_parameters) [208 212])
+                ("ecum_ddays" variable nil (reparse-symbol function_parameters) [241 251])
+                ("mcum_ddays" variable nil (reparse-symbol function_parameters) [261 271]))              ) nil [60 993]))          
+      :file "import_builder.py"
+      :pointmax 1014
+      :fsize 1011
+      :lastmodtime '(21915 43983 839699 27000)
+      :unmatched-syntax nil)
+    (semanticdb-table "temp.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("c" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [7 8])
+                ("k" variable nil (reparse-symbol function_parameters) [10 11]))              ) nil [1 122])
+            ("c2" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [130 131])
+                ("k" variable nil (reparse-symbol function_parameters) [133 134]))              ) nil [123 245]))          
+      :file "temp.py"
+      :pointmax 245
+      :fsize 244
+      :lastmodtime '(21922 58716 972914 275000)
+      :unmatched-syntax '((RETURN 162 . 168) (IF 171 . 173) (ELSE 181 . 185))))
+  :file "!home!amit!Dropbox!Work!projects!churn!py!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

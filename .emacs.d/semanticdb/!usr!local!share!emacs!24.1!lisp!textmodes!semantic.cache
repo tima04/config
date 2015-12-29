@@ -1,0 +1,274 @@
+;; Object textmodes/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "textmodes/"
+  :tables
+  (list
+    (semanticdb-table "texinfo.el.gz"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("cl" include nil nil [1097 1110])
+            ("tex-mode" include nil nil [1077 1096])
+            ("outline-heading-alist" variable nil nil [1112 1142])
+            ("texinfo" customgroup (:user-visible-flag t) nil [1144 1273])
+            ("texinfo-open-quote" variable (:default-value (purecopy "``")) nil [1290 1446])
+            ("texinfo-close-quote" variable (:default-value (purecopy "''")) nil [1463 1621])
+            ("texinfo-mode-hook" variable nil nil [1623 1782])
+            ("makeinfo-region" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [1802 2101])
+            ("makeinfo-buffer" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [2103 2274])
+            ("kill-compilation" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [2276 2378])
+            ("makeinfo-recenter-compilation-buffer" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [2380 2618])
+            ("texinfo-update-node" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [2620 3517])
+            ("texinfo-every-node-update" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [3519 3620])
+            ("texinfo-sequential-node-update" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [3622 4407])
+            ("texinfo-make-menu" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [4409 4935])
+            ("texinfo-all-menus-update" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [4937 5214])
+            ("texinfo-master-menu" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [5216 6723])
+            ("texinfo-indent-menu-description" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [6725 7031])
+            ("texinfo-insert-node-lines" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [7033 7347])
+            ("texinfo-start-menu-description" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [7349 7752])
+            ("texinfo-multiple-files-update" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [7754 9124])
+            ("texinfo-section-list" variable (:default-value (quote (("top" 1) ("chapter" 2) ("section" 3) ("subsection" 4) ("subsubsection" 5) ("unnumbered" 2) ("unnumberedsec" 3) ("unnumberedsubsec" 4) ("unnumberedsubsubsec" 5) ("appendix" 2) ("appendixsec" 3) ("appendixsection" 3) ("appendixsubsec" 4) ("appendixsubsubsec" 5) ("majorheading" 2) ("chapheading" 2) ("heading" 3) ("subheading" 4) ("subsubheading" 5)))) nil [9218 9732])
+            ("texinfo-mode-syntax-table" variable (:default-value (let ((st (make-syntax-table))) (modify-syntax-entry 34 "." st) (modify-syntax-entry 92 "." st) (modify-syntax-entry 64 "\\" st) (modify-syntax-entry 17 "\\" st) (modify-syntax-entry 91 "(]" st) (modify-syntax-entry 93 ")[" st) (modify-syntax-entry 123 "(}" st) (modify-syntax-entry 125 "){" st) (modify-syntax-entry 10 ">" st) (modify-syntax-entry 39 "w" st) st)) nil [9752 10202])
+            ("texinfo-imenu-generic-expression" variable (:default-value (quote ((nil "^@\\(node\\|anchor\\)[ 	]+\\([^,
+]*\\)" 2) ("Chapters" "^@chapter[ 	]+\\(.*\\)$" 1)))) nil [10379 10602])
+            ("texinfo-syntax-propertize-function" variable
+               (:constant-flag t
+                :default-value (syntax-propertize-rules ("\\(@\\)c\\(omment\\)?\\>" (1 "<")) ("^\\(@\\)ignore\\>" (1 "< b")) ("^@end ignore\\(
+\\)" (1 "> b"))))
+                nil [10604 10860])
+            ("texinfo-environments" variable
+               (:constant-flag t
+                :default-value (quote ("cartouche" "copying" "defcv" "deffn" "defivar" "defmac" "defmethod" "defop" "defopt" "defspec" "deftp" "deftypecv" "deftypefn" "deftypefun" "deftypeivar" "deftypemethod" "deftypeop" "deftypevar" "deftypevr" "defun" "defvar" "defvr" "description" "detailmenu" "direntry" "display" "documentdescription" "enumerate" "example" "flushleft" "flushright" "format" "ftable" "group" "html" "ifclear" "ifset" "ifhtml" "ifinfo" "ifnothtml" "ifnotinfo" "ifnotplaintext" "ifnottex" "ifplaintext" "iftex" "ignore" "itemize" "lisp" "macro" "menu" "multitable" "quotation" "smalldisplay" "smallexample" "smallformat" "smalllisp" "table" "tex" "titlepage" "verbatim" "vtable")))
+                nil [10862 11637])
+            ("texinfo-environment-regexp" variable
+               (:constant-flag t
+                :default-value (concat "^@" (regexp-opt (cons "end" texinfo-environments) t) "\\>"))
+                nil [11639 11872])
+            ("texinfo-heading" variable
+               (:default-value (quote ((t (:inherit font-lock-function-name-face))))
+                :type "face")
+                nil [11874 12020])
+            ("define-obsolete-face-alias" code nil nil [12021 12095])
+            ("texinfo-heading-face" variable (:default-value (quote texinfo-heading)) nil [12096 12142])
+            ("texinfo-font-lock-keywords" variable (:default-value (\` (("@\\([a-zA-Z]+\\|[^ 	
+]\\)" 1 font-lock-keyword-face) ("^\\*\\([^
+:]*\\)" 1 font-lock-function-name-face t) ("@\\(emph\\|i\\|sc\\){\\([^}]+\\)" 2 (quote italic)) ("@\\(strong\\|b\\){\\([^}]+\\)" 2 (quote bold)) ("@\\(kbd\\|key\\|url\\|uref\\){\\([^}]+\\)" 2 font-lock-string-face) ("@\\(file\\|email\\){\\([^}]+\\)" 2 font-lock-string-face keep) ("@\\(samp\\|code\\|var\\|math\\|env\\|command\\|option\\){\\([^}]+\\)" 2 font-lock-variable-name-face keep) ("@\\(cite\\|x?ref\\|pxref\\|dfn\\|inforef\\){\\([^}]+\\)" 2 font-lock-constant-face) ("@\\(anchor\\){\\([^}]+\\)" 2 font-lock-type-face) ("@\\(dmn\\|acronym\\|value\\){\\([^}]+\\)" 2 font-lock-builtin-face) ("@\\(end\\|itemx?\\) +\\(.+\\)" 2 font-lock-keyword-face keep) ((\, (concat "^@" (regexp-opt (mapcar (quote car) texinfo-section-list) t) ".*
+")) 0 texinfo-heading-face t)))) nil [12144 13683])
+            ("texinfo-clone-environment" function (:arguments ("start" "end")) nil [13685 14236])
+            ("texinfo-define-common-keys" function (:arguments ("keymap")) nil [14313 15038])
+            ("texinfo-mode-map" variable (:default-value (let ((map (make-sparse-keymap))) (texinfo-define-common-keys map) (define-key map "\"" (quote texinfo-insert-quote)) (define-key map "" (quote kill-compilation)) (define-key map "" (quote makeinfo-recenter-compilation-buffer)) (define-key map "" (quote makeinfo-region)) (define-key map "" (quote makeinfo-buffer)) (define-key map "" (quote texinfo-format-region)) (define-key map "" (quote texinfo-format-buffer)) (define-key map "" (quote texinfo-insert-@item)) (define-key map "m" (quote texinfo-master-menu)) (define-key map "" (quote texinfo-make-menu)) (define-key map "" (quote texinfo-update-node)) (define-key map "" (quote texinfo-every-node-update)) (define-key map "" (quote texinfo-all-menus-update)) (define-key map "" (quote texinfo-show-structure)) (define-key map "}" (quote up-list)) (define-key map "]" (quote up-list)) (define-key map "/" (quote texinfo-insert-@end)) (define-key map "{" (quote texinfo-insert-braces)) (define-key map "" (quote texinfo-insert-block)) (define-key map "" (quote texinfo-start-menu-description)) (define-key map "" (quote texinfo-insert-@strong)) (define-key map "" (quote texinfo-insert-@emph)) (define-key map "v" (quote texinfo-insert-@var)) (define-key map "u" (quote texinfo-insert-@uref)) (define-key map "t" (quote texinfo-insert-@table)) (define-key map "s" (quote texinfo-insert-@samp)) (define-key map "q" (quote texinfo-insert-@quotation)) (define-key map "o" (quote texinfo-insert-@noindent)) (define-key map "n" (quote texinfo-insert-@node)) (define-key map "m" (quote texinfo-insert-@email)) (define-key map "k" (quote texinfo-insert-@kbd)) (define-key map "i" (quote texinfo-insert-@item)) (define-key map "f" (quote texinfo-insert-@file)) (define-key map "x" (quote texinfo-insert-@example)) (define-key map "e" (quote texinfo-insert-@end)) (define-key map "d" (quote texinfo-insert-@dfn)) (define-key map "c" (quote texinfo-insert-@code)) map)) nil [15151 17711])
+            ("easy-menu-define" code nil nil [17713 18517])
+            ("texinfo-filter" function (:arguments ("section" "list")) nil [18521 18648])
+            ("texinfo-chapter-level-regexp" variable (:default-value (regexp-opt (texinfo-filter 2 texinfo-section-list))) nil [18650 18815])
+            ("define-derived-mode" code nil nil [18850 24186])
+            ("texinfo-block-default" variable (:default-value "example") nil [24219 24259])
+            ("define-skeleton" code nil nil [24261 24811])
+            ("texinfo-inside-macro-p" function (:arguments ("macro" "bound")) nil [24813 25222])
+            ("texinfo-inside-env-p" function (:arguments ("env" "bound")) nil [25224 25449])
+            ("texinfo-enable-quote-macros" variable (:default-value "@\\(code\\|samp\\|kbd\\)\\>") nil [25451 25517])
+            ("texinfo-enable-quote-envs" variable (:default-value (quote ("example\\>" "lisp\\>"))) nil [25518 25578])
+            ("texinfo-insert-quote" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [25579 26734])
+            ("texinfo-last-unended-begin" function nil nil [26929 27090])
+            ("texinfo-next-unmatched-end" function nil nil [27092 27311])
+            ("define-skeleton" code nil nil [27313 27575])
+            ("define-skeleton" code nil nil [27577 27749])
+            ("define-skeleton" code nil nil [27751 28001])
+            ("define-skeleton" code nil nil [28003 28250])
+            ("define-skeleton" code nil nil [28252 28505])
+            ("define-skeleton" code nil nil [28507 28757])
+            ("define-skeleton" code nil nil [28759 28879])
+            ("define-skeleton" code nil nil [28881 29131])
+            ("define-skeleton" code nil nil [29133 29486])
+            ("define-skeleton" code nil nil [29488 29735])
+            ("define-skeleton" code nil nil [29737 30011])
+            ("define-skeleton" code nil nil [30013 30136])
+            ("define-skeleton" code nil nil [30138 30258])
+            ("define-skeleton" code nil nil [30260 30510])
+            ("define-skeleton" code nil nil [30512 30768])
+            ("define-skeleton" code nil nil [30770 30887])
+            ("define-skeleton" code nil nil [30889 31133])
+            ("define-skeleton" code nil nil [31135 31382])
+            ("defalias" code nil nil [31383 31436])
+            ("texinfo-show-structure" function
+               (:user-visible-flag t
+                :arguments ("nodes-too"))
+                nil [31467 33803])
+            ("texinfo-texi2dvi-command" variable (:default-value "texi2dvi") nil [33856 34015])
+            ("texinfo-tex-command" variable (:default-value "tex") nil [34017 34153])
+            ("texinfo-texindex-command" variable (:default-value "texindex") nil [34155 34305])
+            ("texinfo-delete-from-print-queue-command" variable (:default-value "lprm") nil [34307 34596])
+            ("texinfo-tex-trailer" variable (:default-value "@bye") nil [34598 34705])
+            ("texinfo-tex-region" function
+               (:user-visible-flag t
+                :arguments ("beg" "end"))
+                nil [34707 35480])
+            ("texinfo-tex-buffer" function (:user-visible-flag t) nil [35482 35819])
+            ("texinfo-texindex" function (:user-visible-flag t) nil [35821 36340])
+            ("texinfo-tex-print" function (:user-visible-flag t) nil [36342 36566])
+            ("texinfo-tex-view" function (:user-visible-flag t) nil [36568 36788])
+            ("texinfo-quit-job" function (:user-visible-flag t) nil [36790 36995])
+            ("texinfo-delete-from-print-queue" function
+               (:user-visible-flag t
+                :arguments ("job-number"))
+                nil [37150 37805])
+            ("texinfo" package nil nil [37807 37825]))          
+      :file "texinfo.el.gz"
+      :pointmax 37852
+      :fsize 10960
+      :lastmodtime '(20352 65510)
+      :unmatched-syntax '((close-paren 1110 . 1111) (symbol 1059 . 1076) (open-paren 1058 . 1059)))
+    (semanticdb-table "fill.el.gz"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("fill" customgroup (:user-visible-flag t) nil [1000 1111])
+            ("fill-individual-varying-indent" variable nil nil [1113 1524])
+            ("colon-double-space" variable nil nil [1526 1653])
+            ("put" code nil nil [1654 1710])
+            ("fill-paragraph-function" variable nil nil [1712 2122])
+            ("fill-paragraph-handle-comment" variable (:default-value t) nil [2124 2239])
+            ("enable-kinsoku" variable (:default-value t) nil [2241 2554])
+            ("set-fill-prefix" function (:user-visible-flag t) nil [2556 3143])
+            ("adaptive-fill-mode" variable (:default-value t) nil [3145 3278])
+            ("adaptive-fill-regexp" variable (:default-value (purecopy "[ 	]*\\([-–!|#%;>*·•‣⁃◦]+[ 	]*\\)*")) nil [3280 4000])
+            ("adaptive-fill-first-line-regexp" variable (:default-value (purecopy "\\`[ 	]*\\'")) nil [4002 4545])
+            ("adaptive-fill-function" variable nil nil [4547 4776])
+            ("fill-indent-according-to-mode" variable nil nil [4778 4932])
+            ("current-fill-column" function nil nil [4934 5970])
+            ("canonically-space-region" function
+               (:user-visible-flag t
+                :arguments ("beg" "end"))
+                nil [5972 8223])
+            ("fill-common-string-prefix" function (:arguments ("s1" "s2")) nil [8225 8502])
+            ("fill-match-adaptive-prefix" function nil nil [8504 8904])
+            ("fill-context-prefix" function (:arguments ("from" "to" "first-line-regexp")) nil [8906 12223])
+            ("fill-single-word-nobreak-p" function nil nil [12225 12752])
+            ("fill-french-nobreak-p" function nil nil [12754 13451])
+            ("fill-nobreak-predicate" variable nil nil [13453 13794])
+            ("fill-nobreak-invisible" variable nil nil [13796 13941])
+            ("fill-nobreak-p" function nil nil [13943 15341])
+            ("fill-find-break-point-function-table" variable (:default-value (make-char-table nil)) nil [15343 15475])
+            ("fill-nospace-between-words-table" variable (:default-value (make-char-table nil)) nil [15477 15605])
+            ("progn" code nil nil [15607 16290])
+            ("fill-find-break-point" function (:arguments ("limit")) nil [16292 16979])
+            ("fill-delete-prefix" function (:arguments ("from" "to" "prefix")) nil [16981 17902])
+            ("add-to-list" code nil nil [18172 18236])
+            ("fill-delete-newlines" function (:arguments ("from" "to" "justify" "nosqueeze" "squeeze-after")) nil [18238 20551])
+            ("fill-move-to-break-point" function (:arguments ("linebeg")) nil [20553 22918])
+            ("fill-text-properties-at" function (:arguments ("pos")) nil [22989 23235])
+            ("fill-newline" function nil nil [23237 24553])
+            ("fill-indent-to-left-margin" function nil nil [24555 24780])
+            ("fill-region-as-paragraph" function
+               (:user-visible-flag t
+                :arguments ("from" "to" "justify" "nosqueeze" "squeeze-after"))
+                nil [24782 29784])
+            ("skip-line-prefix" function (:arguments ("prefix")) nil [29786 30113])
+            ("fill-minibuffer-function" function (:arguments ("arg")) nil [30115 30319])
+            ("fill-forward-paragraph-function" variable (:default-value (quote forward-paragraph)) nil [30321 30611])
+            ("fill-forward-paragraph" function (:arguments ("arg")) nil [30613 30697])
+            ("fill-paragraph" function
+               (:user-visible-flag t
+                :arguments ("justify" "region"))
+                nil [30699 34489])
+            ("declare-function" code nil nil [34491 34571])
+            ("declare-function" code nil nil [34572 34645])
+            ("fill-comment-paragraph" function (:arguments ("justify")) nil [34648 40075])
+            ("fill-region" function
+               (:user-visible-flag t
+                :arguments ("from" "to" "justify" "nosqueeze" "to-eop"))
+                nil [40077 42162])
+            ("default-justification" variable (:default-value (quote left)) nil [42166 42597])
+            ("make-variable-buffer-local" code nil nil [42598 42649])
+            ("current-justification" function nil nil [42651 43200])
+            ("set-justification" function
+               (:user-visible-flag t
+                :arguments ("begin" "end" "style" "whole-par"))
+                nil [43202 44977])
+            ("set-justification-none" function
+               (:user-visible-flag t
+                :arguments ("b" "e"))
+                nil [44979 45287])
+            ("set-justification-left" function
+               (:user-visible-flag t
+                :arguments ("b" "e"))
+                nil [45289 45732])
+            ("set-justification-right" function
+               (:user-visible-flag t
+                :arguments ("b" "e"))
+                nil [45734 46105])
+            ("set-justification-full" function
+               (:user-visible-flag t
+                :arguments ("b" "e"))
+                nil [46107 46480])
+            ("set-justification-center" function
+               (:user-visible-flag t
+                :arguments ("b" "e"))
+                nil [46482 46778])
+            ("justify-current-line" function
+               (:user-visible-flag t
+                :arguments ("how" "eop" "nosqueeze"))
+                nil [47593 52403])
+            ("unjustify-current-line" function nil nil [52405 53439])
+            ("unjustify-region" function (:arguments ("begin" "end")) nil [53441 54036])
+            ("fill-nonuniform-paragraphs" function
+               (:user-visible-flag t
+                :arguments ("min" "max" "justifyp" "citation-regexp"))
+                nil [54040 55061])
+            ("fill-individual-paragraphs" function
+               (:user-visible-flag t
+                :arguments ("min" "max" "justify" "citation-regexp"))
+                nil [55063 59131])
+            ("fill-individual-paragraphs-prefix" function (:arguments ("citation-regexp")) nil [59133 60522])
+            ("fill-individual-paragraphs-citation" function (:arguments ("string" "citation-regexp")) nil [60524 60706]))          
+      :file "fill.el.gz"
+      :pointmax 60730
+      :fsize 17119
+      :lastmodtime '(20400 62402)
+      :unmatched-syntax nil))
+  :file "!usr!local!share!emacs!24.1!lisp!textmodes!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

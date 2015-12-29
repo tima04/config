@@ -1,0 +1,31 @@
+;; Object helloWorld/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "helloWorld/"
+  :tables
+  (list
+    (semanticdb-table "HelloWorld.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("helloWorld" package nil nil [1 20])
+            ("HelloWorld" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [74 87]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [50 170]))                  
+                :type "class")
+                nil [22 173]))          
+      :file "HelloWorld.java"
+      :pointmax 174
+      :fsize 173
+      :lastmodtime '(22024 34324 255896 404000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!javaws!helloWorld!src!helloWorld!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

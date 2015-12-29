@@ -1,0 +1,83 @@
+;; Object code/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "code/"
+  :tables
+  (list
+    (semanticdb-table "parse-beginner-dict.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+beginner_dict.txt is in a format:
+german_word | mutlple spaces(about 39) | english_word
+example:
+'anlocken                                     attract\\r\\n'
+\"\"\"" code nil nil [1 164])
+            ("re" include nil nil [166 175])
+            ("pickle" include nil nil [176 189])
+            ("lines" variable nil nil [190 243])
+            ("dict_" variable nil nil [244 254])
+            ("unadded" variable nil nil [255 267])
+            ("for" code nil nil [268 502]))          
+      :file "parse-beginner-dict.py"
+      :pointmax 512
+      :fsize 511
+      :lastmodtime '(22015 11114 588458 118000)
+      :unmatched-syntax nil)
+    (semanticdb-table "flash_card.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+A word is a dictionary with keys: german, english, lexical_class(one of noun, pronoutn, verb,
+adjective, adverb), gender, plural, related_words, sentences, nasked, ncorrect, flag(binary).
+\"\"\"" code nil nil [1 196])
+            ("json" include nil nil [198 209])
+            ("pickle" include nil nil [210 223])
+            ("random" include nil nil [224 237])
+            ("re" include nil nil [238 247])
+            ("Test" type
+               (:documentation "
+    1. give a test
+    2. unflag a question in the json file if answered correctly many times.
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("datad" variable nil (reparse-symbol indented_block_body) [416 433])
+                            ("self" variable nil (reparse-symbol indented_block_body) [442 493])
+                            ("self" variable nil (reparse-symbol indented_block_body) [502 522]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [391 395])
+                            ("nqstns" variable nil (reparse-symbol function_parameters) [397 403]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [378 523])
+                    ("test" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [537 541]))                          
+                        :documentation "
+        first choose the flagged qstns.
+        ")
+                        (reparse-symbol indented_block_body) [528 899])
+                    ("_match" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [915 919])
+                            ("w1" variable nil (reparse-symbol function_parameters) [921 923])
+                            ("w2" variable nil (reparse-symbol function_parameters) [925 927]))                          )
+                        (reparse-symbol indented_block_body) [904 1084]))                  
+                :type "class")
+                nil [249 1084])
+            ("if" code nil nil [1086 1131])
+            ("get_eng" function (:arguments 
+              ( ("german" variable nil (reparse-symbol function_parameters) [1135 1135]))              ) nil [1135 1135])
+            ("show_words" function nil nil [1135 1135])
+            ("get_word" function nil nil [1135 1135]))          
+      :file "flash_card.py"
+      :pointmax 1141
+      :fsize 1140
+      :lastmodtime '(22037 12789 940392 650000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!misc!german!code!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

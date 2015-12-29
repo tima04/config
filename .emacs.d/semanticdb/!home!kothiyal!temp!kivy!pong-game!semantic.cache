@@ -1,0 +1,50 @@
+;; Object pong-game/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pong-game/"
+  :tables
+  (list
+    (semanticdb-table "main.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("kivy.app" include nil nil [1 25])
+            ("kivy.uix.widget" include nil nil [26 60])
+            ("kivy.properties" include nil nil [61 127])
+            ("kivy.vector" include nil nil [128 158])
+            ("PongBall" type
+               (:superclasses ("Widget")
+                :members 
+                  ( ("velocity_x" variable nil (reparse-symbol indented_block_body) [189 220])
+                    ("velocity_y" variable nil (reparse-symbol indented_block_body) [225 256])
+                    ("velocity" variable nil (reparse-symbol indented_block_body) [261 317])
+                    ("move" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [332 336]))                          )
+                        (reparse-symbol indented_block_body) [323 392]))                  
+                :type "class")
+                nil [161 392])
+            ("PongGame" type
+               (:superclasses ("Widget")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [422 426]))                  
+                :type "class")
+                nil [394 427])
+            ("PongApp" type
+               (:superclasses ("App")
+                :members 
+                  ( ("build" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [463 467]))                          )
+                        (reparse-symbol indented_block_body) [453 496]))                  
+                :type "class")
+                nil [429 496])
+            ("if" code nil nil [498 545]))          
+      :file "main.py"
+      :pointmax 546
+      :fsize 545
+      :lastmodtime '(22007 58371 504150 36000)
+      :unmatched-syntax '((FROM 546 . 550) ($EOI 759 . 759))))
+  :file "!home!kothiyal!temp!kivy!pong-game!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

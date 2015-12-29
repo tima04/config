@@ -1,0 +1,69 @@
+;; Object data/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "data/"
+  :tables
+  (list
+
+    (semanticdb-table "parse_words.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Parse and words in words.org and store in words.json, both in data directory. If words.org is
+changed then run the main in this module to update the json file.
+\"\"\"" code nil nil [32 199])
+            ("re" include nil nil [201 210])
+            ("json" include nil nil [211 222])
+            ("encode_umlauts" function (:arguments 
+              ( ("txt" variable nil (reparse-symbol function_parameters) [243 246]))              ) nil [224 512])
+            ("parse_word" function
+               (:documentation "
+    test_word below is an input example, returns a corresponding dictionary.
+    "
+                :arguments 
+                  ( ("word" variable nil (reparse-symbol function_parameters) [528 532]))                  )
+                nil [513 1162])
+            ("parse_org_file" function
+               (:documentation "
+    parse words.org file
+    "
+                :arguments 
+                  ( ("fl" variable nil (reparse-symbol function_parameters) [1183 1185]))                  )
+                nil [1164 2208])
+            ("main" function nil nil [2210 2634])
+            ("find_word" function
+               (:documentation "retuns the index of the word in words, if not found then -1.
+    "
+                :arguments 
+                  ( ("word" variable nil (reparse-symbol function_parameters) [2750 2754])
+                    ("words" variable nil (reparse-symbol function_parameters) [2756 2761]))                  )
+                nil [2736 2963])
+            ("update" function
+               (:documentation "
+    oword(jword) word from the org(json) file.
+    After update jword will contains all keys which oword contains, and their
+    values will match, ofcourse jword can contain extra keys. 
+    "
+                :arguments 
+                  ( ("oword" variable nil (reparse-symbol function_parameters) [2975 2980])
+                    ("jword" variable nil (reparse-symbol function_parameters) [2982 2987]))                  )
+                nil [2964 3242])
+            ("test_word" variable nil nil [3315 3469])
+            ("if" code nil nil [3471 3509]))          
+      :file "parse_words.py"
+      :pointmax 3515
+      :fsize 3412
+      :lastmodtime '(22017 48314 896695 790000)
+      :unmatched-syntax nil)
+    (semanticdb-table "temp.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("foo" function nil nil [1 21])
+            ("bar" function nil nil [22 42]))          
+      :file "temp.py"
+      :pointmax 42
+      :fsize 41
+      :lastmodtime '(22024 32528 135851 172000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!misc!german!data!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

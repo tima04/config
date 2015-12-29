@@ -1,0 +1,47 @@
+;; Object projects/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "projects/"
+  :tables
+  (list
+    (semanticdb-table "np_table.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("pdb" include nil nil [20 30])
+            ("Table" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [139 201])
+                            ("self" variable nil (reparse-symbol indented_block_body) [209 232])
+                            ("nrow" variable nil (reparse-symbol indented_block_body) [241 271])
+                            ("if" code nil (reparse-symbol indented_block_body) [280 392])
+                            ("self" variable nil (reparse-symbol indented_block_body) [400 415])
+                            ("for" code nil (reparse-symbol indented_block_body) [424 496])
+                            ("self" variable nil (reparse-symbol indented_block_body) [505 540]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [70 74])
+                            ("data" variable nil (reparse-symbol function_parameters) [76 80]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [57 541])
+                    ("__getitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [562 566])
+                            ("items" variable nil (reparse-symbol function_parameters) [568 573]))                          )
+                        (reparse-symbol indented_block_body) [546 777]))                  
+                :type "class")
+                nil [32 777])
+            ("foo" variable nil nil [798 845])
+            ("foo" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [855 856]))              ) nil [847 936]))          
+      :file "np_table.py"
+      :pointmax 950
+      :fsize 701
+      :lastmodtime '(21951 36189 516667 262000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Dropbox!Work!projects!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

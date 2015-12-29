@@ -1,0 +1,43 @@
+;; Object play/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "play/"
+  :tables
+  (list
+    (semanticdb-table "yow.el.gz"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("cookie1" include nil nil [1085 1103])
+            ("yow" customgroup (:user-visible-flag t) nil [1105 1184])
+            ("yow-file" variable (:default-value (concat data-directory "yow.lines")) nil [1186 1318])
+            ("yow-load-message" variable
+               (:constant-flag t
+                :default-value "Am I CONSING yet?...")
+                nil [1320 1370])
+            ("yow-after-load-message" variable
+               (:constant-flag t
+                :default-value "I have SEEN the CONSING!!")
+                nil [1371 1432])
+            ("yow" function
+               (:user-visible-flag t
+                :arguments ("insert" "display"))
+                nil [1449 1755])
+            ("read-zippyism" function (:arguments ("prompt" "require-match")) nil [1757 2060])
+            ("insert-zippyism" function
+               (:user-visible-flag t
+                :arguments ("zippyism"))
+                nil [2077 2281])
+            ("apropos-zippy" function
+               (:user-visible-flag t
+                :arguments ("regexp"))
+                nil [2298 3507])
+            ("declare-function" code nil nil [3651 3703])
+            ("psychoanalyze-pinhead" function (:user-visible-flag t) nil [3720 4023])
+            ("yow" package nil nil [4025 4039]))          
+      :file "yow.el.gz"
+      :pointmax 4062
+      :fsize 1770
+      :lastmodtime '(20400 62402)
+      :unmatched-syntax nil))
+  :file "!usr!local!share!emacs!24.1!lisp!play!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

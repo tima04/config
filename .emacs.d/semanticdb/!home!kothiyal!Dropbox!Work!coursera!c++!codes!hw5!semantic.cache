@@ -1,0 +1,1328 @@
+;; Object hw5/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "hw5/"
+  :tables
+  (list
+    (semanticdb-table "student1.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("fstream" include (:system-flag t) nil [21 39])
+            ("cstdlib" include (:system-flag t) nil [40 58])
+            ("climits" include (:system-flag t) nil [59 77])
+            ("iterator" include (:system-flag t) nil [88 107])
+            ("time.h" include (:system-flag t) nil [108 125])
+            ("vector" include (:system-flag t) nil [126 143])
+            ("array" include (:system-flag t) nil [144 160])
+            ("string" include (:system-flag t) nil [161 178])
+            ("assert.h" include (:system-flag t) nil [179 198])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [199 219])
+            ("Edge" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [388 395])
+                    ("Edge" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [451 457])
+                            ("b" variable (:type "int") (reparse-symbol arg-sub-list) [458 464])
+                            ("weight" variable (:type "double") (reparse-symbol arg-sub-list) [464 478]))                          
+                        :type ("Edge" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [446 599])
+                    ("Edge" function
+                       (:constructor-flag t
+                        :type ("Edge" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [659 690])
+                    ("getVertex" function (:type "int") (reparse-symbol classsubparts) [698 731])
+                    ("getOtherVertex" function
+                       (:arguments 
+                          ( ("vertex" variable (:type "int") (reparse-symbol arg-sub-list) [757 768]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [738 872])
+                    ("getWeight" function (:type "double") (reparse-symbol classsubparts) [880 921])
+                    ("setWeight" function
+                       (:arguments 
+                          ( ("wt" variable (:type "double") (reparse-symbol arg-sub-list) [943 953]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [928 965])
+                    (">" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :typemodifiers ("friend")
+                        :arguments 
+                          ( ("n1" variable (:type ("Edge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [996 1004])
+                            ("n2" variable (:type ("Edge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1005 1013]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [973 1014])
+                    ("==" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :typemodifiers ("friend")
+                        :arguments 
+                          ( ("n1" variable (:type ("Edge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1046 1054])
+                            ("n2" variable (:type ("Edge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1055 1063]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1022 1064])
+                    ("!=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :typemodifiers ("friend")
+                        :arguments 
+                          ( ("n1" variable (:type ("Edge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1096 1104])
+                            ("n2" variable (:type ("Edge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1105 1113]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1072 1114])
+                    ("<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :typemodifiers ("friend")
+                        :arguments 
+                          ( ("n1" variable (:type ("Edge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1145 1153])
+                            ("n2" variable (:type ("Edge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1154 1162]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1122 1163])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :typemodifiers ("friend")
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1199 1211])
+                            ("n" variable
+                               (:reference 1
+                                :type ("Edge" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1212 1220]))                          
+                        :type ("ostream" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1171 1221])
+                    ("private" label nil (reparse-symbol classsubparts) [1225 1233])
+                    ("a" variable (:type "int") (reparse-symbol classsubparts) [1240 1248])
+                    ("b" variable (:type "int") (reparse-symbol classsubparts) [1240 1248])
+                    ("weight" variable (:type "double") (reparse-symbol classsubparts) [1285 1299]))                  
+                :type "class")
+                nil [372 1327])
+            (">" function
+               (:operator-flag t
+                :arguments 
+                  ( ("n1" variable (:type ("Edge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1472 1480])
+                    ("n2" variable (:type ("Edge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1481 1489]))                  
+                :type "bool")
+                nil [1456 1538])
+            ("==" function
+               (:operator-flag t
+                :arguments 
+                  ( ("n1" variable (:type ("Edge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1557 1565])
+                    ("n2" variable (:type ("Edge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1566 1574]))                  
+                :type "bool")
+                nil [1540 1624])
+            ("!=" function
+               (:operator-flag t
+                :arguments 
+                  ( ("n1" variable (:type ("Edge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1643 1651])
+                    ("n2" variable (:type ("Edge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1652 1660]))                  
+                :type "bool")
+                nil [1626 1710])
+            ("<" function
+               (:operator-flag t
+                :arguments 
+                  ( ("n1" variable (:type ("Edge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1728 1736])
+                    ("n2" variable (:type ("Edge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1737 1745]))                  
+                :type "bool")
+                nil [1712 1794])
+            ("<<" function
+               (:operator-flag t
+                :arguments 
+                  ( ("os" variable
+                       (:reference 1
+                        :type ("ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1817 1829])
+                    ("e" variable
+                       (:reference 1
+                        :type ("Edge" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1830 1838]))                  
+                :type ("ostream" type (:type "class") nil nil))
+                nil [1796 1971])
+            ("MinPQ" type
+               (:template 
+                  ( ("TYPE" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2513 2520])
+                    ("MinPQ" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("maxSize" variable
+                               (:default-value "50"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2590 2604]))                          
+                        :type ("MinPQ" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2584 2873])
+                    ("MinPQ" function
+                       (:constructor-flag t
+                        :type ("MinPQ" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2909 3177])
+                    ("MinPQ" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3227 3319])
+                    ("isEmpty" function (:type "bool") (reparse-symbol classsubparts) [3383 3446])
+                    ("getSize" function (:type "int") (reparse-symbol classsubparts) [3531 3588])
+                    ("contains" function
+                       (:arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [3674 3680]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3660 3770])
+                    ("insert" function
+                       (:arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [3913 3919])
+                            ("key" variable (:type ("TYPE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3920 3929]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3901 4125])
+                    ("minIndex" function (:type "int") (reparse-symbol classsubparts) [4207 4289])
+                    ("minKey" function (:type ("TYPE" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4346 4433])
+                    ("decreaseKey" function
+                       (:arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [4671 4677])
+                            ("key" variable (:type ("TYPE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4678 4687]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4654 5041])
+                    ("delMin" function (:type "int") (reparse-symbol classsubparts) [5188 5432])
+                    ("private" label nil (reparse-symbol classsubparts) [5437 5445])
+                    ("pq" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [5452 5460])
+                    ("qp" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [5510 5518])
+                    ("keys" variable
+                       (:pointer 1
+                        :type ("TYPE" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5575 5586])
+                    ("size" variable (:type "int") (reparse-symbol classsubparts) [5622 5631])
+                    ("maxSize" variable (:type "int") (reparse-symbol classsubparts) [5670 5682])
+                    ("CLEAR" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [5726 5742])
+                    ("swim" function
+                       (:arguments 
+                          ( ("pos" variable (:type "int") (reparse-symbol arg-sub-list) [5893 5901]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5883 6030])
+                    ("sink" function
+                       (:arguments 
+                          ( ("pos" variable (:type "int") (reparse-symbol arg-sub-list) [6158 6166]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6148 6388])
+                    ("exch" function
+                       (:arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [6475 6481])
+                            ("j" variable (:type "int") (reparse-symbol arg-sub-list) [6482 6488]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6465 6626])
+                    ("greater" function
+                       (:arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [6647 6653])
+                            ("j" variable (:type "int") (reparse-symbol arg-sub-list) [6654 6660]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6634 6719]))                  )
+                nil [2474 6723])
+            ("Graph" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [7050 7057])
+                    ("Graph" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("size" variable
+                               (:default-value "50"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [7127 7138]))                          
+                        :type ("Graph" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7121 7237])
+                    ("Graph" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("path" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [7345 7362]))                          
+                        :type ("Graph" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7339 8613])
+                    ("Graph" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [8659 8746])
+                    ("addEdge" function
+                       (:arguments 
+                          ( ("e" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Edge" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8810 8824]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [8797 9075])
+                    ("getNumberVertices" function (:type "int") (reparse-symbol classsubparts) [9154 9193])
+                    ("degree" function
+                       (:arguments 
+                          ( ("node_id" variable (:type "int") (reparse-symbol arg-sub-list) [9271 9283]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [9259 9507])
+                    ("adjacent" function
+                       (:arguments 
+                          ( ("node_id" variable (:type "int") (reparse-symbol arg-sub-list) [9609 9621])
+                            ("neighbor" variable (:type "int") (reparse-symbol arg-sub-list) [9622 9635]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [9595 10006])
+                    ("neighbors" function
+                       (:arguments 
+                          ( ("node_id" variable (:type "int") (reparse-symbol arg-sub-list) [10114 10126]))                          
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("Edge" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [10091 10218])
+                    ("printGraph" function (:type "void") (reparse-symbol classsubparts) [10294 10810])
+                    ("private" label nil (reparse-symbol classsubparts) [10814 10822])
+                    ("graph" variable
+                       (:pointer 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("Edge" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [10829 10849])
+                    ("length" variable (:type "int") (reparse-symbol classsubparts) [10907 10918]))                  
+                :type "class")
+                nil [7033 10921])
+            ("ShortestPath" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [11120 11127])
+                    ("ShortestPath" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("G" variable
+                               (:reference 1
+                                :type ("Graph" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11226 11235])
+                            ("start" variable (:type "int") (reparse-symbol arg-sub-list) [11236 11246]))                          
+                        :type ("ShortestPath" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11213 12040])
+                    ("ShortestPath" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [12086 12169])
+                    ("getPathDistance" function
+                       (:arguments 
+                          ( ("dest" variable (:type "int") (reparse-symbol arg-sub-list) [12304 12313]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [12281 12404])
+                    ("getVerticesCnt" function (:type "int") (reparse-symbol classsubparts) [12466 12519])
+                    ("private" label nil (reparse-symbol classsubparts) [12524 12532])
+                    ("edgeTo" variable
+                       (:pointer 1
+                        :type ("Edge" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12539 12552])
+                    ("distTo" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [12559 12574])
+                    ("minPq" variable (:type ("MinPQ" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [12581 12601])
+                    ("length" variable (:type "int") (reparse-symbol classsubparts) [12608 12619])
+                    ("relax" function
+                       (:arguments 
+                          ( ("edge" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Edge" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12771 12788])
+                            ("from" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [12788 12803]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [12759 13399]))                  
+                :type "class")
+                nil [11096 13402])
+            ("Color" type (:type "class") nil [13627 13649])
+            ("Direction" type (:type "class") nil [13655 13694])
+            ("HexBoard" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [14056 14063])
+                    ("HexBoard" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("N" variable
+                               (:default-value "5"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [14203 14210]))                          
+                        :type ("HexBoard" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14194 16400])
+                    ("removeNotTaken" function
+                       (:arguments 
+                          ( ("hexId" variable (:type "int") (reparse-symbol arg-sub-list) [16493 16503]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [16473 16616])
+                    ("getNotTaken" function (:type ("vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [16674 16921])
+                    ("print" function (:type "void") (reparse-symbol classsubparts) [16964 17021])
+                    ("getAllowableMoves" function
+                       (:arguments 
+                          ( ("hexId" variable (:type "int") (reparse-symbol arg-sub-list) [17222 17232]))                          
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("Edge" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [17191 17288])
+                    ("drawHexBoard" function
+                       (:arguments 
+                          ( ("mpq" variable
+                               (:reference 1
+                                :type ("MinPQ" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [17527 17543])
+                            ("player1" variable (:type "char") (reparse-symbol arg-sub-list) [17544 17557])
+                            ("mpq2" variable
+                               (:reference 1
+                                :type ("MinPQ" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [17558 17575])
+                            ("player2" variable (:type "char") (reparse-symbol arg-sub-list) [17576 17589]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [17509 18783])
+                    ("getHexId" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [18875 18881])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [18882 18888])
+                            ("dim" variable (:type "int") (reparse-symbol arg-sub-list) [18889 18897]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [18855 18938])
+                    ("getHexCoord" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("vertexID" variable (:type "int") (reparse-symbol arg-sub-list) [19070 19083])
+                            ("dim" variable (:type "int") (reparse-symbol arg-sub-list) [19084 19092]))                          
+                        :type ("pair" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil)
+                                  ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [19037 19182])
+                    ("private" label nil (reparse-symbol classsubparts) [19188 19196])
+                    ("dimension" variable (:type "int") (reparse-symbol classsubparts) [19203 19217])
+                    ("board" variable (:type ("Graph" type (:type "class") nil nil)) (reparse-symbol classsubparts) [19246 19258])
+                    ("notTaken" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("bool" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [19300 19322]))                  
+                :type "class")
+                nil [14035 19327])
+            ("HexPlayer" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [19898 19905])
+                    ("HexPlayer" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("dir" variable (:type ("Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19998 20012])
+                            ("color" variable (:type ("Color" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20013 20025])
+                            ("N" variable (:type "int") (reparse-symbol arg-sub-list) [20026 20032])
+                            ("symbol" variable (:type "char") (reparse-symbol arg-sub-list) [20033 20045]))                          
+                        :type ("HexPlayer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19987 20168])
+                    ("makePlayerMove" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("player" variable
+                               (:pointer 1
+                                :type ("HexPlayer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20243 20261])
+                            ("opponent" variable
+                               (:pointer 1
+                                :type ("HexPlayer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20262 20282])
+                            ("board" variable
+                               (:pointer 1
+                                :type ("HexBoard" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20283 20299])
+                            ("token" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20300 20313]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [20215 21183])
+                    ("getMoveVertexID" function
+                       (:arguments 
+                          ( ("mov" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21265 21276])
+                            ("token" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21277 21290]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [21245 21791])
+                    ("move" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("move" variable (:type "int") (reparse-symbol arg-sub-list) [22090 22099])
+                            ("neighbors" variable
+                               (:reference 1
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("Edge" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [22100 22124]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [22072 23118])
+                    ("isMoveValid" function
+                       (:arguments 
+                          ( ("hexId" variable (:type "int") (reparse-symbol arg-sub-list) [23232 23242]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [23215 23398])
+                    ("isTaken" function
+                       (:arguments 
+                          ( ("hexId" variable (:type "int") (reparse-symbol arg-sub-list) [23515 23525]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [23502 23834])
+                    ("getMoveHistory" function
+                       (:pointer 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [23890 23961])
+                    ("getMoves" function (:type ("MinPQ" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [24011 24408])
+                    ("getSymbol" function (:type "char") (reparse-symbol classsubparts) [24456 24512])
+                    ("getColor" function (:type ("Color" type (:type "class") nil nil)) (reparse-symbol classsubparts) [24551 24606])
+                    ("printColor" function (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [24663 24912])
+                    ("getDirection" function (:type ("Direction" type (:type "class") nil nil)) (reparse-symbol classsubparts) [24956 25016])
+                    ("printDirection" function (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [25077 25484])
+                    ("isPlayerWinner" function (:type "bool") (reparse-symbol classsubparts) [25520 25558])
+                    ("protected" label nil (reparse-symbol classsubparts) [25565 25575])
+                    ("Mov_Weight" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "0"
+                        :type "int")
+                        (reparse-symbol classsubparts) [25582 25614])
+                    ("moves" variable (:type ("Graph" type (:type "class") nil nil)) (reparse-symbol classsubparts) [25647 25659])
+                    ("history" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [25719 25739])
+                    ("color" variable (:type ("Color" type (:type "class") nil nil)) (reparse-symbol classsubparts) [25792 25804])
+                    ("dimension" variable (:type "int") (reparse-symbol classsubparts) [25835 25849])
+                    ("direction" variable (:type ("Direction" type (:type "class") nil nil)) (reparse-symbol classsubparts) [25882 25902])
+                    ("symbol" variable (:type "char") (reparse-symbol classsubparts) [25942 25954])
+                    ("winner" variable (:type "bool") (reparse-symbol classsubparts) [25993 26005])
+                    ("isWinner" function (:type "bool") (reparse-symbol classsubparts) [26106 27194])
+                    ("validateMove" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("mov" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27284 27295])
+                            ("token" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27296 27309]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [27258 27942]))                  
+                :type "class")
+                nil [19877 27947])
+            ("RobotHexPlayer" type
+               (:superclasses 
+                  ( ("HexPlayer" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [28334 28341])
+                    ("RobotHexPlayer" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("dir" variable (:type ("Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28439 28453])
+                            ("color" variable (:type ("Color" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28454 28466])
+                            ("N" variable (:type "int") (reparse-symbol arg-sub-list) [28467 28473])
+                            ("symbol" variable (:type "char") (reparse-symbol arg-sub-list) [28474 28486]))                          
+                        :type ("RobotHexPlayer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [28423 28536])
+                    ("makePlayerMove" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("player" variable
+                               (:pointer 1
+                                :type ("HexPlayer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [28605 28623])
+                            ("opponent" variable
+                               (:pointer 1
+                                :type ("HexPlayer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [28624 28644])
+                            ("board" variable
+                               (:pointer 1
+                                :type ("HexBoard" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [28645 28661])
+                            ("token" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28662 28675]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [28577 29556])
+                    ("setOpponentsMoves" function
+                       (:arguments 
+                          ( ("moves" variable
+                               (:reference 1
+                                :type ("MinPQ" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [29633 29651]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [29610 29700])
+                    ("private" label nil (reparse-symbol classsubparts) [29705 29713])
+                    ("opponentMoves" variable
+                       (:pointer 1
+                        :type ("MinPQ" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [29720 29746])
+                    ("validateMove" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("mov" variable (:type "int") (reparse-symbol arg-sub-list) [29837 29845]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [29811 30003]))                  
+                :type "class")
+                nil [28290 30008])
+            ("HexGame" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [30337 30344])
+                    ("HexGame" function
+                       (:constructor-flag t
+                        :type ("HexGame" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [30373 30441])
+                    ("private" label nil (reparse-symbol classsubparts) [30445 30453])
+                    ("player1" variable
+                       (:pointer 1
+                        :type ("HexPlayer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [30460 30479])
+                    ("player2" variable
+                       (:pointer 1
+                        :type ("RobotHexPlayer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [30486 30510])
+                    ("board" variable
+                       (:pointer 1
+                        :type ("HexBoard" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [30517 30534])
+                    ("BLUE" variable
+                       (:constant-flag t
+                        :default-value "\"blue\""
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [30541 30568])
+                    ("RED" variable
+                       (:constant-flag t
+                        :default-value "\"red\""
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [30575 30601])
+                    ("Token" variable
+                       (:constant-flag t
+                        :default-value "\":\""
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [30608 30633])
+                    ("dimension" variable (:type "int") (reparse-symbol classsubparts) [30640 30654])
+                    ("start" function (:type "void") (reparse-symbol classsubparts) [30804 31861])
+                    ("gameOver" function (:type "void") (reparse-symbol classsubparts) [31903 32707])
+                    ("validateMove" function
+                       (:arguments 
+                          ( ("mov" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32789 32800]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [32771 33433])
+                    ("getMoveVertexID" function
+                       (:arguments 
+                          ( ("mov" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33515 33526]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [33495 34027])
+                    ("setGameData" function (:type "void") (reparse-symbol classsubparts) [34068 36040]))                  
+                :type "class")
+                nil [30318 36044])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [36204 36209]))                  
+                :type "int")
+                nil [36195 36493]))          
+      :file "student1.cpp"
+      :pointmax 36494
+      :fsize 36493
+      :lastmodtime '(21156 52939)
+      :unmatched-syntax '((symbol 13688 . 13692) (punctuation 13687 . 13688) (symbol 13683 . 13687) (punctuation 13682 . 13683) (symbol 13677 . 13682) (punctuation 13676 . 13677) (symbol 13671 . 13676) (ENUM 13650 . 13654) (symbol 13643 . 13647) (punctuation 13642 . 13643) (symbol 13639 . 13642) (ENUM 13622 . 13626)))
+    (semanticdb-table "student2.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [89 106])
+            ("cstdlib" include (:system-flag t) nil [126 144])
+            ("ctime" include (:system-flag t) nil [161 177])
+            ("iostream" include (:system-flag t) nil [189 208])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [210 230])
+            ("Player_Path" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [711 718])
+                    ("Player_Path" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [732 736]))                          
+                        :type ("Player_Path" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [720 737])
+                    ("print" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [794 807])
+                    ("rd_moves" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [809 825])
+                    ("private" label nil (reparse-symbol classsubparts) [826 834])
+                    ("Path_Board" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [836 869])
+                    ("B_rows" variable
+                       (:default-value "5"
+                        :type "int")
+                        (reparse-symbol classsubparts) [899 920])
+                    ("B_cols" variable (:type "int") (reparse-symbol classsubparts) [899 920]))                  
+                :type "class")
+                nil [691 923])
+            ("Player_Path" function
+               (:constructor-flag t
+                :parent "Player_Path"
+                :arguments 
+                  ( ("numRC" variable
+                       (:default-value "11"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1030 1044]))                  
+                :type ("Player_Path" type (:type "class") nil nil))
+                nil [1005 1395])
+            ("HEX_Board" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1594 1601])
+                    ("HEX_Board" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1613 1617]))                          
+                        :type ("HEX_Board" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1603 1618])
+                    ("print" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1673 1686])
+                    ("rd_moves" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1688 1704])
+                    ("rd9_moves" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1759 1763])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [1764 1768]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1744 1769])
+                    ("p1_move" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1816 1820])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [1821 1825]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1804 1826])
+                    ("p2_move" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1840 1844])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [1845 1849]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1828 1850])
+                    ("is_empty" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1865 1869])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [1870 1874]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1852 1875])
+                    ("neighbors" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1910 1914])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [1915 1919]))                          
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("vector" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1878 1920])
+                    ("test" variable
+                       (:default-value "123"
+                        :type "int")
+                        (reparse-symbol classsubparts) [1957 1971])
+                    ("private" label nil (reparse-symbol classsubparts) [1972 1980])
+                    ("H_Board" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1982 2012])
+                    ("B_rows" variable (:type "int") (reparse-symbol classsubparts) [2040 2059])
+                    ("B_cols" variable (:type "int") (reparse-symbol classsubparts) [2040 2059]))                  
+                :type "class")
+                nil [1576 2062])
+            ("HEX_Board" function
+               (:constructor-flag t
+                :parent "HEX_Board"
+                :arguments 
+                  ( ("numRC" variable
+                       (:default-value "13"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2165 2177]))                  
+                :type ("HEX_Board" type (:type "class") nil nil))
+                nil [2144 2971])
+            ("neighbors" function
+               (:parent "HEX_Board"
+                :arguments 
+                  ( ("row" variable (:type "int") (reparse-symbol arg-sub-list) [3132 3140])
+                    ("col" variable (:type "int") (reparse-symbol arg-sub-list) [3141 3149]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("vector" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [3089 3787])
+            ("p1_move" function
+               (:parent "HEX_Board"
+                :arguments 
+                  ( ("row" variable (:type "int") (reparse-symbol arg-sub-list) [3923 3931])
+                    ("col" variable (:type "int") (reparse-symbol arg-sub-list) [3932 3940]))                  
+                :type "int")
+                nil [3900 4070])
+            ("p2_move" function
+               (:parent "HEX_Board"
+                :arguments 
+                  ( ("row" variable (:type "int") (reparse-symbol arg-sub-list) [4198 4206])
+                    ("col" variable (:type "int") (reparse-symbol arg-sub-list) [4207 4215]))                  
+                :type "int")
+                nil [4175 4342])
+            ("is_empty" function
+               (:parent "HEX_Board"
+                :arguments 
+                  ( ("row" variable (:type "int") (reparse-symbol arg-sub-list) [4449 4457])
+                    ("col" variable (:type "int") (reparse-symbol arg-sub-list) [4458 4466]))                  
+                :type "int")
+                nil [4425 4546])
+            ("rd_moves" function
+               (:parent "HEX_Board"
+                :type "void")
+                nil [4676 4827])
+            ("print" function
+               (:parent "HEX_Board"
+                :type "void")
+                nil [4957 5746])
+            ("HEX_Game" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [6088 6095])
+                    ("HEX_Game" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [6107 6111]))                          
+                        :type ("HEX_Game" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6097 6112])
+                    ("print" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [6132 6145])
+                    ("ask_move" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [6147 6162])
+                    ("pl2_make_move" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [6165 6185])
+                    ("test" variable (:type "int") (reparse-symbol classsubparts) [6211 6220])
+                    ("private" label nil (reparse-symbol classsubparts) [6221 6229])
+                    ("B_side" variable (:type "int") (reparse-symbol classsubparts) [6254 6265])
+                    ("Gm_Board" variable (:type ("HEX_Board" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6267 6286])
+                    ("pl2_path" variable
+                       (:dereference 2
+                        :type "int")
+                        (reparse-symbol classsubparts) [6291 6313])
+                    ("pl2_idx" variable (:type "int") (reparse-symbol classsubparts) [6332 6345]))                  
+                :type "class")
+                nil [6071 6348])
+            ("HEX_Game" function
+               (:constructor-flag t
+                :parent "HEX_Game"
+                :arguments 
+                  ( ("side2" variable
+                       (:default-value "13"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6451 6463]))                  
+                :type ("HEX_Game" type (:type "class") nil nil))
+                nil [6432 6655])
+            ("print" function
+               (:parent "HEX_Game"
+                :type "void")
+                nil [6757 6808])
+            ("pl2_make_move" function
+               (:parent "HEX_Game"
+                :type "int")
+                nil [6903 8014])
+            ("ask_move" function
+               (:parent "HEX_Game"
+                :type "int")
+                nil [8118 8875])
+            ("test_neib" function
+               (:arguments 
+                  ( ("game_board" variable
+                       (:reference 1
+                        :type ("HEX_Board" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9186 9208])
+                    ("side" variable (:type "int") (reparse-symbol arg-sub-list) [9209 9218]))                  
+                :type "int")
+                nil [9172 9647])
+            ("main" function (:type "int") nil [9864 11121]))          
+      :file "student2.cpp"
+      :pointmax 11284
+      :fsize 11283
+      :lastmodtime '(21156 53439)
+      :unmatched-syntax nil)
+    (semanticdb-table "student3.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [109 128])
+            ("vector" include (:system-flag t) nil [129 146])
+            ("map" include (:system-flag t) nil [147 161])
+            ("unordered_set" include (:system-flag t) nil [162 186])
+            ("limits" include (:system-flag t) nil [187 204])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [206 226])
+            ("Node" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [241 248])
+                    ("Node" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [256 262])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [263 269])
+                            ("mark" variable (:type "int") (reparse-symbol arg-sub-list) [270 279])
+                            ("size" variable (:type "int") (reparse-symbol arg-sub-list) [280 289]))                          
+                        :type ("Node" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [251 290])
+                    ("is_free" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [293 308])
+                    ("getNeighbours" function
+                       (:prototype-flag t
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [311 339])
+                    ("getMark" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [342 356])
+                    ("setMark" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("mark" variable (:type "int") (reparse-symbol arg-sub-list) [372 381]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [359 382])
+                    ("private" label nil (reparse-symbol classsubparts) [384 392])
+                    ("x" variable (:type "int") (reparse-symbol classsubparts) [395 401])
+                    ("y" variable (:type "int") (reparse-symbol classsubparts) [404 410])
+                    ("index" variable (:type "int") (reparse-symbol classsubparts) [413 423])
+                    ("size" variable (:type "int") (reparse-symbol classsubparts) [426 435])
+                    ("mark" variable (:type "int") (reparse-symbol classsubparts) [438 447])
+                    ("neighbours" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [503 526])
+                    ("addNeighbour" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [587 593])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [594 600]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [569 601]))                  
+                :type "class")
+                nil [228 604])
+            ("Node" function
+               (:constructor-flag t
+                :parent "Node"
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [617 623])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [624 630])
+                    ("mark" variable (:type "int") (reparse-symbol arg-sub-list) [631 640])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [641 650]))                  
+                :type ("Node" type (:type "class") nil nil))
+                nil [606 3074])
+            ("addNeighbour" function
+               (:parent "Node"
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [3100 3106])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [3107 3113]))                  
+                :type "void")
+                nil [3076 3155])
+            ("getNeighbours" function
+               (:parent "Node"
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [3156 3212])
+            ("setMark" function
+               (:parent "Node"
+                :arguments 
+                  ( ("mk" variable (:type "int") (reparse-symbol arg-sub-list) [3232 3239]))                  
+                :type "void")
+                nil [3213 3253])
+            ("getMark" function
+               (:parent "Node"
+                :type "int")
+                nil [3254 3290])
+            ("Board" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3308 3315])
+                    ("Board" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("size" variable (:type "int") (reparse-symbol arg-sub-list) [3326 3335]))                          
+                        :type ("Board" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3320 3336])
+                    ("Board" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3341 3350])
+                    ("start" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3355 3368])
+                    ("print" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3373 3386])
+                    ("" type
+                       (:members 
+                          ( ("Dot" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3397 3401])
+                            ("Dash" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3401 3406])
+                            ("BackSlash" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3406 3416])
+                            ("Slash" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3416 3422])
+                            ("Cross" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3422 3428])
+                            ("Circle" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3428 3435]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [3391 3436])
+                    ("" type
+                       (:members 
+                          ( ("Horizontal" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3447 3458])
+                            ("Vertical" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3458 3467]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [3441 3468])
+                    ("private" label nil (reparse-symbol classsubparts) [3471 3479])
+                    ("size" variable (:type "int") (reparse-symbol classsubparts) [3484 3493])
+                    ("used" variable (:type "int") (reparse-symbol classsubparts) [3498 3507])
+                    ("nodes" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("Node" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3512 3531])
+                    ("markers" variable
+                       (:dereference 1
+                        :default-value "{'.','-','\\\\','/','x','O'}"
+                        :type "char")
+                        (reparse-symbol classsubparts) [3551 3594])
+                    ("markers" variable
+                       (:dereference 1
+                        :default-value "{'.','-','\\\\','/','x','O'}"
+                        :type "char")
+                        (reparse-symbol classsubparts) [3595 3595])
+                    ("getIndex" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [3610 3616])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [3617 3623]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3597 3624])
+                    ("setMark" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [3642 3652])
+                            ("mark" variable (:type "int") (reparse-symbol arg-sub-list) [3653 3662]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3629 3663])
+                    ("setMark" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [3681 3687])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [3688 3694])
+                            ("mark" variable (:type "int") (reparse-symbol arg-sub-list) [3695 3704]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3668 3705])
+                    ("setMarkByRandom" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("mark" variable (:type "int") (reparse-symbol arg-sub-list) [3731 3740]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3710 3741])
+                    ("getMark" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [3758 3768]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3746 3769])
+                    ("getMark" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [3786 3792])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [3793 3799]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3774 3800])
+                    ("isConnected" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("mark" variable (:type "int") (reparse-symbol arg-sub-list) [3822 3831])
+                            ("srcIndex" variable (:type "int") (reparse-symbol arg-sub-list) [3832 3845])
+                            ("dstIndex" variable (:type "int") (reparse-symbol arg-sub-list) [3846 3859])
+                            ("path" variable
+                               (:reference 1
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3860 3877]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3805 3878])
+                    ("checkWin" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("mark" variable (:type "int") (reparse-symbol arg-sub-list) [3897 3906])
+                            ("path" variable
+                               (:reference 1
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3907 3924]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3883 3925])
+                    ("setMarkForUser" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("mark" variable (:type "int") (reparse-symbol arg-sub-list) [3950 3959]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3930 3960])
+                    ("setMarkForProgram" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("mark" variable (:type "int") (reparse-symbol arg-sub-list) [3988 3997]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3965 3998])
+                    ("copyFrom" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("nd" variable
+                               (:reference 1
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("Node" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4016 4033]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4003 4034]))                  
+                :type "class")
+                nil [3292 4037])
+            ("Board" function
+               (:constructor-flag t
+                :parent "Board"
+                :arguments 
+                  ( ("size" variable (:type "int") (reparse-symbol arg-sub-list) [4051 4060]))                  
+                :type ("Board" type (:type "class") nil nil))
+                nil [4038 4222])
+            ("Board" function
+               (:destructor-flag t
+                :parent "Board"
+                :type "void")
+                nil [4225 4243])
+            ("getIndex" function
+               (:parent "Board"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [4311 4317])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [4318 4324]))                  
+                :type "int")
+                nil [4284 4355])
+            ("Board::markers" variable
+               (:dereference 1
+                :type "char")
+                nil [4387 4410])
+            ("print" function
+               (:parent "Board"
+                :type "void")
+                nil [4411 5210])
+            ("copyFrom" function
+               (:parent "Board"
+                :arguments 
+                  ( ("nd" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("Node" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5259 5276]))                  
+                :type "int")
+                nil [5239 5405])
+            ("isConnected" function
+               (:parent "Board"
+                :arguments 
+                  ( ("mark" variable (:type "int") (reparse-symbol arg-sub-list) [5568 5577])
+                    ("srcIndex" variable (:type "int") (reparse-symbol arg-sub-list) [5578 5591])
+                    ("dstIndex" variable (:type "int") (reparse-symbol arg-sub-list) [5592 5605])
+                    ("path" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5606 5623]))                  
+                :type "bool")
+                nil [5544 7272])
+            ("getMark" function
+               (:parent "Board"
+                :arguments 
+                  ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [7294 7304]))                  
+                :type "int")
+                nil [7275 7473])
+            ("getMark" function
+               (:parent "Board"
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [7493 7499])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [7500 7506]))                  
+                :type "int")
+                nil [7474 7676])
+            ("setMark" function
+               (:parent "Board"
+                :arguments 
+                  ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [7698 7708])
+                    ("mark" variable (:type "int") (reparse-symbol arg-sub-list) [7709 7718]))                  
+                :type "void")
+                nil [7678 7866])
+            ("setMark" function
+               (:parent "Board"
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [7887 7893])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [7894 7900])
+                    ("mark" variable (:type "int") (reparse-symbol arg-sub-list) [7901 7910]))                  
+                :type "void")
+                nil [7867 8059])
+            ("setMarkByRandom" function
+               (:parent "Board"
+                :arguments 
+                  ( ("mark" variable (:type "int") (reparse-symbol arg-sub-list) [8111 8120]))                  
+                :type "void")
+                nil [8083 8382])
+            ("setMarkForUser" function
+               (:parent "Board"
+                :arguments 
+                  ( ("mark" variable (:type "int") (reparse-symbol arg-sub-list) [8411 8420]))                  
+                :type "void")
+                nil [8384 9158])
+            ("setMarkForProgram" function
+               (:parent "Board"
+                :arguments 
+                  ( ("playerMark" variable (:type "int") (reparse-symbol arg-sub-list) [9190 9205]))                  
+                :type "void")
+                nil [9160 11405])
+            ("checkWin" function
+               (:parent "Board"
+                :arguments 
+                  ( ("mark" variable (:type "int") (reparse-symbol arg-sub-list) [11477 11486])
+                    ("path" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11487 11504]))                  
+                :type "bool")
+                nil [11456 12280])
+            ("start" function
+               (:parent "Board"
+                :type "void")
+                nil [12282 13680])
+            ("main" function (:type "int") nil [13682 14068]))          
+      :file "student3.cpp"
+      :pointmax 14069
+      :fsize 14068
+      :lastmodtime '(21156 53722)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!coursera!c++!codes!hw5!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

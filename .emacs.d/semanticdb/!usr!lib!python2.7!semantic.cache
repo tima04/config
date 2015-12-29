@@ -1,0 +1,24 @@
+;; Object python2.7/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "python2.7/"
+  :tables
+  (list
+    (semanticdb-table "pickle.py"
+      :file "pickle.py"
+      :fsize 45163
+      :lastmodtime '(21294 8926 0 0))
+    (semanticdb-table "pdb.py"
+      :file "pdb.py"
+      :fsize 46012
+      :lastmodtime '(21294 8954 0 0))
+    (semanticdb-table "bdb.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "bdb.py"
+      :pointmax 21715
+      :fsize 21714
+      :lastmodtime '(21294 8926 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!lib!python2.7!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

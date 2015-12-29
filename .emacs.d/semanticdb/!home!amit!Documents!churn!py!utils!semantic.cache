@@ -1,0 +1,149 @@
+;; Object utils/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "utils/"
+  :tables
+  (list
+    (semanticdb-table "utils.i"
+      :major-mode 'c-mode
+      :tags 
+        '( ("transform" variable (:type "int") nil [464 487])
+            ("elt_indx_map" variable (:type "int") nil [556 582])
+            ("elt_indx_map" variable (:type "int") nil [610 628]))          
+      :file "utils.i"
+      :pointmax 637
+      :fsize 636
+      :lastmodtime '(21984 62081 195554 566000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SWIG_FILE_WITH_INIT")
+          )
+)
+    (semanticdb-table "utils.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "utils.py"
+      :pointmax 16865
+      :fsize 4924
+      :lastmodtime '(21984 62121 331553 380000)
+      :unmatched-syntax nil)
+    (semanticdb-table "utils.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [1 18])
+            ("map" include (:system-flag t) nil [19 33])
+            ("algorithm" include (:system-flag t) nil [34 54])
+            ("string" include (:system-flag t) nil [55 72])
+            ("set" include (:system-flag t) nil [73 87])
+            ("boost/foreach.hpp" include (:system-flag t) nil [88 116])
+            ("foreach" variable (:constant-flag t) nil [126 133])
+            ("indx" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "int"
+                :arguments 
+                  ( ("x" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [232 236])
+                    ("vs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [237 262]))                  
+                :typemodifiers ("inline"))
+                nil [194 360])
+            ("transform_old" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :arguments 
+                  ( ("xs" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [415 433]))                  )
+                nil [362 770])
+            ("transform" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :arguments 
+                  ( ("xs" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [884 902]))                  )
+                nil [835 1316])
+            ("elt_indx_map" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("std::map" type
+                     (:template-specifier 
+                        ( ("T" type nil nil nil)
+                          ("std::vector" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :arguments 
+                  ( ("xs" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1499 1517]))                  )
+                nil [1434 1633])
+            ("elt_indx_map2" function
+               (:arguments 
+                  ( ("xs" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("long int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1686 1711]))                  
+                :type ("std::map" type
+                     (:template-specifier 
+                        ( ("long int" type nil nil nil)
+                          ("std::vector" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [1635 1841])
+            ("foo" function
+               (:arguments 
+                  ( ("x" variable (:type "long int") (reparse-symbol arg-sub-list) [1856 1867]))                  
+                :type "long int")
+                nil [1843 1885])
+            ("bar" function
+               (:arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [1895 1901]))                  
+                :type "int")
+                nil [1887 1919]))          
+      :file "utils.hpp"
+      :pointmax 2075
+      :fsize 2074
+      :lastmodtime '(21986 48188 856092 296000)
+      :unmatched-syntax '((semantic-list 2352 . 2363) (symbol 2342 . 2351) (symbol 2335 . 2341) (symbol 2332 . 2334) (symbol 2330 . 2331) (punctuation 2329 . 2330) (number 2328 . 2329) (punctuation 2326 . 2327) (symbol 2317 . 2326) (punctuation 2315 . 2316) (symbol 2308 . 2315) (punctuation 2306 . 2307) (symbol 2296 . 2306) (symbol 2291 . 2295) (punctuation 2289 . 2290) (symbol 2277 . 2289) (punctuation 2275 . 2276) (number 2274 . 2275) (punctuation 2273 . 2274) (number 2272 . 2273) (symbol 2266 . 2271) (punctuation 2264 . 2265) (symbol 2263 . 2264) (symbol 2260 . 2262) (symbol 2249 . 2259) (semantic-list 2236 . 2247) (symbol 2226 . 2235) (punctuation 2224 . 2225) (symbol 2223 . 2224) (symbol 2217 . 2222) (punctuation 2216 . 2217) (symbol 2212 . 2216) (symbol 2208 . 2211) (symbol 2205 . 2207) (symbol 2192 . 2203) (symbol 2180 . 2191) (symbol 2175 . 2179) (semantic-list 2161 . 2172) (symbol 2151 . 2160) (punctuation 2149 . 2150) (symbol 2148 . 2149) (symbol 2142 . 2147) (punctuation 2141 . 2142) (symbol 2134 . 2141) (punctuation 2132 . 2133) (symbol 2131 . 2132) (symbol 2124 . 2130) (symbol 2121 . 2123) (symbol 2118 . 2119) (punctuation 2117 . 2118) (number 2116 . 2117) (punctuation 2114 . 2115) (semantic-list 2098 . 2114) (symbol 2089 . 2097) (symbol 2077 . 2088) (symbol 2075 . 2076) (semantic-list 2236 . 2247) (symbol 2226 . 2235) (punctuation 2224 . 2225) (symbol 2223 . 2224) (symbol 2217 . 2222) (punctuation 2216 . 2217) (symbol 2212 . 2216) (symbol 2208 . 2211) (symbol 2205 . 2207) (symbol 2192 . 2203) (symbol 2180 . 2191) (symbol 2175 . 2179) (semantic-list 2161 . 2172) (symbol 2151 . 2160) (punctuation 2149 . 2150) (symbol 2148 . 2149) (symbol 2142 . 2147) (punctuation 2141 . 2142) (symbol 2134 . 2141) (punctuation 2132 . 2133) (symbol 2131 . 2132) (symbol 2124 . 2130) (symbol 2121 . 2123) (symbol 2118 . 2119) (punctuation 2117 . 2118) (number 2116 . 2117) (punctuation 2114 . 2115) (semantic-list 2098 . 2114) (symbol 2089 . 2097) (symbol 2077 . 2088) (symbol 2075 . 2076) (semantic-list 2161 . 2172) (symbol 2151 . 2160) (punctuation 2149 . 2150) (symbol 2148 . 2149) (symbol 2142 . 2147) (punctuation 2141 . 2142) (symbol 2134 . 2141) (punctuation 2132 . 2133) (symbol 2131 . 2132) (symbol 2124 . 2130) (symbol 2121 . 2123) (symbol 2118 . 2119) (punctuation 2117 . 2118) (number 2116 . 2117) (punctuation 2114 . 2115) (semantic-list 2098 . 2114) (symbol 2089 . 2097) (symbol 2077 . 2088) (symbol 2075 . 2076) (symbol 2075 . 2076))
+      :lexical-table 
+        '(("foreach" . ((symbol "BOOST_FOREACH" 134 . 147)))
+          )
+)
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("CC" variable (:default-value ("g++")) nil [1 10])
+            ("STD" variable (:default-value ("-std=c++11")) nil [10 27])
+            ("_utils.so" function (:arguments ("utils.i" "utils.hpp")) nil [27 213])
+            ("clean" function nil nil [306 321]))          
+      :file "Makefile"
+      :pointmax 321
+      :fsize 320
+      :lastmodtime '(21984 33608 968395 826000)
+      :unmatched-syntax '((shell-command 314 . 320) (bol 313 . 313) (shell-command 265 . 305) (bol 264 . 264))))
+  :file "!home!amit!Documents!churn!py!utils!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

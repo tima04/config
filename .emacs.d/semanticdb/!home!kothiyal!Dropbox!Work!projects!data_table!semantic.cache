@@ -1,0 +1,186 @@
+;; Object data_table/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "data_table/"
+  :tables
+  (list
+    (semanticdb-table "data_table.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Composition instead of inheritance.
+\"\"\"" code nil nil [1 44])
+            ("numpy" include nil nil [94 112])
+            ("pdb" include nil nil [113 123])
+            ("re" include nil nil [124 133])
+            ("pandas" include nil nil [134 153])
+            ("itertools" include nil nil [154 176])
+            ("DataFrame" include nil nil [190 206])
+            ("substitute" include nil nil [207 239])
+            ("ParseError" type
+               (:superclasses ("BaseException")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [318 322]))                  
+                :type "class")
+                nil [281 323])
+            ("Table" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [456 602])
+                            ("self" variable nil (reparse-symbol indented_block_body) [610 636])
+                            ("self" variable nil (reparse-symbol indented_block_body) [645 675]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [363 367])
+                            ("data" variable nil (reparse-symbol function_parameters) [369 373])
+                            ("index" variable nil (reparse-symbol function_parameters) [380 385])
+                            ("columns" variable nil (reparse-symbol function_parameters) [392 399])
+                            ("dtype" variable nil (reparse-symbol function_parameters) [406 411])
+                            ("copy" variable nil (reparse-symbol function_parameters) [435 439]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [350 676])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [694 698]))                          )
+                        (reparse-symbol indented_block_body) [681 735])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [760 764]))                          )
+                        (reparse-symbol indented_block_body) [748 800])
+                    ("_to_pd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [816 820]))                          )
+                        (reparse-symbol indented_block_body) [805 846])
+                    ("__getitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [871 875])
+                            ("items" variable nil (reparse-symbol function_parameters) [877 882]))                          )
+                        (reparse-symbol indented_block_body) [855 1219])
+                    ("_parse_items" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1275 1279])
+                            ("items" variable nil (reparse-symbol function_parameters) [1281 1286]))                          
+                        :documentation "
+        helper function for __getitem__
+        ")
+                        (reparse-symbol indented_block_body) [1258 3078])
+                    ("_assign" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3099 3103])
+                            ("df" variable nil (reparse-symbol function_parameters) [3105 3107])
+                            ("item" variable nil (reparse-symbol function_parameters) [3109 3113])
+                            ("slice_" variable nil (reparse-symbol function_parameters) [3115 3121])
+                            ("count" variable nil (reparse-symbol function_parameters) [3123 3128])
+                            ("by" variable nil (reparse-symbol function_parameters) [3130 3132]))                          )
+                        (reparse-symbol indented_block_body) [3087 3598])
+                    ("_assign2" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3616 3620])
+                            ("exprs" variable nil (reparse-symbol function_parameters) [3622 3627])
+                            ("slice_" variable nil (reparse-symbol function_parameters) [3629 3635])
+                            ("by" variable nil (reparse-symbol function_parameters) [3644 3646]))                          )
+                        (reparse-symbol indented_block_body) [3603 5369])
+                    ("_assign2df" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5389 5393])
+                            ("eqs" variable nil (reparse-symbol function_parameters) [5395 5398]))                          )
+                        (reparse-symbol indented_block_body) [5374 6127]))                  
+                :type "class")
+                nil [324 6127])
+            ("grpd_indx" function
+               (:documentation "
+    >>> xs =  ['a', 'b', 'a', 'a', 'b']
+    >>> list(grpd_indx(xs))
+    [[0, 2, 3], [1, 4]]
+    "
+                :arguments 
+                  ( ("xs" variable nil (reparse-symbol function_parameters) [6142 6144]))                  )
+                nil [6128 6540])
+            ("Foo" type
+               (:superclasses ("DataFrame")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("DataFrame" code nil (reparse-symbol indented_block_body) [6699 6758]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6606 6610])
+                            ("data" variable nil (reparse-symbol function_parameters) [6612 6616])
+                            ("index" variable nil (reparse-symbol function_parameters) [6623 6628])
+                            ("columns" variable nil (reparse-symbol function_parameters) [6635 6642])
+                            ("dtype" variable nil (reparse-symbol function_parameters) [6649 6654])
+                            ("copy" variable nil (reparse-symbol function_parameters) [6678 6682]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [6593 6759])
+                    ("__getitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6846 6850])
+                            ("items" variable nil (reparse-symbol function_parameters) [6852 6857]))                          
+                        :decorators 
+                          ( ("bar" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [6821 6881]))                  
+                :type "class")
+                nil [6567 6881])
+            ("functools" include nil nil [6887 6914])
+            ("bar" function (:arguments 
+              ( ("msg" variable nil (reparse-symbol function_parameters) [6924 6927]))              ) nil [6916 7118])
+            ("sum" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [7140 7141])
+                ("y" variable nil (reparse-symbol function_parameters) [7143 7144]))              ) nil [7132 7164])
+            ("mul" function
+               (:documentation "bla bla "
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [7173 7174])
+                    ("y" variable nil (reparse-symbol function_parameters) [7176 7177]))                  )
+                nil [7165 7216])
+            ("mul" variable nil nil [7216 7242])
+            ("n" variable nil nil [7244 7249])
+            ("bar" variable nil nil [7250 7371])
+            ("foo" variable nil nil [7372 7388])
+            ("bar" code nil nil [7398 7435])
+            ("foo" code nil nil [7444 7460])
+            ("data" variable nil nil [7726 7800])
+            ("keyfunc" variable nil nil [7801 7825])
+            ("groups" variable nil nil [7897 7908])
+            ("uniquekeys" variable nil nil [7909 7924])
+            ("for" code nil nil [7959 8085])
+            ("for" code nil nil [8087 8147])
+            ("foo" variable nil nil [8148 8245])
+            ("x" variable nil nil [8247 8317])
+            ("randints" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [8332 8333])
+                ("a" variable nil (reparse-symbol function_parameters) [8335 8336])
+                ("b" variable nil (reparse-symbol function_parameters) [8341 8342]))              ) nil [8319 8405])
+            ("n" variable nil nil [8406 8412])
+            ("indx" variable nil nil [8413 8430])
+            ("random" code nil nil [8431 8451])
+            ("foo" variable nil nil [8452 8493])
+            ("foo" variable nil nil [8494 8534])
+            ("foo" variable nil nil [8535 8601])
+            ("bar" variable nil nil [8602 8677])
+            ("bar" variable nil nil [8678 8724])
+            ("bar" variable nil nil [8725 8750])
+            ("t0" variable nil nil [8753 8769])
+            ("baz" variable nil nil [8770 8790]))          
+      :file "data_table.py"
+      :pointmax 8811
+      :fsize 8616
+      :lastmodtime '(21956 36865 734577 859000)
+      :unmatched-syntax nil)
+    (semanticdb-table "substitute.py"
+      :file "substitute.py"
+      :fsize 3124
+      :lastmodtime '(21951 50111 0 0)))
+  :file "!home!kothiyal!Dropbox!Work!projects!data_table!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

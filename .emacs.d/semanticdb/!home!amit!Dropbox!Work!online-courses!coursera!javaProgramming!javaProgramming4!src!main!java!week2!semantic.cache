@@ -1,0 +1,380 @@
+;; Object week2/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "week2/"
+  :tables
+  (list
+    (semanticdb-table "Location.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("week2" package nil nil [1 15])
+            ("java.text.DecimalFormat" include nil nil [1043 1074])
+            ("java.util.StringTokenizer" include nil nil [1075 1108])
+            ("Location" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("FORMAT_DEGREES" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1705 1748])
+                    ("FORMAT_MINUTES" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1975 2018])
+                    ("FORMAT_SECONDS" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [2313 2356])
+                    ("EXTRA_COARSE_LOCATION" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [2608 2676])
+                    ("EXTRA_NO_GPS_LOCATION" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [2889 2956])
+                    ("mProvider" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [2962 2987])
+                    ("mTime" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [2992 3015])
+                    ("mElapsedRealtimeNanos" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [3020 3059])
+                    ("mLatitude" variable
+                       (:typemodifiers ("private")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [3064 3095])
+                    ("mLongitude" variable
+                       (:typemodifiers ("private")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [3100 3132])
+                    ("mHasAltitude" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [3137 3174])
+                    ("mAltitude" variable
+                       (:typemodifiers ("private")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [3179 3211])
+                    ("mHasSpeed" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [3216 3250])
+                    ("mSpeed" variable
+                       (:typemodifiers ("private")
+                        :type "float")
+                        (reparse-symbol class_member_declaration) [3255 3283])
+                    ("mHasBearing" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [3288 3324])
+                    ("mBearing" variable
+                       (:typemodifiers ("private")
+                        :type "float")
+                        (reparse-symbol class_member_declaration) [3329 3359])
+                    ("mHasAccuracy" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [3364 3401])
+                    ("mAccuracy" variable
+                       (:typemodifiers ("private")
+                        :type "float")
+                        (reparse-symbol class_member_declaration) [3406 3437])
+                    ("mIsFromMockProvider" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [3442 3486])
+                    ("mLat1" variable
+                       (:typemodifiers ("private")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [3620 3647])
+                    ("mLon1" variable
+                       (:typemodifiers ("private")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [3652 3679])
+                    ("mLat2" variable
+                       (:typemodifiers ("private")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [3684 3711])
+                    ("mLon2" variable
+                       (:typemodifiers ("private")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [3716 3743])
+                    ("mDistance" variable
+                       (:typemodifiers ("private")
+                        :type "float")
+                        (reparse-symbol class_member_declaration) [3748 3779])
+                    ("mInitialBearing" variable
+                       (:typemodifiers ("private")
+                        :type "float")
+                        (reparse-symbol class_member_declaration) [3784 3821])
+                    ("mResults" variable
+                       (:dereference 1
+                        :typemodifiers ("private" "final")
+                        :type "float")
+                        (reparse-symbol class_member_declaration) [3844 3890])
+                    ("Location" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("provider" variable (:type "String") (reparse-symbol formal_parameters) [4208 4223]))                          )
+                        (reparse-symbol class_member_declaration) [4192 4262])
+                    ("Location" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("l" variable (:type "Location") (reparse-symbol formal_parameters) [4376 4386]))                          )
+                        (reparse-symbol class_member_declaration) [4360 4411])
+                    ("Location" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("latitude" variable (:type "double") (reparse-symbol formal_parameters) [4437 4452])
+                            ("longitude" variable (:type "double") (reparse-symbol formal_parameters) [4454 4470]))                          )
+                        (reparse-symbol class_member_declaration) [4421 4534])
+                    ("set" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("l" variable (:type "Location") (reparse-symbol formal_parameters) [4652 4662]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4636 5179])
+                    ("reset" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5245 5640])
+                    ("convert" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("coordinate" variable (:type "double") (reparse-symbol formal_parameters) [6161 6178])
+                            ("outputType" variable (:type "int") (reparse-symbol formal_parameters) [6180 6194]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [6132 7466])
+                    ("convert" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("coordinate" variable (:type "String") (reparse-symbol formal_parameters) [7822 7839]))                          
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [7793 9938])
+                    ("computeDistanceAndBearing" function
+                       (:typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("lat1" variable (:type "double") (reparse-symbol formal_parameters) [9990 10001])
+                            ("lon1" variable (:type "double") (reparse-symbol formal_parameters) [10003 10014])
+                            ("lat2" variable (:type "double") (reparse-symbol formal_parameters) [10024 10035])
+                            ("lon2" variable (:type "double") (reparse-symbol formal_parameters) [10037 10048])
+                            ("results" variable
+                               (:dereference 1
+                                :type "float")
+                                (reparse-symbol formal_parameters) [10050 10065]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [9944 13938])
+                    ("distanceBetween" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("startLatitude" variable (:type "double") (reparse-symbol formal_parameters) [14820 14840])
+                            ("startLongitude" variable (:type "double") (reparse-symbol formal_parameters) [14842 14863])
+                            ("endLatitude" variable (:type "double") (reparse-symbol formal_parameters) [14873 14891])
+                            ("endLongitude" variable (:type "double") (reparse-symbol formal_parameters) [14893 14912])
+                            ("results" variable
+                               (:dereference 1
+                                :type "float")
+                                (reparse-symbol formal_parameters) [14914 14929]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [14785 15200])
+                    ("distanceTo" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("dest" variable (:type "Location") (reparse-symbol formal_parameters) [15505 15518]))                          
+                        :type "float")
+                        (reparse-symbol class_member_declaration) [15481 16161])
+                    ("bearingTo" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("dest" variable (:type "Location") (reparse-symbol formal_parameters) [16622 16635]))                          
+                        :type "float")
+                        (reparse-symbol class_member_declaration) [16599 17300])
+                    ("getProvider" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [17454 17515])
+                    ("setProvider" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("provider" variable (:type "String") (reparse-symbol formal_parameters) [17623 17638]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [17599 17677])
+                    ("getTime" function
+                       (:typemodifiers ("public")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [18480 18531])
+                    ("setTime" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("time" variable (:type "long") (reparse-symbol formal_parameters) [18742 18751]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [18722 18782])
+                    ("getElapsedRealtimeNanos" function
+                       (:typemodifiers ("public")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [19475 19558])
+                    ("setElapsedRealtimeNanos" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("time" variable (:type "long") (reparse-symbol formal_parameters) [19775 19784]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [19739 19831])
+                    ("getLatitude" function
+                       (:typemodifiers ("public")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [19997 20058])
+                    ("setLatitude" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("latitude" variable (:type "double") (reparse-symbol formal_parameters) [20141 20156]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [20117 20195])
+                    ("getLongitude" function
+                       (:typemodifiers ("public")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [20363 20426])
+                    ("setLongitude" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("longitude" variable (:type "double") (reparse-symbol formal_parameters) [20511 20527]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [20486 20568])
+                    ("hasAltitude" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [20636 20701])
+                    ("getAltitude" function
+                       (:typemodifiers ("public")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [20898 20959])
+                    ("setAltitude" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("altitude" variable (:type "double") (reparse-symbol formal_parameters) [21154 21169]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [21130 21237])
+                    ("removeAltitude" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [21432 21524])
+                    ("hasSpeed" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [21588 21647])
+                    ("getSpeed" function
+                       (:typemodifiers ("public")
+                        :type "float")
+                        (reparse-symbol class_member_declaration) [21818 21872])
+                    ("setSpeed" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("speed" variable (:type "float") (reparse-symbol formal_parameters) [22040 22051]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [22019 22110])
+                    ("removeSpeed" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [22296 22379])
+                    ("hasBearing" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [22445 22508])
+                    ("getBearing" function
+                       (:typemodifiers ("public")
+                        :type "float")
+                        (reparse-symbol class_member_declaration) [22863 22921])
+                    ("setBearing" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("bearing" variable (:type "float") (reparse-symbol formal_parameters) [23206 23219]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [23183 23435])
+                    ("removeBearing" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [23627 23716])
+                    ("hasAccuracy" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [23881 23946])
+                    ("getAccuracy" function
+                       (:typemodifiers ("public")
+                        :type "float")
+                        (reparse-symbol class_member_declaration) [25002 25062])
+                    ("setAccuracy" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("accuracy" variable (:type "float") (reparse-symbol formal_parameters) [25318 25332]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [25294 25400])
+                    ("removeAccuracy" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [25595 25687])
+                    ("toString" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [25709 26389]))                  
+                :type "class")
+                nil [1529 26391]))          
+      :file "Location.java"
+      :pointmax 26391
+      :fsize 26390
+      :lastmodtime '(22140 35950 628256 849000)
+      :unmatched-syntax nil)
+    (semanticdb-table "QuakeSortWithTwoArrayLists.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("week2" package nil nil [1 15])
+            ("java.util.*" include nil nil [16 35])
+            ("edu.duke.*" include nil nil [36 54])
+            ("QuakeSortWithTwoArrayLists" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("QuakeSortWithTwoArrayLists" function
+                       (:constructor-flag t
+                        :typemodifiers ("public"))
+                        (reparse-symbol class_member_declaration) [185 276])
+                    ("getSmallestMagnitude" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "quakes") (reparse-symbol formal_parameters) [346 352]))                          
+                        :type "QuakeEntry")
+                        (reparse-symbol class_member_declaration) [285 564])
+                    ("sortByMagnitude" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "in") (reparse-symbol formal_parameters) [641 643]))                          )
+                        (reparse-symbol class_member_declaration) [603 908])
+                    ("testSort" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [918 1499])
+                    ("createCSV" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1510 1901])
+                    ("dumpCSV" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "list") (reparse-symbol formal_parameters) [1953 1957]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1911 2293]))                  
+                :type "class")
+                nil [57 2297]))          
+      :file "QuakeSortWithTwoArrayLists.java"
+      :pointmax 2298
+      :fsize 2326
+      :lastmodtime '(22140 37522 240254 461000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Dropbox!Work!online-courses!coursera!javaProgramming!javaProgramming4!src!main!java!week2!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

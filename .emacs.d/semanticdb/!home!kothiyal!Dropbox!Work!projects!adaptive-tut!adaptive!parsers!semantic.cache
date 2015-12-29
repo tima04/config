@@ -1,0 +1,107 @@
+;; Object parsers/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "parsers/"
+  :tables
+  (list
+    (semanticdb-table "edit_qntxt.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+usage: python edit_qntxt db collection [newcollecttion] 
+If newcollection exists in the database then it is overwritten. 
+If newcollection is not supplied then collection_edited contains the result. 
+
+
+Edit the questions in the collection and database, editing includes removing nusiance text,
+separating questions and the options (a separate list of options is created), marking whether question
+is of multiple-choice type or data-sufficiency type. 
+\"\"\"" code nil nil [1 459])
+            ("re" include nil nil [461 470])
+            ("sys" include nil nil [471 481])
+            ("pymongo" include nil nil [482 513])
+            ("client" variable nil nil [514 536])
+            ("data_sufficiency_opts" variable nil nil [538 1064])
+            ("main" function (:arguments 
+              ( ("db" variable nil (reparse-symbol function_parameters) [1087 1089])
+                ("collection" variable nil (reparse-symbol function_parameters) [1091 1101])
+                ("newcollection" variable nil (reparse-symbol function_parameters) [1103 1116]))              ) nil [1078 2750])
+            ("remove_nuisance" function
+               (:documentation "
+    Remove html tags and othe spoilers from the qstion txt.
+    "
+                :arguments 
+                  ( ("txt" variable nil (reparse-symbol function_parameters) [2780 2783]))                  )
+                nil [2760 3981])
+            ("get_qn_options" function
+               (:documentation "
+    Return: 
+      question_text and options(a list).
+    txt = u'What is 3 + 3? <br /><br />a) 6<br />b) 5<br />c) 4<br />d) 3<br />e) 0'
+    >>> get_qn_options(txt)
+    (u'What is 3 + 3? ', [u'a) 6', u'b) 5', u'c) 4', u'd) 3', u'e) 0'])
+    Assumptions:
+      1) line break is <br /> would not work for <br> or <br/>
+      2) there is no line break before the start of the option.
+    "
+                :arguments 
+                  ( ("txt" variable nil (reparse-symbol function_parameters) [4001 4004]))                  )
+                nil [3982 5446])
+            ("clean_comment" function
+               (:documentation "Remove all div elements conataint class like: <div class=\"quotetitle\"> and
+    names of person writing the comment, assuming the name  is followed with \"wrote:\" 
+    eg: 'Jasontuyj2012 wrote:'.
+
+    txt = 'u'<div class=\"quotetitle\">Jasontuyj2012 wrote:</div><div class=\"quotecontent\">A toy store regularly sells all stock at a discount of 20% to 40%. If an additional 25% were deducted from the discount price during a special sale, what would be the lowest possible price of a toy costing $16 before any discount?<br /><br />a) $5.60<br />b) $7.20<br />c) $8.80<br />d) $9.60<br />e) $15.20</div><br /><br />We will get Lowest price with maximum discount<br /><br />so the discount on 16 will be 40% - giving 9.6<br /><br />then another discount of 25% on 9.6 to give 7.2<br /><br />so b - $7.2</div>''
+
+    >>> clean_comment(txt)
+    'A toy store regularly sells all stock at a discount of 20% to 40%. If an additional 25% were deducted from the discount price during a special sale, what would be the lowest possible price of a toy costing $16 before any discount?<br /><br />a) $5.60<br />b) $7.20<br />c) $8.80<br />d) $9.60<br />e) $15.20</div><br /><br />We will get Lowest price with maximum discount<br /><br />so the discount on 16 will be 40% - giving 9.6<br /><br />then another discount of 25% on 9.6 to give 7.2<br /><br />so b - $7.2</div>'
+    "
+                :arguments 
+                  ( ("txt" variable nil (reparse-symbol function_parameters) [5465 5468]))                  )
+                nil [5447 6950])
+            ("if" code nil nil [6952 7499])
+            ("\"\"\"
+mongoexport --db qedit --collection programatically_edited_qstns --out programatically_edited_qstns.json
+
+mongoimport --db qedit --collection programatically_edited_qstns --drop --file programatically_edited_qstns.json
+
+\"\"\"" code nil nil [7520 7747]))          
+      :file "edit_qntxt.py"
+      :pointmax 8341
+      :fsize 8340
+      :lastmodtime '(22014 63229 792120 136000)
+      :unmatched-syntax nil)
+    (semanticdb-table "temp.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("for" code nil nil [1 193])
+            ("copy_dict" function (:arguments 
+              ( ("d1" variable nil (reparse-symbol function_parameters) [209 211])
+                ("d2" variable nil (reparse-symbol function_parameters) [213 215])
+                ("keys" variable nil (reparse-symbol function_parameters) [217 221]))              ) nil [195 389]))          
+      :file "temp.py"
+      :pointmax 389
+      :fsize 388
+      :lastmodtime '(22013 46472 258047 703000)
+      :unmatched-syntax nil)
+    (semanticdb-table "temp.py.~1~"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pymongo" include nil nil [1 32])
+            ("client" variable nil nil [33 55])
+            ("db" variable nil nil [57 77])
+            ("rawqstns" variable nil nil [79 103])
+            ("editedestns" variable nil nil [104 134])
+            ("Objects" code nil nil [154 161])
+            ("db" code nil nil [491 501])
+            ("db" code nil nil [502 515])
+            ("coll" variable nil nil [622 639])
+            ("coll" variable nil nil [640 660]))          
+      :file "temp.py.~1~"
+      :pointmax 661
+      :fsize 660
+      :lastmodtime '(21978 51547 0 0)
+      :unmatched-syntax '((NAME 601 . 610) (NAME 611 . 619) (COLON 619 . 620) (IN 594 . 596) (NAME 516 . 519) (NAME 520 . 523) (NAME 524 . 528) (NAME 529 . 535) (NAME 536 . 539) (NAME 540 . 550) (NAME 551 . 557) (NAME 558 . 560) (NAME 561 . 562) (NAME 563 . 571) (FOR 572 . 575) (NAME 580 . 589) (AS 591 . 593) (NAME 470 . 479) (NAME 480 . 488) (COLON 488 . 489) (IN 463 . 465) (NAME 162 . 165) (NAME 166 . 172) (NAME 173 . 184) (CLASS 185 . 190) (NAME 194 . 201) (NAME 202 . 205) (NAME 206 . 210) (NAME 211 . 219) (NAME 220 . 225) (NAME 226 . 233) (NAME 255 . 265) (NAME 266 . 269) (NAME 270 . 280) (NAME 281 . 290) (NAME 315 . 319) (NAME 320 . 326) (NAME 327 . 329) (NAME 330 . 337) (NAME 338 . 347) (NEWLINE 348 . 349) (NAME 350 . 353) (NAME 354 . 357) (NAME 358 . 364) (NAME 365 . 375) (NAME 376 . 383) (NAME 384 . 392) (NAME 393 . 398) (NAME 399 . 409) (NAME 429 . 435) (FROM 436 . 440) (NAME 443 . 451) (NAME 452 . 458) (AS 460 . 462))))
+  :file "!home!kothiyal!Dropbox!Work!projects!adaptive-tut!adaptive!parsers!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

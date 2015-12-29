@@ -1,0 +1,34 @@
+;; Object parsers/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "parsers/"
+  :tables
+  (list
+    (semanticdb-table "temp.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("re" include nil nil [1 10])
+            ("pymongo" include nil nil [11 42])
+            ("client" variable nil nil [43 65])
+            ("main" function nil nil [67 348])
+            ("remove_nuisance" function
+               (:documentation "
+    Remove html tags and othe spoiers from the qstion txt.
+    "
+                :arguments 
+                  ( ("txt" variable nil (reparse-symbol function_parameters) [370 373]))                  )
+                nil [350 1570])
+            ("remove_nuisance2" function
+               (:documentation "
+    A much simpler version, just remove all text after '<div'
+    "
+                :arguments 
+                  ( ("txt" variable nil (reparse-symbol function_parameters) [1593 1596]))                  )
+                nil [1572 1730]))          
+      :file "temp.py"
+      :pointmax 1731
+      :fsize 2839
+      :lastmodtime '(21978 60293 785355 773000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Dropbox!Work!projects!adaptive-tut!adaptive!parsers!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

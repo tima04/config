@@ -1,0 +1,108 @@
+;; Object py/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "py/"
+  :tables
+  (list
+    (semanticdb-table "gbm.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("time" include nil nil [1 12])
+            ("random" include nil nil [13 26])
+            ("pandas" include nil nil [27 46])
+            ("numpy" include nil nil [47 65])
+            ("tables" include nil nil [66 86])
+            ("sklearn.ensemble" include nil nil [87 148])
+            ("sklearn.ensemble" include nil nil [149 211])
+            ("_utils" include nil nil [212 232])
+            ("sys" include nil nil [234 244])
+            ("sys" code nil nil [245 271])
+            ("_utils" include nil nil [272 318])
+            ("h5fl" variable nil nil [320 363])
+            ("users" variable nil nil [364 400])
+            ("dfg" variable nil nil [401 433])
+            ("id1" variable nil nil [524 548])
+            ("train_ids" variable nil nil [550 612])
+            ("traindata" variable nil nil [613 647])
+            ("model" variable nil nil [658 1155])
+            ("covars" variable nil nil [1156 1236])
+            ("missing_vars" variable nil nil [1389 1457])
+            ("map" code nil nil [1458 1507])
+            ("assert" code nil nil [1508 1564])
+            ("X" variable nil nil [1566 1587])
+            ("y" variable nil nil [1588 1610])
+            ("str_vars" variable nil nil [1703 1759])
+            ("dt" variable nil nil [1760 1778])
+            ("for" code nil nil [1779 1889])
+            ("X" variable nil nil [1889 1915])
+            ("X" variable nil nil [1916 1964])
+            ("X" variable nil nil [2038 2071])
+            ("y" variable nil nil [2114 2147])
+            ("fit" variable nil nil [2161 2258])
+            ("get_indx" function
+               (:documentation " (3, 2, 3, 0, 2) => {0: [3], 2: [1, 4], 3: [0,2]}
+    >>> get_indx((3, 2, 3, 0, 2))
+    {0: [3], 2: [1, 4], 3: [0, 2]}
+    # XXX: c port is: c_elt_indx_map
+    "
+                :arguments 
+                  ( ("xs" variable nil (reparse-symbol function_parameters) [2403 2405]))                  )
+                nil [2390 2676])
+            ("str2int" function
+               (:documentation "
+    >>> str2int(['a', 'b', 'a', 'c', 'b'])
+    [0, 1, 0, 2, 1]
+    # XXX: c port is: c_transform
+    "
+                :arguments 
+                  ( ("xs" variable nil (reparse-symbol function_parameters) [2697 2699]))                  )
+                nil [2685 2912])
+            ("key_indx" function
+               (:documentation "
+    >>> key_indx('b', [('a', 0), ('b', 10), ('c', 11)])
+    1
+    >>> key_indx('b', [('a', 0), ('c', 10)])
+    -1
+    "
+                :arguments 
+                  ( ("v" variable nil (reparse-symbol function_parameters) [2927 2928])
+                    ("xs" variable nil (reparse-symbol function_parameters) [2930 2932]))                  )
+                nil [2914 3153])
+            ("loop" code nil nil [3394 3398])
+            ("timeit" code nil nil [3401 3475])
+            ("loop" code nil nil [3508 3512])
+            ("sample" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [3614 3616])
+                ("n" variable nil (reparse-symbol function_parameters) [3618 3619]))              ) nil [3603 3715])
+            ("n" variable nil nil [3720 3727])
+            ("baz" variable nil nil [3728 3896])
+            ("h5fl" code nil nil [3898 3940])
+            ("foo" variable nil nil [3941 3973])
+            ("foo" code nil nil [3974 4001])
+            ("foo" code nil nil [4002 4069])
+            ("bar" variable nil nil [4070 4102])
+            ("bar" code nil nil [4103 4130])
+            ("fooa" variable nil nil [4132 4257])
+            ("h5fl" code nil nil [4259 4313])
+            ("foo" variable nil nil [4314 4346])
+            ("foo" code nil nil [4347 4374])
+            ("foo" code nil nil [4375 4442])
+            ("bar" variable nil nil [4443 4475])
+            ("bar" code nil nil [4476 4503])
+            ("foo" code nil nil [4515 4547])
+            ("loop" code nil nil [4583 4587])
+            ("loop" code nil nil [4622 4626])
+            ("foo" code nil nil [4636 4668])
+            ("loop" code nil nil [4704 4708])
+            ("dt" variable nil nil [4752 4772])
+            ("dt" variable nil nil [4773 4786])
+            ("dt" variable nil nil [4881 4910])
+            ("dt" variable nil nil [4911 4931])
+            ("data" variable nil nil [4980 5002]))          
+      :file "gbm.py"
+      :pointmax 5005
+      :fsize 5006
+      :lastmodtime '(21984 37480 484281 435000)
+      :unmatched-syntax '((NUMBER_LITERAL 4669 . 4674) (NAME 4675 . 4680) (NAME 4687 . 4689) (NUMBER_LITERAL 4690 . 4691) (COLON 4691 . 4692) (MOD 4628 . 4629) (NUMBER_LITERAL 4588 . 4591) (NAME 4592 . 4597) (NAME 4604 . 4606) (NUMBER_LITERAL 4607 . 4608) (COLON 4608 . 4609) (NUMBER_LITERAL 4548 . 4553) (NAME 4554 . 4559) (NAME 4566 . 4568) (NUMBER_LITERAL 4569 . 4570) (COLON 4570 . 4571) (MOD 4507 . 4508) (NAME 3582 . 3594) (SEMICOLON 3599 . 3600) (MOD 3554 . 3555) (NAME 3535 . 3544) (SEMICOLON 3552 . 3553) (MOD 3514 . 3515) (NUMBER_LITERAL 3477 . 3478) (NAME 3479 . 3484) (NAME 3491 . 3493) (NUMBER_LITERAL 3494 . 3495) (COLON 3495 . 3496) (MOD 3400 . 3401) (NAME 3365 . 3370) (NAME 3377 . 3379) (NUMBER_LITERAL 3380 . 3381) (COLON 3381 . 3382) (INDENT_BLOCK 3286 . 3363) ($EOI 5005 . 5005) (NUMBER_LITERAL 4669 . 4674) (NAME 4675 . 4680) (NAME 4687 . 4689) (NUMBER_LITERAL 4690 . 4691) (COLON 4691 . 4692) (MOD 4628 . 4629) (NUMBER_LITERAL 4588 . 4591) (NAME 4592 . 4597) (NAME 4604 . 4606) (NUMBER_LITERAL 4607 . 4608) (COLON 4608 . 4609) (NUMBER_LITERAL 4548 . 4553) (NAME 4554 . 4559) (NAME 4566 . 4568) (NUMBER_LITERAL 4569 . 4570) (COLON 4570 . 4571) (MOD 4507 . 4508) (NAME 3582 . 3594) (SEMICOLON 3599 . 3600) (MOD 3554 . 3555) (NAME 3535 . 3544) (SEMICOLON 3552 . 3553) (MOD 3514 . 3515) (NUMBER_LITERAL 3477 . 3478) (NAME 3479 . 3484) (NAME 3491 . 3493) (NUMBER_LITERAL 3494 . 3495) (COLON 3495 . 3496) (MOD 3400 . 3401) (NAME 3365 . 3370) (NAME 3377 . 3379) (NUMBER_LITERAL 3380 . 3381) (COLON 3381 . 3382) (INDENT_BLOCK 3286 . 3363) ($EOI 5005 . 5005))))
+  :file "!home!amit!Documents!churn!py!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

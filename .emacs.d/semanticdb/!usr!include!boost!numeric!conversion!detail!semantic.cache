@@ -1,0 +1,1183 @@
+;; Object detail/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "detail/"
+  :tables
+  (list
+    (semanticdb-table "converter.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("BOOST_NUMERIC_CONVERSION_DETAIL_CONVERTER_FLC_12NOV2002_HPP" variable (:constant-flag t) nil [466 525])
+            ("functional" include (:system-flag t) nil [527 548])
+            ("boost/numeric/conversion/detail/meta.hpp" include nil nil [550 601])
+            ("boost/numeric/conversion/detail/conversion_traits.hpp" include nil nil [602 666])
+            ("boost/numeric/conversion/bounds.hpp" include nil nil [667 713])
+            ("boost/type_traits/is_same.hpp" include nil nil [715 755])
+            ("boost/mpl/integral_c.hpp" include nil nil [757 792])
+            ("boost" type
+               (:members 
+                  ( ("numeric" type
+                       (:members 
+                          ( ("convdetail" type
+                               (:members 
+                                  ( ("round2zero_c" type
+                                       (:typedef ("mpl::integral_c" type
+                                             (:template-specifier 
+                                                ( ("std::float_round_style" type nil nil nil)
+                                                  ("std::round_toward_zero" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol namespacesubparts) [909 1003])
+                                    ("round2nearest_c" type
+                                       (:typedef ("mpl::integral_c" type
+                                             (:template-specifier 
+                                                ( ("std::float_round_style" type nil nil nil)
+                                                  ("std::round_to_nearest" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol namespacesubparts) [1006 1103])
+                                    ("round2inf_c" type
+                                       (:typedef ("mpl::integral_c" type
+                                             (:template-specifier 
+                                                ( ("std::float_round_style" type nil nil nil)
+                                                  ("std::round_toward_infinity" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol namespacesubparts) [1106 1199])
+                                    ("round2neg_inf_c" type
+                                       (:typedef ("mpl::integral_c" type
+                                             (:template-specifier 
+                                                ( ("std::float_round_style" type nil nil nil)
+                                                  ("std::round_toward_neg_infinity" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol namespacesubparts) [1202 1299])
+                                    ("for_round_style" type
+                                       (:template 
+                                          ( ("RoundStyle" type (:type "class") nil nil)
+                                            ("RoundToZero" type (:type "class") nil nil)
+                                            ("RoundToNearest" type (:type "class") nil nil)
+                                            ("RoundToInf" type (:type "class") nil nil)
+                                            ("RoundToNegInf" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("selector" type
+                                               (:typedef ("ct_switch4" type
+                                                     (:template-specifier 
+                                                        ( ("RoundStyle" type nil nil nil)
+                                                          ("round2zero_c" type nil nil nil)
+                                                          ("round2nearest_c" type nil nil nil)
+                                                          ("round2inf_c" type nil nil nil)
+                                                          ("RoundToZero" type nil nil nil)
+                                                          ("RoundToNearest" type nil nil nil)
+                                                          ("RoundToInf" type nil nil nil)
+                                                          ("RoundToNegInf" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [1797 2031])
+                                            ("type" type
+                                               (:typedef ("selector::type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [2037 2075]))                                          )
+                                        (reparse-symbol namespacesubparts) [1661 2081])
+                                    ("non_applicable" type
+                                       (:members 
+                                          ( ("do_apply" type
+                                               (:typedef ("mpl::false_" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [2735 2765]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [2711 2769])
+                                    ("applicable" type
+                                       (:members 
+                                          ( ("do_apply" type
+                                               (:typedef ("mpl::true_" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [2796 2826]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [2772 2830])
+                                    ("LT_LoT" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("T" type
+                                               (:typedef ("Traits::target_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [3411 3451])
+                                            ("S" type
+                                               (:typedef ("Traits::source_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [3458 3498])
+                                            ("argument_type" type
+                                               (:typedef ("Traits::argument_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [3505 3559])
+                                            ("apply" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("s" variable (:type ("argument_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3601 3618]))                                                  
+                                                :type ("range_check_result" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [3567 3717]))                                          
+                                        :superclasses 
+                                          ( ("applicable" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [3345 3725])
+                                    ("LT_Zero" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("S" type
+                                               (:typedef ("Traits::source_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [3844 3884])
+                                            ("argument_type" type
+                                               (:typedef ("Traits::argument_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [3891 3945])
+                                            ("apply" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("s" variable (:type ("argument_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3987 4004]))                                                  
+                                                :type ("range_check_result" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [3953 4085]))                                          
+                                        :superclasses 
+                                          ( ("applicable" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [3777 4093])
+                                    ("LE_PrevLoT" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("T" type
+                                               (:typedef ("Traits::target_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [4226 4266])
+                                            ("S" type
+                                               (:typedef ("Traits::source_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [4273 4313])
+                                            ("argument_type" type
+                                               (:typedef ("Traits::argument_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [4320 4374])
+                                            ("apply" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("s" variable (:type ("argument_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4416 4433]))                                                  
+                                                :type ("range_check_result" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [4382 4572]))                                          
+                                        :superclasses 
+                                          ( ("applicable" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [4156 4580])
+                                    ("LT_HalfPrevLoT" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("T" type
+                                               (:typedef ("Traits::target_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [4718 4758])
+                                            ("S" type
+                                               (:typedef ("Traits::source_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [4765 4805])
+                                            ("argument_type" type
+                                               (:typedef ("Traits::argument_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [4812 4866])
+                                            ("apply" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("s" variable (:type ("argument_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4908 4925]))                                                  
+                                                :type ("range_check_result" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [4874 5063]))                                          
+                                        :superclasses 
+                                          ( ("applicable" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [4644 5071])
+                                    ("GT_HiT" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("T" type
+                                               (:typedef ("Traits::target_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [5198 5238])
+                                            ("S" type
+                                               (:typedef ("Traits::source_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [5245 5285])
+                                            ("argument_type" type
+                                               (:typedef ("Traits::argument_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [5292 5346])
+                                            ("apply" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("s" variable (:type ("argument_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5388 5405]))                                                  
+                                                :type ("range_check_result" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [5354 5522]))                                          
+                                        :superclasses 
+                                          ( ("applicable" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [5132 5530])
+                                    ("GE_SuccHiT" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("T" type
+                                               (:typedef ("Traits::target_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [5665 5705])
+                                            ("S" type
+                                               (:typedef ("Traits::source_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [5712 5752])
+                                            ("argument_type" type
+                                               (:typedef ("Traits::argument_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [5759 5813])
+                                            ("apply" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("s" variable (:type ("argument_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5855 5872]))                                                  
+                                                :type ("range_check_result" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [5821 6012]))                                          
+                                        :superclasses 
+                                          ( ("applicable" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [5595 6020])
+                                    ("GT_HalfSuccHiT" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("T" type
+                                               (:typedef ("Traits::target_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [6162 6202])
+                                            ("S" type
+                                               (:typedef ("Traits::source_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [6209 6249])
+                                            ("argument_type" type
+                                               (:typedef ("Traits::argument_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [6256 6310])
+                                            ("apply" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("s" variable (:type ("argument_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6352 6369]))                                                  
+                                                :type ("range_check_result" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [6318 6509]))                                          
+                                        :superclasses 
+                                          ( ("applicable" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [6088 6517])
+                                    ("applyBoth" type
+                                       (:template 
+                                          ( ("PredA" type (:type "class") nil nil)
+                                            ("PredB" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("argument_type" type
+                                               (:typedef ("PredA::argument_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [7001 7054])
+                                            ("apply" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("s" variable (:type ("argument_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7096 7113]))                                                  
+                                                :type ("range_check_result" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [7062 7257]))                                          )
+                                        (reparse-symbol namespacesubparts) [6933 7265])
+                                    ("combine" type
+                                       (:template 
+                                          ( ("PredA" type (:type "class") nil nil)
+                                            ("PredB" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("Both" type
+                                               (:typedef ("applyBoth" type
+                                                     (:template-specifier 
+                                                        ( ("PredA" type nil nil nil)
+                                                          ("PredB" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [7337 7374])
+                                            ("NNone" type
+                                               (:typedef ("void")
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [7381 7419])
+                                            ("do_applyA" type
+                                               (:typedef ("PredA::do_apply" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [7491 7535])
+                                            ("do_applyB" type
+                                               (:typedef ("PredB::do_apply" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [7542 7586])
+                                            ("type" variable (:type ("type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7670 7681]))                                          )
+                                        (reparse-symbol namespacesubparts) [7271 7689])
+                                    ("dummy_range_checker" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("argument_type" type
+                                               (:typedef ("Traits::argument_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [8219 8273])
+                                            ("out_of_range" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("" variable (:type ("argument_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8320 8335]))                                                  
+                                                :type ("range_check_result" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [8279 8357])
+                                            ("validate_range" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("" variable (:type ("argument_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8391 8406]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [8362 8409]))                                          )
+                                        (reparse-symbol namespacesubparts) [8159 8415])
+                                    ("generic_range_checker" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil)
+                                            ("IsNegOverflow" type (:type "class") nil nil)
+                                            ("IsPosOverflow" type (:type "class") nil nil)
+                                            ("OverflowHandler" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("overflow_handler" type
+                                               (:typedef ("OverflowHandler" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [8867 8909])
+                                            ("argument_type" type
+                                               (:typedef ("Traits::argument_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [8915 8969])
+                                            ("out_of_range" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("s" variable (:type ("argument_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9016 9033]))                                                  
+                                                :type ("range_check_result" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [8975 9158])
+                                            ("validate_range" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("s" variable (:type ("argument_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9193 9210]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [9164 9259]))                                          )
+                                        (reparse-symbol namespacesubparts) [8740 9265])
+                                    ("GetRC_Sig2Sig_or_Unsig2Unsig" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil)
+                                            ("OverflowHandler" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("Dummy" type
+                                               (:typedef ("dummy_range_checker" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [9575 9618])
+                                            ("Pred1" type
+                                               (:typedef ("LT_LoT" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [9624 9654])
+                                            ("Pred2" type
+                                               (:typedef ("GT_HiT" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [9659 9689])
+                                            ("Normal" type
+                                               (:typedef ("generic_range_checker" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("Pred1" type nil nil nil)
+                                                          ("Pred2" type nil nil nil)
+                                                          ("OverflowHandler" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [9695 9769])
+                                            ("subranged" type
+                                               (:typedef ("Traits::subranged" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [9775 9821])
+                                            ("type" type
+                                               (:typedef ("mpl::if_::type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [9827 9889]))                                          )
+                                        (reparse-symbol namespacesubparts) [9484 9895])
+                                    ("GetRC_Sig2Unsig" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil)
+                                            ("OverflowHandler" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("Pred1" type
+                                               (:typedef ("LT_Zero" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [9978 10009])
+                                            ("Pred2" type
+                                               (:typedef ("GT_HiT" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [10014 10045])
+                                            ("ChoiceA" type
+                                               (:typedef ("generic_range_checker" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("Pred1" type nil nil nil)
+                                                          ("Pred2" type nil nil nil)
+                                                          ("OverflowHandler" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [10051 10126])
+                                            ("ChoiceB" type
+                                               (:typedef ("generic_range_checker" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("Pred1" type nil nil nil)
+                                                          ("non_applicable" type nil nil nil)
+                                                          ("OverflowHandler" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [10132 10216])
+                                            ("T" type
+                                               (:typedef ("Traits::target_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [10222 10262])
+                                            ("S" type
+                                               (:typedef ("Traits::source_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [10267 10307])
+                                            ("oposite_subranged" variable (:type ("type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10356 10380])
+                                            ("positively_subranged" type
+                                               (:typedef ("mpl::not_::type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [10386 10460])
+                                            ("type" type
+                                               (:typedef ("mpl::if_::type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [10466 10542]))                                          )
+                                        (reparse-symbol namespacesubparts) [9899 10548])
+                                    ("GetRC_Unsig2Sig" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil)
+                                            ("OverflowHandler" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("Pred1" type
+                                               (:typedef ("GT_HiT" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [10631 10661])
+                                            ("type" type
+                                               (:typedef ("generic_range_checker" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("non_applicable" type nil nil nil)
+                                                          ("Pred1" type nil nil nil)
+                                                          ("OverflowHandler" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [10667 10748]))                                          )
+                                        (reparse-symbol namespacesubparts) [10552 10754])
+                                    ("GetRC_Int2Int" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil)
+                                            ("OverflowHandler" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("Sig2SigQ" type
+                                               (:typedef ("GetRC_Sig2Sig_or_Unsig2Unsig" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("OverflowHandler" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [10834 10909])
+                                            ("Sig2UnsigQ" type
+                                               (:typedef ("GetRC_Sig2Unsig" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("OverflowHandler" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [10914 10989])
+                                            ("Unsig2SigQ" type
+                                               (:typedef ("GetRC_Unsig2Sig" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("OverflowHandler" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [10994 11069])
+                                            ("Unsig2UnsigQ" type
+                                               (:typedef ("Sig2SigQ" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [11074 11149])
+                                            ("sign_mixture" type
+                                               (:typedef ("Traits::sign_mixture" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [11155 11207])
+                                            ("selector" variable (:type ("type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11312 11335])
+                                            ("type" type
+                                               (:typedef ("selector::type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [11341 11379]))                                          )
+                                        (reparse-symbol namespacesubparts) [10758 11385])
+                                    ("GetRC_Int2Float" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("type" type
+                                               (:typedef ("dummy_range_checker" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [11445 11487]))                                          )
+                                        (reparse-symbol namespacesubparts) [11389 11493])
+                                    ("GetRC_Float2Int" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil)
+                                            ("OverflowHandler" type (:type "class") nil nil)
+                                            ("Float2IntRounder" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("Pred1" type
+                                               (:typedef ("LE_PrevLoT" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [11600 11638])
+                                            ("Pred2" type
+                                               (:typedef ("GE_SuccHiT" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [11643 11681])
+                                            ("Pred3" type
+                                               (:typedef ("LT_HalfPrevLoT" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [11686 11724])
+                                            ("Pred4" type
+                                               (:typedef ("GT_HalfSuccHiT" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [11729 11767])
+                                            ("Pred5" type
+                                               (:typedef ("GT_HiT" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [11772 11810])
+                                            ("Pred6" type
+                                               (:typedef ("LT_LoT" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [11815 11853])
+                                            ("ToZero" type
+                                               (:typedef ("generic_range_checker" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("Pred1" type nil nil nil)
+                                                          ("Pred2" type nil nil nil)
+                                                          ("OverflowHandler" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [11859 11936])
+                                            ("ToNearest" type
+                                               (:typedef ("generic_range_checker" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("Pred3" type nil nil nil)
+                                                          ("Pred4" type nil nil nil)
+                                                          ("OverflowHandler" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [11941 12018])
+                                            ("ToInf" type
+                                               (:typedef ("generic_range_checker" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("Pred1" type nil nil nil)
+                                                          ("Pred5" type nil nil nil)
+                                                          ("OverflowHandler" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [12023 12100])
+                                            ("ToNegInf" type
+                                               (:typedef ("generic_range_checker" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("Pred6" type nil nil nil)
+                                                          ("Pred2" type nil nil nil)
+                                                          ("OverflowHandler" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [12105 12182])
+                                            ("round_style" type
+                                               (:typedef ("Float2IntRounder::round_style" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [12188 12248])
+                                            ("type" variable (:type ("type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12333 12344]))                                          )
+                                        (reparse-symbol namespacesubparts) [11497 12350])
+                                    ("GetRC_Float2Float" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil)
+                                            ("OverflowHandler" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("Dummy" type
+                                               (:typedef ("dummy_range_checker" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [12435 12478])
+                                            ("Pred1" type
+                                               (:typedef ("LT_LoT" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [12484 12514])
+                                            ("Pred2" type
+                                               (:typedef ("GT_HiT" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [12519 12549])
+                                            ("Normal" type
+                                               (:typedef ("generic_range_checker" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("Pred1" type nil nil nil)
+                                                          ("Pred2" type nil nil nil)
+                                                          ("OverflowHandler" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [12555 12629])
+                                            ("subranged" type
+                                               (:typedef ("Traits::subranged" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [12635 12681])
+                                            ("type" type
+                                               (:typedef ("mpl::if_::type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [12687 12749]))                                          )
+                                        (reparse-symbol namespacesubparts) [12354 12755])
+                                    ("GetRC_BuiltIn2BuiltIn" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil)
+                                            ("OverflowHandler" type (:type "class") nil nil)
+                                            ("Float2IntRounder" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("Int2IntQ" type
+                                               (:typedef ("GetRC_Int2Int" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("OverflowHandler" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [12868 12943])
+                                            ("Int2FloatQ" type
+                                               (:typedef ("GetRC_Int2Float" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [12948 13025])
+                                            ("Float2IntQ" type
+                                               (:typedef ("GetRC_Float2Int" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("OverflowHandler" type nil nil nil)
+                                                          ("Float2IntRounder" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [13030 13107])
+                                            ("Float2FloatQ" type
+                                               (:typedef ("GetRC_Float2Float" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("OverflowHandler" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [13112 13191])
+                                            ("int_float_mixture" type
+                                               (:typedef ("Traits::int_float_mixture" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [13197 13259])
+                                            ("selector" variable (:type ("type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13372 13387])
+                                            ("type" type
+                                               (:typedef ("selector::type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [13393 13431]))                                          )
+                                        (reparse-symbol namespacesubparts) [12759 13437])
+                                    ("GetRC" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil)
+                                            ("OverflowHandler" type (:type "class") nil nil)
+                                            ("Float2IntRounder" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("BuiltIn2BuiltInQ" type
+                                               (:typedef ("GetRC_BuiltIn2BuiltIn" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("OverflowHandler" type nil nil nil)
+                                                          ("Float2IntRounder" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [13534 13623])
+                                            ("Dummy" type
+                                               (:typedef ("dummy_range_checker" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [13629 13672])
+                                            ("DummyQ" type
+                                               (:typedef ("mpl::identity" type
+                                                     (:template-specifier 
+                                                        ( ("Dummy" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [13678 13715])
+                                            ("udt_builtin_mixture" type
+                                               (:typedef ("Traits::udt_builtin_mixture" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [13721 13787])
+                                            ("selector" variable (:type ("type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13894 13909])
+                                            ("type" type
+                                               (:typedef ("selector::type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [13915 13953]))                                          )
+                                        (reparse-symbol namespacesubparts) [13441 13959])
+                                    ("trivial_converter_impl" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("traits" type
+                                               (:typedef ("Traits" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [14844 14867])
+                                            ("source_type" type
+                                               (:typedef ("Traits::source_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [14873 14927])
+                                            ("argument_type" type
+                                               (:typedef ("Traits::argument_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [14932 14986])
+                                            ("result_type" type
+                                               (:typedef ("Traits::result_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [14991 15045])
+                                            ("low_level_convert" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("s" variable (:type ("argument_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15090 15107]))                                                  
+                                                :type ("result_type" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [15051 15122])
+                                            ("nearbyint" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("s" variable (:type ("argument_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15166 15183]))                                                  
+                                                :type ("source_type" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [15127 15198])
+                                            ("convert" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("s" variable (:type ("argument_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15242 15259]))                                                  
+                                                :type ("result_type" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [15203 15274]))                                          
+                                        :superclasses 
+                                          ( ("std::unary_function" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil)
+                                            ("dummy_range_checker" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [14468 15280])
+                                    ("rounding_converter" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil)
+                                            ("RangeChecker" type (:type "class") nil nil)
+                                            ("RawConverter" type (:type "class") nil nil)
+                                            ("Float2IntRounder" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("RangeCheckerBase" type
+                                               (:typedef ("RangeChecker" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [15871 15914])
+                                            ("Float2IntRounderBase" type
+                                               (:typedef ("Float2IntRounder" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [15919 15966])
+                                            ("RawConverterBase" type
+                                               (:typedef ("RawConverter" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [15971 16014])
+                                            ("traits" type
+                                               (:typedef ("Traits" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [16020 16043])
+                                            ("source_type" type
+                                               (:typedef ("Traits::source_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [16049 16103])
+                                            ("argument_type" type
+                                               (:typedef ("Traits::argument_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [16108 16162])
+                                            ("result_type" type
+                                               (:typedef ("Traits::result_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [16167 16221])
+                                            ("convert" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("s" variable (:type ("argument_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16256 16273]))                                                  
+                                                :type ("result_type" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [16227 16441]))                                          
+                                        :superclasses 
+                                          ( ("std::unary_function" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil)
+                                            ("RangeChecker" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil)
+                                            ("Float2IntRounder" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil)
+                                            ("RawConverter" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [15361 16447])
+                                    ("non_rounding_converter" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil)
+                                            ("RangeChecker" type (:type "class") nil nil)
+                                            ("RawConverter" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("RangeCheckerBase" type
+                                               (:typedef ("RangeChecker" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [16974 17013])
+                                            ("RawConverterBase" type
+                                               (:typedef ("RawConverter" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [17018 17057])
+                                            ("traits" type
+                                               (:typedef ("Traits" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [17063 17086])
+                                            ("source_type" type
+                                               (:typedef ("Traits::source_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [17092 17146])
+                                            ("argument_type" type
+                                               (:typedef ("Traits::argument_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [17151 17205])
+                                            ("result_type" type
+                                               (:typedef ("Traits::result_type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [17210 17264])
+                                            ("nearbyint" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("s" variable (:type ("argument_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17301 17318]))                                                  
+                                                :type ("source_type" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [17270 17333])
+                                            ("convert" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("s" variable (:type ("argument_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17368 17385]))                                                  
+                                                :type ("result_type" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [17339 17493]))                                          
+                                        :superclasses 
+                                          ( ("std::unary_function" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil)
+                                            ("RangeChecker" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil)
+                                            ("RawConverter" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [16524 17499])
+                                    ("get_non_trivial_converter" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil)
+                                            ("OverflowHandler" type (:type "class") nil nil)
+                                            ("Float2IntRounder" type (:type "class") nil nil)
+                                            ("RawConverter" type (:type "class") nil nil)
+                                            ("UserRangeChecker" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("InternalRangeCheckerQ" type
+                                               (:typedef ("GetRC" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("OverflowHandler" type nil nil nil)
+                                                          ("Float2IntRounder" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [17869 17947])
+                                            ("use_internal_RC" type
+                                               (:typedef ("is_same" type
+                                                     (:template-specifier 
+                                                        ( ("UserRangeChecker" type nil nil nil)
+                                                          ("UseInternalRangeChecker" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [17953 18028])
+                                            ("UserRangeCheckerQ" type
+                                               (:typedef ("mpl::identity" type
+                                                     (:template-specifier 
+                                                        ( ("UserRangeChecker" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [18034 18093])
+                                            ("RangeChecker" type
+                                               (:typedef ("mpl::eval_if::type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [18099 18220])
+                                            ("NonRounding" type
+                                               (:typedef ("non_rounding_converter" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("RangeChecker" type nil nil nil)
+                                                          ("RawConverter" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [18226 18317])
+                                            ("Rounding" type
+                                               (:typedef ("rounding_converter" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("RangeChecker" type nil nil nil)
+                                                          ("RawConverter" type nil nil nil)
+                                                          ("Float2IntRounder" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [18322 18410])
+                                            ("NonRoundingQ" type
+                                               (:typedef ("mpl::identity" type
+                                                     (:template-specifier 
+                                                        ( ("NonRounding" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [18416 18465])
+                                            ("RoundingQ" type
+                                               (:typedef ("mpl::identity" type
+                                                     (:template-specifier 
+                                                        ( ("Rounding" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [18470 18519])
+                                            ("int_float_mixture" type
+                                               (:typedef ("Traits::int_float_mixture" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [18525 18587])
+                                            ("selector" variable (:type ("type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [18711 18734])
+                                            ("type" type
+                                               (:typedef ("selector::type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [18740 18778]))                                          )
+                                        (reparse-symbol namespacesubparts) [17715 18784])
+                                    ("get_converter_impl" type
+                                       (:template 
+                                          ( ("Traits" type (:type "class") nil nil)
+                                            ("OverflowHandler" type (:type "class") nil nil)
+                                            ("Float2IntRounder" type (:type "class") nil nil)
+                                            ("RawConverter" type (:type "class") nil nil)
+                                            ("UserRangeChecker" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("Trivial" type
+                                               (:typedef ("trivial_converter_impl" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [19433 19481])
+                                            ("TrivialQ" type
+                                               (:typedef ("mpl::identity" type
+                                                     (:template-specifier 
+                                                        ( ("Trivial" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [19486 19535])
+                                            ("NonTrivialQ" type
+                                               (:typedef ("get_non_trivial_converter" type
+                                                     (:template-specifier 
+                                                        ( ("Traits" type nil nil nil)
+                                                          ("OverflowHandler" type nil nil nil)
+                                                          ("Float2IntRounder" type nil nil nil)
+                                                          ("RawConverter" type nil nil nil)
+                                                          ("UserRangeChecker" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [19541 19854])
+                                            ("trivial" type
+                                               (:typedef ("Traits::trivial" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [19860 19902])
+                                            ("type" type
+                                               (:typedef ("mpl::eval_if::type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [19908 19980]))                                          )
+                                        (reparse-symbol namespacesubparts) [18788 19986]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [832 19989]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [812 19991]))                  
+                :type "namespace")
+                nil [794 19993]))          
+      :file "converter.hpp"
+      :pointmax 20044
+      :fsize 20043
+      :lastmodtime '(21413 1118 0 0)
+      :unmatched-syntax '((punctuation 18710 . 18711) (punctuation 18709 . 18710) (punctuation 18708 . 18709) (symbol 18696 . 18708) (punctuation 18694 . 18695) (symbol 18685 . 18694) (punctuation 18683 . 18684) (symbol 18671 . 18683) (punctuation 18669 . 18670) (symbol 18657 . 18669) (punctuation 18655 . 18656) (symbol 18638 . 18655) (punctuation 18637 . 18638) (symbol 18616 . 18637) (TYPENAME 18601 . 18609) (TYPEDEF 18593 . 18600) (punctuation 13893 . 13894) (punctuation 13892 . 13893) (punctuation 13891 . 13892) (symbol 13885 . 13891) (punctuation 13884 . 13885) (symbol 13878 . 13884) (punctuation 13877 . 13878) (symbol 13871 . 13877) (punctuation 13870 . 13871) (symbol 13854 . 13870) (punctuation 13853 . 13854) (symbol 13834 . 13853) (punctuation 13833 . 13834) (symbol 13810 . 13833) (TYPENAME 13801 . 13809) (TYPEDEF 13793 . 13800) (punctuation 13371 . 13372) (punctuation 13370 . 13371) (punctuation 13369 . 13370) (symbol 13357 . 13369) (punctuation 13355 . 13356) (symbol 13345 . 13355) (punctuation 13343 . 13344) (symbol 13333 . 13343) (punctuation 13331 . 13332) (symbol 13323 . 13331) (punctuation 13321 . 13322) (symbol 13304 . 13321) (punctuation 13303 . 13304) (symbol 13282 . 13303) (TYPENAME 13273 . 13281) (TYPEDEF 13265 . 13272) (punctuation 12332 . 12333) (punctuation 12331 . 12332) (punctuation 12330 . 12331) (symbol 12322 . 12330) (punctuation 12321 . 12322) (symbol 12316 . 12321) (punctuation 12315 . 12316) (symbol 12306 . 12315) (punctuation 12305 . 12306) (symbol 12299 . 12305) (punctuation 12298 . 12299) (symbol 12287 . 12298) (punctuation 12286 . 12287) (symbol 12271 . 12286) (TYPENAME 12262 . 12270) (TYPEDEF 12254 . 12261) (punctuation 11311 . 11312) (punctuation 11310 . 11311) (punctuation 11309 . 11310) (symbol 11297 . 11309) (punctuation 11296 . 11297) (symbol 11286 . 11296) (punctuation 11285 . 11286) (symbol 11275 . 11285) (punctuation 11274 . 11275) (symbol 11266 . 11274) (punctuation 11265 . 11266) (symbol 11253 . 11265) (punctuation 11252 . 11253) (symbol 11236 . 11252) (TYPENAME 11221 . 11229) (TYPEDEF 11213 . 11220) (punctuation 10355 . 10356) (punctuation 10354 . 10355) (punctuation 10353 . 10354) (symbol 10352 . 10353) (punctuation 10351 . 10352) (symbol 10350 . 10351) (punctuation 10349 . 10350) (symbol 10330 . 10349) (TYPENAME 10321 . 10329) (TYPEDEF 10313 . 10320) (punctuation 7669 . 7670) (punctuation 7668 . 7669) (punctuation 7667 . 7668) (symbol 7662 . 7667) (punctuation 7660 . 7661) (symbol 7655 . 7660) (punctuation 7653 . 7654) (symbol 7648 . 7653) (punctuation 7646 . 7647) (symbol 7642 . 7646) (punctuation 7640 . 7641) (symbol 7631 . 7640) (punctuation 7629 . 7630) (symbol 7620 . 7629) (punctuation 7619 . 7620) (symbol 7611 . 7619) (TYPENAME 7602 . 7610) (TYPEDEF 7594 . 7601))
+      :lexical-table 
+        '(("BOOST_NUMERIC_CONVERSION_DETAIL_CONVERTER_FLC_12NOV2002_HPP")
+          )
+)
+    (semanticdb-table "numeric_cast_traits.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_common.hpp" include (:system-flag t) nil [283 373])
+            ("boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_long_long.hpp" include (:system-flag t) nil [410 507]))          
+      :file "numeric_cast_traits.hpp"
+      :pointmax 5524
+      :fsize 5523
+      :lastmodtime '(21413 1118 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "conversion_traits.hpp"
+      :file "conversion_traits.hpp"
+      :fsize 3587
+      :lastmodtime '(21413 1118 0 0))
+    (semanticdb-table "meta.hpp"
+      :file "meta.hpp"
+      :fsize 3662
+      :lastmodtime '(21413 1118 0 0)))
+  :file "!usr!include!boost!numeric!conversion!detail!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

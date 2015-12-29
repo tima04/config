@@ -1,0 +1,46 @@
+;; Object sequence/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sequence/"
+  :tables
+  (list
+    (semanticdb-table "comparison.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("FUSION_SEQUENCE_COMPARISON_10022005_0615" variable (:constant-flag t) nil [425 465])
+            ("boost/fusion/sequence/comparison/equal_to.hpp" include (:system-flag t) nil [467 523])
+            ("boost/fusion/sequence/comparison/greater.hpp" include (:system-flag t) nil [524 579])
+            ("boost/fusion/sequence/comparison/greater_equal.hpp" include (:system-flag t) nil [580 641])
+            ("boost/fusion/sequence/comparison/less.hpp" include (:system-flag t) nil [642 694])
+            ("boost/fusion/sequence/comparison/less_equal.hpp" include (:system-flag t) nil [695 753])
+            ("boost/fusion/sequence/comparison/not_equal_to.hpp" include (:system-flag t) nil [754 814]))          
+      :file "comparison.hpp"
+      :pointmax 823
+      :fsize 822
+      :lastmodtime '(21413 1118 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("FUSION_SEQUENCE_COMPARISON_10022005_0615")
+          )
+)
+    (semanticdb-table "io.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("FUSION_SEQUENCE_IO_10032005_0836" variable (:constant-flag t) nil [417 449])
+            ("boost/fusion/sequence/io/in.hpp" include (:system-flag t) nil [451 493])
+            ("boost/fusion/sequence/io/out.hpp" include (:system-flag t) nil [494 537]))          
+      :file "io.hpp"
+      :pointmax 546
+      :fsize 545
+      :lastmodtime '(21413 1118 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("FUSION_SEQUENCE_IO_10032005_0836")
+          )
+)
+    (semanticdb-table "intrinsic_fwd.hpp"
+      :file "intrinsic_fwd.hpp"
+      :fsize 5179
+      :lastmodtime '(21413 1118 0 0)))
+  :file "!usr!include!boost!fusion!sequence!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,284 @@
+;; Object kivy/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "kivy/"
+  :tables
+  (list
+    (semanticdb-table "main.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("kivy.app" include nil nil [1 25])
+            ("kivy.uix.gridlayout" include nil nil [26 68])
+            ("kivy.uix.label" include nil nil [69 101])
+            ("kivy.uix.textinput" include nil nil [102 142])
+            ("LoginScreen" type
+               (:superclasses ("GridLayout")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [219 262])
+                            ("self" variable nil (reparse-symbol indented_block_body) [271 284])
+                            ("self" code nil (reparse-symbol indented_block_body) [293 333])
+                            ("self" variable nil (reparse-symbol indented_block_body) [342 384])
+                            ("self" code nil (reparse-symbol indented_block_body) [393 423])
+                            ("self" code nil (reparse-symbol indented_block_body) [432 471])
+                            ("self" variable nil (reparse-symbol indented_block_body) [480 537])
+                            ("self" code nil (reparse-symbol indented_block_body) [546 576]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [194 198])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [200 208]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [181 577]))                  
+                :type "class")
+                nil [145 577])
+            ("MyApp" type
+               (:superclasses ("App")
+                :members 
+                  ( ("build" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [612 616]))                          )
+                        (reparse-symbol indented_block_body) [602 648]))                  
+                :type "class")
+                nil [579 648])
+            ("if" code nil nil [650 695]))          
+      :file "main.py"
+      :pointmax 695
+      :fsize 694
+      :lastmodtime '(22007 19259 639165 65000)
+      :unmatched-syntax nil)
+    (semanticdb-table "paint.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("kivy.app" include nil nil [1 25])
+            ("kivy.uix.widget" include nil nil [26 60])
+            ("kivy.uix.gridlayout" include nil nil [146 188])
+            ("kivy.graphics" include nil nil [189 235])
+            ("random" include nil nil [236 269])
+            ("kivy.lang" include nil nil [270 299])
+            ("MyPaintWidget" type
+               (:superclasses ("Widget")
+                :members 
+                  ( ("on_touch_down" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [367 371])
+                            ("touch" variable nil (reparse-symbol function_parameters) [373 378]))                          )
+                        (reparse-symbol indented_block_body) [349 801])
+                    ("on_touch_move" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [824 828])
+                            ("touch" variable nil (reparse-symbol function_parameters) [830 835]))                          )
+                        (reparse-symbol indented_block_body) [806 892]))                  
+                :type "class")
+                nil [315 892])
+            ("Root" type
+               (:superclasses ("GridLayout")
+                :members 
+                  ( ("callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [934 938])
+                            ("args" variable nil (reparse-symbol function_parameters) [940 945]))                          )
+                        (reparse-symbol indented_block_body) [921 986]))                  
+                :type "class")
+                nil [893 986])
+            ("MyPaintWidget" type
+               (:superclasses ("Widget")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [1029 1033]))                  
+                :type "class")
+                nil [996 1034])
+            ("MyPaintApp" type
+               (:superclasses ("App")
+                :members 
+                  ( ("build" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1073 1077]))                          )
+                        (reparse-symbol indented_block_body) [1063 1140]))                  
+                :type "class")
+                nil [1035 1140])
+            ("if" code nil nil [1145 1195]))          
+      :file "paint.py"
+      :pointmax 1201
+      :fsize 1975
+      :lastmodtime '(22009 33305 311114 431000)
+      :unmatched-syntax nil)
+    (semanticdb-table "interactive.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("kivy.interactive" include nil nil [1 49])
+            ("kivy.app" include nil nil [50 74])
+            ("kivy.uix.widget" include nil nil [75 109])
+            ("kivy.graphics" include nil nil [110 161])
+            ("kivy.properties" include nil nil [162 205])
+            ("kivy.core.window" include nil nil [207 242])
+            ("Window" variable nil nil [243 275])
+            ("i" variable nil nil [277 302])
+            ("i" code nil nil [303 310])
+            ("root" variable nil nil [311 324])
+            ("kivy.uix.button" include nil nil [327 361])
+            ("kivy.uix.gridlayout" include nil nil [362 404])
+            ("kivy.uix.floatlayout" include nil nil [405 449])
+            ("kivy.uix.stacklayout" include nil nil [450 494])
+            ("kivy.uix.label" include nil nil [495 527])
+            ("gl" variable nil nil [529 546])
+            ("gl" variable nil nil [547 558])
+            ("gl" variable nil nil [559 570])
+            ("l" variable nil nil [594 617])
+            ("b2" variable nil nil [618 640])
+            ("l" variable nil nil [697 720])
+            ("b" variable nil nil [721 735])
+            ("b" variable nil nil [736 755])
+            ("b" code nil nil [757 772])
+            ("gl" code nil nil [773 789])
+            ("root" code nil nil [791 810])
+            ("foo" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [820 825]))              ) nil [812 850])
+            ("txt" variable nil nil [852 887])
+            ("\"\"\"
+To create a singleline TextInput, set the TextInput.multiline property to False (the ‘enter’ key will defocus the TextInput and emit an ‘on_text_validate’ event):
+\"\"\"" code nil nil [889 1059])
+            ("on_enter" function (:arguments 
+              ( ("instance" variable nil (reparse-symbol function_parameters) [1074 1082])
+                ("value" variable nil (reparse-symbol function_parameters) [1084 1089]))              ) nil [1061 1137])
+            ("textinput" variable nil nil [1138 1196])
+            ("textinput" code nil nil [1197 1238])
+            ("on_text" function (:arguments 
+              ( ("instance" variable nil (reparse-symbol function_parameters) [1356 1364])
+                ("value" variable nil (reparse-symbol function_parameters) [1366 1371]))              ) nil [1344 1424])
+            ("textinput" variable nil nil [1425 1448])
+            ("textinput" code nil nil [1449 1477]))          
+      :file "interactive.py"
+      :pointmax 1479
+      :fsize 919
+      :lastmodtime '(22008 27474 61022 353000)
+      :unmatched-syntax nil)
+    (semanticdb-table "temp.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("kivy" include nil nil [1 12])
+            ("kivy.uix.widget" include nil nil [36 70])
+            ("kivy.uix.boxlayout" include nil nil [71 111])
+            ("kivy.app" include nil nil [112 136])
+            ("kivy.lang" include nil nil [137 166])
+            ("random" include nil nil [167 193])
+            ("kivy.uix.button" include nil nil [194 228])
+            ("kivy.properties" include nil nil [229 271])
+            ("MyWidget" type
+               (:superclasses ("Widget")
+                :members 
+                  ( ("submit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [354 358]))                          )
+                        (reparse-symbol indented_block_body) [343 400]))                  
+                :type "class")
+                nil [314 400])
+            ("MyApp" type
+               (:superclasses ("App")
+                :members 
+                  ( ("build" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [435 439]))                          )
+                        (reparse-symbol indented_block_body) [425 505]))                  
+                :type "class")
+                nil [402 505])
+            ("if" code nil nil [506 551]))          
+      :file "temp.py"
+      :pointmax 564
+      :fsize 563
+      :lastmodtime '(22011 3333 881660 489000)
+      :unmatched-syntax nil)
+    (semanticdb-table "temp2.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "temp2.py"
+      :pointmax 2
+      :fsize 1074
+      :lastmodtime '(22011 3414 849662 528000)
+      :unmatched-syntax nil)
+    (semanticdb-table "pong.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("kivy.app" include nil nil [1 25])
+            ("kivy.uix.widget" include nil nil [26 60])
+            ("kivy.properties" include nil nil [61 143])
+            ("kivy.vector" include nil nil [144 174])
+            ("kivy.clock" include nil nil [175 203])
+            ("random" include nil nil [204 230])
+            ("kivy.lang" include nil nil [231 260])
+            ("PongBall" type
+               (:superclasses ("Widget")
+                :members 
+                  ( ("velocity_x" variable nil (reparse-symbol indented_block_body) [430 444])
+                    ("velocity_y" variable nil (reparse-symbol indented_block_body) [449 463])
+                    ("move" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [539 543]))                          )
+                        (reparse-symbol indented_block_body) [530 599]))                  
+                :type "class")
+                nil [263 599])
+            ("PongGame" type
+               (:superclasses ("Widget")
+                :members 
+                  ( ("ball" variable nil (reparse-symbol indented_block_body) [629 656])
+                    ("serve_ball" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [677 681]))                          )
+                        (reparse-symbol indented_block_body) [662 789])
+                    ("update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [805 809])
+                            ("dt" variable nil (reparse-symbol function_parameters) [811 813]))                          )
+                        (reparse-symbol indented_block_body) [794 1118]))                  
+                :type "class")
+                nil [601 1118])
+            ("PongApp" type
+               (:superclasses ("App")
+                :members 
+                  ( ("build" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1154 1158]))                          )
+                        (reparse-symbol indented_block_body) [1144 1327]))                  
+                :type "class")
+                nil [1120 1327])
+            ("if" code nil nil [1481 1528])
+            ("\"\"\"
+def prnt(*args):
+    n = 30
+    print \"=\"*n, args, \"=\"*n
+    
+class PongGame2(Widget):
+
+    def __init__(self, **kargs):
+        super(PongGame2, self).__init__(**kargs)
+        self.rect = Rectangle()
+        self.l1 = Label(font_size=70, text=\"0\")
+        self.l2 = Label(font_size=70, text=\"0\")
+        self.canvas.add(self.rect)
+        self.add_widget(self.l1)
+        self.add_widget(self.l2)
+        prnt(self.size)
+
+    def on_size(self, *args): 
+        self.l1.center = self.width/4.0, self.top-50
+        self.l2.center = 3*self.width/4.0, self.top-50
+        self.rect.pos = self.center_x - 5, 0
+        self.rect.size = 10, self.height
+\"\"\"" code nil nil [1531 2187]))          
+      :file "pong.py"
+      :pointmax 2188
+      :fsize 2187
+      :lastmodtime '(22009 57595 263726 135000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!temp!kivy!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

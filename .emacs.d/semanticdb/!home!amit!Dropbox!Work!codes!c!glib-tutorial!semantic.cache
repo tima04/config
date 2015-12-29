@@ -1,0 +1,91 @@
+;; Object glib-tutorial/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "glib-tutorial/"
+  :tables
+  (list
+    (semanticdb-table "example1.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("glib.h" include (:system-flag t) nil [1 18])
+            ("sum" variable (:constant-flag t) nil [27 30])
+            ("nth" variable (:constant-flag t) nil [57 60])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [108 117])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [118 130]))                  
+                :type "int")
+                nil [99 486]))          
+      :file "example1.c"
+      :pointmax 825
+      :fsize 825
+      :lastmodtime '(21856 47976 133353 610000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("sum" (spp-arg-list ("x" "y") 30 . 36) . ((semantic-list "((x) + (y))" 37 . 48)))
+          ("nth" (spp-arg-list ("lst" "i") 60 . 68) . ((semantic-list "(g_slist_nth(lst, i)->data)" 69 . 96)))
+          )
+)
+    (semanticdb-table "foo.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("glib.h" include (:system-flag t) nil [1 18])
+            ("stdio.h" include (:system-flag t) nil [19 37])
+            ("stdlib.h" include (:system-flag t) nil [38 57])
+            ("math.h" include (:system-flag t) nil [58 75])
+            ("string.h" include (:system-flag t) nil [76 95])
+            ("assert.h" include (:system-flag t) nil [96 115])
+            ("foo" function
+               (:arguments 
+                  ( ("z" variable (:type "int") (reparse-symbol arg-sub-list) [125 131]))                  
+                :type "int")
+                nil [117 147])
+            ("foo2" function (:type "int") nil [149 172])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [183 192])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [193 206]))                  
+                :type "int")
+                nil [174 246]))          
+      :file "foo.c"
+      :pointmax 379
+      :fsize 378
+      :lastmodtime '(21854 28361 285805 905000)
+      :unmatched-syntax nil)
+    (semanticdb-table "bar.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [29 38])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [39 52]))                  
+                :type "int")
+                nil [20 71]))          
+      :file "bar.c"
+      :pointmax 72
+      :fsize 71
+      :lastmodtime '(21854 13198 910253 903000)
+      :unmatched-syntax nil)
+    (semanticdb-table "vector.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("glib.h" include (:system-flag t) nil [1 18]))          
+      :file "vector.c"
+      :pointmax 54
+      :fsize 53
+      :lastmodtime '(21856 47929 681354 982000)
+      :unmatched-syntax '((semantic-list 35 . 52) (STRUCT 28 . 34) (TYPEDEF 20 . 27) (semantic-list 35 . 48) (STRUCT 28 . 34) (symbol 43 . 46) (INT 39 . 42) (symbol 43 . 46) (INT 39 . 42) (TYPEDEF 20 . 27) (symbol 43 . 46) (INT 39 . 42) (symbol 43 . 46) (INT 39 . 42) (semantic-list 35 . 44) (STRUCT 28 . 34) (INT 39 . 42) (INT 39 . 42) (TYPEDEF 20 . 27) (INT 39 . 42) (INT 39 . 42) (semantic-list 35 . 49) (STRUCT 28 . 34) (symbol 39 . 47) (symbol 39 . 47) (TYPEDEF 20 . 27) (symbol 39 . 47) (symbol 39 . 47) (semantic-list 35 . 48) (STRUCT 28 . 34) (symbol 39 . 46) (symbol 39 . 46) (TYPEDEF 20 . 27) (symbol 39 . 46) (symbol 39 . 46) (semantic-list 35 . 59) (STRUCT 28 . 34) (symbol 39 . 57) (symbol 39 . 57) (TYPEDEF 20 . 27) (symbol 39 . 57) (symbol 39 . 57) (semantic-list 35 . 46) (STRUCT 28 . 34) (symbol 39 . 44) (symbol 39 . 44) (TYPEDEF 20 . 27) (symbol 39 . 44) (symbol 39 . 44) (STRUCT 28 . 34) (TYPEDEF 20 . 27) (TYPEDEF 20 . 27) (symbol 20 . 24) (symbol 20 . 24) (symbol 20 . 23))))
+  :file "!home!amit!Dropbox!Work!codes!c!glib-tutorial!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

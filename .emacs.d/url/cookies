@@ -1,0 +1,20 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '((".bbc.com"
+  [url-cookie "BBC-UID" "05251e55a9dba5c851bc94a4317b181d632e793bf764b4861a40a7b21e76d28c0URL/Emacs" "31 Aug 19 12:34:32 [GMT]" "/" ".bbc.com" nil])
+ (".2o7.net"
+  [url-cookie "s_vi_llmyibalobx7Ex7Caj" "[CS]v4|2822FC7A850136C6-60000112A0169FF8|5058A86F[CE]" "Sun, 17 Sep 2017 16:59:40 GMT" "/" ".2o7.net" nil])
+ (".gutenberg.org"
+  [url-cookie "session_id" "820ce82faf0de2c44126a4436e29499a82b8cfe1" "Mon, 28 Dec 2015 15:04:53 GMT" "/" ".gutenberg.org" nil])
+ (".bbc.co.uk"
+  [url-cookie "s1" "5045F8F4447E0449" "03-Sep-2017 12:49:56.00 GMT" "/" ".bbc.co.uk" nil]))
+)
+(setq url-cookie-secure-storage
+ 'nil)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:

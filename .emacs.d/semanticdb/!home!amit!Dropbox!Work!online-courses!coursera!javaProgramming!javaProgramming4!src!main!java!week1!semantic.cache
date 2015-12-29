@@ -1,0 +1,83 @@
+;; Object week1/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "week1/"
+  :tables
+  (list
+    (semanticdb-table "EarthQuakeClient.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("week1" package nil nil [1 15])
+            ("java.util.*" include nil nil [17 36])
+            ("java.util.function.Predicate" include nil nil [37 73])
+            ("java.util.stream.Collectors" include nil nil [74 109])
+            ("edu.duke.*" include nil nil [191 209])
+            ("EarthQuakeClient" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("EarthQuakeClient" function
+                       (:constructor-flag t
+                        :typemodifiers ("public"))
+                        (reparse-symbol class_member_declaration) [248 329])
+                    ("filterByMagnitude" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "quakeData") (reparse-symbol formal_parameters) [404 413])
+                            ("magMin" variable (:type "double") (reparse-symbol formal_parameters) [419 432]))                          )
+                        (reparse-symbol class_member_declaration) [364 654])
+                    ("filterByDistanceFrom" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "quakeData") (reparse-symbol formal_parameters) [732 741])
+                            ("distMax" variable (:type "double") (reparse-symbol formal_parameters) [749 763])
+                            ("from" variable (:type "Location") (reparse-symbol formal_parameters) [771 784]))                          )
+                        (reparse-symbol class_member_declaration) [689 1012])
+                    ("dumpCSV" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "list") (reparse-symbol formal_parameters) [1060 1064]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1018 1402])
+                    ("bigQuakes" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1408 1919])
+                    ("closeToMe" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1925 2598])
+                    ("filterByDepth" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "quakeData") (reparse-symbol formal_parameters) [2678 2687])
+                            ("minDepth" variable (:type "double") (reparse-symbol formal_parameters) [2695 2710])
+                            ("maxDepth" variable (:type "double") (reparse-symbol formal_parameters) [2712 2727]))                          )
+                        (reparse-symbol class_member_declaration) [2642 2905])
+                    ("quakesOfDepth" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2915 3403])
+                    ("filterByPhrase" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "quakeData") (reparse-symbol formal_parameters) [3476 3485])
+                            ("where" variable (:type "String") (reparse-symbol formal_parameters) [3493 3505])
+                            ("phrase" variable (:type "String") (reparse-symbol formal_parameters) [3507 3520]))                          )
+                        (reparse-symbol class_member_declaration) [3439 4163])
+                    ("quakesByPhrase" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4174 4688])
+                    ("createCSV" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4694 5078]))                  
+                :type "class")
+                nil [211 5080]))          
+      :file "EarthQuakeClient.java"
+      :pointmax 5082
+      :fsize 5081
+      :lastmodtime '(22140 37066 873018 976000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Dropbox!Work!online-courses!coursera!javaProgramming!javaProgramming4!src!main!java!week1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

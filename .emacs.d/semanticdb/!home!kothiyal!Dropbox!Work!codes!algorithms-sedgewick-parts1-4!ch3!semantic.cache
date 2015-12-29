@@ -1,0 +1,423 @@
+;; Object ch3/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ch3/"
+  :tables
+  (list
+    (semanticdb-table "collinear.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [224 242])
+            ("stdlib.h" include (:system-flag t) nil [243 262])
+            ("math.h" include (:system-flag t) nil [263 280])
+            ("point.h" include nil nil [281 299])
+            ("delta" function
+               (:arguments 
+                  ( ("p1" variable (:type ("Point" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [313 322])
+                    ("p2" variable (:type ("Point" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [323 332]))                  
+                :type ("Point" type (:type "class") nil nil))
+                nil [301 409])
+            ("make_point" function (:type ("Point" type (:type "class") nil nil)) nil [410 516])
+            ("main" function (:type "int") nil [520 984]))          
+      :file "collinear.c"
+      :pointmax 985
+      :fsize 986
+      :lastmodtime '(21988 24385 380678 952000)
+      :unmatched-syntax nil)
+    (semanticdb-table "point.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("math.h" include (:system-flag t) nil [1 18])
+            ("assert.h" include (:system-flag t) nil [19 38])
+            ("Point" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("x" variable (:type "float") (reparse-symbol classsubparts) [56 67])
+                          ("y" variable (:type "float") (reparse-symbol classsubparts) [56 67]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [40 75])
+            ("sq" variable (:constant-flag t) nil [85 87])
+            ("sqrt2" function
+               (:arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [160 169]))                  
+                :type "double")
+                nil [147 437])
+            ("distance" function
+               (:arguments 
+                  ( ("p1" variable (:type ("Point" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [455 464])
+                    ("p2" variable (:type ("Point" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [465 474]))                  
+                :type "double")
+                nil [439 550]))          
+      :file "point.h"
+      :pointmax 554
+      :fsize 553
+      :lastmodtime '(21992 45388 675809 571000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("sq" (spp-arg-list ("x") 87 . 90) . ((semantic-list "((x)*(x))" 91 . 100)))
+          )
+)
+    (semanticdb-table "prog-3.8.cxx"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [506 524])
+            ("stdlib.h" include (:system-flag t) nil [525 544])
+            ("point.h" include nil nil [545 563])
+            ("math.h" include (:system-flag t) nil [564 581])
+            ("iostream" include (:system-flag t) nil [582 601])
+            ("randFloat" function (:type "float") nil [603 654])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [689 698])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [699 712]))                  
+                :type "int")
+                nil [680 1338]))          
+      :file "prog-3.8.cxx"
+      :pointmax 1339
+      :fsize 1338
+      :lastmodtime '(21992 46061 731826 521000)
+      :unmatched-syntax nil)
+    (semanticdb-table "prog-3.8.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [549 567])
+            ("stdlib.h" include (:system-flag t) nil [568 587])
+            ("point.h" include nil nil [588 606])
+            ("math.h" include (:system-flag t) nil [607 624])
+            ("randFloat" function (:type "float") nil [628 679])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [965 974])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [975 988]))                  
+                :type "int")
+                nil [956 1568]))          
+      :file "prog-3.8.c"
+      :pointmax 1569
+      :fsize 1568
+      :lastmodtime '(21992 44347 291783 345000)
+      :unmatched-syntax nil)
+    (semanticdb-table "hello.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("HelloWorldApp" type
+               (:members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [170 183]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [146 259]))                  
+                :type "class")
+                nil [120 261]))          
+      :file "hello.java"
+      :pointmax 262
+      :fsize 261
+      :lastmodtime '(21992 37292 803605 689000)
+      :unmatched-syntax nil)
+    (semanticdb-table "primes.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("Primes" type
+               (:members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [48 61]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [24 491]))                  
+                :type "class")
+                nil [1 496]))          
+      :file "primes.java"
+      :pointmax 498
+      :fsize 497
+      :lastmodtime '(21992 37983 427623 81000)
+      :unmatched-syntax '((IDENTIFIER 498 . 499)))
+    (semanticdb-table "josephus_problem.cxx"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [480 498])
+            ("assert.h" include (:system-flag t) nil [499 518])
+            ("link-list.hxx" include nil nil [519 543])
+            ("math.h" include (:system-flag t) nil [544 561])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [563 583])
+            ("rand_int" function
+               (:arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [643 649]))                  
+                :type "int")
+                nil [630 654])
+            ("generate_random_list" function
+               (:arguments 
+                  ( ("N" variable (:type "int") (reparse-symbol arg-sub-list) [682 688]))                  
+                :type ("Link" type (:type "class") nil nil))
+                nil [656 861])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [874 883])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [884 897]))                  
+                :type "int")
+                nil [865 1439]))          
+      :file "josephus_problem.cxx"
+      :pointmax 1442
+      :fsize 702
+      :lastmodtime '(21993 30520 97085 550000)
+      :unmatched-syntax nil)
+    (semanticdb-table "link-list.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("Item" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [1 18])
+            ("Node" type
+               (:members 
+                  ( ("i" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol classsubparts) [98 105])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("Node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [106 124]))                  
+                :type "struct")
+                nil [77 131])
+            ("Node" type
+               (:typedef ("Node" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [77 131])
+            ("Link" type
+               (:typedef ("Node" type (:type "class") nil nil)
+                :pointer 1
+                :type "typedef")
+                nil [132 151])
+            ("remove_nxt_node" function
+               (:arguments 
+                  ( ("l" variable (:type ("Link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [174 181]))                  
+                :type "void")
+                nil [153 212]))          
+      :file "link-list.h"
+      :pointmax 221
+      :fsize 220
+      :lastmodtime '(21992 52045 875977 222000)
+      :unmatched-syntax '((symbol 146 . 150) (punctuation 145 . 146) (symbol 140 . 144) (TYPEDEF 132 . 139) (symbol 146 . 150) (punctuation 145 . 146) (symbol 140 . 144) (TYPEDEF 132 . 139) (symbol 132 . 140) (symbol 132 . 139) (symbol 132 . 137) (symbol 132 . 135)))
+    (semanticdb-table "josephus_problem.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("assert.h" include (:system-flag t) nil [20 39])
+            ("stdlib.h" include (:system-flag t) nil [40 59])
+            ("link-list.h" include nil nil [60 82])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [93 102])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [103 116]))                  
+                :type "int")
+                nil [84 671]))          
+      :file "josephus_problem.c"
+      :pointmax 674
+      :fsize 673
+      :lastmodtime '(21992 52094 107978 437000)
+      :unmatched-syntax nil)
+    (semanticdb-table "link-list.hxx"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Item" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [1 18])
+            ("Node" type
+               (:members 
+                  ( ("i" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol classsubparts) [150 157])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("Node" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [160 178])
+                    ("Node" function
+                       (:constructor-flag t
+                        :type ("Node" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [181 190])
+                    ("Node" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("i" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [199 206])
+                            ("next" variable
+                               (:pointer 1
+                                :type ("Node" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [207 218]))                          
+                        :type ("Node" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [194 240]))                  
+                :type "struct")
+                nil [134 244])
+            ("Link" type
+               (:typedef ("Node" type (:type "class") nil nil)
+                :pointer 1
+                :type "typedef")
+                nil [248 267])
+            ("remove_nxt_node" function
+               (:arguments 
+                  ( ("l" variable (:type ("Link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [290 297]))                  
+                :type "void")
+                nil [269 328])
+            ("nnodes" function
+               (:arguments 
+                  ( ("t" variable (:type ("Link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [341 348]))                  
+                :type "int")
+                nil [330 453]))          
+      :file "link-list.hxx"
+      :pointmax 461
+      :fsize 460
+      :lastmodtime '(21993 30852 161093 912000)
+      :unmatched-syntax '((punctuation 240 . 241) (punctuation 190 . 191) (symbol 456 . 457) (symbol 454 . 455) (punctuation 240 . 241) (punctuation 190 . 191) (punctuation 240 . 241) (punctuation 190 . 191)))
+    (semanticdb-table "temp.cxx"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("link-list2.hxx" include nil nil [21 46])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [48 68])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [79 88])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [89 102]))                  
+                :type "int")
+                nil [70 298]))          
+      :file "temp.cxx"
+      :pointmax 302
+      :fsize 301
+      :lastmodtime '(21993 32637 901138 883000)
+      :unmatched-syntax nil)
+    (semanticdb-table "link-list2.hxx"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Item" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [26 43])
+            ("Node" type
+               (:members 
+                  ( ("i" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol classsubparts) [61 68])
+                    ("next" variable (:type "int") (reparse-symbol classsubparts) [71 80])
+                    ("Node" function
+                       (:constructor-flag t
+                        :type ("Node" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [83 92])
+                    ("Node" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("i" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [101 108])
+                            ("next" variable (:type "int") (reparse-symbol arg-sub-list) [109 118]))                          
+                        :type ("Node" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [96 140]))                  
+                :type "struct")
+                nil [45 144])
+            ("Link" type
+               (:typedef ("Node" type (:type "class") nil nil)
+                :pointer 1
+                :type "typedef")
+                nil [146 165])
+            ("List" type
+               (:typedef ("Node" type (:type "class") nil nil)
+                :pointer 1
+                :type "typedef")
+                nil [166 185])
+            ("remove_nxt_node" function
+               (:arguments 
+                  ( ("" variable (:type ("l" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [212 214]))                  
+                :type "void")
+                nil [190 245])
+            ("nnodes" function
+               (:arguments 
+                  ( ("t" variable (:type ("List" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [261 268]))                  
+                :type "int")
+                nil [250 419]))          
+      :file "link-list2.hxx"
+      :pointmax 427
+      :fsize 426
+      :lastmodtime '(21993 32739 949141 453000)
+      :unmatched-syntax nil)
+    (semanticdb-table "prob3.53-3.54.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [460 479])
+            ("stdio.h" include (:system-flag t) nil [480 498])
+            ("stdlib.h" include (:system-flag t) nil [499 518])
+            ("assert.h" include (:system-flag t) nil [519 538])
+            ("link-list.hxx" include nil nil [539 563])
+            ("math.h" include (:system-flag t) nil [564 581])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [583 603])
+            ("rand_int" function
+               (:arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [663 669]))                  
+                :type "int")
+                nil [650 698])
+            ("generate_random_list" function
+               (:arguments 
+                  ( ("N" variable (:type "int") (reparse-symbol arg-sub-list) [726 732]))                  
+                :type ("Link" type (:type "class") nil nil))
+                nil [700 1041])
+            ("nnodes_reachable" function
+               (:arguments 
+                  ( ("start" variable (:type ("Link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1089 1100]))                  
+                :type "int")
+                nil [1068 1442])
+            ("in_same_cycle" function
+               (:arguments 
+                  ( ("t1" variable (:type ("Link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1490 1498])
+                    ("t2" variable (:type ("Link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1499 1507]))                  
+                :type "short")
+                nil [1470 1744])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1758 1767])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1768 1781]))                  
+                :type "int")
+                nil [1749 2295]))          
+      :file "prob3.53-3.54.cpp"
+      :pointmax 2298
+      :fsize 2297
+      :lastmodtime '(21993 46430 217486 221000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!codes!algorithms-sedgewick-parts1-4!ch3!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

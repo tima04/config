@@ -1,0 +1,323 @@
+;; Object temp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "temp/"
+  :tables
+  (list
+    (semanticdb-table "Complex.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("Complex" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("re" variable
+                       (:typemodifiers ("private" "final")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [1645 1669])
+                    ("im" variable
+                       (:typemodifiers ("private" "final")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [1693 1717])
+                    ("Complex" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("real" variable (:type "double") (reparse-symbol formal_parameters) [1937 1948])
+                            ("imag" variable (:type "double") (reparse-symbol formal_parameters) [1950 1961]))                          )
+                        (reparse-symbol class_member_declaration) [1922 2008])
+                    ("toString" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [2200 2399])
+                    ("abs" function
+                       (:typemodifiers ("public")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [2686 2748])
+                    ("phase" function
+                       (:typemodifiers ("public")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [2986 3050])
+                    ("plus" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("that" variable (:type "Complex") (reparse-symbol formal_parameters) [3296 3308]))                          
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [3276 3439])
+                    ("minus" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("that" variable (:type "Complex") (reparse-symbol formal_parameters) [3709 3721]))                          
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [3688 3852])
+                    ("times" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("that" variable (:type "Complex") (reparse-symbol formal_parameters) [4103 4115]))                          
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [4082 4286])
+                    ("scale" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("alpha" variable (:type "double") (reparse-symbol formal_parameters) [4517 4529]))                          
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [4496 4590])
+                    ("times" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("alpha" variable (:type "double") (reparse-symbol formal_parameters) [4876 4888]))                          
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [4855 4949])
+                    ("conjugate" function
+                       (:typemodifiers ("public")
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [5099 5170])
+                    ("reciprocal" function
+                       (:typemodifiers ("public")
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [5322 5448])
+                    ("re" function
+                       (:typemodifiers ("public")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [5582 5627])
+                    ("im" function
+                       (:typemodifiers ("public")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [5771 5816])
+                    ("divides" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("that" variable (:type "Complex") (reparse-symbol formal_parameters) [6085 6097]))                          
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [6062 6152])
+                    ("exp" function
+                       (:typemodifiers ("public")
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [6306 6420])
+                    ("sin" function
+                       (:typemodifiers ("public")
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [6560 6676])
+                    ("cos" function
+                       (:typemodifiers ("public")
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [6820 6937])
+                    ("tan" function
+                       (:typemodifiers ("public")
+                        :type "Complex")
+                        (reparse-symbol class_member_declaration) [7083 7148])
+                    ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [7249 7262]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7225 8070]))                  
+                :type "class")
+                nil [1618 8073]))          
+      :file "Complex.java"
+      :pointmax 9188
+      :fsize 9187
+      :lastmodtime '(22016 20506 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "temp.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("temp" type
+               (:members 
+                  ( ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [81 94]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [57 217]))                  
+                :type "class")
+                nil [43 219]))          
+      :file "temp.java"
+      :pointmax 222
+      :fsize 221
+      :lastmodtime '(22071 9746 71151 137000)
+      :unmatched-syntax nil)
+    (semanticdb-table "StdOut.java"
+      :major-mode 'jdee-mode
+      :tags 
+        '( ("java.io.OutputStreamWriter" include nil nil [346 380])
+            ("java.io.PrintWriter" include nil nil [381 408])
+            ("java.io.UnsupportedEncodingException" include nil nil [409 453])
+            ("java.util.Locale" include nil nil [454 478])
+            ("StdOut" type
+               (:typemodifiers ("public" "final")
+                :members 
+                  ( ("CHARSET_NAME" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [988 1039])
+                    ("LOCALE" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "Locale")
+                        (reparse-symbol class_member_declaration) [1119 1166])
+                    ("out" variable
+                       (:typemodifiers ("private" "static")
+                        :type "PrintWriter")
+                        (reparse-symbol class_member_declaration) [1196 1227])
+                    ("StdOut" function
+                       (:constructor-flag t
+                        :typemodifiers ("private"))
+                        (reparse-symbol class_member_declaration) [1537 1557])
+                    ("close" function
+                       (:typemodifiers ("public" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1609 1664])
+                    ("println" function
+                       (:typemodifiers ("public" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1759 1818])
+                    ("println" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("x" variable (:type "Object") (reparse-symbol formal_parameters) [1985 1993]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1958 2026])
+                    ("println" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("x" variable (:type "boolean") (reparse-symbol formal_parameters) [2191 2200]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2164 2233])
+                    ("println" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("x" variable (:type "char") (reparse-symbol formal_parameters) [2402 2408]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2375 2441])
+                    ("println" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("x" variable (:type "double") (reparse-symbol formal_parameters) [2604 2612]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2577 2645])
+                    ("println" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("x" variable (:type "float") (reparse-symbol formal_parameters) [2811 2818]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2784 2851])
+                    ("println" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol formal_parameters) [3017 3022]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2990 3055])
+                    ("println" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("x" variable (:type "long") (reparse-symbol formal_parameters) [3214 3220]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3187 3253])
+                    ("println" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("x" variable (:type "short") (reparse-symbol formal_parameters) [3422 3429]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3395 3462])
+                    ("println" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("x" variable (:type "byte") (reparse-symbol formal_parameters) [3687 3693]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3660 3726])
+                    ("print" function
+                       (:typemodifiers ("public" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3779 3834])
+                    ("print" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("x" variable (:type "Object") (reparse-symbol formal_parameters) [3996 4004]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3971 4056])
+                    ("print" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("x" variable (:type "boolean") (reparse-symbol formal_parameters) [4219 4228]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4194 4280])
+                    ("print" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("x" variable (:type "char") (reparse-symbol formal_parameters) [4447 4453]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4422 4505])
+                    ("print" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("x" variable (:type "double") (reparse-symbol formal_parameters) [4666 4674]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4641 4726])
+                    ("print" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("x" variable (:type "float") (reparse-symbol formal_parameters) [4885 4892]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4860 4944])
+                    ("print" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol formal_parameters) [5108 5113]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5083 5165])
+                    ("print" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("x" variable (:type "long") (reparse-symbol formal_parameters) [5338 5344]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5313 5396])
+                    ("print" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("x" variable (:type "short") (reparse-symbol formal_parameters) [5571 5578]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5546 5630])
+                    ("print" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("x" variable (:type "byte") (reparse-symbol formal_parameters) [5786 5792]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5761 5844])
+                    ("printf" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("format" variable (:type "String") (reparse-symbol formal_parameters) [6146 6159])
+                            ("" variable (:type "args") (reparse-symbol formal_parameters) [6171 6175]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6120 6247])
+                    ("printf" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("locale" variable (:type "Locale") (reparse-symbol formal_parameters) [6592 6605])
+                            ("format" variable (:type "String") (reparse-symbol formal_parameters) [6607 6620])
+                            ("" variable (:type "args") (reparse-symbol formal_parameters) [6632 6636]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6566 6708])
+                    ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [6798 6811]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6774 6980]))                  
+                :type "class")
+                nil [886 6983]))          
+      :file "StdOut.java"
+      :pointmax 8098
+      :fsize 8097
+      :lastmodtime '(22016 20678 0 0)
+      :unmatched-syntax '((DOT 6630 . 6631) (IDENTIFIER 6622 . 6628) (DOT 6629 . 6630) (DOT 6169 . 6170) (IDENTIFIER 6161 . 6167) (DOT 6168 . 6169))))
+  :file "!home!amit!Dropbox!Work!codes!java!temp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,501 @@
+;; Object core/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "core/"
+  :tables
+  (list
+    (semanticdb-table "arrayprint.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"Array printing function
+
+$Id: arrayprint.py,v 1.9 2005/09/13 13:58:44 teoliphant Exp $
+
+\"\"\"" code nil nil [1 95])
+            ("__future__" include nil nil [96 160])
+            ("__all__" variable nil nil [162 228])
+            ("__docformat__" variable nil nil [229 263])
+            ("sys" include nil nil [519 529])
+            ("functools" include nil nil [530 558])
+            ("numerictypes" include nil nil [566 592])
+            ("isinf" include nil nil [605 663])
+            ("isnan" include nil nil [605 663])
+            ("not_equal" include nil nil [605 663])
+            ("absolute" include nil nil [605 663])
+            ("minimum" include nil nil [605 663])
+            ("maximum" include nil nil [605 663])
+            ("datetime_data" include nil nil [681 739])
+            ("datetime_as_string" include nil nil [681 739])
+            ("format_longfloat" include nil nil [681 739])
+            ("ravel" include nil nil [758 770])
+            ("asarray" include nil nil [785 799])
+            ("if" code nil nil [801 948])
+            ("product" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [961 962])
+                ("y" variable nil (reparse-symbol function_parameters) [964 965]))              ) nil [949 979])
+            ("_summaryEdgeItems" variable nil nil [980 1001])
+            ("_summaryThreshold" variable nil nil [1060 1084])
+            ("_float_output_precision" variable nil nil [1131 1158])
+            ("_float_output_suppress_small" variable nil nil [1159 1195])
+            ("_line_width" variable nil nil [1196 1212])
+            ("_nan_str" variable nil nil [1213 1229])
+            ("_inf_str" variable nil nil [1230 1246])
+            ("_formatter" variable nil nil [1247 1264])
+            ("set_printoptions" function
+               (:documentation "
+    Set printing options.
+
+    These options determine the way floating point numbers, arrays and
+    other NumPy objects are displayed.
+
+    Parameters
+    ----------
+    precision : int, optional
+        Number of digits of precision for floating point output (default 8).
+    threshold : int, optional
+        Total number of array elements which trigger summarization
+        rather than full repr (default 1000).
+    edgeitems : int, optional
+        Number of array items in summary at beginning and end of
+        each dimension (default 3).
+    linewidth : int, optional
+        The number of characters per line for the purpose of inserting
+        line breaks (default 75).
+    suppress : bool, optional
+        Whether or not suppress printing of small floating point values
+        using scientific notation (default False).
+    nanstr : str, optional
+        String representation of floating point not-a-number (default nan).
+    infstr : str, optional
+        String representation of floating point infinity (default inf).
+    formatter : dict of callables, optional
+        If not None, the keys should indicate the type(s) that the respective
+        formatting function applies to.  Callables should return a string.
+        Types that are not specified (by their corresponding keys) are handled
+        by the default formatters.  Individual types for which a formatter
+        can be set are::
+
+            - 'bool'
+            - 'int'
+            - 'timedelta' : a `numpy.timedelta64`
+            - 'datetime' : a `numpy.datetime64`
+            - 'float'
+            - 'longfloat' : 128-bit floats
+            - 'complexfloat'
+            - 'longcomplexfloat' : composed of two 128-bit floats
+            - 'numpy_str' : types `numpy.string_` and `numpy.unicode_`
+            - 'str' : all other strings
+
+        Other keys that can be used to set a group of types at once are::
+
+            - 'all' : sets all types
+            - 'int_kind' : sets 'int'
+            - 'float_kind' : sets 'float' and 'longfloat'
+            - 'complex_kind' : sets 'complexfloat' and 'longcomplexfloat'
+            - 'str_kind' : sets 'str' and 'numpystr'
+
+    See Also
+    --------
+    get_printoptions, set_string_function, array2string
+
+    Notes
+    -----
+    `formatter` is always reset with a call to `set_printoptions`.
+
+    Examples
+    --------
+    Floating point precision can be set:
+
+    >>> np.set_printoptions(precision=4)
+    >>> print np.array([1.123456789])
+    [ 1.1235]
+
+    Long arrays can be summarised:
+
+    >>> np.set_printoptions(threshold=5)
+    >>> print np.arange(10)
+    [0 1 2 ..., 7 8 9]
+
+    Small results can be suppressed:
+
+    >>> eps = np.finfo(float).eps
+    >>> x = np.arange(4.)
+    >>> x**2 - (x + eps)**2
+    array([ -4.9304e-32,  -4.4409e-16,   0.0000e+00,   0.0000e+00])
+    >>> np.set_printoptions(suppress=True)
+    >>> x**2 - (x + eps)**2
+    array([-0., -0.,  0.,  0.])
+
+    A custom formatter can be used to display array elements as desired:
+
+    >>> np.set_printoptions(formatter={'all':lambda x: 'int: '+str(-x)})
+    >>> x = np.arange(3)
+    >>> x
+    array([int: 0, int: -1, int: -2])
+    >>> np.set_printoptions()  # formatter gets reset
+    >>> x
+    array([0, 1, 2])
+
+    To put back the default options, you can use:
+
+    >>> np.set_printoptions(edgeitems=3,infstr='inf',
+    ... linewidth=75, nanstr='nan', precision=8,
+    ... suppress=False, threshold=1000, formatter=None)
+    "
+                :arguments 
+                  ( ("precision" variable nil (reparse-symbol function_parameters) [1330 1339])
+                    ("threshold" variable nil (reparse-symbol function_parameters) [1346 1355])
+                    ("edgeitems" variable nil (reparse-symbol function_parameters) [1362 1371])
+                    ("linewidth" variable nil (reparse-symbol function_parameters) [1399 1408])
+                    ("suppress" variable nil (reparse-symbol function_parameters) [1415 1423])
+                    ("nanstr" variable nil (reparse-symbol function_parameters) [1451 1457])
+                    ("infstr" variable nil (reparse-symbol function_parameters) [1464 1470])
+                    ("formatter" variable nil (reparse-symbol function_parameters) [1498 1507]))                  )
+                nil [1309 5635])
+            ("get_printoptions" function (:documentation "
+    Return the current print options.
+
+    Returns
+    -------
+    print_opts : dict
+        Dictionary of current print options with keys
+
+          - precision : int
+          - threshold : int
+          - edgeitems : int
+          - linewidth : int
+          - suppress : bool
+          - nanstr : str
+          - infstr : str
+          - formatter : dict of callables
+
+        For a full description of these options, see `set_printoptions`.
+
+    See Also
+    --------
+    set_printoptions, set_string_function
+
+    ") nil [5636 6520])
+            ("_leading_trailing" function (:arguments 
+              ( ("a" variable nil (reparse-symbol function_parameters) [6543 6544]))              ) nil [6521 7201])
+            ("_boolFormatter" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [7221 7222]))              ) nil [7202 7291])
+            ("repr_format" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [7309 7310]))              ) nil [7293 7332])
+            ("_array2string" function (:arguments 
+              ( ("a" variable nil (reparse-symbol function_parameters) [7351 7352])
+                ("max_line_width" variable nil (reparse-symbol function_parameters) [7354 7368])
+                ("precision" variable nil (reparse-symbol function_parameters) [7370 7379])
+                ("suppress_small" variable nil (reparse-symbol function_parameters) [7381 7395])
+                ("separator" variable nil (reparse-symbol function_parameters) [7397 7406])
+                ("prefix" variable nil (reparse-symbol function_parameters) [7430 7436])
+                ("formatter" variable nil (reparse-symbol function_parameters) [7441 7450]))              ) nil [7333 11207])
+            ("_convert_arrays" function (:arguments 
+              ( ("obj" variable nil (reparse-symbol function_parameters) [11228 11231]))              ) nil [11208 11487])
+            ("array2string" function
+               (:documentation "
+    Return a string representation of an array.
+
+    Parameters
+    ----------
+    a : ndarray
+        Input array.
+    max_line_width : int, optional
+        The maximum number of columns the string should span. Newline
+        characters splits the string appropriately after array elements.
+    precision : int, optional
+        Floating point precision. Default is the current printing
+        precision (usually 8), which can be altered using `set_printoptions`.
+    suppress_small : bool, optional
+        Represent very small numbers as zero. A number is \"very small\" if it
+        is smaller than the current printing precision.
+    separator : str, optional
+        Inserted between elements.
+    prefix : str, optional
+        An array is typically printed as::
+
+          'prefix(' + array2string(a) + ')'
+
+        The length of the prefix string is used to align the
+        output correctly.
+    style : function, optional
+        A function that accepts an ndarray and returns a string.  Used only
+        when the shape of `a` is equal to ``()``, i.e. for 0-D arrays.
+    formatter : dict of callables, optional
+        If not None, the keys should indicate the type(s) that the respective
+        formatting function applies to.  Callables should return a string.
+        Types that are not specified (by their corresponding keys) are handled
+        by the default formatters.  Individual types for which a formatter
+        can be set are::
+
+            - 'bool'
+            - 'int'
+            - 'timedelta' : a `numpy.timedelta64`
+            - 'datetime' : a `numpy.datetime64`
+            - 'float'
+            - 'longfloat' : 128-bit floats
+            - 'complexfloat'
+            - 'longcomplexfloat' : composed of two 128-bit floats
+            - 'numpy_str' : types `numpy.string_` and `numpy.unicode_`
+            - 'str' : all other strings
+
+        Other keys that can be used to set a group of types at once are::
+
+            - 'all' : sets all types
+            - 'int_kind' : sets 'int'
+            - 'float_kind' : sets 'float' and 'longfloat'
+            - 'complex_kind' : sets 'complexfloat' and 'longcomplexfloat'
+            - 'str_kind' : sets 'str' and 'numpystr'
+
+    Returns
+    -------
+    array_str : str
+        String representation of the array.
+
+    Raises
+    ------
+    TypeError
+        if a callable in `formatter` does not return a string.
+
+    See Also
+    --------
+    array_str, array_repr, set_printoptions, get_printoptions
+
+    Notes
+    -----
+    If a formatter is specified for a certain type, the `precision` keyword is
+    ignored for that type.
+
+    This is a very flexible function; `array_repr` and `array_str` are using
+    `array2string` internally so keywords with the same name should work
+    identically in all three functions.
+
+    Examples
+    --------
+    >>> x = np.array([1e-16,1,2,3])
+    >>> print np.array2string(x, precision=2, separator=',',
+    ...                       suppress_small=True)
+    [ 0., 1., 2., 3.]
+
+    >>> x  = np.arange(3.)
+    >>> np.array2string(x, formatter={'float_kind':lambda x: \"%.2f\" % x})
+    '[0.00 1.00 2.00]'
+
+    >>> x  = np.arange(3)
+    >>> np.array2string(x, formatter={'int':lambda x: hex(x)})
+    '[0x0L 0x1L 0x2L]'
+
+    "
+                :arguments 
+                  ( ("a" variable nil (reparse-symbol function_parameters) [11506 11507])
+                    ("max_line_width" variable nil (reparse-symbol function_parameters) [11509 11523])
+                    ("precision" variable nil (reparse-symbol function_parameters) [11530 11539])
+                    ("suppress_small" variable nil (reparse-symbol function_parameters) [11563 11577])
+                    ("separator" variable nil (reparse-symbol function_parameters) [11584 11593])
+                    ("prefix" variable nil (reparse-symbol function_parameters) [11599 11605])
+                    ("style" variable nil (reparse-symbol function_parameters) [11627 11632])
+                    ("formatter" variable nil (reparse-symbol function_parameters) [11639 11648]))                  )
+                nil [11489 15676])
+            ("_extendLine" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [15693 15694])
+                ("line" variable nil (reparse-symbol function_parameters) [15696 15700])
+                ("word" variable nil (reparse-symbol function_parameters) [15702 15706])
+                ("max_line_len" variable nil (reparse-symbol function_parameters) [15708 15720])
+                ("next_line_prefix" variable nil (reparse-symbol function_parameters) [15722 15738]))              ) nil [15677 15907])
+            ("_formatArray" function
+               (:documentation "formatArray is designed for two modes of operation:
+
+    1. Full output
+
+    2. Summarized output
+
+    "
+                :arguments 
+                  ( ("a" variable nil (reparse-symbol function_parameters) [15926 15927])
+                    ("format_function" variable nil (reparse-symbol function_parameters) [15929 15944])
+                    ("rank" variable nil (reparse-symbol function_parameters) [15946 15950])
+                    ("max_line_len" variable nil (reparse-symbol function_parameters) [15952 15964])
+                    ("next_line_prefix" variable nil (reparse-symbol function_parameters) [15983 15999])
+                    ("separator" variable nil (reparse-symbol function_parameters) [16001 16010])
+                    ("edge_items" variable nil (reparse-symbol function_parameters) [16012 16022])
+                    ("summary_insert" variable nil (reparse-symbol function_parameters) [16024 16038]))                  )
+                nil [15909 18482])
+            ("FloatFormat" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [18587 18613])
+                            ("self" variable nil (reparse-symbol indented_block_body) [18622 18658])
+                            ("self" variable nil (reparse-symbol indented_block_body) [18667 18683])
+                            ("self" variable nil (reparse-symbol indented_block_body) [18692 18715])
+                            ("self" variable nil (reparse-symbol indented_block_body) [18724 18751])
+                            ("self" variable nil (reparse-symbol indented_block_body) [18760 18780])
+                            ("try" code nil (reparse-symbol indented_block_body) [18789 19012]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18527 18531])
+                            ("data" variable nil (reparse-symbol function_parameters) [18533 18537])
+                            ("precision" variable nil (reparse-symbol function_parameters) [18539 18548])
+                            ("suppress_small" variable nil (reparse-symbol function_parameters) [18550 18564])
+                            ("sign" variable nil (reparse-symbol function_parameters) [18566 18570]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [18514 19012])
+                    ("fillFormat" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19032 19036])
+                            ("data" variable nil (reparse-symbol function_parameters) [19038 19042]))                          )
+                        (reparse-symbol indented_block_body) [19017 21005])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21023 21027])
+                            ("x" variable nil (reparse-symbol function_parameters) [21029 21030])
+                            ("strip_zeros" variable nil (reparse-symbol function_parameters) [21032 21043]))                          )
+                        (reparse-symbol indented_block_body) [21010 22119]))                  
+                :type "class")
+                nil [18483 22119])
+            ("_digits" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [22133 22134])
+                ("precision" variable nil (reparse-symbol function_parameters) [22136 22145])
+                ("format" variable nil (reparse-symbol function_parameters) [22147 22153]))              ) nil [22121 22236])
+            ("IntegerFormat" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("try" code nil (reparse-symbol indented_block_body) [22305 22765]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22284 22288])
+                            ("data" variable nil (reparse-symbol function_parameters) [22290 22294]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [22271 22765])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22783 22787])
+                            ("x" variable nil (reparse-symbol function_parameters) [22789 22790]))                          )
+                        (reparse-symbol indented_block_body) [22770 22904]))                  
+                :type "class")
+                nil [22238 22904])
+            ("LongFloatFormat" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [23117 23143])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23152 23168]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23079 23083])
+                            ("precision" variable nil (reparse-symbol function_parameters) [23085 23094])
+                            ("sign" variable nil (reparse-symbol function_parameters) [23096 23100]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [23066 23169])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23187 23191])
+                            ("x" variable nil (reparse-symbol function_parameters) [23193 23194]))                          )
+                        (reparse-symbol indented_block_body) [23174 23839]))                  
+                :type "class")
+                nil [22905 23839])
+            ("LongComplexFormat" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [23917 23962])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23971 24027]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23891 23895])
+                            ("precision" variable nil (reparse-symbol function_parameters) [23897 23906]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [23878 24028])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24046 24050])
+                            ("x" variable nil (reparse-symbol function_parameters) [24052 24053]))                          )
+                        (reparse-symbol indented_block_body) [24033 24157]))                  
+                :type "class")
+                nil [23841 24157])
+            ("ComplexFormat" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [24250 24315])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24324 24439]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24205 24209])
+                            ("x" variable nil (reparse-symbol function_parameters) [24211 24212])
+                            ("precision" variable nil (reparse-symbol function_parameters) [24214 24223])
+                            ("suppress_small" variable nil (reparse-symbol function_parameters) [24225 24239]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [24192 24440])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24458 24462])
+                            ("x" variable nil (reparse-symbol function_parameters) [24464 24465]))                          )
+                        (reparse-symbol indented_block_body) [24445 24759]))                  
+                :type "class")
+                nil [24159 24759])
+            ("DatetimeFormat" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [24926 25073])
+                            ("if" code nil (reparse-symbol indented_block_body) [25159 25425])
+                            ("self" variable nil (reparse-symbol indented_block_body) [25433 25449])
+                            ("self" variable nil (reparse-symbol indented_block_body) [25458 25480]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24807 24811])
+                            ("x" variable nil (reparse-symbol function_parameters) [24813 24814])
+                            ("unit" variable nil (reparse-symbol function_parameters) [24816 24820])
+                            ("timezone" variable nil (reparse-symbol function_parameters) [24843 24851])
+                            ("casting" variable nil (reparse-symbol function_parameters) [24858 24865]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [24794 25481])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25499 25503])
+                            ("x" variable nil (reparse-symbol function_parameters) [25505 25506]))                          )
+                        (reparse-symbol indented_block_body) [25486 25725]))                  
+                :type "class")
+                nil [24760 25725])
+            ("TimedeltaFormat" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [25795 26027]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25774 25778])
+                            ("data" variable nil (reparse-symbol function_parameters) [25780 25784]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [25761 26027])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26045 26049])
+                            ("x" variable nil (reparse-symbol function_parameters) [26051 26052]))                          )
+                        (reparse-symbol indented_block_body) [26032 26099]))                  
+                :type "class")
+                nil [25726 26099]))          
+      :file "arrayprint.py"
+      :pointmax 26099
+      :fsize 26098
+      :lastmodtime '(21882 1394 148467 686000)
+      :unmatched-syntax '((FROM 21059 . 21063) (PERIOD 21064 . 21065) (FROM 19053 . 19057) (PERIOD 19058 . 19059) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565) (FROM 21059 . 21063) (PERIOD 21064 . 21065) (FROM 19053 . 19057) (PERIOD 19058 . 19059) (FROM 11238 . 11242) (PERIOD 11243 . 11244) (FROM 6551 . 6555) (PERIOD 6556 . 6557) (FROM 771 . 775) (PERIOD 776 . 777) (FROM 740 . 744) (PERIOD 745 . 746) (FROM 664 . 668) (PERIOD 669 . 670) (FROM 593 . 597) (PERIOD 598 . 599) (FROM 559 . 563) (PERIOD 564 . 565))))
+  :file "!home!amit!Drive!projects!git-cloned!numpy!numpy!core!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

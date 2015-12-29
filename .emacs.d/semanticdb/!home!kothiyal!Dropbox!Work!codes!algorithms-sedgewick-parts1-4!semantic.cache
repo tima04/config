@@ -1,0 +1,66 @@
+;; Object algorithms-sedgewick-parts1-4/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "algorithms-sedgewick-parts1-4/"
+  :tables
+  (list
+    (semanticdb-table "max_val_type.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [76 94])
+            ("get_max2" variable (:constant-flag t) nil [174 182])
+            ("get_max" function
+               (:arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [273 279]))                  
+                :type "int")
+                nil [261 376])
+            ("main" function (:type "int") nil [378 586]))          
+      :file "max_val_type.c"
+      :pointmax 590
+      :fsize 589
+      :lastmodtime '(21988 20118 292571 493000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("get_max2" (spp-arg-list ("i") 182 . 185) . 
+              ((open-paren "(" 186 . 187) (FOR "for" 187 . 190) (semantic-list "(; i < 2*i; i *= 2)" 191 . 210)))
+          )
+)
+    (semanticdb-table "temp.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [22 42])
+            ("exch" function
+               (:template 
+                  ( ("Item" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("x" variable
+                       (:reference 1
+                        :type ("Item" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78 86])
+                    ("y" variable
+                       (:reference 1
+                        :type ("Item" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [87 95]))                  )
+                nil [44 129])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [140 149])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [150 163]))                  
+                :type "int")
+                nil [131 277]))          
+      :file "temp.cpp"
+      :pointmax 278
+      :fsize 277
+      :lastmodtime '(21998 58334 953295 328000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!codes!algorithms-sedgewick-parts1-4!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

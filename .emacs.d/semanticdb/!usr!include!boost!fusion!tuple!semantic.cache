@@ -1,0 +1,98 @@
+;; Object tuple/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tuple/"
+  :tables
+  (list
+    (semanticdb-table "tuple.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("FUSION_TUPLE_10032005_0810" variable (:constant-flag t) nil [410 436])
+            ("boost/fusion/tuple/tuple_fwd.hpp" include (:system-flag t) nil [438 481])
+            ("boost/fusion/container/vector/vector.hpp" include (:system-flag t) nil [482 533])
+            ("boost/fusion/sequence/intrinsic/size.hpp" include (:system-flag t) nil [534 585])
+            ("boost/fusion/sequence/intrinsic/value_at.hpp" include (:system-flag t) nil [586 641])
+            ("boost/fusion/sequence/intrinsic/at.hpp" include (:system-flag t) nil [642 691])
+            ("boost/fusion/sequence/comparison.hpp" include (:system-flag t) nil [692 739])
+            ("boost/fusion/sequence/io.hpp" include (:system-flag t) nil [740 779])
+            ("boost/utility/enable_if.hpp" include (:system-flag t) nil [780 818])
+            ("boost/type_traits/is_const.hpp" include (:system-flag t) nil [819 860])
+            ("boost/config/no_tr1/utility.hpp" include (:system-flag t) nil [861 903])
+            ("boost/fusion/tuple/detail/preprocessed/tuple.hpp" include (:system-flag t) nil [960 1019]))          
+      :file "tuple.hpp"
+      :pointmax 3560
+      :fsize 3559
+      :lastmodtime '(21413 1118 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("FUSION_TUPLE_10032005_0810")
+          )
+)
+    (semanticdb-table "make_tuple.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("FUSION_MAKE_TUPLE_10032005_0843" variable (:constant-flag t) nil [445 476])
+            ("boost/preprocessor/iterate.hpp" include (:system-flag t) nil [478 519])
+            ("boost/preprocessor/repetition/enum_params.hpp" include (:system-flag t) nil [520 576])
+            ("boost/preprocessor/repetition/enum_binary_params.hpp" include (:system-flag t) nil [577 640])
+            ("boost/fusion/tuple/tuple.hpp" include (:system-flag t) nil [641 680])
+            ("boost/fusion/support/detail/as_fusion_element.hpp" include (:system-flag t) nil [681 741])
+            ("boost" type
+               (:members 
+                  ( ("fusion" type
+                       (:members 
+                          ( ("make_tuple" function
+                               (:typemodifiers ("inline")
+                                :type ("tuple" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [784 853]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [761 855]))                  
+                :type "namespace")
+                nil [743 856])
+            ("boost/fusion/tuple/detail/preprocessed/make_tuple.hpp" include (:system-flag t) nil [913 977]))          
+      :file "make_tuple.hpp"
+      :pointmax 2908
+      :fsize 2907
+      :lastmodtime '(21413 1118 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("FUSION_MAKE_TUPLE_10032005_0843")
+          )
+)
+    (semanticdb-table "tuple_tie.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("FUSION_TUPLE_TIE_10032005_0846" variable (:constant-flag t) nil [444 474])
+            ("boost/preprocessor/iterate.hpp" include (:system-flag t) nil [476 517])
+            ("boost/preprocessor/cat.hpp" include (:system-flag t) nil [518 555])
+            ("boost/preprocessor/repetition/enum_params.hpp" include (:system-flag t) nil [556 612])
+            ("boost/preprocessor/repetition/enum_binary_params.hpp" include (:system-flag t) nil [613 676])
+            ("boost/fusion/tuple/tuple.hpp" include (:system-flag t) nil [677 716])
+            ("boost/fusion/tuple/detail/preprocessed/tuple_tie.hpp" include (:system-flag t) nil [773 836]))          
+      :file "tuple_tie.hpp"
+      :pointmax 2620
+      :fsize 2619
+      :lastmodtime '(21413 1118 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("FUSION_TUPLE_TIE_10032005_0846")
+          )
+)
+    (semanticdb-table "tuple_fwd.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("FUSION_TUPLE_FORWARD_10032005_0956" variable (:constant-flag t) nil [418 452])
+            ("boost/fusion/container/vector/limits.hpp" include (:system-flag t) nil [454 505])
+            ("boost/preprocessor/repetition/enum_params_with_a_default.hpp" include (:system-flag t) nil [506 577])
+            ("boost/fusion/tuple/detail/preprocessed/tuple_fwd.hpp" include (:system-flag t) nil [634 697]))          
+      :file "tuple_fwd.hpp"
+      :pointmax 1800
+      :fsize 1799
+      :lastmodtime '(21413 1118 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("FUSION_TUPLE_FORWARD_10032005_0956")
+          )
+))
+  :file "!usr!include!boost!fusion!tuple!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

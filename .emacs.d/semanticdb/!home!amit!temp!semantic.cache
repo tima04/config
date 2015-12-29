@@ -1,0 +1,56 @@
+;; Object temp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "temp/"
+  :tables
+  (list
+    (semanticdb-table "temp.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pandas" include nil nil [1 20])
+            ("tables" include nil nil [21 40])
+            ("numpy" include nil nil [41 59])
+            ("dfp" variable nil nil [61 89])
+            ("dfn" variable nil nil [90 120])
+            ("h5fl" variable nil nil [121 171])
+            ("h5fl" code nil nil [172 202])
+            ("h5fl" code nil nil [203 244])
+            ("h5fl" code nil nil [245 257])
+            ("tbl" variable nil nil [258 290])
+            ("dfp" code nil nil [311 321])
+            ("dfn" code nil nil [322 330])
+            ("tbl" code nil nil [331 342])
+            ("for" code nil nil [343 427])
+            ("dfp" code nil nil [453 468])
+            ("dfp" code nil nil [469 494])
+            ("dfn" code nil nil [495 510])
+            ("dfn" code nil nil [511 536])
+            ("tbl" code nil nil [537 565])
+            ("dfp" code nil nil [685 719])
+            ("dfp" code nil nil [737 789])
+            ("dfn" code nil nil [814 861])
+            ("dfn" code nil nil [880 940])
+            ("tbl" code nil nil [964 1033])
+            ("" code nil nil [1051 1137])
+            ("" code nil nil [1156 1233])
+            ("tbl" code nil nil [1252 1302])
+            ("agg" function (:arguments 
+              ( ("fun" variable nil (reparse-symbol function_parameters) [1470 1473])
+                ("arr" variable nil (reparse-symbol function_parameters) [1475 1478])
+                ("axis" variable nil (reparse-symbol function_parameters) [1480 1484]))              ) nil [1462 1757])
+            ("dfp" code nil nil [1758 1785])
+            ("agg" code nil nil [1803 1837])
+            ("agg" code nil nil [1856 1893])
+            ("dfp" code nil nil [1913 1939])
+            ("pd" code nil nil [1940 1980])
+            ("dfp" code nil nil [2041 2096])
+            ("foo" variable nil nil [2218 2321])
+            ("bar" variable nil nil [2322 2373]))          
+      :file "temp.py"
+      :pointmax 2375
+      :fsize 2385
+      :lastmodtime '(21963 52684 559383 298000)
+      :unmatched-syntax nil)
+)
+  :file "!home!amit!temp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,20 @@
+;; Object c++/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "c++/"
+  :tables
+  (list
+    (semanticdb-table "example.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("boost/regex.hpp" include (:system-flag t) nil [1 27])
+            ("iostream" include (:system-flag t) nil [28 47])
+            ("string" include (:system-flag t) nil [48 65])
+            ("main" function (:type "int") nil [67 352]))          
+      :file "example.cpp"
+      :pointmax 467
+      :fsize 466
+      :lastmodtime '(21935 40676 362445 690000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!codes!c++!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

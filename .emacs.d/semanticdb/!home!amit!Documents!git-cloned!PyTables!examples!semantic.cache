@@ -1,0 +1,62 @@
+;; Object examples/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "examples/"
+  :tables
+  (list
+    (semanticdb-table "add-column.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"Example showing how to add a column on a existing column\"" code nil nil [1 59])
+            ("__future__" include nil nil [61 98])
+            ("tables" include nil nil [99 112])
+            ("Particle" type
+               (:superclasses ("tables.IsDescription")
+                :members 
+                  ( ("name" variable nil (reparse-symbol indented_block_body) [157 191])
+                    ("lati" variable nil (reparse-symbol indented_block_body) [223 252])
+                    ("longi" variable nil (reparse-symbol indented_block_body) [277 307])
+                    ("pressure" variable nil (reparse-symbol indented_block_body) [331 366])
+                    ("temperature" variable nil (reparse-symbol indented_block_body) [403 441]))                  
+                :type "class")
+                nil [115 471])
+            ("fileh" variable nil nil [502 553])
+            ("group" variable nil nil [575 625])
+            ("table" variable nil nil [666 775])
+            ("table" code nil nil [799 984])
+            ("print" code nil nil [986 1056])
+            ("fileh" code nil nil [1075 1088])
+            ("fileh" variable nil nil [1121 1167])
+            ("group" variable nil nil [1168 1195])
+            ("table" variable nil nil [1196 1215])
+            ("descr" variable nil nil [1267 1306])
+            ("descr2" variable nil nil [1307 1328])
+            ("descr2" variable nil nil [1360 1402])
+            ("table2" variable nil nil [1450 1560])
+            ("table" code nil nil [1589 1616])
+            ("for" code nil nil [1667 1720])
+            ("table2" code nil nil [1745 1759])
+            ("for" code nil nil [1811 1892])
+            ("table2" variable nil nil [1915 1983])
+            ("table" code nil nil [2013 2027])
+            ("table2" code nil nil [2052 2085])
+            ("print" code nil nil [2109 2188])
+            ("fileh" code nil nil [2216 2229])
+            ("Foo" type
+               (:superclasses ("object")
+                :members 
+                  ( ("x" variable nil (reparse-symbol indented_block_body) [2271 2276])
+                    ("foo" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2289 2293]))                          )
+                        (reparse-symbol indented_block_body) [2281 2317]))                  
+                :type "class")
+                nil [2248 2317]))          
+      :file "add-column.py"
+      :pointmax 2317
+      :fsize 2229
+      :lastmodtime '(21961 56565 369445 381000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Documents!git-cloned!PyTables!examples!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

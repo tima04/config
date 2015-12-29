@@ -1,0 +1,824 @@
+;; Object code/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "code/"
+  :tables
+  (list
+    (semanticdb-table "categorize.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("re" include nil nil [1 10])
+            ("os" include nil nil [11 20])
+            ("json" include nil nil [21 32])
+            ("difflib" include nil nil [33 74])
+            ("main" function (:documentation "categorize the entries in the database for which abstract and(or) keywords 
+    are available.
+    ") nil [76 656])
+            ("Categorize" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        For some articles keywords and abstract are known for other not, in later case
+        provide the whole article and the info method will try to find them.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [771 950])
+                            ("self" variable nil (reparse-symbol indented_block_body) [959 981])
+                            ("self" variable nil (reparse-symbol indented_block_body) [990 1014])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1023 1047])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1076 1202])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1244 1419])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1428 1454]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [700 704])
+                            ("article" variable nil (reparse-symbol function_parameters) [706 713])
+                            ("keywords" variable nil (reparse-symbol function_parameters) [718 726])
+                            ("abstract" variable nil (reparse-symbol function_parameters) [731 739])
+                            ("threshold" variable nil (reparse-symbol function_parameters) [744 753]))                          
+                        :documentation "
+        For some articles keywords and abstract are known for other not, in later case
+        provide the whole article and the info method will try to find them.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [687 1486])
+                    ("info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1500 1504]))                          
+                        :documentation "
+        return the abstract and the keywords of the article.
+        ")
+                        (reparse-symbol indented_block_body) [1491 3476])
+                    ("fuzzy_match" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3497 3501])
+                            ("words" variable nil (reparse-symbol function_parameters) [3503 3508])
+                            ("txt" variable nil (reparse-symbol function_parameters) [3510 3513])
+                            ("threshold" variable nil (reparse-symbol function_parameters) [3515 3524]))                          
+                        :documentation "
+        words is a space or '-' separated list of words, if there are n words in words
+        then take first n words from the txt and fuzzy match them if match successfull
+        (bigger then threshold) then return else look at next n words.
+        ")
+                        (reparse-symbol indented_block_body) [3481 4481])
+                    ("getcats" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4498 4502]))                          )
+                        (reparse-symbol indented_block_body) [4486 5586]))                  
+                :type "class")
+                nil [657 5586]))          
+      :file "categorize.py"
+      :pointmax 5607
+      :fsize 5606
+      :lastmodtime '(22089 4370 191292 307000)
+      :unmatched-syntax nil)
+
+    (semanticdb-table "format_bib_entries.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("re" include nil nil [1 10])
+            ("\"\"\"
+require format:
+
+@article{mrx05, 
+auTHor = \"Mr. X\", 
+Title = {Something Great}, 
+publisher = \"nob\" # \"ody\", 
+YEAR = 2005, 
+}
+
+example entry: 
+Authors: Artinger, S., & Powell, T. C. 
+Year: in press
+Title: Entrepreneurial failure: Statistical and psychological explanations. 
+Journal: Strategic Management Journal, [vol?], [pages?]
+Monograph: 
+Editors: 
+Edition: 
+Publisher: 
+DOI: 10.1002/smj.2378
+URL: 
+\"\"\"" code nil nil [11 420])
+            ("fmt_bibs" variable nil nil [478 491])
+            ("for" code nil nil [492 1028])
+            ("for" code nil nil [1074 1279])
+            ("flp" code nil nil [1279 1290]))          
+      :file "format_bib_entries.py"
+      :pointmax 1324
+      :fsize 1323
+      :lastmodtime '(22089 45506 72693 965000)
+      :unmatched-syntax nil)
+    (semanticdb-table "temp.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("foo" variable nil nil [1 48])
+            ("sub" variable nil nil [49 57])
+            ("for" code nil nil [58 167])
+            ("bar" function (:arguments 
+              ( ("i" variable nil (reparse-symbol function_parameters) [177 178]))              ) nil [169 465])
+            ("Categorize" code nil nil [475 572]))          
+      :file "temp.py"
+      :pointmax 599
+      :fsize 392
+      :lastmodtime '(22089 1471 219140 960000)
+      :unmatched-syntax '((STRING_LITERAL 573 . 596) (GT 598 . 599) (STRING_LITERAL 475 . 498) (GT 500 . 501) (STRING_LITERAL 475 . 498) ($EOI 500 . 500) (STRING_LITERAL 475 . 498) ($EOI 499 . 499) (STRING_LITERAL 475 . 498) ($EOI 498 . 498)))
+    (semanticdb-table "scholar.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+This module provides classes for querying Google Scholar and parsing
+returned results. It currently *only* processes the first results
+page. It is not a recursive crawler.
+\"\"\"" code nil nil [24 203])
+            ("optparse" include nil nil [6390 6405])
+            ("os" include nil nil [6406 6415])
+            ("sys" include nil nil [6416 6426])
+            ("re" include nil nil [6427 6436])
+            ("try" code nil nil [6438 6902])
+            ("try" code nil nil [6961 7170])
+            ("if" code nil nil [7242 7538])
+            ("Error" type
+               (:documentation "Base class for any Scholar error."
+                :superclasses ("Exception")
+                :type "class")
+                nil [7540 7608])
+            ("FormatError" type
+               (:documentation "A query argument or setting was formatted incorrectly."
+                :superclasses ("Error")
+                :type "class")
+                nil [7610 7701])
+            ("QueryArgumentError" type
+               (:documentation "A query did not have a suitable set of arguments."
+                :superclasses ("Error")
+                :type "class")
+                nil [7703 7796])
+            ("ScholarConf" type
+               (:documentation "Helper class for global settings."
+                :superclasses ("object")
+                :members 
+                  ( ("VERSION" variable nil (reparse-symbol indented_block_body) [7874 7889])
+                    ("LOG_LEVEL" variable nil (reparse-symbol indented_block_body) [7894 7907])
+                    ("MAX_PAGE_RESULTS" variable nil (reparse-symbol indented_block_body) [7912 7933])
+                    ("SCHOLAR_SITE" variable nil (reparse-symbol indented_block_body) [7977 8019])
+                    ("USER_AGENT" variable nil (reparse-symbol indented_block_body) [8170 8253])
+                    ("COOKIE_JAR_FILE" variable nil (reparse-symbol indented_block_body) [8360 8382]))                  
+                :type "class")
+                nil [7798 8383])
+            ("ScholarUtils" type
+               (:documentation "A wrapper for various utensils that come in handy."
+                :superclasses ("object")
+                :members 
+                  ( ("LOG_LEVELS" variable nil (reparse-symbol indented_block_body) [8478 8593])
+                    ("ensure_int" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("arg" variable nil (reparse-symbol function_parameters) [8632 8635])
+                            ("msg" variable nil (reparse-symbol function_parameters) [8637 8640]))                          
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [8599 8751])
+                    ("log" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("level" variable nil (reparse-symbol function_parameters) [8782 8787])
+                            ("msg" variable nil (reparse-symbol function_parameters) [8789 8792]))                          
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [8756 9051]))                  
+                :type "class")
+                nil [8384 9051])
+            ("ScholarArticle" type
+               (:documentation "
+    A class representing articles listed on Google Scholar.  The class
+    provides basic dictionary-like behavior.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [9410 10072])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10172 10197]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9232 9236]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [9219 10198])
+                    ("__getitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10219 10223])
+                            ("key" variable nil (reparse-symbol function_parameters) [10225 10228]))                          )
+                        (reparse-symbol indented_block_body) [10203 10319])
+                    ("__len__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10336 10340]))                          )
+                        (reparse-symbol indented_block_body) [10324 10374])
+                    ("__setitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10395 10399])
+                            ("key" variable nil (reparse-symbol function_parameters) [10401 10404])
+                            ("item" variable nil (reparse-symbol function_parameters) [10406 10410]))                          )
+                        (reparse-symbol indented_block_body) [10379 10554])
+                    ("__delitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10575 10579])
+                            ("key" variable nil (reparse-symbol function_parameters) [10581 10584]))                          )
+                        (reparse-symbol indented_block_body) [10559 10649])
+                    ("set_citation_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10676 10680])
+                            ("citation_data" variable nil (reparse-symbol function_parameters) [10682 10695]))                          )
+                        (reparse-symbol indented_block_body) [10654 10741])
+                    ("as_txt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10757 10761]))                          )
+                        (reparse-symbol indented_block_body) [10746 11196])
+                    ("as_csv" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11212 11216])
+                            ("header" variable nil (reparse-symbol function_parameters) [11218 11224])
+                            ("sep" variable nil (reparse-symbol function_parameters) [11232 11235]))                          )
+                        (reparse-symbol indented_block_body) [11201 11638])
+                    ("as_citation" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11659 11663]))                          
+                        :documentation "
+        Reports the article in a standard citation format. This works only
+        if you have configured the querier to retrieve a particular
+        citation export format. (See ScholarSettings.)
+        ")
+                        (reparse-symbol indented_block_body) [11643 11928]))                  
+                :type "class")
+                nil [9053 11928])
+            ("ScholarArticleParser" type
+               (:documentation "
+    ScholarArticleParser can parse HTML document strings obtained from
+    Google Scholar. This is a base class; concrete implementations
+    adapting to tweaks made by Google over time follow below.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [12225 12241])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12250 12269])
+                            ("self" code nil (reparse-symbol indented_block_body) [12278 12322])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12331 12379]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12199 12203])
+                            ("site" variable nil (reparse-symbol function_parameters) [12205 12209]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [12186 12380])
+                    ("handle_article" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12404 12408])
+                            ("art" variable nil (reparse-symbol function_parameters) [12410 12413]))                          
+                        :documentation "
+        The parser invokes this callback on each article parsed
+        successfully.  In this base class, the callback does nothing.
+        ")
+                        (reparse-symbol indented_block_body) [12385 12574])
+                    ("handle_num_results" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12602 12606])
+                            ("num_results" variable nil (reparse-symbol function_parameters) [12608 12619]))                          
+                        :documentation "
+        The parser invokes this callback if it determines the overall
+        number of results, as reported on the parsed results page. The
+        base class implementation does nothing.
+        ")
+                        (reparse-symbol indented_block_body) [12579 12835])
+                    ("parse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12850 12854])
+                            ("html" variable nil (reparse-symbol function_parameters) [12856 12860]))                          
+                        :documentation "
+        This method initiates parsing of HTML content, cleans resulting
+        content as needed, and notifies the parser instance of
+        resulting instances via the handle_article callback.
+        ")
+                        (reparse-symbol indented_block_body) [12840 13509])
+                    ("_clean_article" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13533 13537]))                          
+                        :documentation "
+        This gets invoked after we have parsed an article, to do any
+        needed cleanup/polishing before we hand off the resulting
+        article.
+        ")
+                        (reparse-symbol indented_block_body) [13514 13816])
+                    ("_parse_globals" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13840 13844]))                          )
+                        (reparse-symbol indented_block_body) [13821 14546])
+                    ("_parse_article" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14570 14574])
+                            ("div" variable nil (reparse-symbol function_parameters) [14576 14579]))                          )
+                        (reparse-symbol indented_block_body) [14551 15411])
+                    ("_parse_links" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15433 15437])
+                            ("span" variable nil (reparse-symbol function_parameters) [15439 15443]))                          )
+                        (reparse-symbol indented_block_body) [15416 17259])
+                    ("_tag_has_class" function
+                       (:typemodifiers ("static")
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("tag" variable nil (reparse-symbol function_parameters) [17302 17305])
+                            ("klass" variable nil (reparse-symbol function_parameters) [17307 17312]))                          
+                        :documentation "
+        This predicate function checks whether a BeatifulSoup Tag instance
+        has a class attribute.
+        ")
+                        (reparse-symbol indented_block_body) [17265 17703])
+                    ("_tag_results_checker" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("tag" variable nil (reparse-symbol function_parameters) [17751 17754]))                          
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [17708 17857])
+                    ("_as_int" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("obj" variable nil (reparse-symbol function_parameters) [17892 17895]))                          
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [17862 17990])
+                    ("_path2url" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18009 18013])
+                            ("path" variable nil (reparse-symbol function_parameters) [18015 18019]))                          
+                        :documentation "Helper, returns full URL in case path isn't one.")
+                        (reparse-symbol indented_block_body) [17995 18247])
+                    ("_strip_url_arg" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18271 18275])
+                            ("arg" variable nil (reparse-symbol function_parameters) [18277 18280])
+                            ("url" variable nil (reparse-symbol function_parameters) [18282 18285]))                          
+                        :documentation "Helper, removes a URL-encoded argument, if present.")
+                        (reparse-symbol indented_block_body) [18252 18623]))                  
+                :type "class")
+                nil [11930 18623])
+            ("ScholarArticleParser120201" type
+               (:documentation "
+    This class reflects update to the Scholar results page layout that
+    Google recently.
+    "
+                :superclasses ("ScholarArticleParser")
+                :members 
+                  ( ("_parse_article" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18812 18816])
+                            ("div" variable nil (reparse-symbol function_parameters) [18818 18821]))                          )
+                        (reparse-symbol indented_block_body) [18793 19614]))                  
+                :type "class")
+                nil [18625 19614])
+            ("ScholarArticleParser120726" type
+               (:documentation "
+    This class reflects update to the Scholar results page layout that
+    Google made 07/26/12.
+    "
+                :superclasses ("ScholarArticleParser")
+                :members 
+                  ( ("_parse_article" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19808 19812])
+                            ("div" variable nil (reparse-symbol function_parameters) [19814 19817]))                          )
+                        (reparse-symbol indented_block_body) [19789 22607]))                  
+                :type "class")
+                nil [19616 22607])
+            ("ScholarQuery" type
+               (:documentation "
+    The base class for any kind of results query we send to Scholar.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [22754 22769])
+                            ("self" variable nil (reparse-symbol indented_block_body) [22946 22993])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23238 23253]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22739 22743]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [22726 23254])
+                    ("set_num_page_results" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23284 23288])
+                            ("num_page_results" variable nil (reparse-symbol function_parameters) [23290 23306]))                          )
+                        (reparse-symbol indented_block_body) [23259 23449])
+                    ("get_url" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23466 23470]))                          
+                        :documentation "
+        Returns a complete, submittable URL string for this particular
+        query instance. The URL and its arguments will vary depending
+        on the query.
+        ")
+                        (reparse-symbol indented_block_body) [23454 23680])
+                    ("_add_attribute_type" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23709 23713])
+                            ("key" variable nil (reparse-symbol function_parameters) [23715 23718])
+                            ("label" variable nil (reparse-symbol function_parameters) [23720 23725])
+                            ("default_value" variable nil (reparse-symbol function_parameters) [23727 23740]))                          
+                        :documentation "
+        Adds a new type of attribute to the list of attributes
+        understood by this query. Meant to be used by the constructors
+        in derived classes.
+        ")
+                        (reparse-symbol indented_block_body) [23685 24161])
+                    ("__getitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24182 24186])
+                            ("key" variable nil (reparse-symbol function_parameters) [24188 24191]))                          
+                        :documentation "Getter for attribute value. Returns None if no such key.")
+                        (reparse-symbol indented_block_body) [24166 24353])
+                    ("__setitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24374 24378])
+                            ("key" variable nil (reparse-symbol function_parameters) [24380 24383])
+                            ("item" variable nil (reparse-symbol function_parameters) [24385 24389]))                          
+                        :documentation "Setter for attribute value. Does nothing if no such key.")
+                        (reparse-symbol indented_block_body) [24358 24531])
+                    ("_parenthesize_phrases" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24562 24566])
+                            ("query" variable nil (reparse-symbol function_parameters) [24568 24573]))                          
+                        :documentation "
+        Turns a query string containing comma-separated phrases into a
+        space-separated list of tokens, quoted if containing
+        whitespace. For example, input
+
+          'some words, foo, bar'
+
+        becomes
+
+          '\"some words\" foo bar'
+
+        This comes in handy during the composition of certain queries.
+        ")
+                        (reparse-symbol indented_block_body) [24536 25231]))                  
+                :type "class")
+                nil [22609 25231])
+            ("ClusterScholarQuery" type
+               (:documentation "
+    This version just pulls up an article cluster whose ID we already
+    know about.
+    "
+                :superclasses ("ScholarQuery")
+                :members 
+                  ( ("SCHOLAR_CLUSTER_URL" code nil (reparse-symbol indented_block_body) [25380 25501])
+                    ("__init__" function
+                       (:suite 
+                          ( ("ScholarQuery" code nil (reparse-symbol indented_block_body) [25549 25576])
+                            ("self" code nil (reparse-symbol indented_block_body) [25585 25638])
+                            ("self" variable nil (reparse-symbol indented_block_body) [25647 25666])
+                            ("self" code nil (reparse-symbol indented_block_body) [25675 25700]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25520 25524])
+                            ("cluster" variable nil (reparse-symbol function_parameters) [25526 25533]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [25507 25701])
+                    ("set_cluster" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25722 25726])
+                            ("cluster" variable nil (reparse-symbol function_parameters) [25728 25735]))                          
+                        :documentation "
+        Sets search to a Google Scholar results cluster ID.
+        ")
+                        (reparse-symbol indented_block_body) [25706 25926])
+                    ("get_url" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25943 25947]))                          )
+                        (reparse-symbol indented_block_body) [25931 26314]))                  
+                :type "class")
+                nil [25233 26314])
+            ("SearchScholarQuery" type
+               (:documentation "
+    This version represents the search query parameters the user can
+    configure on the Scholar website, in the advanced search options.
+    "
+                :superclasses ("ScholarQuery")
+                :members 
+                  ( ("SCHOLAR_QUERY_URL" code nil (reparse-symbol indented_block_body) [26515 27006])
+                    ("__init__" function
+                       (:suite 
+                          ( ("ScholarQuery" code nil (reparse-symbol indented_block_body) [27040 27067])
+                            ("self" code nil (reparse-symbol indented_block_body) [27076 27129])
+                            ("self" variable nil (reparse-symbol indented_block_body) [27138 27155])
+                            ("self" variable nil (reparse-symbol indented_block_body) [27194 27216])
+                            ("self" variable nil (reparse-symbol indented_block_body) [27255 27277])
+                            ("self" variable nil (reparse-symbol indented_block_body) [27308 27326])
+                            ("self" variable nil (reparse-symbol indented_block_body) [27335 27359])
+                            ("self" variable nil (reparse-symbol indented_block_body) [27400 27418])
+                            ("self" variable nil (reparse-symbol indented_block_body) [27428 27443])
+                            ("self" variable nil (reparse-symbol indented_block_body) [27452 27481])
+                            ("self" variable nil (reparse-symbol indented_block_body) [27490 27517])
+                            ("self" variable nil (reparse-symbol indented_block_body) [27526 27555]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27025 27029]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [27012 27556])
+                    ("set_words" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27575 27579])
+                            ("words" variable nil (reparse-symbol function_parameters) [27581 27586]))                          
+                        :documentation "Sets words that *all* must be found in the result.")
+                        (reparse-symbol indented_block_body) [27561 27681])
+                    ("set_words_some" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27705 27709])
+                            ("words" variable nil (reparse-symbol function_parameters) [27711 27716]))                          
+                        :documentation "Sets words of which *at least one* must be found in result.")
+                        (reparse-symbol indented_block_body) [27686 27825])
+                    ("set_words_none" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27849 27853])
+                            ("words" variable nil (reparse-symbol function_parameters) [27855 27860]))                          
+                        :documentation "Sets words of which *none* must be found in the result.")
+                        (reparse-symbol indented_block_body) [27830 27965])
+                    ("set_phrase" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27985 27989])
+                            ("phrase" variable nil (reparse-symbol function_parameters) [27991 27997]))                          
+                        :documentation "Sets phrase that must be found in the result exactly.")
+                        (reparse-symbol indented_block_body) [27970 28097])
+                    ("set_scope" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28116 28120])
+                            ("title_only" variable nil (reparse-symbol function_parameters) [28122 28132]))                          
+                        :documentation "
+        Sets Boolean indicating whether to search entire article or title
+        only.
+        ")
+                        (reparse-symbol indented_block_body) [28102 28285])
+                    ("set_author" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28305 28309])
+                            ("author" variable nil (reparse-symbol function_parameters) [28311 28317]))                          
+                        :documentation "Sets names that must be on the result's author list.")
+                        (reparse-symbol indented_block_body) [28290 28416])
+                    ("set_pub" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28433 28437])
+                            ("pub" variable nil (reparse-symbol function_parameters) [28439 28442]))                          
+                        :documentation "Sets the publication in which the result must be found.")
+                        (reparse-symbol indented_block_body) [28421 28538])
+                    ("set_timeframe" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28561 28565])
+                            ("start" variable nil (reparse-symbol function_parameters) [28567 28572])
+                            ("end" variable nil (reparse-symbol function_parameters) [28579 28582]))                          
+                        :documentation "
+        Sets timeframe (in years as integer) in which result must have
+        appeared. It's fine to specify just start or end, or both.
+        ")
+                        (reparse-symbol indented_block_body) [28543 28922])
+                    ("set_include_citations" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28953 28957])
+                            ("yesorno" variable nil (reparse-symbol function_parameters) [28959 28966]))                          )
+                        (reparse-symbol indented_block_body) [28927 29010])
+                    ("set_include_patents" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [29039 29043])
+                            ("yesorno" variable nil (reparse-symbol function_parameters) [29045 29052]))                          )
+                        (reparse-symbol indented_block_body) [29015 29094])
+                    ("get_url" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [29111 29115]))                          )
+                        (reparse-symbol indented_block_body) [29099 30811]))                  
+                :type "class")
+                nil [26316 30811])
+            ("ScholarSettings" type
+               (:documentation "
+    This class lets you adjust the Scholar settings for your
+    session. It's intended to mirror the features tunable in the
+    Scholar Settings pane, but right now it's a bit basic.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("CITFORM_NONE" variable nil (reparse-symbol indented_block_body) [31050 31066])
+                    ("CITFORM_REFWORKS" variable nil (reparse-symbol indented_block_body) [31071 31091])
+                    ("CITFORM_REFMAN" variable nil (reparse-symbol indented_block_body) [31096 31114])
+                    ("CITFORM_ENDNOTE" variable nil (reparse-symbol indented_block_body) [31119 31138])
+                    ("CITFORM_BIBTEX" variable nil (reparse-symbol indented_block_body) [31143 31161])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [31195 31211])
+                            ("self" variable nil (reparse-symbol indented_block_body) [31252 31304])
+                            ("self" variable nil (reparse-symbol indented_block_body) [31313 31340]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [31180 31184]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [31167 31341])
+                    ("set_citation_format" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [31370 31374])
+                            ("citform" variable nil (reparse-symbol function_parameters) [31376 31383]))                          )
+                        (reparse-symbol indented_block_body) [31346 31668])
+                    ("set_per_page_results" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [31698 31702])
+                            ("per_page_results" variable nil (reparse-symbol function_parameters) [31704 31720]))                          )
+                        (reparse-symbol indented_block_body) [31673 32007])
+                    ("is_configured" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [32030 32034]))                          )
+                        (reparse-symbol indented_block_body) [32012 32072]))                  
+                :type "class")
+                nil [30813 32072])
+            ("ScholarQuerier" type
+               (:documentation "
+    ScholarQuerier instances can conduct a search on Google Scholar
+    with subsequent parsing of the resulting HTML content.  The
+    articles found are collected in the articles member, a list of
+    ScholarArticle instances.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("GET_SETTINGS_URL" code nil (reparse-symbol indented_block_body) [32428 32534])
+                    ("SET_SETTINGS_URL" code nil (reparse-symbol indented_block_body) [32540 32880])
+                    ("Parser" type
+                       (:superclasses ("ScholarArticleParser120726")
+                        :members 
+                          ( ("__init__" function
+                               (:suite 
+                                  ( ("ScholarArticleParser120726" code nil (reparse-symbol indented_block_body) [33085 33126])
+                                    ("self" variable nil (reparse-symbol indented_block_body) [33139 33161]))                                  
+                                :parent "dummy"
+                                :arguments 
+                                  ( ("self" variable nil (reparse-symbol function_parameters) [33057 33061])
+                                    ("querier" variable nil (reparse-symbol function_parameters) [33063 33070]))                                  
+                                :constructor-flag t)
+                                (reparse-symbol indented_block_body) [33044 33162])
+                            ("handle_num_results" function
+                               (:parent "dummy"
+                                :arguments 
+                                  ( ("self" variable nil (reparse-symbol function_parameters) [33194 33198])
+                                    ("num_results" variable nil (reparse-symbol function_parameters) [33200 33211]))                                  )
+                                (reparse-symbol indented_block_body) [33171 33354])
+                            ("handle_article" function
+                               (:parent "dummy"
+                                :arguments 
+                                  ( ("self" variable nil (reparse-symbol function_parameters) [33382 33386])
+                                    ("art" variable nil (reparse-symbol function_parameters) [33388 33391]))                                  )
+                                (reparse-symbol indented_block_body) [33363 33436]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [32994 33436])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [33469 33487])
+                            ("self" variable nil (reparse-symbol indented_block_body) [33496 33513])
+                            ("self" variable nil (reparse-symbol indented_block_body) [33522 33552])
+                            ("if" code nil (reparse-symbol indented_block_body) [33607 34077])
+                            ("self" variable nil (reparse-symbol indented_block_body) [34086 34144])
+                            ("self" variable nil (reparse-symbol indented_block_body) [34153 34173]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33454 33458]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [33441 34205])
+                    ("apply_settings" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [34229 34233])
+                            ("settings" variable nil (reparse-symbol function_parameters) [34235 34243]))                          
+                        :documentation "
+        Applies settings as provided by a ScholarSettings instance.
+        ")
+                        (reparse-symbol indented_block_body) [34210 36192])
+                    ("send_query" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [36212 36216])
+                            ("query" variable nil (reparse-symbol function_parameters) [36218 36223]))                          
+                        :documentation "
+        This method initiates a search query (a ScholarQuery instance)
+        with subsequent parsing of the response.
+        ")
+                        (reparse-symbol indented_block_body) [36197 36711])
+                    ("get_citation_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [36738 36742])
+                            ("article" variable nil (reparse-symbol function_parameters) [36744 36751]))                          
+                        :documentation "
+        Given an article, retrieves citation link. Note, this requires that
+        you adjusted the settings to tell Google Scholar to actually
+        provide this information, *prior* to retrieving the article.
+        ")
+                        (reparse-symbol indented_block_body) [36716 37534])
+                    ("parse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [37549 37553])
+                            ("html" variable nil (reparse-symbol function_parameters) [37555 37559]))                          
+                        :documentation "
+        This method allows parsing of provided HTML content.
+        ")
+                        (reparse-symbol indented_block_body) [37539 37709])
+                    ("add_article" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [37730 37734])
+                            ("art" variable nil (reparse-symbol function_parameters) [37736 37739]))                          )
+                        (reparse-symbol indented_block_body) [37714 37812])
+                    ("clear_articles" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [37836 37840]))                          
+                        :documentation "Clears any existing articles stored from previous queries.")
+                        (reparse-symbol indented_block_body) [37817 37943])
+                    ("save_cookies" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [37965 37969]))                          
+                        :documentation "
+        This stores the latest cookies we're using to disk, for reuse in a
+        later session.
+        ")
+                        (reparse-symbol indented_block_body) [37948 38503])
+                    ("_get_http_response" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [38531 38535])
+                            ("url" variable nil (reparse-symbol function_parameters) [38537 38540])
+                            ("log_msg" variable nil (reparse-symbol function_parameters) [38542 38549])
+                            ("err_msg" variable nil (reparse-symbol function_parameters) [38556 38563]))                          
+                        :documentation "
+        Helper method, sends HTTP request and returns response payload.
+        ")
+                        (reparse-symbol indented_block_body) [38508 39638]))                  
+                :type "class")
+                nil [32074 39638])
+            ("txt" function (:arguments 
+              ( ("querier" variable nil (reparse-symbol function_parameters) [39648 39655])
+                ("with_globals" variable nil (reparse-symbol function_parameters) [39657 39669]))              ) nil [39640 40648])
+            ("csv" function (:arguments 
+              ( ("querier" variable nil (reparse-symbol function_parameters) [40657 40664])
+                ("header" variable nil (reparse-symbol function_parameters) [40666 40672])
+                ("sep" variable nil (reparse-symbol function_parameters) [40680 40683]))              ) nil [40649 40852])
+            ("citation_export" function (:arguments 
+              ( ("querier" variable nil (reparse-symbol function_parameters) [40873 40880]))              ) nil [40853 40980])
+            ("main" function nil nil [40982 48493])
+            ("if" code nil nil [48494 48542]))          
+      :file "scholar.py"
+      :pointmax 48542
+      :fsize 48541
+      :lastmodtime '(22077 13863 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 39553 . 39638) (NEWLINE 39552 . 39553) (COLON 39551 . 39552) (TRY 38820 . 38823) (AS 39545 . 39547) (INDENT_BLOCK 38400 . 38503) (NEWLINE 38399 . 38400) (COLON 38398 . 38399) (TRY 38175 . 38178) (AS 38392 . 38394) (INDENT_BLOCK 33930 . 34077) (NEWLINE 33929 . 33930) (COLON 33928 . 33929) (TRY 33712 . 33715) (AS 33922 . 33924) (NAME 21978 . 21982) (IF 22009 . 22011) (ELSE 22026 . 22030) (NAME 19444 . 19448) (IF 19475 . 19477) (ELSE 19492 . 19496) (INDENT_BLOCK 33930 . 34077) (NEWLINE 33929 . 33930) (COLON 33928 . 33929) (TRY 33712 . 33715) (AS 33922 . 33924) (NAME 21978 . 21982) (IF 22009 . 22011) (ELSE 22026 . 22030) (NAME 19444 . 19448) (IF 19475 . 19477) (ELSE 19492 . 19496))))
+  :file "!home!amit!Dropbox!Work!projects!abc-library!code!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

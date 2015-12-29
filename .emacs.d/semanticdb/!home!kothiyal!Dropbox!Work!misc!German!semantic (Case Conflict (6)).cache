@@ -1,0 +1,67 @@
+;; Object german/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "german/"
+  :tables
+  (list
+    (semanticdb-table "parse_dict.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+This program parse the dictionary I downloaded from http://dict.tu-chemnitz.de/.
+It is stored in the same folder with the name large_dict.txt
+
+Some lines from the file (#line: line)
+===================================================================================================
+500: Abfahrtshocke {f} [sport] :: downhill position 
+9000: Ausbruch {m} :: sally
+9: Aale {pl}; Aalartige {pl} (Anguilliformes) (zoologische Ordnung) :: eels (zoological order)
+===================================================================================================
+
+The structure seems to be: word {gender or plural} | related_words :: english | related_meaning
+
+line = text::text
+text = 
+words = word | word | ... | word
+word = word [{}] [(text)] [[text]]
+
+\"\"\"" code nil nil [25 783])
+            ("lines" variable nil nil [784 835])
+            ("lines" variable nil nil [836 855])
+            ("re" include nil nil [857 866])
+            ("gws" variable nil nil [867 875])
+            ("ews" variable nil nil [876 884])
+            ("for" code nil nil [885 1056])
+            ("difflib" include nil nil [1066 1107])
+            ("re" include nil nil [1114 1123])
+            ("sie" variable nil nil [1124 1132])
+            ("lines" variable nil nil [1133 1175])
+            ("for" code nil nil [1176 1256]))          
+      :file "parse_dict.py"
+      :pointmax 1269
+      :fsize 1016
+      :lastmodtime '(22014 51229 263817 922000)
+      :unmatched-syntax '(($EOI 1268 . 1268) ($EOI 1264 . 1264) ($EOI 1243 . 1243) ($EOI 1240 . 1240) ($EOI 1267 . 1267) ($EOI 1265 . 1265) (IF 1190 . 1192) (NEWLINE 1210 . 1211) (IF 1190 . 1192) (NEWLINE 1209 . 1210)))
+    (semanticdb-table "parse-beginner-dict.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+beginner_dict.txt is in a format:
+german_word | mutlple spaces(about 39) | english_word
+example:
+'anlocken                                     attract\\r\\n'
+\"\"\"" code nil nil [1 164])
+            ("re" include nil nil [166 175])
+            ("pickle" include nil nil [176 189])
+            ("lines" variable nil nil [190 235])
+            ("dict_" variable nil nil [236 246])
+            ("unadded" variable nil nil [247 259])
+            ("for" code nil nil [260 494])
+            ("pickle" code nil nil [495 543]))          
+      :file "parse-beginner-dict.py"
+      :pointmax 547
+      :fsize 503
+      :lastmodtime '(22014 50096 447789 393000)
+      :unmatched-syntax '(($EOI 547 . 547) ($EOI 537 . 537) ($EOI 547 . 547) ($EOI 534 . 534) ($EOI 533 . 533) ($EOI 516 . 516) ($EOI 510 . 510) (NAME 190 . 195) ($EOI 504 . 504))))
+  :file "!home!kothiyal!Dropbox!Work!misc!german!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,1043 @@
+;; Object code/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "code/"
+  :tables
+  (list
+    (semanticdb-table "temp.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("json" include nil nil [72 83])
+            ("os" include nil nil [84 93])
+            ("lout" variable nil nil [95 104])
+            ("rout" variable nil nil [105 114])
+            ("choice" variable nil nil [115 126])
+            ("lprob" variable nil nil [127 137])
+            ("rprob" variable nil nil [138 148])
+            ("id_" variable nil nil [149 157])
+            ("runs" variable nil nil [158 201])
+            ("dir_" variable nil nil [202 248])
+            ("fls" variable nil nil [249 317])
+            ("for" code nil nil [318 917])
+            ("choice" variable nil nil [917 969])
+            ("flp" variable nil nil [970 997])
+            ("flp" code nil nil [998 1048])
+            ("for" code nil nil [1049 1185])
+            ("flp" code nil nil [1185 1196])
+            ("os" code nil nil [1197 1240])
+            ("subject" code nil nil [1258 1265])
+            ("convergence" code nil nil [1283 1294])
+            ("40" code nil nil [1316 1318])
+            ("41" code nil nil [1339 1341])
+            ("42" code nil nil [1362 1364])
+            ("44" code nil nil [1386 1388])
+            ("45" code nil nil [1409 1411])
+            ("47" code nil nil [1432 1434])
+            ("48" code nil nil [1455 1457])
+            ("49" code nil nil [1478 1480])
+            ("50" code nil nil [1501 1503])
+            ("51" code nil nil [1525 1527])
+            ("52" code nil nil [1548 1550])
+            ("55" code nil nil [1571 1573])
+            ("59" code nil nil [1594 1596])
+            ("61" code nil nil [1617 1619])
+            ("64" code nil nil [1640 1642])
+            ("65" code nil nil [1663 1665])
+            ("66" code nil nil [1686 1688])
+            ("70" code nil nil [1709 1711])
+            ("100" code nil nil [1732 1735])
+            ("102" code nil nil [1756 1759]))          
+      :file "temp.py"
+      :pointmax 1763
+      :fsize 1199
+      :lastmodtime '(22100 31140 994550 977000)
+      :unmatched-syntax '(($EOI 1763 . 1763)))
+    (semanticdb-table "bfsl_generator.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+We have 19 subjects x 4 runs (check sizes of files -- sometimes we had to abort a run and start over; there might be partial data, but everybody has 4 full runs). 
+
+I propose, as a *first* quick-and-dirty analysis, to simply create the following bfsl (regressor) files:
+1- visual sensory (from start of first egg to end of second egg)
+2- visual delay (from end of visual sensory stimulation -- the jittered delays)
+3- visual choice HI EV gap (this is the 2 second choice screen + the 1 second motor response -- we can't separate them)
+(note -- this really means the HI absolute number, Jonathan and I were not able to change the code -- doesn't matter, whatever is labeled \"HI EV gap\" is actually \"HI ABSOLUTE MAGNITUDE, doesn't matter)
+4- visual choice LO EV gap(these are small numbers)
+
+
+5- auditory sensory (from start of first sound to end of second sound)
+6- auditory delay (from end of auditory sensory stimulation -- the jittered delays)
+7- auditory choice HI EV gap (this is the 2 second choice screen + the 1 second motor response -- we can't separate them)
+(note -- this really means the HI absolute number, Jonathan and I were not able to change the code -- doesn't matter, whatever is labeled \"HI EV gap\" is actually \"HI ABSOLUTE MAGNITUDE, doesn't matter)
+8- auditory choice LO EV gap(these are small numbers)
+
+9- semantic sensory (from start of first word to end of second word)
+10- semantic delay (from end of word sensory stimulation -- the jittered delays)
+11- semantic choice HI EV gap (this is the 2 second choice screen + the 1 second motor response -- we can't separate them)
+(note -- this really means the HI absolute number, Jonathan and I were not able to change the code -- doesn't matter, whatever is labeled \"HI EV gap\" is actually \"HI ABSOLUTE MAGNITUDE, doesn't matter)
+12- semantic choice LO EV gap(these are small numbers)
+
+So we'll have 12 fMRI regressors.
+
+Everything is: 1) *onset* in seconds.milliseconds , 2) duration, 3) weight 1.000 similar to this (except that durations are now not multiples of 1500, but actual total durations):
+
+6.0000  1.5000  1.0000
+18.0000 1.5000  1.0000
+19.5000 1.5000  1.0000
+25.5000 1.5000  1.0000
+37.5000 1.5000  1.0000
+46.5000 1.5000  1.0000
+48.0000 1.5000  1.0000
+------------------------------------
+I forgot the error regressors -- in addition to the 12 regressors I mentioned, if in a trial the subject presses too early, I would propose:
+1) if SLOW DOWN message appeared, then only make the choice an \"errorChoice\" regressor (this includes the motor response, i.e. total 3 seconds). But leave the stimulus period and delay period in, i.e. those are regressors part of the list I emailed.
+2) if TOO LATE message was presented, this could be because the subject fell asleep (happened) or because they didn't know what to choose. In this case the whole trial needs marked as error regressors, like this:
+errorSensory
+errorDelay
+errorChoice (these time points are lumped together with the 'errorChoice' produced when subjects responded prematurely).
+
+So that's another 3 regressors, for 15 total bfsl files per subject. 
+
+I think the best naming strategy would be something like:
+(example)
+s40_run1_visualSensory.bfsl
+s51_run2_auditoryDelay.bfsl
+
+i.e.
+
+s#_run#_conditionName
+
+(subjects are all between 40-70 or so).
+
+condition names could be:
+
+visualSensory
+visualDelay
+visualChoiceHI
+visualChoiceLO
+auditorySensory
+auditoryDelay
+auditoryChoiceHI
+auditoryChoiceLO
+semanticSensory
+semanticDelay
+semanticChoiceHI
+semanticChoiceLO
+errorSensory
+errorDelay
+errorChoice
+\"\"\"" code nil nil [1 3541])
+            ("\"\"\" ---addition---
+Hi Amit,
+
+I have sorted through the fMRI behavior and have put all subjects' data (both January and February) in the Dropbox mmecon folder under:
+
+fMRIbehavior/
+
+-- this has all json files, 4 runs, per subject, from January and February. 
+
+Here's priority #1 for the fMRI analysis:
+
+A) We need bfsls that actually take into account subjects' behavior. For priority #1, I propose analyzing the following conditions / \"treatments\" / regressors with bfsl files:
+
+- for VISUAL, AUDITORY, SEMANTIC, *separately*:
+CHOICE period:
+1) - whenever subjects picked the higher EV for HIGH RATIO (between EVs) trials (ratio between expected values -- need calculated by multiplying the .65 and .85 by the actually displayed outcome!)
+(high ratio should be anything above 1.9, i.e. EV1 = (1.9 * EV2) or even more; usually between 2 and 2.3. 
+2) whenever subjects picked the higher EV for LOW RATIO trials (low ratio is around 1 - 1.2 -- anything below say 1.5 is a low ratio)
+3) whenever subjects picked the lower EV for HIGH RATIO trials
+4) whenever subjects picked the lower EV for LOW RATIO trials 
+
++ visual, auditory, semantic STIM period like before
++ visual, auditory, semantic DELAY period like before
++ error regressors like before
+
+B) for the above analysis, we need a table indicating the # of trials *per run*, *per subject*, in each of the regressors/ treatment categories. Mainly I need to see if anyone has a \"zero\" in any category, because this creates a huge pain in the butt for me, having to set up a different statistical model for the fMRI analysis for that run/subject. Then I also can't average across runs/subjects for that missing condition, the program would crash, so I need to set up a model taking into account whether someone does or does not have certain conditions present. 
+
+Okie-dokie?
+
+Next priority will be to sort conditions according to:
+
+1) whenever subjects picked the higher EV for LARGE number trials (>15 was present on screen together with smaller number)
+2) whenever subjects picked the higher EV for SMALL number trials (e.g. max outcome was <12)
+3) whenever subjects picked the lower EV for LARGE number trials
+4) whenever subjects picked the lower EV for SMALL number trials
++ everything else as above
+**** I attach a few outcome files so you can see possible numbers, ratios, etc. subjects chose from ****
+
+Thanks
+
+\"\"\"" code nil nil [3543 5914])
+            ("json" include nil nil [5916 5927])
+            ("os" include nil nil [5929 5938])
+            ("re" include nil nil [5939 5948])
+            ("table" variable nil nil [6673 6683])
+            ("main" function (:arguments 
+              ( ("condition" variable nil (reparse-symbol function_parameters) [6792 6801]))              ) nil [6783 7260])
+            ("gen_bfsls" function
+               (:documentation "
+    condition is one of ratio or outcome
+    "
+                :arguments 
+                  ( ("fl_name" variable nil (reparse-symbol function_parameters) [7275 7282])
+                    ("condition" variable nil (reparse-symbol function_parameters) [7284 7293])
+                    ("inputdir" variable nil (reparse-symbol function_parameters) [7295 7303])
+                    ("outputdir" variable nil (reparse-symbol function_parameters) [7305 7314]))                  )
+                nil [7261 8993])
+            ("trials2bfsls" function
+               (:documentation "
+    condition is one of ratio or outcome
+    "
+                :arguments 
+                  ( ("trials" variable nil (reparse-symbol function_parameters) [9011 9017])
+                    ("condition" variable nil (reparse-symbol function_parameters) [9019 9028])
+                    ("scanner_trigger_time" variable nil (reparse-symbol function_parameters) [9030 9050])
+                    ("dominant_stimulus" variable nil (reparse-symbol function_parameters) [9052 9069]))                  )
+                nil [8994 10478])
+            ("write_error_mat" function (:arguments 
+              ( ("outputdir" variable nil (reparse-symbol function_parameters) [10543 10552]))              ) nil [10523 10793])
+            ("dict2str" function
+               (:documentation "
+    dict2str({'a': ['d','e'], 'b': ['3','f']})
+    >>> 'a: d,e\\nb: 3,f\\n'
+    "
+                :arguments 
+                  ( ("dic" variable nil (reparse-symbol function_parameters) [10807 10810]))                  )
+                nil [10794 11002])
+            ("get_files" function (:arguments 
+              ( ("inputdir" variable nil (reparse-symbol function_parameters) [11017 11025]))              ) nil [11003 11537])
+            ("lst2csv" function
+               (:documentation "
+    lst2csv([[1,2], [3,4]])
+    >> '1 2\\n3 4\\n'
+    "
+                :arguments 
+                  ( ("xss" variable nil (reparse-symbol function_parameters) [11550 11553])
+                    ("sep" variable nil (reparse-symbol function_parameters) [11555 11558]))                  )
+                nil [11538 11725])
+            ("Condition" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"docstring\"" code nil (reparse-symbol indented_block_body) [11790 11801])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11810 11826])
+                            ("if" code nil (reparse-symbol indented_block_body) [11835 12569]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11761 11765])
+                            ("mode" variable nil (reparse-symbol function_parameters) [11767 11771]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [11748 12569])
+                    ("get_condition" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12592 12596])
+                            ("trial" variable nil (reparse-symbol function_parameters) [12598 12603])
+                            ("dominant_stimulus" variable nil (reparse-symbol function_parameters) [12605 12622]))                          
+                        :documentation "
+         Assumption: e=> left-key, b=> right-key
+        ")
+                        (reparse-symbol indented_block_body) [12574 14122]))                  
+                :type "class")
+                nil [11727 14122]))          
+      :file "bfsl_generator.py"
+      :pointmax 17241
+      :fsize 17409
+      :lastmodtime '(21864 42998 0 0)
+      :unmatched-syntax '((NAME 13813 . 13821) (IF 13841 . 13843) (ELSE 13857 . 13861) (NAME 13758 . 13766) (IF 13776 . 13778) (ELSE 13793 . 13797) (NAME 13078 . 13083) (IF 13107 . 13109) (ELSE 13135 . 13139) (NAME 8071 . 8074) (IF 8102 . 8104) (ELSE 8131 . 8135)))
+    (semanticdb-table "utilities.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"This module contains the helper functions needed by the project\"\"\"" code nil nil [26 95])
+            ("time" include nil nil [96 107])
+            ("json" include nil nil [108 119])
+            ("random" include nil nil [120 133])
+            ("os" include nil nil [134 143])
+            ("numpy" include nil nil [144 162])
+            ("psychopy" include nil nil [163 187])
+            ("get_order" function
+               (:documentation "Return the order of 3 modulaties
+    in which they will be presented"
+                :arguments 
+                  ( ("id_" variable nil (reparse-symbol function_parameters) [203 206]))                  )
+                nil [189 624])
+            ("get_dominant_stimulie" function
+               (:documentation "Return value is of the form \"ijk\" where
+    i,j,k are in {1,2}. The interpretation of
+    return value \"ijk\" is that stim i is dominant
+    for visual mode, j for auditory mode and k
+    for semantic mode. There are 8 possible return 
+    values, for id_ = 0 mod 8, \"111\" is returned, 
+    for id_ = 1 mod 8, \"112\" and so on."
+                :arguments 
+                  ( ("id_" variable nil (reparse-symbol function_parameters) [651 654]))                  )
+                nil [625 1312])
+            ("add_1" function
+               (:documentation "xs is a string representing a binary number.
+    returns a result of a binary addition: xs + 1
+    >>> add_1(\"11\")
+    100
+    "
+                :arguments 
+                  ( ("xs" variable nil (reparse-symbol function_parameters) [1327 1329]))                  )
+                nil [1317 1606])
+            ("timestamp" function nil nil [1607 1810])
+            ("save_data" function
+               (:documentation "If partial is True then save partial data to insure against the crash."
+                :arguments 
+                  ( ("data" variable nil (reparse-symbol function_parameters) [1825 1829])
+                    ("partial" variable nil (reparse-symbol function_parameters) [1831 1838])
+                    ("is_fmri" variable nil (reparse-symbol function_parameters) [1846 1853]))                  )
+                nil [1811 2681])
+            ("dialog_box" function
+               (:documentation "Present the dialog box and wait for user to enter id and 
+    run number if it is a choice task."
+                :arguments 
+                  ( ("choice_task" variable nil (reparse-symbol function_parameters) [2697 2708]))                  )
+                nil [2682 3251])
+            ("get_data_files" function
+               (:documentation "Return data files of a subject with id=id_(either choice_data 
+    or training_data) generated by the corresponding program."
+                :arguments 
+                  ( ("id_" variable nil (reparse-symbol function_parameters) [3271 3274])
+                    ("dir_" variable nil (reparse-symbol function_parameters) [3276 3280])
+                    ("ptrn" variable nil (reparse-symbol function_parameters) [3301 3305]))                  )
+                nil [3252 3590])
+            ("random_binary_generator" function
+               (:documentation "return a function 'generator' which returns a 0 or 1.
+    With probability 1 - q, generator returns 1 with prob p and
+    with probability 1/k generator returns a binary number
+    which makes the proportion of 1 returns so far closest to p"
+                :arguments 
+                  ( ("p" variable nil (reparse-symbol function_parameters) [3619 3620])
+                    ("k" variable nil (reparse-symbol function_parameters) [3622 3623]))                  )
+                nil [3591 4325])
+            ("random_binary_generator2" function
+               (:documentation "return a function 'generator' which returns a 0 or 1, 1 is return with
+    a probability p. After every k'th time, generator returns a binary number
+    which makes the proportion of 1 returns so far closest to p"
+                :arguments 
+                  ( ("p" variable nil (reparse-symbol function_parameters) [4355 4356])
+                    ("k" variable nil (reparse-symbol function_parameters) [4358 4359]))                  )
+                nil [4326 5012])
+            ("sim_jitter_delays" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [5035 5036])
+                ("mean" variable nil (reparse-symbol function_parameters) [5041 5045])
+                ("min_" variable nil (reparse-symbol function_parameters) [5051 5055])
+                ("max_" variable nil (reparse-symbol function_parameters) [5061 5065]))              ) nil [5013 5556])
+            ("Delay" type
+               (:documentation "jittered delay between 1.5-7.5 sec, average 2.5 sec."
+                :superclasses ("object")
+                :members 
+                  ( ("try" code nil (reparse-symbol indented_block_body) [5646 5783])
+                    ("jitter_high" variable nil (reparse-symbol indented_block_body) [5787 5908])
+                    ("jitter_low" variable nil (reparse-symbol indented_block_body) [5913 6033])
+                    ("floats" variable nil (reparse-symbol indented_block_body) [6078 6131])
+                    ("jitter_high" variable nil (reparse-symbol indented_block_body) [6167 6205])
+                    ("jitter_low" variable nil (reparse-symbol indented_block_body) [6210 6246])
+                    ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"if is_fmri is true then behavioral_delay is ignored.\"\"\"" code nil (reparse-symbol indented_block_body) [6335 6393])
+                            ("" code nil (reparse-symbol indented_block_body) [6537 6555])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6565 6586])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6675 6713])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6722 6744])
+                            ("self, self" code nil (reparse-symbol indented_block_body) [6753 6783])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6819 6834]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6265 6269])
+                            ("is_fmri" variable nil (reparse-symbol function_parameters) [6271 6278])
+                            ("trial_fixed_dur" variable nil (reparse-symbol function_parameters) [6285 6300])
+                            ("behavioral_delay" variable nil (reparse-symbol function_parameters) [6306 6322]))                          
+                        :documentation "if is_fmri is true then behavioral_delay is ignored."
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [6252 6866])
+                    ("next" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6880 6884])
+                            ("is_high" variable nil (reparse-symbol function_parameters) [6886 6893]))                          )
+                        (reparse-symbol indented_block_body) [6871 7595])
+                    ("adjust" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7615 7619])
+                            ("trial_dur" variable nil (reparse-symbol function_parameters) [7621 7630])
+                            ("is_high" variable nil (reparse-symbol function_parameters) [7632 7639]))                          )
+                        (reparse-symbol indented_block_body) [7604 7896]))                  
+                :type "class")
+                nil [5558 7896])
+            ("Outcomes" type
+               (:superclasses ("object")
+                :members 
+                  ( ("try" code nil (reparse-symbol indented_block_body) [7926 8063])
+                    ("file_name" code nil (reparse-symbol indented_block_body) [8068 8149])
+                    ("outcomes" variable nil (reparse-symbol indented_block_body) [8154 8268])
+                    ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"max_outcome is ignored if is_fmri is True\"\"\"" code nil (reparse-symbol indented_block_body) [8358 8405])
+                            ("random_order" variable nil (reparse-symbol indented_block_body) [8414 8465])
+                            ("random" code nil (reparse-symbol indented_block_body) [8474 8502])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8511 8560])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8569 8585])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8594 8616])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8625 8655]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8313 8317])
+                            ("is_fmri" variable nil (reparse-symbol function_parameters) [8319 8326])
+                            ("max_outcome" variable nil (reparse-symbol function_parameters) [8333 8344]))                          
+                        :documentation "max_outcome is ignored if is_fmri is True"
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [8300 8656])
+                    ("next" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8674 8678]))                          )
+                        (reparse-symbol indented_block_body) [8665 8879])
+                    ("_get_outcomes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8902 8906])
+                            ("max_outcome" variable nil (reparse-symbol function_parameters) [8908 8919]))                          
+                        :documentation "Return a tuple (low, high, is_sd, is_high), s.t 0 < low < high <= max_outcome.
+        Subject will be given a choice between gambles low with 85% vs high with 65%, if 
+        is_sd = False else low with 65% vs high with 85%. is_high is true means the
+        EV ratio between the gambles is high.")
+                        (reparse-symbol indented_block_body) [8884 10512]))                  
+                :type "class")
+                nil [7898 10512])
+            ("shuffle" function
+               (:documentation " randomly shuffle the xs while making sure that
+    different run (modulo len(xs)) will generate different order, kind
+    of a quick and dirty hack.
+    "
+                :arguments 
+                  ( ("xs" variable nil (reparse-symbol function_parameters) [10525 10527])
+                    ("id_" variable nil (reparse-symbol function_parameters) [10529 10532])
+                    ("run" variable nil (reparse-symbol function_parameters) [10534 10537]))                  )
+                nil [10513 10968]))          
+      :file "utilities.py"
+      :pointmax 10968
+      :fsize 10967
+      :lastmodtime '(21733 45004 0 0)
+      :unmatched-syntax '((NAME 6402 . 6406) (IF 6507 . 6509) (ELSE 6518 . 6522) (NAME 4779 . 4783) (IF 4788 . 4790) (ELSE 4872 . 4876) (NAME 4092 . 4096) (IF 4101 . 4103) (ELSE 4185 . 4189) (NAME 2281 . 2284) (IF 2294 . 2296) (ELSE 2305 . 2309)))
+    (semanticdb-table "parameters.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("MAX_PROB_CORRECT_CLAASIFICATION_GIVEN_DOMINANT_STIM" variable nil nil [249 309])
+            ("MAX_PROB_CORRECT_CLAASIFICATION_GIVEN_WEAKER_STIM" variable nil nil [332 390])
+            ("WAIT_TIME" variable nil nil [414 429])
+            ("WAIT_TIME_FEEDB" variable nil nil [502 523])
+            ("NTEST, MIN_ACCURACY" code nil nil [692 723])
+            ("MAX_TRIAL" variable nil nil [780 795])
+            ("INTER_TRIAL_DELAY" variable nil nil [870 893])
+            ("POSITIVE_FEEDBACK" variable nil nil [973 1017])
+            ("NEGATIVE_FEEDBACK" variable nil nil [1018 1062])
+            ("VISUAL_DRAGON1" variable nil nil [1073 1123])
+            ("VISUAL_DRAGON2" variable nil nil [1124 1174])
+            ("AUDIO_DRAGON1" variable nil nil [1175 1224])
+            ("AUDIO_DRAGON2" variable nil nil [1225 1274])
+            ("STIM1_VISUAL" variable nil nil [1282 1327])
+            ("STIM2_VISUAL" variable nil nil [1328 1372])
+            ("STIM1_AUDIO" variable nil nil [1373 1422])
+            ("STIM2_AUDIO" variable nil nil [1423 1472])
+            ("START_MESSAGE_VISUAL" variable nil nil [1488 1539])
+            ("START_MESSAGE_SEMANTIC" variable nil nil [1540 1595])
+            ("START_MESSAGE_AUDIO" variable nil nil [1596 1648])
+            ("SPEAKER_SYMBOL" variable nil nil [1657 1704])
+            ("FULLSCREEN" variable nil nil [1705 1722])
+            ("SLOW_DOWN_SYMBOL" variable nil nil [1776 1819])
+            ("TOO_LATE_SYMBOL" variable nil nil [1820 1861])
+            ("INTERSTIM_PERIOD" variable nil nil [2199 2221])
+            ("STIM2_CHOICE_DUR" variable nil nil [2223 2245])
+            ("CHOICE_SCREEN_DUR" variable nil nil [2305 2326])
+            ("CHOICE_SCREEN_DUR2" variable nil nil [2384 2406])
+            ("SLOW_DOWN_MSG_DUR" variable nil nil [2433 2456])
+            ("TOO_SLOW_MSG_DUR" variable nil nil [2457 2479])
+            ("AVERAGE_DELAY" variable nil nil [2480 2497])
+            ("MESSAGE_DUR" variable nil nil [2548 2565])
+            ("FIXATION_AFTER_MESSAGE_DUR" variable nil nil [2625 2657])
+            ("STIM_DUR" variable nil nil [2709 2725])
+            ("FIXATION_AFTER_LAST_TRIAL_DUR" variable nil nil [2829 2862])
+            ("FIXATION_AFTER_SPC_KEY_DUR" variable nil nil [2863 2893])
+            ("SCANNER_PULSE_KEYS" variable nil nil [2999 3029])
+            ("LEFT_KEY" variable nil nil [3030 3044])
+            ("RIGHT_KEY" variable nil nil [3067 3082])
+            ("ESC_KEY" variable nil nil [3106 3124])
+            ("IS_FMRI" variable nil nil [3190 3205])
+            ("SCANNER_MODE" variable nil nil [3257 3277])
+            ("NTRIAL" variable nil nil [3407 3418])
+            ("MAX_OUTCOME" variable nil nil [3474 3490])
+            ("NPLAY" variable nil nil [3491 3500])
+            ("K_FEEDBACK" variable nil nil [3623 3640])
+            ("K" variable nil nil [3641 3646])
+            ("NUMBER_FIXATION_DIST" variable nil nil [3690 3714])
+            ("SEMANTIC_STIM1" variable nil nil [3771 3799])
+            ("SEMANTIC_STIM2" variable nil nil [3800 3828]))          
+      :file "parameters.py"
+      :pointmax 3829
+      :fsize 3828
+      :lastmodtime '(21723 51098 795958 476000)
+      :unmatched-syntax nil)
+    (semanticdb-table "choice_task.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("random" include nil nil [25 38])
+            ("time" include nil nil [39 50])
+            ("psychopy" include nil nil [51 98])
+            ("pygame" include nil nil [99 123])
+            ("abc" include nil nil [124 163])
+            ("utilities" include nil nil [164 187])
+            ("parameters" include nil nil [188 212])
+            ("report" include nil nil [213 239])
+            ("wait_scanner_trigger" include nil nil [240 293])
+            ("main" function nil nil [296 2966])
+            ("ChoiceTask" type
+               (:documentation " Abstract class, Visual, Auditory and Semantic are
+    3 concrete representation. start_block is the public method 
+    of the class, which returns a list trials, elements of which 
+    contain data of each trial."
+                :superclasses ("object")
+                :members 
+                  ( ("__metaclass__" variable nil (reparse-symbol indented_block_body) [3222 3245])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3323 3337])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3346 3424])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3595 3642])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3711 3766])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3836 3855])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3864 3883])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3892 3915]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3284 3288])
+                            ("win" variable nil (reparse-symbol function_parameters) [3290 3293])
+                            ("dominant_stimulus" variable nil (reparse-symbol function_parameters) [3295 3312]))                          
+                        :decorators 
+                          ( ("abstractmethod" function (:type "decorator") nil nil))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3251 3916])
+                    ("start_block" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3937 3941]))                          
+                        :documentation "This is the public method of the class. Returns a dictionary
+        which has keys start_time, finish_time and a list trials, elements 
+        of which contain data from each trial.")
+                        (reparse-symbol indented_block_body) [3921 7881])
+                    ("_show_fixation_only" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7914 7918])
+                            ("duration" variable nil (reparse-symbol function_parameters) [7920 7928]))                          )
+                        (reparse-symbol indented_block_body) [7890 8186])
+                    ("_show_stimulus" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("abstractmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8238 8242])
+                            ("stim" variable nil (reparse-symbol function_parameters) [8244 8248]))                          
+                        :documentation "Concrete class will implement this.")
+                        (reparse-symbol indented_block_body) [8199 8321])
+                    ("_present_choices" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8351 8355])
+                            ("oleft" variable nil (reparse-symbol function_parameters) [8357 8362])
+                            ("oright" variable nil (reparse-symbol function_parameters) [8364 8370])
+                            ("trial" variable nil (reparse-symbol function_parameters) [8372 8377]))                          
+                        :documentation "Present the left and the right outcomes, first at the left
+        and second at the right of fixation. After choice_screen_dur
+        fixation cross is colored red for choice_screen_dur2, user has 
+        to respond while the cross is red. If user respond before or after
+        then show the slow-down or too-slow message, otherwise color the
+        outcome pressed yellow for remaining duration. Store all the
+        events in dictionary trial, which is an argument to the method.
+        Return value is the key pressed.")
+                        (reparse-symbol indented_block_body) [8330 11352])
+                    ("_render" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11369 11373])
+                            ("args" variable nil (reparse-symbol function_parameters) [11375 11380])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [11382 11390]))                          
+                        :documentation "kwargs if present then must be
+        a dict with the key 'duration' and value float.")
+                        (reparse-symbol indented_block_body) [11357 11706]))                  
+                :type "class")
+                nil [2967 11706])
+            ("Visual" type
+               (:superclasses ("ChoiceTask")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("ChoiceTask" code nil (reparse-symbol indented_block_body) [11789 11838])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11847 11876])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11885 11914])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11923 12052]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11750 11754])
+                            ("win" variable nil (reparse-symbol function_parameters) [11756 11759])
+                            ("dominant_stimulus" variable nil (reparse-symbol function_parameters) [11761 11778]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [11737 12053])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12070 12074]))                          )
+                        (reparse-symbol indented_block_body) [12058 12101])
+                    ("_show_stimulus" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12126 12130])
+                            ("stim" variable nil (reparse-symbol function_parameters) [12132 12136]))                          )
+                        (reparse-symbol indented_block_body) [12107 12209]))                  
+                :type "class")
+                nil [11707 12209])
+            ("Semantic" type
+               (:superclasses ("ChoiceTask")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("ChoiceTask" code nil (reparse-symbol indented_block_body) [12295 12344])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12353 12511])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12520 12678])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12687 12816]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12256 12260])
+                            ("win" variable nil (reparse-symbol function_parameters) [12262 12265])
+                            ("dominant_stimulus" variable nil (reparse-symbol function_parameters) [12267 12284]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [12243 12817])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12835 12839]))                          )
+                        (reparse-symbol indented_block_body) [12823 12868])
+                    ("_show_stimulus" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12900 12904])
+                            ("stim" variable nil (reparse-symbol function_parameters) [12906 12910]))                          )
+                        (reparse-symbol indented_block_body) [12881 12968]))                  
+                :type "class")
+                nil [12211 12968])
+            ("Auditory" type
+               (:superclasses ("ChoiceTask")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("ChoiceTask" code nil (reparse-symbol indented_block_body) [13054 13103])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13112 13153])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13162 13203])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13212 13342])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13351 13377]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13015 13019])
+                            ("win" variable nil (reparse-symbol function_parameters) [13021 13024])
+                            ("dominant_stimulus" variable nil (reparse-symbol function_parameters) [13026 13043]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [13002 13378])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13399 13403]))                          )
+                        (reparse-symbol indented_block_body) [13387 13432])
+                    ("_show_stimulus" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13456 13460])
+                            ("stim" variable nil (reparse-symbol function_parameters) [13462 13466]))                          )
+                        (reparse-symbol indented_block_body) [13437 13570]))                  
+                :type "class")
+                nil [12970 13570])
+            ("if" code nil nil [13576 13614]))          
+      :file "choice_task.py"
+      :pointmax 13614
+      :fsize 13614
+      :lastmodtime '(21733 44734 0 0)
+      :unmatched-syntax '((NAME 6852 . 6856) (IF 6878 . 6880) (ELSE 6887 . 6891) (NAME 6766 . 6770) (IF 6792 . 6794) (ELSE 6801 . 6805)))
+    (semanticdb-table "report.py"
+      :file "report.py"
+      :fsize 6309
+      :lastmodtime '(21823 64031 0 0))
+    (semanticdb-table "wait_scanner_trigger.py"
+      :file "wait_scanner_trigger.py"
+      :fsize 592
+      :lastmodtime '(21723 51098 795958 476000))
+    (semanticdb-table "training.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+There are 3 modulaties, visual, auditory and semantic. The order in
+which they are presented to a subject is determined by the subject's id.
+The function get_order takes subject's id modulo 6 and returns the order.
+
+For each modulaties there are 2 sitmulus, stim1 and stim2, stim1 (stim2) has
+a higher probability of belonging to the left(right) dragon. One of the
+stimulus is dominant and anther is weaker, meaning that given
+a stimuls, probability of correctly classifying a dragon to which 
+it belongs is higher for the dominant stimulus then for the weaker one. 
+The dominant and weaker stimulus are a function of a subject's id.
+Dominant stimulie are \"ijk\" meant that stim i is
+dominant for visual mode, stim j for auditory and stim k for semantic,
+(i, j, k are in {1, 2}). The function dominant_stimulie takes id modulo
+8 as an argument and returns the dominant stimulus, eg: dominant_stimulie(0)
+= \"111\".
+stim1 is blue_egg for visual mode, value of SEMANTIC_STIM1 in
+parameters file(currently herbivore) for semantic mode
+and dragon1_sound for auditory mode
+\"\"\"" code nil nil [1 1073])
+            ("random" include nil nil [1075 1088])
+            ("time" include nil nil [1089 1100])
+            ("psychopy" include nil nil [1101 1148])
+            ("abc" include nil nil [1149 1188])
+            ("parameters" include nil nil [1189 1213])
+            ("pygame" include nil nil [1214 1238])
+            ("utilities" include nil nil [1239 1262])
+            ("report" include nil nil [1263 1289])
+            ("main" function nil nil [1291 3131])
+            ("Training" type
+               (:documentation "
+    Abstract class. Visual, Auditory and Semantic training are
+    3 concrete representation. start_trial is the publick method 
+    of the class, which returns the dictionary data."
+                :superclasses ("object")
+                :members 
+                  ( ("__metaclass__" variable nil (reparse-symbol indented_block_body) [3359 3382])
+                    ("__init__" function
+                       (:suite 
+                          ( ("\"stimulus1 and 2 are to be defined in concrete classes\"" code nil (reparse-symbol indented_block_body) [3464 3519])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3528 3542])
+                            ("assert" code nil (reparse-symbol indented_block_body) [3604 3636])
+                            ("if" code nil (reparse-symbol indented_block_body) [3645 4104])
+                            ("self" code nil (reparse-symbol indented_block_body) [4112 4171])
+                            ("self" code nil (reparse-symbol indented_block_body) [4180 4239])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4404 4495])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4504 4595])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4604 4653])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4715 4734])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4743 4762])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4771 4792])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4801 4822])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4831 4856])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4973 5170])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5179 5376])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5385 5447])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5456 5474])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5580 5613])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5622 5648]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3425 3429])
+                            ("win" variable nil (reparse-symbol function_parameters) [3431 3434])
+                            ("dominant_stimulus" variable nil (reparse-symbol function_parameters) [3436 3453]))                          
+                        :decorators 
+                          ( ("abstractmethod" function (:type "decorator") nil nil))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3392 5649])
+                    ("start_trial" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5670 5674]))                          
+                        :documentation "This is the public method of the class, returns the dictionary data.")
+                        (reparse-symbol indented_block_body) [5654 7774])
+                    ("_show_inter_trial_win" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7809 7813]))                          
+                        :documentation "show this window between trials.")
+                        (reparse-symbol indented_block_body) [7783 8145])
+                    ("_get_accuracy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8168 8172]))                          )
+                        (reparse-symbol indented_block_body) [8150 8704])
+                    ("_choose_stimulus" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9283 9287]))                          )
+                        (reparse-symbol indented_block_body) [9262 9325])
+                    ("_render_stimulus" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9380 9384])
+                            ("stimulus" variable nil (reparse-symbol function_parameters) [9386 9394]))                          
+                        :decorators 
+                          ( ("abstractmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [9339 9437])
+                    ("_render_dragons" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9486 9490])
+                            ("highlight" variable nil (reparse-symbol function_parameters) [9492 9501]))                          
+                        :decorators 
+                          ( ("abstractmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [9446 9607])
+                    ("mouse_pressed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9630 9634]))                          
+                        :documentation " If the user mouse clicked on the left (right) dragon then return
+        'left'('right') if she presses escape then return escape else keep
+        waiting.")
+                        (reparse-symbol indented_block_body) [9612 10062])
+                    ("_get_key" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10084 10088]))                          
+                        :documentation "
+        Show the dragons and ask the user to identify
+        the one corresponding to the stimulus presented by the 
+        present_stimulus method, by clicking left or right arrow.
+        Return the key pressed(either left or right) and the time taken.
+        If the user presses 'escape' then quit the experiment.")
+                        (reparse-symbol indented_block_body) [10071 10857])
+                    ("_give_feedback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10886 10890])
+                            ("key" variable nil (reparse-symbol function_parameters) [10892 10895])
+                            ("stimulus" variable nil (reparse-symbol function_parameters) [10897 10905]))                          )
+                        (reparse-symbol indented_block_body) [10867 11549]))                  
+                :type "class")
+                nil [3137 11549])
+            ("Visual" type
+               (:superclasses ("Training")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Training" code nil (reparse-symbol indented_block_body) [11632 11679])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11688 11904])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11913 12128])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12137 12297])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12306 12466])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12475 12726]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11593 11597])
+                            ("win" variable nil (reparse-symbol function_parameters) [11599 11602])
+                            ("dominant_stimulus" variable nil (reparse-symbol function_parameters) [11604 11621]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [11579 12727])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12748 12752]))                          )
+                        (reparse-symbol indented_block_body) [12736 12779])
+                    ("_render_stimulus" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12805 12809])
+                            ("stimulus" variable nil (reparse-symbol function_parameters) [12811 12819]))                          )
+                        (reparse-symbol indented_block_body) [12784 12966])
+                    ("_render_dragons" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12995 12999])
+                            ("highlight" variable nil (reparse-symbol function_parameters) [13001 13010]))                          )
+                        (reparse-symbol indented_block_body) [12975 13397]))                  
+                :type "class")
+                nil [11551 13397])
+            ("Semantic" type
+               (:superclasses ("Training")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Training" code nil (reparse-symbol indented_block_body) [13482 13529])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13538 13736])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13745 13942])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13951 14109])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14118 14276])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14285 14538]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13443 13447])
+                            ("win" variable nil (reparse-symbol function_parameters) [13449 13452])
+                            ("dominant_stimulus" variable nil (reparse-symbol function_parameters) [13454 13471]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [13429 14539])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14560 14564]))                          )
+                        (reparse-symbol indented_block_body) [14548 14593])
+                    ("_render_stimulus" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14619 14623])
+                            ("stimulus" variable nil (reparse-symbol function_parameters) [14625 14633]))                          )
+                        (reparse-symbol indented_block_body) [14598 14751])
+                    ("_render_dragons" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14780 14784])
+                            ("highlight" variable nil (reparse-symbol function_parameters) [14786 14795]))                          )
+                        (reparse-symbol indented_block_body) [14760 15186]))                  
+                :type "class")
+                nil [13399 15186])
+            ("Auditory" type
+               (:superclasses ("Training")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Training" code nil (reparse-symbol indented_block_body) [15278 15325])
+                            ("mixer" code nil (reparse-symbol indented_block_body) [15334 15356])
+                            ("self" variable nil (reparse-symbol indented_block_body) [15365 15406])
+                            ("self" variable nil (reparse-symbol indented_block_body) [15415 15456])
+                            ("self" variable nil (reparse-symbol indented_block_body) [15465 15506])
+                            ("self" variable nil (reparse-symbol indented_block_body) [15515 15556])
+                            ("self" variable nil (reparse-symbol indented_block_body) [15565 15816])
+                            ("self" variable nil (reparse-symbol indented_block_body) [15825 16024])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16033 16231]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15239 15243])
+                            ("win" variable nil (reparse-symbol function_parameters) [15245 15248])
+                            ("dominant_stimulus" variable nil (reparse-symbol function_parameters) [15250 15267]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [15226 16232])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16253 16257]))                          )
+                        (reparse-symbol indented_block_body) [16241 16286])
+                    ("_render_stimulus" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16312 16316])
+                            ("stimulus" variable nil (reparse-symbol function_parameters) [16318 16326]))                          )
+                        (reparse-symbol indented_block_body) [16291 16510])
+                    ("_render_dragons" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16539 16543])
+                            ("highlight" variable nil (reparse-symbol function_parameters) [16545 16554]))                          )
+                        (reparse-symbol indented_block_body) [16519 17639]))                  
+                :type "class")
+                nil [15196 17639])
+            ("if" code nil nil [17640 17678]))          
+      :file "training.py"
+      :pointmax 17678
+      :fsize 17677
+      :lastmodtime '(21723 51098 795958 476000)
+      :unmatched-syntax '((NAME 14809 . 14813) (IF 14826 . 14828) (ELSE 14839 . 14843) (NAME 13024 . 13028) (IF 13041 . 13043) (ELSE 13054 . 13058) (NAME 11346 . 11350) (IF 11376 . 11378) (ELSE 11388 . 11392) (NAME 11171 . 11179) (IF 11193 . 11195) (ELSE 11211 . 11215) (NAME 10997 . 11005) (IF 11019 . 11021) (ELSE 11036 . 11040) (RETURN 9924 . 9930) (IF 9939 . 9941) (ELSE 9969 . 9973) (NAME 2717 . 2724) (IF 2735 . 2737) (ELSE 2745 . 2749)))
+    (semanticdb-table "play.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("random" include nil nil [25 38])
+            ("time" include nil nil [39 50])
+            ("training" include nil nil [51 66])
+            ("json" include nil nil [67 78])
+            ("psychopy" include nil nil [79 126])
+            ("abc" include nil nil [127 166])
+            ("parameters" include nil nil [167 191])
+            ("pygame" include nil nil [192 216])
+            ("utilities" include nil nil [217 240])
+            ("main" function nil nil [242 1401])
+            ("Play" type
+               (:superclasses ("training.Training")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("training" code nil (reparse-symbol indented_block_body) [1498 1554])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1563 1577])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1586 1608]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1450 1454])
+                            ("win" variable nil (reparse-symbol function_parameters) [1456 1459])
+                            ("dominant_stimulus" variable nil (reparse-symbol function_parameters) [1461 1478])
+                            ("choices" variable nil (reparse-symbol function_parameters) [1480 1487]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1437 1609])
+                    ("play" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1623 1627]))                          )
+                        (reparse-symbol indented_block_body) [1614 2117])
+                    ("show_choice_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2147 2151])
+                            ("choice" variable nil (reparse-symbol function_parameters) [2153 2159]))                          )
+                        (reparse-symbol indented_block_body) [2126 2609]))                  
+                :type "class")
+                nil [1402 2609])
+            ("Visual" type
+               (:superclasses ("Play" "training.Visual")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Play" code nil (reparse-symbol indented_block_body) [2719 2769])
+                            ("training" code nil (reparse-symbol indented_block_body) [2778 2832]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2673 2677])
+                            ("win" variable nil (reparse-symbol function_parameters) [2679 2682])
+                            ("dominant_stimulus" variable nil (reparse-symbol function_parameters) [2684 2701])
+                            ("stims" variable nil (reparse-symbol function_parameters) [2703 2708]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2660 2833]))                  
+                :type "class")
+                nil [2619 2833])
+            ("Auditory" type
+               (:superclasses ("Play" "training.Auditory")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Play" code nil (reparse-symbol indented_block_body) [2939 2989])
+                            ("training" code nil (reparse-symbol indented_block_body) [2998 3054]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2893 2897])
+                            ("win" variable nil (reparse-symbol function_parameters) [2899 2902])
+                            ("dominant_stimulus" variable nil (reparse-symbol function_parameters) [2904 2921])
+                            ("stims" variable nil (reparse-symbol function_parameters) [2923 2928]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2880 3055]))                  
+                :type "class")
+                nil [2835 3055])
+            ("Semantic" type
+               (:superclasses ("Play" "training.Semantic")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Play" code nil (reparse-symbol indented_block_body) [3161 3211])
+                            ("training" code nil (reparse-symbol indented_block_body) [3220 3276]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3115 3119])
+                            ("win" variable nil (reparse-symbol function_parameters) [3121 3124])
+                            ("dominant_stimulus" variable nil (reparse-symbol function_parameters) [3126 3143])
+                            ("stims" variable nil (reparse-symbol function_parameters) [3145 3150]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3102 3277]))                  
+                :type "class")
+                nil [3057 3277])
+            ("random_choices4play" function
+               (:documentation "randomly select a run generated by the choice_task and from that
+    randomly select nchoice choices from each modualies to be played 
+    for real. The return value is a dictionary of a form:
+    rslt['Visual'] = [{'stim': 1, 'amount': 10}, {'stim': 2, 'amount': 20}]
+    "
+                :arguments 
+                  ( ("id_" variable nil (reparse-symbol function_parameters) [3303 3306])
+                    ("nchoice" variable nil (reparse-symbol function_parameters) [3308 3315]))                  )
+                nil [3279 5174])
+            ("if" code nil nil [5183 5219]))          
+      :file "play.py"
+      :pointmax 5219
+      :fsize 5220
+      :lastmodtime '(21723 51098 795958 476000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!projects!multimodal-risk!code!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

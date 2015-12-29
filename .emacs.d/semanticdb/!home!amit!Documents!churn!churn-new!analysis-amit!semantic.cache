@@ -1,0 +1,242 @@
+;; Object analysis-amit/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "analysis-amit/"
+  :tables
+  (list
+    (semanticdb-table "gbm.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("time" include nil nil [1 12])
+            ("random" include nil nil [13 26])
+            ("pandas" include nil nil [27 46])
+            ("numpy" include nil nil [47 65])
+            ("tables" include nil nil [66 86])
+            ("sklearn.ensemble" include nil nil [87 148])
+            ("sklearn.ensemble" include nil nil [149 211])
+            ("h5fl" variable nil nil [238 281])
+            ("users" variable nil nil [282 318])
+            ("dfg" variable nil nil [319 351])
+            ("id1" variable nil nil [484 508])
+            ("train_ids" variable nil nil [509 571])
+            ("traindata" variable nil nil [572 606])
+            ("model" variable nil nil [617 1114])
+            ("covars" variable nil nil [1115 1195])
+            ("missing_vars" variable nil nil [1348 1416])
+            ("map" code nil nil [1417 1466])
+            ("assert" code nil nil [1467 1523])
+            ("X" variable nil nil [1525 1546])
+            ("y" variable nil nil [1547 1569])
+            ("str_vars" variable nil nil [1662 1718])
+            ("dt" variable nil nil [1719 1737])
+            ("for" code nil nil [1738 1848])
+            ("X" variable nil nil [1848 1874])
+            ("X" variable nil nil [1875 1923])
+            ("X" variable nil nil [1997 2030])
+            ("y" variable nil nil [2073 2106])
+            ("fit" variable nil nil [2120 2217])
+            ("get_indx" function
+               (:documentation " (3, 2, 3, 0, 2) => {0: [3], 2: [1, 4], 3: [0,2]}
+    >>> get_indx((3, 2, 3, 0, 2))
+    {0: [3], 2: [1, 4], 3: [0, 2]}
+    # XXX: lot's of scope to optimize, will do it later, even might port it to C.
+    "
+                :arguments 
+                  ( ("xs" variable nil (reparse-symbol function_parameters) [2363 2365]))                  )
+                nil [2350 2681])
+            ("str2int" function
+               (:documentation "
+    >>> str2int(['a', 'b', 'a', 'c', 'b'])
+    [0, 1, 0, 2, 1]
+    "
+                :arguments 
+                  ( ("xs" variable nil (reparse-symbol function_parameters) [2702 2704]))                  )
+                nil [2690 2883])
+            ("key_indx" function
+               (:documentation "
+    >>> key_indx('b', [('a', 0), ('b', 10), ('c', 11)])
+    1
+    >>> key_indx('b', [('a', 0), ('c', 10)])
+    -1
+    "
+                :arguments 
+                  ( ("v" variable nil (reparse-symbol function_parameters) [2897 2898])
+                    ("xs" variable nil (reparse-symbol function_parameters) [2900 2902]))                  )
+                nil [2884 3123])
+            ("loop" code nil nil [3380 3384])
+            ("timeit" code nil nil [3387 3461])
+            ("loop" code nil nil [3493 3497])
+            ("sample" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [3511 3513])
+                ("n" variable nil (reparse-symbol function_parameters) [3515 3516]))              ) nil [3500 3612])
+            ("n" variable nil nil [3617 3624])
+            ("baz" variable nil nil [3625 3793])
+            ("h5fl" code nil nil [3795 3837])
+            ("foo" variable nil nil [3838 3870])
+            ("foo" code nil nil [3871 3898])
+            ("foo" code nil nil [3899 3966])
+            ("bar" variable nil nil [3967 3999])
+            ("bar" code nil nil [4000 4027])
+            ("fooa" variable nil nil [4029 4154])
+            ("h5fl" code nil nil [4156 4210])
+            ("foo" variable nil nil [4211 4243])
+            ("foo" code nil nil [4244 4271])
+            ("foo" code nil nil [4272 4339])
+            ("bar" variable nil nil [4340 4372])
+            ("bar" code nil nil [4373 4400])
+            ("foo" code nil nil [4412 4444])
+            ("loop" code nil nil [4480 4484])
+            ("loop" code nil nil [4519 4523])
+            ("foo" code nil nil [4533 4565])
+            ("loop" code nil nil [4601 4605])
+            ("dt" variable nil nil [4649 4669])
+            ("dt" variable nil nil [4670 4683])
+            ("dt" variable nil nil [4778 4807])
+            ("dt" variable nil nil [4808 4828])
+            ("data" variable nil nil [4877 4899]))          
+      :file "gbm.py"
+      :pointmax 4901
+      :fsize 4902
+      :lastmodtime '(21979 39632 852029 864000)
+      :unmatched-syntax nil)
+    (semanticdb-table "utils.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("vector" include (:system-flag t) nil [21 38])
+            ("algorithm" include (:system-flag t) nil [39 59])
+            ("string" include (:system-flag t) nil [60 77])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [80 100])
+            ("indx" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "int"
+                :arguments 
+                  ( ("x" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [178 182])
+                    ("vs" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [183 196]))                  )
+                nil [147 291])
+            ("str2int" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :arguments 
+                  ( ("xs" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [400 413]))                  )
+                nil [358 740])
+            ("print" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("xs" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [775 788]))                  )
+                nil [742 873]))          
+      :file "utils.hpp"
+      :pointmax 878
+      :fsize 877
+      :lastmodtime '(21980 20314 998664 272000)
+      :unmatched-syntax nil)
+    (semanticdb-table "utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("get_indx" function
+               (:documentation " (3, 2, 3, 0, 2) => {0: [3], 2: [1, 4], 3: [0,2]}
+    >>> get_indx((3, 2, 3, 0, 2))
+    {0: [3], 2: [1, 4], 3: [0, 2]}
+    # XXX: lot's of scope to optimize, will do it later, even might port it to C.
+    "
+                :arguments 
+                  ( ("xs" variable nil (reparse-symbol function_parameters) [60 62]))                  )
+                nil [47 378])
+            ("str2int" function
+               (:documentation "
+    >>> str2int(['a', 'b', 'a', 'c', 'b'])
+    [0, 1, 0, 2, 1]
+    "
+                :arguments 
+                  ( ("xs" variable nil (reparse-symbol function_parameters) [399 401]))                  )
+                nil [387 580])
+            ("key_indx" function
+               (:documentation "
+    >>> key_indx('b', [('a', 0), ('b', 10), ('c', 11)])
+    1
+    >>> key_indx('b', [('a', 0), ('c', 10)])
+    -1
+    "
+                :arguments 
+                  ( ("v" variable nil (reparse-symbol function_parameters) [594 595])
+                    ("xs" variable nil (reparse-symbol function_parameters) [597 599]))                  )
+                nil [581 820]))          
+      :file "utils.py"
+      :pointmax 820
+      :fsize 13745
+      :lastmodtime '(21980 22348 70604 201000)
+      :unmatched-syntax nil)
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("utils.hpp" include nil nil [1 21])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [32 41])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [42 55]))                  
+                :type "int")
+                nil [23 291]))          
+      :file "main.cpp"
+      :pointmax 830
+      :fsize 829
+      :lastmodtime '(21980 20346 926663 328000)
+      :unmatched-syntax nil)
+    (semanticdb-table "qsort.i"
+      :major-mode 'c-mode
+      :tags 
+        '( ("std::vector" variable (:type "int") nil [172 192])
+            ("std::vector" variable (:type "int") nil [214 231])
+            ("std::vector" variable (:type "int") nil [253 273])
+            ("str2int" variable (:type "int") nil [692 708])
+            ("str2int" variable (:type "int") nil [725 738])
+            ("str2int" variable (:type "int") nil [755 771]))          
+      :file "qsort.i"
+      :pointmax 777
+      :fsize 696
+      :lastmodtime '(21980 21427 54631 414000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SWIG_FILE_WITH_INIT")
+          )
+)
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("CC" variable (:default-value ("g++")) nil [1 10])
+            ("STD" variable (:default-value ("-std=c++11")) nil [10 27])
+            ("_utils.so" function (:arguments ("utils.i" "utils.hpp")) nil [27 213])
+            ("clean" function nil nil [306 321]))          
+      :file "Makefile"
+      :pointmax 321
+      :fsize 320
+      :lastmodtime '(21980 22343 122604 347000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Documents!churn!churn-new!analysis-amit!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

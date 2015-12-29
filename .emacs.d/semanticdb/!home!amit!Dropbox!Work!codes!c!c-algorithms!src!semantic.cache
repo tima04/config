@@ -1,0 +1,1150 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "arraylist.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [747 766])
+            ("string.h" include (:system-flag t) nil [767 786])
+            ("arraylist.h" include nil nil [788 810])
+            ("arraylist_new" function
+               (:pointer 1
+                :arguments 
+                  ( ("length" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [962 982]))                  
+                :type ("ArrayList" type (:type "class") nil nil))
+                nil [937 1582])
+            ("arraylist_free" function
+               (:arguments 
+                  ( ("arraylist" variable
+                       (:pointer 1
+                        :type ("ArrayList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1604 1625]))                  
+                :type "void")
+                nil [1584 1750])
+            ("arraylist_enlarge" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arraylist" variable
+                       (:pointer 1
+                        :type ("ArrayList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1781 1802]))                  
+                :type "int")
+                nil [1752 2156])
+            ("arraylist_insert" function
+               (:arguments 
+                  ( ("arraylist" variable
+                       (:pointer 1
+                        :type ("ArrayList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2179 2200])
+                    ("index" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2201 2220])
+                    ("data" variable (:type ("ArrayListValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2242 2262]))                  
+                :type "int")
+                nil [2158 2817])
+            ("arraylist_append" function
+               (:arguments 
+                  ( ("arraylist" variable
+                       (:pointer 1
+                        :type ("ArrayList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2840 2861])
+                    ("data" variable (:type ("ArrayListValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2862 2882]))                  
+                :type "int")
+                nil [2819 2948])
+            ("arraylist_prepend" function
+               (:arguments 
+                  ( ("arraylist" variable
+                       (:pointer 1
+                        :type ("ArrayList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2972 2993])
+                    ("data" variable (:type ("ArrayListValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2994 3014]))                  
+                :type "int")
+                nil [2950 3064])
+            ("arraylist_remove_range" function
+               (:arguments 
+                  ( ("arraylist" variable
+                       (:pointer 1
+                        :type ("ArrayList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3094 3115])
+                    ("index" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3116 3135])
+                    ("length" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3164 3184]))                  
+                :type "void")
+                nil [3066 3599])
+            ("arraylist_remove" function
+               (:arguments 
+                  ( ("arraylist" variable
+                       (:pointer 1
+                        :type ("ArrayList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3623 3644])
+                    ("index" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3645 3664]))                  
+                :type "void")
+                nil [3601 3714])
+            ("arraylist_index_of" function
+               (:arguments 
+                  ( ("arraylist" variable
+                       (:pointer 1
+                        :type ("ArrayList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3739 3760])
+                    ("callback" variable (:type ("ArrayListEqualFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3784 3812])
+                    ("data" variable (:type ("ArrayListValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3836 3856]))                  
+                :type "int")
+                nil [3716 3999])
+            ("arraylist_clear" function
+               (:arguments 
+                  ( ("arraylist" variable
+                       (:pointer 1
+                        :type ("ArrayList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4022 4043]))                  
+                :type "void")
+                nil [4001 4128])
+            ("arraylist_sort_internal" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("list_data" variable
+                       (:pointer 1
+                        :type ("ArrayListValue" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4166 4192])
+                    ("list_length" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4229 4254])
+                    ("compare_func" variable (:type ("ArrayListCompareFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4291 4325]))                  
+                :type "void")
+                nil [4130 6144])
+            ("arraylist_sort" function
+               (:arguments 
+                  ( ("arraylist" variable
+                       (:pointer 1
+                        :type ("ArrayList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6166 6187])
+                    ("compare_func" variable (:type ("ArrayListCompareFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6188 6222]))                  
+                :type "void")
+                nil [6146 6362]))          
+      :file "arraylist.c"
+      :pointmax 6364
+      :fsize 6363
+      :lastmodtime '(21839 8358 508238 858000)
+      :unmatched-syntax nil)
+    (semanticdb-table "arraylist.h"
+      :file "arraylist.h"
+      :fsize 6406
+      :lastmodtime '(21839 8358 508238 858000))
+    (semanticdb-table "compare-string.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("ALGORITHM_COMPARE_STRING_H" variable (:constant-flag t) nil [1104 1130])
+            ("string_nocase_compare" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("string1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2777 2791])
+                    ("string2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2792 2806]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2751 2807])
+            ("string_nocase_equal" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("string1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2280 2294])
+                    ("string2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2295 2309]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2256 2310])
+            ("string_compare" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("string1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1920 1934])
+                    ("string2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1935 1949]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1901 1950])
+            ("string_equal" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("string1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1460 1474])
+                    ("string2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1475 1489]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1443 1490]))          
+      :file "compare-string.h"
+      :pointmax 2887
+      :fsize 2886
+      :lastmodtime '(21839 8358 508238 858000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ALGORITHM_COMPARE_STRING_H")
+          )
+)
+    (semanticdb-table "avl-tree.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [747 766])
+            ("avl-tree.h" include nil nil [768 789])
+            ("_AVLTreeNode" type
+               (:members 
+                  ( ("children" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type ("AVLTreeNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [949 974])
+                    ("parent" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [976 996])
+                    ("key" variable (:type ("AVLTreeKey" type (:type "class") nil nil)) (reparse-symbol classsubparts) [998 1013])
+                    ("value" variable (:type ("AVLTreeValue" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1015 1034])
+                    ("height" variable (:type "int") (reparse-symbol classsubparts) [1036 1047]))                  
+                :type "struct")
+                nil [926 1050])
+            ("_AVLTree" type
+               (:members 
+                  ( ("root_node" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1071 1094])
+                    ("compare_func" variable (:type ("AVLTreeCompareFunc" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1096 1128])
+                    ("num_nodes" variable (:type "unsigned int") (reparse-symbol classsubparts) [1130 1153]))                  
+                :type "struct")
+                nil [1052 1156])
+            ("avl_tree_new" function
+               (:pointer 1
+                :arguments 
+                  ( ("compare_func" variable (:type ("AVLTreeCompareFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1180 1212]))                  
+                :type ("AVLTree" type (:type "class") nil nil))
+                nil [1158 1445])
+            ("avl_tree_free_subtree" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tree" variable
+                       (:pointer 1
+                        :type ("AVLTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1481 1495])
+                    ("node" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1496 1514]))                  
+                :type "void")
+                nil [1447 1700])
+            ("avl_tree_free" function
+               (:arguments 
+                  ( ("tree" variable
+                       (:pointer 1
+                        :type ("AVLTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1721 1735]))                  
+                :type "void")
+                nil [1702 1873])
+            ("avl_tree_subtree_height" function
+               (:arguments 
+                  ( ("node" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1903 1921]))                  
+                :type "int")
+                nil [1875 1994])
+            ("avl_tree_update_height" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("node" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2181 2199]))                  
+                :type "void")
+                nil [2146 2627])
+            ("avl_tree_node_parent_side" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("node" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2733 2751]))                  
+                :type ("AVLTreeNodeSide" type (:type "class") nil nil))
+                nil [2684 2886])
+            ("avl_tree_node_replace" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tree" variable
+                       (:pointer 1
+                        :type ("AVLTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2969 2983])
+                    ("node1" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2984 3003])
+                    ("node2" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3038 3057]))                  
+                :type "void")
+                nil [2935 3390])
+            ("avl_tree_rotate" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("tree" variable
+                       (:pointer 1
+                        :type ("AVLTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4160 4174])
+                    ("node" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4175 4193])
+                    ("direction" variable (:type ("AVLTreeNodeSide" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4230 4256]))                  
+                :type ("AVLTreeNode" type (:type "class") nil nil))
+                nil [4124 4959])
+            ("avl_tree_node_balance" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("tree" variable
+                       (:pointer 1
+                        :type ("AVLTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5125 5139])
+                    ("node" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5140 5158]))                  
+                :type ("AVLTreeNode" type (:type "class") nil nil))
+                nil [5083 6978])
+            ("avl_tree_balance_to_root" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tree" variable
+                       (:pointer 1
+                        :type ("AVLTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7094 7108])
+                    ("node" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7109 7127]))                  
+                :type "void")
+                nil [7057 7344])
+            ("avl_tree_insert" function
+               (:pointer 1
+                :arguments 
+                  ( ("tree" variable
+                       (:pointer 1
+                        :type ("AVLTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7375 7389])
+                    ("key" variable (:type ("AVLTreeKey" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7390 7405])
+                    ("value" variable (:type ("AVLTreeValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7406 7425]))                  
+                :type ("AVLTreeNode" type (:type "class") nil nil))
+                nil [7346 8491])
+            ("avl_tree_node_get_replacement" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("tree" variable
+                       (:pointer 1
+                        :type ("AVLTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8699 8713])
+                    ("node" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8764 8782]))                  
+                :type ("AVLTreeNode" type (:type "class") nil nil))
+                nil [8649 9924])
+            ("avl_tree_remove_node" function
+               (:arguments 
+                  ( ("tree" variable
+                       (:pointer 1
+                        :type ("AVLTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9985 9999])
+                    ("node" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10000 10018]))                  
+                :type "void")
+                nil [9959 11503])
+            ("avl_tree_remove" function
+               (:arguments 
+                  ( ("tree" variable
+                       (:pointer 1
+                        :type ("AVLTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11553 11567])
+                    ("key" variable (:type ("AVLTreeKey" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11568 11583]))                  
+                :type "int")
+                nil [11533 11817])
+            ("avl_tree_lookup_node" function
+               (:pointer 1
+                :arguments 
+                  ( ("tree" variable
+                       (:pointer 1
+                        :type ("AVLTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11853 11867])
+                    ("key" variable (:type ("AVLTreeKey" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11868 11883]))                  
+                :type ("AVLTreeNode" type (:type "class") nil nil))
+                nil [11819 12355])
+            ("avl_tree_lookup" function
+               (:arguments 
+                  ( ("tree" variable
+                       (:pointer 1
+                        :type ("AVLTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12386 12400])
+                    ("key" variable (:type ("AVLTreeKey" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12401 12416]))                  
+                :type ("AVLTreeValue" type (:type "class") nil nil))
+                nil [12357 12585])
+            ("avl_tree_root_node" function
+               (:pointer 1
+                :arguments 
+                  ( ("tree" variable
+                       (:pointer 1
+                        :type ("AVLTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12619 12633]))                  
+                :type ("AVLTreeNode" type (:type "class") nil nil))
+                nil [12587 12662])
+            ("avl_tree_node_key" function
+               (:arguments 
+                  ( ("node" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12693 12711]))                  
+                :type ("AVLTreeKey" type (:type "class") nil nil))
+                nil [12664 12734])
+            ("avl_tree_node_value" function
+               (:arguments 
+                  ( ("node" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12769 12787]))                  
+                :type ("AVLTreeValue" type (:type "class") nil nil))
+                nil [12736 12812])
+            ("avl_tree_node_child" function
+               (:pointer 1
+                :arguments 
+                  ( ("node" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12847 12865])
+                    ("side" variable (:type ("AVLTreeNodeSide" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12866 12887]))                  
+                :type ("AVLTreeNode" type (:type "class") nil nil))
+                nil [12814 13016])
+            ("avl_tree_node_parent" function
+               (:pointer 1
+                :arguments 
+                  ( ("node" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13052 13070]))                  
+                :type ("AVLTreeNode" type (:type "class") nil nil))
+                nil [13018 13096])
+            ("avl_tree_num_entries" function
+               (:arguments 
+                  ( ("tree" variable
+                       (:pointer 1
+                        :type ("AVLTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13132 13146]))                  
+                :type "unsigned int")
+                nil [13098 13175])
+            ("avl_tree_to_array_add_subtree" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("subtree" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13219 13240])
+                    ("array" variable
+                       (:pointer 1
+                        :type ("AVLTreeValue" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13282 13302])
+                    ("index" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [13344 13355]))                  
+                :type "void")
+                nil [13177 13761])
+            ("avl_tree_to_array" function
+               (:pointer 1
+                :arguments 
+                  ( ("tree" variable
+                       (:pointer 1
+                        :type ("AVLTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13795 13809]))                  
+                :type ("AVLTreeValue" type (:type "class") nil nil))
+                nil [13763 14088]))          
+      :file "avl-tree.c"
+      :pointmax 14090
+      :fsize 14089
+      :lastmodtime '(21839 8358 508238 858000)
+      :unmatched-syntax nil)
+    (semanticdb-table "avl-tree.h"
+      :file "avl-tree.h"
+      :fsize 8059
+      :lastmodtime '(21839 8358 508238 858000))
+    (semanticdb-table "set.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [747 766])
+            ("string.h" include (:system-flag t) nil [767 786])
+            ("set.h" include nil nil [787 803])
+            ("_SetEntry" type
+               (:members 
+                  ( ("data" variable (:type ("SetValue" type (:type "class") nil nil)) (reparse-symbol classsubparts) [927 941])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("SetEntry" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [943 958]))                  
+                :type "struct")
+                nil [907 961])
+            ("_Set" type
+               (:members 
+                  ( ("table" variable
+                       (:pointer 2
+                        :type ("SetEntry" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [978 995])
+                    ("entries" variable (:type "unsigned int") (reparse-symbol classsubparts) [997 1018])
+                    ("table_size" variable (:type "unsigned int") (reparse-symbol classsubparts) [1020 1044])
+                    ("prime_index" variable (:type "unsigned int") (reparse-symbol classsubparts) [1046 1071])
+                    ("hash_func" variable (:type ("SetHashFunc" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1073 1095])
+                    ("equal_func" variable (:type ("SetEqualFunc" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1097 1121])
+                    ("free_func" variable (:type ("SetFreeFunc" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1123 1145]))                  
+                :type "struct")
+                nil [963 1148])
+            ("set_primes" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	193, 389, 769, 1543, 3079, 6151, 12289, 24593, 49157, 98317,
+	196613, 393241, 786433, 1572869, 3145739, 6291469,
+	12582917, 25165843, 50331653, 100663319, 201326611,
+	402653189, 805306457, 1610612741,
+}"
+                :type "unsigned int")
+                nil [1386 1633])
+            ("set_allocate_table" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1743 1752]))                  
+                :type "int")
+                nil [1713 2279])
+            ("set_free_entry" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2308 2317])
+                    ("entry" variable
+                       (:pointer 1
+                        :type ("SetEntry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2318 2334]))                  
+                :type "void")
+                nil [2281 2549])
+            ("set_new" function
+               (:pointer 1
+                :arguments 
+                  ( ("hash_func" variable (:type ("SetHashFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2564 2586])
+                    ("equal_func" variable (:type ("SetEqualFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2587 2611]))                  
+                :type ("Set" type (:type "class") nil nil))
+                nil [2551 3029])
+            ("set_free" function
+               (:arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3045 3054]))                  
+                :type "void")
+                nil [3031 3481])
+            ("set_register_free_function" function
+               (:arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3515 3524])
+                    ("free_func" variable (:type ("SetFreeFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3525 3547]))                  
+                :type "void")
+                nil [3483 3580])
+            ("set_enlarge" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3605 3614]))                  
+                :type "int")
+                nil [3582 4729])
+            ("set_insert" function
+               (:arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4746 4755])
+                    ("data" variable (:type ("SetValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4756 4770]))                  
+                :type "int")
+                nil [4731 5988])
+            ("set_remove" function
+               (:arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6005 6014])
+                    ("data" variable (:type ("SetValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6015 6029]))                  
+                :type "int")
+                nil [5990 6703])
+            ("set_query" function
+               (:arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6719 6728])
+                    ("data" variable (:type ("SetValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6729 6743]))                  
+                :type "int")
+                nil [6705 7196])
+            ("set_num_entries" function
+               (:arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7227 7236]))                  
+                :type "unsigned int")
+                nil [7198 7262])
+            ("set_to_array" function
+               (:pointer 1
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7287 7296]))                  
+                :type ("SetValue" type (:type "class") nil nil))
+                nil [7264 7854])
+            ("set_union" function
+               (:pointer 1
+                :arguments 
+                  ( ("set1" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7871 7881])
+                    ("set2" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7882 7892]))                  
+                :type ("Set" type (:type "class") nil nil))
+                nil [7856 8839])
+            ("set_intersection" function
+               (:pointer 1
+                :arguments 
+                  ( ("set1" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8863 8873])
+                    ("set2" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8874 8884]))                  
+                :type ("Set" type (:type "class") nil nil))
+                nil [8841 9521])
+            ("set_iterate" function
+               (:arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9540 9549])
+                    ("iter" variable
+                       (:pointer 1
+                        :type ("SetIterator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9550 9568]))                  
+                :type "void")
+                nil [9523 9896])
+            ("set_iter_next" function
+               (:arguments 
+                  ( ("iterator" variable
+                       (:pointer 1
+                        :type ("SetIterator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9921 9943]))                  
+                :type ("SetValue" type (:type "class") nil nil))
+                nil [9898 10960])
+            ("set_iter_has_more" function
+               (:arguments 
+                  ( ("iterator" variable
+                       (:pointer 1
+                        :type ("SetIterator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10984 11006]))                  
+                :type "int")
+                nil [10962 11048]))          
+      :file "set.c"
+      :pointmax 11050
+      :fsize 11049
+      :lastmodtime '(21839 8358 512238 858000)
+      :unmatched-syntax '((punctuation 1710 . 1711) (semantic-list 1705 . 1710) (SIZEOF 1699 . 1705) (punctuation 1697 . 1698) (semantic-list 1684 . 1696) (SIZEOF 1678 . 1684) (punctuation 1676 . 1677) (symbol 1661 . 1675) (INT 1657 . 1660) (UNSIGNED 1648 . 1656) (CONST 1642 . 1647) (STATIC 1635 . 1641) (punctuation 1710 . 1711) (semantic-list 1705 . 1710) (SIZEOF 1699 . 1705) (punctuation 1697 . 1698) (semantic-list 1684 . 1696) (SIZEOF 1678 . 1684) (punctuation 1676 . 1677) (symbol 1661 . 1675) (INT 1657 . 1660) (UNSIGNED 1648 . 1656) (CONST 1642 . 1647) (STATIC 1635 . 1641)))
+    (semanticdb-table "set.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("ALGORITHM_SET_H" variable (:constant-flag t) nil [1594 1609])
+            ("set_iter_next" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("SetValue" type (:type "class") nil nil)
+                :arguments 
+                  ( ("iterator" variable
+                       (:pointer 1
+                        :type ("SetIterator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6810 6832]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6787 6833])
+            ("set_iter_has_more" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("iterator" variable
+                       (:pointer 1
+                        :type ("SetIterator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6509 6531]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6487 6532])
+            ("set_iterate" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6138 6147])
+                    ("iter" variable
+                       (:pointer 1
+                        :type ("SetIterator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6148 6166]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6121 6167])
+            ("set_intersection" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("Set" type (:type "class") nil nil)
+                :arguments 
+                  ( ("set1" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5875 5885])
+                    ("set2" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5886 5896]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5853 5897])
+            ("set_union" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("Set" type (:type "class") nil nil)
+                :arguments 
+                  ( ("set1" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5489 5499])
+                    ("set2" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5500 5510]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5474 5511])
+            ("set_to_array" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("SetValue" type (:type "class") nil nil)
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5114 5123]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5091 5124])
+            ("set_num_entries" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "unsigned int"
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4789 4798]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4760 4799])
+            ("set_query" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4576 4585])
+                    ("data" variable (:type ("SetValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4586 4600]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4562 4601])
+            ("set_remove" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4276 4285])
+                    ("data" variable (:type ("SetValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4286 4300]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4261 4301])
+            ("set_insert" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3912 3921])
+                    ("data" variable (:type ("SetValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3922 3936]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3897 3937])
+            ("set_register_free_function" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3482 3491])
+                    ("free_func" variable (:type ("SetFreeFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3492 3514]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3450 3515])
+            ("set_free" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3213 3222]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3199 3223])
+            ("set_new" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("Set" type (:type "class") nil nil)
+                :arguments 
+                  ( ("hash_func" variable (:type ("SetHashFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3075 3097])
+                    ("equal_func" variable (:type ("SetEqualFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3098 3122]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3062 3123])
+            ("SetFreeFunc" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("value" variable (:type ("SetValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2709 2724]))                  
+                :function-pointer t
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2689 2725])
+            ("SetEqualFunc" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("value1" variable (:type ("SetValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2546 2562])
+                    ("value2" variable (:type ("SetValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2563 2579]))                  
+                :function-pointer t
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2526 2580])
+            ("SetHashFunc" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "unsigned int"
+                :arguments 
+                  ( ("value" variable (:type ("SetValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2408 2423]))                  
+                :function-pointer t
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2380 2424])
+            ("SET_NULL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2266 2274])
+            ("_SetIterator" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2161 2170])
+                    ("next_entry" variable
+                       (:pointer 1
+                        :type ("SetEntry" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2172 2193])
+                    ("next_chain" variable (:type "unsigned int") (reparse-symbol classsubparts) [2195 2219]))                  )
+                (reparse-symbol extern-c-contents) [2138 2222])
+            ("SetValue" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :pointer 1
+                :typedef ("void"))
+                (reparse-symbol extern-c-contents) [2067 2090])
+            ("SetEntry" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("_SetEntry" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [1989 2023])
+            ("SetIterator" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("_SetIterator" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [1882 1922])
+            ("Set" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("_Set" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [1783 1807])
+            ("set_iter_next" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("SetValue" type (:type "class") nil nil)
+                :arguments 
+                  ( ("iterator" variable
+                       (:pointer 1
+                        :type ("SetIterator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6810 6832]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6787 6833])
+            ("set_iter_has_more" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("iterator" variable
+                       (:pointer 1
+                        :type ("SetIterator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6509 6531]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6487 6532])
+            ("set_iterate" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6138 6147])
+                    ("iter" variable
+                       (:pointer 1
+                        :type ("SetIterator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6148 6166]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6121 6167])
+            ("set_intersection" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("Set" type (:type "class") nil nil)
+                :arguments 
+                  ( ("set1" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5875 5885])
+                    ("set2" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5886 5896]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5853 5897])
+            ("set_union" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("Set" type (:type "class") nil nil)
+                :arguments 
+                  ( ("set1" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5489 5499])
+                    ("set2" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5500 5510]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5474 5511])
+            ("set_to_array" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("SetValue" type (:type "class") nil nil)
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5114 5123]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5091 5124])
+            ("set_num_entries" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "unsigned int"
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4789 4798]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4760 4799])
+            ("set_query" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4576 4585])
+                    ("data" variable (:type ("SetValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4586 4600]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4562 4601])
+            ("set_remove" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4276 4285])
+                    ("data" variable (:type ("SetValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4286 4300]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4261 4301])
+            ("set_insert" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3912 3921])
+                    ("data" variable (:type ("SetValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3922 3936]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3897 3937])
+            ("set_register_free_function" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3482 3491])
+                    ("free_func" variable (:type ("SetFreeFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3492 3514]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3450 3515])
+            ("set_free" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3213 3222]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3199 3223])
+            ("set_new" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("Set" type (:type "class") nil nil)
+                :arguments 
+                  ( ("hash_func" variable (:type ("SetHashFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3075 3097])
+                    ("equal_func" variable (:type ("SetEqualFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3098 3122]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3062 3123])
+            ("SetFreeFunc" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("value" variable (:type ("SetValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2709 2724]))                  
+                :function-pointer t
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2689 2725])
+            ("SetEqualFunc" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("value1" variable (:type ("SetValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2546 2562])
+                    ("value2" variable (:type ("SetValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2563 2579]))                  
+                :function-pointer t
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2526 2580])
+            ("SetHashFunc" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "unsigned int"
+                :arguments 
+                  ( ("value" variable (:type ("SetValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2408 2423]))                  
+                :function-pointer t
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2380 2424])
+            ("SET_NULL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2266 2274])
+            ("_SetIterator" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("Set" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2161 2170])
+                    ("next_entry" variable
+                       (:pointer 1
+                        :type ("SetEntry" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2172 2193])
+                    ("next_chain" variable (:type "unsigned int") (reparse-symbol classsubparts) [2195 2219]))                  )
+                (reparse-symbol extern-c-contents) [2138 2222])
+            ("SetValue" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :pointer 1
+                :typedef ("void"))
+                (reparse-symbol extern-c-contents) [2067 2090])
+            ("SetEntry" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("_SetEntry" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [1989 2023])
+            ("SetIterator" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("_SetIterator" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [1882 1922])
+            ("Set" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("_Set" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [1783 1807]))          
+      :file "set.h"
+      :pointmax 6902
+      :fsize 6901
+      :lastmodtime '(21839 8358 512238 858000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ALGORITHM_SET_H")
+          ("SET_NULL" . ((semantic-list "((void *) 0)" 2275 . 2287)))
+          )
+))
+  :file "!home!amit!Dropbox!Work!codes!c!c-algorithms!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,20 @@
+;; Object output/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "output/"
+  :tables
+  (list
+    (semanticdb-table "hello.html"
+      :major-mode 'html-mode
+      :tags 
+        '( ("hello (Pyjamas Auto-Generated HTML file)" section nil nil [275 382])
+            ("" section nil nil [382 420])
+            ("" section nil nil [420 546])
+            ("" section nil nil [546 688]))          
+      :file "hello.html"
+      :pointmax 688
+      :fsize 687
+      :lastmodtime '(22007 736 334698 585000)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Documents!git-cloned!pyjs!examples!helloworld!output!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

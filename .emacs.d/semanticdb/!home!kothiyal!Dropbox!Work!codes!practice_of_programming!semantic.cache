@@ -1,0 +1,85 @@
+;; Object practice_of_programming/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "practice_of_programming/"
+  :tables
+  (list
+    (semanticdb-table "quick_sort.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("vector" include (:system-flag t) nil [21 38])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [40 60])
+            ("print" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("xs" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [73 91]))                  
+                :type "void")
+                nil [62 92])
+            ("swap" function
+               (:arguments 
+                  ( ("xs" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("double" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [105 124])
+                    ("i" variable (:type "int") (reparse-symbol arg-sub-list) [125 131])
+                    ("j" variable (:type "int") (reparse-symbol arg-sub-list) [132 138]))                  
+                :type "void")
+                nil [94 191])
+            ("qsort" function
+               (:arguments 
+                  ( ("xs" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("double" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [205 224])
+                    ("start" variable
+                       (:default-value "0"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [225 236])
+                    ("end" variable
+                       (:default-value "-1"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [238 248]))                  
+                :type "int")
+                nil [195 542])
+            ("print" function
+               (:arguments 
+                  ( ("xs" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [555 573]))                  
+                :type "void")
+                nil [544 659])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [672 681])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [682 695]))                  
+                :type "int")
+                nil [663 850]))          
+      :file "quick_sort.cpp"
+      :pointmax 851
+      :fsize 850
+      :lastmodtime '(21933 7037 0 0)
+      :unmatched-syntax nil))
+  :file "!home!kothiyal!Dropbox!Work!codes!practice_of_programming!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

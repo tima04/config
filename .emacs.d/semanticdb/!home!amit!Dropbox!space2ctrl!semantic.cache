@@ -1,0 +1,121 @@
+;; Object space2ctrl/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "space2ctrl/"
+  :tables
+  (list
+    (semanticdb-table "Space2Ctrl.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("X11/Xlibint.h" include (:system-flag t) nil [511 535])
+            ("X11/keysym.h" include (:system-flag t) nil [536 559])
+            ("X11/extensions/record.h" include (:system-flag t) nil [560 594])
+            ("X11/extensions/XTest.h" include (:system-flag t) nil [595 628])
+            ("iostream" include (:system-flag t) nil [629 648])
+            ("sys/time.h" include (:system-flag t) nil [649 670])
+            ("signal.h" include (:system-flag t) nil [671 690])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [692 712])
+            ("CallbackClosure" type
+               (:members 
+                  ( ("ctrlDisplay" variable
+                       (:pointer 1
+                        :type ("Display" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [741 762])
+                    ("dataDisplay" variable
+                       (:pointer 1
+                        :type ("Display" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [765 786])
+                    ("curX" variable (:type "int") (reparse-symbol classsubparts) [789 798])
+                    ("curY" variable (:type "int") (reparse-symbol classsubparts) [801 810])
+                    ("initialObject" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [813 833]))                  
+                :type "struct")
+                nil [714 836])
+            ("XRecordDatum" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("type" variable (:type "unsigned char") (reparse-symbol classsubparts) [856 875])
+                          ("event" variable (:type ("xEvent" type (:type "class") nil nil)) (reparse-symbol classsubparts) [878 891])
+                          ("req" variable (:type ("xResourceReq" type (:type "class") nil nil)) (reparse-symbol classsubparts) [894 911])
+                          ("reply" variable (:type ("xGenericReply" type (:type "class") nil nil)) (reparse-symbol classsubparts) [914 934])
+                          ("error" variable (:type ("xError" type (:type "class") nil nil)) (reparse-symbol classsubparts) [937 950])
+                          ("setup" variable (:type ("xConnSetupPrefix" type (:type "class") nil nil)) (reparse-symbol classsubparts) [953 976]))                        
+                      :type "union")
+                      nil nil)
+                :type "typedef")
+                nil [838 992])
+            ("Space2Ctrl" type
+               (:members 
+                  ( ("m_displayName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1016 1037])
+                    ("userData" variable (:type ("CallbackClosure" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1040 1065])
+                    ("recVer" variable (:type ("std::pair" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil)
+                              ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1068 1094])
+                    ("recRange" variable
+                       (:pointer 1
+                        :type ("XRecordRange" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1097 1120])
+                    ("recClientSpec" variable (:type ("XRecordClientSpec" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1123 1155])
+                    ("recContext" variable (:type ("XRecordContext" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1158 1184])
+                    ("setupXTestExtension" function (:type "void") (reparse-symbol classsubparts) [1188 1425])
+                    ("setupRecordExtension" function (:type "void") (reparse-symbol classsubparts) [1429 2394])
+                    ("diff_ms" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("t1" variable (:type ("timeval" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2417 2428])
+                            ("t2" variable (:type ("timeval" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2429 2440]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2398 2546])
+                    ("eventCallback" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("priv" variable (:type ("XPointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2624 2638])
+                            ("hook" variable
+                               (:pointer 1
+                                :type ("XRecordInterceptData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2639 2666]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2598 6447])
+                    ("public" label nil (reparse-symbol classsubparts) [6449 6456])
+                    ("Space2Ctrl" function
+                       (:constructor-flag t
+                        :type ("Space2Ctrl" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6459 6475])
+                    ("Space2Ctrl" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [6478 6509])
+                    ("connect" function
+                       (:arguments 
+                          ( ("displayName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6526 6545]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6513 7050])
+                    ("start" function (:type "void") (reparse-symbol classsubparts) [7054 7616])
+                    ("stop" function (:type "void") (reparse-symbol classsubparts) [7620 7737]))                  
+                :type "class")
+                nil [994 7741])
+            ("space2ctrl" variable
+               (:pointer 1
+                :type ("Space2Ctrl" type (:type "class") nil nil))
+                nil [7743 7766])
+            ("stop" function
+               (:arguments 
+                  ( ("param" variable (:type "int") (reparse-symbol arg-sub-list) [7778 7788]))                  
+                :type "void")
+                nil [7768 7899])
+            ("main" function (:type "int") nil [7901 8184]))          
+      :file "Space2Ctrl.cpp"
+      :pointmax 8185
+      :fsize 8184
+      :lastmodtime '(20514 41330 0 0)
+      :unmatched-syntax nil))
+  :file "!home!amit!Dropbox!space2ctrl!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

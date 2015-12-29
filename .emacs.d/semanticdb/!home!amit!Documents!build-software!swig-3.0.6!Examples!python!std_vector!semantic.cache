@@ -1,0 +1,91 @@
+;; Object std_vector/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "std_vector/"
+  :tables
+  (list
+    (semanticdb-table "example.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [25 42])
+            ("algorithm" include (:system-flag t) nil [43 63])
+            ("functional" include (:system-flag t) nil [64 85])
+            ("numeric" include (:system-flag t) nil [86 104])
+            ("average" function
+               (:arguments 
+                  ( ("v" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [121 140]))                  
+                :type "double")
+                nil [106 204])
+            ("half" function
+               (:arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("double" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [231 260]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("double" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [206 373])
+            ("halve_in_place" function
+               (:arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("double" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [395 418]))                  
+                :type "void")
+                nil [375 588]))          
+      :file "example.h"
+      :pointmax 591
+      :fsize 590
+      :lastmodtime '(21913 25213 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "example.i"
+      :major-mode 'c-mode
+      :tags 
+        '( ("std" type
+               (:members 
+                  ( ("vector" variable (:type "int") (reparse-symbol namespacesubparts) [184 196])
+                    ("vector" variable (:type "int") (reparse-symbol namespacesubparts) [225 240]))                  
+                :type "namespace")
+                nil [140 242]))          
+      :file "example.i"
+      :pointmax 318
+      :fsize 317
+      :lastmodtime '(21913 25213 0 0)
+      :unmatched-syntax '((string 305 . 316) (symbol 297 . 304) (punctuation 296 . 297) (semantic-list 210 . 224) (TEMPLATE 202 . 210) (punctuation 201 . 202) (semantic-list 169 . 180) (TEMPLATE 161 . 169) (punctuation 160 . 161) (symbol 82 . 83) (punctuation 81 . 82) (symbol 78 . 81) (symbol 70 . 77) (punctuation 69 . 70) (semantic-list 42 . 67) (punctuation 41 . 42) (symbol 32 . 39) (symbol 25 . 31) (punctuation 24 . 25) (string 305 . 316) (symbol 297 . 304) (punctuation 296 . 297) (semantic-list 210 . 224) (TEMPLATE 202 . 210) (punctuation 201 . 202) (semantic-list 169 . 180) (TEMPLATE 161 . 169) (punctuation 160 . 161) (symbol 82 . 83) (punctuation 81 . 82) (symbol 78 . 81) (symbol 70 . 77) (punctuation 69 . 70) (semantic-list 42 . 67) (punctuation 41 . 42) (symbol 32 . 39) (symbol 25 . 31) (punctuation 24 . 25)))
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("TOP" variable (:default-value ("../..")) nil [1 20])
+            ("SWIG" variable (:default-value ("$(TOP)/../preinst-swig")) nil [20 56])
+            ("CXXSRCS" variable nil nil [56 69])
+            ("TARGET" variable (:default-value ("example")) nil [69 90])
+            ("INTERFACE" variable (:default-value ("example.i")) nil [90 113])
+            ("LIBS" variable (:default-value ("-lm")) nil [113 130])
+            ("SWIGOPT" variable nil nil [130 143])
+            ("check" function (:arguments ("build")) nil [144 215])
+            ("build" function nil nil [216 385])
+            ("static" function nil nil [386 562])
+            ("clean" function nil nil [563 649]))          
+      :file "Makefile"
+      :pointmax 649
+      :fsize 648
+      :lastmodtime '(21913 25213 0 0)
+      :unmatched-syntax '((shell-command 571 . 648) (bol 570 . 570))))
+  :file "!home!amit!Documents!build-software!swig-3.0.6!Examples!python!std_vector!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

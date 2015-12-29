@@ -1,0 +1,16 @@
+;; Object dist-packages/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dist-packages/"
+  :tables
+  (list
+    (semanticdb-table "pyparsing.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "pyparsing.py"
+      :pointmax 150432
+      :fsize 154099
+      :lastmodtime '(20966 17114 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!lib!python2.7!dist-packages!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

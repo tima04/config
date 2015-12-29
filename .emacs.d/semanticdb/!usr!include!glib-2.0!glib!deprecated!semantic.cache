@@ -1,0 +1,1344 @@
+;; Object deprecated/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "deprecated/"
+  :tables
+  (list
+    (semanticdb-table "gallocator.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__G_ALLOCATOR_H__" variable (:constant-flag t) nil [709 726])
+            ("glib/gtypes.h" include (:system-flag t) nil [849 873])
+            ("GAllocator" type
+               (:typedef ("_GAllocator" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [890 928])
+            ("GMemChunk" type
+               (:typedef ("_GMemChunk" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [929 966])
+            ("G_ALLOC_ONLY" variable (:constant-flag t) nil [976 988])
+            ("G_ALLOC_AND_FREE" variable (:constant-flag t) nil [1018 1034])
+            ("G_ALLOCATOR_LIST" variable (:constant-flag t) nil [1060 1076])
+            ("G_ALLOCATOR_SLIST" variable (:constant-flag t) nil [1102 1119])
+            ("G_ALLOCATOR_NODE" variable (:constant-flag t) nil [1144 1160])
+            ("g_chunk_new" variable (:constant-flag t) nil [1187 1198])
+            ("g_chunk_new0" variable (:constant-flag t) nil [1264 1276])
+            ("g_chunk_free" variable (:constant-flag t) nil [1342 1354])
+            ("g_mem_chunk_create" variable (:constant-flag t) nil [1418 1436])
+            ("g_mem_chunk_new" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1555 1574])
+                    ("atom_size" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1616 1640])
+                    ("area_size" variable (:type ("gsize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1682 1706])
+                    ("type" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1748 1767]))                  
+                :type ("GMemChunk" type (:type "class") nil nil))
+                nil [1514 1768])
+            ("g_mem_chunk_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mem_chunk" variable
+                       (:pointer 1
+                        :type ("GMemChunk" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1826 1850]))                  
+                :type "void")
+                nil [1785 1851])
+            ("g_mem_chunk_alloc" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mem_chunk" variable
+                       (:pointer 1
+                        :type ("GMemChunk" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1909 1933]))                  
+                :type ("gpointer" type (:type "class") nil nil))
+                nil [1868 1934])
+            ("g_mem_chunk_alloc0" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mem_chunk" variable
+                       (:pointer 1
+                        :type ("GMemChunk" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1992 2016]))                  
+                :type ("gpointer" type (:type "class") nil nil))
+                nil [1951 2017])
+            ("g_mem_chunk_free" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mem_chunk" variable
+                       (:pointer 1
+                        :type ("GMemChunk" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2075 2099])
+                    ("mem" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2141 2159]))                  
+                :type "void")
+                nil [2034 2160])
+            ("g_mem_chunk_clean" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mem_chunk" variable
+                       (:pointer 1
+                        :type ("GMemChunk" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2218 2242]))                  
+                :type "void")
+                nil [2177 2243])
+            ("g_mem_chunk_reset" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mem_chunk" variable
+                       (:pointer 1
+                        :type ("GMemChunk" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2301 2325]))                  
+                :type "void")
+                nil [2260 2326])
+            ("g_mem_chunk_print" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mem_chunk" variable
+                       (:pointer 1
+                        :type ("GMemChunk" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2384 2408]))                  
+                :type "void")
+                nil [2343 2409])
+            ("g_mem_chunk_info" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2467 2472]))                  
+                :type "void")
+                nil [2426 2473])
+            ("g_blow_chunks" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2531 2536]))                  
+                :type "void")
+                nil [2490 2537])
+            ("g_allocator_new" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2597 2616])
+                    ("n_preallocs" variable (:type ("guint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2658 2684]))                  
+                :type ("GAllocator" type (:type "class") nil nil))
+                nil [2556 2685])
+            ("g_allocator_free" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("allocator" variable
+                       (:pointer 1
+                        :type ("GAllocator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2743 2767]))                  
+                :type "void")
+                nil [2702 2768])
+            ("g_list_push_allocator" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("allocator" variable
+                       (:pointer 1
+                        :type ("GAllocator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2826 2850]))                  
+                :type "void")
+                nil [2785 2851])
+            ("g_list_pop_allocator" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2909 2914]))                  
+                :type "void")
+                nil [2868 2915])
+            ("g_slist_push_allocator" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("allocator" variable
+                       (:pointer 1
+                        :type ("GAllocator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2973 2997]))                  
+                :type "void")
+                nil [2932 2998])
+            ("g_slist_pop_allocator" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3056 3061]))                  
+                :type "void")
+                nil [3015 3062])
+            ("g_node_push_allocator" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("allocator" variable
+                       (:pointer 1
+                        :type ("GAllocator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3120 3144]))                  
+                :type "void")
+                nil [3079 3145])
+            ("g_node_pop_allocator" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3203 3208]))                  
+                :type "void")
+                nil [3162 3209]))          
+      :file "gallocator.h"
+      :pointmax 3255
+      :fsize 3254
+      :lastmodtime '(21540 22332 0 0)
+      :unmatched-syntax '((symbol 3211 . 3222) (symbol 3146 . 3161) (symbol 3063 . 3078) (symbol 2999 . 3014) (symbol 2916 . 2931) (symbol 2852 . 2867) (symbol 2769 . 2784) (symbol 2686 . 2701) (symbol 2540 . 2555) (symbol 2474 . 2489) (symbol 2410 . 2425) (symbol 2327 . 2342) (symbol 2244 . 2259) (symbol 2161 . 2176) (symbol 2018 . 2033) (symbol 1935 . 1950) (symbol 1852 . 1867) (symbol 1769 . 1784) (symbol 1498 . 1513) (symbol 875 . 888) (string 799 . 840) (symbol 793 . 798) (punctuation 792 . 793))
+      :lexical-table 
+        '(("G_ALLOCATOR_SLIST" . ((number "2" 1134 . 1135)))
+          ("G_ALLOC_ONLY" . ((number "1" 1008 . 1009)))
+          ("g_chunk_free" (spp-arg-list ("mem" "mem_chunk") 1354 . 1370) . ((semantic-list "(g_mem_chunk_free (mem_chunk, mem))" 1374 . 1409)))
+          ("G_ALLOCATOR_NODE" . ((number "3" 1176 . 1177)))
+          ("g_chunk_new" (spp-arg-list ("type" "chunk") 1198 . 1211) . ((semantic-list "((type *) g_mem_chunk_alloc (chunk))" 1219 . 1255)))
+          ("G_ALLOC_AND_FREE" . ((number "2" 1050 . 1051)))
+          ("G_ALLOCATOR_LIST" . ((number "1" 1092 . 1093)))
+          ("g_mem_chunk_create" (spp-arg-list ("type" "x" "y") 1436 . 1448) . ((semantic-list "(g_mem_chunk_new (NULL, sizeof (type), 0, 0))" 1450 . 1495)))
+          ("__G_ALLOCATOR_H__")
+          ("g_chunk_new0" (spp-arg-list ("type" "chunk") 1276 . 1289) . ((semantic-list "((type *) g_mem_chunk_alloc0 (chunk))" 1296 . 1333)))
+          )
+)
+    (semanticdb-table "gcache.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__G_CACHE_H__" variable (:constant-flag t) nil [1084 1097])
+            ("glib/glist.h" include (:system-flag t) nil [1220 1243])
+            ("GCache" type
+               (:typedef ("_GCache" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1290 1329])
+            ("GCacheNewFunc" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("key" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1380 1399]))                  
+                :type ("gpointer" type (:type "class") nil nil))
+                nil [1339 1400])
+            ("GCacheDupFunc" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("value" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1450 1471]))                  
+                :type ("gpointer" type (:type "class") nil nil))
+                nil [1409 1472])
+            ("GCacheDestroyFunc" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("value" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1522 1543]))                  
+                :type "void")
+                nil [1481 1544])
+            ("g_cache_new" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("value_new_func" variable (:type ("GCacheNewFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1608 1642])
+                    ("value_destroy_func" variable (:type ("GCacheDestroyFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1675 1713])
+                    ("key_dup_func" variable (:type ("GCacheDupFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1746 1778])
+                    ("key_destroy_func" variable (:type ("GCacheDestroyFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1811 1847])
+                    ("hash_key_func" variable (:type ("GHashFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1880 1913])
+                    ("hash_value_func" variable (:type ("GHashFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1946 1981])
+                    ("key_equal_func" variable (:type ("GEqualFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2014 2048]))                  
+                :type ("GCache" type (:type "class") nil nil))
+                nil [1576 2049])
+            ("g_cache_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cache" variable
+                       (:pointer 1
+                        :type ("GCache" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2098 2123]))                  
+                :type "void")
+                nil [2066 2124])
+            ("g_cache_insert" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cache" variable
+                       (:pointer 1
+                        :type ("GCache" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2173 2198])
+                    ("key" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2231 2254]))                  
+                :type ("gpointer" type (:type "class") nil nil))
+                nil [2141 2255])
+            ("g_cache_remove" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cache" variable
+                       (:pointer 1
+                        :type ("GCache" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2304 2329])
+                    ("value" variable (:type ("gconstpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2362 2387]))                  
+                :type "void")
+                nil [2272 2388])
+            ("g_cache_key_foreach" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cache" variable
+                       (:pointer 1
+                        :type ("GCache" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2437 2462])
+                    ("func" variable (:type ("GHFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2495 2519])
+                    ("user_data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2552 2581]))                  
+                :type "void")
+                nil [2405 2582])
+            ("g_cache_value_foreach" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cache" variable
+                       (:pointer 1
+                        :type ("GCache" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2631 2656])
+                    ("func" variable (:type ("GHFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2689 2713])
+                    ("user_data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2746 2775]))                  
+                :type "void")
+                nil [2599 2776]))          
+      :file "gcache.h"
+      :pointmax 2826
+      :fsize 2825
+      :lastmodtime '(21540 22332 0 0)
+      :unmatched-syntax '((symbol 2786 . 2797) (symbol 2583 . 2598) (symbol 2389 . 2404) (symbol 2256 . 2271) (symbol 2125 . 2140) (symbol 2050 . 2065) (symbol 1560 . 1575) (TYPEDEF 1473 . 1480) (TYPEDEF 1401 . 1408) (TYPEDEF 1331 . 1338) (symbol 1245 . 1258) (string 1170 . 1211) (symbol 1164 . 1169) (punctuation 1163 . 1164))
+      :lexical-table 
+        '(("__G_CACHE_H__")
+          )
+)
+    (semanticdb-table "gcompletion.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__G_COMPLETION_H__" variable (:constant-flag t) nil [1089 1107])
+            ("glib/glist.h" include (:system-flag t) nil [1230 1253])
+            ("GCompletion" type
+               (:typedef ("_GCompletion" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1270 1314])
+            ("GCompletionFunc" function
+               (:prototype-flag t
+                :pointer 1
+                :function-pointer t
+                :arguments 
+                  ( ("" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1365 1374]))                  
+                :type ("gchar" type (:type "class") nil nil))
+                nil [1324 1375])
+            ("GCompletionStrncmpFunc" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("s1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1437 1453])
+                    ("s2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1494 1510])
+                    ("n" variable (:type ("gsize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1551 1566]))                  
+                :type ("gint" type (:type "class") nil nil))
+                nil [1405 1567])
+            ("_GCompletion" type
+               (:members 
+                  ( ("items" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1593 1606])
+                    ("func" variable (:type ("GCompletionFunc" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1609 1630])
+                    ("prefix" variable
+                       (:pointer 1
+                        :type ("gchar" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1635 1649])
+                    ("cache" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1652 1665])
+                    ("strncmp_func" variable (:type ("GCompletionStrncmpFunc" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1668 1704]))                  
+                :type "struct")
+                nil [1569 1707])
+            ("g_completion_new" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("func" variable (:type ("GCompletionFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1774 1795]))                  
+                :type ("GCompletion" type (:type "class") nil nil))
+                nil [1733 1796])
+            ("g_completion_add_items" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cmp" variable
+                       (:pointer 1
+                        :type ("GCompletion" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1862 1882])
+                    ("items" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1924 1946]))                  
+                :type "void")
+                nil [1821 1947])
+            ("g_completion_remove_items" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cmp" variable
+                       (:pointer 1
+                        :type ("GCompletion" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2013 2033])
+                    ("items" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2075 2097]))                  
+                :type "void")
+                nil [1972 2098])
+            ("g_completion_clear_items" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cmp" variable
+                       (:pointer 1
+                        :type ("GCompletion" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2164 2184]))                  
+                :type "void")
+                nil [2123 2185])
+            ("g_completion_complete" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("cmp" variable
+                       (:pointer 1
+                        :type ("GCompletion" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2251 2271])
+                    ("prefix" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2313 2336])
+                    ("new_prefix" variable
+                       (:pointer 2
+                        :type ("gchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2378 2405]))                  
+                :type ("GList" type (:type "class") nil nil))
+                nil [2210 2406])
+            ("g_completion_complete_utf8" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("cmp" variable
+                       (:pointer 1
+                        :type ("GCompletion" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2472 2490])
+                    ("prefix" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2532 2555])
+                    ("new_prefix" variable
+                       (:pointer 2
+                        :type ("gchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2597 2624]))                  
+                :type ("GList" type (:type "class") nil nil))
+                nil [2431 2625])
+            ("g_completion_set_compare" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cmp" variable
+                       (:pointer 1
+                        :type ("GCompletion" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2691 2708])
+                    ("strncmp_func" variable (:type ("GCompletionStrncmpFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2750 2786]))                  
+                :type "void")
+                nil [2650 2787])
+            ("g_completion_free" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cmp" variable
+                       (:pointer 1
+                        :type ("GCompletion" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2853 2873]))                  
+                :type "void")
+                nil [2812 2874]))          
+      :file "gcompletion.h"
+      :pointmax 2921
+      :fsize 2920
+      :lastmodtime '(21540 22332 0 0)
+      :unmatched-syntax '((symbol 2876 . 2887) (symbol 2788 . 2811) (symbol 2626 . 2649) (symbol 2407 . 2430) (symbol 2186 . 2209) (symbol 2099 . 2122) (symbol 1948 . 1971) (symbol 1797 . 1820) (symbol 1709 . 1732) (TYPEDEF 1397 . 1404) (TYPEDEF 1316 . 1323) (symbol 1255 . 1268) (string 1180 . 1221) (symbol 1174 . 1179) (punctuation 1173 . 1174))
+      :lexical-table 
+        '(("__G_COMPLETION_H__")
+          )
+)
+    (semanticdb-table "gmain.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__G_DEPRECATED_MAIN_H__" variable (:constant-flag t) nil [1094 1117])
+            ("glib/gmain.h" include (:system-flag t) nil [1240 1263])
+            ("g_main_new" variable (:constant-flag t) nil [1724 1734])
+            ("g_main_run" variable (:constant-flag t) nil [1946 1956])
+            ("g_main_quit" variable (:constant-flag t) nil [2203 2214])
+            ("g_main_destroy" variable (:constant-flag t) nil [2417 2431])
+            ("g_main_is_running" variable (:constant-flag t) nil [2678 2695])
+            ("g_main_iteration" variable (:constant-flag t) nil [3205 3221])
+            ("g_main_pending" variable (:constant-flag t) nil [3522 3536])
+            ("g_main_set_poll_func" variable (:constant-flag t) nil [3853 3873]))          
+      :file "gmain.h"
+      :pointmax 3982
+      :fsize 3981
+      :lastmodtime '(21540 22332 0 0)
+      :unmatched-syntax '((symbol 3932 . 3943) (symbol 1265 . 1278) (string 1190 . 1231) (symbol 1184 . 1189) (punctuation 1183 . 1184))
+      :lexical-table 
+        '(("g_main_destroy" (spp-arg-list ("loop") 2431 . 2437) . ((symbol "g_main_loop_unref" 2441 . 2458) (semantic-list "(loop)" 2458 . 2464)))
+          ("g_main_iteration" (spp-arg-list ("may_block") 3221 . 3232) . ((symbol "g_main_context_iteration" 3233 . 3257) (semantic-list "(NULL, may_block)" 3258 . 3275)))
+          ("g_main_run" (spp-arg-list ("loop") 1956 . 1962) . ((symbol "g_main_loop_run" 1970 . 1985) (semantic-list "(loop)" 1985 . 1991)))
+          ("g_main_set_poll_func" (spp-arg-list ("func") 3873 . 3879) . ((symbol "g_main_context_set_poll_func" 3881 . 3909) (semantic-list "(NULL, func)" 3910 . 3922)))
+          ("g_main_new" (spp-arg-list ("is_running") 1734 . 1746) . ((symbol "g_main_loop_new" 1748 . 1763) (semantic-list "(NULL, is_running)" 1764 . 1782)))
+          ("__G_DEPRECATED_MAIN_H__")
+          ("g_main_is_running" (spp-arg-list ("loop") 2695 . 2701) . ((symbol "g_main_loop_is_running" 2702 . 2724) (semantic-list "(loop)" 2724 . 2730)))
+          ("g_main_pending" (spp-arg-list nil 3536 . 3538) . ((symbol "g_main_context_pending" 3550 . 3572) (semantic-list "(NULL)" 3573 . 3579)))
+          ("g_main_quit" (spp-arg-list ("loop") 2214 . 2220) . ((symbol "g_main_loop_quit" 2227 . 2243) (semantic-list "(loop)" 2243 . 2249)))
+          )
+)
+    (semanticdb-table "grel.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__G_REL_H__" variable (:constant-flag t) nil [1082 1093])
+            ("glib/gtypes.h" include (:system-flag t) nil [1216 1240])
+            ("GRelation" type
+               (:typedef ("_GRelation" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1257 1299])
+            ("GTuples" type
+               (:typedef ("_GTuples" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1300 1340])
+            ("_GTuples" type
+               (:members 
+                  ( ("len" variable (:type ("guint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1362 1372]))                  
+                :type "struct")
+                nil [1342 1375])
+            ("g_relation_new" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("fields" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2187 2207]))                  
+                :type ("GRelation" type (:type "class") nil nil))
+                nil [2156 2208])
+            ("g_relation_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("relation" variable
+                       (:pointer 1
+                        :type ("GRelation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2264 2286]))                  
+                :type "void")
+                nil [2233 2287])
+            ("g_relation_index" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("relation" variable
+                       (:pointer 1
+                        :type ("GRelation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2343 2365])
+                    ("field" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2397 2416])
+                    ("hash_func" variable (:type ("GHashFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2448 2471])
+                    ("key_equal_func" variable (:type ("GEqualFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2503 2531]))                  
+                :type "void")
+                nil [2312 2532])
+            ("g_relation_insert" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("relation" variable
+                       (:pointer 1
+                        :type ("GRelation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2588 2610])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [2642 2646]))                  
+                :type "void")
+                nil [2557 2647])
+            ("g_relation_delete" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("relation" variable
+                       (:pointer 1
+                        :type ("GRelation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2703 2725])
+                    ("key" variable (:type ("gconstpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2757 2776])
+                    ("field" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2808 2827]))                  
+                :type ("gint" type (:type "class") nil nil))
+                nil [2672 2828])
+            ("g_relation_select" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("relation" variable
+                       (:pointer 1
+                        :type ("GRelation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2884 2906])
+                    ("key" variable (:type ("gconstpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2938 2957])
+                    ("field" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2989 3008]))                  
+                :type ("GTuples" type (:type "class") nil nil))
+                nil [2853 3009])
+            ("g_relation_count" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("relation" variable
+                       (:pointer 1
+                        :type ("GRelation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3065 3087])
+                    ("key" variable (:type ("gconstpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3119 3138])
+                    ("field" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3170 3189]))                  
+                :type ("gint" type (:type "class") nil nil))
+                nil [3034 3190])
+            ("g_relation_exists" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("relation" variable
+                       (:pointer 1
+                        :type ("GRelation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3246 3268])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [3300 3304]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [3215 3305])
+            ("g_relation_print" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("relation" variable
+                       (:pointer 1
+                        :type ("GRelation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3361 3383]))                  
+                :type "void")
+                nil [3330 3384])
+            ("g_tuples_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("tuples" variable
+                       (:pointer 1
+                        :type ("GTuples" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3440 3460]))                  
+                :type "void")
+                nil [3409 3461])
+            ("g_tuples_index" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("tuples" variable
+                       (:pointer 1
+                        :type ("GTuples" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3517 3537])
+                    ("index_" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3569 3589])
+                    ("field" variable (:type ("gint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3621 3640]))                  
+                :type ("gpointer" type (:type "class") nil nil))
+                nil [3486 3641]))          
+      :file "grel.h"
+      :pointmax 3681
+      :fsize 3680
+      :lastmodtime '(21540 22332 0 0)
+      :unmatched-syntax '((symbol 3643 . 3654) (symbol 3462 . 3485) (symbol 3385 . 3408) (symbol 3306 . 3329) (symbol 3191 . 3214) (symbol 3010 . 3033) (symbol 2829 . 2852) (symbol 2648 . 2671) (symbol 2533 . 2556) (symbol 2288 . 2311) (symbol 2209 . 2232) (symbol 2132 . 2155) (symbol 1242 . 1255) (string 1166 . 1207) (symbol 1160 . 1165) (punctuation 1159 . 1160))
+      :lexical-table 
+        '(("__G_REL_H__")
+          )
+)
+    (semanticdb-table "gthread.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__G_DEPRECATED_THREAD_H__" variable (:constant-flag t) nil [1096 1121])
+            ("glib/gthread.h" include (:system-flag t) nil [1244 1269])
+            ("GThreadPriority" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("G_THREAD_PRIORITY_LOW" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1333 1355])
+                          ("G_THREAD_PRIORITY_NORMAL" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1358 1383])
+                          ("G_THREAD_PRIORITY_HIGH" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1386 1409])
+                          ("G_THREAD_PRIORITY_URGENT" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1412 1438]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [1316 1455])
+            ("_GThread" type
+               (:members 
+                  ( ("func" variable (:type ("GThreadFunc" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1496 1513])
+                    ("data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1516 1530])
+                    ("joinable" variable (:type ("gboolean" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1533 1551])
+                    ("priority" variable (:type ("GThreadPriority" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1554 1579]))                  
+                :type "struct")
+                nil [1457 1582])
+            ("GThreadFunctions" type
+               (:typedef ("_GThreadFunctions" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1584 1634])
+            ("_GThreadFunctions" type
+               (:members 
+                  ( ("mutex_new" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1697 1702]))                          
+                        :type ("GMutex" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1664 1703])
+                    ("mutex_lock" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("mutex" variable
+                               (:pointer 1
+                                :type ("GMutex" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1739 1767]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1706 1768])
+                    ("mutex_trylock" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("mutex" variable
+                               (:pointer 1
+                                :type ("GMutex" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1804 1832]))                          
+                        :type ("gboolean" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1771 1833])
+                    ("mutex_unlock" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("mutex" variable
+                               (:pointer 1
+                                :type ("GMutex" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1869 1897]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1836 1898])
+                    ("mutex_free" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("mutex" variable
+                               (:pointer 1
+                                :type ("GMutex" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1934 1962]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1901 1963])
+                    ("cond_new" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1999 2004]))                          
+                        :type ("GCond" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1966 2005])
+                    ("cond_signal" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("cond" variable
+                               (:pointer 1
+                                :type ("GCond" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2041 2068]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2008 2069])
+                    ("cond_broadcast" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("cond" variable
+                               (:pointer 1
+                                :type ("GCond" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2105 2132]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2072 2133])
+                    ("cond_wait" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("cond" variable
+                               (:pointer 1
+                                :type ("GCond" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2169 2196])
+                            ("mutex" variable
+                               (:pointer 1
+                                :type ("GMutex" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2232 2260]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2136 2261])
+                    ("cond_timed_wait" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("cond" variable
+                               (:pointer 1
+                                :type ("GCond" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2297 2324])
+                            ("mutex" variable
+                               (:pointer 1
+                                :type ("GMutex" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2360 2388])
+                            ("end_time" variable
+                               (:pointer 1
+                                :type ("GTimeVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2424 2455]))                          
+                        :type ("gboolean" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2264 2456])
+                    ("cond_free" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("cond" variable
+                               (:pointer 1
+                                :type ("GCond" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2492 2519]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2459 2520])
+                    ("private_new" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :function-pointer t
+                        :arguments 
+                          ( ("destructor" variable (:type ("GDestroyNotify" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2556 2589]))                          
+                        :type ("GPrivate" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2523 2590])
+                    ("private_get" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("private_key" variable
+                               (:pointer 1
+                                :type ("GPrivate" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2626 2660]))                          
+                        :type ("gpointer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2593 2661])
+                    ("private_set" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("private_key" variable
+                               (:pointer 1
+                                :type ("GPrivate" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2697 2731])
+                            ("data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2767 2794]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2664 2795])
+                    ("thread_create" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("func" variable (:type ("GThreadFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2831 2858])
+                            ("data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2894 2921])
+                            ("stack_size" variable (:type ("gulong" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2957 2990])
+                            ("joinable" variable (:type ("gboolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3026 3057])
+                            ("bound" variable (:type ("gboolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3093 3121])
+                            ("priority" variable (:type ("GThreadPriority" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3157 3188])
+                            ("thread" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3224 3253])
+                            ("error" variable
+                               (:pointer 2
+                                :type ("GError" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3289 3317]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2798 3318])
+                    ("thread_yield" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3354 3359]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3321 3360])
+                    ("thread_join" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("thread" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3396 3425]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3363 3426])
+                    ("thread_exit" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3462 3467]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3429 3468])
+                    ("thread_set_priority" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("thread" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3504 3533])
+                            ("priority" variable (:type ("GThreadPriority" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3569 3600]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3471 3601])
+                    ("thread_self" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("thread" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3637 3666]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3604 3667])
+                    ("thread_equal" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("thread1" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3703 3733])
+                            ("thread2" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3769 3799]))                          
+                        :type ("gboolean" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3670 3800]))                  
+                :type "struct")
+                nil [1635 3803])
+            ("g_thread_functions_for_glib_use" variable (:type ("GThreadFunctions" type (:type "class") nil nil)) nil [3814 3869])
+            ("g_thread_use_default_impl" variable (:type ("gboolean" type (:type "class") nil nil)) nil [3879 3928])
+            ("guint64" function
+               (:arguments 
+                  ( ("" variable (:type ("g_thread_gettime" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3951 3968]))                  
+                :type ("GLIB_VAR" type (:type "class") nil nil))
+                nil [3930 3975])
+            ("g_thread_create" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("func" variable (:type ("GThreadFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4052 4075])
+                    ("data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4108 4131])
+                    ("joinable" variable (:type ("gboolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4164 4191])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("GError" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4224 4248]))                  
+                :type ("GThread" type (:type "class") nil nil))
+                nil [4020 4249])
+            ("g_thread_create_full" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("func" variable (:type ("GThreadFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4325 4348])
+                    ("data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4381 4404])
+                    ("stack_size" variable (:type ("gulong" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4437 4466])
+                    ("joinable" variable (:type ("gboolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4499 4526])
+                    ("bound" variable (:type ("gboolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4559 4583])
+                    ("priority" variable (:type ("GThreadPriority" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4616 4643])
+                    ("error" variable
+                       (:pointer 2
+                        :type ("GError" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4676 4700]))                  
+                :type ("GThread" type (:type "class") nil nil))
+                nil [4293 4701])
+            ("g_thread_set_priority" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("thread" variable
+                       (:pointer 1
+                        :type ("GThread" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4759 4784])
+                    ("priority" variable (:type ("GThreadPriority" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4817 4844]))                  
+                :type "void")
+                nil [4727 4845])
+            ("g_thread_foreach" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("thread_func" variable (:type ("GFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4903 4933])
+                    ("user_data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4966 4994]))                  
+                :type "void")
+                nil [4871 4995])
+            ("sys/types.h" include (:system-flag t) nil [5016 5038])
+            ("pthread.h" include (:system-flag t) nil [5039 5059])
+            ("g_static_mutex_get_mutex" variable (:constant-flag t) nil [5076 5100])
+            ("G_STATIC_MUTEX_INIT" variable (:constant-flag t) nil [5139 5158])
+            ("GStaticMutex" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("mutex" variable
+                             (:pointer 1
+                              :type ("GMutex" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [5187 5201])
+                          ("unused" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5266 5289]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [5168 5312])
+            ("g_static_mutex_lock" variable (:constant-flag t) nil [5322 5341])
+            ("g_static_mutex_trylock" variable (:constant-flag t) nil [5411 5433])
+            ("g_static_mutex_unlock" variable (:constant-flag t) nil [5506 5527])
+            ("g_static_mutex_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mutex" variable
+                       (:pointer 1
+                        :type ("GStaticMutex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5673 5693]))                  
+                :type "void")
+                nil [5634 5694])
+            ("g_static_mutex_free" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mutex" variable
+                       (:pointer 1
+                        :type ("GStaticMutex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5777 5797]))                  
+                :type "void")
+                nil [5738 5798])
+            ("g_static_mutex_get_mutex_impl" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("mutex" variable
+                       (:pointer 1
+                        :type ("GStaticMutex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5874 5894]))                  
+                :type ("GMutex" type (:type "class") nil nil))
+                nil [5835 5895])
+            ("GStaticRecMutex" type
+               (:typedef ("_GStaticRecMutex" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [5897 5945])
+            ("_GStaticRecMutex" type
+               (:members 
+                  ( ("mutex" variable (:type ("GStaticMutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5992 6011])
+                    ("depth" variable (:type ("guint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6014 6026])
+                    ("unused" variable (:type ("" type
+                         (:members 
+                            ( ("owner" variable (:type ("pthread_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6107 6123])
+                              ("dummy" variable (:type ("gdouble" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6135 6149]))                            
+                          :type "union")
+                          nil nil)) (reparse-symbol classsubparts) [6054 6161]))                  
+                :type "struct")
+                nil [5946 6164])
+            ("G_STATIC_REC_MUTEX_INIT" variable (:constant-flag t) nil [6174 6197])
+            ("g_static_rec_mutex_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mutex" variable
+                       (:pointer 1
+                        :type ("GStaticRecMutex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6309 6332]))                  
+                :type "void")
+                nil [6268 6333])
+            ("g_static_rec_mutex_lock" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mutex" variable
+                       (:pointer 1
+                        :type ("GStaticRecMutex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6422 6445]))                  
+                :type "void")
+                nil [6381 6446])
+            ("g_static_rec_mutex_trylock" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mutex" variable
+                       (:pointer 1
+                        :type ("GStaticRecMutex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6539 6562]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [6498 6563])
+            ("g_static_rec_mutex_unlock" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mutex" variable
+                       (:pointer 1
+                        :type ("GStaticRecMutex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6654 6677]))                  
+                :type "void")
+                nil [6613 6678])
+            ("g_static_rec_mutex_lock_full" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mutex" variable
+                       (:pointer 1
+                        :type ("GStaticRecMutex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6745 6768])
+                    ("depth" variable (:type ("guint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6810 6833]))                  
+                :type "void")
+                nil [6704 6834])
+            ("g_static_rec_mutex_unlock_full" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mutex" variable
+                       (:pointer 1
+                        :type ("GStaticRecMutex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6901 6924]))                  
+                :type ("guint" type (:type "class") nil nil))
+                nil [6860 6925])
+            ("g_static_rec_mutex_free" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mutex" variable
+                       (:pointer 1
+                        :type ("GStaticRecMutex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7014 7037]))                  
+                :type "void")
+                nil [6973 7038])
+            ("GStaticRWLock" type
+               (:typedef ("_GStaticRWLock" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [7040 7084])
+            ("_GStaticRWLock" type
+               (:members 
+                  ( ("mutex" variable (:type ("GStaticMutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7129 7148])
+                    ("read_cond" variable
+                       (:pointer 1
+                        :type ("GCond" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7151 7168])
+                    ("write_cond" variable
+                       (:pointer 1
+                        :type ("GCond" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7171 7189])
+                    ("read_counter" variable (:type ("guint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7192 7211])
+                    ("have_writer" variable (:type ("gboolean" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7214 7235])
+                    ("want_to_read" variable (:type ("guint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7238 7257])
+                    ("want_to_write" variable (:type ("guint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7260 7280]))                  
+                :type "struct")
+                nil [7085 7283])
+            ("G_STATIC_RW_LOCK_INIT" variable (:constant-flag t) nil [7293 7314])
+            ("g_static_rw_lock_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("lock" variable
+                       (:pointer 1
+                        :type ("GStaticRWLock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7455 7475]))                  
+                :type "void")
+                nil [7412 7476])
+            ("g_static_rw_lock_reader_lock" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("lock" variable
+                       (:pointer 1
+                        :type ("GStaticRWLock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7572 7592]))                  
+                :type "void")
+                nil [7529 7593])
+            ("g_static_rw_lock_reader_trylock" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("lock" variable
+                       (:pointer 1
+                        :type ("GStaticRWLock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7692 7712]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [7649 7713])
+            ("g_static_rw_lock_reader_unlock" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("lock" variable
+                       (:pointer 1
+                        :type ("GStaticRWLock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7811 7831]))                  
+                :type "void")
+                nil [7768 7832])
+            ("g_static_rw_lock_writer_lock" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("lock" variable
+                       (:pointer 1
+                        :type ("GStaticRWLock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7928 7948]))                  
+                :type "void")
+                nil [7885 7949])
+            ("g_static_rw_lock_writer_trylock" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("lock" variable
+                       (:pointer 1
+                        :type ("GStaticRWLock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8048 8068]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [8005 8069])
+            ("g_static_rw_lock_writer_unlock" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("lock" variable
+                       (:pointer 1
+                        :type ("GStaticRWLock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8167 8187]))                  
+                :type "void")
+                nil [8124 8188])
+            ("g_static_rw_lock_free" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("lock" variable
+                       (:pointer 1
+                        :type ("GStaticRWLock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8277 8297]))                  
+                :type "void")
+                nil [8234 8298])
+            ("g_private_new" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("notify" variable (:type ("GDestroyNotify" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8367 8389]))                  
+                :type ("GPrivate" type (:type "class") nil nil))
+                nil [8324 8390])
+            ("GStaticPrivate" type
+               (:typedef ("_GStaticPrivate" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [8392 8439])
+            ("_GStaticPrivate" type
+               (:members 
+                  ( ("index" variable (:type ("guint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8485 8497]))                  
+                :type "struct")
+                nil [8440 8500])
+            ("G_STATIC_PRIVATE_INIT" variable (:constant-flag t) nil [8510 8531])
+            ("g_static_private_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("private_key" variable
+                       (:pointer 1
+                        :type ("GStaticPrivate" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8604 8632]))                  
+                :type "void")
+                nil [8562 8633])
+            ("g_static_private_get" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("private_key" variable
+                       (:pointer 1
+                        :type ("GStaticPrivate" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8720 8748]))                  
+                :type ("gpointer" type (:type "class") nil nil))
+                nil [8678 8749])
+            ("g_static_private_set" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("private_key" variable
+                       (:pointer 1
+                        :type ("GStaticPrivate" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8836 8864])
+                    ("data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8907 8928])
+                    ("notify" variable (:type ("GDestroyNotify" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8971 8994]))                  
+                :type "void")
+                nil [8794 8995])
+            ("g_static_private_free" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("private_key" variable
+                       (:pointer 1
+                        :type ("GStaticPrivate" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9063 9091]))                  
+                :type "void")
+                nil [9021 9092])
+            ("g_once_init_enter_impl" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("location" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("gsize" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9160 9185]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [9118 9186])
+            ("g_thread_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vtable" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9254 9270]))                  
+                :type "void")
+                nil [9212 9271])
+            ("g_thread_init_with_errorcheck_mutexes" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vtable" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9343 9359]))                  
+                :type "void")
+                nil [9296 9360])
+            ("g_thread_get_initialized" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9428 9433]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [9386 9434])
+            ("g_threads_got_initialized" variable (:type ("gboolean" type (:type "class") nil nil)) nil [9445 9480])
+            ("g_thread_supported" variable (:constant-flag t) nil [9490 9508])
+            ("g_mutex_new" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9585 9590]))                  
+                :type ("GMutex" type (:type "class") nil nil))
+                nil [9544 9591])
+            ("g_mutex_free" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mutex" variable
+                       (:pointer 1
+                        :type ("GMutex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9657 9671]))                  
+                :type "void")
+                nil [9616 9672])
+            ("g_cond_new" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9738 9743]))                  
+                :type ("GCond" type (:type "class") nil nil))
+                nil [9697 9744])
+            ("g_cond_free" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cond" variable
+                       (:pointer 1
+                        :type ("GCond" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9810 9823]))                  
+                :type "void")
+                nil [9769 9824])
+            ("g_cond_timed_wait" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cond" variable
+                       (:pointer 1
+                        :type ("GCond" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9890 9911])
+                    ("mutex" variable
+                       (:pointer 1
+                        :type ("GMutex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9953 9975])
+                    ("timeval" variable
+                       (:pointer 1
+                        :type ("GTimeVal" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10017 10041]))                  
+                :type ("gboolean" type (:type "class") nil nil))
+                nil [9849 10042]))          
+      :file "gthread.h"
+      :pointmax 10104
+      :fsize 10103
+      :lastmodtime '(21540 22332 0 0)
+      :unmatched-syntax '((symbol 10052 . 10063) (symbol 9825 . 9848) (symbol 9745 . 9768) (symbol 9673 . 9696) (symbol 9592 . 9615) (symbol 9520 . 9543) (symbol 9436 . 9444) (symbol 9362 . 9385) (symbol 9272 . 9295) (symbol 9188 . 9211) (symbol 9094 . 9117) (symbol 8997 . 9020) (semantic-list 8778 . 8793) (symbol 8751 . 8778) (semantic-list 8662 . 8677) (symbol 8635 . 8662) (symbol 8538 . 8561) (symbol 8300 . 8323) (semantic-list 8217 . 8233) (symbol 8190 . 8217) (semantic-list 8098 . 8123) (symbol 8071 . 8098) (semantic-list 7978 . 8004) (symbol 7951 . 7978) (semantic-list 7861 . 7884) (symbol 7834 . 7861) (semantic-list 7742 . 7767) (symbol 7715 . 7742) (semantic-list 7622 . 7648) (symbol 7595 . 7622) (semantic-list 7505 . 7528) (symbol 7478 . 7505) (semantic-list 7395 . 7411) (symbol 7368 . 7395) (semantic-list 6954 . 6972) (symbol 6927 . 6954) (symbol 6836 . 6859) (symbol 6680 . 6703) (semantic-list 6592 . 6612) (symbol 6565 . 6592) (semantic-list 6475 . 6497) (symbol 6448 . 6475) (semantic-list 6362 . 6380) (symbol 6335 . 6362) (semantic-list 6249 . 6267) (symbol 6222 . 6249) (semantic-list 5826 . 5834) (symbol 5799 . 5826) (semantic-list 5722 . 5737) (symbol 5695 . 5722) (semantic-list 5619 . 5633) (symbol 5592 . 5619) (symbol 4847 . 4870) (symbol 4703 . 4726) (semantic-list 4278 . 4292) (symbol 4251 . 4278) (semantic-list 4005 . 4019) (symbol 3978 . 4005) (punctuation 3975 . 3976) (punctuation 3950 . 3951) (symbol 3870 . 3878) (symbol 3805 . 3813) (symbol 1271 . 1284) (string 1194 . 1235) (symbol 1188 . 1193) (punctuation 1187 . 1188))
+      :lexical-table 
+        '(("g_thread_supported" (spp-arg-list nil 9508 . 9510) . ((semantic-list "(1)" 9515 . 9518)))
+          ("g_static_mutex_get_mutex" . ((symbol "g_static_mutex_get_mutex_impl" 5101 . 5130)))
+          ("G_STATIC_PRIVATE_INIT" . ((semantic-list "{ 0 }" 8532 . 8537)))
+          ("g_static_mutex_trylock" (spp-arg-list ("mutex") 5433 . 5440) . ((symbol "g_mutex_trylock" 5447 . 5462) (semantic-list "(g_static_mutex_get_mutex (mutex))" 5463 . 5497)))
+          ("__G_DEPRECATED_THREAD_H__")
+          ("G_STATIC_RW_LOCK_INIT" . ((semantic-list "{ G_STATIC_MUTEX_INIT, NULL, NULL, 0, FALSE, 0, 0 }" 7315 . 7366)))
+          ("g_static_mutex_lock" (spp-arg-list ("mutex") 5341 . 5348) . ((symbol "g_mutex_lock" 5355 . 5367) (semantic-list "(g_static_mutex_get_mutex (mutex))" 5368 . 5402)))
+          ("g_static_mutex_unlock" (spp-arg-list ("mutex") 5527 . 5534) . ((symbol "g_mutex_unlock" 5541 . 5555) (semantic-list "(g_static_mutex_get_mutex (mutex))" 5556 . 5590)))
+          ("G_STATIC_MUTEX_INIT" . ((semantic-list "{ NULL }" 5159 . 5167)))
+          ("G_STATIC_REC_MUTEX_INIT" . ((semantic-list "{ G_STATIC_MUTEX_INIT }" 6198 . 6221)))
+          )
+))
+  :file "!usr!include!glib-2.0!glib!deprecated!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

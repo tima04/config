@@ -1,0 +1,34 @@
+;; Object helloworld/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "helloworld/"
+  :tables
+  (list
+    (semanticdb-table "hello.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [1 11])
+            ("path" variable nil nil [12 63])
+            ("path" variable nil nil [64 129])
+            ("sys" code nil nil [130 151])
+            ("os" include nil nil [152 161])
+            ("pdb" include nil nil [292 302])
+            ("pyjamas.ui.Button" include nil nil [322 358])
+            ("pyjamas.ui.RootPanel" include nil nil [359 401])
+            ("pyjamas.ui.HTML" include nil nil [402 434])
+            ("pyjamas.ui.HorizontalPanel" include nil nil [435 489])
+            ("pyjamas" include nil nil [490 516])
+            ("pyjamas.ui.CheckBox" include nil nil [518 558])
+            ("greet" function (:arguments 
+              ( ("sender" variable nil (reparse-symbol function_parameters) [570 576]))              ) nil [560 737])
+            ("pyjamas.ui.RootPanel" include nil nil [738 780])
+            ("pyjamas.Canvas" include nil nil [781 813])
+            ("pyjamas.Canvas.GWTCanvas" include nil nil [814 870])
+            ("if" code nil nil [872 1227]))          
+      :file "hello.py"
+      :pointmax 1244
+      :fsize 1243
+      :lastmodtime '(22007 5633 782821 920000)
+      :unmatched-syntax '((SEMICOLON 302 . 303))))
+  :file "!home!kothiyal!Documents!git-cloned!pyjs!examples!helloworld!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

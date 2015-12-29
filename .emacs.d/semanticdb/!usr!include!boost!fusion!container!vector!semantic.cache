@@ -1,0 +1,43 @@
+;; Object vector/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "vector/"
+  :tables
+  (list
+    (semanticdb-table "vector.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("FUSION_VECTOR_07072005_1244" variable (:constant-flag t) nil [411 438])
+            ("boost/fusion/container/vector/vector_fwd.hpp" include (:system-flag t) nil [440 495])
+            ("boost/fusion/container/vector/detail/vector_n_chooser.hpp" include (:system-flag t) nil [496 564])
+            ("boost/fusion/sequence/intrinsic/begin.hpp" include (:system-flag t) nil [565 617])
+            ("boost/mpl/at.hpp" include (:system-flag t) nil [618 645])
+            ("boost/mpl/bool.hpp" include (:system-flag t) nil [646 675])
+            ("boost/type_traits/add_reference.hpp" include (:system-flag t) nil [676 722])
+            ("boost/type_traits/add_const.hpp" include (:system-flag t) nil [723 765])
+            ("boost/type_traits/is_base_of.hpp" include (:system-flag t) nil [766 809])
+            ("boost/detail/workaround.hpp" include (:system-flag t) nil [810 848])
+            ("BOOST_FUSION_VECTOR_COPY_INIT" variable (:constant-flag t) nil [2060 2089])
+            ("BOOST_FUSION_VECTOR_CTOR_HELPER" variable (:constant-flag t) nil [2221 2252])
+            ("boost/fusion/container/vector/detail/preprocessed/vector.hpp" include (:system-flag t) nil [2349 2420]))          
+      :file "vector.hpp"
+      :pointmax 6962
+      :fsize 6961
+      :lastmodtime '(21413 1119 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_FUSION_VECTOR_COPY_INIT" (spp-arg-list nil 2089 . 2091) . ((symbol "rhs" 2136 . 2139)))
+          ("BOOST_FUSION_VECTOR_CTOR_HELPER" (spp-arg-list nil 2252 . 2254))
+          ("FUSION_VECTOR_07072005_1244")
+          )
+)
+    (semanticdb-table "limits.hpp"
+      :file "limits.hpp"
+      :fsize 814
+      :lastmodtime '(21413 1119 0 0))
+    (semanticdb-table "vector_fwd.hpp"
+      :file "vector_fwd.hpp"
+      :fsize 2292
+      :lastmodtime '(21413 1119 0 0)))
+  :file "!usr!include!boost!fusion!container!vector!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

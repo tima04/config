@@ -1,0 +1,41 @@
+;; Object emacs-c-ide-demo/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "emacs-c-ide-demo/"
+  :tables
+  (list
+    (semanticdb-table "temp.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("string.h" include (:system-flag t) nil [40 59])
+            ("glib.h" include (:system-flag t) nil [60 77])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [88 97])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [98 111]))                  
+                :type "int")
+                nil [79 191]))          
+      :file "temp.c"
+      :pointmax 192
+      :unmatched-syntax nil)
+    (semanticdb-table "temp.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [1 18])
+            ("iostream" include (:system-flag t) nil [19 38])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [40 60])
+            ("main" function (:type "int") nil [62 137]))          
+      :file "temp.cpp"
+      :pointmax 139
+      :unmatched-syntax nil))
+  :file "!home!amit!temp!emacs-c-ide-demo!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

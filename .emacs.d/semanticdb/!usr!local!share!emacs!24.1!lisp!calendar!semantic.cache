@@ -1,0 +1,391 @@
+;; Object calendar/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "calendar/"
+  :tables
+  (list
+    (semanticdb-table "diary-lib.el.gz"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("calendar" include nil nil [962 981])
+            ("load" code nil nil [1000 1029])
+            ("diary" customgroup (:user-visible-flag t) nil [1032 1107])
+            ("diary-include-string" variable (:default-value "#include") nil [1109 1328])
+            ("diary-list-include-blanks" variable nil nil [1330 1573])
+            ("diary-face" variable (:default-value (quote diary)) nil [1575 1683])
+            ("make-obsolete-variable" code nil nil [1684 1789])
+            ("diary-anniversary" variable
+               (:default-value (quote ((t :inherit font-lock-keyword-face)))
+                :type "face")
+                nil [1791 1960])
+            ("diary-time" variable
+               (:default-value (quote ((t :inherit font-lock-variable-name-face)))
+                :type "face")
+                nil [1962 2129])
+            ("diary-button" variable
+               (:default-value (quote ((((type pc) (class color)) (:foreground "lightblue"))))
+                :type "face")
+                nil [2131 2332])
+            ("define-obsolete-face-alias" code nil nil [2334 2402])
+            ("diary-face-attrs" variable (:default-value (quote ((" *\\[foreground:\\([-a-z]+\\)\\]$" 1 :foreground string) (" *\\[background:\\([-a-z]+\\)\\]$" 1 :background string) (" *\\[width:\\([-a-z]+\\)\\]$" 1 :width symbol) (" *\\[height:\\([.0-9]+\\)\\]$" 1 :height int) (" *\\[weight:\\([-a-z]+\\)\\]$" 1 :weight symbol) (" *\\[slant:\\([-a-z]+\\)\\]$" 1 :slant symbol) (" *\\[underline:\\([-a-z]+\\)\\]$" 1 :underline stringtnil) (" *\\[overline:\\([-a-z]+\\)\\]$" 1 :overline stringtnil) (" *\\[strike-through:\\([-a-z]+\\)\\]$" 1 :strike-through stringtnil) (" *\\[inverse-video:\\([-a-z]+\\)\\]$" 1 :inverse-video tnil) (" *\\[face:\\([-0-9a-z]+\\)\\]$" 1 :face string) (" *\\[font:\\([-a-z0-9]+\\)\\]$" 1 :font string)))) nil [2844 4847])
+            ("diary-glob-file-regexp-prefix" variable (:default-value "^\\#") nil [4849 5011])
+            ("diary-file-name-prefix" variable nil nil [5013 5165])
+            ("diary-file-name-prefix-function" variable (:default-value (quote identity)) nil [5167 5335])
+            ("define-obsolete-variable-alias" code nil nil [5337 5428])
+            ("diary-sexp-entry-symbol" variable (:default-value "%%") nil [5430 5636])
+            ("diary-comment-start" variable nil nil [5638 6151])
+            ("diary-comment-end" variable nil nil [6153 6382])
+            ("diary-hook" variable nil nil [6384 6568])
+            ("define-obsolete-variable-alias" code nil nil [6570 6655])
+            ("diary-display-function" variable (:default-value (quote diary-fancy-display)) nil [6657 7913])
+            ("define-obsolete-variable-alias" code nil nil [7915 8006])
+            ("diary-list-entries-hook" variable nil nil [8008 9369])
+            ("define-obsolete-variable-alias" code nil nil [9371 9462])
+            ("diary-mark-entries-hook" variable nil nil [9464 10092])
+            ("define-obsolete-variable-alias" code nil nil [10094 10201])
+            ("diary-nongregorian-listing-hook" variable nil nil [10203 10983])
+            ("define-obsolete-variable-alias" code nil nil [10985 11092])
+            ("diary-nongregorian-marking-hook" variable nil nil [11094 11873])
+            ("define-obsolete-variable-alias" code nil nil [11875 11968])
+            ("diary-print-entries-hook" variable (:default-value (quote lpr-buffer)) nil [11970 12421])
+            ("diary-unknown-time" variable (:default-value -9999) nil [12423 12752])
+            ("diary-mail-addr" variable (:default-value (or (bound-and-true-p user-mail-address) "")) nil [12754 12943])
+            ("diary-mail-days" variable (:default-value 7) nil [12945 13087])
+            ("diary-remind-message" variable (:default-value (quote ("Reminder: Only " (if (zerop (% days 7)) (format "%d week%s" (/ days 7) (if (= 7 days) "" "s")) (format "%d day%s" days (if (= 1 days) "" "s"))) " until " diary-entry))) nil [13089 13626])
+            ("define-obsolete-variable-alias" code nil nil [13628 13725])
+            ("diary-abbreviated-year-flag" variable (:default-value t) nil [13727 14219])
+            ("diary-outlook-format-1" function (:arguments ("body")) nil [14221 15462])
+            ("diary-outlook-formats" variable (:default-value (quote (("[ 	
+]*When: [[:alpha:]]+, \\([[:alpha:]]+\\) \\([0-9][0-9]*\\), \\([0-9]\\{4\\}\\),? \\(.+\\)
+\\(?:Where: \\(.+
+\\)\\)?" . diary-outlook-format-1)))) nil [16104 17546])
+            ("diary-header-line-flag" variable nil nil [17548 17579])
+            ("diary-header-line-format" variable nil nil [17580 17613])
+            ("diary-set-header" function (:arguments ("symbol" "value")) nil [17615 18152])
+            ("diary-header-line-flag" variable (:default-value t) nil [18258 18551])
+            ("diary-selective-display" variable nil nil [18553 18656])
+            ("diary-header-line-format" variable (:default-value (quote (:eval (calendar-string-spread (list (if diary-selective-display "Some text is hidden - press \"s\" in calendar before edit/copy" "Diary")) 32 (window-width))))) nil [18658 19153])
+            ("diary-live-p" function nil nil [19964 20135])
+            ("diary-set-maybe-redraw" function (:arguments ("symbol" "value")) nil [20156 20640])
+            ("define-obsolete-variable-alias" code nil nil [20642 20733])
+            ("diary-number-of-entries" variable (:default-value 1) nil [20735 22196])
+            ("diary-check-diary-file" function nil nil [22251 22652])
+            ("diary" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [22669 23147])
+            ("diary-view-entries" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [23168 23532])
+            ("diary-view-other-diary-entries" function
+               (:user-visible-flag t
+                :arguments ("arg" "dfile"))
+                nil [23554 24074])
+            ("define-obsolete-function-alias" code nil nil [24095 24194])
+            ("diary-syntax-table" variable (:default-value (let ((st (copy-syntax-table (standard-syntax-table)))) (modify-syntax-entry 42 "w" st) (modify-syntax-entry 58 "w" st) st)) nil [24196 24551])
+            ("diary-attrtype-convert" function (:arguments ("attrvalue" "type")) nil [24553 25091])
+            ("diary-pull-attrs" function (:arguments ("entry" "fileglobattrs")) nil [25093 27079])
+            ("diary-modify-entry-list-string-function" variable nil nil [27083 27419])
+            ("diary-entries-list" variable nil nil [27421 27448])
+            ("diary-add-to-list" function (:arguments ("date" "string" "specifier" "marker" "globcolor" "literal")) nil [27492 29774])
+            ("define-obsolete-function-alias" code nil nil [29776 29853])
+            ("diary-list-entries-2" function (:arguments ("date" "mark" "globattr" "list-only" "months" "symbol" "gdate")) nil [29855 33404])
+            ("original-date" variable nil nil [33406 33428])
+            ("file-glob-attrs" variable nil nil [33472 33496])
+            ("list-only" variable nil nil [33497 33515])
+            ("number" variable nil nil [33516 33531])
+            ("diary-list-entries-1" function (:arguments ("months" "symbol" "absfunc")) nil [33533 34187])
+            ("diary-included-files" variable nil nil [34189 34329])
+            ("diary-list-entries" function (:arguments ("date" "number" "list-only")) nil [34331 41489])
+            ("diary-unhide-everything" function nil nil [41491 41786])
+            ("original-date" variable nil nil [41788 41810])
+            ("diary-include-files" function (:arguments ("mark")) nil [41925 43634])
+            ("diary-include-other-diary-files" function nil nil [43636 43915])
+            ("define-obsolete-function-alias" code nil nil [43917 44018])
+            ("date-string" variable nil nil [44020 44040])
+            ("diary-display-no-entries" function nil nil [44091 45681])
+            ("diary-saved-point" variable nil nil [45684 45710])
+            ("diary-simple-display" function nil nil [45755 47026])
+            ("define-obsolete-function-alias" code nil nil [47028 47113])
+            ("define-button-type" code nil nil [47115 47249])
+            ("diary-goto-entry" function (:arguments ("button")) nil [47251 48367])
+            ("diary-fancy-display" function nil nil [48369 52910])
+            ("define-obsolete-function-alias" code nil nil [52912 52995])
+            ("diary-print-entries" function (:user-visible-flag t) nil [53017 54790])
+            ("define-obsolete-function-alias" code nil nil [54792 54875])
+            ("diary-show-all-entries" function (:user-visible-flag t) nil [54896 55840])
+            ("diary-mail-entries" function
+               (:user-visible-flag t
+                :arguments ("ndays"))
+                nil [55857 57229])
+            ("diary-name-pattern" function (:arguments ("string-array" "abbrev-array" "paren")) nil [57231 57862])
+            ("diary-marking-entries-flag" variable nil nil [57864 57964])
+            ("diary-marking-entry-flag" variable nil nil [57966 58078])
+            ("diary-mark-entries-1" function (:arguments ("markfunc" "months" "symbol" "absfunc")) nil [58128 63875])
+            ("diary-mark-entries" function
+               (:user-visible-flag t
+                :arguments ("redraw"))
+                nil [63896 66763])
+            ("define-obsolete-function-alias" code nil nil [66784 66863])
+            ("diary-sexp-entry" function (:arguments ("sexp" "entry" "date")) nil [66865 67619])
+            ("displayed-year" variable nil nil [67621 67644])
+            ("displayed-month" variable nil nil [67690 67714])
+            ("diary-mark-sexp-entries" function nil nil [67716 70076])
+            ("define-obsolete-function-alias" code nil nil [70078 70169])
+            ("diary-mark-included-diary-files" function nil nil [70171 70429])
+            ("define-obsolete-function-alias" code nil nil [70431 70532])
+            ("calendar-mark-days-named" function (:arguments ("dayname" "color")) nil [70534 71579])
+            ("define-obsolete-function-alias" code nil nil [71581 71674])
+            ("calendar-mark-month" function (:arguments ("month" "year" "p-month" "p-day" "p-year" "color")) nil [71676 72364])
+            ("define-obsolete-function-alias" code nil nil [72366 72449])
+            ("calendar-mark-date-pattern" function (:arguments ("month" "day" "year" "color")) nil [72451 72977])
+            ("define-obsolete-function-alias" code nil nil [72979 73076])
+            ("calendar-mark-complex" function (:arguments ("month" "day" "year" "fromabs" "color")) nil [73105 74544])
+            ("calendar-mark-1" function (:arguments ("month" "day" "year" "fromabs" "toabs" "color")) nil [74565 76249])
+            ("diary-entry-time" function (:arguments ("s")) nil [76252 77677])
+            ("diary-entry-compare" function (:arguments ("e1" "e2")) nil [77700 78095])
+            ("diary-sort-entries" function nil nil [78097 78409])
+            ("define-obsolete-function-alias" code nil nil [78411 78490])
+            ("diary-list-sexp-entries" function (:arguments ("date")) nil [78493 85553])
+            ("define-obsolete-function-alias" code nil nil [85555 85646])
+            ("diary-make-date" function (:arguments ("a" "b" "c")) nil [85648 86147])
+            ("date" variable nil nil [86177 86190])
+            ("entry" variable nil nil [86191 86205])
+            ("diary-date" function (:arguments ("month" "day" "year" "mark")) nil [86275 87318])
+            ("diary-block" function (:arguments ("m1" "d1" "y1" "m2" "d2" "y2" "mark")) nil [87388 88086])
+            ("diary-float" function (:arguments ("month" "dayname" "n" "day" "mark")) nil [88156 91496])
+            ("diary-ordinal-suffix" function (:arguments ("n")) nil [91498 91729])
+            ("diary-anniversary" function (:arguments ("month" "day" "year" "mark")) nil [91799 93007])
+            ("diary-cyclic" function (:arguments ("n" "month" "day" "year" "mark")) nil [93077 94040])
+            ("diary-day-of-year" function nil nil [94042 94185])
+            ("diary-remind" function (:arguments ("sexp" "days" "marking")) nil [94187 96309])
+            ("diary-make-entry" function (:arguments ("string" "nonmarking" "file")) nil [96363 97190])
+            ("define-obsolete-function-alias" code nil nil [97211 97286])
+            ("diary-insert-entry" function
+               (:user-visible-flag t
+                :arguments ("arg" "event"))
+                nil [97307 97631])
+            ("define-obsolete-function-alias" code nil nil [97652 97731])
+            ("diary-insert-weekly-entry" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [97752 98028])
+            ("define-obsolete-function-alias" code nil nil [98049 98144])
+            ("diary-date-display-form" function (:arguments ("type")) nil [98146 99565])
+            ("diary-insert-entry-1" function (:arguments ("type" "nomark" "months" "symbol" "absfunc")) nil [99567 100582])
+            ("diary-insert-monthly-entry" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [100603 100827])
+            ("define-obsolete-function-alias" code nil nil [100848 100945])
+            ("diary-insert-yearly-entry" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [100966 101187])
+            ("define-obsolete-function-alias" code nil nil [101208 101303])
+            ("diary-insert-anniversary-entry" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [101324 101748])
+            ("define-obsolete-function-alias" code nil nil [101769 101874])
+            ("diary-insert-block-entry" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [101895 102713])
+            ("define-obsolete-function-alias" code nil nil [102734 102827])
+            ("diary-insert-cyclic-entry" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [102848 103376])
+            ("define-obsolete-function-alias" code nil nil [103397 103492])
+            ("diary-redraw-calendar" function nil nil [103511 103774])
+            ("diary-mode-map" variable (:default-value (let ((map (make-sparse-keymap))) (define-key map "" (quote diary-show-all-entries)) (define-key map "" (quote quit-window)) map)) nil [103776 103974])
+            ("diary-font-lock-sexps" function (:arguments ("limit")) nil [103976 104500])
+            ("diary-font-lock-date-forms" function (:arguments ("month-array" "symbol" "abbrev-array")) nil [104502 106079])
+            ("diary-font-lock-keywords-1" function (:arguments ("markfunc" "listfunc" "feature" "months" "symbol")) nil [106081 106631])
+            ("diary-time-regexp" variable
+               (:constant-flag t
+                :default-value (concat "[0-9]?[0-9]\\([AaPp][mM]\\|\\(" "[Hh]\\([0-9][0-9]\\)?\\|[:.][0-9][0-9]" "\\)\\([AaPp][Mm]\\)?\\)"))
+                nil [106633 107029])
+            ("calendar-hebrew-month-name-array-leap-year" variable nil nil [107031 107082])
+            ("calendar-islamic-month-name-array" variable nil nil [107083 107125])
+            ("calendar-bahai-month-name-array" variable nil nil [107126 107166])
+            ("diary-font-lock-keywords" function nil nil [107187 109767])
+            ("diary-font-lock-keywords" variable (:default-value (diary-font-lock-keywords)) nil [109794 109894])
+            ("define-derived-mode" code nil nil [109911 110583])
+            ("diary-fancy-date-pattern" function nil nil [110609 111545])
+            ("diary-fancy-date-matcher" function (:arguments ("limit")) nil [111547 111905])
+            ("define-obsolete-variable-alias" code nil nil [111907 112012])
+            ("diary-fancy-font-lock-keywords" variable (:default-value (\` ((diary-fancy-date-matcher . diary-face) ("^.*\\([aA]nniversary\\|[bB]irthday\\).*$" quote diary-anniversary) ("^.*Yahrzeit.*$" . font-lock-reference-face) ("^\\(Erev \\)?Rosh Hodesh.*" . font-lock-function-name-face) ("^Day.*omer.*$" . font-lock-builtin-face) ("^Parashat.*$" . font-lock-comment-face) ((\, (format "\\(^\\|\\s-\\)%s\\(-%s\\)?" diary-time-regexp diary-time-regexp)) quote diary-time)))) nil [112014 112536])
+            ("diary-fancy-font-lock-fontify-region-function" function (:arguments ("beg" "end" "verbose")) nil [112675 113497])
+            ("diary-fancy-overriding-map" variable (:default-value (make-sparse-keymap)) nil [113499 113624])
+            ("define-derived-mode" code nil nil [113626 114113])
+            ("define-obsolete-function-alias" code nil nil [114115 114208])
+            ("diary-from-outlook-internal" function (:arguments ("subject" "body" "test-only")) nil [114680 115663])
+            ("gnus-article-mime-handles" variable nil nil [115665 115699])
+            ("gnus-article-buffer" variable nil nil [115700 115728])
+            ("gnus-fetch-field" function (:prototype-flag t) nil [115730 115770])
+            ("gnus-narrow-to-body" function (:prototype-flag t) nil [115771 115809])
+            ("mm-get-part" function (:prototype-flag t) nil [115810 115845])
+            ("diary-from-outlook-gnus" function
+               (:user-visible-flag t
+                :arguments ("noconfirm"))
+                nil [115847 116932])
+            ("custom-add-option" code nil nil [116934 117005])
+            ("rmail-buffer" variable nil nil [117007 117028])
+            ("diary-from-outlook-rmail" function
+               (:user-visible-flag t
+                :arguments ("noconfirm"))
+                nil [117030 117985])
+            ("diary-from-outlook" function
+               (:user-visible-flag t
+                :arguments ("noconfirm"))
+                nil [117987 118680])
+            ("diary-lib" package nil nil [118682 118702]))          
+      :file "diary-lib.el.gz"
+      :pointmax 118777
+      :fsize 29315
+      :lastmodtime '(20352 65510)
+      :unmatched-syntax '((close-paren 1029 . 1030) (symbol 983 . 999) (open-paren 982 . 983)))
+    (semanticdb-table "timeclock.el.gz"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("timeclock" customgroup (:user-visible-flag t) nil [3090 3176])
+            ("timeclock-file" variable (:default-value (convert-standard-filename "~/.timelog")) nil [3199 3346])
+            ("timeclock-workday" variable (:default-value (* 8 60 60)) nil [3348 3470])
+            ("timeclock-relative" variable (:default-value t) nil [3472 4016])
+            ("timeclock-get-project-function" variable (:default-value (quote timeclock-ask-for-project)) nil [4018 4380])
+            ("timeclock-get-reason-function" variable (:default-value (quote timeclock-ask-for-reason)) nil [4382 4711])
+            ("timeclock-get-workday-function" variable nil nil [4713 5293])
+            ("timeclock-ask-before-exiting" variable (:default-value t) nil [5295 5725])
+            ("timeclock-update-timer" variable nil nil [5727 5816])
+            ("display-time-hook" variable nil nil [5840 5866])
+            ("timeclock-modeline-display" variable nil nil [5867 5902])
+            ("timeclock-use-display-time" variable (:default-value t) nil [5904 7405])
+            ("timeclock-first-in-hook" variable nil nil [7407 7744])
+            ("timeclock-load-hook" variable nil nil [7746 7871])
+            ("timeclock-in-hook" variable nil nil [7873 7995])
+            ("timeclock-day-over-hook" variable nil nil [7997 8266])
+            ("timeclock-out-hook" variable nil nil [8268 8392])
+            ("timeclock-done-hook" variable nil nil [8394 8523])
+            ("timeclock-event-hook" variable nil nil [8525 8644])
+            ("timeclock-last-event" variable nil nil [8646 8783])
+            ("timeclock-last-event-workday" variable nil nil [8785 8894])
+            ("timeclock-discrepancy" variable nil nil [8921 9417])
+            ("timeclock-elapsed" variable nil nil [9419 9773])
+            ("timeclock-use-elapsed" variable nil nil [9775 9881])
+            ("timeclock-last-period" variable nil nil [9883 10088])
+            ("timeclock-mode-string" variable nil nil [10090 10257])
+            ("timeclock-day-over" variable nil nil [10259 10351])
+            ("timeclock-modeline-display" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [10389 12691])
+            ("timeclock-modeline-display" variable nil nil [12815 13151])
+            ("timeclock-time-to-date" function (:arguments ("time")) nil [13153 13285])
+            ("timeclock-in" function
+               (:user-visible-flag t
+                :arguments ("arg" "project" "find-project"))
+                nil [13302 15309])
+            ("timeclock-out" function
+               (:user-visible-flag t
+                :arguments ("arg" "reason" "find-reason"))
+                nil [15326 16252])
+            ("timeclock-workday-remaining" function (:arguments ("today-only")) nil [16323 16774])
+            ("timeclock-status-string" function
+               (:user-visible-flag t
+                :arguments ("show-seconds" "today-only"))
+                nil [16791 17920])
+            ("timeclock-change" function
+               (:user-visible-flag t
+                :arguments ("arg" "project"))
+                nil [17937 18359])
+            ("timeclock-query-out" function nil nil [18376 18717])
+            ("timeclock-reread-log" function (:user-visible-flag t) nil [18734 19073])
+            ("timeclock-seconds-to-string" function (:arguments ("seconds" "show-seconds" "reverse-leader")) nil [19075 19958])
+            ("timeclock-currently-in-p" function nil nil [19960 20095])
+            ("timeclock-workday-remaining-string" function
+               (:user-visible-flag t
+                :arguments ("show-seconds" "today-only"))
+                nil [20112 20702])
+            ("timeclock-workday-elapsed" function nil nil [20704 21039])
+            ("timeclock-workday-elapsed-string" function
+               (:user-visible-flag t
+                :arguments ("show-seconds"))
+                nil [21056 21524])
+            ("defalias" code nil nil [21526 21630])
+            ("defalias" code nil nil [21632 21686])
+            ("timeclock-when-to-leave" function (:arguments ("today-only")) nil [21757 22203])
+            ("timeclock-when-to-leave-string" function
+               (:user-visible-flag t
+                :arguments ("show-seconds" "today-only"))
+                nil [22220 22965])
+            ("timeclock-make-hours-explicit" function
+               (:user-visible-flag t
+                :arguments ("old-default"))
+                nil [22967 24293])
+            ("timeclock-project-list" variable nil nil [24320 24355])
+            ("timeclock-last-project" variable nil nil [24356 24391])
+            ("timeclock-completing-read" function (:arguments ("prompt" "alist" "default")) nil [24393 24832])
+            ("timeclock-ask-for-project" function nil nil [24834 25188])
+            ("timeclock-reason-list" variable nil nil [25190 25224])
+            ("timeclock-ask-for-reason" function nil nil [25226 25419])
+            ("timeclock-update-modeline" function (:user-visible-flag t) nil [25421 26364])
+            ("put" code nil nil [26366 26418])
+            ("timeclock-log" function (:arguments ("code" "project")) nil [26420 27579])
+            ("timeclock-moment-regexp" variable (:default-value (concat "\\([bhioO]\\)\\s-+" "\\([0-9]+\\)/\\([0-9]+\\)/\\([0-9]+\\)\\s-+" "\\([0-9]+\\):\\([0-9]+\\):\\([0-9]+\\)[ 	]*" "\\([^
+]*\\)")) nil [27581 27759])
+            ("timeclock-read-moment" function nil nil [27761 28310])
+            ("timeclock-last-period" function (:arguments ("moment")) nil [28312 28889])
+            ("timeclock-entry-length" function (:arguments ("entry")) nil [28891 29067])
+            ("timeclock-entry-begin" function (:arguments ("entry")) nil [29069 29159])
+            ("timeclock-entry-end" function (:arguments ("entry")) nil [29161 29248])
+            ("timeclock-entry-project" function (:arguments ("entry")) nil [29250 29341])
+            ("timeclock-entry-comment" function (:arguments ("entry")) nil [29343 29434])
+            ("timeclock-entry-list-length" function (:arguments ("entry-list")) nil [29436 29667])
+            ("timeclock-entry-list-begin" function (:arguments ("entry-list")) nil [29669 29824])
+            ("timeclock-entry-list-end" function (:arguments ("entry-list")) nil [29826 29981])
+            ("timeclock-entry-list-span" function (:arguments ("entry-list")) nil [29983 30237])
+            ("timeclock-entry-list-break" function (:arguments ("entry-list")) nil [30239 30443])
+            ("timeclock-entry-list-projects" function (:arguments ("entry-list")) nil [30445 30751])
+            ("timeclock-day-required" function (:arguments ("day")) nil [30753 30906])
+            ("timeclock-day-length" function (:arguments ("day")) nil [30908 31035])
+            ("timeclock-day-debt" function (:arguments ("day")) nil [31037 31212])
+            ("timeclock-day-begin" function (:arguments ("day")) nil [31214 31325])
+            ("timeclock-day-end" function (:arguments ("day")) nil [31327 31432])
+            ("timeclock-day-span" function (:arguments ("day")) nil [31434 31537])
+            ("timeclock-day-break" function (:arguments ("day")) nil [31539 31656])
+            ("timeclock-day-projects" function (:arguments ("day")) nil [31658 31788])
+            ("timeclock-day-list-template" function (:arguments ("func")) nil [31790 32056])
+            ("timeclock-day-list-required" function (:arguments ("day-list")) nil [32058 32218])
+            ("timeclock-day-list-length" function (:arguments ("day-list")) nil [32220 32368])
+            ("timeclock-day-list-debt" function (:arguments ("day-list")) nil [32370 32519])
+            ("timeclock-day-list-begin" function (:arguments ("day-list")) nil [32521 32645])
+            ("timeclock-day-list-end" function (:arguments ("day-list")) nil [32647 32772])
+            ("timeclock-day-list-span" function (:arguments ("day-list")) nil [32774 32901])
+            ("timeclock-day-list-break" function (:arguments ("day-list")) nil [32903 33039])
+            ("timeclock-day-list-projects" function (:arguments ("day-list")) nil [33041 33329])
+            ("timeclock-current-debt" function (:arguments ("log-data")) nil [33331 33503])
+            ("timeclock-day-alist" function (:arguments ("log-data")) nil [33505 33672])
+            ("timeclock-day-list" function (:arguments ("log-data")) nil [33674 33926])
+            ("timeclock-project-alist" function (:arguments ("log-data")) nil [33928 34102])
+            ("timeclock-log-data" function (:arguments ("recent-only" "filename")) nil [34104 40773])
+            ("timeclock-find-discrep" function nil nil [40775 44466])
+            ("timeclock-day-base" function (:arguments ("time")) nil [44523 44897])
+            ("timeclock-mean" function (:arguments ("l")) nil [44899 45145])
+            ("timeclock-generate-report" function
+               (:user-visible-flag t
+                :arguments ("html-p"))
+                nil [45147 51549])
+            ("timeclock-visit-timelog" function (:user-visible-flag t) nil [51582 51737])
+            ("timeclock" package nil nil [51739 51759])
+            ("run-hooks" code nil nil [51761 51793])
+            ("if" code nil nil [51908 51972]))          
+      :file "timeclock.el.gz"
+      :pointmax 52001
+      :fsize 13546
+      :lastmodtime '(20352 65510)
+      :unmatched-syntax nil))
+  :file "!usr!local!share!emacs!24.1!lisp!calendar!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

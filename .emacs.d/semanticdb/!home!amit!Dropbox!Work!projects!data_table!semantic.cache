@@ -1,0 +1,388 @@
+;; Object data_table/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "data_table/"
+  :tables
+  (list
+    (semanticdb-table "data_table.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Composition instead of inheritance.
+\"\"\"" code nil nil [1 44])
+            ("numpy" include nil nil [94 112])
+            ("pdb" include nil nil [113 123])
+            ("re" include nil nil [124 133])
+            ("pandas" include nil nil [134 153])
+            ("itertools" include nil nil [154 176])
+            ("pandas" include nil nil [177 205])
+            ("substitute" include nil nil [206 238])
+            ("unittest" include nil nil [279 294])
+            ("ParseError" type
+               (:superclasses ("BaseException")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [333 337]))                  
+                :type "class")
+                nil [296 338])
+            ("Table" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [471 617])
+                            ("self" variable nil (reparse-symbol indented_block_body) [625 651])
+                            ("self" variable nil (reparse-symbol indented_block_body) [660 690]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [378 382])
+                            ("data" variable nil (reparse-symbol function_parameters) [384 388])
+                            ("index" variable nil (reparse-symbol function_parameters) [395 400])
+                            ("columns" variable nil (reparse-symbol function_parameters) [407 414])
+                            ("dtype" variable nil (reparse-symbol function_parameters) [421 426])
+                            ("copy" variable nil (reparse-symbol function_parameters) [450 454]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [365 691])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [709 713]))                          )
+                        (reparse-symbol indented_block_body) [696 750])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [775 779]))                          )
+                        (reparse-symbol indented_block_body) [763 815])
+                    ("_to_pd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [831 835]))                          )
+                        (reparse-symbol indented_block_body) [820 861])
+                    ("__getitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [886 890])
+                            ("items" variable nil (reparse-symbol function_parameters) [892 897]))                          )
+                        (reparse-symbol indented_block_body) [870 1234])
+                    ("_parse_items" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1290 1294])
+                            ("items" variable nil (reparse-symbol function_parameters) [1296 1301]))                          
+                        :documentation "
+        helper function for __getitem__
+        ")
+                        (reparse-symbol indented_block_body) [1273 3093])
+                    ("_assign" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3114 3118])
+                            ("df" variable nil (reparse-symbol function_parameters) [3120 3122])
+                            ("item" variable nil (reparse-symbol function_parameters) [3124 3128])
+                            ("slice_" variable nil (reparse-symbol function_parameters) [3130 3136])
+                            ("count" variable nil (reparse-symbol function_parameters) [3138 3143])
+                            ("by" variable nil (reparse-symbol function_parameters) [3145 3147]))                          )
+                        (reparse-symbol indented_block_body) [3102 3613])
+                    ("_assign2" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3631 3635])
+                            ("exprs" variable nil (reparse-symbol function_parameters) [3637 3642])
+                            ("slice_" variable nil (reparse-symbol function_parameters) [3644 3650])
+                            ("by" variable nil (reparse-symbol function_parameters) [3659 3661]))                          )
+                        (reparse-symbol indented_block_body) [3618 5385])
+                    ("_assign2df" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5405 5409])
+                            ("eqs" variable nil (reparse-symbol function_parameters) [5411 5414]))                          )
+                        (reparse-symbol indented_block_body) [5390 6143]))                  
+                :type "class")
+                nil [339 6143])
+            ("grpd_indx" function
+               (:documentation "
+    >>> xs =  ['a', 'b', 'a', 'a', 'b']
+    >>> list(grpd_indx(xs))
+    [[0, 2, 3], [1, 4]]
+    "
+                :arguments 
+                  ( ("xs" variable nil (reparse-symbol function_parameters) [6158 6160]))                  )
+                nil [6144 6556])
+            ("" code nil nil [7177 7185])
+            ("bar" code nil nil [7474 7511])
+            ("foo" code nil nil [7522 7538]))          
+      :file "data_table.py"
+      :pointmax 8960
+      :fsize 8959
+      :lastmodtime '(21960 34630 610863 497000)
+      :unmatched-syntax nil)
+    (semanticdb-table "substitute.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("re" include nil nil [1 10])
+            ("numpy" include nil nil [11 29])
+            ("pandas" include nil nil [30 49])
+            ("pdb" include nil nil [50 60])
+            ("pyparsing" include nil nil [61 84])
+            ("ParseExpr" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [143 159])
+                            ("self" variable nil (reparse-symbol indented_block_body) [168 183])
+                            ("self" variable nil (reparse-symbol indented_block_body) [229 244])
+                            ("self" variable nil (reparse-symbol indented_block_body) [290 314])
+                            ("self" variable nil (reparse-symbol indented_block_body) [323 343]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [122 126])
+                            ("_str" variable nil (reparse-symbol function_parameters) [128 132]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [109 394])
+                    ("_storetokens" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [416 420])
+                            ("tokens" variable nil (reparse-symbol function_parameters) [422 428])
+                            ("lst" variable nil (reparse-symbol function_parameters) [430 433]))                          )
+                        (reparse-symbol indented_block_body) [399 466])
+                    ("_parse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [482 486]))                          )
+                        (reparse-symbol indented_block_body) [471 1490])
+                    ("_get_tokens" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1511 1515])
+                            ("tokens" variable nil (reparse-symbol function_parameters) [1517 1523]))                          )
+                        (reparse-symbol indented_block_body) [1495 1722])
+                    ("get_vars" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1740 1744]))                          )
+                        (reparse-symbol indented_block_body) [1727 1798])
+                    ("get_funs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1816 1820]))                          )
+                        (reparse-symbol indented_block_body) [1803 1874]))                  
+                :type "class")
+                nil [86 1874])
+            ("\"\"\"
+At some stage would like this to work:
+assign(df, by='b',
+       'foo = v1 + v2/v3 + v3**2',
+       'bar = fun(v1, v6)',
+       'baz = foo * 10')
+
+\"\"\"" code nil nil [1964 2118])
+            ("df" variable nil nil [2119 2225])
+            ("assign" function (:arguments 
+              ( ("df" variable nil (reparse-symbol function_parameters) [2239 2241])
+                ("eq" variable nil (reparse-symbol function_parameters) [2243 2245]))              ) nil [2228 2472])
+            ("get_vars" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [2724 2725]))              ) nil [2711 2856])
+            ("getalltags" function (:arguments 
+              ( ("node" variable nil (reparse-symbol function_parameters) [2872 2876])
+                ("tag" variable nil (reparse-symbol function_parameters) [2878 2881])
+                ("out" variable nil (reparse-symbol function_parameters) [2883 2886]))              ) nil [2857 3107])
+            ("re" include nil nil [3109 3118]))          
+      :file "substitute.py"
+      :pointmax 3125
+      :fsize 3124
+      :lastmodtime '(21951 50111 100883 964000)
+      :unmatched-syntax nil)
+    (semanticdb-table "panda_assign.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+At some stage would like this to work:
+assign(df, by='b',
+       'foo = v1 + v2/v3 + v3**2',
+       'bar = fun(v1, v6)',
+       'baz = foo * 10')
+
+\"\"\"" code nil nil [1 155])
+            ("pandas" include nil nil [157 176])
+            ("numpy" include nil nil [177 195])
+            ("pdb" include nil nil [196 206])
+            ("unittest" include nil nil [207 222])
+            ("assign" function
+               (:documentation "
+    Args
+    -----
+    df: dataframe
+    by: col in the df, which will be used as grouping varialbe
+    new_args: (ex: [('e', (np.mean, 'a')), ('f', (np.round, 'a', decimals=2))])
+      List of tuples, first entry of tuple is new_var name and second entry is
+      again a tuple, whose first entry is a function and rest are the variables
+      in the df or just defined on which this function will be applied or the
+      keyword argument of the function if of the form x=2.
+      .
+    Example:
+    >>> foo = pd.DataFrame({\"a\": [1, 2, 3], \"b\":[\"a\"]*2 + [\"b\"], \"c\": range(4, 7)})
+    >>> bar = assign(df=foo, by='b', new_vars = [
+    ... ('e', (np.mean, 'a')),
+    ... ('f', (np.exp, 'c')),
+    ... ('h', (lambda x, y: x+y, 'a', 'c')),
+    ... ('i', (np.log, 'f')),
+    ... ('j', (np.round, 'i', 'decimals=3'))])
+    >>> bar.shape[0] == foo.shape[0]
+    True
+    >>> bar.shape[1]
+    8
+    >>> set(bar.columns) == set(['a','b','c','e','f','h','i','j'])
+    True
+    "
+                :arguments 
+                  ( ("df" variable nil (reparse-symbol function_parameters) [235 237])
+                    ("by" variable nil (reparse-symbol function_parameters) [239 241])
+                    ("new_vars" variable nil (reparse-symbol function_parameters) [243 251])
+                    ("namespace" variable nil (reparse-symbol function_parameters) [253 262]))                  )
+                nil [224 2690])
+            ("assign_old" function
+               (:documentation "
+    Args
+    -----
+    df: dataframe
+    by: col in the df, which will be used as grouping varialbe
+    new_args: (ex: [('e', (np.mean, 'a')), ('f', (np.round, 'a', decimals=2))])
+      List of tuples, first entry of tuple is new_var name and second entry is
+      again a tuple, whose first entry is a function and rest are the variables
+      in the df or just defined on which this function will be applied or the
+      keyword argument of the function if of the form x=2.
+      .
+    Example:
+    >>> foo = pd.DataFrame({\"a\": [1, 2, 3], \"b\":[\"a\"]*2 + [\"b\"], \"c\": range(4, 7)})
+    >>> bar = assign(df=foo, by='b', new_vars = [
+    ... ('e', (np.mean, 'a')),
+    ... ('f', (np.exp, 'c')),
+    ... ('h', (lambda x, y: x+y, 'a', 'c')),
+    ... ('i', (np.log, 'f')),
+    ... ('j', (np.round, 'i', 'decimals=3'))])
+    >>> bar.shape[0] == foo.shape[0]
+    True
+    >>> bar.shape[1]
+    8
+    >>> set(bar.columns) == set(['a','b','c','e','f','h','i','j'])
+    True
+    "
+                :arguments 
+                  ( ("df" variable nil (reparse-symbol function_parameters) [2707 2709])
+                    ("by" variable nil (reparse-symbol function_parameters) [2711 2713])
+                    ("new_vars" variable nil (reparse-symbol function_parameters) [2715 2723])
+                    ("namespace" variable nil (reparse-symbol function_parameters) [2725 2734]))                  )
+                nil [2692 5281])
+            ("is_scalar" function
+               (:documentation "test if the function fn return type is a scalar."
+                :arguments 
+                  ( ("fn" variable nil (reparse-symbol function_parameters) [5297 5299])
+                    ("args" variable nil (reparse-symbol function_parameters) [5301 5306])
+                    ("kwargs" variable nil (reparse-symbol function_parameters) [5308 5316]))                  )
+                nil [5283 5507])
+            ("eqns2scope" function
+               (:documentation "
+    >>> eqns2scope([\"a = 2.1\", \" b= 3\"]) == {'a': 2.1, 'b': 3}
+    True
+    >>> eqns2scope(['a=b**2'], {'b': 4}) == {'a': 16}
+    True
+    "
+                :arguments 
+                  ( ("eqns" variable nil (reparse-symbol function_parameters) [5528 5532])
+                    ("namespace" variable nil (reparse-symbol function_parameters) [5534 5543]))                  )
+                nil [5513 6093])
+            ("TestAssign" type
+               (:superclasses ("unittest.TestCase")
+                :members 
+                  ( ("linear" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6152 6156])
+                            ("x" variable nil (reparse-symbol function_parameters) [6158 6159])
+                            ("y" variable nil (reparse-symbol function_parameters) [6161 6162])
+                            ("t1" variable nil (reparse-symbol function_parameters) [6164 6166])
+                            ("t2" variable nil (reparse-symbol function_parameters) [6170 6172]))                          )
+                        (reparse-symbol indented_block_body) [6141 6204])
+                    ("setUp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6219 6223]))                          )
+                        (reparse-symbol indented_block_body) [6209 7132])
+                    ("approx_equal" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7154 7158])
+                            ("xs" variable nil (reparse-symbol function_parameters) [7160 7162])
+                            ("ys" variable nil (reparse-symbol function_parameters) [7164 7166])
+                            ("eps" variable nil (reparse-symbol function_parameters) [7168 7171]))                          )
+                        (reparse-symbol indented_block_body) [7137 7412])
+                    ("test_df_nrow_equals_df2_nrow" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7450 7454]))                          
+                        :documentation "df and df2 must have same number of rows")
+                        (reparse-symbol indented_block_body) [7417 7574])
+                    ("test_nelts_df2_e_equals_nelts_df_b" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7618 7622]))                          
+                        :documentation "n elts in df2.e must equals df.b")
+                        (reparse-symbol indented_block_body) [7579 7740])
+                    ("test_linear" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7761 7765]))                          
+                        :documentation "testing variable j defined above is correct")
+                        (reparse-symbol indented_block_body) [7745 7968])
+                    ("test_df4" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7985 7989]))                          )
+                        (reparse-symbol indented_block_body) [7972 8112]))                  
+                :type "class")
+                nil [6099 8112]))          
+      :file "panda_assign.py"
+      :pointmax 8112
+      :fsize 8111
+      :lastmodtime '(21949 21108 142392 257000)
+      :unmatched-syntax '((NAME 5168 . 5171) (IF 5191 . 5193) (ELSE 5215 . 5219) (NAME 2434 . 2437) (IF 2457 . 2459) (ELSE 2481 . 2485)))
+    (semanticdb-table "test_data_table.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+bla bla 
+\"\"\"" code nil nil [1 17])
+            ("unittest" include nil nil [18 33])
+            ("numpy" include nil nil [34 52])
+            ("data_table" include nil nil [53 81])
+            ("approx_equal" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [100 102])
+                ("ys" variable nil (reparse-symbol function_parameters) [104 106])
+                ("eps" variable nil (reparse-symbol function_parameters) [108 111]))              ) nil [83 309])
+            ("TestTable" type
+               (:superclasses ("unittest.TestCase")
+                :members 
+                  ( ("setUp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [361 365]))                          )
+                        (reparse-symbol indented_block_body) [351 478])
+                    ("test_indexing" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [501 505]))                          )
+                        (reparse-symbol indented_block_body) [483 610])
+                    ("test_indexing_function" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [642 646]))                          )
+                        (reparse-symbol indented_block_body) [615 716]))                  
+                :type "class")
+                nil [310 716]))          
+      :file "test_data_table.py"
+      :pointmax 817
+      :fsize 816
+      :lastmodtime '(21963 5184 364153 393000)
+      :unmatched-syntax '((NAME 1129 . 1132) ($EOI 1140 . 1140))))
+  :file "!home!amit!Dropbox!Work!projects!data_table!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

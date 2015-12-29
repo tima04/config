@@ -1,0 +1,30 @@
+;; Object javaProgramming3/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "javaProgramming3/"
+  :tables
+  (list
+    (semanticdb-table "pyant.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+From the package root.
+#compile
+javac -classpath bin:/opt/lib/jars/apache-csv.jar:/opt/lib/jars/courserajava.jar -sourcepath src -d bin src/coursera_course/Test.java
+
+#run
+java -Dfile.encoding=UTF-8 -classpath bin:/opt/lib/jars/apache-csv.jar:/opt/lib/jars/courserajava.jar coursera_course.CaeserCipher
+\"\"\"" code nil nil [19 329])
+            ("os" include nil nil [331 340])
+            ("xmltodict" include nil nil [341 357])
+            ("sys" include nil nil [358 368])
+            ("get_classpath" function nil nil [370 629])
+            ("main" function (:arguments 
+              ( ("javafile" variable nil (reparse-symbol function_parameters) [639 647]))              ) nil [630 1444])
+            ("foo" function nil nil [1445 1482])
+            ("if" code nil nil [1483 1520]))          
+      :file "pyant.py"
+      :pointmax 1528
+      :unmatched-syntax '((NAME 1514 . 1517) (NEWLINE 1518 . 1519))))
+  :file "!home!kothiyal!Dropbox!Work!online-courses!coursera!javaProgramming3!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

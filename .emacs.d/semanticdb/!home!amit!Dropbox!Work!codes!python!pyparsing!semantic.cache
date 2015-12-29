@@ -1,0 +1,215 @@
+;; Object pyparsing/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pyparsing/"
+  :tables
+  (list
+    (semanticdb-table "first.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pyparsing" include nil nil [1 24])
+            ("txt" variable nil nil [25 61])
+            ("BNF" variable nil nil [63 177])
+            ("word" variable nil nil [179 203])
+            ("salutation" variable nil nil [204 241])
+            ("comma" variable nil nil [242 273])
+            ("greetee" variable nil nil [274 308])
+            ("endpunc" variable nil nil [309 331])
+            ("greeting" code nil nil [332 381])
+            ("for" code nil nil [383 437])
+            ("\"\"\"
+assign(df, \"c=fun(d), e=g(e), h=d*e + f/g\", by=f)
+\"c=f(d), e=g(e,c)\"
+\"\"\"" code nil nil [439 515])
+            ("BNF" variable nil nil [516 667])
+            ("BNF" variable nil nil [719 803])
+            ("parse_expr" function (:arguments 
+              ( ("arg" variable nil (reparse-symbol function_parameters) [820 823]))              ) nil [805 1223])
+            ("word" variable nil nil [1252 1276])
+            ("salutation" variable nil nil [1277 1314])
+            ("comma" variable nil nil [1315 1346])
+            ("greetee" variable nil nil [1347 1381])
+            ("endpunc" variable nil nil [1382 1404])
+            ("greeting" code nil nil [1405 1454])
+            ("var" variable nil nil [1656 1684])
+            ("op" variable nil nil [1685 1703])
+            ("op" variable nil nil [1704 1727])
+            ("foo" variable nil nil [1807 1838])
+            ("print" code nil nil [1839 1848])
+            ("print" code nil nil [1899 1931])
+            ("print" code nil nil [1932 1988]))          
+      :file "first.py"
+      :pointmax 1990
+      :fsize 1575
+      :lastmodtime '(21582 19150 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "arg_parse.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("re" include nil nil [1 10])
+            ("numpy" include nil nil [11 29])
+            ("pandas" include nil nil [30 49])
+            ("pdb" include nil nil [50 60])
+            ("pyparsing" include nil nil [61 84])
+            ("ParseExpr" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [143 159])
+                            ("self" variable nil (reparse-symbol indented_block_body) [168 183])
+                            ("self" variable nil (reparse-symbol indented_block_body) [229 244])
+                            ("self" variable nil (reparse-symbol indented_block_body) [290 314])
+                            ("self" variable nil (reparse-symbol indented_block_body) [323 343]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [122 126])
+                            ("_str" variable nil (reparse-symbol function_parameters) [128 132]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [109 394])
+                    ("_storetokens" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [416 420])
+                            ("tokens" variable nil (reparse-symbol function_parameters) [422 428])
+                            ("lst" variable nil (reparse-symbol function_parameters) [430 433]))                          )
+                        (reparse-symbol indented_block_body) [399 466])
+                    ("_parse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [482 486]))                          )
+                        (reparse-symbol indented_block_body) [471 1490])
+                    ("_get_tokens" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1511 1515])
+                            ("tokens" variable nil (reparse-symbol function_parameters) [1517 1523]))                          )
+                        (reparse-symbol indented_block_body) [1495 1722])
+                    ("get_vars" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1740 1744]))                          )
+                        (reparse-symbol indented_block_body) [1727 1798])
+                    ("get_funs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1816 1820]))                          )
+                        (reparse-symbol indented_block_body) [1803 1874]))                  
+                :type "class")
+                nil [86 1874])
+            ("foo" variable nil nil [1876 1960])
+            ("\"\"\"
+At some stage would like this to work:
+assign(df, by='b',
+       'foo = v1 + v2/v3 + v3**2',
+       'bar = fun(v1, v6)',
+       'baz = foo * 10')
+
+\"\"\"" code nil nil [1963 2117])
+            ("df" variable nil nil [2118 2224])
+            ("assign" function (:arguments 
+              ( ("df" variable nil (reparse-symbol function_parameters) [2238 2240])
+                ("eq" variable nil (reparse-symbol function_parameters) [2242 2244]))              ) nil [2227 2471])
+            ("s" variable nil nil [2473 2515])
+            ("foo" variable nil nil [2516 2541])
+            ("t" variable nil nil [2543 2562])
+            ("for" code nil nil [2563 2683])
+            ("get_vars" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [2704 2705]))              ) nil [2691 2836])
+            ("getalltags" function (:arguments 
+              ( ("node" variable nil (reparse-symbol function_parameters) [2852 2856])
+                ("tag" variable nil (reparse-symbol function_parameters) [2858 2861])
+                ("out" variable nil (reparse-symbol function_parameters) [2863 2866]))              ) nil [2837 3087])
+            ("re" include nil nil [3089 3098]))          
+      :file "arg_parse.py"
+      :pointmax 3105
+      :fsize 2686
+      :lastmodtime '(21947 22511 776373 856000)
+      :unmatched-syntax '((RETURN 1668 . 1674) (IF 1686 . 1688) (ELSE 1706 . 1710)))
+    (semanticdb-table "fourFn.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pyparsing" include nil nil [332 442])
+            ("math" include nil nil [443 454])
+            ("operator" include nil nil [455 470])
+            ("exprStack" variable nil nil [473 487])
+            ("pushFirst" function (:arguments 
+              ( ("strg" variable nil (reparse-symbol function_parameters) [504 508])
+                ("loc" variable nil (reparse-symbol function_parameters) [510 513])
+                ("toks" variable nil (reparse-symbol function_parameters) [515 519]))              ) nil [489 555])
+            ("pushUMinus" function (:arguments 
+              ( ("strg" variable nil (reparse-symbol function_parameters) [572 576])
+                ("loc" variable nil (reparse-symbol function_parameters) [578 581])
+                ("toks" variable nil (reparse-symbol function_parameters) [583 587]))              ) nil [556 660])
+            ("bnf" variable nil nil [732 742])
+            ("BNF" function (:documentation "
+    expop   :: '^'
+    multop  :: '*' | '/'
+    addop   :: '+' | '-'
+    integer :: ['+' | '-'] '0'..'9'+
+    atom    :: PI | E | real | fn '(' expr ')' | '(' expr ')'
+    factor  :: atom [ expop factor ]*
+    term    :: factor [ multop factor ]*
+    expr    :: term [ addop term ]*
+    ") nil [743 2484])
+            ("epsilon" variable nil nil [2547 2562])
+            ("opn" variable nil nil [2563 2707])
+            ("fn" variable nil nil [2708 2927])
+            ("evaluateStack" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [2948 2949]))              ) nil [2929 3411])
+            ("if" code nil nil [3412 4870])
+            ("\"\"\"
+Test output:
+>pythonw -u fourFn.py
+9 = 9.0 ['9'] => ['9']
+9 + 3 + 6 = 18.0 ['9', '+', '3', '+', '6'] => ['9', '3', '+', '6', '+']
+9 + 3 / 11 = 9.27272727273 ['9', '+', '3', '/', '11'] => ['9', '3', '11', '/', '+']
+(9 + 3) = 12.0 [] => ['9', '3', '+']
+(9+3) / 11 = 1.09090909091 ['/', '11'] => ['9', '3', '+', '11', '/']
+9 - 12 - 6 = -9.0 ['9', '-', '12', '-', '6'] => ['9', '12', '-', '6', '-']
+9 - (12 - 6) = 3.0 ['9', '-'] => ['9', '12', '6', '-', '-']
+2*3.14159 = 6.28318 ['2', '*', '3.14159'] => ['2', '3.14159', '*']
+3.1415926535*3.1415926535 / 10 = 0.986960440053 ['3.1415926535', '*', '3.1415926535', '/', '10'] => ['3.1415926535', '3.1415926535', '*', '10', '/']
+PI * PI / 10 = 0.986960440109 ['PI', '*', 'PI', '/', '10'] => ['PI', 'PI', '*', '10', '/']
+PI*PI/10 = 0.986960440109 ['PI', '*', 'PI', '/', '10'] => ['PI', 'PI', '*', '10', '/']
+PI^2 = 9.86960440109 ['PI', '^', '2'] => ['PI', '2', '^']
+6.02E23 * 8.048 = 4.844896e+024 ['6.02E23', '*', '8.048'] => ['6.02E23', '8.048', '*']
+e / 3 = 0.90609394282 ['E', '/', '3'] => ['E', '3', '/']
+sin(PI/2) = 1.0 ['sin', 'PI', '/', '2'] => ['PI', '2', '/', 'sin']
+trunc(E) = 2 ['trunc', 'E'] => ['E', 'trunc']
+E^PI = 23.1406926328 ['E', '^', 'PI'] => ['E', 'PI', '^']
+2^3^2 = 512.0 ['2', '^', '3', '^', '2'] => ['2', '3', '2', '^', '^']
+2^3+2 = 10.0 ['2', '^', '3', '+', '2'] => ['2', '3', '^', '2', '+']
+2^9 = 512.0 ['2', '^', '9'] => ['2', '9', '^']
+sgn(-2) = -1 ['sgn', '-2'] => ['-2', 'sgn']
+sgn(0) = 0 ['sgn', '0'] => ['0', 'sgn']
+sgn(0.1) = 1 ['sgn', '0.1'] => ['0.1', 'sgn']
+>Exit code: 0
+\"\"\"" code nil nil [4872 6429]))          
+      :file "fourFn.py"
+      :pointmax 6430
+      :fsize 6429
+      :lastmodtime '(21946 14137 983223 386000)
+      :unmatched-syntax nil)
+    (semanticdb-table "temp.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pandas" include nil nil [1 20])
+            ("randChar" function (:arguments 
+              ( ("f" variable nil (reparse-symbol function_parameters) [35 36])
+                ("numGrp" variable nil (reparse-symbol function_parameters) [38 44])
+                ("N" variable nil (reparse-symbol function_parameters) [46 47]))              ) nil [22 151])
+            ("randFloat" function (:arguments 
+              ( ("numGrp" variable nil (reparse-symbol function_parameters) [166 172])
+                ("N" variable nil (reparse-symbol function_parameters) [174 175]))              ) nil [152 307])
+            ("N" variable nil nil [308 318])
+            ("K" variable nil nil [319 324])
+            ("DF" variable nil nil [325 931])
+            ("foo" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [941 943]))              ) nil [933 1019]))          
+      :file "temp.py"
+      :pointmax 1031
+      :fsize 2430
+      :lastmodtime '(21949 22623 946415 852000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Dropbox!Work!codes!python!pyparsing!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

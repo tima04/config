@@ -1,0 +1,27 @@
+set nocompatible              
+filetype plugin indent on    
+
+" pathogen plugin manager
+execute pathogen#infect()  
+
+let mapleader = ","
+let maplocalleader = "\\"
+map <Leader> <Plug>(easymotion-prefix)
+set smartcase
+set ignorecase
+set showcmd
+set incsearch
+set tabstop=4
+set number
+imap jj <esc>
+"vmap jj <esc>  
+:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+:nnoremap <leader>sv :source $MYVIMRC<cr>
+
+"add the powerline support
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+" Always show statusline
+set laststatus=2
+
+" get 256 color schemes!
+set term=screen-256color

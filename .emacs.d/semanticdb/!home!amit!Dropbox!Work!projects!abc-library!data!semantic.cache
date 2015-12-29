@@ -1,0 +1,24 @@
+;; Object data/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "data/"
+  :tables
+  (list
+    (semanticdb-table "database.json"
+      :major-mode 'js-mode
+      :tags nil
+      :file "database.json"
+      :pointmax 1542013
+      :fsize 1300891
+      :lastmodtime '(22088 53226 62781 994000)
+      :unmatched-syntax '((BRACK_BLOCK 1 . 1542013)))
+    (semanticdb-table "database2.json"
+      :major-mode 'js-mode
+      :tags nil
+      :file "database2.json"
+      :pointmax 1330822
+      :fsize 1330821
+      :lastmodtime '(22088 56636 566571 86000)
+      :unmatched-syntax '((BRACK_BLOCK 1 . 1330822))))
+  :file "!home!amit!Dropbox!Work!projects!abc-library!data!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

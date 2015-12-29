@@ -1,0 +1,232 @@
+;; Object practice_of_programming/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "practice_of_programming/"
+  :tables
+  (list
+    (semanticdb-table "quick_sort.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("random" include nil nil [1 27])
+            ("numpy" include nil nil [28 46])
+            ("pdb" include nil nil [47 57])
+            ("qsort_call" variable nil nil [59 73])
+            ("qsort" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [84 86])
+                ("start" variable nil (reparse-symbol function_parameters) [88 93])
+                ("end" variable nil (reparse-symbol function_parameters) [97 100])
+                ("depth" variable nil (reparse-symbol function_parameters) [107 112]))              ) nil [74 488])
+            ("qsort_it" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [502 504]))              ) nil [489 1027])
+            ("swap" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [1056 1058])
+                ("i" variable nil (reparse-symbol function_parameters) [1060 1061])
+                ("j" variable nil (reparse-symbol function_parameters) [1063 1064]))              ) nil [1047 1099])
+            ("basic_sort" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [1115 1117])
+                ("start" variable nil (reparse-symbol function_parameters) [1119 1124]))              ) nil [1100 1419])
+            ("basic_sort_it" function (:arguments 
+              ( ("xs" variable nil (reparse-symbol function_parameters) [1438 1440]))              ) nil [1420 1695])
+            ("numpy.random" include nil nil [1708 1741])
+            ("numpy.random" include nil nil [1742 1773])
+            ("time" include nil nil [1774 1795])
+            ("n" variable nil nil [1796 1802])
+            ("np" code nil nil [1804 1822])
+            ("xs" variable nil nil [1854 1881])
+            ("t0" variable nil nil [1882 1893])
+            ("basic_sort_it" code nil nil [1894 1911])
+            ("print" code nil nil [1912 1929])
+            ("np" code nil nil [1931 1949])
+            ("xs" variable nil nil [1981 2008])
+            ("t0" variable nil nil [2009 2020])
+            ("xs" code nil nil [2046 2055])
+            ("print" code nil nil [2056 2073])
+            ("xs" variable nil nil [2075 2104])
+            ("xs" code nil nil [2105 2114])
+            ("t0" variable nil nil [2115 2126])
+            ("xs" code nil nil [2127 2136])
+            ("print" code nil nil [2137 2154]))          
+      :file "quick_sort.py"
+      :pointmax 2156
+      :fsize 2155
+      :lastmodtime '(21933 5150 933883 334000)
+      :unmatched-syntax nil)
+    (semanticdb-table "quick_sort.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("vector" include (:system-flag t) nil [21 38])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [40 60])
+            ("print" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("xs" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("double" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [73 91]))                  
+                :type "void")
+                nil [62 92])
+            ("swap" function
+               (:arguments 
+                  ( ("xs" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("double" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [105 124])
+                    ("i" variable (:type "int") (reparse-symbol arg-sub-list) [125 131])
+                    ("j" variable (:type "int") (reparse-symbol arg-sub-list) [132 138]))                  
+                :type "void")
+                nil [94 191])
+            ("last" variable (:type "int") nil [254 263])
+            ("end" variable
+               (:default-value "xs.size()"
+                :type "int")
+                nil [290 306])
+            ("last" variable
+               (:default-value "start"
+                :type "int")
+                nil [345 358])
+            ("swap" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("xs" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [434 437])
+                    ("" variable (:type ("last" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [440 445])
+                    ("" variable (:type ("i" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [446 448]))                  
+                :type "int")
+                nil [429 449])
+            ("swap" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("xs" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [457 460])
+                    ("" variable (:type ("start" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [461 467])
+                    ("" variable (:type ("last" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [468 473]))                  
+                :type "int")
+                nil [452 474])
+            ("qsort" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("xs" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [486 489])
+                    ("" variable (:type ("start" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [490 496])
+                    ("" variable (:type ("last" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [497 502]))                  
+                :type "int")
+                nil [480 503])
+            ("qsort" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("xs" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [512 515])
+                    ("" variable (:type ("last" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [516 521]))                  
+                :type "int")
+                nil [506 528])
+            ("qsort" function
+               (:arguments 
+                  ( ("xs" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("double" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [205 224])
+                    ("start" variable
+                       (:default-value "0"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [225 236])
+                    ("end" variable
+                       (:default-value "-1"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [238 248]))                  
+                :type "int")
+                nil [195 542])
+            ("tmp" variable
+               (:dereference 1
+                :default-value "{16.7,2.9,77,29.3}"
+                :type "double")
+                nil [700 734])
+            ("xs" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("tmp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [756 760])
+                    ("" variable (:type ("tmp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [761 766]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("double" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [737 797])
+            ("print" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("xs" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [806 809]))                  
+                :type "int")
+                nil [800 810])
+            ("qsort" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("xs" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [819 822]))                  
+                :type "int")
+                nil [813 823])
+            ("print" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("xs" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [832 835]))                  
+                :type "int")
+                nil [826 836]))          
+      :file "quick_sort.cpp"
+      :pointmax 851
+      :fsize 850
+      :lastmodtime '(21933 7037 625827 588000)
+      :unmatched-syntax nil)
+    (semanticdb-table "quick_sort.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1 21])
+            ("vector" include (:system-flag t) nil [22 39])
+            ("qsort" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("xs" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("double" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [50 69])
+                    ("start" variable
+                       (:default-value "0"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [70 81])
+                    ("end" variable
+                       (:default-value "-1"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [83 93]))                  
+                :type "int")
+                nil [40 95]))          
+      :file "quick_sort.h"
+      :pointmax 96
+      :fsize 95
+      :lastmodtime '(21933 7275 193820 569000)
+      :unmatched-syntax '((USING 1 . 6) (punctuation 71 . 72) (semantic-list 26 . 71) (USING 1 . 6) (USING 1 . 6) (punctuation 61 . 62) (semantic-list 16 . 61) (USING 1 . 6)))
+    (semanticdb-table "setup.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("distutils.core" include nil nil [1 44])
+            ("Cython.Build" include nil nil [45 79])
+            ("ext" variable nil nil [81 174]))          
+      :file "setup.py"
+      :pointmax 230
+      :fsize 229
+      :lastmodtime '(21933 7324 661819 107000)
+      :unmatched-syntax nil))
+  :file "!home!amit!Dropbox!Work!codes!practice_of_programming!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

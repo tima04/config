@@ -1,0 +1,27 @@
+#!/bin/bash
+ 
+# Load resources
+ 
+#xrdb -merge .Xresources
+ 
+# Set up an icon tray
+#stalonetray &
+trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --widthtype percent --width 10 --transparent true --alpha 0  --tint 0x000000 --heighttype pixel --height 20 &
+
+# Set the background color<
+xsetroot -solid midnightblue
+#xsetroot -mod 5 12 -fg black -bg gray &
+ 
+# Start udiskie to handle media
+udiskie &
+
+# Fire up apps
+xmobar & 
+# xscreensaver -no-splash &
+yakuake &
+dropbox start & 
+if [ -x /usr/bin/nm-applet ] ; then
+   nm-applet --sm-disable &
+fi
+ 
+#exec xmonad
