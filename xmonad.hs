@@ -22,4 +22,5 @@ main = do
 						, ppTitle = xmobarColor "green" "" . shorten 50
 						}
         , modMask = mod4Mask     -- Rebind Mod to the Windows key
+		, terminal	= "konsole"
 		}
