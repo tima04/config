@@ -112,11 +112,11 @@
   "o" 'other-window
   "s" 'save-buffer)
 (evil-mode 1)
-(require 'airline-themes)
-(load-theme 'airline-light) 
-(setq airline-helm-colors t)
-(set-face-foreground 'minibuffer-prompt "white") ;;airline theme mess the minibuffer color-scheme
-(set-face-background 'minibuffer-prompt "black")
+;; (require 'airline-themes)
+;; (load-theme 'airline-light) 
+;; (setq airline-helm-colors t)
+;; (set-face-foreground 'minibuffer-prompt "white") ;;airline theme mess the minibuffer color-scheme
+;; (set-face-background 'minibuffer-prompt "black")
 
 ;;; key-chord mode
 (key-chord-mode 1)
@@ -157,6 +157,10 @@
 (add-hook 'eshell-mode-hook
           #'(lambda ()
               (define-key eshell-mode-map (kbd "C-c C-l")  'helm-eshell-history)))
+(setq eshell-prompt-function
+  (lambda ()
+    (concat (format-time-string "%H:%M" (current-time))
+      (if (= (user-uid) 0) " # " " $ "))))
 
 ;;visit semantic generated tags
 (global-set-key (kbd "C-c h t") 'helm-semantic-or-imenu)
@@ -267,6 +271,21 @@
 (setq python-environment-directory "~/.python-environments")
 
 ;;==========================================================================================
+
+;;; ess-mode
+;;===========
+;;ess binds , to ess-smart-comma, unbind it
+(add-hook 'ess-mode-hook
+          (lambda()
+            (local-unset-key (kbd ","))))
+
+(evil-leader/set-key-for-mode 'ess-mode
+  "cc" 'ess-eval-region-or-function-or-paragraph-and-step
+  "cb" 'ess-eval-buffer
+  "cf" 'ess-eval-function)
+
+
+
  ;;; sml-mode
  (defun sml-execute-para-and-move ()
    "Send the current paragraph to the inferior sml process."
