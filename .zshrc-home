@@ -87,7 +87,7 @@ source $ZSH/oh-my-zsh.sh
 
 ##****************************************************************## 
 
-#PS1="$ "
+PS1="# "
 
 ## powerline for zsh
 if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
@@ -116,6 +116,9 @@ export TERM="xterm-256color"
 # zshell spelling correctory
 setopt CORRECT
 
+# bind apt-p and alt-n like in emacs shell.
+bindkey "^[p"  history-beginning-search-backward
+bindkey "^[n" history-beginning-search-forward
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/amit/.sdkman"
