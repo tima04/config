@@ -157,10 +157,11 @@
 (add-hook 'eshell-mode-hook
           #'(lambda ()
               (define-key eshell-mode-map (kbd "C-c C-l")  'helm-eshell-history)))
-(setq eshell-prompt-function
-  (lambda ()
-    (concat (format-time-string "%H:%M" (current-time))
-      (if (= (user-uid) 0) " # " " $ "))))
+;; (setq eshell-prompt-function
+;;   (lambda ()
+;; 	"$ "))
+;; (setq eshell-prompt-regexp "^[^#$\n]*[#$] ")
+
 
 ;;visit semantic generated tags
 (global-set-key (kbd "C-c h t") 'helm-semantic-or-imenu)
